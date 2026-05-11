@@ -1386,6 +1386,14 @@
       return t ? `<span class="cal-tag ${t[0]}">${t[1]}</span>` : '';
     }).join('');
 
+    const isRecurring = event.recurrence && event.recurrence !== '';
+    const multiDays = event.recurrence_days ? event.recurrence_days.split(',').map(d => d.slice(0,3)).join('/') : '';
+    const recurLabel = multiDays ? multiDays : 
+                       event.recurrence_day ? `Every ${event.recurrence_day}` : 
+                       event.recurrence === 'daily' ? 'Daily' : 
+                       event.recurrence === 'monthly_last_friday' ? 'Monthly' : '';
+    const recurBadge = isRecurring && recurLabel ? `<span class="cal-tag" style="background:rgba(239,159,39,0.15);color:#EF9F27">${recurLabel}</span>` : '';
+
     const isRace = event.source === 'Running in the USA';
     const featured = isRace || event.title.toLowerCase().includes('festival');
 
@@ -1396,12 +1404,15 @@
     return `<a href="${event.link || '#'}" class="cal-event${featured ? ' featured' : ''}" target="_blank" rel="noopener"
       data-categories="${cats}"
       data-start="${startStr}"
-      data-end="${endStr}">
+      data-end="${endStr}"
+      data-recurrence="${event.recurrence || ''}"
+      data-recurrence-day="${event.recurrence_day || ''}"
+      data-recurrence-days="${event.recurrence_days || ''}">
       <div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div></div>
       <div class="cal-event-info">
         <h4>${event.title}</h4>
         <p>${(event.description || '').slice(0, 120) || 'See website for details.'}</p>
-        <div class="cal-tags">${tagHTML}<span class="cal-source">via ${sourceShort}</span></div>
+        <div class="cal-tags">${tagHTML}${recurBadge}<span class="cal-source">via ${sourceShort}</span></div>
       </div>
       <div class="cal-ext">↗</div>
     </a>`;
@@ -1466,7 +1477,36 @@
     const s = e.dataset.start, en = e.dataset.end;
     if (!s) return false;
     const sel = dateToStr(dateObj);
-    return sel >= s && sel <= (en || s);
+
+    // Check if date is within range first
+    if (sel < s || sel > (en || s)) return false;
+
+    const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const todayName = dayNames[dateObj.getDay()];
+
+    // Weekly on multiple days (e.g. Mon/Thu/Fri/Sat)
+    const recDays = e.dataset.recurrenceDays;
+    if (recDays && recDays.length > 0) {
+      return recDays.split(',').includes(todayName);
+    }
+
+    // Weekly on single day
+    const recDay = e.dataset.recurrenceDay;
+    if (recDay) {
+      return todayName === recDay;
+    }
+
+    // Monthly last Friday
+    if (e.dataset.recurrence === 'monthly_last_friday') {
+      if (dateObj.getDay() !== 5) return false; // must be Friday
+      // Check if it's the last Friday of the month
+      const nextWeek = new Date(dateObj);
+      nextWeek.setDate(dateObj.getDate() + 7);
+      return nextWeek.getMonth() !== dateObj.getMonth();
+    }
+
+    // Daily or no recurrence — just check range
+    return true;
   }
 
   // ── Mini month calendar picker ──
