@@ -1149,24 +1149,30 @@
   function parseDate(dateStr) {
     if (!dateStr || dateStr === 'See website') return null;
     const months = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
-    const s = dateStr.toLowerCase().replace(/[,\.]/g, '');
+
+    // Normalize: remove em dashes, en dashes, extra spaces
+    let s = dateStr.toLowerCase().replace(/[–—]/g, '-').replace(/[,\.]/g, '').trim();
+
+    // If date string is really long it's probably a corrupted field — skip
+    if (s.length > 60) return null;
 
     // ISO format: 2026-05-16
     let m = s.match(/(\d{4})-(\d{2})-(\d{2})/);
     if (m) return new Date(+m[1], +m[2]-1, +m[3]);
 
-    // "May11" or "May 11" or "May 11 2026"
-    m = s.match(/([a-z]{3,})\s*(\d{1,2})/);
+    // "May11" — no space
+    m = s.match(/^([a-z]{3,})(\d{1,2})$/);
     if (m) {
       const mo = months[m[1].slice(0,3)];
       if (mo !== undefined) return new Date(2026, mo, +m[2]);
     }
 
-    // "May 11, 2026 - Oct 31, 2026" → use start date
-    m = s.match(/([a-z]{3,})\s+(\d{1,2}).*?(\d{4})/);
+    // "May 11" or "May 11 2026"
+    m = s.match(/([a-z]{3,})\s+(\d{1,2})(?:\s+(\d{4}))?/);
     if (m) {
       const mo = months[m[1].slice(0,3)];
-      if (mo !== undefined) return new Date(+m[3], mo, +m[2]);
+      const yr = m[3] ? +m[3] : 2026;
+      if (mo !== undefined) return new Date(yr, mo, +m[2]);
     }
 
     return null;
@@ -1175,12 +1181,18 @@
   // ── Parse end date for multi-day events ──
   function parseEndDate(dateStr) {
     if (!dateStr) return null;
-    const s = dateStr.toLowerCase().replace(/[,\.]/g, '');
+    // Normalize em/en dashes
+    let s = dateStr.toLowerCase().replace(/[–—]/g, '-').replace(/[,\.]/g, '').trim();
+
+    // If corrupted field, return null
+    if (s.length > 60) return null;
+
     const months = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
-    // Look for second date after dash: "May 11, 2026 - Oct 31, 2026"
-    const parts = s.split(/\s*[-–]\s*/);
+
+    // Look for second date after dash: "May 11 2026 - Oct 31 2026"
+    const parts = s.split(/\s*-\s*/);
     if (parts.length >= 2) {
-      const last = parts[parts.length - 1];
+      const last = parts[parts.length - 1].trim();
       let m = last.match(/(\d{4})-(\d{2})-(\d{2})/);
       if (m) return new Date(+m[1], +m[2]-1, +m[3]);
       m = last.match(/([a-z]{3,})\s*(\d{1,2})(?:\s+(\d{4}))?/);
@@ -1266,7 +1278,8 @@
   // Filter events visible on a given date
   function visibleOnDate(e, sel) {
     const s = e.dataset.start, en = e.dataset.end;
-    if (!s) return true;
+    // No date — only show in "all" view, hide when filtering by specific day
+    if (!s) return false;
     const selD = new Date(sel); selD.setHours(0,0,0,0);
     const startD = new Date(s); startD.setHours(0,0,0,0);
     const endD = en ? new Date(en) : startD; endD.setHours(0,0,0,0);
