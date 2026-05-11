@@ -28,6 +28,43 @@ HEADERS = {
 def scrape_visit_park_city():
     print("Scraping visitparkcity.com...")
     events = []
+
+    JUNK_TITLES = ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'beauty & wellness', 'previous month', 'next month']
+    MONTHS = {'jan':'01','feb':'02','mar':'03','apr':'04','may':'05','jun':'06','jul':'07','aug':'08','sep':'09','oct':'10','nov':'11','dec':'12'}
+
+    def parse_vpc_date(date_str):
+        """Parse VPC dates like May11, May29, Jun12, Aug07 into YYYY-MM-DD"""
+        if not date_str or date_str == 'See website': return None
+        s = date_str.strip().lower()
+        # "May11" or "May 11"
+        m = re.match(r'([a-z]{3,})\s*(\d{1,2})$', s)
+        if m:
+            mo = MONTHS.get(m.group(1)[:3])
+            if mo: return f"2026-{mo}-{int(m.group(2)):02d}"
+        # "May 11, 2026 - Oct 31, 2026" → extract start
+        m = re.match(r'([a-z]{3,})\s+(\d{1,2})[,\s]+(\d{4})', s)
+        if m:
+            mo = MONTHS.get(m.group(1)[:3])
+            if mo: return f"{m.group(3)}-{mo}-{int(m.group(2)):02d}"
+        return None
+
+    def parse_vpc_end_date(date_str):
+        """Extract end date from range like 'May 11, 2026 - Oct 31, 2026'"""
+        if not date_str: return None
+        s = date_str.strip().lower().replace('–', '-').replace('—', '-')
+        parts = s.split(' - ')
+        if len(parts) < 2: return None
+        last = parts[-1].strip()
+        m = re.match(r'([a-z]{3,})\s+(\d{1,2})[,\s]+(\d{4})', last)
+        if m:
+            mo = MONTHS.get(m.group(1)[:3])
+            if mo: return f"{m.group(3)}-{mo}-{int(m.group(2)):02d}"
+        m = re.match(r'([a-z]{3,})\s*(\d{1,2})$', last)
+        if m:
+            mo = MONTHS.get(m.group(1)[:3])
+            if mo: return f"2026-{mo}-{int(m.group(2)):02d}"
+        return None
+
     try:
         url = "https://www.visitparkcity.com/events/"
         r = requests.get(url, headers=HEADERS, timeout=15)
@@ -45,9 +82,17 @@ def scrape_visit_park_city():
                 if not title_el: continue
                 title = title_el.get_text(strip=True)
                 if len(title) < 3: continue
+                if any(j in title.lower() for j in JUNK_TITLES): continue
 
                 date_el = c.find(class_=re.compile(r"date|time|when", re.I))
-                date = date_el.get_text(strip=True) if date_el else "See website"
+                raw_date = date_el.get_text(strip=True) if date_el else ""
+
+                # Skip if date field is corrupted (contains the title text)
+                if len(raw_date) > 50 or title.lower()[:10] in raw_date.lower():
+                    raw_date = ""
+
+                start_date = parse_vpc_date(raw_date) or "See website"
+                end_date = parse_vpc_end_date(raw_date)
 
                 desc_el = c.find("p")
                 description = desc_el.get_text(strip=True)[:300] if desc_el else ""
@@ -59,13 +104,16 @@ def scrape_visit_park_city():
                 loc_el = c.find(class_=re.compile(r"location|venue|place", re.I))
                 location = loc_el.get_text(strip=True) if loc_el else "Park City, UT"
 
-                events.append({
-                    "title": title, "date": date, "description": description,
+                event = {
+                    "title": title, "date": start_date, "description": description,
                     "location": location, "link": link,
                     "source": "Visit Park City",
                     "source_url": url,
                     "scraped_at": datetime.now().isoformat()
-                })
+                }
+                if end_date:
+                    event["end_date"] = end_date
+                events.append(event)
             except:
                 continue
 
@@ -133,6 +181,22 @@ def scrape_kpcw():
 def scrape_eventbrite():
     print("Scraping Eventbrite...")
     events = []
+
+    # Park City area keywords — event must match at least one
+    PARK_CITY_TERMS = ['park city', 'summit county', 'heber', 'kimball junction', 'snyderville', '84060', '84098', 'utah']
+
+    def is_park_city(title, location, description):
+        text = (title + ' ' + location + ' ' + description).lower()
+        return any(term in text for term in PARK_CITY_TERMS)
+
+    def normalize_date(date_str):
+        """Convert any date string to YYYY-MM-DD"""
+        if not date_str or date_str == 'See website': return None
+        # Already ISO format with time: 2026-05-16T19:00:00
+        m = re.match(r'(\d{4})-(\d{2})-(\d{2})', date_str)
+        if m: return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+        return None
+
     try:
         url = "https://www.eventbrite.com/d/ut--park-city/events/"
         r = requests.get(url, headers=HEADERS, timeout=15)
@@ -149,16 +213,35 @@ def scrape_eventbrite():
                         continue
                     title = item.get("name", "")
                     if not title: continue
-                    date = item.get("startDate", "See website")
+
+                    date_raw = item.get("startDate", "")
+                    date = normalize_date(date_raw) or "See website"
+
                     description = re.sub(r'<[^>]+>', '', item.get("description", ""))[:300]
                     loc = item.get("location", {})
-                    location = loc.get("name", "Park City, UT") if isinstance(loc, dict) else "Park City, UT"
+                    if isinstance(loc, dict):
+                        addr = loc.get("address", {})
+                        if isinstance(addr, dict):
+                            city = addr.get("addressLocality", "")
+                            state = addr.get("addressRegion", "")
+                            location = f"{loc.get('name', '')} {city} {state}".strip()
+                        else:
+                            location = loc.get("name", "")
+                    else:
+                        location = ""
+
+                    # Skip non-Park City events
+                    if not is_park_city(title, location, description):
+                        continue
+
                     link = item.get("url", url)
                     offers = item.get("offers", {})
                     price = offers.get("price", "") if isinstance(offers, dict) else ""
+
                     events.append({
                         "title": title, "date": date, "description": description,
-                        "location": location, "link": link, "price": str(price),
+                        "location": location or "Park City, UT",
+                        "link": link, "price": str(price),
                         "source": "Eventbrite",
                         "source_url": url,
                         "scraped_at": datetime.now().isoformat()
@@ -166,30 +249,7 @@ def scrape_eventbrite():
             except:
                 continue
 
-        # Fallback: HTML cards
-        if not events:
-            cards = soup.find_all("div", class_=re.compile(r"event-card|search-event", re.I))
-            for card in cards:
-                try:
-                    title_el = card.find("h2") or card.find("h3") or card.find(class_=re.compile(r"title", re.I))
-                    if not title_el: continue
-                    title = title_el.get_text(strip=True)
-                    if len(title) < 3: continue
-                    date_el = card.find(class_=re.compile(r"date|time", re.I)) or card.find("time")
-                    date = date_el.get_text(strip=True) if date_el else "See website"
-                    link_el = card.find("a", href=True)
-                    link = link_el["href"] if link_el else url
-                    events.append({
-                        "title": title, "date": date, "description": "",
-                        "location": "Park City, UT", "link": link,
-                        "source": "Eventbrite",
-                        "source_url": url,
-                        "scraped_at": datetime.now().isoformat()
-                    })
-                except:
-                    continue
-
-        print(f"  Found {len(events)} events from Eventbrite")
+        print(f"  Found {len(events)} Park City events from Eventbrite")
     except Exception as e:
         print(f"  Error scraping Eventbrite: {e}")
     return events

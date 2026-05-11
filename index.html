@@ -468,7 +468,24 @@
     letter-spacing: 0.5px;
   }
 
-  .cal-month-btn {
+  .cal-week-arrow {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    line-height: 1;
+  }
+  .cal-week-arrow:hover { background: var(--purple); border-color: var(--purple); color: white; }
+
+
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.15);
     color: rgba(255,255,255,0.7);
@@ -1061,7 +1078,11 @@
 
     <div class="cal-days-header">
       <div class="cal-days-label" id="cal-days-label">This week</div>
-      <button class="cal-month-btn" id="cal-month-toggle">📅 Pick a date</button>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button class="cal-week-arrow" id="cal-prev-week" title="Previous week">‹</button>
+        <button class="cal-week-arrow" id="cal-next-week" title="Next week">›</button>
+        <button class="cal-month-btn" id="cal-month-toggle">📅 Pick a date</button>
+      </div>
     </div>
 
     <!-- Mini month calendar popup -->
@@ -1344,7 +1365,7 @@
   function renderEvent(event) {
     const cats = getCategories(event);
     const startDate = parseDate(event.date);
-    const endDate = parseEndDate(event.date) || startDate;
+    const endDate = event.end_date ? parseDate(event.end_date) : (parseEndDate(event.date) || startDate);
 
     // Format display date
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -1561,25 +1582,71 @@
     buildMonthPicker([]);
   });
 
+  // ── Build day chips with week offset ──
+  let weekOffset = 0;
+
+  function buildDayChips() {
+    dayContainer.innerHTML = '';
+    for (let i = 0; i <= 6; i++) {
+      const d = new Date(today);
+      d.setDate(today.getDate() + (weekOffset * 7) + i);
+      const div = document.createElement('div');
+      const isToday = d.toDateString() === today.toDateString();
+      const isSelected = d.toDateString() === selectedDate.toDateString();
+      div.className = 'cal-day' + (isToday || (weekOffset === 0 && i === 0 && !isSelected) ? '' : '') + (isSelected ? ' active' : (isToday ? ' active' : ''));
+      div.innerHTML = `<span class="d">${DAYS[d.getDay()]}</span><span class="n">${d.getDate()}</span>`;
+      const captured = new Date(d);
+      div.addEventListener('click', () => {
+        selectedDate = new Date(captured);
+        document.querySelectorAll('.cal-day').forEach(x => x.classList.remove('active'));
+        div.classList.add('active');
+        document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+        document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+        if (searchInput) { searchInput.value = ''; searchClear.style.display = 'none'; }
+        applyDateFilter(captured);
+      });
+      dayContainer.appendChild(div);
+    }
+    // Update label
+    const label = document.getElementById('cal-days-label');
+    if (label) {
+      if (weekOffset === 0) label.textContent = 'This week';
+      else if (weekOffset === 1) label.textContent = 'Next week';
+      else if (weekOffset === -1) label.textContent = 'Last week';
+      else {
+        const start = new Date(today);
+        start.setDate(today.getDate() + weekOffset * 7);
+        label.textContent = `${MONTHS_FULL[start.getMonth()]} ${start.getDate()}+`;
+      }
+    }
+  }
+
+  document.getElementById('cal-next-week').addEventListener('click', () => {
+    weekOffset++;
+    buildDayChips();
+    // Auto-select first day of new week
+    const firstDay = new Date(today);
+    firstDay.setDate(today.getDate() + weekOffset * 7);
+    selectedDate = firstDay;
+    applyDateFilter(firstDay);
+    document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+    document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+  });
+
+  document.getElementById('cal-prev-week').addEventListener('click', () => {
+    weekOffset--;
+    buildDayChips();
+    const firstDay = new Date(today);
+    firstDay.setDate(today.getDate() + weekOffset * 7);
+    selectedDate = firstDay;
+    applyDateFilter(firstDay);
+    document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+    document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+  });
+
   // Build day chips
   const dayContainer = document.getElementById('cal-days-container');
-  for (let i = -3; i <= 6; i++) {
-    const d = new Date(today);
-    d.setDate(today.getDate() + i);
-    const div = document.createElement('div');
-    div.className = 'cal-day' + (i === 0 ? ' active' : '');
-    div.innerHTML = `<span class="d">${DAYS[d.getDay()]}</span><span class="n">${d.getDate()}</span>`;
-    const captured = new Date(d);
-    div.addEventListener('click', () => {
-      document.querySelectorAll('.cal-day').forEach(x => x.classList.remove('active'));
-      div.classList.add('active');
-      document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
-      document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
-      if (searchInput) { searchInput.value = ''; searchClear.style.display = 'none'; }
-      applyDateFilter(captured);
-    });
-    dayContainer.appendChild(div);
-  }
+  buildDayChips();
 
   // Load events.json
   fetch('events.json')
