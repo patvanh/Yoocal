@@ -453,7 +453,55 @@
   .cal-day.active .d, .cal-day.active .n { color: white; }
   .cal-day .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); margin-top: 4px; }
 
-  .cal-events { padding: 16px 24px 24px; display: flex; flex-direction: column; gap: 10px; }
+  .cal-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.03);
+  }
+
+  .cal-search svg { color: rgba(255,255,255,0.35); flex-shrink: 0; }
+
+  .cal-search input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .cal-search input::placeholder { color: rgba(255,255,255,0.35); }
+
+  #search-clear {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: color 0.15s;
+  }
+
+  #search-clear:hover { color: white; }
+
+  .cal-search-count {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    white-space: nowrap;
+    padding-right: 4px;
+  }
+
+  .cal-event mark {
+    background: rgba(239,159,39,0.3);
+    color: white;
+    border-radius: 2px;
+    padding: 0 2px;
+  }
 
   .cal-event {
     background: rgba(255,255,255,0.04);
@@ -878,6 +926,12 @@
     <div class="cal-topbar">
       <div class="cal-logo"><div class="cal-logo-dot"></div> yoocal</div>
       <div class="cal-loc">📍 Park City, UT &nbsp;▾</div>
+    </div>
+
+    <div class="cal-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="event-search" placeholder="Search events, venues, categories..." autocomplete="off" />
+      <button id="search-clear" aria-label="Clear search" style="display:none">✕</button>
     </div>
 
     <div class="cal-filters">
@@ -1312,10 +1366,53 @@
 
   filterByDate(today);
 
+  // Search
+  const searchInput = document.getElementById('event-search');
+  const searchClear = document.getElementById('search-clear');
+
+  function runSearch(query) {
+    const q = query.trim().toLowerCase();
+    const events = document.querySelectorAll('.cal-event');
+    let visible = 0;
+
+    events.forEach(e => {
+      const title = e.querySelector('h4') ? e.querySelector('h4').textContent.toLowerCase() : '';
+      const desc = e.querySelector('p') ? e.querySelector('p').textContent.toLowerCase() : '';
+      const tags = e.querySelector('.cal-tags') ? e.querySelector('.cal-tags').textContent.toLowerCase() : '';
+      const text = title + ' ' + desc + ' ' + tags;
+
+      if (!q || text.includes(q)) {
+        e.style.display = 'flex';
+        visible++;
+      } else {
+        e.style.display = 'none';
+      }
+    });
+
+    document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+    searchClear.style.display = q ? 'block' : 'none';
+
+    // Reset filter pills to All when searching
+    if (q) {
+      document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+      document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+    }
+  }
+
+  searchInput.addEventListener('input', () => runSearch(searchInput.value));
+
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    searchClear.style.display = 'none';
+    filterByDate(today);
+  });
+
   document.querySelectorAll('.cal-filter').forEach(f => {
     f.addEventListener('click', () => {
       document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
       f.classList.add('active');
+      searchInput.value = '';
+      searchClear.style.display = 'none';
       const filter = f.dataset.filter;
       const events = document.querySelectorAll('.cal-event');
       let visible = 0;
