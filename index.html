@@ -1419,51 +1419,54 @@
   const searchInput = document.getElementById('event-search');
   const searchClear = document.getElementById('search-clear');
 
-  // Convert a Date object to YYYY-MM-DD string
+  // ── Unified filter state ──
+  let activeDate = today;       // currently selected date (null = show all dates)
+  let activeCategory = 'all';   // currently selected category
+  let activeSearch = '';        // current search query
+  let showAllDates = false;     // true when "All" category with no date selected
+
+  function applyFilters() {
+    const cards = container.querySelectorAll('.cal-event');
+    let vis = 0;
+    cards.forEach(e => {
+      const cats = (e.dataset.categories || '').split(' ');
+      const matchDate = showAllDates ? true : visibleOnDate(e, activeDate);
+      const matchCat = activeCategory === 'all' || cats.includes(activeCategory);
+      const matchSearch = !activeSearch || e.textContent.toLowerCase().includes(activeSearch.toLowerCase());
+      if (matchDate && matchCat && matchSearch) { e.style.display = 'flex'; vis++; }
+      else e.style.display = 'none';
+    });
+    noResults.style.display = vis === 0 ? 'block' : 'none';
+    if (!activeSearch && dateLabel) {
+      if (showAllDates) {
+        dateLabel.textContent = `Park City & Summit County — all upcoming events`;
+      } else {
+        dateLabel.textContent = `${DAYS[activeDate.getDay()]}, ${MONTHS_FULL[activeDate.getMonth()]} ${activeDate.getDate()} — Park City`;
+      }
+    }
+  }
+
+  function applyDateFilter(dateObj) {
+    activeDate = dateObj;
+    showAllDates = false;
+    applyFilters();
+  }
+
+  function applySearch(q) {
+    activeSearch = q;
+    searchClear.style.display = q ? 'block' : 'none';
+    applyFilters();
+  }
+
   function dateToStr(d) {
     return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
   }
 
-  // Filter events visible on a given date
   function visibleOnDate(e, dateObj) {
     const s = e.dataset.start, en = e.dataset.end;
     if (!s) return false;
     const sel = dateToStr(dateObj);
     return sel >= s && sel <= (en || s);
-  }
-
-  function applyDateFilter(dateObj) {
-    const cards = container.querySelectorAll('.cal-event');
-    let vis = 0;
-    cards.forEach(e => {
-      if (visibleOnDate(e, dateObj)) { e.style.display = 'flex'; vis++; }
-      else e.style.display = 'none';
-    });
-    noResults.style.display = vis === 0 ? 'block' : 'none';
-    if (dateLabel) dateLabel.textContent = `${DAYS[dateObj.getDay()]}, ${MONTHS_FULL[dateObj.getMonth()]} ${dateObj.getDate()} — Park City`;
-  }
-
-  function applyCategoryFilter(filter) {
-    const cards = container.querySelectorAll('.cal-event');
-    let vis = 0;
-    cards.forEach(e => {
-      const cats = (e.dataset.categories || '').split(' ');
-      if (filter === 'all' || cats.includes(filter)) { e.style.display = 'flex'; vis++; }
-      else e.style.display = 'none';
-    });
-    noResults.style.display = vis === 0 ? 'block' : 'none';
-  }
-
-  function applySearch(q) {
-    const cards = container.querySelectorAll('.cal-event');
-    let vis = 0;
-    cards.forEach(e => {
-      const text = e.textContent.toLowerCase();
-      if (!q || text.includes(q.toLowerCase())) { e.style.display = 'flex'; vis++; }
-      else e.style.display = 'none';
-    });
-    noResults.style.display = vis === 0 ? 'block' : 'none';
-    searchClear.style.display = q ? 'block' : 'none';
   }
 
   // ── Mini month calendar picker ──
@@ -1587,7 +1590,8 @@
         div.classList.add('active');
         document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
         document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
-        if (searchInput) { searchInput.value = ''; searchClear.style.display = 'none'; }
+        activeCategory = 'all';
+        if (searchInput) { searchInput.value = ''; activeSearch = ''; searchClear.style.display = 'none'; }
         applyDateFilter(captured);
       });
       dayContainer.appendChild(div);
@@ -1678,8 +1682,9 @@
     f.addEventListener('click', () => {
       document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
       f.classList.add('active');
-      if (searchInput) { searchInput.value = ''; searchClear.style.display = 'none'; }
-      applyCategoryFilter(f.dataset.filter);
+      activeCategory = f.dataset.filter;
+      if (searchInput) { searchInput.value = ''; activeSearch = ''; searchClear.style.display = 'none'; }
+      applyFilters();
     });
   });
 
@@ -1688,8 +1693,9 @@
     searchInput.addEventListener('input', () => applySearch(searchInput.value));
     searchClear.addEventListener('click', () => {
       searchInput.value = '';
+      activeSearch = '';
       searchClear.style.display = 'none';
-      applyDateFilter(today);
+      applyFilters();
     });
   }
 
