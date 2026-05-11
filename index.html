@@ -453,7 +453,118 @@
   .cal-day.active .d, .cal-day.active .n { color: white; }
   .cal-day .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); margin-top: 4px; }
 
-  .cal-search {
+  .cal-days-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px 0;
+  }
+
+  .cal-days-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .cal-month-btn {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.15s;
+  }
+
+  .cal-month-btn:hover, .cal-month-btn.active {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: white;
+  }
+
+  .cal-month-picker {
+    margin: 8px 24px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  .cal-month-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .cal-month-nav span {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .cal-month-nav button {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.7);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+  }
+
+  .cal-month-nav button:hover { background: var(--purple); color: white; border-color: var(--purple); }
+
+  .cal-month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .cal-month-dow {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    padding: 4px 0;
+    font-weight: 500;
+  }
+
+  .cal-month-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    text-align: center;
+  }
+
+  .cal-month-day {
+    font-size: 13px;
+    padding: 6px 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.6);
+    transition: all 0.15s;
+    border: 1px solid transparent;
+  }
+
+  .cal-month-day:hover { background: rgba(255,255,255,0.1); color: white; }
+  .cal-month-day.has-events { color: white; font-weight: 500; }
+  .cal-month-day.has-events::after { content: '·'; display: block; font-size: 16px; line-height: 4px; color: var(--amber); margin-top: 2px; }
+  .cal-month-day.today { background: rgba(83,74,183,0.4); color: white; border-color: var(--purple-light); }
+  .cal-month-day.selected { background: var(--purple); color: white !important; border-color: var(--purple); }
+  .cal-month-day.empty { visibility: hidden; cursor: default; }
+  .cal-month-day.past { color: rgba(255,255,255,0.25); }
+
+
     display: flex;
     align-items: center;
     gap: 10px;
@@ -948,6 +1059,30 @@
       <div class="cal-filter" data-filter="paid">🎟 Paid</div>
     </div>
 
+    <div class="cal-days-header">
+      <div class="cal-days-label" id="cal-days-label">This week</div>
+      <button class="cal-month-btn" id="cal-month-toggle">📅 Pick a date</button>
+    </div>
+
+    <!-- Mini month calendar popup -->
+    <div class="cal-month-picker" id="cal-month-picker" style="display:none">
+      <div class="cal-month-nav">
+        <button id="cal-prev-month">‹</button>
+        <span id="cal-month-title"></span>
+        <button id="cal-next-month">›</button>
+      </div>
+      <div class="cal-month-grid">
+        <div class="cal-month-dow">Su</div>
+        <div class="cal-month-dow">Mo</div>
+        <div class="cal-month-dow">Tu</div>
+        <div class="cal-month-dow">We</div>
+        <div class="cal-month-dow">Th</div>
+        <div class="cal-month-dow">Fr</div>
+        <div class="cal-month-dow">Sa</div>
+      </div>
+      <div class="cal-month-days" id="cal-month-days"></div>
+    </div>
+
     <div class="cal-days" id="cal-days-container"></div>
 
     <div class="cal-events" id="cal-events-container">
@@ -1320,6 +1455,112 @@
     searchClear.style.display = q ? 'block' : 'none';
   }
 
+  // ── Mini month calendar picker ──
+  let pickerDate = new Date(today.getFullYear(), today.getMonth(), 1);
+  let selectedDate = new Date(today);
+
+  function buildMonthPicker(events) {
+    const title = document.getElementById('cal-month-title');
+    const daysEl = document.getElementById('cal-month-days');
+    if (!title || !daysEl) return;
+
+    const yr = pickerDate.getFullYear();
+    const mo = pickerDate.getMonth();
+    title.textContent = `${MONTHS_FULL[mo]} ${yr}`;
+
+    const firstDay = new Date(yr, mo, 1).getDay();
+    const daysInMonth = new Date(yr, mo + 1, 0).getDate();
+
+    // Build set of dates that have events
+    const eventDates = new Set();
+    events.forEach(e => {
+      const start = e.dataset ? parseDate(allEvents.find(ev => ev.title === e.querySelector('h4')?.textContent)?.date || '') : null;
+    });
+    // Simpler: check data-start attributes on rendered cards
+    document.querySelectorAll('.cal-event').forEach(card => {
+      const s = card.dataset.start;
+      if (s) {
+        const d = new Date(s);
+        if (d.getFullYear() === yr && d.getMonth() === mo) {
+          eventDates.add(d.getDate());
+        }
+        // For multi-day events
+        const en = card.dataset.end;
+        if (en) {
+          const endD = new Date(en);
+          let cur = new Date(s);
+          while (cur <= endD) {
+            if (cur.getFullYear() === yr && cur.getMonth() === mo) eventDates.add(cur.getDate());
+            cur.setDate(cur.getDate() + 1);
+          }
+        }
+      }
+    });
+
+    daysEl.innerHTML = '';
+
+    // Empty cells for first week
+    for (let i = 0; i < firstDay; i++) {
+      const empty = document.createElement('div');
+      empty.className = 'cal-month-day empty';
+      daysEl.appendChild(empty);
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const dayEl = document.createElement('div');
+      const thisDate = new Date(yr, mo, d);
+      const isToday = thisDate.toDateString() === today.toDateString();
+      const isSelected = thisDate.toDateString() === selectedDate.toDateString();
+      const isPast = thisDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const hasEv = eventDates.has(d);
+
+      dayEl.className = 'cal-month-day' +
+        (isToday ? ' today' : '') +
+        (isSelected ? ' selected' : '') +
+        (isPast && !isToday ? ' past' : '') +
+        (hasEv ? ' has-events' : '');
+      dayEl.textContent = d;
+
+      dayEl.addEventListener('click', () => {
+        selectedDate = new Date(yr, mo, d);
+        // Update selected styling
+        document.querySelectorAll('.cal-month-day').forEach(x => x.classList.remove('selected'));
+        dayEl.classList.add('selected');
+        // Update day strip
+        document.querySelectorAll('.cal-day').forEach(x => x.classList.remove('active'));
+        // Close picker
+        document.getElementById('cal-month-picker').style.display = 'none';
+        document.getElementById('cal-month-toggle').classList.remove('active');
+        // Reset filters
+        document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+        document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+        if (searchInput) { searchInput.value = ''; searchClear.style.display = 'none'; }
+        applyDateFilter(selectedDate);
+      });
+
+      daysEl.appendChild(dayEl);
+    }
+  }
+
+  document.getElementById('cal-month-toggle').addEventListener('click', () => {
+    const picker = document.getElementById('cal-month-picker');
+    const btn = document.getElementById('cal-month-toggle');
+    const isOpen = picker.style.display !== 'none';
+    picker.style.display = isOpen ? 'none' : 'block';
+    btn.classList.toggle('active', !isOpen);
+    if (!isOpen) buildMonthPicker([]);
+  });
+
+  document.getElementById('cal-prev-month').addEventListener('click', () => {
+    pickerDate.setMonth(pickerDate.getMonth() - 1);
+    buildMonthPicker([]);
+  });
+
+  document.getElementById('cal-next-month').addEventListener('click', () => {
+    pickerDate.setMonth(pickerDate.getMonth() + 1);
+    buildMonthPicker([]);
+  });
+
   // Build day chips
   const dayContainer = document.getElementById('cal-days-container');
   for (let i = -3; i <= 6; i++) {
@@ -1375,6 +1616,8 @@
 
       // Apply today's filter on load
       applyDateFilter(today);
+      // Rebuild picker now that events are rendered
+      buildMonthPicker([]);
     })
     .catch(() => {
       container.innerHTML = '<div style="padding:32px;text-align:center;color:rgba(255,255,255,0.4);font-size:14px;">Could not load events. Please try again later.</div>';
