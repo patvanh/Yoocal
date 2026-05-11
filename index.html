@@ -1244,9 +1244,51 @@
   }
 
   const days = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const fullMonths = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const today = new Date();
-  const todayIndex = today.getDay();
   const container = document.getElementById('cal-days-container');
+  const dateLabel = document.querySelector('.calendar-section p');
+
+  if (dateLabel) dateLabel.textContent = 'Park City & Summit County — updated today';
+
+  function filterByDate(dateObj) {
+    const mon = monthNames[dateObj.getMonth()];
+    const fullMon = fullMonths[dateObj.getMonth()];
+    const dom = dateObj.getDate();
+    const events = document.querySelectorAll('.cal-event');
+    let visible = 0;
+
+    events.forEach(e => {
+      const timeEl = e.querySelector('.cal-event-time');
+      if (!timeEl) return;
+      const h = timeEl.querySelector('.h') ? timeEl.querySelector('.h').textContent.trim() : '';
+      const ap = timeEl.querySelector('.ap') ? timeEl.querySelector('.ap').textContent.trim() : '';
+
+      // Show event if it matches the selected month+day or spans multiple dates (contains +)
+      const matchesMonth = h === mon || h === fullMon;
+      const matchesDay = ap === String(dom) || ap.includes('+') || ap.includes('–') || ap.includes('-');
+      const isMultiDay = ap.includes('+') || ap.includes('–') || ap.includes('-');
+
+      if (isMultiDay || (matchesMonth && matchesDay)) {
+        e.style.display = 'flex';
+        visible++;
+      } else if (matchesMonth && !matchesDay) {
+        e.style.display = 'none';
+      } else {
+        // Different month — hide unless multi-day
+        e.style.display = isMultiDay ? 'flex' : 'none';
+        if (isMultiDay) visible++;
+      }
+    });
+
+    document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+
+    // Update header
+    if (dateLabel) {
+      dateLabel.textContent = `${days[dateObj.getDay()]}, ${fullMonths[dateObj.getMonth()]} ${dom} — Park City`;
+    }
+  }
 
   for (let i = -3; i <= 6; i++) {
     const d = new Date(today);
@@ -1255,19 +1297,20 @@
     div.className = 'cal-day' + (i === 0 ? ' active' : '');
     const hasEvents = [0, 1, 2, 5, 6].includes(d.getDay());
     div.innerHTML = `<span class="d">${days[d.getDay()]}</span><span class="n">${d.getDate()}</span>${hasEvents ? '<div class="dot"></div>' : ''}`;
+    const captured = new Date(d);
     div.addEventListener('click', () => {
       document.querySelectorAll('.cal-day').forEach(x => x.classList.remove('active'));
       div.classList.add('active');
+      // Reset category filter to All first
+      document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+      document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+      filterByDate(captured);
     });
     container.appendChild(div);
   }
 
-  const sectionLabel = document.querySelector('.section-label + .cal-ui .cal-events');
-  const dateLabel = document.querySelector('.calendar-section p');
-  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-  if (dateLabel) {
-    dateLabel.textContent = `Park City & Summit County — updated today`;
-  }
+  // Show today's events on load
+  filterByDate(today);
 
   document.querySelectorAll('.cal-filter').forEach(f => {
     f.addEventListener('click', () => {
