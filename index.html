@@ -1124,12 +1124,7 @@
   <script>
     function handleSignup(e) {
       e.preventDefault();
-      const email = document.getElementById('email-input').value;
-      window.open('https://forms.groupmail.info/subscribe/yoocal?email=' + encodeURIComponent(email), '_blank');
-      const msg = document.getElementById('signup-msg');
-      msg.textContent = '🎉 Opening signup — complete your registration in the new tab!';
-      msg.style.color = '#534AB7';
-      msg.style.fontWeight = '500';
+      window.location.href = 'https://forms.groupmail.info/subscribe/yoocal';
     }
   </script>
 </section>
