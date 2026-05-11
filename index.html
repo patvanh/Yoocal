@@ -796,7 +796,7 @@
     <a href="#how">How it works</a>
     <a href="#events">Events</a>
     <a href="#business">For businesses</a>
-    <a href="#signup" class="nav-cta">Get notified</a>
+    <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
   </div>
 </nav>
 
@@ -1121,6 +1121,17 @@
     <button type="submit">Notify me</button>
   </form>
   <p class="signup-note" id="signup-msg">No spam. Unsubscribe anytime.</p>
+  <script>
+    function handleSignup(e) {
+      e.preventDefault();
+      const email = document.getElementById('email-input').value;
+      window.open('https://forms.groupmail.info/subscribe/yoocal?email=' + encodeURIComponent(email), '_blank');
+      const msg = document.getElementById('signup-msg');
+      msg.textContent = '🎉 Opening signup — complete your registration in the new tab!';
+      msg.style.color = '#534AB7';
+      msg.style.fontWeight = '500';
+    }
+  </script>
 </section>
 
 <!-- FOR BUSINESSES -->
@@ -1139,7 +1150,7 @@
         <li>Category &amp; date filtering</li>
         <li>Sourced &amp; attributed to you</li>
       </ul>
-      <a href="#signup" class="biz-btn">Get started free</a>
+      <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="biz-btn">Get started free</a>
     </div>
     <div class="biz-card featured-card reveal">
       <div class="biz-price">$29<span>/mo</span></div>
