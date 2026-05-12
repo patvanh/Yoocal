@@ -1634,13 +1634,17 @@
       if (matchDate && matchCat && matchSearch) { e.style.display = 'flex'; vis++; }
       else e.style.display = 'none';
     });
-    noResults.style.display = vis === 0 ? 'block' : 'none';
+    noResults.style.display = (vis === 0 && currentView === 'list') ? 'block' : 'none';
     if (!activeSearch && dateLabel) {
       if (showAllDates) {
         dateLabel.textContent = `${CITIES[currentCity]?.label || 'Local'} — all upcoming events`;
       } else {
         dateLabel.textContent = `${DAYS[activeDate.getDay()]}, ${MONTHS_FULL[activeDate.getMonth()]} ${activeDate.getDate()} — ${CITIES[currentCity]?.name || 'Local'}`;
       }
+    }
+    // Update map if in map view
+    if (currentView === 'map' && map) {
+      updateMapMarkers();
     }
   }
 
@@ -1995,23 +1999,17 @@
 
   function updateMapMarkers() {
     if (!map) return;
-    // Clear existing markers
     mapMarkers.forEach(m => m.remove());
     mapMarkers = [];
 
-    // Get visible events
-    const cards = document.querySelectorAll('.cal-event');
-    const visibleEvents = [];
-    cards.forEach((card, i) => {
-      if (card.style.display !== 'none' && allEvents[i]) {
-        visibleEvents.push(allEvents[i]);
-      }
-    });
-
-    // Add markers for events with coordinates
     const bounds = [];
-    visibleEvents.forEach(event => {
-      if (!event.lat || !event.lng) return;
+    const cards = document.querySelectorAll('.cal-event');
+
+    cards.forEach((card, i) => {
+      if (card.style.display === 'none') return;
+      const event = allEvents[i];
+      if (!event || !event.lat || !event.lng) return;
+
       const marker = L.circleMarker([event.lat, event.lng], {
         radius: 8,
         fillColor: '#534AB7',
@@ -2020,6 +2018,7 @@
         opacity: 1,
         fillOpacity: 0.9
       });
+
       marker.bindPopup(`
         <div class="map-popup">
           <h4>${event.title}</h4>
@@ -2034,7 +2033,7 @@
     });
 
     if (bounds.length > 0) {
-      map.fitBounds(bounds, { padding: [40, 40] });
+      try { map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 }); } catch(e) {}
     }
   }
 
