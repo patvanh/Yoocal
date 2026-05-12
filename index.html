@@ -2032,18 +2032,6 @@
       .then(data => {
         allEvents = data.events || [];
         allEvents = allEvents.filter(e => !city.junk.some(j => e.title.toLowerCase().includes(j)));
-      // Sort by date, then featured first, then alphabetically
-      allEvents.sort((a, b) => {
-        const da = parseDate(a.date) || '9999-99-99';
-        const db = parseDate(b.date) || '9999-99-99';
-        if (da !== db) return da.localeCompare(db);
-        const aFeat = isFeaturedEvent(a) ? 0 : 1;
-        const bFeat = isFeaturedEvent(b) ? 0 : 1;
-        if (aFeat !== bFeat) return aFeat - bFeat;
-        return (a.title||'').localeCompare(b.title||'');
-      });
-
-        container.innerHTML = allEvents.map(renderEvent).join('');
 
         const heroStat = document.querySelector('.hero-stat .num');
         if (heroStat) heroStat.textContent = allEvents.length;
@@ -2054,7 +2042,10 @@
           if (dateLabel) dateLabel.textContent = `${city.label} — updated ${hrs < 1 ? 'just now' : hrs + ' hours ago'}`;
         }
 
-        applyDateFilter(today);
+        // Apply today's filter — this renders the events
+        activeDate = today;
+        showAllDates = false;
+        applyFilters();
         buildMonthPicker([]);
       })
       .catch(() => {
