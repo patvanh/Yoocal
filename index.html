@@ -1979,7 +1979,14 @@
         allEvents.sort((a, b) => {
           const da = parseDate(a.date) || '9999-99-99';
           const db = parseDate(b.date) || '9999-99-99';
-          return da.localeCompare(db);
+          if (da !== db) return da.localeCompare(db);
+          // Same date — featured first
+          const isFeatured = e => e.featured || e.source === 'Running in the USA' || (e.title||'').toLowerCase().includes('festival');
+          const aFeat = isFeatured(a) ? 0 : 1;
+          const bFeat = isFeatured(b) ? 0 : 1;
+          if (aFeat !== bFeat) return aFeat - bFeat;
+          // Then alphabetically
+          return (a.title||'').localeCompare(b.title||'');
         });
 
         container.innerHTML = allEvents.map(renderEvent).join('');
