@@ -68,6 +68,8 @@
   }
 }
 </script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -550,7 +552,63 @@
     transition: all 0.15s;
     line-height: 1;
   }
-  /* Calendar full-width layout */
+  .cal-view-toggle {
+    display: flex;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .cal-view-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.15s;
+    font-weight: 500;
+  }
+
+  .cal-view-btn.active {
+    background: white;
+    color: var(--purple);
+  }
+
+  .cal-view-btn:hover:not(.active) {
+    color: white;
+  }
+
+  /* Leaflet popup styling */
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+
+  .map-popup h4 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1830;
+  }
+
+  .map-popup p {
+    margin: 0 0 6px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .map-popup a {
+    font-size: 12px;
+    color: #534AB7;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+
   .cal-topbar, .cal-filters, .cal-days-header, .cal-days, .cal-month-picker {
     max-width: 1400px;
     margin-left: auto;
@@ -1154,6 +1212,10 @@
   <div class="cal-ui reveal">
     <div class="cal-topbar">
       <div class="cal-logo"><div class="cal-logo-dot"></div> yoocal</div>
+      <div class="cal-view-toggle">
+        <button class="cal-view-btn active" id="btn-list" onclick="setView('list')">☰ List</button>
+        <button class="cal-view-btn" id="btn-map" onclick="setView('map')">🗺 Map</button>
+      </div>
       <div class="cal-loc" id="cal-loc-label">📍 Park City, UT &nbsp;▾</div>
     </div>
 
@@ -1215,6 +1277,11 @@
 
     <div class="cal-no-results" id="no-results" style="display:none; padding:32px; text-align:center; color:rgba(255,255,255,0.4); font-size:14px;">
       No events found for this filter. Check back soon!
+    </div>
+
+    <!-- Map view -->
+    <div id="cal-map-container" style="display:none; height:600px; width:100%; position:relative;">
+      <div id="cal-map" style="height:100%; width:100%;"></div>
     </div>
   </div>
 </section>
@@ -1904,6 +1971,98 @@
       searchClear.style.display = 'none';
       applyFilters();
     });
+  }
+
+  // ── Map view ──
+  let map = null;
+  let mapMarkers = [];
+  let currentView = 'list';
+
+  // Park City center coordinates
+  const CITY_CENTERS = {
+    parkcity: [40.6461, -111.4980],
+    elkhartlake: [43.8394, -87.9734]
+  };
+
+  function initMap() {
+    if (map) return;
+    const center = CITY_CENTERS[currentCity] || CITY_CENTERS.parkcity;
+    map = L.map('cal-map').setView(center, 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+  }
+
+  function updateMapMarkers() {
+    if (!map) return;
+    // Clear existing markers
+    mapMarkers.forEach(m => m.remove());
+    mapMarkers = [];
+
+    // Get visible events
+    const cards = document.querySelectorAll('.cal-event');
+    const visibleEvents = [];
+    cards.forEach((card, i) => {
+      if (card.style.display !== 'none' && allEvents[i]) {
+        visibleEvents.push(allEvents[i]);
+      }
+    });
+
+    // Add markers for events with coordinates
+    const bounds = [];
+    visibleEvents.forEach(event => {
+      if (!event.lat || !event.lng) return;
+      const marker = L.circleMarker([event.lat, event.lng], {
+        radius: 8,
+        fillColor: '#534AB7',
+        color: 'white',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      });
+      marker.bindPopup(`
+        <div class="map-popup">
+          <h4>${event.title}</h4>
+          <p>📍 ${event.location || ''}</p>
+          <p>📅 ${event.date || ''}</p>
+          <a href="${event.link}" target="_blank">View event →</a>
+        </div>
+      `);
+      marker.addTo(map);
+      mapMarkers.push(marker);
+      bounds.push([event.lat, event.lng]);
+    });
+
+    if (bounds.length > 0) {
+      map.fitBounds(bounds, { padding: [40, 40] });
+    }
+  }
+
+  function setView(view) {
+    currentView = view;
+    const listContainer = document.getElementById('cal-events-container');
+    const mapContainer = document.getElementById('cal-map-container');
+    const noResults = document.getElementById('no-results');
+    const btnList = document.getElementById('btn-list');
+    const btnMap = document.getElementById('btn-map');
+
+    if (view === 'map') {
+      listContainer.style.display = 'none';
+      noResults.style.display = 'none';
+      mapContainer.style.display = 'block';
+      btnList.classList.remove('active');
+      btnMap.classList.add('active');
+      initMap();
+      setTimeout(() => {
+        map.invalidateSize();
+        updateMapMarkers();
+      }, 100);
+    } else {
+      listContainer.style.display = 'grid';
+      mapContainer.style.display = 'none';
+      btnList.classList.add('active');
+      btnMap.classList.remove('active');
+    }
   }
 
   // Nav tabs
