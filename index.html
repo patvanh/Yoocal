@@ -781,12 +781,14 @@
   .cal-month-day.past { color: rgba(255,255,255,0.25); }
 
 
+  .cal-search {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 12px 24px;
     border-bottom: 1px solid rgba(255,255,255,0.06);
     background: rgba(255,255,255,0.03);
+    margin-top: 0;
   }
 
   .cal-search svg { color: rgba(255,255,255,0.35); flex-shrink: 0; }
@@ -1271,7 +1273,7 @@
   <h2>What's happening <em>now</em></h2>
   <p style="margin-bottom: 40px;">Park City &amp; Summit County — updated 2 hours ago</p>
 
-  <div class="cal-ui reveal">
+  <div class="cal-ui">
     <div class="cal-topbar">
       <div class="cal-logo"><div class="cal-logo-dot"></div> yoocal</div>
       <div class="cal-view-toggle">
@@ -1280,7 +1282,6 @@
       </div>
       <div class="cal-loc" id="cal-loc-label">📍 Park City, UT &nbsp;▾</div>
     </div>
-
     <div class="cal-search">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input type="text" id="event-search" placeholder="Search events, venues, categories..." autocomplete="off" />
