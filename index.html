@@ -161,6 +161,38 @@
   .nav-cta:hover { background: var(--purple-light) !important; color: white !important; }
 
   /* HERO */
+  .hero-wrapper {
+    position: relative;
+    background: #1a1830;
+  }
+
+  .hero-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('hero.jpg') center center / cover no-repeat;
+    opacity: 0.35;
+    z-index: 0;
+  }
+
+  .hero-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(26,24,48,0.7) 0%,
+      rgba(26,24,48,0.5) 50%,
+      rgba(26,24,48,0.85) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero, .location-bar {
+    position: relative;
+    z-index: 2;
+  }
+
   .hero {
     min-height: 100vh;
     display: flex;
@@ -176,18 +208,17 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 20% 30%, rgba(83,74,183,0.08) 0%, transparent 70%),
-      radial-gradient(ellipse 50% 40% at 80% 70%, rgba(239,159,39,0.07) 0%, transparent 70%);
+    background: radial-gradient(ellipse 60% 50% at 50% 100%, rgba(83,74,183,0.3) 0%, transparent 70%);
     pointer-events: none;
+    z-index: 1;
   }
 
   .hero-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--purple-pale);
-    color: var(--purple);
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.9);
     font-size: 13px;
     font-weight: 600;
     padding: 6px 16px;
@@ -195,6 +226,7 @@
     margin-bottom: 32px;
     letter-spacing: 0.3px;
     animation: fadeUp 0.6s ease both;
+    border: 1px solid rgba(255,255,255,0.15);
   }
 
   .hero-eyebrow span { background: var(--amber); width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
@@ -203,7 +235,7 @@
     font-family: 'DM Serif Display', serif;
     font-size: clamp(48px, 8vw, 88px);
     line-height: 1.05;
-    color: var(--dark);
+    color: white;
     margin-bottom: 24px;
     max-width: 800px;
     animation: fadeUp 0.6s 0.1s ease both;
@@ -211,12 +243,12 @@
 
   .hero h1 em {
     font-style: italic;
-    color: var(--purple);
+    color: var(--amber);
   }
 
   .hero p {
     font-size: clamp(16px, 2vw, 20px);
-    color: var(--muted);
+    color: rgba(255,255,255,0.6);
     max-width: 520px;
     line-height: 1.7;
     margin-bottom: 48px;
@@ -234,7 +266,7 @@
   }
 
   .btn-primary {
-    background: var(--purple);
+    background: var(--amber);
     color: white;
     padding: 14px 32px;
     border-radius: 100px;
@@ -247,10 +279,10 @@
     gap: 8px;
   }
 
-  .btn-primary:hover { background: var(--purple-light); transform: translateY(-1px); }
+  .btn-primary:hover { background: #f5a832; transform: translateY(-1px); }
 
   .btn-secondary {
-    color: var(--purple);
+    color: rgba(255,255,255,0.8);
     padding: 14px 24px;
     font-size: 15px;
     font-weight: 500;
@@ -261,7 +293,7 @@
     transition: gap 0.2s;
   }
 
-  .btn-secondary:hover { gap: 10px; }
+  .btn-secondary:hover { gap: 10px; color: white; }
 
   .hero-stats {
     display: flex;
@@ -274,26 +306,27 @@
   .hero-stat .num {
     font-family: 'DM Serif Display', serif;
     font-size: 36px;
-    color: var(--purple);
+    color: var(--amber);
     display: block;
   }
   .hero-stat .label {
     font-size: 13px;
-    color: var(--muted);
+    color: rgba(255,255,255,0.4);
     margin-top: 2px;
   }
 
   /* LOCATION BAR */
   .location-bar {
-    background: white;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     padding: 16px 40px;
     display: flex;
     align-items: center;
     gap: 12px;
     overflow-x: auto;
     scrollbar-width: none;
+    backdrop-filter: blur(10px);
   }
   .location-bar::-webkit-scrollbar { display: none; }
 
@@ -302,7 +335,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: var(--muted);
+    color: rgba(255,255,255,0.3);
     white-space: nowrap;
     margin-right: 4px;
   }
@@ -317,17 +350,17 @@
     font-weight: 500;
     white-space: nowrap;
     cursor: pointer;
-    border: 1px solid var(--border);
-    background: white;
-    color: var(--muted);
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.6);
     transition: all 0.15s;
     text-decoration: none;
   }
 
   .loc-chip:hover, .loc-chip.active {
-    background: var(--purple-pale);
-    color: var(--purple);
-    border-color: var(--purple-mid);
+    background: var(--purple);
+    color: white;
+    border-color: var(--purple);
   }
 
   /* HOW IT WORKS */
@@ -1146,6 +1179,8 @@
 </nav>
 
 <!-- HERO -->
+<!-- HERO WRAPPER — dark background covers hero + city bar -->
+<div class="hero-wrapper">
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-eyebrow" id="hero-eyebrow"><span></span> Now live in Park City, Utah</div>
@@ -1180,6 +1215,7 @@
   <a href="#signup" class="loc-chip">+ Jackson Hole, WY — coming soon</a>
   <a href="#signup" class="loc-chip">+ Your city? →</a>
 </div>
+</div><!-- end hero-wrapper -->
 
 <!-- HOW IT WORKS -->
 <section class="section" id="how">
