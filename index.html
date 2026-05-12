@@ -1700,12 +1700,13 @@
   function applyFilters() {
     const selDateStr = showAllDates ? null : dateToStr(activeDate);
 
-    // Filter allEvents
+    // Filter allEvents directly
     const visible = allEvents.filter(event => {
-      const card = document.querySelector(`[data-title="${(event.title||'').replace(/"/g,'&quot;')}"][data-start="${parseDate(event.date)||''}"]`);
-      const cats = (getCategories(event)).split(' ');
-      const matchDate = showAllDates ? true : (() => {
-        const s = parseDate(event.date), en = event.end_date ? parseDate(event.end_date) : s;
+      // Date filter
+      const matchDate = (() => {
+        if (showAllDates) return true;
+        const s = parseDate(event.date);
+        const en = event.end_date ? parseDate(event.end_date) : s;
         if (!s) return false;
         if (selDateStr < s || selDateStr > (en || s)) return false;
         const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -1719,9 +1720,19 @@
         }
         return true;
       })();
-      const matchCat = activeCategory === 'all' || cats.includes(activeCategory);
-      const matchSearch = !activeSearch || (event.title + event.description + event.location).toLowerCase().includes(activeSearch.toLowerCase());
-      return matchDate && matchCat && matchSearch;
+      if (!matchDate) return false;
+
+      // Category filter
+      const cats = getCategories(event).split(' ');
+      if (activeCategory !== 'all' && !cats.includes(activeCategory)) return false;
+
+      // Search filter
+      if (activeSearch) {
+        const searchText = (event.title + ' ' + (event.description||'') + ' ' + (event.location||'')).toLowerCase();
+        if (!searchText.includes(activeSearch.toLowerCase())) return false;
+      }
+
+      return true;
     });
 
     // Sort: featured first, then alphabetical
