@@ -422,21 +422,24 @@
   /* CALENDAR SECTION */
   .calendar-section {
     background: var(--dark);
-    padding: 100px 40px;
+    padding: 100px 0;
     color: white;
   }
 
-  .calendar-section .section-label { color: var(--amber); }
+  .calendar-section .section-label { color: var(--amber); padding-left: 40px; }
   .calendar-section .section-label::before { background: var(--purple-light); }
-  .calendar-section h2 { color: white; }
-  .calendar-section > p { color: rgba(255,255,255,0.5); }
+  .calendar-section h2 { color: white; padding-left: 40px; }
+  .calendar-section > p { color: rgba(255,255,255,0.5); padding-left: 40px; }
 
   .cal-ui {
     background: #221f3a;
-    border-radius: 24px;
+    border-radius: 0;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
-    max-width: 900px;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    max-width: 100%;
+    width: 100%;
   }
 
   .cal-topbar {
@@ -547,10 +550,44 @@
     transition: all 0.15s;
     line-height: 1;
   }
-  .cal-week-arrow:hover { background: var(--purple); border-color: var(--purple); color: white; }
+  /* Calendar full-width layout */
+  .cal-topbar, .cal-filters, .cal-days-header, .cal-days, .cal-month-picker {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cal-topbar { padding-left: 40px; padding-right: 40px; }
+  .cal-filters { padding-left: 40px; padding-right: 40px; }
+
+  #cal-events-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 12px;
+  }
+
+  .cal-no-results {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .cal-event {
+    margin: 0 !important;
+  }
+
+  .calendar-section .section-label,
+  .calendar-section h2,
+  .calendar-section > p {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 
 
-    background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.15);
     color: rgba(255,255,255,0.7);
     font-size: 12px;
