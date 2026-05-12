@@ -1594,7 +1594,14 @@
       data-end="${endStr}"
       data-recurrence="${event.recurrence || ''}"
       data-recurrence-day="${event.recurrence_day || ''}"
-      data-recurrence-days="${event.recurrence_days || ''}">
+      data-recurrence-days="${event.recurrence_days || ''}"
+      data-lat="${event.lat || ''}"
+      data-lng="${event.lng || ''}"
+      data-title="${(event.title || '').replace(/"/g, '&quot;')}"
+      data-location="${(event.location || '').replace(/"/g, '&quot;')}"
+      data-date="${event.date || ''}"
+      data-link="${event.link || ''}"
+      >
       <div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div></div>
       <div class="cal-event-info">
         <h4>${event.title}</h4>
@@ -2005,13 +2012,19 @@
     const bounds = [];
     const cards = document.querySelectorAll('.cal-event');
 
-    cards.forEach((card, i) => {
+    cards.forEach(card => {
       if (card.style.display === 'none') return;
-      const event = allEvents[i];
-      if (!event || !event.lat || !event.lng) return;
+      const lat = parseFloat(card.dataset.lat);
+      const lng = parseFloat(card.dataset.lng);
+      if (!lat || !lng || isNaN(lat) || isNaN(lng)) return;
 
-      const marker = L.circleMarker([event.lat, event.lng], {
-        radius: 8,
+      const title = card.dataset.title || '';
+      const location = card.dataset.location || '';
+      const date = card.dataset.date || '';
+      const link = card.dataset.link || '#';
+
+      const marker = L.circleMarker([lat, lng], {
+        radius: 9,
         fillColor: '#534AB7',
         color: 'white',
         weight: 2,
@@ -2021,19 +2034,21 @@
 
       marker.bindPopup(`
         <div class="map-popup">
-          <h4>${event.title}</h4>
-          <p>📍 ${event.location || ''}</p>
-          <p>📅 ${event.date || ''}</p>
-          <a href="${event.link}" target="_blank">View event →</a>
+          <h4>${title}</h4>
+          ${location ? `<p>📍 ${location}</p>` : ''}
+          ${date ? `<p>📅 ${date}</p>` : ''}
+          <a href="${link}" target="_blank">View event →</a>
         </div>
       `);
       marker.addTo(map);
       mapMarkers.push(marker);
-      bounds.push([event.lat, event.lng]);
+      bounds.push([lat, lng]);
     });
 
     if (bounds.length > 0) {
       try { map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 }); } catch(e) {}
+    } else {
+      // No events with coords — keep current view
     }
   }
 
