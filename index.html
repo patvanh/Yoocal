@@ -1413,9 +1413,10 @@
     if (FAMILY_VENUES.some(v => location.includes(v))) cats.push('family');
 
     if (event.source === 'Running in the USA') cats.push('sports');
-    if (event.is_free === true || /free/.test(text)) cats.push('free');
-    else if (event.price && event.price !== '0' && event.price !== '') cats.push('paid');
-    else if (/\$|ticket|register|cost|fee/.test(text)) cats.push('paid');
+    if (event.is_free === true) cats.push('free');
+    else if (event.is_free === false && event.price && event.price !== '0') cats.push('paid');
+    else if (/\bfree\b/.test(text)) cats.push('free');
+    else if (/\$\d|\bticket(s)?\b|\bcost\b|\bfee\b|\bpaid\b/.test(text)) cats.push('paid');
 
     return [...new Set(cats)].join(' ') || 'community';
   }
