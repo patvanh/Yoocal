@@ -1607,19 +1607,20 @@
   }
 
   // ── Render a single event card ──
-  function renderEvent(event) {
+  function renderEvent(event, overrideDisplayDate) {
     const cats = getCategories(event);
     const startDate = parseDate(event.date);
     const endDate = event.end_date ? parseDate(event.end_date) : (parseEndDate(event.date) || startDate);
 
-    // Format display date from YYYY-MM-DD string
+    // Format display date — use override if provided (for recurring events showing on selected day)
     const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     let displayMonth = 'See', displayDay = 'site';
-    if (startDate) {
-      const parts = startDate.split('-');
+    const displayDateStr = overrideDisplayDate || startDate;
+    if (displayDateStr) {
+      const parts = displayDateStr.split('-');
       displayMonth = monthNames[parseInt(parts[1]) - 1];
       displayDay = String(parseInt(parts[2]));
-      if (endDate && endDate !== startDate) displayDay += '+';
+      if (!overrideDisplayDate && endDate && endDate !== startDate) displayDay += '+';
     }
 
     // Source tag
@@ -1697,17 +1698,45 @@
   let showAllDates = false;     // true when "All" category with no date selected
 
   function applyFilters() {
-    const cards = container.querySelectorAll('.cal-event');
-    let vis = 0;
-    cards.forEach(e => {
-      const cats = (e.dataset.categories || '').split(' ');
-      const matchDate = showAllDates ? true : visibleOnDate(e, activeDate);
+    const selDateStr = showAllDates ? null : dateToStr(activeDate);
+
+    // Filter allEvents
+    const visible = allEvents.filter(event => {
+      const card = document.querySelector(`[data-title="${(event.title||'').replace(/"/g,'&quot;')}"][data-start="${parseDate(event.date)||''}"]`);
+      const cats = (getCategories(event)).split(' ');
+      const matchDate = showAllDates ? true : (() => {
+        const s = parseDate(event.date), en = event.end_date ? parseDate(event.end_date) : s;
+        if (!s) return false;
+        if (selDateStr < s || selDateStr > (en || s)) return false;
+        const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        const todayName = dayNames[activeDate.getDay()];
+        if (event.recurrence_days) return event.recurrence_days.split(',').includes(todayName);
+        if (event.recurrence_day) return todayName === event.recurrence_day;
+        if (event.recurrence === 'monthly_last_friday') {
+          if (activeDate.getDay() !== 5) return false;
+          const nextWeek = new Date(activeDate); nextWeek.setDate(activeDate.getDate() + 7);
+          return nextWeek.getMonth() !== activeDate.getMonth();
+        }
+        return true;
+      })();
       const matchCat = activeCategory === 'all' || cats.includes(activeCategory);
-      const matchSearch = !activeSearch || e.textContent.toLowerCase().includes(activeSearch.toLowerCase());
-      if (matchDate && matchCat && matchSearch) { e.style.display = 'flex'; vis++; }
-      else e.style.display = 'none';
+      const matchSearch = !activeSearch || (event.title + event.description + event.location).toLowerCase().includes(activeSearch.toLowerCase());
+      return matchDate && matchCat && matchSearch;
     });
-    noResults.style.display = (vis === 0 && currentView === 'list') ? 'block' : 'none';
+
+    // Sort: featured first, then alphabetical
+    visible.sort((a, b) => {
+      const aFeat = isFeaturedEvent(a) ? 0 : 1;
+      const bFeat = isFeaturedEvent(b) ? 0 : 1;
+      if (aFeat !== bFeat) return aFeat - bFeat;
+      return (a.title||'').localeCompare(b.title||'');
+    });
+
+    // Re-render with correct display date
+    container.innerHTML = visible.map(event => renderEvent(event, selDateStr)).join('');
+
+    noResults.style.display = (visible.length === 0 && currentView === 'list') ? 'block' : 'none';
+
     if (!activeSearch && dateLabel) {
       if (showAllDates) {
         dateLabel.textContent = `${CITIES[currentCity]?.label || 'Local'} — all upcoming events`;
@@ -1715,10 +1744,8 @@
         dateLabel.textContent = `${DAYS[activeDate.getDay()]}, ${MONTHS_FULL[activeDate.getMonth()]} ${activeDate.getDate()} — ${CITIES[currentCity]?.name || 'Local'}`;
       }
     }
-    // Update map if in map view
-    if (currentView === 'map' && map) {
-      updateMapMarkers();
-    }
+
+    if (currentView === 'map' && map) updateMapMarkers();
   }
 
   function applyDateFilter(dateObj) {
