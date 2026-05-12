@@ -844,7 +844,26 @@
   }
 
   .cal-event:hover { background: rgba(255,255,255,0.07); }
-  .cal-event.featured { border-left: 3px solid var(--amber); }
+  .cal-event.featured {
+    border: 2px solid var(--amber);
+    box-shadow: 0 0 0 1px rgba(239,159,39,0.15), 0 4px 20px rgba(239,159,39,0.1);
+    position: relative;
+  }
+
+  .cal-event.featured::before {
+    content: '⭐ Featured';
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    background: var(--amber);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
 
   .cal-event-time {
     min-width: 44px;
@@ -1625,7 +1644,7 @@
     const recurBadge = isRecurring && recurLabel ? `<span class="cal-tag" style="background:rgba(239,159,39,0.15);color:#EF9F27">${recurLabel}</span>` : '';
 
     const isRace = event.source === 'Running in the USA';
-    const featured = isRace || event.title.toLowerCase().includes('festival');
+    const featured = isRace || event.title.toLowerCase().includes('festival') || event.featured;
 
     // Store dates as YYYY-MM-DD strings for filtering
     const startStr = startDate || '';
