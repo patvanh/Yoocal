@@ -1,123 +1,158 @@
 {
-  "updated_at": "2026-05-12T14:07:02.799706",
-  "total": 224,
+  "updated_at": "2026-05-12T14:33:56.109583",
+  "total": 121,
   "events": [
     {
-      "title": "Breathwork + Soundbath",
-      "date": "2026-05-12",
+      "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
+      "date": "See website",
       "description": "",
-      "location": "Studio Rise",
+      "location": "Park City, UT",
+      "link": "https://www.visitparkcity.com/event/interactive-mixology-class-for-4-%26%238211%3b-20-guests/29026/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "scraped_at": "2026-05-12T14:31:03.344255"
+    },
+    {
+      "title": "Last Friday Gallery Stroll",
+      "date": "2026-05-12",
+      "description": "Monthly gallery stroll on the last Friday of each month on Main Street.",
+      "location": "Park City, UT",
+      "link": "https://www.visitparkcity.com/event/last-friday-gallery-stroll/28129/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "scraped_at": "2026-05-12T14:31:03.344294",
+      "end_date": "2026-12-31",
+      "recurrence": "monthly_last_friday",
+      "recurrence_day": "",
+      "recurrence_days": ""
+    },
+    {
+      "title": "Latino Arts Festival",
+      "date": "See website",
+      "description": "",
+      "location": "Park City, UT",
+      "link": "https://www.visitparkcity.com/event/latino-arts-festival/29052/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "scraped_at": "2026-05-12T14:31:03.344321"
+    },
+    {
+      "title": "Kimball Arts Festival",
+      "date": "See website",
+      "description": "",
+      "location": "Park City, UT",
+      "link": "https://www.visitparkcity.com/event/kimball-arts-festival/28982/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "scraped_at": "2026-05-12T14:31:03.344347"
+    },
+    {
+      "title": "Not Just a Ski TownArts, Culture & History",
+      "date": "See website",
+      "description": "",
+      "location": "Park City, UT",
+      "link": "https://www.visitparkcity.com/things-to-do/arts-and-culture/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "scraped_at": "2026-05-12T14:31:03.344374"
+    },
+    {
+      "title": "Summer Hiking",
+      "date": "See website",
+      "description": "",
+      "location": "Park City, UT",
+      "link": "https://www.visitparkcity.com/outdoors/hiking/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "scraped_at": "2026-05-12T14:31:03.344399"
+    },
+    {
+      "title": "Treat YourselfBeauty & Wellness",
+      "date": "See website",
+      "description": "",
+      "location": "Park City, UT",
+      "link": "https://www.visitparkcity.com/things-to-do/beauty-wellness/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "scraped_at": "2026-05-12T14:31:03.344426"
+    },
+    {
+      "title": "Shopping",
+      "date": "See website",
+      "description": "",
+      "location": "Park City, UT",
+      "link": "https://www.visitparkcity.com/things-to-do/shopping/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "scraped_at": "2026-05-12T14:31:03.344451"
+    },
+    {
+      "title": "Breathwork + Soundbath",
+      "date": "See website",
+      "description": "",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/breathwork-%2b-soundbath/28383/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346050",
-      "lat": 40.6626012,
-      "lng": -111.4982548,
-      "recurrence": "weekly",
-      "recurrence_day": "Tuesday",
-      "recurrence_days": ""
+      "scraped_at": "2026-05-12T14:31:03.344493"
     },
     {
       "title": "Group Fitness Classes",
       "date": "2026-05-12",
       "description": "Daily group fitness classes at Park City Municipal Athletic & Recreation Center.",
-      "location": "Park City Municipal Athletic & Recreation Center",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/group-fitness-classes/28693/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346080",
-      "lat": 40.6718147,
-      "lng": -111.5013431,
-      "recurrence": "daily",
-      "recurrence_day": "",
-      "recurrence_days": "",
-      "end_date": "2026-12-31"
-    },
-    {
-      "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Old Town Cellars",
-      "link": "https://www.visitparkcity.com/event/interactive-mixology-class-for-4-%26%238211%3b-20-guests/29026/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346103",
-      "lat": 40.643344,
-      "lng": -111.4953229,
+      "scraped_at": "2026-05-12T14:31:03.344535",
+      "end_date": "2026-12-31",
       "recurrence": "daily",
       "recurrence_day": "",
       "recurrence_days": ""
     },
     {
       "title": "Local Speaker Series: Improvisation with AishaZcello - Limits Define Style",
-      "date": "2026-05-12",
+      "date": "See website",
       "description": "",
-      "location": "Park City Library",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/local-speaker-series%3a-improvisation-with-aishazcello-limits-define-style/29039/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346118",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "end_date": "2026-05-13"
+      "scraped_at": "2026-05-12T14:31:03.344619"
     },
     {
       "title": "Progressive Art Experience",
       "date": "2026-05-12",
       "description": "Ongoing rotating art experience at Park City Fine Art on Main Street.",
-      "location": "Park City Fine Art",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/progressive-art-experience/27301/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346132",
-      "lat": 40.6451628,
-      "lng": -111.4964085,
+      "scraped_at": "2026-05-12T14:31:03.344661",
+      "end_date": "2026-12-31",
       "recurrence": "daily",
       "recurrence_day": "",
-      "recurrence_days": "",
-      "end_date": "2026-12-31"
+      "recurrence_days": ""
     },
     {
       "title": "Summer Program Registration",
-      "date": "2026-05-12",
+      "date": "See website",
       "description": "",
-      "location": "Park City Municipal Athletic & Recreation Center",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/summer-program-registration/28987/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346147",
-      "lat": 40.6718147,
-      "lng": -111.5013431,
-      "end_date": "2026-06-02",
-      "recurrence": "weekly_multiple",
-      "recurrence_day": "",
-      "recurrence_days": "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday"
+      "scraped_at": "2026-05-12T14:31:03.344705"
     },
     {
       "title": "Website is live selling gift boxes!",
       "date": "2026-05-12",
       "description": "Local artisan gift boxes available online and in-store at Maker Union.",
-      "location": "Maker Union",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/website-is-live-selling-gift-boxes!/28518/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346162",
-      "lat": 40.6645877,
-      "lng": -111.4968731,
+      "scraped_at": "2026-05-12T14:31:03.344746",
       "end_date": "2026-12-31",
       "recurrence": "daily",
       "recurrence_day": "",
@@ -125,1258 +160,111 @@
     },
     {
       "title": "Young Artists Academy (YAA) Open House",
-      "date": "2026-05-12",
+      "date": "See website",
       "description": "",
-      "location": "Kimball Art Center",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/young-artists-academy-(yaa)-open-house/29080/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346175",
-      "lat": 40.6611435,
-      "lng": -111.5040123,
-      "end_date": "2026-05-13"
+      "scraped_at": "2026-05-12T14:31:03.344787"
     },
     {
       "title": "\"Preserving Park City Mining History\" Lecture by Brian Buck",
-      "date": "2026-05-13",
+      "date": "See website",
       "description": "",
-      "location": "Park City Library",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/preserving-park-city-mining-history-lecture-by-brian-buck/29040/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346191",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "end_date": "2026-05-14"
+      "scraped_at": "2026-05-12T14:31:03.344828"
     },
     {
       "title": "Employer Committee (Disability Hiring)",
-      "date": "2026-05-12",
+      "date": "See website",
       "description": "",
-      "location": "Elevate Career Services",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/employer-committee-(disability-hiring)/27738/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346203",
-      "lat": 41.1046562,
-      "lng": -112.0570918,
-      "recurrence": "weekly",
-      "recurrence_day": "Wednesday",
-      "recurrence_days": ""
+      "scraped_at": "2026-05-12T14:31:03.344870"
     },
     {
       "title": "Fascia Rolling Class",
       "date": "2026-05-12",
       "description": "Weekly fascia rolling wellness class every Monday at Rise Dental Wellness.",
-      "location": "Studio Rise",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/fascia-rolling-class/28381/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346217",
-      "lat": 40.6626012,
-      "lng": -111.4982548,
+      "scraped_at": "2026-05-12T14:31:03.344912",
+      "end_date": "2026-10-31",
       "recurrence": "weekly",
       "recurrence_day": "Monday",
-      "recurrence_days": "",
-      "end_date": "2026-10-31"
+      "recurrence_days": ""
     },
     {
       "title": "Green Business Lunch and Learn",
-      "date": "2026-05-13",
+      "date": "See website",
       "description": "",
-      "location": "Park City Library",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/green-business-lunch-and-learn/29099/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346231",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "end_date": "2026-05-14"
+      "scraped_at": "2026-05-12T14:31:03.344954"
     },
     {
       "title": "Newcomers Coffee Social & Speaker Event",
-      "date": "2026-05-13",
+      "date": "See website",
       "description": "",
-      "location": "Park City Community Church",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/newcomers-coffee-social-%26-speaker-event/29097/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346242",
-      "lat": 40.695608,
-      "lng": -111.5463178,
-      "end_date": "2026-05-14"
+      "scraped_at": "2026-05-12T14:31:03.344998"
     },
     {
       "title": "Rise + Release: Block",
-      "date": "2026-05-12",
+      "date": "See website",
       "description": "",
-      "location": "Studio Rise",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/rise-%2b-release%3a-block/28379/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346254",
-      "lat": 40.6626012,
-      "lng": -111.4982548,
-      "recurrence": "weekly",
-      "recurrence_day": "Wednesday",
-      "recurrence_days": ""
+      "scraped_at": "2026-05-12T14:31:03.345039"
     },
     {
       "title": "A Spirited Paint Party with Artist Briar West",
-      "date": "2026-05-12",
+      "date": "See website",
       "description": "",
-      "location": "Alpine Park City Social Aid & Pleasure Club",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/a-spirited-paint-party-with-artist-briar-west/28351/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346268",
-      "lat": 40.643081,
-      "lng": -111.4951523,
-      "recurrence": "weekly_multiple",
-      "recurrence_day": "",
-      "recurrence_days": "Thursday,Friday,Saturday"
-    },
-    {
-      "title": "Amulet Bracelet Make & Take Workshop",
-      "date": "2026-05-14",
-      "description": "",
-      "location": "Tortured Heart Studio",
-      "link": "https://www.visitparkcity.com/event/amulet-bracelet-make-%26-take-workshop/29086/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346280",
-      "end_date": "2026-05-15"
-    },
-    {
-      "title": "Deer Creek Express",
-      "date": "2026-05-11",
-      "description": "Scenic train ride through Heber Valley. Runs Monday, Thursday, Friday & Saturday through October.",
-      "location": "Heber Valley Railroad",
-      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346293",
-      "lat": 40.5026478,
-      "lng": -111.423766,
-      "end_date": "2026-10-31",
-      "recurrence": "weekly_multiple",
-      "recurrence_day": "",
-      "recurrence_days": "Monday,Thursday,Friday,Saturday"
+      "scraped_at": "2026-05-12T14:31:03.345081"
     },
     {
       "title": "Girls, On Film: An 80s Themed Ladies Night",
-      "date": "2026-05-12",
+      "date": "See website",
       "description": "",
-      "location": "The Cabin",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/girls-on-film%3a-an-80s-themed-ladies-night/27842/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346307",
-      "lat": 40.643698,
-      "lng": -111.4962414,
-      "recurrence": "weekly",
-      "recurrence_day": "Thursday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Made in Utah: Film Showcase 2026",
-      "date": "2026-05-14",
-      "description": "",
-      "location": "Park City Film",
-      "link": "https://www.visitparkcity.com/event/made-in-utah%3a-film-showcase-2026/29082/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346323",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "end_date": "2026-05-15"
-    },
-    {
-      "title": "Preparing Your Garden class",
-      "date": "2026-05-14",
-      "description": "",
-      "location": "Summit Community Gardens and EATS",
-      "link": "https://www.visitparkcity.com/event/preparing-your-garden-class/29059/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346335",
-      "lat": 40.6903085,
-      "lng": -111.5403772,
-      "end_date": "2026-05-15"
-    },
-    {
-      "title": "(Re)sounding: Art Exhibition",
-      "date": "2026-05-15",
-      "description": "",
-      "location": "Kimball Art Center",
-      "link": "https://www.visitparkcity.com/event/(re)sounding%3a-art-exhibition/29043/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346351",
-      "lat": 40.6611435,
-      "lng": -111.5040123,
-      "end_date": "2026-09-14",
-      "recurrence": "weekly_multiple",
-      "recurrence_day": "",
-      "recurrence_days": "Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday"
-    },
-    {
-      "title": "Exhibition Opening: (Re)sounding",
-      "date": "2026-05-15",
-      "description": "",
-      "location": "Kimball Art Center",
-      "link": "https://www.visitparkcity.com/event/exhibition-opening%3a-(re)sounding/29036/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346364",
-      "lat": 40.6611435,
-      "lng": -111.5040123,
-      "end_date": "2026-05-16"
-    },
-    {
-      "title": "Friday Nights Live",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "7182 North Silver Creek Road",
-      "link": "https://www.visitparkcity.com/event/friday-nights-live/26713/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346380",
-      "lat": 40.73528830000001,
-      "lng": -111.49918,
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Live Free (Kick Butt) & Thrive Tribe",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Beau Collective",
-      "link": "https://www.visitparkcity.com/event/live-free-(kick-butt)-%26-thrive-tribe/27913/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346393",
-      "lat": 40.72592789999999,
-      "lng": -111.5520496,
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Red Cross Blood Drive",
-      "date": "2026-05-15",
-      "description": "",
-      "location": "Hotel Thaynes",
-      "link": "https://www.visitparkcity.com/event/red-cross-blood-drive/29085/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346406",
-      "end_date": "2026-05-16"
-    },
-    {
-      "title": "Stamped Charm Make & Take Workshop",
-      "date": "2026-05-15",
-      "description": "",
-      "location": "Tortured Heart Studio",
-      "link": "https://www.visitparkcity.com/event/stamped-charm-make-%26-take-workshop/29087/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346417",
-      "end_date": "2026-05-16"
-    },
-    {
-      "title": "The Christophers",
-      "date": "2026-05-15",
-      "description": "",
-      "location": "Park City Film",
-      "link": "https://www.visitparkcity.com/event/the-christophers/29073/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346431",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "end_date": "2026-05-18",
-      "recurrence": "daily",
-      "recurrence_day": "",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Wheel Try It",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Kimball Art Center",
-      "link": "https://www.visitparkcity.com/event/wheel-try-it/28707/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346446",
-      "lat": 40.6611435,
-      "lng": -111.5040123,
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Park City Library",
-      "link": "https://www.visitparkcity.com/event/bilingual-family-storytime-%7c-hora-de-cuentos-biling%c3%bces-en-familia/28699/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346468",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Stacking Rings Make & Take Workshop",
-      "date": "2026-05-16",
-      "description": "",
-      "location": "Tortured Heart Studio",
-      "link": "https://www.visitparkcity.com/event/stacking-rings-make-%26-take-workshop/29088/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346488",
-      "lat": 40.6641785,
-      "lng": -111.4999636,
-      "end_date": "2026-05-17"
-    },
-    {
-      "title": "PLUNJ Park City",
-      "date": "2026-05-12",
-      "description": "Cold plunge and wellness experience open daily at PLUNJ Park City.",
-      "location": "PLUNJ Park City",
-      "link": "https://www.visitparkcity.com/event/plunj-park-city/28745/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346500",
-      "lat": 40.695115,
-      "lng": -111.465842,
-      "end_date": "2026-12-31",
-      "recurrence": "daily",
-      "recurrence_day": "",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Stein's Famous Sunday Brunch",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Glitretind Restaurant at Stein Eriksen Lodge",
-      "link": "https://www.visitparkcity.com/event/steins-famous-sunday-brunch/26896/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346514",
-      "lat": 40.6216041,
-      "lng": -111.4900505,
-      "recurrence": "weekly",
-      "recurrence_day": "Sunday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Sunday Craft",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Swaner Preserve and EcoCenter",
-      "link": "https://www.visitparkcity.com/event/sunday-craft/26777/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346527",
-      "lat": 40.7217182,
-      "lng": -111.5377472,
-      "recurrence": "weekly",
-      "recurrence_day": "Sunday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Sunday Worship",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Park City Community Church",
-      "link": "https://www.visitparkcity.com/event/sunday-worship/28296/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346539",
-      "lat": 40.6957093,
-      "lng": -111.5461806,
-      "recurrence": "weekly",
-      "recurrence_day": "Sunday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Intro to AI for Women of Summit Co",
-      "date": "2026-05-18",
-      "description": "",
-      "location": "DeSpain Consulting",
-      "link": "https://www.visitparkcity.com/event/intro-to-ai-for-women-of-summit-co/29096/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346553",
-      "lat": 40.6460622,
-      "lng": -111.4979729,
-      "end_date": "2026-05-19"
-    },
-    {
-      "title": "Tapping In: How Snowpack Impacts Water Quantity and Quality",
-      "date": "2026-05-19",
-      "description": "",
-      "location": "Park City, UT",
-      "link": "https://www.visitparkcity.com/event/tapping-in%3a-how-snowpack-impacts-water-quantity-and-quality/29100/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346566",
-      "lat": 40.7136821,
-      "lng": -111.4771869,
-      "end_date": "2026-05-20"
-    },
-    {
-      "title": "Cowboy Train",
-      "date": "2026-05-20",
-      "description": "",
-      "location": "Heber Valley Railroad",
-      "link": "https://www.visitparkcity.com/event/cowboy-train/28961/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346580",
-      "lat": 40.5026478,
-      "lng": -111.423766,
-      "end_date": "2026-05-21"
-    },
-    {
-      "title": "Humans and Bees\u20145000BCE to the Present with Wasatch Beekeepers Association",
-      "date": "2026-05-21",
-      "description": "",
-      "location": "Park City Library",
-      "link": "https://www.visitparkcity.com/event/humans-and-bees%e2%80%945000bce-to-the-present-with-wasatch-beekeepers-association/29041/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346598",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "end_date": "2026-05-22"
-    },
-    {
-      "title": "MegaMind PubQuiz",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "7182 North Silver Creek Road",
-      "link": "https://www.visitparkcity.com/event/megamind-pubquiz/26714/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346615",
-      "lat": 40.7352883,
-      "lng": -111.49918,
-      "recurrence": "weekly",
-      "recurrence_day": "Thursday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "ArtWORKS:Art & Accessibility",
-      "date": "2026-05-22",
-      "description": "",
-      "location": "CREATE PC",
-      "link": "https://www.visitparkcity.com/event/artworks%3aart-%26-accessibility/29092/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346629",
-      "lat": 40.664134,
-      "lng": -111.5000184,
-      "end_date": "2026-05-23"
-    },
-    {
-      "title": "Space Cowboy",
-      "date": "2026-05-22",
-      "description": "",
-      "location": "Park City Film",
-      "link": "https://www.visitparkcity.com/event/space-cowboy/29072/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346642",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "end_date": "2026-05-25",
-      "recurrence": "daily",
-      "recurrence_day": "",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Paper Making Workshop",
-      "date": "2026-05-23",
-      "description": "",
-      "location": "Kimball Art Center",
-      "link": "https://www.visitparkcity.com/event/paper-making-workshop/29077/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346654",
-      "lat": 40.6611435,
-      "lng": -111.5040123,
-      "end_date": "2026-05-24"
-    },
-    {
-      "title": "\u2018Frida Kahlo: the Making of an Icon\u2019",
-      "date": "2026-05-23",
-      "description": "",
-      "location": "Park City Library",
-      "link": "https://www.visitparkcity.com/event/%e2%80%98frida-kahlo%3a-the-making-of-an-icon%e2%80%99/29042/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346669",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "end_date": "2026-05-24"
-    },
-    {
-      "title": "La Milpa Planting Seeds - May 28th",
-      "date": "2026-05-28",
-      "description": "",
-      "location": "Summit Community Gardens and EATS",
-      "link": "https://www.visitparkcity.com/event/la-milpa-planting-seeds-may-28th/29078/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346683",
-      "lat": 40.6903085,
-      "lng": -111.5403772,
-      "end_date": "2026-05-29"
-    },
-    {
-      "title": "Last Friday Gallery Stroll",
-      "date": "2026-05-12",
-      "description": "Monthly gallery stroll on the last Friday of each month on Main Street.",
-      "location": "Main Street",
-      "link": "https://www.visitparkcity.com/event/last-friday-gallery-stroll/28129/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346697",
-      "lat": 40.6442328,
-      "lng": -111.4961468,
-      "recurrence": "monthly_last_friday",
-      "recurrence_day": "",
-      "recurrence_days": "",
-      "end_date": "2026-12-31"
-    },
-    {
-      "title": "Princess and Pirate Train",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Heber Valley Railroad",
-      "link": "https://www.visitparkcity.com/event/princess-and-pirate-train/28762/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346712",
-      "lat": 40.5026478,
-      "lng": -111.423766,
-      "end_date": "2026-08-15"
-    },
-    {
-      "title": "Steal This Story, Please!",
-      "date": "2026-05-29",
-      "description": "",
-      "location": "Park City Film",
-      "link": "https://www.visitparkcity.com/event/steal-this-story-please!/29083/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346726",
-      "lat": 40.6507058,
-      "lng": -111.5031117,
-      "end_date": "2026-06-01",
-      "recurrence": "daily",
-      "recurrence_day": "",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Candlelight Kundalini",
-      "date": "2026-05-31",
-      "description": "",
-      "location": "The Club",
-      "link": "https://www.visitparkcity.com/event/candlelight-kundalini/29017/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346738",
-      "lat": 40.6645992,
-      "lng": -111.496851,
-      "end_date": "2026-06-01"
-    },
-    {
-      "title": "Coffee & Calm: Designer Chats",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Hugo Coffee Roasters",
-      "link": "https://www.visitparkcity.com/event/coffee-%26-calm%3a-designer-chats/28768/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346752",
-      "lat": 40.7221806,
-      "lng": -111.5455752,
-      "end_date": "2027-02-02",
-      "recurrence": "monthly",
-      "recurrence_day": "",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Tailored Tuesdays",
-      "date": "2026-05-12",
-      "description": "",
-      "location": "Distrikt F",
-      "link": "https://www.visitparkcity.com/event/tailored-tuesdays/28447/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346767",
-      "lat": 40.6588103,
-      "lng": -111.5026125,
-      "recurrence": "weekly",
-      "recurrence_day": "Tuesday",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Recess on Main - Sparkling Wines to Kick Off Summer",
-      "date": "2026-06-05",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-sparkling-wines-to-kick-off-summer/29136/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346780",
-      "end_date": "2026-06-06"
-    },
-    {
-      "title": "Family Friendly: Wind Chimes in Clay",
-      "date": "2026-06-06",
-      "description": "",
-      "location": "Kimball Art Center",
-      "link": "https://www.visitparkcity.com/event/family-friendly%3a-wind-chimes-in-clay/29095/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346795",
-      "lat": 40.6611435,
-      "lng": -111.5040123,
-      "end_date": "2026-06-07"
-    },
-    {
-      "title": "Family Yoga in the Garden",
-      "date": "2026-06-06",
-      "description": "",
-      "location": "Summit Community Gardens and EATS",
-      "link": "https://www.visitparkcity.com/event/family-yoga-in-the-garden/29061/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346810",
-      "lat": 40.6903085,
-      "lng": -111.5403772,
-      "end_date": "2026-06-07"
-    },
-    {
-      "title": "Art Summer Camps 2026",
-      "date": "2026-06-08",
-      "description": "",
-      "location": "Kimball Art Center",
-      "link": "https://www.visitparkcity.com/event/art-summer-camps-2026/28959/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346823",
-      "lat": 40.6611435,
-      "lng": -111.5040123,
-      "end_date": "2026-08-15"
-    },
-    {
-      "title": "La Milpa Planting Starts - June 8th",
-      "date": "2026-06-08",
-      "description": "",
-      "location": "Summit Community Gardens and EATS",
-      "link": "https://www.visitparkcity.com/event/la-milpa-planting-starts-june-8th/29079/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346835",
-      "lat": 40.6903085,
-      "lng": -111.5403772,
-      "end_date": "2026-06-09"
-    },
-    {
-      "title": "Summer Garden Camps",
-      "date": "2026-06-08",
-      "description": "",
-      "location": "Summit Community Gardens and EATS",
-      "link": "https://www.visitparkcity.com/event/summer-garden-camps/29060/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346852",
-      "lat": 40.6903085,
-      "lng": -111.5403772,
-      "end_date": "2026-08-08"
-    },
-    {
-      "title": "Latino Arts Festival",
-      "date": "2026-06-12",
-      "description": "",
-      "location": "Canyons Village",
-      "link": "https://www.visitparkcity.com/event/latino-arts-festival/29052/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346863",
-      "end_date": "2026-06-15"
-    },
-    {
-      "title": "Recess on Main - 50 Shades of Ros\u00e9 Wines",
-      "date": "2026-06-12",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-50-shades-of-ros%c3%a9-wines/29134/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346878",
-      "end_date": "2026-06-13"
+      "scraped_at": "2026-05-12T14:31:03.345795"
     },
     {
       "title": "Park Silly Sunday Market",
       "date": "2026-06-14",
       "description": "Weekly outdoor market every Sunday. Local vendors, food, and live music.",
-      "location": "Park Silly Sunday Market",
+      "location": "Park City, UT",
       "link": "https://www.visitparkcity.com/event/park-silly-sunday-market/28978/",
       "source": "Visit Park City",
       "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346892",
-      "lat": 40.6442552,
-      "lng": -111.4961416,
+      "scraped_at": "2026-05-12T14:31:03.345841",
       "end_date": "2026-09-27",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
       "recurrence_days": ""
-    },
-    {
-      "title": "Recess on Main - A Wine Importer's Spanish Faves",
-      "date": "2026-06-19",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-a-wine-importers-spanish-faves/29125/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346905",
-      "end_date": "2026-06-20"
-    },
-    {
-      "title": "Habitat for Humanity's Overall Ball!",
-      "date": "2026-06-20",
-      "description": "",
-      "location": "Montage Deer Valley",
-      "link": "https://www.visitparkcity.com/event/habitat-for-humanitys-overall-ball!/29054/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346918",
-      "lat": 40.6160169,
-      "lng": -111.5119119,
-      "end_date": "2026-06-21"
-    },
-    {
-      "title": "Recess on Main - Fresh Wines from Coastal Regions - Recess on Main",
-      "date": "2026-06-26",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-fresh-wines-from-coastal-regions-recess-on-main/29126/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346931",
-      "end_date": "2026-06-27"
-    },
-    {
-      "title": "Savor the Summit",
-      "date": "2026-06-27",
-      "description": "",
-      "location": "Main Street",
-      "link": "https://www.visitparkcity.com/event/savor-the-summit/28979/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346942",
-      "end_date": "2026-06-28"
-    },
-    {
-      "title": "Jylian Gustlin + Lola: Exhibition",
-      "date": "2026-07-03",
-      "description": "",
-      "location": "Gallery MAR",
-      "link": "https://www.visitparkcity.com/event/jylian-gustlin-%2b-lola%3a-exhibition/28992/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346958",
-      "lat": 40.6437136,
-      "lng": -111.4955352,
-      "end_date": "2026-07-04"
-    },
-    {
-      "title": "4th of July Parade and Celebration",
-      "date": "2026-07-04",
-      "description": "",
-      "location": "Historic Main Street & City Park",
-      "link": "https://www.visitparkcity.com/event/4th-of-july-parade-and-celebration/28980/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346970",
-      "end_date": "2026-07-05"
-    },
-    {
-      "title": "Allen Stone",
-      "date": "2026-07-10",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/allen-stone/29044/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346983",
-      "end_date": "2026-07-11"
-    },
-    {
-      "title": "Recess on Main - Wines for Day Drinking (aka: How to drink like a French person)",
-      "date": "2026-07-10",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-wines-for-day-drinking-(aka%3a-how-to-drink-like-a-french-person)/29127/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.346995",
-      "end_date": "2026-07-11"
-    },
-    {
-      "title": "Recess on Main - Garden to Glass: Pairing Wine with Fresh Summer Produce",
-      "date": "2026-07-17",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-garden-to-glass%3a-pairing-wine-with-fresh-summer-produce/29128/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347008",
-      "end_date": "2026-07-18"
-    },
-    {
-      "title": "38 Special",
-      "date": "2026-07-24",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/38-special/28888/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347022",
-      "end_date": "2026-07-25"
-    },
-    {
-      "title": "Recess on Main - The Wines of Burgundy",
-      "date": "2026-07-24",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-the-wines-of-burgundy/29129/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347033",
-      "end_date": "2026-07-25"
-    },
-    {
-      "title": "Taylor Dayne and Expose",
-      "date": "2026-07-25",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/taylor-dayne-and-expose/29045/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347045",
-      "end_date": "2026-07-26"
-    },
-    {
-      "title": "Sawyer Brown",
-      "date": "2026-07-26",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/sawyer-brown/28889/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347056",
-      "end_date": "2026-07-27"
-    },
-    {
-      "title": "Extreme Cup Soccer Tournament",
-      "date": "2026-07-31",
-      "description": "",
-      "location": "Various locations through out Summit County and the Heber Valley",
-      "link": "https://www.visitparkcity.com/event/extreme-cup-soccer-tournament/28981/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347070",
-      "lat": 40.6460622,
-      "lng": -111.4979729,
-      "end_date": "2026-08-02"
-    },
-    {
-      "title": "Recess on Main - Wines of Washington & Oregon",
-      "date": "2026-07-31",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-wines-of-washington-%26-oregon/29130/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347082",
-      "end_date": "2026-08-01"
-    },
-    {
-      "title": "Boney James",
-      "date": "2026-08-01",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/boney-james/29047/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347092",
-      "end_date": "2026-08-02"
-    },
-    {
-      "title": "Mark Chesnutt",
-      "date": "2026-08-06",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/mark-chesnutt/28890/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347104",
-      "end_date": "2026-08-07"
-    },
-    {
-      "title": "Kimball Arts Festival",
-      "date": "2026-08-07",
-      "description": "",
-      "location": "Historic Main Street",
-      "link": "https://www.visitparkcity.com/event/kimball-arts-festival/28982/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347118",
-      "end_date": "2026-08-10",
-      "recurrence": "daily",
-      "recurrence_day": "",
-      "recurrence_days": ""
-    },
-    {
-      "title": "Lonestar",
-      "date": "2026-08-07",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/lonestar/28891/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347132",
-      "end_date": "2026-08-08"
-    },
-    {
-      "title": "Michael Kessler: All Resin",
-      "date": "2026-08-07",
-      "description": "",
-      "location": "Gallery MAR",
-      "link": "https://www.visitparkcity.com/event/michael-kessler%3a-all-resin/28993/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347149",
-      "lat": 40.6437136,
-      "lng": -111.4955352,
-      "end_date": "2026-08-08"
-    },
-    {
-      "title": "Walker Hayes",
-      "date": "2026-08-08",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/walker-hayes/28892/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347161",
-      "end_date": "2026-08-09"
-    },
-    {
-      "title": "Recess on Main - Wine Bingo with Italian Wines",
-      "date": "2026-08-14",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-wine-bingo-with-italian-wines/29135/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347172",
-      "end_date": "2026-08-15"
-    },
-    {
-      "title": "UB40 With Ali Campbell",
-      "date": "2026-08-14",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/ub40-with-ali-campbell/28893/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347184",
-      "end_date": "2026-08-15"
-    },
-    {
-      "title": "Better Than Ezra with Special Guests Vertical Horizon and TONIC",
-      "date": "2026-08-15",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/better-than-ezra-with-special-guests-vertical-horizon-and-tonic/28895/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347197",
-      "end_date": "2026-08-16"
-    },
-    {
-      "title": "Maoli",
-      "date": "2026-08-21",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/maoli/29048/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347208",
-      "end_date": "2026-08-22"
-    },
-    {
-      "title": "Recess on Main - Better Together: White, Pink and Red Wine Blends",
-      "date": "2026-08-21",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-better-together%3a-white-pink-and-red-wine-blends/29132/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347219",
-      "end_date": "2026-08-22"
-    },
-    {
-      "title": "Rick Springfield",
-      "date": "2026-08-27",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/rick-springfield/29070/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347229",
-      "end_date": "2026-08-28"
-    },
-    {
-      "title": "Dylan Scott",
-      "date": "2026-08-28",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/dylan-scott/29049/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347239",
-      "end_date": "2026-08-29"
-    },
-    {
-      "title": "Recess on Main - Hidden Gems: Wine Selections by a Top Sommelier and Wine Judge",
-      "date": "2026-08-28",
-      "description": "",
-      "location": "Mountain Town Olive Oil building",
-      "link": "https://www.visitparkcity.com/event/recess-on-main-hidden-gems%3a-wine-selections-by-a-top-sommelier-and-wine-judge/29133/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347250",
-      "end_date": "2026-08-29"
-    },
-    {
-      "title": "MAX and Marc E Bassy",
-      "date": "2026-08-29",
-      "description": "",
-      "location": "Park City, Utah",
-      "link": "https://www.visitparkcity.com/event/max-and-marc-e-bassy/29050/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347260",
-      "end_date": "2026-08-30"
-    },
-    {
-      "title": "Matt Flint: Solo Exhibition",
-      "date": "2026-09-05",
-      "description": "",
-      "location": "Gallery MAR",
-      "link": "https://www.visitparkcity.com/event/matt-flint%3a-solo-exhibition/28994/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347270",
-      "lat": 40.6437136,
-      "lng": -111.4955352,
-      "end_date": "2026-09-06"
-    },
-    {
-      "title": "Miner's Day Celebration",
-      "date": "2026-09-07",
-      "description": "",
-      "location": "City Park",
-      "link": "https://www.visitparkcity.com/event/miners-day-celebration/28983/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-12T14:05:48.347283",
-      "lat": 40.6460622,
-      "lng": -111.4979729,
-      "end_date": "2026-09-08"
     },
     {
       "title": "Running with Ed 2026",
@@ -1387,7 +275,7 @@
       "source": "Running in the USA",
       "source_url": "https://www.runningintheusa.com",
       "category": "sports",
-      "scraped_at": "2026-05-12T14:05:54.350292"
+      "scraped_at": "2026-05-12T14:31:19.503125"
     },
     {
       "title": "Park City Trail Series",
@@ -1398,7 +286,7 @@
       "source": "Running in the USA",
       "source_url": "https://www.runningintheusa.com",
       "category": "sports",
-      "scraped_at": "2026-05-12T14:05:54.350305"
+      "scraped_at": "2026-05-12T14:31:19.503138"
     },
     {
       "title": "Triple Trail Challenge \u2014 Round Valley Rambler & Jupiter Peak",
@@ -1409,7 +297,7 @@
       "source": "Running in the USA",
       "source_url": "https://www.runningintheusa.com",
       "category": "sports",
-      "scraped_at": "2026-05-12T14:05:54.350308"
+      "scraped_at": "2026-05-12T14:31:19.503139"
     },
     {
       "title": "Utah Mortgage Show",
@@ -1419,7 +307,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/utah-mortgage-show/18499259/2026-05-12T08",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797884"
+      "scraped_at": "2026-05-12T14:33:56.108686"
     },
     {
       "title": "Bilingual Baby | Beb\u00e9 biling\u00fce",
@@ -1429,7 +317,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/bilingual-baby-beb-biling-e/16860514/2026-05-12T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797895"
+      "scraped_at": "2026-05-12T14:33:56.108694"
     },
     {
       "title": "Book Buddies Preschool Story Time",
@@ -1439,7 +327,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/book-buddies-preschool-story-time/16659061/2026-05-12T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797899"
+      "scraped_at": "2026-05-12T14:33:56.108697"
     },
     {
       "title": "Planning for Summer Parent Meeting",
@@ -1449,7 +337,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/planning-for-summer-parent-meeting/18755268/2026-05-12T11",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797902"
+      "scraped_at": "2026-05-12T14:33:56.108699"
     },
     {
       "title": "Bilingual Storytime | Cuentos biling\u00fces",
@@ -1459,7 +347,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/bilingual-storytime-cuentos-biling-es/16860618/2026-05-12T11",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797905"
+      "scraped_at": "2026-05-12T14:33:56.108701"
     },
     {
       "title": "Intro to Guitar",
@@ -1469,7 +357,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/intro-to-guitar/18597816/2026-05-12T16",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797908"
+      "scraped_at": "2026-05-12T14:33:56.108703"
     },
     {
       "title": "Tuesday Run Club: 6pm!",
@@ -1479,7 +367,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/tuesday-run-club-6pm-/18355162/2026-05-12T18",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797924"
+      "scraped_at": "2026-05-12T14:33:56.108717"
     },
     {
       "title": "May Green Drinks",
@@ -1489,7 +377,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/may-green-drinks/18648140/2026-05-12T18",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797927"
+      "scraped_at": "2026-05-12T14:33:56.108719"
     },
     {
       "title": "Mindfulness Meditation for Adults",
@@ -1499,7 +387,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/mindfulness-meditation-for-adults/18337978/2026-05-12T18",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797930"
+      "scraped_at": "2026-05-12T14:33:56.108728"
     },
     {
       "title": "Steven Bosco",
@@ -1509,7 +397,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/steven-bosco/18724857/2026-05-12T19",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797932"
+      "scraped_at": "2026-05-12T14:33:56.108731"
     },
     {
       "title": "Interactive Mixology Class",
@@ -1519,7 +407,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/interactive-mixology-class/18794530/2026-05-12T00",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797935"
+      "scraped_at": "2026-05-12T14:33:56.108734"
     },
     {
       "title": "Baby & Me",
@@ -1529,7 +417,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/baby-me/17023040/2026-05-13T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797937"
+      "scraped_at": "2026-05-12T14:33:56.108741"
     },
     {
       "title": "Charlas en la Cocina | Chats in the Kitchen",
@@ -1539,7 +427,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/charlas-en-la-cocina-chats-in-the-kitchen/18611136/2026-05-13T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797940"
+      "scraped_at": "2026-05-12T14:33:56.108744"
     },
     {
       "title": "Music and Movement",
@@ -1549,7 +437,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/music-and-movement/17023163/2026-05-13T11",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797943"
+      "scraped_at": "2026-05-12T14:33:56.108746"
     },
     {
       "title": "STEAM for Kids: Technology | STEAM para ni\u00f1os: La tecnolog\u00eda",
@@ -1559,7 +447,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/steam-for-kids-technology-steam-para-ni-os-la-tecnolog-a/18555300/2026-05-13T16",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797948"
+      "scraped_at": "2026-05-12T14:33:56.108755"
     },
     {
       "title": "2026 Regional Trails Mixer",
@@ -1569,7 +457,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/2026-regional-trails-mixer/18340446/2026-05-13T17",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797951"
+      "scraped_at": "2026-05-12T14:33:56.108757"
     },
     {
       "title": "Horses & Divorces",
@@ -1579,7 +467,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/horses-divorces/15280960/2026-05-13T19",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797956"
+      "scraped_at": "2026-05-12T14:33:56.108762"
     },
     {
       "title": "Total Request Live w. Preston Creed & Kate Chanson",
@@ -1589,7 +477,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/total-request-live-w-preston-creed-kate-chanson/15280950/2026-05-13T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797959"
+      "scraped_at": "2026-05-12T14:33:56.108770"
     },
     {
       "title": "Preschool Storytime",
@@ -1599,7 +487,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/preschool-storytime/17034015/2026-05-14T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797967"
+      "scraped_at": "2026-05-12T14:33:56.108774"
     },
     {
       "title": "Music & Rhyme Wiggle Time",
@@ -1609,7 +497,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/music-rhyme-wiggle-time/16659155/2026-05-14T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797975"
+      "scraped_at": "2026-05-12T14:33:56.108781"
     },
     {
       "title": "Toddler Time",
@@ -1619,7 +507,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/toddler-time/17669423/2026-05-14T11",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797979"
+      "scraped_at": "2026-05-12T14:33:56.108784"
     },
     {
       "title": "Minecraft Club",
@@ -1629,7 +517,27 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/minecraft-club/17669440/2026-05-14T16",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797982"
+      "scraped_at": "2026-05-12T14:33:56.108786"
+    },
+    {
+      "title": "Preparing Your Garden class",
+      "date": "2026-05-14",
+      "description": "At Summit Community Gardens and EATS.",
+      "location": "Summit Community Gardens and EATS",
+      "link": "https://www.parkrecord.com/calendar/#!/details/preparing-your-garden-class/18559673/2026-05-14T17",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.108788"
+    },
+    {
+      "title": "Made in Utah: Film Showcase 2026",
+      "date": "2026-05-14",
+      "description": "At Park City Film.",
+      "location": "Park City Film",
+      "link": "https://www.parkrecord.com/calendar/#!/details/made-in-utah-film-showcase-2026/18737036/2026-05-14T19",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.108791"
     },
     {
       "title": "Preston Creed",
@@ -1639,7 +547,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/preston-creed/18803237/2026-05-14T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797990"
+      "scraped_at": "2026-05-12T14:33:56.108799"
     },
     {
       "title": "Los Lobos",
@@ -1649,7 +557,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/los-lobos/17940146/2026-05-14T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.797995"
+      "scraped_at": "2026-05-12T14:33:56.108802"
     },
     {
       "title": "Friday Run Club: 6am & 7am!",
@@ -1659,7 +567,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/friday-run-club-6am-7am-/18356450/2026-05-15T06",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798003"
+      "scraped_at": "2026-05-12T14:33:56.108810"
     },
     {
       "title": "Heber Valley Farm Baby Animal Celebration 2026",
@@ -1669,7 +577,17 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/heber-valley-farm-baby-animal-celebration-2026/18712434/2026-05-15T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798006"
+      "scraped_at": "2026-05-12T14:33:56.108813"
+    },
+    {
+      "title": "(Re)sounding: Art Exhibition",
+      "date": "2026-05-15",
+      "description": "At Kimball Art Center.",
+      "location": "Kimball Art Center",
+      "link": "https://www.parkrecord.com/calendar/#!/details/-re-sounding-art-exhibition/18523452/2026-05-15T10",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.108815"
     },
     {
       "title": "Mi beb\u00e9 y yo | Spanish Baby Time",
@@ -1679,7 +597,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/mi-beb-y-yo-spanish-baby-time/17034876/2026-05-15T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798012"
+      "scraped_at": "2026-05-12T14:33:56.108817"
     },
     {
       "title": "Library Play Time",
@@ -1689,7 +607,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/library-play-time/16659204/2026-05-15T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798017"
+      "scraped_at": "2026-05-12T14:33:56.108819"
     },
     {
       "title": "Cuentos y cantos | Spanish Songs and Stories",
@@ -1699,7 +617,17 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/cuentos-y-cantos-spanish-songs-and-stories/17034921/2026-05-15T11",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798021"
+      "scraped_at": "2026-05-12T14:33:56.108822"
+    },
+    {
+      "title": "Wheel Try It",
+      "date": "2026-05-15",
+      "description": "At Kimball Art Center.",
+      "location": "Kimball Art Center",
+      "link": "https://www.parkrecord.com/calendar/#!/details/wheel-try-it/17678675/2026-05-15T13",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.108826"
     },
     {
       "title": "Plazapalooza 2026",
@@ -1709,7 +637,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/plazapalooza-2026/18221385/2026-05-15T14",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798028"
+      "scraped_at": "2026-05-12T14:33:56.108830"
     },
     {
       "title": "After School Special",
@@ -1719,7 +647,27 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/after-school-special/17034927/2026-05-15T15",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798030"
+      "scraped_at": "2026-05-12T14:33:56.108832"
+    },
+    {
+      "title": "Exhibition Opening: (Re)sounding",
+      "date": "2026-05-15",
+      "description": "At Kimball Art Center.",
+      "location": "Kimball Art Center",
+      "link": "https://www.parkrecord.com/calendar/#!/details/exhibition-opening-re-sounding/18519966/2026-05-15T18",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.108834"
+    },
+    {
+      "title": "Friday Nights Live",
+      "date": "2026-05-15",
+      "description": "At Lush's BBQ.",
+      "location": "Lush's BBQ",
+      "link": "https://www.parkrecord.com/calendar/#!/details/friday-nights-live/18585614/2026-05-15T18",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.108837"
     },
     {
       "title": "Heart of the West Gala & Concert",
@@ -1729,7 +677,17 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/heart-of-the-west-gala-concert/18183361/2026-05-15T18",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798038"
+      "scraped_at": "2026-05-12T14:33:56.108839"
+    },
+    {
+      "title": "The Christophers",
+      "date": "2026-05-15",
+      "description": "At Park City Film.",
+      "location": "Park City Film",
+      "link": "https://www.parkrecord.com/calendar/#!/details/the-christophers/18693068/2026-05-15T19",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.108841"
     },
     {
       "title": "Randin Graves",
@@ -1739,267 +697,17 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/randin-graves/18724850/2026-05-15T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798046"
+      "scraped_at": "2026-05-12T14:33:56.108843"
     },
     {
-      "title": "Swaner Saturday Morning Nature Walks",
-      "date": "2026-05-16",
-      "description": "At Swaner EcoCenter.",
-      "location": "Swaner EcoCenter",
-      "link": "https://www.parkrecord.com/calendar/#!/details/swaner-saturday-morning-nature-walks/17776443/2026-05-16T08",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798054"
-    },
-    {
-      "title": "Community Noxious Weeds Tour",
-      "date": "2026-05-16",
-      "description": "At Richardson Flat Park and Ride.",
-      "location": "Richardson Flat Park and Ride",
-      "link": "https://www.parkrecord.com/calendar/#!/details/community-noxious-weeds-tour/18803337/2026-05-16T09",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798056"
-    },
-    {
-      "title": "Crafternoons 2 Go",
-      "date": "2026-05-16",
+      "title": "Humans and Bees\u20145000BCE to the Present with Wasatch Beekeepers Association",
+      "date": "2026-05-21",
       "description": "At Park City Library.",
       "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/crafternoons-2-go/11113352/2026-05-16T09",
+      "link": "https://www.parkrecord.com/calendar/#!/details/humans-and-bees-5000bce-to-the-present-with-wasatch-beekeepers-association/18523525/2026-05-21T14",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798060"
-    },
-    {
-      "title": "Volunteer Dig Day May 16th - Oakley Bike Park",
-      "date": "2026-05-16",
-      "description": "",
-      "location": "Park City, UT",
-      "link": "https://www.parkrecord.com/calendar/#!/details/volunteer-dig-day-may-16th-oakley-bike-park/18686001/2026-05-16T09",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798063"
-    },
-    {
-      "title": "Corazones de Frida Workshop",
-      "date": "2026-05-16",
-      "description": "At Park City Library.",
-      "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/corazones-de-frida-workshop/18611424/2026-05-16T11",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798075"
-    },
-    {
-      "title": "Family Friendly Puzzle Time ( 35, 100, or 300 Pieces)",
-      "date": "2026-05-16",
-      "description": "At Park City Library.",
-      "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/family-friendly-puzzle-time-35-100-or-300-pieces-/18611453/2026-05-16T13",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798078"
-    },
-    {
-      "title": "Swaner Wetland Climbing Wall",
-      "date": "2026-05-16",
-      "description": "At Swaner EcoCenter.",
-      "location": "Swaner EcoCenter",
-      "link": "https://www.parkrecord.com/calendar/#!/details/swaner-wetland-climbing-wall/18034435/2026-05-16T13",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798081"
-    },
-    {
-      "title": "Little p Project Gala 2026",
-      "date": "2026-05-16",
-      "description": "At National Ability Center.",
-      "location": "National Ability Center",
-      "link": "https://www.parkrecord.com/calendar/#!/details/little-p-project-gala-2026/18499250/2026-05-16T17",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798087"
-    },
-    {
-      "title": "Steven Bosco Band",
-      "date": "2026-05-16",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/steven-bosco-band/18724858/2026-05-16T21",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798098"
-    },
-    {
-      "title": "Crafternoons To-Go Series",
-      "date": "2026-05-16",
-      "description": "At Park City Library.",
-      "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/crafternoons-to-go-series/17986604/2026-05-16T00",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798102"
-    },
-    {
-      "title": "Slow Sunday Run Club!",
-      "date": "2026-05-17",
-      "description": "At Rendezvous Run.",
-      "location": "Rendezvous Run",
-      "link": "https://www.parkrecord.com/calendar/#!/details/slow-sunday-run-club-/18647621/2026-05-17T10",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798108"
-    },
-    {
-      "title": "Church Service",
-      "date": "2026-05-17",
-      "description": "At Creekside Christian Fellowship.",
-      "location": "Creekside Christian Fellowship",
-      "link": "https://www.parkrecord.com/calendar/#!/details/church-service/13910401/2026-05-17T10",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798113"
-    },
-    {
-      "title": "Chase Given",
-      "date": "2026-05-17",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/chase-given/18724859/2026-05-17T19",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798131"
-    },
-    {
-      "title": "AAAP Spring 2026 Conference in Park City, Utah",
-      "date": "2026-05-18",
-      "description": "At The St. Regis Deer Valley.",
-      "location": "The St. Regis Deer Valley",
-      "link": "https://www.parkrecord.com/calendar/#!/details/aaap-spring-2026-conference-in-park-city-utah/18027666/2026-05-18T08",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798137"
-    },
-    {
-      "title": "Next Chapter Book Club",
-      "date": "2026-05-18",
-      "description": "At Park City Library.",
-      "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/next-chapter-book-club/16860492/2026-05-18T12",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798140"
-    },
-    {
-      "title": "Rich Wyman",
-      "date": "2026-05-18",
-      "description": "At Park City Senior Center.",
-      "location": "Park City Senior Center",
-      "link": "https://www.parkrecord.com/calendar/#!/details/rich-wyman/18544884/2026-05-18T13",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798142"
-    },
-    {
-      "title": "Rich Wyman at Park City Senior Center",
-      "date": "2026-05-18",
-      "description": "At Apr\u00e8s Pendry.",
-      "location": "Apr\u00e8s Pendry",
-      "link": "https://www.parkrecord.com/calendar/#!/details/rich-wyman-at-park-city-senior-center/17491138/2026-05-18T13",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798145"
-    },
-    {
-      "title": "D&D Night (Dungeons & Dragons)",
-      "date": "2026-05-18",
-      "description": "At Park City Library.",
-      "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/d-d-night-dungeons-dragons-/18523718/2026-05-18T17",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798148"
-    },
-    {
-      "title": "English-Spanish Conversation Club | Club de conversaci\u00f3n espa\u00f1ol-ingl\u00e9s",
-      "date": "2026-05-18",
-      "description": "At Park City Library.",
-      "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/english-spanish-conversation-club-club-de-conversaci-n-espa-ol-ingl-s/16860458/2026-05-18T18",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798150"
-    },
-    {
-      "title": "Daniel Torriente",
-      "date": "2026-05-18",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/daniel-torriente/18796396/2026-05-18T19",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798153"
-    },
-    {
-      "title": "David Park & Melissa Garff Ballard",
-      "date": "2026-05-18",
-      "description": "At Eccles Center.",
-      "location": "Eccles Center",
-      "link": "https://www.parkrecord.com/calendar/#!/details/david-park-melissa-garff-ballard/18357240/2026-05-18T19",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798155"
-    },
-    {
-      "title": "Crochet or Knit at the Movie",
-      "date": "2026-05-19",
-      "description": "At Park City Library.",
-      "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/crochet-or-knit-at-the-movie/18611483/2026-05-19T17",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798182"
-    },
-    {
-      "title": "desert season stained glass",
-      "date": "2026-05-19",
-      "description": "At Our Lady of the Snows Center.",
-      "location": "Our Lady of the Snows Center",
-      "link": "https://www.parkrecord.com/calendar/#!/details/desert-season-stained-glass/18478703/2026-05-19T18",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798193"
-    },
-    {
-      "title": "Jefferson Montoya",
-      "date": "2026-05-19",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/jefferson-montoya/18724860/2026-05-19T19",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798198"
-    },
-    {
-      "title": "Mobile Food Pantry - Todd Hollow Apartments",
-      "date": "2026-05-20",
-      "description": "At Hideout, UT.",
-      "location": "Hideout, UT",
-      "link": "https://www.parkrecord.com/calendar/#!/details/mobile-food-pantry-todd-hollow-apartments/18544948/2026-05-20T16",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798215"
-    },
-    {
-      "title": "Rooted in Tradition: Native American Food Sovereignty given by Darren Parry",
-      "date": "2026-05-20",
-      "description": "At Park City Museum Education and Collections Center.",
-      "location": "Park City Museum Education and Collections Center",
-      "link": "https://www.parkrecord.com/calendar/#!/details/rooted-in-tradition-native-american-food-sovereignty-given-by-darren-parry/17771127/2026-05-20T17",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798222"
+      "scraped_at": "2026-05-12T14:33:56.108859"
     },
     {
       "title": "City Council Meeting",
@@ -2009,7 +717,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/city-council-meeting/17931937/2026-05-21T14",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798252"
+      "scraped_at": "2026-05-12T14:33:56.108861"
     },
     {
       "title": "Maker Thursdays ! / \u00a1Jueves de Creadores!",
@@ -2019,7 +727,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/maker-thursdays-jueves-de-creadores-/18597524/2026-05-21T17",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798257"
+      "scraped_at": "2026-05-12T14:33:56.108865"
     },
     {
       "title": "Rescued Hearts Documentary",
@@ -2029,7 +737,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/rescued-hearts-documentary/18803732/2026-05-21T18",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798259"
+      "scraped_at": "2026-05-12T14:33:56.108867"
     },
     {
       "title": "Iris DeMent Tickets",
@@ -2039,7 +747,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/iris-dement-tickets/18499393/2026-05-21T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798262"
+      "scraped_at": "2026-05-12T14:33:56.108870"
     },
     {
       "title": "Aaron Honigman Duo",
@@ -2049,7 +757,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/aaron-honigman-duo/18724861/2026-05-21T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798264"
+      "scraped_at": "2026-05-12T14:33:56.108872"
     },
     {
       "title": "An Evening with Iris DeMent",
@@ -2059,7 +767,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/an-evening-with-iris-dement/18544885/2026-05-21T00",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798272"
+      "scraped_at": "2026-05-12T14:33:56.108883"
     },
     {
       "title": "Run Club Special! Stretch Lab x RNDV",
@@ -2069,7 +777,17 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/run-club-special-stretch-lab-x-rndv/18825349/2026-05-22T07",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798277"
+      "scraped_at": "2026-05-12T14:33:56.108888"
+    },
+    {
+      "title": "ArtWORKS:Art & Accessibility",
+      "date": "2026-05-22",
+      "description": "At CREATE PC.",
+      "location": "CREATE PC",
+      "link": "https://www.parkrecord.com/calendar/#!/details/artworks-art-accessibility/18765662/2026-05-22T09",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.108892"
     },
     {
       "title": "Stitch Your Constellation",
@@ -2079,117 +797,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/stitch-your-constellation/18618553/2026-05-22T14",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798302"
-    },
-    {
-      "title": "Lane & The Chain",
-      "date": "2026-05-22",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/lane-the-chain/18724862/2026-05-22T21",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798322"
-    },
-    {
-      "title": "The Soldier Hollow Classic Sheepdog Championship and Festival",
-      "date": "2026-05-22",
-      "description": "At Heber Valley.",
-      "location": "Heber Valley",
-      "link": "https://www.parkrecord.com/calendar/#!/details/the-soldier-hollow-classic-sheepdog-championship-and-festival/18766065/2026-05-22T00",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798327"
-    },
-    {
-      "title": "Give it a Go!",
-      "date": "2026-05-23",
-      "description": "At East Fork State Park - Deer Run Parking Lot.",
-      "location": "East Fork State Park - Deer Run Parking Lot",
-      "link": "https://www.parkrecord.com/calendar/#!/details/give-it-a-go-/18499079/2026-05-23T10",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798335"
-    },
-    {
-      "title": "Decorate your K-Pop Photocard",
-      "date": "2026-05-23",
-      "description": "At Park City Library.",
-      "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/decorate-your-k-pop-photocard/18618571/2026-05-23T13",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798345"
-    },
-    {
-      "title": "Park City Treble Makers: The Salon Concert",
-      "date": "2026-05-23",
-      "description": "",
-      "location": "Park City, UT",
-      "link": "https://www.parkrecord.com/calendar/#!/details/park-city-treble-makers-the-salon-concert/18766096/2026-05-23T17",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798361"
-    },
-    {
-      "title": "Whitney Lusk",
-      "date": "2026-05-23",
-      "description": "At Grand Hyatt Deer Valley.",
-      "location": "Grand Hyatt Deer Valley",
-      "link": "https://www.parkrecord.com/calendar/#!/details/whitney-lusk/18767537/2026-05-23T18",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798364"
-    },
-    {
-      "title": "Debra Fotheringham",
-      "date": "2026-05-23",
-      "description": "At Caf\u00e9 Galleria.",
-      "location": "Caf\u00e9 Galleria",
-      "link": "https://www.parkrecord.com/calendar/#!/details/debra-fotheringham/18767501/2026-05-23T18",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798366"
-    },
-    {
-      "title": "DJ Sauci",
-      "date": "2026-05-23",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/dj-sauci/18724863/2026-05-23T20",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798376"
-    },
-    {
-      "title": "Los Hellcaminos",
-      "date": "2026-05-23",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/los-hellcaminos/18724848/2026-05-23T21",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798378"
-    },
-    {
-      "title": "Bangarang The DJ",
-      "date": "2026-05-23",
-      "description": "At Downstairs.",
-      "location": "Downstairs",
-      "link": "https://www.parkrecord.com/calendar/#!/details/bangarang-the-dj/18238138/2026-05-23T21",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798381"
-    },
-    {
-      "title": "Courtney Lane",
-      "date": "2026-05-24",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/courtney-lane/18724864/2026-05-24T19",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798405"
+      "scraped_at": "2026-05-12T14:33:56.108905"
     },
     {
       "title": "Jon O",
@@ -2199,7 +807,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/jon-o/18796398/2026-05-26T19",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798428"
+      "scraped_at": "2026-05-12T14:33:56.108927"
     },
     {
       "title": "The Motherhood Circle: Community Baby Shower",
@@ -2209,7 +817,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/the-motherhood-circle-community-baby-shower/18676851/2026-05-27T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798436"
+      "scraped_at": "2026-05-12T14:33:56.108934"
     },
     {
       "title": "Toddler Craft",
@@ -2219,7 +827,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/toddler-craft/18618589/2026-05-27T12",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798447"
+      "scraped_at": "2026-05-12T14:33:56.108945"
     },
     {
       "title": "American Mahjong Open Play | Juego abierto de mahjong americano",
@@ -2229,7 +837,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/american-mahjong-open-play-juego-abierto-de-mahjong-americano/18618710/2026-05-27T17",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798450"
+      "scraped_at": "2026-05-12T14:33:56.108947"
     },
     {
       "title": "Cookie Queens - special screeening + Director Q&A",
@@ -2239,7 +847,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/cookie-queens-special-screeening-director-q-a/18877167/2026-05-27T19",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798453"
+      "scraped_at": "2026-05-12T14:33:56.108950"
     },
     {
       "title": "Book Club at the Senior Center",
@@ -2249,7 +857,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/book-club-at-the-senior-center/18618853/2026-05-28T13",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798470"
+      "scraped_at": "2026-05-12T14:33:56.108967"
     },
     {
       "title": "Talavera Tiles Workshop",
@@ -2259,7 +867,17 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/talavera-tiles-workshop/18597759/2026-05-28T15",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798473"
+      "scraped_at": "2026-05-12T14:33:56.108969"
+    },
+    {
+      "title": "La Milpa Planting Seeds - May 28th",
+      "date": "2026-05-28",
+      "description": "At Summit Community Gardens.",
+      "location": "Summit Community Gardens",
+      "link": "https://www.parkrecord.com/calendar/#!/details/la-milpa-planting-seeds-may-28th/18702749/2026-05-28T17",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.108975"
     },
     {
       "title": "wood burning 101",
@@ -2269,7 +887,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/wood-burning-101/18478700/2026-05-28T18",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798481"
+      "scraped_at": "2026-05-12T14:33:56.108978"
     },
     {
       "title": "Keller Williams & The Keels",
@@ -2279,7 +897,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/keller-williams-the-keels/17692879/2026-05-28T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798484"
+      "scraped_at": "2026-05-12T14:33:56.108984"
     },
     {
       "title": "Saemore & Kieran",
@@ -2289,7 +907,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/saemore-kieran/18724865/2026-05-28T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798486"
+      "scraped_at": "2026-05-12T14:33:56.108986"
     },
     {
       "title": "Keller Williams Tickets",
@@ -2299,7 +917,17 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/keller-williams-tickets/18499039/2026-05-28T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798489"
+      "scraped_at": "2026-05-12T14:33:56.108988"
+    },
+    {
+      "title": "Steal This Story, Please!",
+      "date": "2026-05-29",
+      "description": "At Park City Film.",
+      "location": "Park City Film",
+      "link": "https://www.parkrecord.com/calendar/#!/details/steal-this-story-please-/18742673/2026-05-29T19",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.109016"
     },
     {
       "title": "Aspen Anonda",
@@ -2309,87 +937,37 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/aspen-anonda/18796395/2026-05-29T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798529"
+      "scraped_at": "2026-05-12T14:33:56.109020"
     },
     {
-      "title": "Keller & The Keels",
-      "date": "2026-05-29",
-      "description": "At Egyptian Theatre.",
-      "location": "Egyptian Theatre",
-      "link": "https://www.parkrecord.com/calendar/#!/details/keller-the-keels/18484229/2026-05-29T20",
+      "title": "Next Chapter Book Club",
+      "date": "2026-06-01",
+      "description": "At Park City Library.",
+      "location": "Park City Library",
+      "link": "https://www.parkrecord.com/calendar/#!/details/next-chapter-book-club/16860492/2026-06-01T12",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798534"
+      "scraped_at": "2026-05-12T14:33:56.109022"
     },
     {
-      "title": "Keller Williams & Larry Keel & Keller & the Keels",
-      "date": "2026-05-29",
-      "description": "At Egyptian Theatre.",
-      "location": "Egyptian Theatre",
-      "link": "https://www.parkrecord.com/calendar/#!/details/keller-williams-larry-keel-keller-the-keels/18190033/2026-05-29T20",
+      "title": "English-Spanish Conversation Club | Club de conversaci\u00f3n espa\u00f1ol-ingl\u00e9s",
+      "date": "2026-06-01",
+      "description": "At Park City Library.",
+      "location": "Park City Library",
+      "link": "https://www.parkrecord.com/calendar/#!/details/english-spanish-conversation-club-club-de-conversaci-n-espa-ol-ingl-s/16860458/2026-06-01T18",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798536"
+      "scraped_at": "2026-05-12T14:33:56.109025"
     },
     {
-      "title": "ROOTING TO SELF: mindful hike + sauna + cold plunge + anchoring workshop",
-      "date": "2026-05-30",
-      "description": "At Park City.",
-      "location": "Park City",
-      "link": "https://www.parkrecord.com/calendar/#!/details/rooting-to-self-mindful-hike-sauna-cold-plunge-anchoring-workshop/18702869/2026-05-30T09",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798547"
-    },
-    {
-      "title": "Graduation Bash at Junction Commons",
-      "date": "2026-05-30",
-      "description": "At Junction Commons.",
-      "location": "Junction Commons",
-      "link": "https://www.parkrecord.com/calendar/#!/details/graduation-bash-at-junction-commons/18492724/2026-05-30T11",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798555"
-    },
-    {
-      "title": "Alicia Stockman Album Release Show",
-      "date": "2026-05-30",
-      "description": "At The Cabin Park City.",
-      "location": "The Cabin Park City",
-      "link": "https://www.parkrecord.com/calendar/#!/details/alicia-stockman-album-release-show/18514447/2026-05-30T18",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798560"
-    },
-    {
-      "title": "SugarVan plays",
-      "date": "2026-05-30",
+      "title": "Daniel Torriente",
+      "date": "2026-06-01",
       "description": "At The Spur Bar and Grill.",
       "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/sugarvan-plays/18190038/2026-05-30T21",
+      "link": "https://www.parkrecord.com/calendar/#!/details/daniel-torriente/18796396/2026-06-01T19",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798570"
-    },
-    {
-      "title": "Michelle Moonshine",
-      "date": "2026-05-31",
-      "description": "At Caf\u00e9 Galleria.",
-      "location": "Caf\u00e9 Galleria",
-      "link": "https://www.parkrecord.com/calendar/#!/details/michelle-moonshine/18406408/2026-05-31T11",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798588"
-    },
-    {
-      "title": "Park City Treble Makers: The Community Concert",
-      "date": "2026-05-31",
-      "description": "",
-      "location": "Park City, UT",
-      "link": "https://www.parkrecord.com/calendar/#!/details/park-city-treble-makers-the-community-concert/18766097/2026-05-31T16",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798593"
+      "scraped_at": "2026-05-12T14:33:56.109027"
     },
     {
       "title": "Coyote Cole",
@@ -2399,7 +977,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/coyote-cole/18796399/2026-06-02T19",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798628"
+      "scraped_at": "2026-05-12T14:33:56.109053"
     },
     {
       "title": "Mobile Food Pantry - Victory at Summit Apartments / Elk Meadows",
@@ -2409,7 +987,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/mobile-food-pantry-victory-at-summit-apartments-elk-meadows/18544949/2026-06-03T16",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798641"
+      "scraped_at": "2026-05-12T14:33:56.109069"
     },
     {
       "title": "Medical Care in Park City in 1900-Not For the Faint of Heart lecture given by Dr. Thomas Schwenk",
@@ -2419,7 +997,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/medical-care-in-park-city-in-1900-not-for-the-faint-of-heart-lecture-given-by-dr-thomas-schwenk/18406273/2026-06-03T17",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798645"
+      "scraped_at": "2026-05-12T14:33:56.109072"
     },
     {
       "title": "Historic Preservation Board Meeting",
@@ -2429,7 +1007,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/historic-preservation-board-meeting/18801706/2026-06-03T17",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798647"
+      "scraped_at": "2026-05-12T14:33:56.109074"
     },
     {
       "title": "Medical Care in Park City in 1900 Not For the Faint of Heart lecture",
@@ -2439,7 +1017,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/medical-care-in-park-city-in-1900-not-for-the-faint-of-heart-lecture/18359003/2026-06-03T17",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798650"
+      "scraped_at": "2026-05-12T14:33:56.109078"
     },
     {
       "title": "Aubrie Rose",
@@ -2449,7 +1027,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/aubrie-rose/18796400/2026-06-03T19",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798652"
+      "scraped_at": "2026-05-12T14:33:56.109083"
     },
     {
       "title": "Something Rotten!",
@@ -2459,7 +1037,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/something-rotten-/17692880/2026-06-03T00",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798663"
+      "scraped_at": "2026-05-12T14:33:56.109092"
     },
     {
       "title": "Gina Marie Duo",
@@ -2469,7 +1047,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/gina-marie-duo/18796401/2026-06-04T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798680"
+      "scraped_at": "2026-05-12T14:33:56.109107"
     },
     {
       "title": "Dual Sport Adventure in the Rockies",
@@ -2479,7 +1057,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/dual-sport-adventure-in-the-rockies/18554741/2026-06-05T08",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798691"
+      "scraped_at": "2026-05-12T14:33:56.109123"
     },
     {
       "title": "Wildflower Hikes",
@@ -2489,7 +1067,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/wildflower-hikes/18648144/2026-06-05T08",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798693"
+      "scraped_at": "2026-05-12T14:33:56.109124"
     },
     {
       "title": "Angie Petty",
@@ -2499,7 +1077,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/angie-petty/18781769/2026-06-05T18",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798706"
+      "scraped_at": "2026-05-12T14:33:56.109137"
     },
     {
       "title": "Nate Robinson Music",
@@ -2509,7 +1087,17 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/nate-robinson-music/18238135/2026-06-05T18",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798713"
+      "scraped_at": "2026-05-12T14:33:56.109144"
+    },
+    {
+      "title": "Recess on Main - Sparkling Wines to Kick Off Summer",
+      "date": "2026-06-05",
+      "description": "At Mountain Town Olive Oil building.",
+      "location": "Mountain Town Olive Oil building",
+      "link": "https://www.parkrecord.com/calendar/#!/details/recess-on-main-sparkling-wines-to-kick-off-summer/18829510/2026-06-05T18",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.109146"
     },
     {
       "title": "National Trails Day",
@@ -2519,7 +1107,37 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/national-trails-day/18686002/2026-06-06T08",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798720"
+      "scraped_at": "2026-05-12T14:33:56.109153"
+    },
+    {
+      "title": "Swaner Saturday Morning Nature Walks",
+      "date": "2026-06-06",
+      "description": "At Swaner EcoCenter.",
+      "location": "Swaner EcoCenter",
+      "link": "https://www.parkrecord.com/calendar/#!/details/swaner-saturday-morning-nature-walks/17776443/2026-06-06T08",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.109155"
+    },
+    {
+      "title": "Crafternoons 2 Go",
+      "date": "2026-06-06",
+      "description": "At Park City Library.",
+      "location": "Park City Library",
+      "link": "https://www.parkrecord.com/calendar/#!/details/crafternoons-2-go/11113352/2026-06-06T09",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.109157"
+    },
+    {
+      "title": "Family Yoga in the Garden",
+      "date": "2026-06-06",
+      "description": "At Summit Community Gardens and EATS.",
+      "location": "Summit Community Gardens and EATS",
+      "link": "https://www.parkrecord.com/calendar/#!/details/family-yoga-in-the-garden/18559682/2026-06-06T09",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "scraped_at": "2026-05-12T14:33:56.109163"
     },
     {
       "title": "TJ Gurn",
@@ -2529,107 +1147,17 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/tj-gurn/18601409/2026-06-06T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798730"
+      "scraped_at": "2026-05-12T14:33:56.109169"
     },
     {
-      "title": "TJ Gurn at Lucky Ones Coffee Presents / Park City Library Patio",
-      "date": "2026-06-06",
-      "description": "At Park City Library.",
-      "location": "Park City Library",
-      "link": "https://www.parkrecord.com/calendar/#!/details/tj-gurn-at-lucky-ones-coffee-presents-park-city-library-patio/18561631/2026-06-06T10",
+      "title": "Art Summer Camps 2026",
+      "date": "2026-06-10",
+      "description": "At Kimball Art Center.",
+      "location": "Kimball Art Center",
+      "link": "https://www.parkrecord.com/calendar/#!/details/art-summer-camps-2026/18308097/2026-06-10T09",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798736"
-    },
-    {
-      "title": "Modern Calligraphy for Beginners",
-      "date": "2026-06-06",
-      "description": "At Mountain Town Olive Oil Co.",
-      "location": "Mountain Town Olive Oil Co",
-      "link": "https://www.parkrecord.com/calendar/#!/details/modern-calligraphy-for-beginners/18712455/2026-06-06T13",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798741"
-    },
-    {
-      "title": "Brush Lettering for Beginners at Mountain Town Olive Oil Co",
-      "date": "2026-06-06",
-      "description": "At Mountain Town Olive Oil.",
-      "location": "Mountain Town Olive Oil",
-      "link": "https://www.parkrecord.com/calendar/#!/details/brush-lettering-for-beginners-at-mountain-town-olive-oil-co/18712454/2026-06-06T16",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798746"
-    },
-    {
-      "title": "Broken Compass Bluegrass & Kyle Ledson",
-      "date": "2026-06-07",
-      "description": "At Park Silly Sunday Market.",
-      "location": "Park Silly Sunday Market",
-      "link": "https://www.parkrecord.com/calendar/#!/details/broken-compass-bluegrass-kyle-ledson/18406416/2026-06-07T15",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798771"
-    },
-    {
-      "title": "Amanda Lynn Jones",
-      "date": "2026-06-07",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/amanda-lynn-jones/18796397/2026-06-07T19",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798773"
-    },
-    {
-      "title": "Outdoor Learning Connection: P.E.",
-      "date": "2026-06-08",
-      "description": "At National Ability Center.",
-      "location": "National Ability Center",
-      "link": "https://www.parkrecord.com/calendar/#!/details/outdoor-learning-connection-p-e-/18648145/2026-06-08T08",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798778"
-    },
-    {
-      "title": "Outdoor Learning Connection: Physical Education and Outdoor",
-      "date": "2026-06-08",
-      "description": "At National Ability Center.",
-      "location": "National Ability Center",
-      "link": "https://www.parkrecord.com/calendar/#!/details/outdoor-learning-connection-physical-education-and-outdoor/18270118/2026-06-08T08",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798781"
-    },
-    {
-      "title": "SHAPE Utah Outdoor Learning Connection Conference",
-      "date": "2026-06-08",
-      "description": "At National Ability Center.",
-      "location": "National Ability Center",
-      "link": "https://www.parkrecord.com/calendar/#!/details/shape-utah-outdoor-learning-connection-conference/18027667/2026-06-08T08",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798783"
-    },
-    {
-      "title": "Community Day",
-      "date": "2026-06-08",
-      "description": "At Utah Olympic Park.",
-      "location": "Utah Olympic Park",
-      "link": "https://www.parkrecord.com/calendar/#!/details/community-day/18803238/2026-06-08T10",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798789"
-    },
-    {
-      "title": "Ian McIver",
-      "date": "2026-06-09",
-      "description": "At The Spur Bar and Grill.",
-      "location": "The Spur Bar and Grill",
-      "link": "https://www.parkrecord.com/calendar/#!/details/ian-mciver/18796402/2026-06-09T19",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798819"
+      "scraped_at": "2026-05-12T14:33:56.109171"
     },
     {
       "title": "Beyond Buzzwords: Writing Sustainability Content People Care About",
@@ -2639,7 +1167,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/beyond-buzzwords-writing-sustainability-content-people-care-about/18648146/2026-06-10T10",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798836"
+      "scraped_at": "2026-05-12T14:33:56.109178"
     },
     {
       "title": "I Dreamed I Saw Joe Hill lecture given by Sandy Brumley and Emmett Murray",
@@ -2649,7 +1177,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/i-dreamed-i-saw-joe-hill-lecture-given-by-sandy-brumley-and-emmett-murray/18559703/2026-06-10T17",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798841"
+      "scraped_at": "2026-05-12T14:33:56.109183"
     },
     {
       "title": "I Dreamed I Saw Joe Hill Lecture by Sandy Brumley and Emmett Murray",
@@ -2659,7 +1187,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/i-dreamed-i-saw-joe-hill-lecture-by-sandy-brumley-and-emmett-murray/18677471/2026-06-10T17",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798844"
+      "scraped_at": "2026-05-12T14:33:56.109185"
     },
     {
       "title": "Sydnie Keddington",
@@ -2669,7 +1197,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/sydnie-keddington/18796403/2026-06-10T19",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798847"
+      "scraped_at": "2026-05-12T14:33:56.109187"
     },
     {
       "title": "Dustbowl Revival",
@@ -2679,7 +1207,7 @@
       "link": "https://www.parkrecord.com/calendar/#!/details/dustbowl-revival/18484232/2026-06-11T20",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
-      "scraped_at": "2026-05-12T14:07:02.798872"
+      "scraped_at": "2026-05-12T14:33:56.109213"
     },
     {
       "title": "Something Rotten Jr. \u2014 Egyptian Theatre YouTheatre",
@@ -2690,7 +1218,7 @@
       "link": "https://www.parkcityshows.com",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/2026/05/08/scene-happenings-may-9-to-may-12/",
-      "scraped_at": "2026-05-12T14:05:54.351318"
+      "scraped_at": "2026-05-12T14:31:19.503881"
     },
     {
       "title": "Sunday Craft at Swaner EcoCenter",
@@ -2703,7 +1231,7 @@
       "link": "https://www.swanerecocenter.org",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/2026/05/08/scene-happenings-may-9-to-may-12/",
-      "scraped_at": "2026-05-12T14:05:54.351326"
+      "scraped_at": "2026-05-12T14:31:19.503890"
     },
     {
       "title": "Summit County Library Chess Club",
@@ -2716,7 +1244,7 @@
       "link": "https://summit.events.mylibrary.digital",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/2026/05/08/scene-happenings-may-9-to-may-12/",
-      "scraped_at": "2026-05-12T14:05:54.351332"
+      "scraped_at": "2026-05-12T14:31:19.503894"
     }
   ]
 }
