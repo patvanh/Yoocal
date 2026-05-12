@@ -3,8 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yoocal — Your local, everywhere</title>
-<meta name="description" content="Discover everything happening in your city. Events, music, food, outdoor adventures — all in one place. Updated daily.">
+
+<!-- Primary SEO -->
+<title>Yoocal — Things To Do in Park City, Utah | Local Events Calendar</title>
+<meta name="description" content="Find everything happening in Park City, Utah — concerts, outdoor adventures, festivals, food events, races and more. One free calendar updated daily from every local source.">
+<meta name="keywords" content="Park City events, things to do in Park City Utah, Park City calendar, Park City concerts, Park City festivals, Summit County events, Park City this weekend">
+<meta name="author" content="Yoocal">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.yoocal.com">
+
+<!-- Open Graph (Facebook, iMessage, Slack previews) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.yoocal.com">
+<meta property="og:title" content="Yoocal — Things To Do in Park City, Utah">
+<meta property="og:description" content="One place for everything happening in Park City. Concerts, races, festivals, food events and more — updated daily. Free for locals and visitors.">
+<meta property="og:image" content="https://www.yoocal.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Yoocal">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.yoocal.com">
+<meta name="twitter:title" content="Yoocal — Things To Do in Park City, Utah">
+<meta name="twitter:description" content="One place for everything happening in Park City. Updated daily from every local source.">
+<meta name="twitter:image" content="https://www.yoocal.com/og-image.png">
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Yoocal",
+  "url": "https://www.yoocal.com",
+  "description": "Local events calendar for Park City, Utah. Find concerts, festivals, outdoor adventures, races and more.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.yoocal.com/#events?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventSeries",
+  "name": "Park City Local Events",
+  "location": {
+    "@type": "Place",
+    "name": "Park City",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Park City",
+      "addressRegion": "UT",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Yoocal",
+    "url": "https://www.yoocal.com"
+  }
+}
+</script>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
