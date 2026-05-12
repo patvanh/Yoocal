@@ -1046,7 +1046,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-eyebrow"><span></span> Now live in Park City, Utah</div>
+  <div class="hero-eyebrow" id="hero-eyebrow"><span></span> Now live in Park City, Utah</div>
   <h1>Your local,<br><em>everywhere.</em></h1>
   <p>One place for everything happening in your city — for locals and visitors alike. Updated daily from every source that matters.</p>
   <div class="hero-actions">
@@ -1072,10 +1072,10 @@
 <!-- LOCATION BAR -->
 <div class="location-bar">
   <span class="loc-label">Cities</span>
-  <a href="#" class="loc-chip active">📍 Park City, UT</a>
+  <a href="#" class="loc-chip active" onclick="switchCity('parkcity', this)" data-city="parkcity">📍 Park City, UT</a>
+  <a href="#" class="loc-chip" onclick="switchCity('elkhartlake', this)" data-city="elkhartlake">📍 Elkhart Lake, WI</a>
   <a href="#signup" class="loc-chip">+ Aspen, CO — coming soon</a>
   <a href="#signup" class="loc-chip">+ Jackson Hole, WY — coming soon</a>
-  <a href="#signup" class="loc-chip">+ Steamboat Springs, CO — coming soon</a>
   <a href="#signup" class="loc-chip">+ Your city? →</a>
 </div>
 
@@ -1117,7 +1117,7 @@
   <div class="cal-ui reveal">
     <div class="cal-topbar">
       <div class="cal-logo"><div class="cal-logo-dot"></div> yoocal</div>
-      <div class="cal-loc">📍 Park City, UT &nbsp;▾</div>
+      <div class="cal-loc" id="cal-loc-label">📍 Park City, UT &nbsp;▾</div>
     </div>
 
     <div class="cal-search">
@@ -1741,45 +1741,92 @@
   const dayContainer = document.getElementById('cal-days-container');
   buildDayChips();
 
-  // Load events.json
-  fetch('events.json')
-    .then(r => r.json())
-    .then(data => {
-      allEvents = data.events || [];
+  // ── City configuration ──
+  const CITIES = {
+    parkcity: {
+      name: 'Park City, UT',
+      label: 'Park City & Summit County',
+      eyebrow: 'Now live in Park City, Utah',
+      file: 'events.json',
+      junk: ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'previous month', 'next month']
+    },
+    elkhartlake: {
+      name: 'Elkhart Lake, WI',
+      label: 'Elkhart Lake & Sheboygan County',
+      eyebrow: 'Now live in Elkhart Lake, Wisconsin',
+      file: 'events-elkhartlake.json',
+      junk: ['previous month', 'next month']
+    }
+  };
 
-      // Filter junk: skip navigation-style entries
-      const junk = ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'previous month', 'next month'];
-      allEvents = allEvents.filter(e => !junk.some(j => e.title.toLowerCase().includes(j)));
+  let currentCity = 'parkcity';
 
-      // Sort by date (string comparison works perfectly for YYYY-MM-DD)
-      allEvents.sort((a, b) => {
-        const da = parseDate(a.date) || '9999-99-99';
-        const db = parseDate(b.date) || '9999-99-99';
-        return da.localeCompare(db);
+  function loadCity(cityKey) {
+    const city = CITIES[cityKey];
+    if (!city) return;
+    currentCity = cityKey;
+
+    // Update UI labels
+    const eyebrow = document.getElementById('hero-eyebrow');
+    if (eyebrow) eyebrow.innerHTML = `<span></span> ${city.eyebrow}`;
+    const calLoc = document.getElementById('cal-loc-label');
+    if (calLoc) calLoc.innerHTML = `📍 ${city.name} &nbsp;▾`;
+
+    // Show loading state
+    container.innerHTML = '<div style="padding:32px;text-align:center;color:rgba(255,255,255,0.4);font-size:14px;">Loading events...</div>';
+
+    fetch(city.file)
+      .then(r => r.json())
+      .then(data => {
+        allEvents = data.events || [];
+        allEvents = allEvents.filter(e => !city.junk.some(j => e.title.toLowerCase().includes(j)));
+        allEvents.sort((a, b) => {
+          const da = parseDate(a.date) || '9999-99-99';
+          const db = parseDate(b.date) || '9999-99-99';
+          return da.localeCompare(db);
+        });
+
+        container.innerHTML = allEvents.map(renderEvent).join('');
+
+        const heroStat = document.querySelector('.hero-stat .num');
+        if (heroStat) heroStat.textContent = allEvents.length;
+
+        if (data.updated_at) {
+          const updated = new Date(data.updated_at);
+          const hrs = Math.round((new Date() - updated) / 3600000);
+          if (dateLabel) dateLabel.textContent = `${city.label} — updated ${hrs < 1 ? 'just now' : hrs + ' hours ago'}`;
+        }
+
+        applyDateFilter(today);
+        buildMonthPicker([]);
+      })
+      .catch(() => {
+        container.innerHTML = `<div style="padding:32px;text-align:center;color:rgba(255,255,255,0.4);font-size:14px;">Events coming soon for ${city.name}! Check back shortly.</div>`;
       });
+  }
 
-      // Render all events
-      container.innerHTML = allEvents.map(renderEvent).join('');
+  // City switcher function (called from location bar)
+  function switchCity(cityKey, el) {
+    if (el) {
+      document.querySelectorAll('.loc-chip').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+    }
+    // Reset filters
+    activeCategory = 'all';
+    activeSearch = '';
+    weekOffset = 0;
+    if (searchInput) { searchInput.value = ''; searchClear.style.display = 'none'; }
+    document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+    document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+    buildDayChips();
+    loadCity(cityKey);
+    // Scroll to events
+    document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
+    return false;
+  }
 
-      // Update hero stat
-      const heroStat = document.querySelector('.hero-stat .num');
-      if (heroStat) heroStat.textContent = allEvents.length;
-
-      // Update calendar header
-      if (data.updated_at) {
-        const updated = new Date(data.updated_at);
-        const hrs = Math.round((new Date() - updated) / 3600000);
-        if (dateLabel) dateLabel.textContent = `Park City & Summit County — updated ${hrs < 1 ? 'just now' : hrs + ' hours ago'}`;
-      }
-
-      // Apply today's filter on load
-      applyDateFilter(today);
-      // Rebuild picker now that events are rendered
-      buildMonthPicker([]);
-    })
-    .catch(() => {
-      container.innerHTML = '<div style="padding:32px;text-align:center;color:rgba(255,255,255,0.4);font-size:14px;">Could not load events. Please try again later.</div>';
-    });
+  // Load Park City on start
+  loadCity('parkcity');
 
   // Category filter clicks
   document.querySelectorAll('.cal-filter').forEach(f => {
