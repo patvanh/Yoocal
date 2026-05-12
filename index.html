@@ -553,7 +553,13 @@
   .cal-day .d { font-size: 10px; color: rgba(255,255,255,0.4); margin-bottom: 2px; }
   .cal-day .n { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.7); }
   .cal-day.active .d, .cal-day.active .n { color: white; }
-  .cal-day .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); margin-top: 4px; }
+  .cal-day .day-count {
+    font-size: 9px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+    font-weight: 500;
+  }
+  .cal-day.active .day-count { color: rgba(255,255,255,0.7); }
 
   .cal-days-header {
     display: flex;
@@ -1550,6 +1556,7 @@
     else if (event.is_free === false && event.price && event.price !== '0') cats.push('paid');
     else if (/\bfree\b/.test(text)) cats.push('free');
     else if (/\$\d|\bticket(s)?\b|\bcost\b|\bfee\b|\bpaid\b/.test(text)) cats.push('paid');
+    else if (/\bconference\b|\bsummit\b|\bexpo\b|\bsymposium\b|\bgala\b|\bawards\b|\bmortgage show\b|\btrade show\b|\bsoundbath\b|\bbreathwork\b/.test(text) && !/\bfree\b/.test(text)) cats.push('paid');
 
     return [...new Set(cats)].join(' ') || 'community';
   }
@@ -1922,6 +1929,27 @@
   // ── Build day chips with week offset ──
   let weekOffset = 0;
 
+  function countEventsOnDate(dateObj) {
+    if (!allEvents.length) return 0;
+    const sel = dateToStr(dateObj);
+    const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const todayName = dayNames[dateObj.getDay()];
+    return allEvents.filter(event => {
+      const s = parseDate(event.date);
+      const en = event.end_date ? parseDate(event.end_date) : s;
+      if (!s) return false;
+      if (sel < s || sel > (en || s)) return false;
+      if (event.recurrence_days) return event.recurrence_days.split(',').includes(todayName);
+      if (event.recurrence_day) return todayName === event.recurrence_day;
+      if (event.recurrence === 'monthly_last_friday') {
+        if (dateObj.getDay() !== 5) return false;
+        const nextWeek = new Date(dateObj); nextWeek.setDate(dateObj.getDate() + 7);
+        return nextWeek.getMonth() !== dateObj.getMonth();
+      }
+      return true;
+    }).length;
+  }
+
   function buildDayChips() {
     dayContainer.innerHTML = '';
     for (let i = 0; i <= 6; i++) {
@@ -1930,8 +1958,10 @@
       const div = document.createElement('div');
       const isToday = d.toDateString() === today.toDateString();
       const isSelected = d.toDateString() === selectedDate.toDateString();
-      div.className = 'cal-day' + (isToday || (weekOffset === 0 && i === 0 && !isSelected) ? '' : '') + (isSelected ? ' active' : (isToday ? ' active' : ''));
-      div.innerHTML = `<span class="d">${DAYS[d.getDay()]}</span><span class="n">${d.getDate()}</span>`;
+      div.className = 'cal-day' + (isSelected ? ' active' : (isToday ? ' active' : ''));
+      const count = countEventsOnDate(d);
+      const countHtml = count > 0 ? `<span class="day-count">${count}</span>` : `<span class="day-count" style="visibility:hidden">0</span>`;
+      div.innerHTML = `<span class="d">${DAYS[d.getDay()]}</span><span class="n">${d.getDate()}</span>${countHtml}`;
       const captured = new Date(d);
       div.addEventListener('click', () => {
         selectedDate = new Date(captured);
@@ -2046,6 +2076,7 @@
         activeDate = today;
         showAllDates = false;
         applyFilters();
+        buildDayChips(); // Rebuild with event counts
         buildMonthPicker([]);
       })
       .catch(() => {
