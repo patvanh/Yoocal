@@ -1349,19 +1349,37 @@
   // ── Auto-categorize events from keywords ──
   function getCategories(event) {
     const text = (event.title + ' ' + (event.description || '')).toLowerCase();
+    const location = (event.location || '').toLowerCase();
     const cats = [];
-    if (/music|concert|band|jazz|live|perform|sing|song|dj/.test(text)) cats.push('music');
-    if (/hike|trail|outdoor|bike|ski|snow|mountain|park|nature|climb|kayak|paddle/.test(text)) cats.push('outdoor');
-    if (/food|drink|wine|beer|cocktail|dine|eat|taste|market|farm|chef/.test(text)) cats.push('food');
-    if (/art|gallery|exhibit|museum|paint|sculpt|craft|film|theatre|theater|show|play|dance/.test(text)) cats.push('arts');
-    if (/run|race|marathon|5k|10k|triathlon|relay|cycling|fitness|gym|yoga|pilates|workout/.test(text)) cats.push('sports');
-    if (/kid|child|family|youth|teen|school|junior|baby|parent/.test(text)) cats.push('family');
-    if (/wellness|meditat|breathwork|sound|healing|spa|health|therapy/.test(text)) cats.push('wellness');
-    if (/community|nonprofit|charity|volunteer|fundrais|lecture|talk|class|learn|workshop/.test(text)) cats.push('community');
+
+    // Keyword-based detection
+    if (/music|concert|band|jazz|live|perform|sing|song|dj|bluegrass|acoustic|folk|rock|country|reggae|blues|indie/.test(text)) cats.push('music');
+    if (/hike|trail|outdoor|bike|ski|snow|mountain|park|nature|climb|kayak|paddle|snowshoe|camp/.test(text)) cats.push('outdoor');
+    if (/food|drink|wine|beer|cocktail|dine|eat|taste|market|farm|chef|brewery|distill|whiskey|spirits|brunch/.test(text)) cats.push('food');
+    if (/art|gallery|exhibit|museum|paint|sculpt|craft|film|theatre|theater|show|play|dance|screening|improv/.test(text)) cats.push('arts');
+    if (/run|race|marathon|5k|10k|triathlon|relay|cycling|fitness|gym|yoga|pilates|workout|athletic/.test(text)) cats.push('sports');
+    if (/kid|child|family|youth|teen|school|junior|baby|parent|preschool|storytime|story time/.test(text)) cats.push('family');
+    if (/wellness|meditat|breathwork|sound|healing|spa|health|therapy|mindful|reiki/.test(text)) cats.push('wellness');
+    if (/community|nonprofit|charity|volunteer|fundrais|lecture|talk|class|learn|workshop|meeting|seminar/.test(text)) cats.push('community');
+
+    // Venue-based detection — Park City known venues
+    const MUSIC_VENUES = ['spur bar', 'spur and grill', 'egyptian theatre', 'side door', 'liquid joe', 'state room'];
+    const FOOD_VENUES = ['high west', 'no name saloon', "o'shucks", 'handle', 'riverhorse', 'vessel', 'windy ridge', 'farm', 'harvest', 'cena', 'grappa'];
+    const OUTDOOR_VENUES = ['swaner', 'round valley', 'trail', 'mountain', 'resort', 'snow park', 'jordanelle', 'deer valley'];
+    const ARTS_VENUES = ['egyptian', 'kimball arts', 'library', 'museum', 'gallery', 'eccles'];
+    const FAMILY_VENUES = ['library', 'recreation center', 'fieldhouse', 'ice arena', 'basin rec'];
+
+    if (MUSIC_VENUES.some(v => location.includes(v) || text.includes(v))) cats.push('music');
+    if (FOOD_VENUES.some(v => location.includes(v) || text.includes(v))) cats.push('food');
+    if (OUTDOOR_VENUES.some(v => location.includes(v))) cats.push('outdoor');
+    if (ARTS_VENUES.some(v => location.includes(v) || text.includes(v))) cats.push('arts');
+    if (FAMILY_VENUES.some(v => location.includes(v))) cats.push('family');
+
     if (event.source === 'Running in the USA') cats.push('sports');
     if (event.is_free === true || /free/.test(text)) cats.push('free');
     else if (event.price && event.price !== '0' && event.price !== '') cats.push('paid');
     else if (/\$|ticket|register|cost|fee/.test(text)) cats.push('paid');
+
     return [...new Set(cats)].join(' ') || 'community';
   }
 
