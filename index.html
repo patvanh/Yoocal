@@ -1768,6 +1768,13 @@
   function applySearch(q) {
     activeSearch = q;
     searchClear.style.display = q ? 'block' : 'none';
+    // When searching, show all dates so results aren't limited to selected day
+    if (q) {
+      showAllDates = true;
+    } else {
+      // When clearing search, go back to date filter
+      showAllDates = false;
+    }
     applyFilters();
   }
 
@@ -2095,6 +2102,7 @@
     searchClear.addEventListener('click', () => {
       searchInput.value = '';
       activeSearch = '';
+      showAllDates = false;
       searchClear.style.display = 'none';
       applyFilters();
     });
