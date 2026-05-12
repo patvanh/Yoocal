@@ -1514,9 +1514,9 @@
     noResults.style.display = vis === 0 ? 'block' : 'none';
     if (!activeSearch && dateLabel) {
       if (showAllDates) {
-        dateLabel.textContent = `Park City & Summit County — all upcoming events`;
+        dateLabel.textContent = `${CITIES[currentCity]?.label || 'Local'} — all upcoming events`;
       } else {
-        dateLabel.textContent = `${DAYS[activeDate.getDay()]}, ${MONTHS_FULL[activeDate.getMonth()]} ${activeDate.getDate()} — Park City`;
+        dateLabel.textContent = `${DAYS[activeDate.getDay()]}, ${MONTHS_FULL[activeDate.getMonth()]} ${activeDate.getDate()} — ${CITIES[currentCity]?.name || 'Local'}`;
       }
     }
   }
