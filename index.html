@@ -1530,10 +1530,10 @@
     if (/community|nonprofit|charity|volunteer|fundrais|lecture|talk|class|learn|workshop|meeting|seminar/.test(text)) cats.push('community');
 
     // Venue-based detection — Park City known venues
-    const MUSIC_VENUES = ['spur bar', 'spur and grill', 'egyptian theatre', 'side door', 'liquid joe', 'state room'];
+    const MUSIC_VENUES = ['spur bar', 'spur and grill', 'the spur', 'side door', 'liquid joe', 'state room'];
     const FOOD_VENUES = ['high west', 'no name saloon', "o'shucks", 'handle', 'riverhorse', 'vessel', 'windy ridge', 'farm', 'harvest', 'cena', 'grappa'];
     const OUTDOOR_VENUES = ['swaner', 'round valley', 'trail', 'mountain', 'resort', 'snow park', 'jordanelle', 'deer valley'];
-    const ARTS_VENUES = ['egyptian', 'kimball arts', 'library', 'museum', 'gallery', 'eccles'];
+    const ARTS_VENUES = ['egyptian', 'kimball arts', 'library', 'museum', 'gallery', 'eccles', 'park city institute', 'pcri', 'sundance', 'center for the arts'];
     const FAMILY_VENUES = ['library', 'recreation center', 'fieldhouse', 'ice arena', 'basin rec'];
 
     if (MUSIC_VENUES.some(v => location.includes(v) || text.includes(v))) cats.push('music');
@@ -1541,6 +1541,9 @@
     if (OUTDOOR_VENUES.some(v => location.includes(v))) cats.push('outdoor');
     if (ARTS_VENUES.some(v => location.includes(v) || text.includes(v))) cats.push('arts');
     if (FAMILY_VENUES.some(v => location.includes(v))) cats.push('family');
+
+    // Egyptian Theatre and Park City Institute shows are paid
+    if (['egyptian theatre', 'park city institute', 'pcri'].some(v => location.includes(v) || text.includes(v))) cats.push('paid');
 
     if (event.source === 'Running in the USA') cats.push('sports');
     if (event.is_free === true) cats.push('free');
@@ -1645,7 +1648,7 @@
     const recurBadge = isRecurring && recurLabel ? `<span class="cal-tag" style="background:rgba(239,159,39,0.15);color:#EF9F27">${recurLabel}</span>` : '';
 
     const isRace = event.source === 'Running in the USA';
-    const featured = isRace || event.title.toLowerCase().includes('festival') || event.featured;
+    const featured = isFeaturedEvent(event);
 
     // Store dates as YYYY-MM-DD strings for filtering
     const startStr = startDate || '';
@@ -1938,6 +1941,13 @@
   const dayContainer = document.getElementById('cal-days-container');
   buildDayChips();
 
+  // ── Featured event detection (used in sort and render) ──
+  function isFeaturedEvent(event) {
+    return event.featured === true ||
+           event.source === 'Running in the USA' ||
+           (event.title||'').toLowerCase().includes('festival');
+  }
+
   // ── City configuration ──
   const CITIES = {
     parkcity: {
@@ -1977,18 +1987,16 @@
       .then(data => {
         allEvents = data.events || [];
         allEvents = allEvents.filter(e => !city.junk.some(j => e.title.toLowerCase().includes(j)));
-        allEvents.sort((a, b) => {
-          const da = parseDate(a.date) || '9999-99-99';
-          const db = parseDate(b.date) || '9999-99-99';
-          if (da !== db) return da.localeCompare(db);
-          // Same date — featured first
-          const isFeatured = e => e.featured || e.source === 'Running in the USA' || (e.title||'').toLowerCase().includes('festival');
-          const aFeat = isFeatured(a) ? 0 : 1;
-          const bFeat = isFeatured(b) ? 0 : 1;
-          if (aFeat !== bFeat) return aFeat - bFeat;
-          // Then alphabetically
-          return (a.title||'').localeCompare(b.title||'');
-        });
+      // Sort by date, then featured first, then alphabetically
+      allEvents.sort((a, b) => {
+        const da = parseDate(a.date) || '9999-99-99';
+        const db = parseDate(b.date) || '9999-99-99';
+        if (da !== db) return da.localeCompare(db);
+        const aFeat = isFeaturedEvent(a) ? 0 : 1;
+        const bFeat = isFeaturedEvent(b) ? 0 : 1;
+        if (aFeat !== bFeat) return aFeat - bFeat;
+        return (a.title||'').localeCompare(b.title||'');
+      });
 
         container.innerHTML = allEvents.map(renderEvent).join('');
 
