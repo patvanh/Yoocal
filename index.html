@@ -981,11 +981,19 @@
     letter-spacing: 1px;
   }
   .featured-band-cards {
+    max-width: 1400px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 220px));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 12px;
   }
   .featured-band-card {
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 14px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.15s;
+  }
     background: rgba(0,0,0,0.2);
     border-radius: 10px;
     padding: 14px;
