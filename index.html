@@ -2645,7 +2645,9 @@
     const title = card.dataset.title || '';
     const dateStr = card.dataset.start || card.dataset.date || '';
     const location = card.dataset.location || '';
-    const description = card.dataset.link ? `More info: ${card.dataset.link}` : '';
+    const rawLink = card.dataset.link || '';
+    const trackedLink = rawLink ? `https://yoocal.com/api/go?ref=cal&url=${encodeURIComponent(rawLink)}` : '';
+    const description = trackedLink ? `More info: ${trackedLink}` : '';
 
     // Format date for Google: YYYYMMDD
     const gDate = dateStr.replace(/-/g, '');
