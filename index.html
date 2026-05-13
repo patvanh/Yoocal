@@ -1952,6 +1952,9 @@
   function applyFilters() {
     const selDateStr = showAllDates ? null : dateToStr(activeDate);
 
+    // Update featured pick based on the selected date
+    dailyFeaturedTitle = getDailyFeaturedTitle(activeDate);
+
     // Filter allEvents directly
     const visible = allEvents.filter(event => {
       // Date filter
@@ -2319,21 +2322,19 @@
 
   // ── Featured event detection (used in sort and render) ──
   // Pick one random event per day to feature (consistent all day, changes daily)
-  function getDailyFeaturedTitle() {
-    const now = new Date();
-    const start = new Date(now.getFullYear(), 0, 0);
-    const dayOfYear = Math.floor((now - start) / (1000 * 60 * 60 * 24));
-    const todayStr = now.toISOString().slice(0, 10);
+  function getDailyFeaturedTitle(forDate) {
+    const d = forDate || new Date();
+    const start = new Date(d.getFullYear(), 0, 0);
+    const dayOfYear = Math.floor((d - start) / (1000 * 60 * 60 * 24));
+    const dateStr = (d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'));
 
-    // Only pick from events happening TODAY
     const pool = allEvents.filter(e =>
-      e.date && e.date.slice(0, 10) === todayStr &&
+      e.date && e.date.slice(0, 10) === dateStr &&
       e.featured !== true &&
       e.source !== 'Running in the USA' &&
       !(e.title||'').toLowerCase().includes('festival')
     );
 
-    // Deduplicate by title
     const seen = new Set();
     const unique = pool.filter(e => {
       if (seen.has(e.title)) return false;
