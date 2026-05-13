@@ -943,6 +943,15 @@
   .cal-ext { color: rgba(255,255,255,0.2); font-size: 14px; padding-top: 2px; text-decoration: none; transition: color 0.15s; }
   .cal-ext:hover { color: rgba(255,255,255,0.6); }
 
+  /* Add to calendar */
+  .cal-event-actions { display: flex; align-items: flex-start; gap: 6px; padding-top: 2px; flex-shrink: 0; }
+  .atc-btn { background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.2); font-size: 15px; padding: 0; line-height: 1; transition: color 0.15s; position: relative; }
+  .atc-btn:hover { color: rgba(255,255,255,0.7); }
+  .atc-dropdown { display: none; position: fixed; background: white; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); padding: 6px; z-index: 9999; min-width: 180px; }
+  .atc-dropdown.open { display: block; }
+  .atc-option { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 13px; font-weight: 500; color: #1a1830; cursor: pointer; text-decoration: none; transition: background 0.15s; white-space: nowrap; }
+  .atc-option:hover { background: #f0eeff; color: #534AB7; }
+
   .sponsored-pill {
     font-size: 10px;
     padding: 2px 6px;
@@ -1798,7 +1807,10 @@
         <p>${(event.description || '').slice(0, 120) || 'See website for details.'}</p>
         <div class="cal-tags">${tagHTML}${recurBadge}<span class="cal-source">via ${sourceShort}${distLabel}</span></div>
       </div>
-      <div class="cal-ext">↗</div>
+      <div class="cal-event-actions">
+        <button class="atc-btn" title="Add to calendar" onclick="openAtcDropdown(event, this)">📅</button>
+        <div class="cal-ext">↗</div>
+      </div>
     </a>`;
   }
 
@@ -2377,7 +2389,76 @@
     });
   });
 
-  // ── Hero eyebrow city dropdown ──
+  // ── Add to Calendar ──
+  function formatICSDate(dateStr, timeStr) {
+    if (!dateStr) return null;
+    const d = dateStr.replace(/-/g, '');
+    if (!timeStr) return d;
+    const t = timeStr.replace(/:/g, '').padEnd(6, '0');
+    return `${d}T${t}`;
+  }
+
+  function makeICSContent(title, dateStr, location, description) {
+    const start = formatICSDate(dateStr) || '';
+    const end = start; // all-day
+    const now = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+    const safe = s => (s || '').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+    return [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Yoocal//EN',
+      'BEGIN:VEVENT',
+      `DTSTART;VALUE=DATE:${start}`,
+      `DTEND;VALUE=DATE:${start}`,
+      `DTSTAMP:${now}`,
+      `SUMMARY:${safe(title)}`,
+      `LOCATION:${safe(location)}`,
+      `DESCRIPTION:${safe(description)}`,
+      'END:VEVENT', 'END:VCALENDAR'
+    ].join('\r\n');
+  }
+
+  function openAtcDropdown(e, btn) {
+    e.preventDefault();
+    e.stopPropagation();
+    const card = btn.closest('.cal-event');
+    const title = card.dataset.title || '';
+    const dateStr = card.dataset.start || card.dataset.date || '';
+    const location = card.dataset.location || '';
+    const description = card.dataset.link ? `More info: ${card.dataset.link}` : '';
+
+    // Format date for Google: YYYYMMDD
+    const gDate = dateStr.replace(/-/g, '');
+    const gEnd = gDate; // same day
+
+    // Google
+    const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${gDate}/${gEnd}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(description)}`;
+    document.getElementById('atc-google').href = googleUrl;
+
+    // Outlook web
+    const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(title)}&startdt=${dateStr}&enddt=${dateStr}&location=${encodeURIComponent(location)}&body=${encodeURIComponent(description)}`;
+    document.getElementById('atc-outlook').href = outlookUrl;
+
+    // Apple (.ics download)
+    const ics = makeICSContent(title, dateStr, location, description);
+    const blob = new Blob([ics], { type: 'text/calendar' });
+    const icsUrl = URL.createObjectURL(blob);
+    const appleLink = document.getElementById('atc-apple');
+    appleLink.href = icsUrl;
+    appleLink.download = `${title.slice(0, 40).replace(/\s+/g, '-')}.ics`;
+
+    // Position and show dropdown
+    const dd = document.getElementById('atc-dropdown');
+    const rect = btn.getBoundingClientRect();
+    let left = rect.left;
+    if (left + 190 > window.innerWidth) left = window.innerWidth - 196;
+    dd.style.top = (rect.bottom + 6) + 'px';
+    dd.style.left = left + 'px';
+    dd.classList.add('open');
+  }
+
+  document.addEventListener('click', (e) => {
+    const dd = document.getElementById('atc-dropdown');
+    if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+  });
   function toggleEyebrowDropdown(e) {
     e.stopPropagation();
     const dd = document.getElementById('hero-eyebrow-dropdown');
@@ -2403,8 +2484,13 @@
   });
 </script>
 
-<!-- City switcher dropdown — lives at body level to avoid clipping -->
-<div class="hero-eyebrow-dropdown" id="hero-eyebrow-dropdown">
+<!-- Add to calendar dropdown -->
+<div class="atc-dropdown" id="atc-dropdown">
+  <a class="atc-option" id="atc-google" href="#" target="_blank" rel="noopener">📅 Google Calendar</a>
+  <a class="atc-option" id="atc-apple" href="#" download>🍎 Apple Calendar</a>
+  <a class="atc-option" id="atc-outlook" href="#" target="_blank" rel="noopener">📧 Outlook</a>
+</div>
+</body>
   <div class="eyebrow-city-option active" id="eyebrow-opt-parkcity" onclick="eyebrowSwitchCity(event,'parkcity')">📍 Park City, UT</div>
   <div class="eyebrow-city-option" id="eyebrow-opt-elkhartlake" onclick="eyebrowSwitchCity(event,'elkhartlake')">📍 Elkhart Lake, WI</div>
   <div class="eyebrow-dropdown-divider"></div>
