@@ -2051,6 +2051,11 @@
     activeDate = dateObj;
     showAllDates = false;
     applyFilters();
+    // Show Today button whenever selected date isn't today
+    const todayStr = today.toDateString();
+    const selStr = dateObj ? dateObj.toDateString() : '';
+    const btn = document.getElementById('cal-today-btn');
+    if (btn) btn.style.display = (selStr !== todayStr || weekOffset !== 0) ? 'inline-block' : 'none';
   }
 
   function applySearch(q) {
