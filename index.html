@@ -1461,10 +1461,12 @@
       </div>
     </div>
 
-    <div style="display:flex; align-items:center; justify-content:center; padding: 0 24px; gap:0; border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <button class="cal-week-arrow" id="cal-prev-week" title="Previous week" style="margin-right:2px;">‹</button>
-      <div class="cal-days" id="cal-days-container" style="padding:14px 4px; border-bottom:none; flex-shrink:0;"></div>
-      <button class="cal-week-arrow" id="cal-next-week" title="Next week" style="margin-left:2px;">›</button>
+    <div style="display:flex; align-items:center; justify-content:center; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 16px;">
+      <div style="display:inline-flex; align-items:center;">
+        <button class="cal-week-arrow" id="cal-prev-week" title="Previous week">‹</button>
+        <div class="cal-days" id="cal-days-container" style="padding:14px 6px; border-bottom:none; flex-shrink:0;"></div>
+        <button class="cal-week-arrow" id="cal-next-week" title="Next week">›</button>
+      </div>
     </div>
 
     <!-- Mini month calendar popup -->
@@ -2361,6 +2363,23 @@
       .then(data => {
         allEvents = data.events || [];
         allEvents = allEvents.filter(e => !city.junk.some(j => e.title.toLowerCase().includes(j)));
+
+        // Client-side dedup: same title+date from multiple sources, keep the one with a time or Park Record
+        const dedupMap = new Map();
+        allEvents.forEach(e => {
+          const titleClean = e.title.toLowerCase().replace(/^[\(\"\'\-\s]+/, '').substring(0, 35);
+          const key = `${titleClean}|${(e.date||'').substring(0,10)}`;
+          const existing = dedupMap.get(key);
+          if (!existing) {
+            dedupMap.set(key, e);
+          } else {
+            // Prefer Park Record, then events with a start_time
+            const eScore = (e.source === 'The Park Record' ? 2 : 0) + (e.start_time ? 1 : 0);
+            const exScore = (existing.source === 'The Park Record' ? 2 : 0) + (existing.start_time ? 1 : 0);
+            if (eScore > exScore) dedupMap.set(key, e);
+          }
+        });
+        allEvents = Array.from(dedupMap.values());
 
         const heroStat = document.querySelector('.hero-stat .num');
         if (heroStat) heroStat.textContent = allEvents.length;
