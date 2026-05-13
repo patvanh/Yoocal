@@ -1926,7 +1926,6 @@
       </div>
       <div class="cal-event-actions">
         <button class="atc-btn" title="Add to calendar" onclick="openAtcDropdown(event, this)">📅</button>
-        <a class="cal-ext" href="${event.link || '#'}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Open website">↗</a>
       </div>
     </div>`;
   }
@@ -2023,6 +2022,14 @@
         const day = d ? d.getDate() : '—';
         const loc = e.location || '';
         const desc = loc ? `📍 ${loc}` : (e.description || '').slice(0, 80);
+        const cats = getCategories(e);
+        const tagHTML = cats.slice(0,3).map(c => {
+          const tagMap = {music:'t-music',outdoor:'t-outdoor',food:'t-food',arts:'t-arts',sports:'t-sports',family:'t-family',wellness:'t-community',community:'t-community',free:'t-free',paid:'t-paid'};
+          const labels = {music:'Music',outdoor:'Outdoor',food:'Food & Drink',arts:'Arts',sports:'Sports',family:'Family',wellness:'Wellness',community:'Community',free:'Free',paid:'Paid'};
+          return `<span class="cal-tag ${tagMap[c]||''}">${labels[c]||c}</span>`;
+        }).join('');
+        const sourceShort = (e.source||'').replace('The Park Record','Park Record').replace('Visit Park City','visitparkcity.com').replace('Google Events','Google');
+
         return `<div class="featured-band-card" onclick="openEventModal(this)"
           data-title="${(e.title||'').replace(/"/g,'&quot;')}"
           data-date="${e.date||''}"
@@ -2031,12 +2038,19 @@
           data-link="${e.link||''}"
           data-description="${(e.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}"
           data-source="${(e.source||'').replace(/"/g,'&quot;')}"
-          data-categories="${(e.categories||getCategories(e))}"
+          data-categories="${cats}"
+          data-start-time="${e.start_time||''}"
+          data-end-time="${e.end_time||''}"
           style="cursor:pointer">
-          <div class="fbc-time"><div class="h">${month}</div><div class="ap">${day}</div></div>
+          <div class="fbc-time">
+            <div class="h">${month}</div>
+            <div class="ap">${day}</div>
+            ${e.start_time ? `<div style="font-size:9px;color:rgba(255,255,255,0.6);margin-top:3px;white-space:nowrap">${e.start_time}</div>` : ''}
+          </div>
           <div class="fbc-info">
             <h4>${e.title}</h4>
-            <p>${desc}</p>
+            <p>${(e.description||'').slice(0,100) || (e.location ? '📍 '+e.location : '')}</p>
+            <div class="cal-tags" style="margin-top:6px">${tagHTML}<span class="cal-source">via ${sourceShort}</span></div>
           </div>
         </div>`;
       }).join('');
