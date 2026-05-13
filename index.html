@@ -2657,17 +2657,20 @@
     const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${gDate}/${gEnd}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(description)}`;
     document.getElementById('atc-google').href = googleUrl;
 
-    // Outlook web
-    const outlookUrl = `https://outlook.live.com/calendar/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=${encodeURIComponent(title)}&startdt=${dateStr}T00:00:00&enddt=${dateStr}T23:59:00&location=${encodeURIComponent(location)}&body=${encodeURIComponent(description)}`;
-    document.getElementById('atc-outlook').href = outlookUrl;
-
-    // Apple (.ics download)
+    // Apple + Outlook — both use .ics download
     const ics = makeICSContent(title, dateStr, location, description);
     const blob = new Blob([ics], { type: 'text/calendar' });
     const icsUrl = URL.createObjectURL(blob);
+    const filename = `${title.slice(0, 40).replace(/\s+/g, '-')}.ics`;
+
     const appleLink = document.getElementById('atc-apple');
     appleLink.href = icsUrl;
-    appleLink.download = `${title.slice(0, 40).replace(/\s+/g, '-')}.ics`;
+    appleLink.download = filename;
+
+    const outlookLink = document.getElementById('atc-outlook');
+    outlookLink.href = icsUrl;
+    outlookLink.download = filename;
+    outlookLink.removeAttribute('target');
 
     // Position and show dropdown
     const dd = document.getElementById('atc-dropdown');
@@ -2732,7 +2735,7 @@
 <div class="atc-dropdown" id="atc-dropdown">
   <a class="atc-option" id="atc-google" href="#" target="_blank" rel="noopener" onclick="document.getElementById('atc-dropdown').classList.remove('open')">📅 Google Calendar</a>
   <a class="atc-option" id="atc-apple" href="#" download onclick="document.getElementById('atc-dropdown').classList.remove('open')">🍎 Apple Calendar</a>
-  <a class="atc-option" id="atc-outlook" href="#" target="_blank" rel="noopener" onclick="document.getElementById('atc-dropdown').classList.remove('open')">📧 Outlook</a>
+  <a class="atc-option" id="atc-outlook" href="#" download onclick="document.getElementById('atc-dropdown').classList.remove('open')">📧 Outlook / Other</a>
 </div>
 
 <div class="hero-eyebrow-dropdown" id="hero-eyebrow-dropdown">
