@@ -1454,6 +1454,7 @@
 
     <div class="cal-days-header">
       <div class="cal-days-label" id="cal-days-label">This week</div>
+      <button id="cal-today-btn" onclick="jumpToToday()" style="display:none; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:white; padding:4px 12px; border-radius:100px; font-size:12px; font-weight:600; cursor:pointer; transition:all 0.15s;" onmouseover="this.style.background='var(--purple)'; this.style.borderColor='var(--purple)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.15)'">↩ Today</button>
     </div>
 
     <div style="display:flex; align-items:center; padding: 0 24px 0; gap:6px; border-bottom: 1px solid rgba(255,255,255,0.06);">
@@ -2278,6 +2279,7 @@
     applyDateFilter(firstDay);
     document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
     document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+    document.getElementById('cal-today-btn').style.display = weekOffset !== 0 ? 'inline-block' : 'none';
   });
 
   document.getElementById('cal-prev-week').addEventListener('click', () => {
@@ -2289,6 +2291,7 @@
     applyDateFilter(firstDay);
     document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
     document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+    document.getElementById('cal-today-btn').style.display = weekOffset !== 0 ? 'inline-block' : 'none';
   });
 
   // Build day chips
@@ -2731,6 +2734,16 @@
     const atcBtn = e.target.closest('.atc-btn, #modal-atc');
     if (dd && !dd.contains(e.target) && !atcBtn) dd.classList.remove('open');
   });
+  function jumpToToday() {
+    const today = new Date();
+    selectedDate = today;
+    weekOffset = 0;
+    renderDayChips();
+    applyFilters();
+    document.getElementById('cal-today-btn').style.display = 'none';
+    document.getElementById('cal-days-label').textContent = 'This week';
+  }
+
   function toggleEyebrowDropdown(e) {
     e.stopPropagation();
     const dd = document.getElementById('hero-eyebrow-dropdown');
