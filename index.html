@@ -1380,7 +1380,7 @@
 <!-- LOCATION BAR -->
 <div class="location-bar">
   <span class="loc-label">Cities</span>
-  <a href="#" class="loc-chip active" onclick="switchCity('parkcity', this)" data-city="parkcity">📍 Park City, UT</a>
+  <a href="#" class="loc-chip" onclick="switchCity('parkcity', this)" data-city="parkcity">📍 Park City, UT</a>
   <a href="#" class="loc-chip" onclick="switchCity('elkhartlake', this)" data-city="elkhartlake">📍 Elkhart Lake, WI</a>
   <a href="#signup" class="loc-chip">+ Aspen, CO — coming soon</a>
   <a href="#signup" class="loc-chip">+ Jackson Hole, WY — coming soon</a>
@@ -1907,10 +1907,12 @@
       data-link="${event.link || ''}"
       data-description="${(event.description || '').replace(/"/g, '&quot;').replace(/\n/g, ' ')}"
       data-source="${sourceShort}"
+      data-start-time="${event.start_time || ''}"
+      data-end-time="${event.end_time || ''}"
       onclick="openEventModal(this)"
       style="cursor:pointer"
       >
-      <div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time ? `<div style="font-size:9px;color:rgba(255,255,255,0.5);margin-top:3px;white-space:nowrap">${event.start_time}</div>` : ''}</div>
+      <div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time ? `<div style="font-size:9px;color:rgba(255,255,255,0.5);margin-top:3px;white-space:nowrap">${event.start_time}${event.end_time ? `–${event.end_time}` : ''}</div>` : ''}</div>
       <div class="cal-event-info">
         <h4>${event.title}</h4>
         <p>${(event.description || '').slice(0, 120) || 'See website for details.'}</p>
@@ -2391,8 +2393,11 @@
     return false;
   }
 
-  // Load Park City on start
-  loadCity('parkcity');
+  // Load city from URL param or default to Park City
+  const initCityKey = new URLSearchParams(window.location.search).get('city') || 'parkcity';
+  const initChip = document.querySelector(`.loc-chip[data-city="${initCityKey}"]`);
+  if (initChip) initChip.classList.add('active');
+  loadCity(initCityKey);
 
   // Category filter clicks
   document.querySelectorAll('.cal-filter').forEach(f => {
@@ -2582,12 +2587,18 @@
       dateStr = `${DAYS_FULL[d.getDay()]}, ${MONTHS_FULL[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
       if (endDate && endDate !== date) {
         const ed = new Date(endDate + 'T12:00:00');
-        dateStr += ` – ${MONTHS_FULL[ed.getMonth()]} ${ed.getDate()}`;
+        dateStr += ` – ${DAYS_FULL[ed.getDay()]}, ${MONTHS_FULL[ed.getMonth()]} ${ed.getDate()}, ${ed.getFullYear()}`;
       }
     }
 
     const meta = [];
     if (dateStr) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📅</span>${dateStr}</div>`);
+    const startTime = card.dataset.startTime || '';
+    const endTime = card.dataset.endTime || '';
+    if (startTime) {
+      const timeRange = endTime ? `${startTime} – ${endTime}` : startTime;
+      meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">🕐</span>${timeRange}</div>`);
+    }
     if (location) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📍</span>${location}</div>`);
     if (source) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.4)"><span style="font-size:16px">🔗</span>via ${source}</div>`);
     document.getElementById('modal-meta').innerHTML = meta.join('');
@@ -2619,16 +2630,34 @@
     return `${d}T${t}`;
   }
 
-  function makeICSContent(title, dateStr, location, description) {
-    const start = formatICSDate(dateStr) || '';
-    const end = start; // all-day
-    const now = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+  function makeICSContent(title, dateStr, startTime, endTime, location, description) {
     const safe = s => (s || '').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+    const now = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+
+    function toICSTime(date, time) {
+      if (!date) return '';
+      const d = date.replace(/-/g, '');
+      if (!time) return null; // signals all-day
+      const m = time.match(/(\d{1,2}):(\d{2})\s?(AM|PM)/i);
+      if (!m) return null;
+      let h = parseInt(m[1]);
+      const mn = m[2];
+      const ap = m[3].toUpperCase();
+      if (ap === 'PM' && h !== 12) h += 12;
+      if (ap === 'AM' && h === 12) h = 0;
+      return `${d}T${String(h).padStart(2,'0')}${mn}00`;
+    }
+
+    const dtStart = toICSTime(dateStr, startTime);
+    const dtEnd = toICSTime(dateStr, endTime || startTime);
+
+    const startLine = dtStart ? `DTSTART:${dtStart}` : `DTSTART;VALUE=DATE:${dateStr.replace(/-/g,'')}`;
+    const endLine = dtEnd ? `DTEND:${dtEnd}` : `DTEND;VALUE=DATE:${dateStr.replace(/-/g,'')}`;
+
     return [
       'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Yoocal//EN',
       'BEGIN:VEVENT',
-      `DTSTART;VALUE=DATE:${start}`,
-      `DTEND;VALUE=DATE:${start}`,
+      startLine, endLine,
       `DTSTAMP:${now}`,
       `SUMMARY:${safe(title)}`,
       `LOCATION:${safe(location)}`,
@@ -2648,17 +2677,31 @@
     const rawLink = card.dataset.link || '';
     const trackedLink = rawLink ? `https://yoocal.com/api/go?ref=cal&url=${encodeURIComponent(rawLink)}` : '';
     const description = trackedLink ? `More info: ${trackedLink}` : '';
+    const startTime = card.dataset.startTime || '';
+    const endTime = card.dataset.endTime || '';
 
-    // Format date for Google: YYYYMMDD
-    const gDate = dateStr.replace(/-/g, '');
-    const gEnd = gDate; // same day
+    // Build datetime strings for calendar
+    function toCalTime(date, time) {
+      if (!date) return '';
+      if (!time) return date.replace(/-/g, '');
+      const m = time.match(/(\d{1,2}):(\d{2})\s?(AM|PM)/i);
+      if (!m) return date.replace(/-/g, '');
+      let h = parseInt(m[1]);
+      const mn = m[2];
+      const ap = m[3].toUpperCase();
+      if (ap === 'PM' && h !== 12) h += 12;
+      if (ap === 'AM' && h === 12) h = 0;
+      return `${date.replace(/-/g, '')}T${String(h).padStart(2,'0')}${mn}00`;
+    }
+    const gStart = toCalTime(dateStr, startTime);
+    const gEnd = startTime ? toCalTime(dateStr, endTime || startTime) : (dateStr.replace(/-/g, ''));
 
     // Google
-    const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${gDate}/${gEnd}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(description)}`;
+    const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${gStart}/${gEnd}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(description)}`;
     document.getElementById('atc-google').href = googleUrl;
 
     // Apple + Outlook — both use .ics download
-    const ics = makeICSContent(title, dateStr, location, description);
+    const ics = makeICSContent(title, dateStr, startTime, endTime, location, description);
     const blob = new Blob([ics], { type: 'text/calendar' });
     const icsUrl = URL.createObjectURL(blob);
     const filename = `${title.slice(0, 40).replace(/\s+/g, '-')}.ics`;
