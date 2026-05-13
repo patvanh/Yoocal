@@ -2736,13 +2736,14 @@
     if (dd && !dd.contains(e.target) && !atcBtn) dd.classList.remove('open');
   });
   function jumpToToday() {
-    const today = new Date();
-    selectedDate = today;
     weekOffset = 0;
-    renderDayChips();
-    applyFilters();
+    selectedDate = new Date();
+    buildDayChips();
+    applyDateFilter(selectedDate);
     document.getElementById('cal-today-btn').style.display = 'none';
     document.getElementById('cal-days-label').textContent = 'This week';
+    document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+    document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
   }
 
   function toggleEyebrowDropdown(e) {
