@@ -964,7 +964,7 @@
   /* Featured band */
   .featured-band {
     background: linear-gradient(135deg, #BA7517, #EF9F27);
-    padding: 20px 24px;
+    padding: 16px 0 20px;
     margin-bottom: 0;
   }
   .featured-band-header {
@@ -975,6 +975,7 @@
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 24px;
   }
   .featured-band-label {
     font-size: 11px;
@@ -986,17 +987,21 @@
   .featured-band-cards {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 24px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 12px;
   }
   .featured-band-card {
     background: rgba(0,0,0,0.2);
-    border-radius: 10px;
-    padding: 14px;
+    border-radius: 12px;
+    padding: 14px 16px;
     text-decoration: none;
-    display: block;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
     transition: background 0.15s;
+    min-height: 100px;
   }
     background: rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -1006,25 +1011,26 @@
     transition: background 0.15s;
   }
   .featured-band-card:hover { background: rgba(0,0,0,0.32); }
-  .featured-band-card .fbc-date {
-    font-size: 11px;
-    color: rgba(255,255,255,0.65);
-    font-weight: 600;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
+  .featured-band-card .fbc-time {
+    min-width: 44px;
+    text-align: center;
+    padding-top: 2px;
+    flex-shrink: 0;
   }
-  .featured-band-card h4 {
+  .featured-band-card .fbc-time .h { font-size: 15px; font-weight: 600; color: white; line-height: 1; }
+  .featured-band-card .fbc-time .ap { font-size: 10px; color: rgba(255,255,255,0.5); }
+  .featured-band-card .fbc-info { flex: 1; }
+  .featured-band-card .fbc-info h4 {
     font-size: 14px;
     color: white;
     font-weight: 600;
     margin-bottom: 4px;
     line-height: 1.3;
   }
-  .featured-band-card p {
+  .featured-band-card .fbc-info p {
     font-size: 12px;
-    color: rgba(255,255,255,0.55);
-    line-height: 1.4;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
   }
 
   /* Regular events label after band */
@@ -1993,13 +1999,26 @@
       const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
       bandCards.innerHTML = featuredEvents.map(e => {
         const d = e.date ? new Date(e.date + 'T12:00:00') : null;
-        const dateStr = d ? `${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()]} ${MONTHS_SHORT[d.getMonth()]} ${d.getDate()}` : '';
-        const loc = e.location ? `📍 ${e.location}` : '';
-        return `<a href="${e.link || '#'}" class="featured-band-card" target="_blank" rel="noopener">
-          <div class="fbc-date">${dateStr}</div>
-          <h4>${e.title}</h4>
-          <p>${loc || (e.description || '').slice(0, 60)}</p>
-        </a>`;
+        const month = d ? MONTHS_SHORT[d.getMonth()] : 'See';
+        const day = d ? d.getDate() : '—';
+        const loc = e.location || '';
+        const desc = loc ? `📍 ${loc}` : (e.description || '').slice(0, 80);
+        return `<div class="featured-band-card" onclick="openEventModal(this)"
+          data-title="${(e.title||'').replace(/"/g,'&quot;')}"
+          data-date="${e.date||''}"
+          data-end-date="${e.end_date||''}"
+          data-location="${(e.location||'').replace(/"/g,'&quot;')}"
+          data-link="${e.link||''}"
+          data-description="${(e.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}"
+          data-source="${(e.source||'').replace(/"/g,'&quot;')}"
+          data-categories="${(e.categories||getCategories(e))}"
+          style="cursor:pointer">
+          <div class="fbc-time"><div class="h">${month}</div><div class="ap">${day}</div></div>
+          <div class="fbc-info">
+            <h4>${e.title}</h4>
+            <p>${desc}</p>
+          </div>
+        </div>`;
       }).join('');
     } else {
       band.style.display = 'none';
