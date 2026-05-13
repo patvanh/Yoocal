@@ -2679,7 +2679,8 @@
 
   document.addEventListener('click', (e) => {
     const dd = document.getElementById('atc-dropdown');
-    if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+    const atcBtn = e.target.closest('.atc-btn, #modal-atc');
+    if (dd && !dd.contains(e.target) && !atcBtn) dd.classList.remove('open');
   });
   function toggleEyebrowDropdown(e) {
     e.stopPropagation();
@@ -2726,9 +2727,9 @@
 </div>
 
 <div class="atc-dropdown" id="atc-dropdown">
-  <a class="atc-option" id="atc-google" href="#" target="_blank" rel="noopener">📅 Google Calendar</a>
-  <a class="atc-option" id="atc-apple" href="#" download>🍎 Apple Calendar</a>
-  <a class="atc-option" id="atc-outlook" href="#" target="_blank" rel="noopener">📧 Outlook</a>
+  <a class="atc-option" id="atc-google" href="#" target="_blank" rel="noopener" onclick="document.getElementById('atc-dropdown').classList.remove('open')">📅 Google Calendar</a>
+  <a class="atc-option" id="atc-apple" href="#" download onclick="document.getElementById('atc-dropdown').classList.remove('open')">🍎 Apple Calendar</a>
+  <a class="atc-option" id="atc-outlook" href="#" target="_blank" rel="noopener" onclick="document.getElementById('atc-dropdown').classList.remove('open')">📧 Outlook</a>
 </div>
 
 <div class="hero-eyebrow-dropdown" id="hero-eyebrow-dropdown">
