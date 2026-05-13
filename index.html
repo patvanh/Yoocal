@@ -1899,9 +1899,8 @@
       data-date="${event.date || ''}"
       data-end-date="${event.end_date || ''}"
       data-link="${event.link || ''}"
-      data-description="${(event.description || '').replace(/"/g, '&quot;')}"
+      data-description="${(event.description || '').replace(/"/g, '&quot;').replace(/\n/g, ' ')}"
       data-source="${sourceShort}"
-      data-tags="${tagHTML}${recurBadge}"
       onclick="openEventModal(this)"
       style="cursor:pointer"
       >
@@ -2535,11 +2534,23 @@
     const location = card.dataset.location || '';
     const link = card.dataset.link || '#';
     const source = card.dataset.source || '';
-    const tags = card.dataset.tags || '';
+    const cats = (card.dataset.categories || '').split(' ').filter(Boolean);
+
+    // Rebuild tags from categories
+    const tagMap = {
+      music: ['t-music','Music'], outdoor: ['t-outdoor','Outdoor'], food: ['t-food','Food & Drink'],
+      arts: ['t-arts','Arts'], sports: ['t-sports','Sports'], family: ['t-family','Family'],
+      wellness: ['t-community','Wellness'], community: ['t-community','Community'],
+      free: ['t-free','Free'], paid: ['t-paid','Paid']
+    };
+    const tagsHTML = cats.slice(0,4).map(c => {
+      const t = tagMap[c];
+      return t ? `<span class="cal-tag ${t[0]}">${t[1]}</span>` : '';
+    }).join('');
 
     document.getElementById('modal-title').textContent = title;
     document.getElementById('modal-desc').textContent = desc || 'See the event website for full details.';
-    document.getElementById('modal-tags').innerHTML = tags;
+    document.getElementById('modal-tags').innerHTML = tagsHTML;
     document.getElementById('modal-link').href = link;
     document.getElementById('modal-link').style.display = link && link !== '#' ? '' : 'none';
 
