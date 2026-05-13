@@ -2658,7 +2658,7 @@
     document.getElementById('atc-google').href = googleUrl;
 
     // Outlook web
-    const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(title)}&startdt=${dateStr}&enddt=${dateStr}&location=${encodeURIComponent(location)}&body=${encodeURIComponent(description)}`;
+    const outlookUrl = `https://outlook.live.com/calendar/action/compose?rru=addevent&subject=${encodeURIComponent(title)}&startdt=${dateStr}T00%3A00%3A00&enddt=${dateStr}T23%3A59%3A00&location=${encodeURIComponent(location)}&body=${encodeURIComponent(description)}`;
     document.getElementById('atc-outlook').href = outlookUrl;
 
     // Apple (.ics download)
