@@ -1999,13 +1999,22 @@
     const featuredEvents = visible.filter(e => isFeaturedEvent(e));
     const regularEvents = visible.filter(e => !isFeaturedEvent(e));
 
+    // Always include the daily featured event in the band even if not on its date
+    let bandEvents = [...featuredEvents];
+    if (dailyFeaturedTitle) {
+      const dailyEvent = allEvents.find(e => e.title === dailyFeaturedTitle);
+      if (dailyEvent && !bandEvents.find(e => e.title === dailyFeaturedTitle)) {
+        bandEvents.unshift(dailyEvent);
+      }
+    }
+
     // Populate featured band
     const band = document.getElementById('featured-band');
     const bandCards = document.getElementById('featured-band-cards');
-    if (featuredEvents.length > 0 && currentView === 'list') {
+    if (bandEvents.length > 0 && currentView === 'list') {
       band.style.display = 'block';
       const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      bandCards.innerHTML = featuredEvents.map(e => {
+      bandCards.innerHTML = bandEvents.map(e => {
         const d = e.date ? new Date(e.date + 'T12:00:00') : null;
         const month = d ? MONTHS_SHORT[d.getMonth()] : 'See';
         const day = d ? d.getDate() : '—';
@@ -2033,7 +2042,7 @@
     }
 
     // Regular events with "All events" label if band is showing
-    const regularLabel = featuredEvents.length > 0 && currentView === 'list' && regularEvents.length > 0
+    const regularLabel = bandEvents.length > 0 && currentView === 'list' && regularEvents.length > 0
       ? `<div class="regular-events-label">All events</div>`
       : '';
     container.innerHTML = regularLabel + regularEvents.map(event => renderEvent(event, selDateStr)).join('');
