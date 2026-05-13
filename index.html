@@ -2323,22 +2323,20 @@
     const now = new Date();
     const start = new Date(now.getFullYear(), 0, 0);
     const dayOfYear = Math.floor((now - start) / (1000 * 60 * 60 * 24));
-    const seed = now.getFullYear() * 1000 + dayOfYear;
+    const seed = now.getFullYear() * 10000 + dayOfYear * 97 + 7;
 
-    const eligible = allEvents.filter(e => {
+    const pool = allEvents.filter(e => {
       if (!e.date) return false;
       const d = new Date(e.date + 'T12:00:00');
       const diff = (d - today) / (1000 * 60 * 60 * 24);
-      // Pick from events in the next 7 days, exclude already-featured types
       return diff >= 0 && diff <= 7 &&
              e.featured !== true &&
              e.source !== 'Running in the USA' &&
              !(e.title||'').toLowerCase().includes('festival') &&
-             e.source !== 'Google Events'; // Google Events are often not local enough
+             e.source !== 'Google Events';
     });
 
-    // Fall back to 14 days if not enough events this week
-    const pool = eligible.length >= 5 ? eligible : allEvents.filter(e => {
+    const fallback = allEvents.filter(e => {
       if (!e.date) return false;
       const d = new Date(e.date + 'T12:00:00');
       const diff = (d - today) / (1000 * 60 * 60 * 24);
@@ -2348,8 +2346,12 @@
              !(e.title||'').toLowerCase().includes('festival');
     });
 
-    if (!pool.length) return null;
-    return pool[seed % pool.length].title;
+    const candidates = pool.length >= 5 ? pool : fallback;
+    if (!candidates.length) return null;
+
+    // Use seed to pick a different index each day
+    const idx = ((seed % candidates.length) + candidates.length) % candidates.length;
+    return candidates[idx].title;
   }
 
   let dailyFeaturedTitle = null; // set after events load
