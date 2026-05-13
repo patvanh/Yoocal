@@ -1,0 +1,15 @@
+{
+  "name": "yoocal",
+  "version": "1.0.0",
+  "description": "Yoocal - Local events calendar for Park City, Utah",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build step required'",
+    "deploy": "vercel"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "devDependencies": {},
+  "type": "module"
+}
