@@ -1044,7 +1044,7 @@
   .cal-event-actions { display: flex; align-items: flex-start; gap: 6px; padding-top: 2px; flex-shrink: 0; }
   .atc-btn { background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.5); font-size: 15px; padding: 0; line-height: 1; transition: color 0.15s; position: relative; }
   .atc-btn:hover { color: white; }
-  .atc-dropdown { display: none; position: fixed; background: white; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); padding: 6px; z-index: 9999; min-width: 180px; }
+  .atc-dropdown { display: none; position: fixed; background: white; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); padding: 6px; z-index: 20000; min-width: 180px; }
   .atc-dropdown.open { display: block; }
   .atc-option { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 13px; font-weight: 500; color: #1a1830; cursor: pointer; text-decoration: none; transition: background 0.15s; white-space: nowrap; }
   .atc-option:hover { background: #f0eeff; color: #534AB7; }
@@ -2669,7 +2669,8 @@
 
     // Position and show dropdown
     const dd = document.getElementById('atc-dropdown');
-    const rect = btn.getBoundingClientRect();
+    const anchorBtn = (btn && btn.id === 'modal-atc') ? document.getElementById('modal-atc') : btn;
+    const rect = anchorBtn.getBoundingClientRect();
     let left = rect.left;
     if (left + 190 > window.innerWidth) left = window.innerWidth - 196;
     dd.style.top = (rect.bottom + 6) + 'px';
