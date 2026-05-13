@@ -4,9 +4,8 @@ export default function handler(req, res) {
   if (!url) return res.redirect(302, 'https://yoocal.com');
 
   try {
-    const parsed = new URL(url);
-    res.setHeader('X-Redirect-Source', 'calendar');
-    return res.redirect(302, parsed.href);
+    const dest = new URL(decodeURIComponent(url));
+    return res.redirect(302, dest.href);
   } catch {
     return res.redirect(302, 'https://yoocal.com');
   }
