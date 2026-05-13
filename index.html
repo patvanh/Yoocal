@@ -2022,7 +2022,7 @@
         const day = d ? d.getDate() : '—';
         const loc = e.location || '';
         const desc = loc ? `📍 ${loc}` : (e.description || '').slice(0, 80);
-        const cats = getCategories(e);
+        const cats = getCategories(e).split(' ').filter(Boolean);
         const tagHTML = cats.slice(0,3).map(c => {
           const tagMap = {music:'t-music',outdoor:'t-outdoor',food:'t-food',arts:'t-arts',sports:'t-sports',family:'t-family',wellness:'t-community',community:'t-community',free:'t-free',paid:'t-paid'};
           const labels = {music:'Music',outdoor:'Outdoor',food:'Food & Drink',arts:'Arts',sports:'Sports',family:'Family',wellness:'Wellness',community:'Community',free:'Free',paid:'Paid'};
@@ -2038,7 +2038,7 @@
           data-link="${e.link||''}"
           data-description="${(e.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}"
           data-source="${(e.source||'').replace(/"/g,'&quot;')}"
-          data-categories="${cats}"
+          data-categories="${cats.join(' ')}"
           data-start-time="${e.start_time||''}"
           data-end-time="${e.end_time||''}"
           style="cursor:pointer">
@@ -2274,7 +2274,7 @@
       const div = document.createElement('div');
       const isToday = d.toDateString() === today.toDateString();
       const isSelected = d.toDateString() === selectedDate.toDateString();
-      div.className = 'cal-day' + (isSelected ? ' active' : (isToday ? ' active' : ''));
+      div.className = 'cal-day' + (isSelected ? ' active' : '');
       const count = countEventsOnDate(d);
       const countHtml = count > 0 ? `<span class="day-count">${count}</span>` : `<span class="day-count" style="visibility:hidden">0</span>`;
       div.innerHTML = `<span class="d">${DAYS[d.getDay()]}</span><span class="n">${d.getDate()}</span>${countHtml}`;
