@@ -2447,9 +2447,12 @@
 
         // Apply today's filter — this renders the events
         activeDate = today;
+        selectedDate = new Date(today);
+        weekOffset = 0;
         showAllDates = false;
+        buildDayChips(); // Build chips first with correct selected date
+        dailyFeaturedTitle = getDailyFeaturedTitle(today);
         applyFilters();
-        buildDayChips(); // Rebuild with event counts
         buildMonthPicker([]);
       })
       .catch(() => {
