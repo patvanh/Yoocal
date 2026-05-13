@@ -1613,6 +1613,64 @@
     return null;
   }
 
+  // ── Known Park City venue coordinates ──
+  const VENUE_COORDS = {
+    'egyptian theatre': [40.6454, -111.4978],
+    'spur bar': [40.6449, -111.4972],
+    'the spur': [40.6449, -111.4972],
+    'high west': [40.6441, -111.4976],
+    'no name saloon': [40.6448, -111.4970],
+    'park city library': [40.6494, -111.5013],
+    'kimball junction': [40.6897, -111.5430],
+    'swaner': [40.6897, -111.5430],
+    'deer valley': [40.6374, -111.4783],
+    'stein eriksen': [40.6374, -111.4783],
+    'snow park': [40.6374, -111.4783],
+    'snowbird': [40.5830, -111.6559],
+    'park city mountain': [40.6516, -111.5080],
+    'pcmr': [40.6516, -111.5080],
+    'jordanelle': [40.6000, -111.4280],
+    'heber': [40.5069, -111.4133],
+    'park city municipal': [40.6494, -111.5013],
+    'basin rec': [40.6516, -111.5080],
+    'fieldhouse': [40.6516, -111.5080],
+    'kimball arts': [40.6451, -111.4976],
+    'eccles': [40.6516, -111.5080],
+    'park city film': [40.6494, -111.5013],
+    'old town': [40.6449, -111.4972],
+    'main street': [40.6449, -111.4972],
+    'lush\'s bbq': [40.6449, -111.4972],
+    'rendezvous run': [40.6516, -111.5080],
+    'plunj': [40.6449, -111.4972],
+    'park city sheraton': [40.6897, -111.5430],
+    'sheraton': [40.6897, -111.5430],
+  };
+
+  function getVenueCoords(location) {
+    if (!location) return null;
+    const loc = location.toLowerCase();
+    for (const [venue, coords] of Object.entries(VENUE_COORDS)) {
+      if (loc.includes(venue)) return coords;
+    }
+    return null;
+  }
+
+  // ── Distance from Park City center (84060) ──
+  const PARK_CITY_LAT = 40.6461;
+  const PARK_CITY_LNG = -111.4980;
+
+  function distanceMiles(lat, lng) {
+    if (!lat || !lng) return null;
+    const R = 3958.8; // Earth radius in miles
+    const dLat = (lat - PARK_CITY_LAT) * Math.PI / 180;
+    const dLng = (lng - PARK_CITY_LNG) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(PARK_CITY_LAT * Math.PI/180) * Math.cos(lat * Math.PI/180) *
+              Math.sin(dLng/2) * Math.sin(dLng/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return Math.round(R * c * 10) / 10;
+  }
+
   // ── Render a single event card ──
   function renderEvent(event, overrideDisplayDate) {
     const cats = getCategories(event);
@@ -1632,7 +1690,15 @@
 
     // Source tag
     const source = event.source || 'Local';
-    const sourceShort = source.replace('Visit Park City','visitparkcity').replace('KPCW Community Calendar','KPCW').replace('Running in the USA','runningintheusa').replace('The Park Record','parkrecord').replace('Eventbrite','eventbrite');
+    const sourceShort = source
+      .replace('Visit Park City', 'visitparkcity.com')
+      .replace('KPCW Community Calendar', 'KPCW')
+      .replace('Running in the USA', 'runningintheusa.com')
+      .replace('The Park Record', 'Park Record')
+      .replace('Eventbrite', 'Eventbrite')
+      .replace('Google Events', 'Google')
+      .replace('PC Arts Council', 'PC Arts Council')
+      .replace('Utah.com', 'Utah.com');
 
     // Category tags
     const catList = cats.split(' ').filter(Boolean);
@@ -1655,6 +1721,19 @@
                        event.recurrence === 'monthly_last_friday' ? 'Monthly' : '';
     const recurBadge = isRecurring && recurLabel ? `<span class="cal-tag" style="background:rgba(239,159,39,0.15);color:#EF9F27">${recurLabel}</span>` : '';
 
+    // Distance from Park City
+    const venueCoords = getVenueCoords(event.location);
+    const lat = event.lat || (venueCoords && venueCoords[0]);
+    const lng = event.lng || (venueCoords && venueCoords[1]);
+    const dist = distanceMiles(lat, lng);
+    const distLabel = dist !== null && dist > 0.5 ? ` · ${dist} mi` : '';
+
+    // Fix specific events
+    let finalCats = cats;
+    if ((event.title||'').toLowerCase().includes('plunj')) {
+      finalCats = finalCats.split(' ').filter(c => c !== 'paid').join(' ');
+    }
+
     const isRace = event.source === 'Running in the USA';
     const featured = isFeaturedEvent(event);
 
@@ -1663,7 +1742,7 @@
     const endStr = endDate || startStr;
 
     return `<a href="${event.link || '#'}" class="cal-event${featured ? ' featured' : ''}" target="_blank" rel="noopener"
-      data-categories="${cats}"
+      data-categories="${finalCats}"
       data-start="${startStr}"
       data-end="${endStr}"
       data-recurrence="${event.recurrence || ''}"
@@ -1680,7 +1759,7 @@
       <div class="cal-event-info">
         <h4>${event.title}</h4>
         <p>${(event.description || '').slice(0, 120) || 'See website for details.'}</p>
-        <div class="cal-tags">${tagHTML}${recurBadge}<span class="cal-source">via ${sourceShort}</span></div>
+        <div class="cal-tags">${tagHTML}${recurBadge}<span class="cal-source">via ${sourceShort}${distLabel}</span></div>
       </div>
       <div class="cal-ext">↗</div>
     </a>`;
