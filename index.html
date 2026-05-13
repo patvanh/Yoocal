@@ -1910,7 +1910,7 @@
       onclick="openEventModal(this)"
       style="cursor:pointer"
       >
-      <div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div></div>
+      <div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time ? `<div style="font-size:9px;color:rgba(255,255,255,0.5);margin-top:3px;white-space:nowrap">${event.start_time}</div>` : ''}</div>
       <div class="cal-event-info">
         <h4>${event.title}</h4>
         <p>${(event.description || '').slice(0, 120) || 'See website for details.'}</p>
