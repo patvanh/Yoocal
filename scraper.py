@@ -488,15 +488,42 @@ def scrape_running_in_the_usa():
             "scraped_at": datetime.now().isoformat()
         },
         {
-            "title": "Park City Trail Series",
+            "title": "Park City Trail Series — 5K",
             "date": "2026-06-06",
             "start_time": "7:00 AM",
-            "description": "3-race trail series June through August. 5K, 10K and Half Marathon on Park City's iconic trails. Perfect for all levels.",
+            "description": "Race 1 of 3 in the Park City Trail Series. A forgiving 5K course on Park City's iconic trails, perfect for new and seasoned trail runners alike. Finisher's medal and race swag included.",
             "location": "Park City, UT",
             "link": "https://runsignup.com/Race/UT/ParkCity/ParkCityTrailSeriesFullSeries",
             "source": "Running in the USA",
             "source_url": "https://www.runningintheusa.com",
             "category": "sports",
+            "featured": True,
+            "scraped_at": datetime.now().isoformat()
+        },
+        {
+            "title": "Park City Trail Series — 10K",
+            "date": "2026-07-11",
+            "start_time": "7:00 AM",
+            "description": "Race 2 of 3 in the Park City Trail Series. A 10K on Park City's iconic trails. Mix and match races or sign up for the full series.",
+            "location": "Park City, UT",
+            "link": "https://runsignup.com/Race/UT/ParkCity/ParkCityTrailSeriesFullSeries",
+            "source": "Running in the USA",
+            "source_url": "https://www.runningintheusa.com",
+            "category": "sports",
+            "featured": True,
+            "scraped_at": datetime.now().isoformat()
+        },
+        {
+            "title": "Park City Trail Series — Half Marathon",
+            "date": "2026-08-01",
+            "start_time": "7:00 AM",
+            "description": "Race 3 of 3 in the Park City Trail Series. A half marathon on Park City's iconic trails to cap the summer series. Finisher's medal and race swag included.",
+            "location": "Park City, UT",
+            "link": "https://runsignup.com/Race/UT/ParkCity/ParkCityTrailSeriesFullSeries",
+            "source": "Running in the USA",
+            "source_url": "https://www.runningintheusa.com",
+            "category": "sports",
+            "featured": True,
             "scraped_at": datetime.now().isoformat()
         },
         {
@@ -947,16 +974,24 @@ def handle_recurring(events):
 
 
 def deduplicate(events):
+    # Sort so Park Record comes first — it has times, prefer it over VPC
+    source_priority = {"The Park Record": 0, "Google Events": 1, "Running in the USA": 2, "Visit Park City": 3}
+    events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
+
     seen = set()
     unique = []
     for e in events:
         title = re.sub(r'\s+', ' ', e["title"].lower().strip())[:40]
-        # Strip leading punctuation like quotes/parens for better matching
+        # Strip leading punctuation like quotes/parens
         title_clean = re.sub(r'^[\(\"\'\-\s]+', '', title)[:35]
+        # Also try without subtitle (before colon) for broader matching
+        title_no_sub = title_clean.split(':')[0].strip()[:30]
         date = e.get("date", "")[:10]
-        key = f"{title_clean}|{date}"
-        if key not in seen:
-            seen.add(key)
+        key_full = f"{title_clean}|{date}"
+        key_short = f"{title_no_sub}|{date}"
+        if key_full not in seen and key_short not in seen:
+            seen.add(key_full)
+            seen.add(key_short)
             unique.append(e)
     return unique
 
