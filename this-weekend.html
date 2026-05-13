@@ -84,17 +84,17 @@
 <nav>
   <a href="/" class="nav-logo"><div class="nav-dot"></div> yoocal</a>
   <div class="nav-links">
-    <a href="about-park-city.html">About Park City</a>
-    <a href="this-weekend.html" >This Weekend</a>
-    <a href="venues.html">Venues</a>
+    <a href="about-yoocal.html" id="nav-about">About</a>
+    <a href="this-weekend.html" class="active">This Weekend</a>
+    <a href="venues.html" id="nav-venues">Venues</a>
     <a href="/#business">For businesses</a>
     <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
   </div>
 </nav>
 
 <div class="page-header">
-  <div class="eyebrow">📅 Park City, Utah</div>
-  <h1>This <em>weekend</em> in Park City</h1>
+  <div class="eyebrow" id="page-eyebrow">📅 Park City, Utah</div>
+  <h1>This <em>weekend</em> in <span id="page-city-name">Park City</span></h1>
   <p class="dates" id="weekend-dates">Loading...</p>
 </div>
 
@@ -113,7 +113,7 @@
   <div class="newsletter-banner">
     <div>
       <h3>Get "This Weekend" in your inbox</h3>
-      <p>Every Thursday we send a curated roundup of the best Park City events for the weekend ahead.</p>
+      <p>Every Thursday we send a curated roundup of the best <span id="newsletter-city">Park City</span> events for the weekend ahead.</p>
     </div>
     <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank">Subscribe free →</a>
   </div>
@@ -121,7 +121,7 @@
 
 <footer>
   <div class="footer-bottom">
-    <span>© 2026 Yoocal · Park City, Utah</span>
+    <span>© 2026 Yoocal · <span id="footer-city">Park City, Utah</span></span>
     <span>hello@yoocal.com</span>
   </div>
 </footer>
@@ -265,24 +265,28 @@
 
   // City config
   const CITIES = {
-    parkcity: { name: 'Park City, UT', file: 'events.json', label: 'Park City & Summit County' },
-    elkhartlake: { name: 'Elkhart Lake, WI', file: 'events-elkhartlake.json', label: 'Elkhart Lake, WI' },
+    parkcity: { name: 'Park City, UT', shortName: 'Park City', file: 'events.json', label: 'Park City & Summit County', aboutPage: 'about-park-city.html', aboutLabel: 'About Park City' },
+    elkhartlake: { name: 'Elkhart Lake, WI', shortName: 'Elkhart Lake', file: 'events-elkhartlake.json', label: 'Elkhart Lake, WI', aboutPage: 'about-elkhart-lake.html', aboutLabel: 'About Elkhart Lake' },
   };
 
   const params = new URLSearchParams(window.location.search);
   const cityKey = params.get('city') || 'parkcity';
   const city = CITIES[cityKey] || CITIES.parkcity;
 
-  // Update page title and header
-  document.title = `This Weekend in ${city.name} — Yoocal`;
-  document.querySelector('.page-header h1').innerHTML = `This <em>weekend</em> in ${city.name}`;
+  // Update all city-specific text
+  document.title = `This Weekend in ${city.shortName} — Yoocal`;
+  document.querySelector('.page-header h1').innerHTML = `This <em>weekend</em> in ${city.shortName}`;
+  document.getElementById('page-eyebrow').textContent = `📅 ${city.name}`;
+  const nlCity = document.getElementById('newsletter-city');
+  if (nlCity) nlCity.textContent = city.shortName;
+  const footerCity = document.getElementById('footer-city');
+  if (footerCity) footerCity.textContent = city.name;
 
-  // Update nav city links
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    if (a.href.includes('this-weekend')) a.href = `this-weekend.html?city=${cityKey}`;
-    if (a.href.includes('venues')) a.href = `venues.html?city=${cityKey}`;
-    if (a.href.includes('about-park-city')) a.href = cityKey === 'parkcity' ? 'about-park-city.html' : `about-park-city.html?city=${cityKey}`;
-  });
+  // Update nav links
+  const navAbout = document.getElementById('nav-about');
+  const navVenues = document.getElementById('nav-venues');
+  if (navAbout) { navAbout.href = city.aboutPage; navAbout.textContent = city.aboutLabel; }
+  if (navVenues) navVenues.href = `venues.html?city=${cityKey}`;
 
   // Load events
   fetch(city.file)

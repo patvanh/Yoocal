@@ -73,17 +73,17 @@
 <nav>
   <a href="/" class="nav-logo"><div class="nav-dot"></div> yoocal</a>
   <div class="nav-links">
-    <a href="about-park-city.html">About Park City</a>
-    <a href="this-weekend.html">This Weekend</a>
-    <a href="venues.html" >Venues</a>
+    <a href="about-yoocal.html" id="nav-about">About</a>
+    <a href="this-weekend.html" id="nav-weekend">This Weekend</a>
+    <a href="venues.html" class="active">Venues</a>
     <a href="/#business">For businesses</a>
     <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
   </div>
 </nav>
 
 <div class="page-header">
-  <div class="eyebrow">📍 Park City, Utah</div>
-  <h1>Park City's best <em>venues</em></h1>
+  <div class="eyebrow" id="page-eyebrow">📍 Park City, Utah</div>
+  <h1 id="page-h1">Park City's best <em>venues</em></h1>
   <p>Where the music plays, the art lives, and the food is always worth the drive up the mountain.</p>
 </div>
 
@@ -103,7 +103,7 @@
 
 <footer>
   <div class="footer-bottom">
-    <span>© 2026 Yoocal · Park City, Utah</span>
+    <span>© 2026 Yoocal · <span id="footer-city">Park City, Utah</span></span>
     <span>hello@yoocal.com</span>
   </div>
 </footer>
@@ -263,18 +263,106 @@ function renderVenues() {
 
 renderVenues();
 
-  // City param — update nav links
+  const CITY_CONFIG = {
+    parkcity: {
+      name: 'Park City, UT', fullName: 'Park City, Utah',
+      aboutPage: 'about-park-city.html', aboutLabel: 'About Park City',
+      eyebrow: '📍 Park City, Utah',
+      h1: "Park City's best <em>venues</em>",
+    },
+    elkhartlake: {
+      name: 'Elkhart Lake, WI', fullName: 'Elkhart Lake, Wisconsin',
+      aboutPage: 'about-elkhart-lake.html', aboutLabel: 'About Elkhart Lake',
+      eyebrow: '📍 Elkhart Lake, Wisconsin',
+      h1: "Elkhart Lake's best <em>venues</em>",
+    },
+  };
+
+  const ELKHART_VENUES = [
+    {
+      name: "Road America",
+      emoji: "🏁",
+      address: "N7390 US-12, Elkhart Lake, WI 53020",
+      tags: ["sports", "outdoor"],
+      desc: "One of America's greatest road racing circuits. A 4-mile, 14-turn track set amid rolling Wisconsin countryside. Hosts IndyCar, NASCAR, IMSA, and MotoAmerica events drawing tens of thousands of fans each summer.",
+      events_search: "Road America",
+      website: "https://www.roadamerica.com",
+    },
+    {
+      name: "Siebkens Resort",
+      emoji: "🍺",
+      address: "284 S Lake St, Elkhart Lake, WI 53020",
+      tags: ["food", "music"],
+      desc: "A legendary lakeside tavern and resort that has been the heart of Elkhart Lake's social scene since 1916. Live music, cold drinks, and a lively crowd especially during race weekends.",
+      events_search: "Siebkens",
+      website: "https://www.siebkens.com",
+    },
+    {
+      name: "Elkhart Lake Village Park",
+      emoji: "🌳",
+      address: "Village Park, Elkhart Lake, WI 53020",
+      tags: ["outdoor", "family", "community"],
+      desc: "The heart of the village. Hosts summer concerts, community events, festivals, and gatherings on the shores of Elkhart Lake. A gathering place for locals and visitors throughout the warm months.",
+      events_search: "Elkhart Lake Village Park",
+      website: "https://www.elkhartlake.com",
+    },
+    {
+      name: "Paddock Club",
+      emoji: "🥂",
+      address: "Elkhart Lake, WI 53020",
+      tags: ["food", "sports"],
+      desc: "A classic Elkhart Lake dining spot popular with the racing crowd. Great food, local atmosphere, and a front-row seat to the race weekend energy that takes over the village each summer.",
+      events_search: "Paddock Club Elkhart Lake",
+      website: "https://www.elkhartlake.com",
+    },
+    {
+      name: "Osthoff Resort",
+      emoji: "🏨",
+      address: "101 Osthoff Ave, Elkhart Lake, WI 53020",
+      tags: ["outdoor", "family", "wellness"],
+      desc: "A premier lakefront resort on Elkhart Lake offering cooking classes, spa services, outdoor activities, and year-round events. The area's top destination for leisure and special occasions.",
+      events_search: "Osthoff Resort",
+      website: "https://www.osthoff.com",
+    },
+    {
+      name: "Quit Qui Oc Golf Course",
+      emoji: "⛳",
+      address: "700 County Rd P, Elkhart Lake, WI 53020",
+      tags: ["sports", "outdoor"],
+      desc: "A scenic public golf course in the heart of the Kettle Moraine. Hosts local tournaments, fundraisers, and community events throughout the golf season.",
+      events_search: "Quit Qui Oc",
+      website: "https://www.quitquioc.com",
+    },
+  ];
+
   const params = new URLSearchParams(window.location.search);
   const cityKey = params.get('city') || 'parkcity';
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    if (a.href.includes('this-weekend')) a.href = `this-weekend.html?city=${cityKey}`;
-    if (a.href.includes('venues')) a.href = `venues.html?city=${cityKey}`;
-    if (a.href.includes('about-park-city')) a.href = cityKey === 'parkcity' ? 'about-park-city.html' : `about-park-city.html?city=${cityKey}`;
-  });
+  const cityConf = CITY_CONFIG[cityKey] || CITY_CONFIG.parkcity;
+
+  // Swap venue data if Elkhart Lake
+  if (cityKey === 'elkhartlake') {
+    VENUES.length = 0;
+    ELKHART_VENUES.forEach(v => VENUES.push(v));
+    activeFilter = 'all';
+    renderVenues();
+  }
+
+  // Update page text
+  document.title = `${cityConf.name} Venues — Yoocal`;
+  document.getElementById('page-eyebrow').textContent = cityConf.eyebrow;
+  document.getElementById('page-h1').innerHTML = cityConf.h1;
+  document.getElementById('footer-city').textContent = cityConf.fullName;
+
+  // Update nav
+  const navAbout = document.getElementById('nav-about');
+  const navWeekend = document.getElementById('nav-weekend');
+  if (navAbout) { navAbout.href = cityConf.aboutPage; navAbout.textContent = cityConf.aboutLabel; }
+  if (navWeekend) navWeekend.href = `this-weekend.html?city=${cityKey}`;
 
   // Update "See events" links to include city
   document.querySelectorAll('.venue-btn.primary').forEach(a => {
-    const search = new URL(a.href).searchParams.get('search') || '';
+    const url = new URL(a.href, window.location.href);
+    const search = url.searchParams.get('search') || '';
     a.href = `/?search=${encodeURIComponent(search)}&city=${cityKey}`;
   });
 </script>
