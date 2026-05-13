@@ -1237,9 +1237,9 @@
     yoocal
   </a>
   <div class="nav-links">
-    <a href="about-park-city.html" id="nav-about">About Park City</a>
-    <a href="this-weekend.html" id="nav-weekend">This Weekend</a>
-    <a href="venues.html" id="nav-venues">Venues</a>
+    <a href="about-yoocal.html" id="nav-about">About</a>
+    <a href="this-weekend.html" id="nav-weekend" style="display:none">This Weekend</a>
+    <a href="venues.html" id="nav-venues" style="display:none">Venues</a>
     <a href="#business">For businesses</a>
     <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
   </div>
@@ -2146,6 +2146,8 @@
       label: 'Park City & Summit County',
       eyebrow: 'Now live in Park City, Utah',
       file: 'events.json',
+      aboutLabel: 'About Park City',
+      aboutPage: 'about-park-city.html',
       junk: ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'previous month', 'next month']
     },
     elkhartlake: {
@@ -2153,6 +2155,8 @@
       label: 'Elkhart Lake & Sheboygan County',
       eyebrow: 'Now live in Elkhart Lake, Wisconsin',
       file: 'events-elkhartlake.json',
+      aboutLabel: 'About Elkhart Lake',
+      aboutPage: 'about-elkhart-lake.html',
       junk: ['previous month', 'next month']
     }
   };
@@ -2351,14 +2355,17 @@
     const about = document.getElementById('nav-about');
     const weekend = document.getElementById('nav-weekend');
     const venues = document.getElementById('nav-venues');
-    if (cityKey === 'parkcity') {
-      if (about) about.href = 'about-park-city.html';
-      if (weekend) weekend.href = 'this-weekend.html?city=parkcity';
-      if (venues) venues.href = 'venues.html?city=parkcity';
+    const city = CITIES[cityKey];
+    if (city) {
+      // City is selected — show all nav links
+      if (about) { about.href = city.aboutPage || 'about-yoocal.html'; about.textContent = city.aboutLabel || 'About'; }
+      if (weekend) { weekend.href = `this-weekend.html?city=${cityKey}`; weekend.style.display = ''; }
+      if (venues) { venues.href = `venues.html?city=${cityKey}`; venues.style.display = ''; }
     } else {
-      if (about) about.href = `about-park-city.html?city=${cityKey}`;
-      if (weekend) weekend.href = `this-weekend.html?city=${cityKey}`;
-      if (venues) venues.href = `venues.html?city=${cityKey}`;
+      // No city — default nav
+      if (about) { about.href = 'about-yoocal.html'; about.textContent = 'About'; }
+      if (weekend) weekend.style.display = 'none';
+      if (venues) venues.style.display = 'none';
     }
   }
 

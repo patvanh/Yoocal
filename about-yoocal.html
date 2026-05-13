@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Yoocal — Your local, everywhere.</title>
+  <meta name="description" content="Yoocal is one place for everything happening in your city — for locals and visitors alike. Updated daily from every source that matters.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple: #534AB7; --purple-light: #7B74D4; --purple-pale: #f0eeff;
+      --amber: #EF9F27; --dark: #1a1830; --text: #1e1b3a;
+      --muted: #6B7280; --border: rgba(83,74,183,0.12); --bg: #faf9ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; background: rgba(250,249,255,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { display: flex; align-items: center; gap: 8px; font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--purple); text-decoration: none; }
+    .nav-dot { width: 8px; height: 8px; background: var(--amber); border-radius: 50%; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .nav-cta { background: var(--purple); color: white !important; padding: 8px 20px; border-radius: 100px; font-size: 13px !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--purple-light) !important; }
+
+    .hero { background: var(--dark); padding: 140px 80px 100px; position: relative; overflow: hidden; text-align: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(83,74,183,0.4) 0%, transparent 70%); }
+    .hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 100px; margin-bottom: 28px; letter-spacing: 0.5px; border: 1px solid rgba(255,255,255,0.15); }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 6vw, 72px); color: white; line-height: 1.05; margin-bottom: 24px; }
+    .hero h1 em { font-style: italic; color: #9b8ff0; }
+    .hero p { font-size: 19px; color: rgba(255,255,255,0.6); line-height: 1.7; font-weight: 300; max-width: 560px; margin: 0 auto; }
+
+    .content { max-width: 1100px; margin: 0 auto; padding: 80px 40px 120px; }
+
+    .section-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--amber); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .section-label::before { content: ''; width: 24px; height: 2px; background: var(--purple-light); display: inline-block; }
+
+    .mission { text-align: center; max-width: 680px; margin: 0 auto 80px; }
+    .mission h2 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 4vw, 44px); margin-bottom: 20px; line-height: 1.2; }
+    .mission h2 em { font-style: italic; color: var(--purple); }
+    .mission p { font-size: 17px; color: var(--muted); line-height: 1.8; }
+
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 80px; }
+    .how-card { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 36px 28px; transition: all 0.2s; }
+    .how-card:hover { border-color: var(--purple); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(83,74,183,0.08); }
+    .how-icon { font-size: 36px; margin-bottom: 16px; }
+    .how-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+    .how-card p { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+    .cities-section { margin-bottom: 80px; }
+    .cities-section h2 { font-family: 'DM Serif Display', serif; font-size: 36px; margin-bottom: 8px; }
+    .cities-section .subtitle { font-size: 16px; color: var(--muted); margin-bottom: 36px; }
+    .cities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .city-card { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 32px; display: flex; align-items: center; gap: 20px; transition: all 0.2s; text-decoration: none; color: inherit; }
+    .city-card:hover { border-color: var(--purple); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(83,74,183,0.08); }
+    .city-card.coming-soon { opacity: 0.5; cursor: default; }
+    .city-card.coming-soon:hover { transform: none; box-shadow: none; border-color: var(--border); }
+    .city-emoji { font-size: 40px; flex-shrink: 0; }
+    .city-info h3 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+    .city-info p { font-size: 13px; color: var(--muted); }
+    .city-badge { margin-left: auto; font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 100px; flex-shrink: 0; }
+    .city-badge.live { background: rgba(83,74,183,0.1); color: var(--purple); }
+    .city-badge.soon { background: #f3f4f6; color: var(--muted); }
+
+    .values { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 80px; }
+    .value { padding: 32px; border-radius: 20px; background: white; border: 1px solid var(--border); }
+    .value-icon { font-size: 28px; margin-bottom: 14px; }
+    .value h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+    .value p { font-size: 14px; color: var(--muted); line-height: 1.75; }
+
+    .cta-banner { background: var(--dark); border-radius: 24px; padding: 72px 60px; text-align: center; }
+    .cta-banner h2 { font-family: 'DM Serif Display', serif; font-size: 40px; color: white; margin-bottom: 16px; line-height: 1.2; }
+    .cta-banner h2 em { font-style: italic; color: #9b8ff0; }
+    .cta-banner p { color: rgba(255,255,255,0.5); font-size: 17px; margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn { display: inline-block; background: var(--purple); color: white; padding: 14px 32px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .cta-btn:hover { background: var(--purple-light); }
+    .cta-btn.secondary { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); }
+    .cta-btn.secondary:hover { background: rgba(255,255,255,0.18); }
+
+    footer { background: var(--dark); color: white; padding: 40px 80px 28px; margin-top: 0; }
+    .footer-bottom { font-size: 13px; color: rgba(255,255,255,0.25); display: flex; justify-content: space-between; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 110px 24px 72px; }
+      .content { padding: 60px 24px 80px; }
+      .how-grid { grid-template-columns: 1fr; }
+      .cities-grid { grid-template-columns: 1fr; }
+      .values { grid-template-columns: 1fr; }
+      .cta-banner { padding: 48px 28px; }
+      footer { padding: 40px 24px 28px; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-dot"></div> yoocal</a>
+  <div class="nav-links">
+    <a href="about-yoocal.html" class="active">About</a>
+    <a href="#business">For businesses</a>
+    <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">✦ About Yoocal</div>
+    <h1>Your local,<br><em>everywhere.</em></h1>
+    <p>One place for everything happening in your city — for locals and visitors alike. Updated daily from every source that matters.</p>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="mission">
+    <div class="section-label">Our mission</div>
+    <h2>Stop checking <em>seven</em> different sites.</h2>
+    <p>We automatically gather events from every local source — newspapers, venue websites, chamber listings, and more — and put them all in one clean, free calendar. No accounts. No paywalls. Just what's happening near you.</p>
+  </div>
+
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-icon">🔍</div>
+      <h3>We do the searching</h3>
+      <p>Our scrapers check dozens of local sources every day — event boards, local newspapers, venue sites, and more — so you don't have to.</p>
+    </div>
+    <div class="how-card">
+      <div class="how-icon">✨</div>
+      <h3>We clean it up</h3>
+      <p>Duplicates removed, categories applied, distances calculated. Every event is organized so you can find what you're looking for in seconds.</p>
+    </div>
+    <div class="how-card">
+      <div class="how-icon">🆓</div>
+      <h3>Always free</h3>
+      <p>Free for everyone, forever. We're supported by local businesses who want their events seen — not by ads or subscription fees.</p>
+    </div>
+  </div>
+
+  <div class="cities-section">
+    <div class="section-label">Cities</div>
+    <h2>Now live in two cities</h2>
+    <p class="subtitle">With more on the way. Each city gets its own daily-updated calendar.</p>
+    <div class="cities-grid">
+      <a href="/?city=parkcity" class="city-card">
+        <div class="city-emoji">⛷️</div>
+        <div class="city-info">
+          <h3>Park City, Utah</h3>
+          <p>Concerts, festivals, outdoor adventures, races and more — updated daily from every local source.</p>
+        </div>
+        <span class="city-badge live">Live</span>
+      </a>
+      <a href="/?city=elkhartlake" class="city-card">
+        <div class="city-emoji">🏁</div>
+        <div class="city-info">
+          <h3>Elkhart Lake, Wisconsin</h3>
+          <p>Racing, local events, and everything happening around Road America and Sheboygan County.</p>
+        </div>
+        <span class="city-badge live">Live</span>
+      </a>
+      <div class="city-card coming-soon">
+        <div class="city-emoji">🏔️</div>
+        <div class="city-info">
+          <h3>Aspen, Colorado</h3>
+          <p>Coming soon.</p>
+        </div>
+        <span class="city-badge soon">Coming soon</span>
+      </div>
+      <div class="city-card coming-soon">
+        <div class="city-emoji">🦌</div>
+        <div class="city-info">
+          <h3>Jackson Hole, Wyoming</h3>
+          <p>Coming soon.</p>
+        </div>
+        <span class="city-badge soon">Coming soon</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-bottom: 20px;">What we stand for</div>
+  <div class="values">
+    <div class="value">
+      <div class="value-icon">🏘️</div>
+      <h3>Hyper-local first</h3>
+      <p>We go deep on one city at a time. No generic national event feeds — every listing comes from a source that actually covers your community.</p>
+    </div>
+    <div class="value">
+      <div class="value-icon">🔓</div>
+      <h3>Open to everyone</h3>
+      <p>Locals and visitors alike. Whether you've lived here 20 years or just drove into town, Yoocal is your guide.</p>
+    </div>
+    <div class="value">
+      <div class="value-icon">📰</div>
+      <h3>Supporting local media</h3>
+      <p>We surface events from local newspapers and community sources, driving traffic back to the outlets that cover your community.</p>
+    </div>
+    <div class="value">
+      <div class="value-icon">💜</div>
+      <h3>Built for small towns</h3>
+      <p>Big cities have plenty of event guides. We focus on the smaller, charming places that deserve better discovery tools.</p>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <h2>Find what's happening <em>near you.</em></h2>
+    <p>Pick your city and start exploring — it's free, always.</p>
+    <div class="cta-actions">
+      <a href="/?city=parkcity" class="cta-btn">Park City events →</a>
+      <a href="/?city=elkhartlake" class="cta-btn secondary">Elkhart Lake events →</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Yoocal</span>
+    <span>hello@yoocal.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
