@@ -1453,9 +1453,9 @@
       <div class="cal-filter" data-filter="paid">🎟 Paid</div>
     </div>
 
-    <div class="cal-days-header">
+    <div class="cal-days-header" style="justify-content:center; position:relative;">
       <div class="cal-days-label" id="cal-days-label">This week</div>
-      <div style="display:flex; align-items:center; gap:8px;">
+      <div style="display:flex; align-items:center; gap:8px; position:absolute; right:24px; top:50%; transform:translateY(-50%);">
         <button id="cal-today-btn" onclick="jumpToToday()" style="display:none; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:white; padding:4px 12px; border-radius:100px; font-size:12px; font-weight:600; cursor:pointer; transition:all 0.15s;" onmouseover="this.style.background='var(--purple)'; this.style.borderColor='var(--purple)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.15)'">↩ Today</button>
         <button class="cal-month-btn" id="cal-month-toggle" title="Pick a date">📅</button>
       </div>
@@ -2309,10 +2309,28 @@
   buildDayChips();
 
   // ── Featured event detection (used in sort and render) ──
+  // Pick one random event per day to feature (consistent all day, changes daily)
+  function getDailyFeaturedTitle() {
+    const todayStr = today.toISOString().slice(0, 10).replace(/-/g, '');
+    const seed = parseInt(todayStr) % 997; // simple deterministic seed from date
+    const eligible = allEvents.filter(e => {
+      const d = e.date ? new Date(e.date + 'T12:00:00') : null;
+      if (!d) return false;
+      // Only pick upcoming events within next 30 days
+      const diff = (d - today) / (1000 * 60 * 60 * 24);
+      return diff >= 0 && diff <= 30 && !isFeaturedEvent({...e, featured: false});
+    });
+    if (!eligible.length) return null;
+    return eligible[seed % eligible.length].title;
+  }
+
+  let dailyFeaturedTitle = null; // set after events load
+
   function isFeaturedEvent(event) {
     return event.featured === true ||
            event.source === 'Running in the USA' ||
-           (event.title||'').toLowerCase().includes('festival');
+           (event.title||'').toLowerCase().includes('festival') ||
+           (dailyFeaturedTitle && event.title === dailyFeaturedTitle);
   }
 
   // ── City configuration ──
@@ -2380,6 +2398,7 @@
           }
         });
         allEvents = Array.from(dedupMap.values());
+        dailyFeaturedTitle = getDailyFeaturedTitle();
 
         const heroStat = document.querySelector('.hero-stat .num');
         if (heroStat) heroStat.textContent = allEvents.length;
@@ -2651,6 +2670,67 @@
 
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEventModal(); });
 
+  // ── Share menu ──
+  function openShareMenu(e) {
+    e.stopPropagation();
+    if (!modalCardRef) return;
+    const title = modalCardRef.dataset.title || '';
+    const link = modalCardRef.dataset.link || window.location.href;
+    const date = modalCardRef.dataset.date || '';
+    const shareUrl = link || window.location.href;
+    const shareText = `Check out "${title}"${date ? ' on ' + date : ''} — via Yoocal`;
+
+    // Use native share sheet on mobile if available
+    const nativeBtn = document.getElementById('share-native');
+    if (navigator.share) {
+      nativeBtn.style.display = 'flex';
+      nativeBtn.onclick = (ev) => {
+        ev.preventDefault();
+        closeShareMenu();
+        navigator.share({ title, text: shareText, url: shareUrl });
+      };
+    } else {
+      nativeBtn.style.display = 'none';
+    }
+
+    document.getElementById('share-sms').href = `sms:?body=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
+    document.getElementById('share-email').href = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText + '\n\n' + shareUrl)}`;
+    document.getElementById('share-x').href = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+    document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+
+    const dd = document.getElementById('share-dropdown');
+    const btn = document.getElementById('modal-share');
+    const rect = btn.getBoundingClientRect();
+    let left = rect.left;
+    if (left + 210 > window.innerWidth) left = window.innerWidth - 216;
+    dd.style.top = (rect.bottom + 6) + 'px';
+    dd.style.left = left + 'px';
+    dd.style.display = 'block';
+  }
+
+  function closeShareMenu() {
+    document.getElementById('share-dropdown').style.display = 'none';
+  }
+
+  function copyShareLink(e) {
+    e.preventDefault();
+    closeShareMenu();
+    const link = modalCardRef?.dataset.link || window.location.href;
+    navigator.clipboard.writeText(link).then(() => {
+      const btn = document.getElementById('modal-share');
+      const orig = btn.innerHTML;
+      btn.innerHTML = '✓ Copied!';
+      setTimeout(() => btn.innerHTML = orig, 2000);
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    const dd = document.getElementById('share-dropdown');
+    if (dd && !dd.contains(e.target) && e.target.id !== 'modal-share') {
+      dd.style.display = 'none';
+    }
+  });
+
   // ── Add to Calendar ──
   function formatICSDate(dateStr, timeStr) {
     if (!dateStr) return null;
@@ -2813,6 +2893,7 @@
   <div style="padding:0 28px 28px; display:flex; gap:10px; flex-wrap:wrap;">
     <a id="modal-link" href="#" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; background:var(--purple); color:white; padding:12px 24px; border-radius:100px; font-size:14px; font-weight:600; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='#7B74D4'" onmouseout="this.style.background='var(--purple)'">View full details ↗</a>
     <button id="modal-atc" onclick="openAtcFromModal()" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); color:white; padding:12px 24px; border-radius:100px; font-size:14px; font-weight:600; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">📅 Add to calendar</button>
+    <button id="modal-share" onclick="openShareMenu(event)" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); color:white; padding:12px 24px; border-radius:100px; font-size:14px; font-weight:600; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">↗ Share</button>
   </div>
 </div>
 
@@ -2820,6 +2901,15 @@
   <a class="atc-option" id="atc-google" href="#" target="_blank" rel="noopener" onclick="document.getElementById('atc-dropdown').classList.remove('open')">📅 Google Calendar</a>
   <a class="atc-option" id="atc-apple" href="#" download onclick="document.getElementById('atc-dropdown').classList.remove('open')">🍎 Apple Calendar</a>
   <a class="atc-option" id="atc-outlook" href="#" download onclick="document.getElementById('atc-dropdown').classList.remove('open')">📧 Outlook / Other</a>
+</div>
+
+<div id="share-dropdown" style="display:none; position:fixed; background:white; border-radius:14px; box-shadow:0 8px 32px rgba(0,0,0,0.25); padding:8px; z-index:20000; min-width:200px;">
+  <a id="share-native" class="atc-option" href="#" style="display:none">📱 Share...</a>
+  <a id="share-sms" class="atc-option" href="#">💬 Text message</a>
+  <a id="share-email" class="atc-option" href="#">✉️ Email</a>
+  <a id="share-x" class="atc-option" href="#" target="_blank" rel="noopener">𝕏 X / Twitter</a>
+  <a id="share-facebook" class="atc-option" href="#" target="_blank" rel="noopener">📘 Facebook</a>
+  <a id="share-copy" class="atc-option" href="#" onclick="copyShareLink(event)">🔗 Copy link</a>
 </div>
 
 <div class="hero-eyebrow-dropdown" id="hero-eyebrow-dropdown">
