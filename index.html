@@ -892,24 +892,42 @@
 
   .cal-event:hover { background: rgba(255,255,255,0.07); }
   .cal-event.featured {
-    border: 2px solid var(--amber);
-    box-shadow: 0 0 0 1px rgba(239,159,39,0.15), 0 4px 20px rgba(239,159,39,0.1);
+    border: none;
+    background: linear-gradient(135deg, rgba(239,159,39,0.15) 0%, rgba(239,159,39,0.06) 100%);
+    box-shadow: 0 0 0 1.5px rgba(239,159,39,0.4), 0 8px 32px rgba(239,159,39,0.15);
     position: relative;
+    padding: 18px 16px 16px;
   }
-
+  .cal-event.featured::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--amber), rgba(239,159,39,0.4));
+    border-radius: 12px 0 0 12px;
+  }
   .cal-event.featured::before {
     content: '⭐ Featured';
     position: absolute;
-    top: -10px;
+    top: -11px;
     left: 16px;
     background: var(--amber);
     color: white;
     font-size: 10px;
     font-weight: 700;
-    padding: 2px 8px;
+    padding: 3px 10px;
     border-radius: 100px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(239,159,39,0.4);
+  }
+  .cal-event.featured .cal-event-info h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffe5a0;
+  }
+  .cal-event.featured:hover {
+    background: linear-gradient(135deg, rgba(239,159,39,0.22) 0%, rgba(239,159,39,0.1) 100%);
   }
 
   .cal-event-time {
