@@ -2321,7 +2321,6 @@
   // Pick one random event per day to feature (consistent all day, changes daily)
   function getDailyFeaturedTitle() {
     const now = new Date();
-    // Seed = year * 1000 + dayOfYear, guaranteed to change every day
     const start = new Date(now.getFullYear(), 0, 0);
     const dayOfYear = Math.floor((now - start) / (1000 * 60 * 60 * 24));
     const seed = now.getFullYear() * 1000 + dayOfYear;
@@ -2330,14 +2329,27 @@
       if (!e.date) return false;
       const d = new Date(e.date + 'T12:00:00');
       const diff = (d - today) / (1000 * 60 * 60 * 24);
-      // Only upcoming events in next 30 days, exclude races/festivals already featured
-      return diff >= 0 && diff <= 30 &&
+      // Pick from events in the next 7 days, exclude already-featured types
+      return diff >= 0 && diff <= 7 &&
+             e.featured !== true &&
+             e.source !== 'Running in the USA' &&
+             !(e.title||'').toLowerCase().includes('festival') &&
+             e.source !== 'Google Events'; // Google Events are often not local enough
+    });
+
+    // Fall back to 14 days if not enough events this week
+    const pool = eligible.length >= 5 ? eligible : allEvents.filter(e => {
+      if (!e.date) return false;
+      const d = new Date(e.date + 'T12:00:00');
+      const diff = (d - today) / (1000 * 60 * 60 * 24);
+      return diff >= 0 && diff <= 14 &&
              e.featured !== true &&
              e.source !== 'Running in the USA' &&
              !(e.title||'').toLowerCase().includes('festival');
     });
-    if (!eligible.length) return null;
-    return eligible[seed % eligible.length].title;
+
+    if (!pool.length) return null;
+    return pool[seed % pool.length].title;
   }
 
   let dailyFeaturedTitle = null; // set after events load
