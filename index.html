@@ -1198,9 +1198,9 @@
     yoocal
   </a>
   <div class="nav-links">
-    <a href="about-park-city.html">About Park City</a>
-    <a href="this-weekend.html">This Weekend</a>
-    <a href="venues.html">Venues</a>
+    <a href="about-park-city.html" id="nav-about">About Park City</a>
+    <a href="this-weekend.html" id="nav-weekend">This Weekend</a>
+    <a href="venues.html" id="nav-venues">Venues</a>
     <a href="#business">For businesses</a>
     <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
   </div>
@@ -2174,6 +2174,7 @@
     document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
     buildDayChips();
     loadCity(cityKey);
+    updateNavLinks(cityKey);
     // Scroll to events
     document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
     return false;
@@ -2297,6 +2298,21 @@
       mapContainer.style.display = 'none';
       btnList.classList.add('active');
       btnMap.classList.remove('active');
+    }
+  }
+
+  function updateNavLinks(cityKey) {
+    const about = document.getElementById('nav-about');
+    const weekend = document.getElementById('nav-weekend');
+    const venues = document.getElementById('nav-venues');
+    if (cityKey === 'parkcity') {
+      if (about) about.href = 'about-park-city.html';
+      if (weekend) weekend.href = 'this-weekend.html?city=parkcity';
+      if (venues) venues.href = 'venues.html?city=parkcity';
+    } else {
+      if (about) about.href = `about-park-city.html?city=${cityKey}`;
+      if (weekend) weekend.href = `this-weekend.html?city=${cityKey}`;
+      if (venues) venues.href = `venues.html?city=${cityKey}`;
     }
   }
 

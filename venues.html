@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park City Venues & Event Spaces — Yoocal</title>
+  <meta name="description" content="The best venues in Park City, Utah. Concerts at Egyptian Theatre, live music at The Spur Bar, events at Deer Valley, Kimball Arts Center and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --purple: #534AB7; --purple-light: #7B74D4; --purple-pale: #f0eeff;
+      --amber: #EF9F27; --dark: #1a1830; --text: #1e1b3a;
+      --muted: #6B7280; --border: rgba(83,74,183,0.12); --bg: #faf9ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1830; background: white; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,249,255,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--purple); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+    .nav-dot { width: 8px; height: 8px; background: var(--amber); border-radius: 50%; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .nav-cta { background: var(--purple) !important; color: white !important; padding: 10px 20px; border-radius: 100px; font-size: 14px; font-weight: 600; }
+
+    .page-header { background: var(--dark); padding: 120px 80px 60px; }
+    .page-header .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); font-size: 12px; font-weight: 600; padding: 5px 14px; border-radius: 100px; margin-bottom: 20px; letter-spacing: 0.5px; }
+    .page-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 64px); color: white; line-height: 1.1; margin-bottom: 12px; }
+    .page-header h1 em { font-style: italic; color: var(--amber); }
+    .page-header p { font-size: 18px; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 500px; }
+
+    .filter-bar { background: white; border-bottom: 1px solid var(--border); padding: 0 80px; display: flex; gap: 8px; align-items: center; position: sticky; top: 64px; z-index: 50; overflow-x: auto; scrollbar-width: none; }
+    .filter-bar::-webkit-scrollbar { display: none; }
+    .filter-chip { padding: 14px 20px; font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.2s; }
+    .filter-chip.active { color: var(--purple); border-bottom-color: var(--purple); }
+
+    .content { max-width: 1200px; margin: 0 auto; padding: 60px 40px 80px; }
+
+    .venues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
+
+    .venue-card { border: 1px solid var(--border); border-radius: 20px; overflow: hidden; transition: all 0.2s; background: white; }
+    .venue-card:hover { border-color: var(--purple); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(83,74,183,0.1); }
+    .venue-emoji { background: linear-gradient(135deg, #f0eeff, #e8e4ff); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+    .venue-body { padding: 24px; }
+    .venue-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .venue-tag { font-size: 11px; padding: 3px 10px; border-radius: 100px; font-weight: 600; background: #f0eeff; color: var(--purple); }
+    .venue-tag.music { background: rgba(83,74,183,0.1); color: var(--purple); }
+    .venue-tag.food { background: rgba(239,159,39,0.1); color: #d97706; }
+    .venue-tag.arts { background: rgba(220,38,38,0.1); color: #dc2626; }
+    .venue-tag.outdoor { background: rgba(29,158,117,0.1); color: #1d9e75; }
+    .venue-tag.sports { background: rgba(59,130,246,0.1); color: #3b82f6; }
+    .venue-tag.family { background: rgba(168,85,247,0.1); color: #a855f7; }
+    .venue-name { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 6px; }
+    .venue-address { font-size: 13px; color: var(--muted); margin-bottom: 12px; display: flex; align-items: center; gap: 4px; }
+    .venue-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+    .venue-actions { display: flex; gap: 10px; }
+    .venue-btn { font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 100px; text-decoration: none; transition: all 0.2s; }
+    .venue-btn.primary { background: var(--purple); color: white; }
+    .venue-btn.primary:hover { background: var(--purple-light); }
+    .venue-btn.secondary { border: 1px solid var(--border); color: var(--muted); }
+    .venue-btn.secondary:hover { border-color: var(--purple); color: var(--purple); }
+
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 28px; margin-bottom: 8px; margin-top: 56px; }
+    .section-sub { font-size: 15px; color: var(--muted); margin-bottom: 28px; }
+
+    footer { background: var(--dark); color: white; padding: 48px 80px 32px; margin-top: 80px; }
+    .footer-bottom { font-size: 13px; color: rgba(255,255,255,0.25); display: flex; justify-content: space-between; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-dot"></div> yoocal</a>
+  <div class="nav-links">
+    <a href="about-park-city.html">About Park City</a>
+    <a href="this-weekend.html">This Weekend</a>
+    <a href="venues.html" class="active">Venues</a>
+    <a href="/#business">For businesses</a>
+    <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="eyebrow">📍 Park City, Utah</div>
+  <h1>Park City's best <em>venues</em></h1>
+  <p>Where the music plays, the art lives, and the food is always worth the drive up the mountain.</p>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-chip active" onclick="filterVenues('all', this)">All venues</div>
+  <div class="filter-chip" onclick="filterVenues('music', this)">🎵 Music</div>
+  <div class="filter-chip" onclick="filterVenues('arts', this)">🎭 Arts</div>
+  <div class="filter-chip" onclick="filterVenues('food', this)">🍽️ Food & Drink</div>
+  <div class="filter-chip" onclick="filterVenues('outdoor', this)">🏔️ Outdoor</div>
+  <div class="filter-chip" onclick="filterVenues('sports', this)">🏃 Sports</div>
+  <div class="filter-chip" onclick="filterVenues('family', this)">👨‍👩‍👧 Family</div>
+</div>
+
+<div class="content">
+  <div class="venues-grid" id="venues-grid"></div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Yoocal · Park City, Utah</span>
+    <span>hello@yoocal.com</span>
+  </div>
+</footer>
+
+<script>
+const VENUES = [
+  {
+    name: "Egyptian Theatre",
+    emoji: "🎭",
+    address: "328 Main St, Park City, UT 84060",
+    tags: ["arts", "music"],
+    desc: "Park City's landmark 1926 theatre on Historic Main Street. Hosts world-class concerts, comedy shows, film screenings, and theatrical productions year-round. Home to the Sundance Film Festival.",
+    events_search: "Egyptian Theatre",
+    website: "https://www.egyptiantheatrecompany.org",
+    lat: 40.6454, lng: -111.4978
+  },
+  {
+    name: "The Spur Bar and Grill",
+    emoji: "🎸",
+    address: "352 Main St, Park City, UT 84060",
+    tags: ["music", "food"],
+    desc: "Park City's premier live music bar on Main Street. Nightly live performances from local and touring acts, cold beers, and a lively crowd seven nights a week.",
+    events_search: "Spur Bar",
+    website: "https://www.thespurbarandgrill.com",
+    lat: 40.6449, lng: -111.4972
+  },
+  {
+    name: "Deer Valley Resort",
+    emoji: "⛷️",
+    address: "2250 Deer Valley Dr S, Park City, UT 84060",
+    tags: ["outdoor", "music"],
+    desc: "World-class ski resort hosting summer concerts, festivals, and outdoor events. The Snow Park Amphitheater draws major acts every summer season for outdoor performances under the stars.",
+    events_search: "Deer Valley",
+    website: "https://www.deervalley.com",
+    lat: 40.6374, lng: -111.4783
+  },
+  {
+    name: "Kimball Arts Center",
+    emoji: "🖼️",
+    address: "638 Park Ave, Park City, UT 84060",
+    tags: ["arts"],
+    desc: "Park City's community arts hub. Home to galleries, studio spaces, classes, and the annual Kimball Arts Festival — one of Utah's premier outdoor arts events each August.",
+    events_search: "Kimball Arts",
+    website: "https://www.kimballartcenter.org",
+    lat: 40.6451, lng: -111.4976
+  },
+  {
+    name: "High West Distillery",
+    emoji: "🥃",
+    address: "703 Park Ave, Park City, UT 84060",
+    tags: ["food"],
+    desc: "America's first ski-in distillery. Award-winning whiskeys, a full restaurant, and regular tasting events and special releases. A Park City institution for whiskey lovers.",
+    events_search: "High West",
+    website: "https://www.highwest.com",
+    lat: 40.6441, lng: -111.4976
+  },
+  {
+    name: "Park City Library",
+    emoji: "📚",
+    address: "1255 Park Ave, Park City, UT 84060",
+    tags: ["family", "arts"],
+    desc: "More than a library — a community hub hosting lectures, film screenings, kids programming, author talks, and free community events throughout the year.",
+    events_search: "Park City Library",
+    website: "https://www.parkcitylibrary.org",
+    lat: 40.6494, lng: -111.5013
+  },
+  {
+    name: "Swaner EcoCenter",
+    emoji: "🌿",
+    address: "1258 Center Dr, Park City, UT 84098",
+    tags: ["outdoor", "family"],
+    desc: "Nature preserve and education center at Kimball Junction. Hosts nature programs, Sunday crafts, guided walks, and family-friendly activities in a stunning wetland setting.",
+    events_search: "Swaner",
+    website: "https://www.swanerecocenter.org",
+    lat: 40.6897, lng: -111.5430
+  },
+  {
+    name: "Eccles Center for the Performing Arts",
+    emoji: "🎼",
+    address: "1750 Kearns Blvd, Park City, UT 84060",
+    tags: ["arts", "music"],
+    desc: "Park City's premier performing arts venue with a 1,100-seat main stage. Home to Park City Institute's world-class speaker and performance series, orchestra, and Broadway touring productions.",
+    events_search: "Eccles",
+    website: "https://www.ecclescenter.org",
+    lat: 40.6516, lng: -111.5080
+  },
+  {
+    name: "No Name Saloon",
+    emoji: "🍺",
+    address: "447 Main St, Park City, UT 84060",
+    tags: ["food"],
+    desc: "A legendary dive bar on Historic Main Street. Buffalo burgers, cold beers, and a rooftop deck with mountain views. No frills, no pretense — just good times on Main Street.",
+    events_search: "No Name Saloon",
+    website: "https://www.nonamesaloon.net",
+    lat: 40.6448, lng: -111.4970
+  },
+  {
+    name: "Park City Mountain Resort",
+    emoji: "🏔️",
+    address: "1310 Lowell Ave, Park City, UT 84060",
+    tags: ["outdoor", "sports"],
+    desc: "Utah's largest ski resort with 7,300 acres of terrain. Summer brings lift-served mountain biking, hiking, concerts, and the mountain coaster. Year-round activities for all ages.",
+    events_search: "Park City Mountain",
+    website: "https://www.parkcitymountain.com",
+    lat: 40.6516, lng: -111.5080
+  },
+  {
+    name: "Jordanelle State Park",
+    emoji: "🚣",
+    address: "UT-319, Heber City, UT 84032",
+    tags: ["outdoor", "sports"],
+    desc: "Stunning reservoir 15 minutes from Park City. Swimming, kayaking, paddleboarding, and camping in summer. Hosts open water swimming events and triathlon competitions.",
+    events_search: "Jordanelle",
+    website: "https://stateparks.utah.gov/parks/jordanelle/",
+    lat: 40.6000, lng: -111.4280
+  },
+  {
+    name: "Park City Film Series",
+    emoji: "🎬",
+    address: "1255 Park Ave, Park City, UT 84060",
+    tags: ["arts", "family"],
+    desc: "Year-round independent and foreign film screenings. Weekly films, special screenings, and filmmaker Q&As in an intimate theater setting. Beloved by Park City's arts community.",
+    events_search: "Park City Film",
+    website: "https://www.parkcityfilm.org",
+    lat: 40.6494, lng: -111.5013
+  },
+];
+
+let activeFilter = 'all';
+
+function filterVenues(filter, el) {
+  activeFilter = filter;
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderVenues();
+}
+
+function renderVenues() {
+  const grid = document.getElementById('venues-grid');
+  const filtered = activeFilter === 'all' ? VENUES : VENUES.filter(v => v.tags.includes(activeFilter));
+  grid.innerHTML = filtered.map(v => `
+    <div class="venue-card">
+      <div class="venue-emoji">${v.emoji}</div>
+      <div class="venue-body">
+        <div class="venue-tags">${v.tags.map(t => `<span class="venue-tag ${t}">${t.charAt(0).toUpperCase()+t.slice(1)}</span>`).join('')}</div>
+        <div class="venue-name">${v.name}</div>
+        <div class="venue-address">📍 ${v.address}</div>
+        <div class="venue-desc">${v.desc}</div>
+        <div class="venue-actions">
+          <a href="/?search=${encodeURIComponent(v.events_search)}" class="venue-btn primary">See events →</a>
+          <a href="${v.website}" target="_blank" rel="noopener" class="venue-btn secondary">Website</a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+renderVenues();
+
+  // City param — update nav links
+  const params = new URLSearchParams(window.location.search);
+  const cityKey = params.get('city') || 'parkcity';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    if (a.href.includes('this-weekend')) a.href = `this-weekend.html?city=${cityKey}`;
+    if (a.href.includes('venues')) a.href = `venues.html?city=${cityKey}`;
+    if (a.href.includes('about-park-city')) a.href = cityKey === 'parkcity' ? 'about-park-city.html' : `about-park-city.html?city=${cityKey}`;
+  });
+
+  // Update "See events" links to include city
+  document.querySelectorAll('.venue-btn.primary').forEach(a => {
+    const search = new URL(a.href).searchParams.get('search') || '';
+    a.href = `/?search=${encodeURIComponent(search)}&city=${cityKey}`;
+  });
+</script>
+</body>
+</html>

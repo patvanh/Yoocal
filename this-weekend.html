@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This Weekend in Park City — Yoocal</title>
+  <meta name="description" content="What's happening this weekend in Park City, Utah. Concerts, festivals, outdoor events, dining, and more — updated daily.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+        :root {
+      --purple: #534AB7; --purple-light: #7B74D4; --purple-pale: #f0eeff;
+      --amber: #EF9F27; --dark: #1a1830; --text: #1e1b3a;
+      --muted: #6B7280; --border: rgba(83,74,183,0.12); --bg: #faf9ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1830; background: var(--bg); }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,249,255,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--purple); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+    .nav-dot { width: 8px; height: 8px; background: var(--amber); border-radius: 50%; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .nav-cta { background: var(--purple) !important; color: white !important; padding: 10px 20px; border-radius: 100px; font-size: 14px; font-weight: 600; }
+
+    .page-header { background: var(--dark); padding: 120px 80px 60px; }
+    .page-header .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); font-size: 12px; font-weight: 600; padding: 5px 14px; border-radius: 100px; margin-bottom: 20px; letter-spacing: 0.5px; }
+    .page-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 64px); color: white; line-height: 1.1; margin-bottom: 12px; }
+    .page-header h1 em { font-style: italic; color: var(--amber); }
+    .page-header .dates { font-size: 18px; color: rgba(255,255,255,0.5); font-weight: 300; }
+
+    .weekend-tabs { background: var(--bg); border-bottom: 1px solid var(--border); padding: 0 80px; display: flex; gap: 0; position: sticky; top: 64px; z-index: 50; }
+    .tab { padding: 16px 24px; font-size: 14px; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s; }
+    .tab.active { color: var(--purple); border-bottom-color: var(--purple); }
+    .tab:hover { color: var(--purple); }
+
+    .content { max-width: 1200px; margin: 0 auto; padding: 48px 40px 80px; }
+
+    .day-section { margin-bottom: 56px; }
+    .day-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; }
+    .day-header h2 { font-family: 'DM Serif Display', serif; font-size: 28px; }
+    .day-header .day-count { font-size: 14px; color: var(--muted); }
+
+    .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+
+    .event-card { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; display: block; transition: all 0.2s; }
+    .event-card:hover { border-color: var(--purple); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(83,74,183,0.08); }
+    .event-card.featured { border-color: var(--amber); box-shadow: 0 0 0 1px rgba(239,159,39,0.2); }
+    .event-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .event-time { font-size: 12px; color: var(--muted); font-weight: 500; }
+    .event-source { font-size: 11px; color: var(--muted); margin-left: auto; }
+    .event-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; line-height: 1.3; }
+    .event-location { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+    .event-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .event-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag { font-size: 11px; padding: 3px 10px; border-radius: 100px; font-weight: 500; }
+    .tag-music { background: rgba(83,74,183,0.1); color: var(--purple); }
+    .tag-outdoor { background: rgba(29,158,117,0.1); color: #1d9e75; }
+    .tag-food { background: rgba(239,159,39,0.1); color: #d97706; }
+    .tag-arts { background: rgba(220,38,38,0.1); color: #dc2626; }
+    .tag-sports { background: rgba(59,130,246,0.1); color: #3b82f6; }
+    .tag-family { background: rgba(168,85,247,0.1); color: #a855f7; }
+    .tag-wellness { background: rgba(16,185,129,0.1); color: #10b981; }
+    .tag-free { background: rgba(29,158,117,0.15); color: #1d9e75; }
+    .tag-paid { background: rgba(239,159,39,0.1); color: #d97706; }
+    .tag-community { background: rgba(100,116,139,0.1); color: #64748b; }
+    .featured-badge { background: var(--amber); color: white; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 100px; letter-spacing: 0.5px; }
+
+    .empty { text-align: center; padding: 60px; color: var(--muted); }
+    .loading { text-align: center; padding: 60px; color: var(--muted); }
+
+    .newsletter-banner { background: var(--purple); border-radius: 20px; padding: 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 48px; flex-wrap: wrap; }
+    .newsletter-banner h3 { font-family: 'DM Serif Display', serif; font-size: 24px; color: white; margin-bottom: 6px; }
+    .newsletter-banner p { color: rgba(255,255,255,0.7); font-size: 14px; }
+    .newsletter-banner a { background: var(--bg); color: var(--purple); padding: 12px 24px; border-radius: 100px; font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+
+    footer { background: var(--dark); color: white; padding: 48px 80px 32px; }
+    .footer-bottom { font-size: 13px; color: rgba(255,255,255,0.25); display: flex; justify-content: space-between; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-dot"></div> yoocal</a>
+  <div class="nav-links">
+    <a href="about-park-city.html">About Park City</a>
+    <a href="this-weekend.html" class="active">This Weekend</a>
+    <a href="venues.html">Venues</a>
+    <a href="/#business">For businesses</a>
+    <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="eyebrow">📅 Park City, Utah</div>
+  <h1>This <em>weekend</em> in Park City</h1>
+  <p class="dates" id="weekend-dates">Loading...</p>
+</div>
+
+<div class="weekend-tabs">
+  <div class="tab active" onclick="showDay('fri')" id="tab-fri">Friday</div>
+  <div class="tab" onclick="showDay('sat')" id="tab-sat">Saturday</div>
+  <div class="tab" onclick="showDay('sun')" id="tab-sun">Sunday</div>
+  <div class="tab" onclick="showDay('all')" id="tab-all">All Weekend</div>
+</div>
+
+<div class="content">
+  <div id="events-container">
+    <div class="loading">Loading this weekend's events...</div>
+  </div>
+
+  <div class="newsletter-banner">
+    <div>
+      <h3>Get "This Weekend" in your inbox</h3>
+      <p>Every Thursday we send a curated roundup of the best Park City events for the weekend ahead.</p>
+    </div>
+    <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank">Subscribe free →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Yoocal · Park City, Utah</span>
+    <span>hello@yoocal.com</span>
+  </div>
+</footer>
+
+<script>
+  const DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  function getWeekend() {
+    const today = new Date();
+    const day = today.getDay();
+    const daysUntilFri = day <= 5 ? 5 - day : 6;
+    const fri = new Date(today); fri.setDate(today.getDate() + (day === 5 ? 0 : day === 6 ? 6 : daysUntilFri));
+    const sat = new Date(fri); sat.setDate(fri.getDate() + (day === 6 ? 0 : 1));
+    const sun = new Date(sat); sun.setDate(sat.getDate() + (day === 0 ? 0 : 1));
+    return { fri, sat, sun };
+  }
+
+  function dateToStr(d) {
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  }
+
+  const TAG_MAP = {
+    music: { label: 'Music', cls: 'tag-music' },
+    outdoor: { label: 'Outdoor', cls: 'tag-outdoor' },
+    food: { label: 'Food & Drink', cls: 'tag-food' },
+    arts: { label: 'Arts', cls: 'tag-arts' },
+    sports: { label: 'Sports', cls: 'tag-sports' },
+    family: { label: 'Family', cls: 'tag-family' },
+    wellness: { label: 'Wellness', cls: 'tag-wellness' },
+    free: { label: 'Free', cls: 'tag-free' },
+    paid: { label: 'Paid', cls: 'tag-paid' },
+    community: { label: 'Community', cls: 'tag-community' },
+  };
+
+  function getCategories(event) {
+    const text = (event.title + ' ' + (event.description || '')).toLowerCase();
+    const location = (event.location || '').toLowerCase();
+    const cats = [];
+    if (/music|concert|band|jazz|live|perform|dj|bluegrass|acoustic|folk|rock|country/.test(text)) cats.push('music');
+    if (/hike|trail|outdoor|bike|ski|snow|mountain|park|nature|climb|kayak/.test(text)) cats.push('outdoor');
+    if (/food|drink|wine|beer|cocktail|dine|eat|taste|market|farm|chef|brewery/.test(text)) cats.push('food');
+    if (/art|gallery|exhibit|museum|paint|sculpt|craft|film|theatre|theater|show|play|dance/.test(text)) cats.push('arts');
+    if (/run|race|marathon|5k|10k|triathlon|relay|cycling|fitness|yoga/.test(text)) cats.push('sports');
+    if (/kid|child|family|youth|teen|school|junior|baby|parent|storytime/.test(text)) cats.push('family');
+    if (/wellness|meditat|breathwork|sound|healing|spa|health|therapy/.test(text)) cats.push('wellness');
+    const MUSIC_VENUES = ['spur bar', 'the spur', 'egyptian theatre', 'side door'];
+    const ARTS_VENUES = ['egyptian', 'kimball arts', 'museum', 'gallery', 'park city institute'];
+    if (MUSIC_VENUES.some(v => location.includes(v))) cats.push('music');
+    if (ARTS_VENUES.some(v => location.includes(v))) cats.push('arts');
+    if (event.is_free === true || /\bfree\b/.test(text)) cats.push('free');
+    else if (event.is_free === false || /\$\d|\bticket/.test(text)) cats.push('paid');
+    if (['egyptian theatre', 'park city institute'].some(v => location.includes(v) || text.includes(v))) cats.push('paid');
+    return [...new Set(cats)];
+  }
+
+  function renderEvent(event) {
+    const cats = getCategories(event);
+    const isFeatured = event.source === 'Running in the USA' || (event.title||'').toLowerCase().includes('festival');
+    const tagHTML = cats.slice(0,3).map(c => {
+      const t = TAG_MAP[c];
+      return t ? `<span class="tag ${t.cls}">${t.label}</span>` : '';
+    }).join('');
+    const featuredBadge = isFeatured ? `<span class="featured-badge">⭐ Featured</span>` : '';
+    const source = (event.source || '').replace('Visit Park City','visitparkcity.com').replace('The Park Record','Park Record').replace('Running in the USA','runningintheusa.com').replace('Google Events','Google');
+    return `
+      <a href="${event.link || '#'}" class="event-card${isFeatured ? ' featured' : ''}" target="_blank" rel="noopener">
+        <div class="event-meta">
+          <span class="event-time">${event.location || 'Park City, UT'}</span>
+          <span class="event-source">via ${source}</span>
+        </div>
+        <div class="event-title">${event.title}</div>
+        ${event.description ? `<div class="event-desc">${event.description}</div>` : ''}
+        <div class="event-tags">${featuredBadge}${tagHTML}</div>
+      </a>`;
+  }
+
+  let allEvents = [];
+  let activeDay = 'fri';
+  const { fri, sat, sun } = getWeekend();
+
+  document.getElementById('weekend-dates').textContent =
+    `${DAYS[fri.getDay()]}, ${MONTHS[fri.getMonth()]} ${fri.getDate()} – ${DAYS[sun.getDay()]}, ${MONTHS[sun.getMonth()]} ${sun.getDate()}, ${sun.getFullYear()}`;
+
+  document.getElementById('tab-fri').textContent = `Friday ${fri.getDate()}`;
+  document.getElementById('tab-sat').textContent = `Saturday ${sat.getDate()}`;
+  document.getElementById('tab-sun').textContent = `Sunday ${sun.getDate()}`;
+
+  function getEventsForDate(dateObj) {
+    const sel = dateToStr(dateObj);
+    const dayName = DAYS[dateObj.getDay()];
+    return allEvents.filter(e => {
+      const s = e.date?.substring(0,10);
+      const en = e.end_date?.substring(0,10) || s;
+      if (!s || s === 'See website') return false;
+      if (sel < s || sel > en) return false;
+      if (e.recurrence_days) return e.recurrence_days.split(',').includes(dayName);
+      if (e.recurrence_day) return dayName === e.recurrence_day;
+      return true;
+    }).sort((a,b) => {
+      const af = a.source === 'Running in the USA' || (a.title||'').toLowerCase().includes('festival') ? 0 : 1;
+      const bf = b.source === 'Running in the USA' || (b.title||'').toLowerCase().includes('festival') ? 0 : 1;
+      if (af !== bf) return af - bf;
+      return (a.title||'').localeCompare(b.title||'');
+    });
+  }
+
+  function showDay(day) {
+    activeDay = day;
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(`tab-${day}`).classList.add('active');
+
+    const container = document.getElementById('events-container');
+    if (!allEvents.length) { container.innerHTML = '<div class="loading">Loading...</div>'; return; }
+
+    if (day === 'all') {
+      const days = [
+        { label: `Friday, ${MONTHS_SHORT[fri.getMonth()]} ${fri.getDate()}`, date: fri },
+        { label: `Saturday, ${MONTHS_SHORT[sat.getMonth()]} ${sat.getDate()}`, date: sat },
+        { label: `Sunday, ${MONTHS_SHORT[sun.getMonth()]} ${sun.getDate()}`, date: sun },
+      ];
+      container.innerHTML = days.map(({label, date}) => {
+        const evs = getEventsForDate(date);
+        return `<div class="day-section">
+          <div class="day-header"><h2>${label}</h2><span class="day-count">${evs.length} events</span></div>
+          <div class="events-grid">${evs.map(renderEvent).join('') || '<div class="empty">No events found.</div>'}</div>
+        </div>`;
+      }).join('');
+    } else {
+      const dateMap = { fri, sat, sun };
+      const dateObj = dateMap[day];
+      const evs = getEventsForDate(dateObj);
+      const label = `${DAYS[dateObj.getDay()]}, ${MONTHS_SHORT[dateObj.getMonth()]} ${dateObj.getDate()}`;
+      container.innerHTML = `<div class="day-section">
+        <div class="day-header"><h2>${label}</h2><span class="day-count">${evs.length} events</span></div>
+        <div class="events-grid">${evs.map(renderEvent).join('') || '<div class="empty">No events found for this day.</div>'}</div>
+      </div>`;
+    }
+  }
+
+  // City config
+  const CITIES = {
+    parkcity: { name: 'Park City, UT', file: 'events.json', label: 'Park City & Summit County' },
+    elkhartlake: { name: 'Elkhart Lake, WI', file: 'events-elkhartlake.json', label: 'Elkhart Lake, WI' },
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const cityKey = params.get('city') || 'parkcity';
+  const city = CITIES[cityKey] || CITIES.parkcity;
+
+  // Update page title and header
+  document.title = `This Weekend in ${city.name} — Yoocal`;
+  document.querySelector('.page-header h1').innerHTML = `This <em>weekend</em> in ${city.name}`;
+
+  // Update nav city links
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    if (a.href.includes('this-weekend')) a.href = `this-weekend.html?city=${cityKey}`;
+    if (a.href.includes('venues')) a.href = `venues.html?city=${cityKey}`;
+    if (a.href.includes('about-park-city')) a.href = cityKey === 'parkcity' ? 'about-park-city.html' : `about-park-city.html?city=${cityKey}`;
+  });
+
+  // Load events
+  fetch(city.file)
+    .then(r => r.json())
+    .then(data => {
+      allEvents = data.events || [];
+      showDay('fri');
+    })
+    .catch(() => {
+      document.getElementById('events-container').innerHTML = '<div class="empty">Could not load events. Try again shortly.</div>';
+    });
+</script>
+</body>
+</html>
