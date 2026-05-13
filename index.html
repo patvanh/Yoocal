@@ -202,7 +202,7 @@
     text-align: center;
     padding: 120px 40px 80px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .hero-bg {
@@ -216,20 +216,59 @@
   .hero-eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.9);
-    font-size: 13px;
+    justify-content: center;
+    gap: 6px;
+    background: var(--purple);
+    color: white;
+    font-size: 15px;
     font-weight: 600;
-    padding: 6px 16px;
+    padding: 12px 24px;
     border-radius: 100px;
     margin-bottom: 32px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0;
     animation: fadeUp 0.6s ease both;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    user-select: none;
+    transition: background 0.2s;
+    white-space: nowrap;
+    width: fit-content;
+    max-width: none;
+    overflow: visible;
   }
-
-  .hero-eyebrow span { background: var(--amber); width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+  .hero-eyebrow:hover { background: var(--purple-light); }
+  .hero-eyebrow span { background: none; }
+  .hero-eyebrow-dropdown {
+    display: none;
+    position: fixed;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+    padding: 8px;
+    min-width: 220px;
+    z-index: 9999;
+  }
+  .hero-eyebrow-dropdown.open { display: block; }
+  .eyebrow-city-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1830;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+  .eyebrow-city-option:hover { background: #f0eeff; color: #534AB7; }
+  .eyebrow-city-option.active { color: #534AB7; font-weight: 600; }
+  .eyebrow-city-option.coming-soon { color: #9ca3af; cursor: default; font-style: italic; }
+  .eyebrow-city-option.coming-soon:hover { background: none; color: #9ca3af; }
+  .eyebrow-dropdown-divider { height: 1px; background: #f0eeff; margin: 6px 0; }
 
   .hero h1 {
     font-family: 'DM Serif Display', serif;
@@ -1180,7 +1219,7 @@
   @media (max-width: 640px) {
     nav { padding: 0 20px; }
     .nav-links { display: none; }
-    .hero { padding: 100px 20px 60px; }
+    .hero { padding: 100px 20px 60px; overflow: visible; }
     .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
     .section, .calendar-section, .sources-section, .signup-section, .biz-section { padding: 70px 20px; }
     .location-bar { padding: 14px 20px; }
@@ -1211,7 +1250,9 @@
 <div class="hero-wrapper">
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-eyebrow" id="hero-eyebrow"><span></span> Now live in Park City, Utah</div>
+  <div class="hero-eyebrow" id="hero-eyebrow" onclick="toggleEyebrowDropdown(event)">
+    <span id="hero-eyebrow-text">📍 Locations</span> ▾
+  </div>
   <h1>Your local,<br><em>everywhere.</em></h1>
   <p>One place for everything happening in your city — for locals and visitors alike. Updated daily from every source that matters.</p>
   <div class="hero-actions">
@@ -2125,7 +2166,12 @@
 
     // Update UI labels
     const eyebrow = document.getElementById('hero-eyebrow');
-    if (eyebrow) eyebrow.innerHTML = `<span></span> ${city.eyebrow}`;
+    if (eyebrow) {
+      document.getElementById('hero-eyebrow-text').textContent = '📍 Locations';
+      document.querySelectorAll('.eyebrow-city-option').forEach(o => o.classList.remove('active'));
+      const activeOpt = document.getElementById(`eyebrow-opt-${cityKey}`);
+      if (activeOpt) activeOpt.classList.add('active');
+    }
     const calLoc = document.getElementById('cal-loc-label');
     if (calLoc) calLoc.innerHTML = `📍 ${city.name} &nbsp;▾`;
 
@@ -2323,7 +2369,40 @@
       f.classList.add('active');
     });
   });
+
+  // ── Hero eyebrow city dropdown ──
+  function toggleEyebrowDropdown(e) {
+    e.stopPropagation();
+    const dd = document.getElementById('hero-eyebrow-dropdown');
+    const pill = document.getElementById('hero-eyebrow');
+    const rect = pill.getBoundingClientRect();
+    const ddWidth = 220;
+    let left = rect.left + rect.width / 2 - ddWidth / 2;
+    // clamp so it doesn't go off-screen
+    left = Math.max(12, Math.min(left, window.innerWidth - ddWidth - 12));
+    dd.style.top = (rect.bottom + 8) + 'px';
+    dd.style.left = left + 'px';
+    dd.classList.toggle('open');
+  }
+  function eyebrowSwitchCity(e, cityKey) {
+    e.stopPropagation();
+    document.getElementById('hero-eyebrow-dropdown').classList.remove('open');
+    const chip = document.querySelector(`.loc-chip[data-city="${cityKey}"]`);
+    switchCity(cityKey, chip);
+  }
+  document.addEventListener('click', () => {
+    const dd = document.getElementById('hero-eyebrow-dropdown');
+    if (dd) dd.classList.remove('open');
+  });
 </script>
 
+<!-- City switcher dropdown — lives at body level to avoid clipping -->
+<div class="hero-eyebrow-dropdown" id="hero-eyebrow-dropdown">
+  <div class="eyebrow-city-option active" id="eyebrow-opt-parkcity" onclick="eyebrowSwitchCity(event,'parkcity')">📍 Park City, UT</div>
+  <div class="eyebrow-city-option" id="eyebrow-opt-elkhartlake" onclick="eyebrowSwitchCity(event,'elkhartlake')">📍 Elkhart Lake, WI</div>
+  <div class="eyebrow-dropdown-divider"></div>
+  <div class="eyebrow-city-option coming-soon">+ Aspen, CO — coming soon</div>
+  <div class="eyebrow-city-option coming-soon">+ Jackson Hole, WY — coming soon</div>
+</div>
 </body>
 </html>
