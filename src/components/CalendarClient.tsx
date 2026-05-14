@@ -75,13 +75,13 @@ export default function CalendarClient() {
       parkcity: {
         name: 'Park City, UT', label: 'Park City & Summit County',
         file: 'events.json', supplementalFile: 'events-heber.json',
-        aboutLabel: 'About Park City', aboutPage: 'about-park-city.html',
+        aboutLabel: 'About Park City', aboutPage: '/about/park-city',
         junk: ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'previous month', 'next month'],
       },
       elkhartlake: {
         name: 'Elkhart Lake, WI', label: 'Elkhart Lake & Sheboygan County',
         file: 'events-elkhartlake.json',
-        aboutLabel: 'About Elkhart Lake', aboutPage: 'about-elkhart-lake.html',
+        aboutLabel: 'About Elkhart Lake', aboutPage: '/about/elkhart-lake',
         junk: ['previous month', 'next month'],
       },
     }
@@ -479,9 +479,9 @@ export default function CalendarClient() {
       const venues = document.getElementById('nav-venues') as HTMLAnchorElement
       const city = CITIES[cityKey]
       if (city) {
-        if (about) { about.href = city.aboutPage||'about-yoocal.html'; about.textContent = city.aboutLabel||'About' }
-        if (weekend) { weekend.href = `this-weekend.html?city=${cityKey}`; weekend.style.display = '' }
-        if (venues) { venues.href = `venues.html?city=${cityKey}`; venues.style.display = '' }
+        if (about) { about.href = city.aboutPage||'/about'; about.textContent = city.aboutLabel||'About' }
+        if (weekend) { weekend.href = `/this-weekend?city=${cityKey}`; weekend.style.display = '' }
+        if (venues) { venues.href = `/venues?city=${cityKey}`; venues.style.display = '' }
       }
     }
 
@@ -952,9 +952,9 @@ export default function CalendarClient() {
       <nav>
         <a href="/" className="nav-logo"><div className="nav-dot" /> yoocal</a>
         <div className="nav-links">
-          <a href="about-yoocal.html" id="nav-about">About</a>
-          <a href="this-weekend.html" id="nav-weekend" style={{display:'none'}}>This Weekend</a>
-          <a href="venues.html" id="nav-venues" style={{display:'none'}}>Venues</a>
+          <a href="/about" id="nav-about">About</a>
+          <a href="/this-weekend" id="nav-weekend" style={{display:'none'}}>This Weekend</a>
+          <a href="/venues" id="nav-venues" style={{display:'none'}}>Venues</a>
           <a href="#business">For businesses</a>
           <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" rel="noopener noreferrer" className="nav-cta">Get notified</a>
         </div>

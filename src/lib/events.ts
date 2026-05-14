@@ -97,7 +97,7 @@ export const CITY_CONFIG: Record<CityKey, {
     center: [40.6461, -111.4980],
     zoom: 12,
     junk: ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'previous month', 'next month'],
-    aboutPage: 'about-park-city.html',
+    aboutPage: '/about/park-city',
   },
   elkhartlake: {
     name: 'Elkhart Lake, WI',
@@ -107,7 +107,7 @@ export const CITY_CONFIG: Record<CityKey, {
     center: [43.8358, -88.0051],
     zoom: 13,
     junk: ['previous month', 'next month'],
-    aboutPage: 'about-elkhart-lake.html',
+    aboutPage: '/about/elkhart-lake',
   },
 }
 

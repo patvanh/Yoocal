@@ -162,7 +162,7 @@ export default async function EventPage({ params }: Props) {
           yoocal
         </a>
         <div className="nav-links">
-          <a href="/about-yoocal.html">About</a>
+          <a href="/about">About</a>
           <a href="/#business">For businesses</a>
           <a
             href="https://forms.groupmail.info/subscribe/yoocal"
