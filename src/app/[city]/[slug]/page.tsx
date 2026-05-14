@@ -345,13 +345,13 @@ export default async function EventPage({ params }: Props) {
             </a>
           </div>
 
-          {/* Map */}
-          {event.lat && event.lng && (
+          {/* Map — always show if event has a location */}
+          {event.location && (
             <EventMap
-              lat={event.lat}
-              lng={event.lng}
+              lat={event.lat || city.center[0]}
+              lng={event.lng || city.center[1]}
               title={event.title}
-              location={event.location || city.name}
+              location={event.location}
             />
           )}
 
