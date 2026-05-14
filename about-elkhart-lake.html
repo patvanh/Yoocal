@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Elkhart Lake, Wisconsin — Yoocal</title>
+  <meta name="description" content="Everything you need to know about Elkhart Lake, Wisconsin. Road America racing, lakeside dining, local events, best times to visit, and insider tips from Yoocal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple: #534AB7; --purple-light: #7B74D4; --purple-pale: #f0eeff;
+      --amber: #EF9F27; --dark: #1a1830; --text: #1e1b3a;
+      --muted: #6B7280; --border: rgba(83,74,183,0.12); --bg: #faf9ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 64px; background: rgba(250,249,255,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { display: flex; align-items: center; gap: 8px; font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--purple); text-decoration: none; }
+    .nav-dot { width: 8px; height: 8px; background: var(--amber); border-radius: 50%; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .nav-cta { background: var(--purple); color: white !important; padding: 8px 20px; border-radius: 100px; font-size: 13px !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--purple-light) !important; }
+
+    .hero { background: var(--dark); padding: 120px 80px 80px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, #0a1628 0%, #1a2840 50%, #0d1f35 100%); }
+    .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 20% 80%, rgba(83,74,183,0.25) 0%, transparent 70%); }
+    .hero-inner { position: relative; z-index: 2; display: flex; align-items: center; gap: 60px; max-width: 1200px; margin: 0 auto; }
+    .hero-content { flex: 1; min-width: 0; }
+    .hero-image { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
+    .hero-image img { width: 100%; height: 380px; object-fit: cover; display: block; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; padding: 5px 14px; border-radius: 100px; margin-bottom: 24px; letter-spacing: 0.5px; border: 1px solid rgba(255,255,255,0.15); }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 6vw, 72px); color: white; line-height: 1.05; margin-bottom: 20px; }
+    .hero h1 em { font-style: italic; color: var(--purple-light); }
+    .hero p { font-size: 18px; color: rgba(255,255,255,0.6); line-height: 1.7; font-weight: 300; max-width: 560px; }
+
+    .content { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
+
+    .intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-bottom: 80px; }
+    .intro-text h2 { font-family: 'DM Serif Display', serif; font-size: 36px; margin-bottom: 20px; }
+    .intro-text p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
+    .intro-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stat-card { background: var(--purple-pale); border-radius: 16px; padding: 24px; text-align: center; }
+    .stat-card .num { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--purple); display: block; }
+    .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+    .section { margin-bottom: 72px; }
+    .section-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--amber); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .section-label::before { content: ''; width: 24px; height: 2px; background: var(--purple-light); display: inline-block; }
+    .section h2 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 4vw, 40px); margin-bottom: 16px; line-height: 1.2; }
+    .section h2 em { font-style: italic; color: var(--purple); }
+    .section p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 16px; max-width: 700px; }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 28px; }
+    .card { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 28px; transition: all 0.2s; }
+    .card:hover { border-color: var(--purple); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(83,74,183,0.08); }
+    .card-icon { font-size: 32px; margin-bottom: 14px; }
+    .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    .race-schedule { background: var(--dark); border-radius: 24px; padding: 48px; margin-top: 28px; }
+    .race-schedule h3 { font-family: 'DM Serif Display', serif; font-size: 28px; color: white; margin-bottom: 8px; }
+    .race-schedule .sub { font-size: 14px; color: rgba(255,255,255,0.4); margin-bottom: 32px; }
+    .race-item { display: flex; align-items: flex-start; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .race-item:last-child { border-bottom: none; }
+    .race-dates { font-size: 12px; font-weight: 700; color: var(--amber); min-width: 90px; padding-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .race-info h4 { font-size: 15px; font-weight: 600; color: white; margin-bottom: 3px; }
+    .race-info p { font-size: 13px; color: rgba(255,255,255,0.4); }
+    .race-badge { margin-left: auto; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 100px; background: rgba(83,74,183,0.3); color: var(--purple-light); white-space: nowrap; flex-shrink: 0; }
+    .race-badge.major { background: rgba(239,159,39,0.2); color: var(--amber); }
+
+    .tips-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 28px; }
+    .tip { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+    .tip-icon { font-size: 24px; margin-bottom: 10px; }
+    .tip h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .tip p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    .cta-banner { background: var(--dark); border-radius: 24px; padding: 64px; text-align: center; margin-top: 80px; }
+    .cta-banner h2 { font-family: 'DM Serif Display', serif; font-size: 40px; color: white; margin-bottom: 16px; line-height: 1.2; }
+    .cta-banner h2 em { font-style: italic; color: var(--purple-light); }
+    .cta-banner p { color: rgba(255,255,255,0.5); font-size: 17px; margin-bottom: 32px; }
+    .cta-btn { display: inline-block; background: var(--purple); color: white; padding: 14px 32px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .cta-btn:hover { background: var(--purple-light); }
+
+    footer { background: var(--dark); color: white; padding: 40px 80px 28px; }
+    .footer-bottom { font-size: 13px; color: rgba(255,255,255,0.25); display: flex; justify-content: space-between; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 100px 24px 60px; }
+      .hero-inner { flex-direction: column; gap: 32px; }
+      .hero-image img { height: 220px; }
+      .content { padding: 48px 24px; }
+      .intro { grid-template-columns: 1fr; gap: 40px; }
+      .tips-grid { grid-template-columns: 1fr; }
+      .race-schedule { padding: 32px 24px; }
+      .cta-banner { padding: 48px 28px; }
+      footer { padding: 40px 24px 28px; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><div class="nav-dot"></div> yoocal</a>
+  <div class="nav-links">
+    <a href="about-elkhart-lake.html" class="active">About Elkhart Lake</a>
+    <a href="this-weekend.html?city=elkhartlake">This Weekend</a>
+    <a href="venues.html?city=elkhartlake">Venues</a>
+    <a href="/#business">For businesses</a>
+    <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">🏁 Elkhart Lake, Wisconsin</div>
+      <h1>America's <em>hidden gem</em> of speed & serenity.</h1>
+      <p>A charming lakeside village of 1,000 people that draws tens of thousands every summer for world-class racing, live music on the water, and a pace of life that feels like a different era.</p>
+    </div>
+    <div class="hero-image">
+      <img src="roadamericaradical.webp" alt="Racing at Road America, Elkhart Lake Wisconsin">
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="intro">
+    <div class="intro-text">
+      <h2>Small town. Big personality.</h2>
+      <p>Elkhart Lake sits on the shores of its namesake glacier-carved lake in Sheboygan County, Wisconsin. What it lacks in size it more than makes up for in character — and in the roar of engines from Road America, one of the greatest road courses in the world.</p>
+      <p>From the legendary Siebkens Resort (open since 1916) to the Osthoff's lakefront spa, from the Saturday farmers market to the thundering IndyCar weekend, Elkhart Lake offers a rare combination: genuine small-town warmth alongside world-class events.</p>
+    </div>
+    <div class="intro-stats">
+      <div class="stat-card">
+        <span class="num">4.0</span>
+        <div class="label">Miles of Road America track</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">50+</span>
+        <div class="label">Days of racing per year</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">1,000</span>
+        <div class="label">Village population</div>
+      </div>
+      <div class="stat-card">
+        <span class="num">1916</span>
+        <div class="label">Siebkens Resort founded</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Road America</div>
+    <h2>America's <em>National Park of Speed</em></h2>
+    <p>Road America is the crown jewel — a 4-mile, 14-turn natural road course carved through 640 acres of rolling Wisconsin countryside. Built in 1955, it consistently ranks among the world's greatest race tracks. The racing calendar runs from May through October with something for every type of fan.</p>
+
+    <div class="race-schedule">
+      <h3>2026 Race Season</h3>
+      <div class="sub">All events at Road America · N7390 US-12, Elkhart Lake, WI</div>
+
+      <div class="race-item">
+        <div class="race-dates">May 15–17</div>
+        <div class="race-info">
+          <h4>Spring Vintage Weekend with SVRA</h4>
+          <p>Classic racecars from the '50s–'70s — Lotus, Alfa Romeo, Jaguar, Porsche, Corvette</p>
+        </div>
+      </div>
+      <div class="race-item">
+        <div class="race-dates">May 29–31</div>
+        <div class="race-info">
+          <h4>MotoAmerica Superbikes & Vintage MotoFest</h4>
+          <p>Championship motorcycle racing plus a family-friendly vintage motorcycle festival</p>
+        </div>
+      </div>
+      <div class="race-item">
+        <div class="race-dates">Jun 5–7</div>
+        <div class="race-info">
+          <h4>WeatherTech SCCA June Sprints</h4>
+          <p>Road America's longest-running event — the best of grassroots road racing</p>
+        </div>
+      </div>
+      <div class="race-item">
+        <div class="race-dates">Jun 18–21</div>
+        <div class="race-info">
+          <h4>XPEL INDYCAR Grand Prix</h4>
+          <p>North America's premier open-wheel series on one of the world's most majestic courses</p>
+        </div>
+        <div class="race-badge major">Major</div>
+      </div>
+      <div class="race-item">
+        <div class="race-dates">Jul 16–19</div>
+        <div class="race-info">
+          <h4>WeatherTech Vintage Weekend with Brian Redman</h4>
+          <p>400+ historic racecars, Dan Gurney Racing Eagles reunion, 60th anniversary Trans Am tribute</p>
+        </div>
+        <div class="race-badge major">Major</div>
+      </div>
+      <div class="race-item">
+        <div class="race-dates">Jul 30–Aug 2</div>
+        <div class="race-info">
+          <h4>Motul SportsCar Endurance Grand Prix — IMSA</h4>
+          <p>Six-hour endurance race featuring Ferrari, Mercedes, Chevrolet, Aston Martin and more</p>
+        </div>
+        <div class="race-badge major">Major</div>
+      </div>
+      <div class="race-item">
+        <div class="race-dates">Aug 28–30</div>
+        <div class="race-info">
+          <h4>GT World Challenge America</h4>
+          <p>All-sportscar weekend featuring GT racing's top international teams</p>
+        </div>
+      </div>
+      <div class="race-item">
+        <div class="race-dates">Sep 18–20</div>
+        <div class="race-info">
+          <h4>Art on Wheels Weekend with VSCDA</h4>
+          <p>300+ vintage and historic race cars spanning 11 racing classes</p>
+        </div>
+      </div>
+      <div class="race-item">
+        <div class="race-dates">Oct 1–4</div>
+        <div class="race-info">
+          <h4>SCCA National Championship Runoffs</h4>
+          <p>The pinnacle of US amateur road racing — top SCCA racers battle for national titles</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Beyond the track</div>
+    <h2>The village <em>life</em></h2>
+    <p>Race weekend or not, Elkhart Lake has a rhythm all its own. The village square, the lake, the Saturday market, the music at Siebkens — it all adds up to something genuinely special.</p>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🍺</div>
+        <h3>Siebkens Resort</h3>
+        <p>The soul of Elkhart Lake since 1916. Lakeside tavern, live music most weekends, and a lively crowd that includes racing legends, locals, and everyone in between. The Stop-Inn Tavern opens in April.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏨</div>
+        <h3>Osthoff Resort</h3>
+        <p>A premier lakefront resort with a full spa, cooking classes, fine dining, and year-round events. Perfect for a romantic getaway or a pre-race splurge. Overlooks the lake with stunning views.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌾</div>
+        <h3>Farmers & Artisans Market</h3>
+        <p>Every Saturday morning in the Village Square from May through October. About 50 vendors with fresh vegetables, flowers, cheese, local arts, and specialty products. A true community tradition.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚣</div>
+        <h3>Elkhart Lake</h3>
+        <p>The glacier-carved lake the village is named for. Crystal clear water perfect for swimming, kayaking, paddleboarding, and fishing. Several public access points and rentals available in summer.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🍽️</div>
+        <h3>The Paddock Club</h3>
+        <p>A favorite gathering spot in the village for food, drinks, and good company. Especially lively during race weekends when drivers, crew members, and fans all end up at the same tables.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛍️</div>
+        <h3>Shop & Sip</h3>
+        <p>The annual Shop & Sip event brings together Elkhart Lake's downtown shops and restaurants for a day of shopping, tastings, and community fun. A favorite for locals and visitors alike.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Plan your visit</div>
+    <h2>When to go & <em>what to know</em></h2>
+    <p>Elkhart Lake is a summer destination at heart, with the racing season and village events running May through October.</p>
+
+    <div class="tips-grid">
+      <div class="tip">
+        <div class="tip-icon">🏁</div>
+        <h4>Book early for race weekends</h4>
+        <p>IndyCar (June), IMSA (July/August), and Vintage Weekend (July) fill up months in advance. Hotels within 30 miles sell out fast. Book as early as possible — seriously.</p>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">🌤️</div>
+        <h4>Best weather: June–August</h4>
+        <p>Wisconsin summers are warm and beautiful with low humidity compared to much of the midwest. Evenings cool down nicely — perfect for outdoor dining and lakeside drinks.</p>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">🚗</div>
+        <h4>You'll need a car</h4>
+        <p>Elkhart Lake is a 90-minute drive from Milwaukee and 2.5 hours from Chicago. There's no public transit — a car is essential. Road America is just 5 minutes from the village center.</p>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">🎟️</div>
+        <h4>General admission is great</h4>
+        <p>Unlike many venues, Road America's general admission tickets let you walk the entire track perimeter and get incredibly close to the action. You don't need the expensive seats to have an amazing time.</p>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">🍔</div>
+        <h4>The food scene is real</h4>
+        <p>Don't underestimate Elkhart Lake's restaurants. The Osthoff's Lola's on the Lake, Siebkens, and several village spots serve genuinely excellent food. Make reservations for race weekends.</p>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">📍</div>
+        <h4>Stay in the village if you can</h4>
+        <p>Staying in Elkhart Lake itself — rather than in Plymouth or Sheboygan — puts you in the center of the action. Walking to Siebkens after a race day is one of the great pleasures of visiting.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <h2>See what's happening <em>this weekend.</em></h2>
+    <p>Live events, races, music, and more — all in one place.</p>
+    <a href="/?city=elkhartlake" class="cta-btn">Browse Elkhart Lake events →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Yoocal · Elkhart Lake, Wisconsin</span>
+    <span>hello@yoocal.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

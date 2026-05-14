@@ -1,0 +1,3377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Yoocal — Things To Do in Park City, Utah | Local Events Calendar</title>
+<meta name="description" content="Find everything happening in Park City, Utah — concerts, outdoor adventures, festivals, food events, races and more. One free calendar updated daily from every local source.">
+<meta name="keywords" content="Park City events, things to do in Park City Utah, Park City calendar, Park City concerts, Park City festivals, Summit County events, Park City this weekend">
+<meta name="author" content="Yoocal">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.yoocal.com/">
+
+<!-- Open Graph (Facebook, iMessage, Slack previews) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.yoocal.com">
+<meta property="og:title" content="Yoocal — Things To Do in Park City, Utah">
+<meta property="og:description" content="One place for everything happening in Park City. Concerts, races, festivals, food events and more — updated daily. Free for locals and visitors.">
+<meta property="og:image" content="https://www.yoocal.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Yoocal">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.yoocal.com">
+<meta name="twitter:title" content="Yoocal — Things To Do in Park City, Utah">
+<meta name="twitter:description" content="One place for everything happening in Park City. Updated daily from every local source.">
+<meta name="twitter:image" content="https://www.yoocal.com/og-image.png">
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Yoocal",
+  "url": "https://www.yoocal.com/",
+  "description": "Free local events calendar for Park City, Utah and Elkhart Lake, Wisconsin. Find concerts, festivals, outdoor adventures, races and more — updated daily.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.yoocal.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Yoocal",
+  "url": "https://www.yoocal.com/",
+  "logo": "https://www.yoocal.com/og-image.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@yoocal.com",
+    "contactType": "customer service"
+  },
+  "sameAs": []
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Things To Do in Park City, Utah",
+  "description": "Local events, concerts, outdoor activities, festivals and more in Park City, Utah — updated daily.",
+  "url": "https://www.yoocal.com/",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Park City Events Calendar",
+      "url": "https://www.yoocal.com/?city=parkcity"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Elkhart Lake Events Calendar",
+      "url": "https://www.yoocal.com/?city=elkhartlake"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "This Weekend in Park City",
+      "url": "https://www.yoocal.com/this-weekend.html?city=parkcity"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "About Park City, Utah",
+      "url": "https://www.yoocal.com/about-park-city.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "About Elkhart Lake, Wisconsin",
+      "url": "https://www.yoocal.com/about-elkhart-lake.html"
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqGr48t1K1bSsc2huAhVr954_3dNJi49A&libraries=places&callback=initPlacesAutocomplete" async defer></script>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #534AB7;
+    --purple-light: #7F77DD;
+    --purple-pale: #EEEDFE;
+    --purple-mid: #AFA9EC;
+    --amber: #EF9F27;
+    --amber-pale: #FAEEDA;
+    --dark: #1a1830;
+    --text: #2d2b3d;
+    --muted: #6b6880;
+    --border: rgba(83,74,183,0.12);
+    --white: #ffffff;
+    --bg: #faf9ff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 64px;
+    background: rgba(250,249,255,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--purple);
+    text-decoration: none;
+  }
+
+  .nav-dot {
+    width: 8px; height: 8px;
+    background: var(--amber);
+    border-radius: 50%;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--purple); }
+
+  .nav-cta {
+    background: var(--purple);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--purple-light) !important; color: white !important; }
+
+  /* HERO */
+  .hero-wrapper {
+    position: relative;
+    background: #1a1830;
+  }
+
+  .hero-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('hero.jpg') center center / cover no-repeat;
+    opacity: 0.55;
+    z-index: 0;
+  }
+
+  .hero-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(26,24,48,0.45) 0%,
+      rgba(26,24,48,0.3) 50%,
+      rgba(26,24,48,0.65) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero, .location-bar {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 40px 80px;
+    position: relative;
+    overflow: visible;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 100%, rgba(83,74,183,0.3) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: var(--purple);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 100px;
+    margin-bottom: 32px;
+    letter-spacing: 0;
+    animation: fadeUp 0.6s ease both;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    user-select: none;
+    transition: background 0.2s;
+    white-space: nowrap;
+    width: fit-content;
+    max-width: none;
+    overflow: visible;
+  }
+  .hero-eyebrow:hover { background: var(--purple-light); }
+  .hero-eyebrow span { background: none; }
+  .hero-eyebrow-dropdown {
+    display: none;
+    position: fixed;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+    padding: 8px;
+    min-width: 220px;
+    z-index: 9999;
+  }
+  .hero-eyebrow-dropdown.open { display: block; }
+  .eyebrow-city-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1830;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+  .eyebrow-city-option:hover { background: #f0eeff; color: #534AB7; }
+  .eyebrow-city-option.active { color: #534AB7; font-weight: 600; }
+  .eyebrow-city-option.coming-soon { color: #9ca3af; cursor: default; font-style: italic; }
+  .eyebrow-city-option.coming-soon:hover { background: none; color: #9ca3af; }
+  .eyebrow-dropdown-divider { height: 1px; background: #f0eeff; margin: 6px 0; }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(48px, 8vw, 88px);
+    line-height: 1.05;
+    color: white;
+    margin-bottom: 24px;
+    max-width: 800px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--purple-light);
+  }
+
+  .hero p {
+    font-size: clamp(16px, 2vw, 20px);
+    color: rgba(255,255,255,0.95);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+    font-weight: 300;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+
+  .btn-primary {
+    background: var(--purple);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover { background: var(--purple-light); transform: translateY(-1px); }
+
+  .btn-secondary {
+    color: rgba(255,255,255,0.8);
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+  }
+
+  .btn-secondary:hover { gap: 10px; color: white; }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 80px;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  .hero-stat { text-align: center; }
+  .hero-stat .num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: white;
+    display: block;
+  }
+  .hero-stat .label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px;
+  }
+
+  /* LOCATION BAR */
+  .location-bar {
+    background: rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    backdrop-filter: blur(10px);
+  }
+  .location-bar::-webkit-scrollbar { display: none; }
+
+  .loc-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: rgba(255,255,255,0.3);
+    white-space: nowrap;
+    margin-right: 4px;
+  }
+
+  .loc-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.6);
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+
+  .loc-chip:hover, .loc-chip.active {
+    background: rgba(255,255,255,0.18);
+    color: white;
+    border-color: rgba(255,255,255,0.4);
+  }
+
+  /* HOW IT WORKS */
+  .section { padding: 100px 40px; }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--purple);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::before {
+    content: '';
+    width: 24px; height: 2px;
+    background: var(--amber);
+    display: inline-block;
+  }
+
+  .section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 20px;
+    max-width: 560px;
+  }
+
+  .section h2 em { font-style: italic; color: var(--purple); }
+
+  .section > p {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 480px;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 64px;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+  }
+
+  .step {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px 28px;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .step:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(83,74,183,0.1); }
+
+  .step-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--purple-pale);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .step-icon {
+    width: 44px; height: 44px;
+    background: var(--purple-pale);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .step h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* CALENDAR SECTION */
+  .calendar-section {
+    background: var(--dark);
+    padding: 100px 0;
+    color: white;
+  }
+
+  .calendar-section .section-label { color: var(--amber); padding-left: 40px; }
+  .calendar-section .section-label::before { background: var(--purple-light); }
+  .calendar-section h2 { color: white; padding-left: 40px; }
+  .calendar-section > p { color: rgba(255,255,255,0.5); padding-left: 40px; }
+
+  .cal-ui {
+    background: #221f3a;
+    border-radius: 0;
+    overflow: hidden;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cal-topbar {
+    background: var(--purple);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cal-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .cal-logo-dot { width: 6px; height: 6px; background: var(--amber); border-radius: 50%; }
+
+  .cal-loc {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .cal-filters {
+    display: flex;
+    gap: 8px;
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .cal-filter {
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.5);
+    background: transparent;
+    transition: all 0.15s;
+  }
+
+  .cal-filter.active {
+    background: var(--purple);
+    color: white;
+    border-color: var(--purple);
+  }
+
+  .cal-days {
+    display: flex;
+    gap: 4px;
+    padding: 14px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    justify-content: center;
+  }
+
+  .cal-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    min-width: 44px;
+  }
+
+  .cal-day.active { background: var(--purple); }
+  .cal-day .d { font-size: 10px; color: rgba(255,255,255,0.4); margin-bottom: 2px; }
+  .cal-day .n { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.7); }
+  .cal-day.active .d, .cal-day.active .n { color: white; }
+  .cal-day .day-count {
+    font-size: 9px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+    font-weight: 500;
+  }
+  .cal-day.active .day-count { color: rgba(255,255,255,0.7); }
+
+  .cal-days-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px 0;
+  }
+
+  .cal-days-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .cal-week-arrow {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    line-height: 1;
+  }
+  .cal-view-toggle {
+    display: flex;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .cal-view-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.15s;
+    font-weight: 500;
+  }
+
+  .cal-view-btn.active {
+    background: white;
+    color: var(--purple);
+  }
+
+  .cal-view-btn:hover:not(.active) {
+    color: white;
+  }
+
+  /* Leaflet popup styling */
+  .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+
+  .map-popup h4 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1830;
+  }
+
+  .map-popup p {
+    margin: 0 0 6px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .map-popup a {
+    font-size: 12px;
+    color: #534AB7;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+
+  .cal-topbar, .cal-filters, .cal-days-header, .cal-days, .cal-month-picker {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cal-topbar { padding-left: 40px; padding-right: 40px; }
+  .cal-filters { padding-left: 40px; padding-right: 40px; }
+
+  #cal-events-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 12px;
+  }
+
+  .cal-no-results {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .cal-event {
+    margin: 0 !important;
+  }
+
+  .calendar-section .section-label,
+  .calendar-section h2,
+  .calendar-section > p {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+
+  .cal-month-btn {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    padding: 0;
+  }
+
+  .cal-month-btn:hover, .cal-month-btn.active {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: white;
+  }
+
+  .cal-month-picker {
+    margin: 8px 24px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  .cal-month-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .cal-month-nav span {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .cal-month-nav button {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.7);
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+  }
+
+  .cal-month-nav button:hover { background: var(--purple); color: white; border-color: var(--purple); }
+
+  .cal-month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .cal-month-dow {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    padding: 4px 0;
+    font-weight: 500;
+  }
+
+  .cal-month-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    text-align: center;
+  }
+
+  .cal-month-day {
+    font-size: 13px;
+    padding: 6px 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.6);
+    transition: all 0.15s;
+    border: 1px solid transparent;
+  }
+
+  .cal-month-day:hover { background: rgba(255,255,255,0.1); color: white; }
+  .cal-month-day.has-events { color: white; font-weight: 500; }
+  .cal-month-day.has-events::after { content: '·'; display: block; font-size: 16px; line-height: 4px; color: var(--amber); margin-top: 2px; }
+  .cal-month-day.today { background: rgba(83,74,183,0.4); color: white; border-color: var(--purple-light); }
+  .cal-month-day.selected { background: var(--purple); color: white !important; border-color: var(--purple); }
+  .cal-month-day.empty { visibility: hidden; cursor: default; }
+  .cal-month-day.past { color: rgba(255,255,255,0.25); }
+
+
+  .cal-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.03);
+    margin-top: 0;
+  }
+
+  .cal-search svg { color: rgba(255,255,255,0.35); flex-shrink: 0; }
+
+  .cal-search input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .cal-search input::placeholder { color: rgba(255,255,255,0.35); }
+
+  #search-clear {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: color 0.15s;
+  }
+
+  #search-clear:hover { color: white; }
+
+  .cal-search-count {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    white-space: nowrap;
+    padding-right: 4px;
+  }
+
+  .cal-event mark {
+    background: rgba(239,159,39,0.3);
+    color: white;
+    border-radius: 2px;
+    padding: 0 2px;
+  }
+
+  .cal-event {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: background 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .cal-event:hover { background: rgba(255,255,255,0.07); }
+  .cal-event.featured {
+    border: none;
+    background: linear-gradient(135deg, rgba(239,159,39,0.15) 0%, rgba(239,159,39,0.06) 100%);
+    box-shadow: 0 0 0 1.5px rgba(239,159,39,0.4), 0 8px 32px rgba(239,159,39,0.15);
+    position: relative;
+    padding: 18px 16px 16px;
+  }
+  .cal-event.featured::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--amber), rgba(239,159,39,0.4));
+    border-radius: 12px 0 0 12px;
+  }
+  .cal-event.featured::before {
+    content: '⭐ Featured';
+    position: absolute;
+    top: -11px;
+    left: 16px;
+    background: var(--amber);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(239,159,39,0.4);
+  }
+  .cal-event.featured .cal-event-info h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffe5a0;
+  }
+  .cal-event.featured:hover {
+    background: linear-gradient(135deg, rgba(239,159,39,0.22) 0%, rgba(239,159,39,0.1) 100%);
+  }
+
+  .cal-event-time {
+    min-width: 44px;
+    text-align: center;
+    padding-top: 2px;
+  }
+
+  .cal-event-time .h { font-size: 15px; font-weight: 600; color: white; line-height: 1; }
+  .cal-event-time .ap { font-size: 15px; font-weight: 600; color: white; line-height: 1; margin-top: 2px; }
+
+  .cal-event-info { flex: 1; }
+  .cal-event-info h4 { font-size: 14px; font-weight: 500; color: white; margin-bottom: 4px; }
+  .cal-event-info p { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; margin-bottom: 8px; }
+
+  .cal-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .cal-tag { font-size: 11px; padding: 2px 8px; border-radius: 6px; font-weight: 500; }
+  .t-music { background: rgba(99,153,34,0.2); color: #97C459; }
+  .t-outdoor { background: rgba(29,158,117,0.2); color: #5DCAA5; }
+  .t-food { background: rgba(186,117,23,0.15); color: #EF9F27; }
+  .t-arts { background: rgba(83,74,183,0.3); color: #AFA9EC; }
+  .t-kids { background: rgba(212,83,126,0.2); color: #ED93B1; }
+  .t-community { background: rgba(136,135,128,0.2); color: #B4B2A9; }
+  .t-sports { background: rgba(55,138,221,0.2); color: #85B7EB; }
+  .t-free { background: rgba(29,158,117,0.25); color: #5DCAA5; }
+  .t-paid { background: rgba(239,159,39,0.2); color: #EF9F27; }
+  .t-family { background: rgba(212,83,126,0.2); color: #ED93B1; }
+
+  .cal-source { font-size: 11px; color: rgba(255,255,255,0.25); display: flex; align-items: center; gap: 4px; }
+
+  .cal-ext { color: rgba(255,255,255,0.5); font-size: 14px; padding-top: 2px; text-decoration: none; transition: color 0.15s; }
+  .cal-ext:hover { color: white; }
+
+  /* Featured band */
+  .featured-band {
+    background: linear-gradient(135deg, #BA7517, #EF9F27);
+    padding: 16px 0 20px;
+    margin-bottom: 0;
+  }
+  .featured-band-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+  }
+  .featured-band-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .featured-band-cards {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 12px;
+  }
+  .featured-band-card {
+    background: rgba(0,0,0,0.4);
+    border-radius: 12px;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: background 0.15s;
+    min-height: 100px;
+  }
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    padding: 14px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.15s;
+  }
+  .featured-band-card:hover { background: rgba(0,0,0,0.55); }
+  .featured-band-card .fbc-time {
+    min-width: 44px;
+    text-align: center;
+    padding-top: 2px;
+    flex-shrink: 0;
+  }
+  .featured-band-card .fbc-time .h { font-size: 15px; font-weight: 600; color: white; line-height: 1; }
+  .featured-band-card .fbc-time .ap { font-size: 15px; font-weight: 600; color: white; line-height: 1; margin-top: 2px; }
+  .featured-band-card .fbc-info { flex: 1; }
+  .featured-band-card .fbc-info h4 {
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .featured-band-card .fbc-info p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  /* Regular events label after band */
+  .regular-events-label {
+    font-size: 11px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 16px 24px 8px;
+  }
+  .cal-event-actions { display: flex; align-items: flex-start; gap: 6px; padding-top: 2px; flex-shrink: 0; }
+  .atc-btn { background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.5); font-size: 15px; padding: 0; line-height: 1; transition: color 0.15s; position: relative; }
+  .atc-btn:hover { color: white; }
+  .atc-dropdown { display: none; position: fixed; background: white; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); padding: 6px; z-index: 20000; min-width: 180px; }
+  .atc-dropdown.open { display: block; }
+  .atc-option { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 13px; font-weight: 500; color: #1a1830; cursor: pointer; text-decoration: none; transition: background 0.15s; white-space: nowrap; }
+  .atc-option:hover { background: #f0eeff; color: #534AB7; }
+
+  .sponsored-pill {
+    font-size: 10px;
+    padding: 2px 6px;
+    background: rgba(239,159,39,0.15);
+    color: var(--amber);
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  /* SOURCES */
+  .sources-section { padding: 100px 40px; background: white; }
+
+  .sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .source-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+  .source-card:hover { border-color: var(--purple-mid); transform: translateY(-2px); }
+
+  .source-icon {
+    width: 48px; height: 48px;
+    background: var(--purple-pale);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 22px;
+  }
+
+  .source-card h4 { font-size: 14px; font-weight: 600; color: var(--dark); margin-bottom: 4px; }
+  .source-card p { font-size: 12px; color: var(--muted); }
+
+  /* EMAIL SIGNUP */
+  .signup-section {
+    padding: 100px 40px;
+    text-align: center;
+    background: var(--purple-pale);
+  }
+
+  .signup-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 5vw, 48px);
+    color: var(--dark);
+    margin-bottom: 12px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .signup-section p {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+
+  .signup-form {
+    display: flex;
+    gap: 10px;
+    max-width: 480px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .signup-form input {
+    flex: 1;
+    min-width: 240px;
+    padding: 14px 20px;
+    border-radius: 100px;
+    border: 1px solid var(--purple-mid);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    background: white;
+    color: var(--text);
+  }
+
+  .signup-form input:focus { border-color: var(--purple); }
+  .signup-form input::placeholder { color: var(--muted); }
+
+  .signup-form button {
+    background: var(--purple);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .signup-form button:hover { background: var(--purple-light); }
+
+  .signup-note { font-size: 12px; color: var(--muted); margin-top: 12px; }
+
+  /* FOR BUSINESSES */
+  .biz-section { padding: 100px 40px; }
+
+  .biz-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .biz-card {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px 32px;
+    background: white;
+    transition: all 0.2s;
+  }
+
+  .biz-card.featured-card {
+    background: var(--purple);
+    border-color: var(--purple);
+  }
+
+  .biz-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(83,74,183,0.1); }
+
+  .biz-price {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: var(--purple);
+    margin-bottom: 4px;
+  }
+
+  .biz-card.featured-card .biz-price { color: var(--amber); }
+
+  .biz-price span { font-size: 16px; font-family: 'DM Sans', sans-serif; color: var(--muted); font-weight: 300; }
+  .biz-card.featured-card .biz-price span { color: rgba(255,255,255,0.6); }
+
+  .biz-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+
+  .biz-card.featured-card .biz-name { color: white; }
+
+  .biz-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+
+  .biz-card.featured-card .biz-desc { color: rgba(255,255,255,0.65); }
+
+  .biz-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+
+  .biz-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .biz-card.featured-card .biz-features li { color: rgba(255,255,255,0.85); }
+
+  .biz-features li::before {
+    content: '✓';
+    width: 20px; height: 20px;
+    background: var(--purple-pale);
+    color: var(--purple);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .biz-card.featured-card .biz-features li::before {
+    background: rgba(255,255,255,0.2);
+    color: white;
+  }
+
+  .biz-btn {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid var(--purple);
+    color: var(--purple);
+    transition: all 0.2s;
+  }
+
+  .biz-btn:hover { background: var(--purple); color: white; }
+
+  .biz-card.featured-card .biz-btn {
+    background: white;
+    color: var(--purple);
+    border-color: white;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    padding: 60px 40px 40px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  .footer-tagline { font-size: 14px; color: rgba(255,255,255,0.35); }
+
+  .footer-links { display: flex; gap: 48px; flex-wrap: wrap; }
+  .footer-col h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.3); margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+  .footer-col a:hover { color: white; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* MOBILE */
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 20px 60px; overflow: visible; }
+    .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .section, .calendar-section, .sources-section, .signup-section, .biz-section { padding: 70px 20px; }
+    #how { padding: 48px 20px !important; }
+    #how > div { flex-direction: column !important; gap: 40px !important; }
+    .location-bar { padding: 14px 20px; }
+    footer { padding: 48px 20px 32px; }
+    .cal-topbar, .cal-filters, .cal-days, .cal-events { padding-left: 16px; padding-right: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Static content for search engine indexing — hidden from users -->
+<div id="seo-content" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+  <h1>Yoocal — Things To Do in Park City, Utah</h1>
+  <p>Yoocal is Park City's free local events calendar. We automatically gather events from every local source — The Park Record, Visit Park City, Eventbrite, venue websites, and more — and put them all in one clean, searchable calendar. Updated daily.</p>
+  <h2>Park City Events Calendar</h2>
+  <p>Find concerts, outdoor adventures, festivals, food events, races, arts events, family activities, and more happening in Park City, Utah and Summit County. Browse by date, category, or search for something specific.</p>
+  <h2>Elkhart Lake, Wisconsin Events</h2>
+  <p>Yoocal also covers Elkhart Lake, Wisconsin — home of Road America. Find Road America race weekends, live music at Siebkens Resort, events at The Osthoff Resort, the Farmers &amp; Artisans Market, and everything else happening in this lakeside village.</p>
+  <h2>Sources</h2>
+  <p>Events are gathered daily from The Park Record, Visit Park City, Eventbrite, RunSignup, Road America, Siebkens Resort, Elkhart Lake Tourism, Visit Sheboygan County, Google Events, and more.</p>
+  <h2>Free &amp; Updated Daily</h2>
+  <p>Yoocal is completely free for locals and visitors. Events are updated every day so you always see what's actually happening this week.</p>
+  <p>Contact: <a href="mailto:hello@yoocal.com">hello@yoocal.com</a></p>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-dot"></div>
+    yoocal
+  </a>
+  <div class="nav-links">
+    <a href="about-yoocal.html" id="nav-about">About</a>
+    <a href="this-weekend.html" id="nav-weekend" style="display:none">This Weekend</a>
+    <a href="venues.html" id="nav-venues" style="display:none">Venues</a>
+    <a href="#business">For businesses</a>
+    <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="nav-cta">Get notified</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-wrapper">
+<section class="hero">
+  <div class="hero-bg"></div>
+  <h1>Your local,<br><em>everywhere.</em></h1>
+  <p>One place for everything happening near you — for locals and visitors alike. Updated daily from every source that matters.</p>
+
+  <!-- Location search -->
+  <div style="display:flex; flex-direction:column; align-items:center; gap:12px; animation: fadeUp 0.6s 0.3s ease both; width:100%; max-width:480px;">
+    <button id="hero-locate-btn" onclick="heroUseMyLocation()" style="display:inline-flex; align-items:center; gap:10px; background:var(--purple); color:white; border:none; padding:14px 32px; border-radius:100px; font-size:15px; font-weight:600; cursor:pointer; transition:background 0.2s; white-space:nowrap;" onmouseover="this.style.background='var(--purple-light)'" onmouseout="this.style.background='var(--purple)'">
+      📍 Use my location
+    </button>
+    <div style="display:flex; align-items:center; gap:10px; width:100%;">
+      <div style="flex:1; height:1px; background:rgba(255,255,255,0.4);"></div>
+      <span style="font-size:13px; color:rgba(255,255,255,0.85); white-space:nowrap;">or search by city, town, or zip</span>
+      <div style="flex:1; height:1px; background:rgba(255,255,255,0.4);"></div>
+    </div>
+    <div style="position:relative; width:100%;">
+      <input id="hero-location-input" type="text" placeholder="e.g. Park City, UT or 84060"
+        style="width:100%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:white; padding:13px 20px; border-radius:100px; font-size:14px; outline:none; font-family:'DM Sans',sans-serif; transition:border-color 0.2s;"
+        onfocus="this.style.borderColor='var(--purple-light)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
+    </div>
+  </div>
+
+  <div class="hero-stats" style="margin-top:48px;">
+    <div class="hero-stat">
+      <span class="num" id="hero-event-count">1,451</span>
+      <span class="label">Events this week</span>
+    </div>
+    <div class="hero-stat">
+      <span class="num">Free</span>
+      <span class="label">Always, for everyone</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIRMED LOCATION BAND — hidden until location is set -->
+<div class="location-bar" id="location-confirmed-band" style="display:none; justify-content:space-between;">
+  <div style="display:flex; align-items:center; gap:10px;">
+    <div style="width:8px; height:8px; border-radius:50%; background:var(--purple-light); flex-shrink:0;"></div>
+    <div>
+      <div style="font-size:14px; font-weight:600; color:white;" id="confirmed-city-name">—</div>
+      <div style="font-size:11px; color:rgba(255,255,255,0.4);" id="confirmed-radius-label">Showing events nearby</div>
+    </div>
+  </div>
+  <button onclick="clearHeroLocation()" style="background:none; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.5); padding:5px 14px; border-radius:100px; font-size:12px; cursor:pointer; transition:all 0.15s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)'; this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.color='rgba(255,255,255,0.5)'">Change location</button>
+</div>
+
+<!-- CITY CHIPS — shown when no location is set -->
+<div class="location-bar" id="location-city-chips">
+  <span class="loc-label">Browse by city</span>
+  <a href="#" class="loc-chip" onclick="switchCity('parkcity', this)" data-city="parkcity">📍 Park City, UT</a>
+  <a href="#" class="loc-chip" onclick="switchCity('elkhartlake', this)" data-city="elkhartlake">📍 Elkhart Lake, WI</a>
+  <a href="#signup" class="loc-chip" style="opacity:0.5;">+ Aspen, CO — coming soon</a>
+  <a href="#signup" class="loc-chip" style="opacity:0.5;">+ Jackson Hole, WY — coming soon</a>
+</div>
+</div><!-- end hero-wrapper -->
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how" style="padding: 60px 80px;">
+  <div style="display:flex; align-items:center; gap:80px; max-width:1100px; margin:0 auto;">
+    <div style="flex:1;">
+      <div class="section-label">How it works</div>
+      <h2>Stop checking <em>seven</em> different sites.</h2>
+      <p style="margin-top:16px;">We automatically gather events from every local source — newspapers, Facebook groups, venue websites, chamber listings — and put them all in one clean calendar.</p>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:16px;">
+      <div class="step reveal" style="margin:0;">
+        <div class="step-icon">🔍</div>
+        <h3>We scrape daily</h3>
+        <p>Our engine checks local newspapers, Eventbrite, chamber websites, and venue pages every single day.</p>
+      </div>
+      <div class="step reveal" style="margin:0;">
+        <div class="step-icon">📬</div>
+        <h3>We email your weekend</h3>
+        <p>Subscribe to get "This Weekend" in your inbox every Thursday — curated, local, and free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="calendar-section" id="events">
+  <div class="section-label">Live calendar</div>
+  <h2>What's happening <em>now</em></h2>
+  <p style="margin-bottom: 40px;">Park City &amp; Summit County — updated 2 hours ago</p>
+
+  <div class="cal-ui">
+    <div class="cal-topbar">
+      <div class="cal-logo"><div class="cal-logo-dot"></div> yoocal</div>
+      <div class="cal-view-toggle">
+        <button class="cal-view-btn active" id="btn-list" onclick="setView('list')">☰ List</button>
+        <button class="cal-view-btn" id="btn-map" onclick="setView('map')">🗺 Map</button>
+      </div>
+      <div class="cal-loc" id="cal-loc-label" onclick="toggleEyebrowDropdown(event)" style="cursor:pointer; user-select:none;">📍 Park City, UT &nbsp;▾</div>
+    </div>
+    <div class="cal-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="event-search" placeholder="Search events, venues, categories..." autocomplete="off" />
+      <button id="search-clear" aria-label="Clear search" style="display:none">✕</button>
+    </div>
+
+    <div class="cal-filters">
+      <div class="cal-filter active" data-filter="all">All</div>
+      <div class="cal-filter" data-filter="music">🎵 Music</div>
+      <div class="cal-filter" data-filter="outdoor">🌲 Outdoor</div>
+      <div class="cal-filter" data-filter="food">🍽 Food &amp; Drink</div>
+      <div class="cal-filter" data-filter="arts">🎨 Arts</div>
+      <div class="cal-filter" data-filter="sports">⛷ Sports</div>
+      <div class="cal-filter" data-filter="family">👨‍👩‍👧 Family</div>
+      <div class="cal-filter" data-filter="wellness">🧘 Wellness</div>
+      <div class="cal-filter" data-filter="community">🤝 Community</div>
+      <div class="cal-filter" data-filter="free">🆓 Free</div>
+      <div class="cal-filter" data-filter="paid">🎟 Paid</div>
+    </div>
+
+    <!-- RADIUS FILTER -->
+    <div id="radius-bar" style="display:flex; align-items:center; gap:10px; padding:10px 24px; border-bottom:1px solid rgba(255,255,255,0.06); flex-wrap:wrap;">
+      <button id="radius-locate-btn" onclick="useMyLocation()" style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); color:white; padding:6px 14px; border-radius:100px; font-size:13px; font-weight:500; cursor:pointer; white-space:nowrap; transition:all 0.15s;" onmouseover="this.style.background='var(--purple)';this.style.borderColor='var(--purple)'" onmouseout="if(!userLat)this.style.background='rgba(255,255,255,0.07)';if(!userLat)this.style.borderColor='rgba(255,255,255,0.15)'">📍 Use my location</button>
+      <span style="color:rgba(255,255,255,0.3); font-size:13px;">or</span>
+      <input id="radius-zip" type="text" placeholder="City, state or zip code" maxlength="100" style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); color:white; padding:6px 14px; border-radius:100px; font-size:13px; width:200px; outline:none;" />
+      <div id="radius-slider-wrap" style="display:none; align-items:center; gap:8px;">
+        <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap;">Within</span>
+        <input id="radius-slider" type="range" min="5" max="50" value="25" step="5" style="width:100px; accent-color:var(--purple);" oninput="onRadiusChange(this.value)" />
+        <span id="radius-label" style="font-size:13px; font-weight:600; color:white; white-space:nowrap; min-width:50px;">25 mi</span>
+        <button onclick="clearRadius()" style="background:none; border:none; color:rgba(255,255,255,0.4); font-size:18px; cursor:pointer; line-height:1; padding:0 4px;" title="Clear">✕</button>
+      </div>
+      <span id="radius-status" style="font-size:12px; color:rgba(255,255,255,0.4);"></span>
+    </div>
+
+    <div class="cal-days-header" style="justify-content:center; position:relative;">
+      <div class="cal-days-label" id="cal-days-label">This week</div>
+      <div style="display:flex; align-items:center; gap:8px; position:absolute; right:24px; top:50%; transform:translateY(-50%);">
+        <button id="cal-today-btn" onclick="jumpToToday()" style="display:none; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:white; padding:4px 12px; border-radius:100px; font-size:12px; font-weight:600; cursor:pointer; transition:all 0.15s;" onmouseover="this.style.background='var(--purple)'; this.style.borderColor='var(--purple)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.15)'">↩ Today</button>
+        <button class="cal-month-btn" id="cal-month-toggle" title="Pick a date">📅</button>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:center; justify-content:center; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0 16px;">
+      <div style="display:inline-flex; align-items:center;">
+        <button class="cal-week-arrow" id="cal-prev-week" title="Previous week">‹</button>
+        <div class="cal-days" id="cal-days-container" style="padding:14px 6px; border-bottom:none; flex-shrink:0;"></div>
+        <button class="cal-week-arrow" id="cal-next-week" title="Next week">›</button>
+      </div>
+    </div>
+
+    <!-- Mini month calendar popup -->
+    <div class="cal-month-picker" id="cal-month-picker" style="display:none">
+      <div class="cal-month-nav">
+        <button id="cal-prev-month">‹</button>
+        <span id="cal-month-title"></span>
+        <button id="cal-next-month">›</button>
+      </div>
+      <div class="cal-month-grid">
+        <div class="cal-month-dow">Su</div>
+        <div class="cal-month-dow">Mo</div>
+        <div class="cal-month-dow">Tu</div>
+        <div class="cal-month-dow">We</div>
+        <div class="cal-month-dow">Th</div>
+        <div class="cal-month-dow">Fr</div>
+        <div class="cal-month-dow">Sa</div>
+      </div>
+      <div class="cal-month-days" id="cal-month-days"></div>
+    </div>
+
+    <div class="featured-band" id="featured-band" style="display:none">
+      <div class="featured-band-header">
+        <span class="featured-band-label">⭐ Featured events</span>
+      </div>
+      <div class="featured-band-cards" id="featured-band-cards"></div>
+    </div>
+
+    <div class="cal-events" id="cal-events-container">
+      <div style="padding:32px; text-align:center; color:rgba(255,255,255,0.4); font-size:14px;">
+        Loading events...
+      </div>
+    </div>
+
+    <div class="cal-no-results" id="no-results" style="display:none; padding:32px; text-align:center; color:rgba(255,255,255,0.4); font-size:14px;">
+      No events found for this filter. Check back soon!
+    </div>
+
+    <!-- Map view -->
+    <div id="cal-map-container" style="display:none; height:600px; width:100%; position:relative;">
+      <div id="cal-map" style="height:100%; width:100%;"></div>
+    </div>
+  </div>
+</section>
+<!-- SOURCES -->
+<section class="sources-section reveal" id="sources">
+  <div class="section-label">Data sources</div>
+  <h2>Every source, <em>in one place</em></h2>
+  <p style="font-size:17px; color:var(--muted); max-width:480px; line-height:1.7; font-weight:300; margin-bottom:0">We pull from everywhere locals and visitors actually post events.</p>
+  <div class="sources-grid" style="margin-top:48px">
+    <div class="source-card reveal">
+      <div class="source-icon">📰</div>
+      <h4>The Park Record</h4>
+      <p>Local newspaper events listings</p>
+    </div>
+    <div class="source-card reveal">
+      <div class="source-icon">🏛</div>
+      <h4>PC Chamber</h4>
+      <p>Chamber of Commerce calendar</p>
+    </div>
+    <div class="source-card reveal">
+      <div class="source-icon">👥</div>
+      <h4>Facebook Groups</h4>
+      <p>Local community group posts</p>
+    </div>
+    <div class="source-card reveal">
+      <div class="source-icon">🎟</div>
+      <h4>Eventbrite</h4>
+      <p>Ticketed events &amp; registrations</p>
+    </div>
+    <div class="source-card reveal">
+      <div class="source-icon">🗺</div>
+      <h4>Visit Park City</h4>
+      <p>Official tourism events calendar</p>
+    </div>
+    <div class="source-card reveal">
+      <div class="source-icon">🏔</div>
+      <h4>Venue Websites</h4>
+      <p>Resorts, bars, galleries &amp; more</p>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL SIGNUP -->
+<section class="signup-section" id="signup">
+  <h2>Get "This Weekend in Park City" every Thursday</h2>
+  <p>The only email you need to plan your weekend. Free, local, always relevant.</p>
+  <form class="signup-form" onsubmit="handleSignup(event)">
+    <input type="email" placeholder="your@email.com" required id="email-input">
+    <button type="submit">Notify me</button>
+  </form>
+  <p class="signup-note" id="signup-msg">No spam. Unsubscribe anytime.</p>
+  <script>
+    function handleSignup(e) {
+      e.preventDefault();
+      window.location.href = 'https://forms.groupmail.info/subscribe/yoocal';
+    }
+  </script>
+</section>
+
+<!-- FOR BUSINESSES -->
+<section class="biz-section" id="business">
+  <div class="section-label">For businesses</div>
+  <h2>Get your events <em>found</em></h2>
+  <p style="font-size:17px; color:var(--muted); max-width:480px; line-height:1.7; font-weight:300; margin-bottom:0">List your events free, or get featured placement in front of everyone looking for things to do.</p>
+  <div class="biz-cards" style="margin-top:48px">
+    <div class="biz-card reveal">
+      <div class="biz-price">Free</div>
+      <div class="biz-name">Basic listing</div>
+      <div class="biz-desc">Your events automatically pulled from public sources, or submit manually.</div>
+      <ul class="biz-features">
+        <li>Event listed in the calendar</li>
+        <li>Links to your registration page</li>
+        <li>Category &amp; date filtering</li>
+        <li>Sourced &amp; attributed to you</li>
+      </ul>
+      <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" class="biz-btn">Get started free</a>
+    </div>
+    <div class="biz-card featured-card reveal">
+      <div class="biz-price">$0.99<span>/day</span></div>
+      <div class="biz-name">Featured placement</div>
+      <div class="biz-desc">Pin your events to the top of the calendar with a Featured badge on your event day.</div>
+      <ul class="biz-features">
+        <li>Top-of-calendar placement</li>
+        <li>⭐ Featured badge on your events</li>
+        <li>Priority in newsletter</li>
+        <li>Cancel any time</li>
+      </ul>
+      <a href="mailto:hello@yoocal.com" class="biz-btn">Get featured →</a>
+    </div>
+    <div class="biz-card reveal">
+      <div class="biz-price">$9.99<span>/day</span></div>
+      <div class="biz-name">Partner sponsor</div>
+      <div class="biz-desc">Category sponsorship and newsletter placement for maximum visibility across Park City.</div>
+      <ul class="biz-features">
+        <li>Category sponsorship ("Outdoor, presented by...")</li>
+        <li>Weekly newsletter slot</li>
+        <li>Featured badge on all events</li>
+        <li>Monthly performance report</li>
+        <li>Cancel any time</li>
+      </ul>
+      <a href="mailto:hello@yoocal.com" class="biz-btn">Contact us →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a href="#" class="footer-logo"><div class="nav-dot"></div> yoocal</a>
+      <div class="footer-tagline">Your local, everywhere.</div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#events">Browse events</a>
+        <a href="#how">How it works</a>
+        <a href="#signup">Newsletter</a>
+      </div>
+      <div class="footer-col">
+        <h4>Business</h4>
+        <a href="#business">List your event</a>
+        <a href="mailto:hello@yoocal.com">Advertise</a>
+        <a href="mailto:hello@yoocal.com">Partner with us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Cities</h4>
+        <a href="#">Park City, UT</a>
+        <a href="#signup">Aspen, CO (soon)</a>
+        <a href="#signup">Jackson Hole (soon)</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Yoocal. All rights reserved.</span>
+    <span>hello@yoocal.com</span>
+  </div>
+</footer>
+
+<script>
+  // ── Scroll reveal ──
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // ── Signup ──
+  function handleSignup(e) {
+    e.preventDefault();
+    window.location.href = 'https://forms.groupmail.info/subscribe/yoocal';
+  }
+
+  // ── Category map: source name → tag class ──
+  const SOURCE_TAG = {
+    'Visit Park City': 't-community',
+    'Eventbrite': 't-paid',
+    'KPCW Community Calendar': 't-community',
+    'Running in the USA': 't-sports',
+    'The Park Record': 't-arts',
+  };
+
+  // ── Auto-categorize events from keywords ──
+  function getCategories(event) {
+    const text = (event.title + ' ' + (event.description || '')).toLowerCase();
+    const location = (event.location || '').toLowerCase();
+    const cats = [];
+
+    // Keyword-based detection
+    if (/music|concert|band|jazz|live|perform|sing|song|dj|bluegrass|acoustic|folk|rock|country|reggae|blues|indie/.test(text)) cats.push('music');
+    if (/hike|trail|outdoor|bike|ski|snow|mountain|park|nature|climb|kayak|paddle|snowshoe|camp/.test(text)) cats.push('outdoor');
+    if (/food|drink|wine|beer|cocktail|dine|eat|taste|market|farm|chef|brewery|distill|whiskey|spirits|brunch/.test(text)) cats.push('food');
+    if (/art|gallery|exhibit|museum|paint|sculpt|craft|film|theatre|theater|show|play|dance|screening|improv/.test(text)) cats.push('arts');
+    if (/run|race|marathon|5k|10k|triathlon|relay|cycling|fitness|gym|yoga|pilates|workout|athletic/.test(text)) cats.push('sports');
+    if (/kid|child|family|youth|teen|school|junior|baby|parent|preschool|storytime|story time/.test(text)) cats.push('family');
+    if (/wellness|meditat|breathwork|sound|healing|spa|health|therapy|mindful|reiki/.test(text)) cats.push('wellness');
+    if (/community|nonprofit|charity|volunteer|fundrais|lecture|talk|class|learn|workshop|meeting|seminar/.test(text)) cats.push('community');
+
+    // Venue-based detection — Park City known venues
+    const MUSIC_VENUES = ['spur bar', 'spur and grill', 'the spur', 'side door', 'liquid joe', 'state room'];
+    const FOOD_VENUES = ['high west', 'no name saloon', "o'shucks", 'handle', 'riverhorse', 'vessel', 'windy ridge', 'farm', 'harvest', 'cena', 'grappa'];
+    const OUTDOOR_VENUES = ['swaner', 'round valley', 'trail', 'mountain', 'resort', 'snow park', 'jordanelle', 'deer valley'];
+    const ARTS_VENUES = ['egyptian', 'kimball arts', 'library', 'museum', 'gallery', 'eccles', 'park city institute', 'pcri', 'sundance', 'center for the arts'];
+    const FAMILY_VENUES = ['library', 'recreation center', 'fieldhouse', 'ice arena', 'basin rec'];
+
+    if (MUSIC_VENUES.some(v => location.includes(v) || text.includes(v))) cats.push('music');
+    if (FOOD_VENUES.some(v => location.includes(v) || text.includes(v))) cats.push('food');
+    if (OUTDOOR_VENUES.some(v => location.includes(v))) cats.push('outdoor');
+    if (ARTS_VENUES.some(v => location.includes(v) || text.includes(v))) cats.push('arts');
+    if (FAMILY_VENUES.some(v => location.includes(v))) cats.push('family');
+
+    // Egyptian Theatre and Park City Institute shows are paid
+    if (['egyptian theatre', 'park city institute', 'pcri'].some(v => location.includes(v) || text.includes(v))) cats.push('paid');
+
+    if (event.source === 'Running in the USA') cats.push('sports');
+    if (event.is_free === true) cats.push('free');
+    else if (event.is_free === false && event.price && event.price !== '0') cats.push('paid');
+    else if (/\bfree\b/.test(text)) cats.push('free');
+    else if (/\$\d|\bticket(s)?\b|\bcost\b|\bfee\b|\bpaid\b/.test(text)) cats.push('paid');
+    else if (/\bconference\b|\bsummit\b|\bexpo\b|\bsymposium\b|\bgala\b|\bawards\b|\bmortgage show\b|\btrade show\b|\bsoundbath\b|\bbreathwork\b/.test(text) && !/\bfree\b/.test(text)) cats.push('paid');
+
+    return [...new Set(cats)].join(' ') || 'community';
+  }
+
+  // ── Parse date string into a JS Date ──
+  // ── Parse date string into YYYY-MM-DD string (avoids timezone issues) ──
+  function parseDate(dateStr) {
+    if (!dateStr || dateStr === 'See website') return null;
+    const months = {jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12'};
+
+    let s = dateStr.toLowerCase().replace(/[–—]/g, '-').replace(/[,\.]/g, '').trim();
+    if (s.length > 60) return null;
+
+    // ISO format: 2026-05-16 → return as-is
+    let m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (m) return `${m[1]}-${m[2]}-${m[3]}`;
+
+    // "May11" — no space
+    m = s.match(/^([a-z]{3,})(\d{1,2})$/);
+    if (m) {
+      const mo = months[m[1].slice(0,3)];
+      if (mo) return `2026-${mo}-${m[2].padStart(2,'0')}`;
+    }
+
+    // "May 11" or "May 11 2026"
+    m = s.match(/([a-z]{3,})\s+(\d{1,2})(?:\s+(\d{4}))?/);
+    if (m) {
+      const mo = months[m[1].slice(0,3)];
+      const yr = m[3] || '2026';
+      if (mo) return `${yr}-${mo}-${m[2].padStart(2,'0')}`;
+    }
+
+    return null;
+  }
+
+  // ── Parse end date ──
+  function parseEndDate(dateStr) {
+    if (!dateStr) return null;
+    let s = dateStr.toLowerCase().replace(/[–—]/g, '-').replace(/[,\.]/g, '').trim();
+    if (s.length > 60) return null;
+    const months = {jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12'};
+    const parts = s.split(/\s*-\s*/);
+    if (parts.length >= 2) {
+      const last = parts[parts.length - 1].trim();
+      let m = last.match(/^(\d{4})-(\d{2})-(\d{2})/);
+      if (m) return `${m[1]}-${m[2]}-${m[3]}`;
+      m = last.match(/([a-z]{3,})\s*(\d{1,2})(?:\s+(\d{4}))?/);
+      if (m) {
+        const mo = months[m[1].slice(0,3)];
+        const yr = m[3] || '2026';
+        if (mo) return `${yr}-${mo}-${m[2].padStart(2,'0')}`;
+      }
+    }
+    return null;
+  }
+
+  // ── Known Park City venue coordinates ──
+  const VENUE_COORDS = {
+    'egyptian theatre': [40.6454, -111.4978],
+    'spur bar': [40.6449, -111.4972],
+    'the spur': [40.6449, -111.4972],
+    'high west': [40.6441, -111.4976],
+    'no name saloon': [40.6448, -111.4970],
+    'park city library': [40.6494, -111.5013],
+    'kimball junction': [40.6897, -111.5430],
+    'swaner': [40.6897, -111.5430],
+    'deer valley': [40.6374, -111.4783],
+    'stein eriksen': [40.6374, -111.4783],
+    'snow park': [40.6374, -111.4783],
+    'snowbird': [40.5830, -111.6559],
+    'park city mountain': [40.6516, -111.5080],
+    'pcmr': [40.6516, -111.5080],
+    'jordanelle': [40.6000, -111.4280],
+    'heber': [40.5069, -111.4133],
+    'park city municipal': [40.6494, -111.5013],
+    'basin rec': [40.6516, -111.5080],
+    'fieldhouse': [40.6516, -111.5080],
+    'kimball arts': [40.6451, -111.4976],
+    'eccles': [40.6516, -111.5080],
+    'park city film': [40.6494, -111.5013],
+    'old town': [40.6449, -111.4972],
+    'main street': [40.6449, -111.4972],
+    'lush\'s bbq': [40.6449, -111.4972],
+    'rendezvous run': [40.6516, -111.5080],
+    'plunj': [40.6449, -111.4972],
+    'park city sheraton': [40.6897, -111.5430],
+    'sheraton': [40.6897, -111.5430],
+  };
+
+  function getVenueCoords(location) {
+    if (!location) return null;
+    const loc = location.toLowerCase();
+    for (const [venue, coords] of Object.entries(VENUE_COORDS)) {
+      if (loc.includes(venue)) return coords;
+    }
+    return null;
+  }
+
+  // ── Distance from Park City center (84060) ──
+  const PARK_CITY_LAT = 40.6461;
+  const PARK_CITY_LNG = -111.4980;
+
+  function distanceMiles(lat, lng) {
+    if (!lat || !lng) return null;
+    const R = 3958.8; // Earth radius in miles
+    const dLat = (lat - PARK_CITY_LAT) * Math.PI / 180;
+    const dLng = (lng - PARK_CITY_LNG) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(PARK_CITY_LAT * Math.PI/180) * Math.cos(lat * Math.PI/180) *
+              Math.sin(dLng/2) * Math.sin(dLng/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return Math.round(R * c * 10) / 10;
+  }
+
+  // ── Render a single event card ──
+  function renderEvent(event, overrideDisplayDate) {
+    const cats = getCategories(event);
+    const startDate = parseDate(event.date);
+    const endDate = event.end_date ? parseDate(event.end_date) : (parseEndDate(event.date) || startDate);
+
+    // Format display date — use override if provided (for recurring events showing on selected day)
+    const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    let displayMonth = 'See', displayDay = 'site';
+    const displayDateStr = overrideDisplayDate || startDate;
+    if (displayDateStr) {
+      const parts = displayDateStr.split('-');
+      displayMonth = monthNames[parseInt(parts[1]) - 1];
+      displayDay = String(parseInt(parts[2]));
+      if (!overrideDisplayDate && endDate && endDate !== startDate) displayDay += '+';
+    }
+
+    // Source tag
+    const source = event.source || 'Local';
+    const sourceShort = source
+      .replace('Visit Park City', 'visitparkcity.com')
+      .replace('KPCW Community Calendar', 'KPCW')
+      .replace('Running in the USA', 'runningintheusa.com')
+      .replace('The Park Record', 'Park Record')
+      .replace('Eventbrite', 'Eventbrite')
+      .replace('Google Events', 'Google')
+      .replace('PC Arts Council', 'PC Arts Council')
+      .replace('Utah.com', 'Utah.com');
+
+    // Category tags
+    const catList = cats.split(' ').filter(Boolean);
+    const tagMap = {
+      music: ['t-music','Music'], outdoor: ['t-outdoor','Outdoor'], food: ['t-food','Food & Drink'],
+      arts: ['t-arts','Arts'], sports: ['t-sports','Sports'], family: ['t-family','Family'],
+      wellness: ['t-community','Wellness'], community: ['t-community','Community'],
+      free: ['t-free','Free'], paid: ['t-paid','Paid']
+    };
+    const tagHTML = catList.slice(0,3).map(c => {
+      const t = tagMap[c];
+      return t ? `<span class="cal-tag ${t[0]}">${t[1]}</span>` : '';
+    }).join('');
+
+    const isRecurring = event.recurrence && event.recurrence !== '';
+    const multiDays = event.recurrence_days ? event.recurrence_days.split(',').map(d => d.slice(0,3)).join('/') : '';
+    const recurLabel = multiDays ? multiDays : 
+                       event.recurrence_day ? `Every ${event.recurrence_day}` : 
+                       event.recurrence === 'daily' ? 'Daily' : 
+                       event.recurrence === 'monthly_last_friday' ? 'Monthly' : '';
+    const recurBadge = isRecurring && recurLabel ? `<span class="cal-tag" style="background:rgba(239,159,39,0.15);color:#EF9F27">${recurLabel}</span>` : '';
+
+    // Distance — show from user location if radius active, else from Park City center
+    const venueCoords = getVenueCoords(event.location);
+    const lat = event.lat || (venueCoords && venueCoords[0]);
+    const lng = event.lng || (venueCoords && venueCoords[1]);
+    let distVal = null;
+    if (radiusActive && userLat && userLng && lat && lng) {
+      distVal = distanceMiles(userLat, userLng, lat, lng);
+    } else if (lat && lng) {
+      distVal = distanceMiles(lat, lng); // original function using PC center
+    }
+    const distLabel = distVal !== null && distVal > 0.5 ? ` · ${Math.round(distVal * 10) / 10} mi` : '';
+
+    // Fix specific events
+    let finalCats = cats;
+    if ((event.title||'').toLowerCase().includes('plunj')) {
+      finalCats = finalCats.split(' ').filter(c => c !== 'paid').join(' ');
+    }
+
+    const isRace = event.source === 'Running in the USA';
+    const featured = isFeaturedEvent(event);
+
+    // Store dates as YYYY-MM-DD strings for filtering
+    const startStr = startDate || '';
+    const endStr = endDate || startStr;
+
+    return `<div class="cal-event${featured ? ' featured' : ''}"
+      data-categories="${finalCats}"
+      data-start="${startStr}"
+      data-end="${endStr}"
+      data-recurrence="${event.recurrence || ''}"
+      data-recurrence-day="${event.recurrence_day || ''}"
+      data-recurrence-days="${event.recurrence_days || ''}"
+      data-lat="${event.lat || ''}"
+      data-lng="${event.lng || ''}"
+      data-title="${(event.title || '').replace(/"/g, '&quot;')}"
+      data-location="${(event.location || '').replace(/"/g, '&quot;')}"
+      data-date="${event.date || ''}"
+      data-end-date="${event.end_date || ''}"
+      data-link="${event.link || ''}"
+      data-description="${(event.description || '').replace(/"/g, '&quot;').replace(/\n/g, ' ')}"
+      data-source="${sourceShort}"
+      data-start-time="${event.start_time || ''}"
+      data-end-time="${event.end_time || ''}"
+      onclick="openEventModal(this)"
+      style="cursor:pointer"
+      >
+      <div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time ? `<div style="font-size:15px;font-weight:600;color:white;line-height:1;margin-top:2px;white-space:nowrap">${event.start_time}</div>` : ''}</div>
+      <div class="cal-event-info">
+        <h4>${event.title}</h4>
+        <p>${(event.description || '').slice(0, 120) || 'See website for details.'}</p>
+        <div class="cal-tags">${tagHTML}${recurBadge}<span class="cal-source">via ${sourceShort}${distLabel}</span></div>
+      </div>
+      <div class="cal-event-actions">
+        <button class="atc-btn" title="Add to calendar" onclick="openAtcDropdown(event, this)">📅</button>
+      </div>
+    </div>`;
+  }
+
+  // ── Main: fetch events.json and render ──
+  const DAYS = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  const MONTHS_FULL = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const today = new Date();
+  let allEvents = [];
+
+  const container = document.getElementById('cal-events-container');
+  const noResults = document.getElementById('no-results');
+  const dateLabel = document.querySelector('.calendar-section p');
+  const searchInput = document.getElementById('event-search');
+  const searchClear = document.getElementById('search-clear');
+
+  // ── Unified filter state ──
+  let activeDate = today;       // currently selected date (null = show all dates)
+  let activeCategory = 'all';   // currently selected category
+  let activeSearch = '';        // current search query
+  let showAllDates = false;     // true when "All" category with no date selected
+
+  function applyFilters() {
+    const selDateStr = showAllDates ? null : dateToStr(activeDate);
+
+    // Update featured pick based on the selected date
+    dailyFeaturedTitle = getDailyFeaturedTitle(activeDate);
+
+    // Filter allEvents directly
+    const visible = allEvents.filter(event => {
+      // Date filter
+      const matchDate = (() => {
+        if (showAllDates) return true;
+        const s = parseDate(event.date);
+        const en = event.end_date ? parseDate(event.end_date) : s;
+        if (!s) return false;
+        if (selDateStr < s || selDateStr > (en || s)) return false;
+        const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        const todayName = dayNames[activeDate.getDay()];
+        if (event.recurrence_days) return event.recurrence_days.split(',').includes(todayName);
+        if (event.recurrence_day) return todayName === event.recurrence_day;
+        if (event.recurrence === 'monthly_last_friday') {
+          if (activeDate.getDay() !== 5) return false;
+          const nextWeek = new Date(activeDate); nextWeek.setDate(activeDate.getDate() + 7);
+          return nextWeek.getMonth() !== activeDate.getMonth();
+        }
+        return true;
+      })();
+      if (!matchDate) return false;
+
+      // Category filter
+      const cats = getCategories(event).split(' ');
+      if (activeCategory !== 'all' && !cats.includes(activeCategory)) return false;
+
+      // Search filter
+      if (activeSearch) {
+        const searchText = (event.title + ' ' + (event.description||'') + ' ' + (event.location||'')).toLowerCase();
+        if (!searchText.includes(activeSearch.toLowerCase())) return false;
+      }
+
+      // Radius filter
+      if (radiusActive && userLat && userLng) {
+        if (event.lat && event.lng) {
+          const dist = distanceMiles(userLat, userLng, event.lat, event.lng);
+          if (dist > radiusMiles) return false;
+        }
+        // If event has no coords, show it anyway (don't hide unknown locations)
+      }
+
+      return true;
+    });
+
+    // Sort: featured first, then alphabetical
+    visible.sort((a, b) => {
+      const aFeat = isFeaturedEvent(a) ? 0 : 1;
+      const bFeat = isFeaturedEvent(b) ? 0 : 1;
+      if (aFeat !== bFeat) return aFeat - bFeat;
+      return (a.title||'').localeCompare(b.title||'');
+    });
+
+    // Split featured and regular
+    const featuredEvents = visible.filter(e => isFeaturedEvent(e));
+    const regularEvents = visible.filter(e => !isFeaturedEvent(e));
+
+    // Always include the daily featured event in the band even if not on its date
+    let bandEvents = [...featuredEvents];
+    if (dailyFeaturedTitle) {
+      const dailyEvent = allEvents.find(e => e.title === dailyFeaturedTitle);
+      if (dailyEvent && !bandEvents.find(e => e.title === dailyFeaturedTitle)) {
+        bandEvents.unshift(dailyEvent);
+      }
+    }
+
+    // Populate featured band
+    const band = document.getElementById('featured-band');
+    const bandCards = document.getElementById('featured-band-cards');
+    if (bandEvents.length > 0 && currentView === 'list') {
+      band.style.display = 'block';
+      const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      bandCards.innerHTML = bandEvents.map(e => {
+        const d = e.date ? new Date(e.date + 'T12:00:00') : null;
+        const month = d ? MONTHS_SHORT[d.getMonth()] : 'See';
+        const day = d ? d.getDate() : '—';
+        const loc = e.location || '';
+        const desc = loc ? `📍 ${loc}` : (e.description || '').slice(0, 80);
+        const cats = getCategories(e).split(' ').filter(Boolean);
+        const tagHTML = cats.slice(0,3).map(c => {
+          const tagMap = {music:'t-music',outdoor:'t-outdoor',food:'t-food',arts:'t-arts',sports:'t-sports',family:'t-family',wellness:'t-community',community:'t-community',free:'t-free',paid:'t-paid'};
+          const labels = {music:'Music',outdoor:'Outdoor',food:'Food & Drink',arts:'Arts',sports:'Sports',family:'Family',wellness:'Wellness',community:'Community',free:'Free',paid:'Paid'};
+          return `<span class="cal-tag ${tagMap[c]||''}">${labels[c]||c}</span>`;
+        }).join('');
+        const sourceShort = (e.source||'').replace('The Park Record','Park Record').replace('Visit Park City','visitparkcity.com').replace('Google Events','Google');
+
+        return `<div class="featured-band-card" onclick="openEventModal(this)"
+          data-title="${(e.title||'').replace(/"/g,'&quot;')}"
+          data-date="${e.date||''}"
+          data-end-date="${e.end_date||''}"
+          data-location="${(e.location||'').replace(/"/g,'&quot;')}"
+          data-link="${e.link||''}"
+          data-description="${(e.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}"
+          data-source="${(e.source||'').replace(/"/g,'&quot;')}"
+          data-categories="${cats.join(' ')}"
+          data-start-time="${e.start_time||''}"
+          data-end-time="${e.end_time||''}"
+          style="cursor:pointer">
+          <div class="fbc-time">
+            <div class="h">${month}</div>
+            <div class="ap">${day}</div>
+            ${e.start_time ? `<div style="font-size:9px;color:rgba(255,255,255,0.6);margin-top:3px;white-space:nowrap">${e.start_time}</div>` : ''}
+          </div>
+          <div class="fbc-info">
+            <h4>${e.title}</h4>
+            <p>${(e.description||'').slice(0,100) || (e.location ? '📍 '+e.location : '')}</p>
+            <div class="cal-tags" style="margin-top:6px">${tagHTML}<span class="cal-source">via ${sourceShort}</span></div>
+          </div>
+        </div>`;
+      }).join('');
+    } else {
+      band.style.display = 'none';
+    }
+
+    // Regular events with "All events" label if band is showing
+    const regularLabel = bandEvents.length > 0 && currentView === 'list' && regularEvents.length > 0
+      ? `<div class="regular-events-label">All events</div>`
+      : '';
+    container.innerHTML = regularLabel + regularEvents.map(event => renderEvent(event, selDateStr)).join('');
+
+    noResults.style.display = (visible.length === 0 && currentView === 'list') ? 'block' : 'none';
+
+    if (!activeSearch && dateLabel) {
+      if (showAllDates) {
+        dateLabel.textContent = `${CITIES[currentCity]?.label || 'Local'} — all upcoming events`;
+      } else {
+        dateLabel.textContent = `${DAYS[activeDate.getDay()]}, ${MONTHS_FULL[activeDate.getMonth()]} ${activeDate.getDate()} — ${CITIES[currentCity]?.name || 'Local'}`;
+      }
+    }
+
+    if (currentView === 'map' && map) updateMapMarkers();
+  }
+
+  function applyDateFilter(dateObj) {
+    activeDate = dateObj;
+    showAllDates = false;
+    applyFilters();
+    // Show Today button whenever selected date isn't today
+    const todayStr = today.toDateString();
+    const selStr = dateObj ? dateObj.toDateString() : '';
+    const btn = document.getElementById('cal-today-btn');
+    if (btn) btn.style.display = (selStr !== todayStr || weekOffset !== 0) ? 'inline-block' : 'none';
+  }
+
+  function applySearch(q) {
+    activeSearch = q;
+    searchClear.style.display = q ? 'block' : 'none';
+    // When searching, show all dates so results aren't limited to selected day
+    if (q) {
+      showAllDates = true;
+    } else {
+      // When clearing search, go back to date filter
+      showAllDates = false;
+    }
+    applyFilters();
+  }
+
+  function dateToStr(d) {
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  }
+
+  function visibleOnDate(e, dateObj) {
+    const s = e.dataset.start, en = e.dataset.end;
+    if (!s) return false;
+    const sel = dateToStr(dateObj);
+
+    // Check if date is within range first
+    if (sel < s || sel > (en || s)) return false;
+
+    const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const todayName = dayNames[dateObj.getDay()];
+
+    // Weekly on multiple days (e.g. Mon/Thu/Fri/Sat)
+    const recDays = e.dataset.recurrenceDays;
+    if (recDays && recDays.length > 0) {
+      return recDays.split(',').includes(todayName);
+    }
+
+    // Weekly on single day
+    const recDay = e.dataset.recurrenceDay;
+    if (recDay) {
+      return todayName === recDay;
+    }
+
+    // Monthly last Friday
+    if (e.dataset.recurrence === 'monthly_last_friday') {
+      if (dateObj.getDay() !== 5) return false; // must be Friday
+      // Check if it's the last Friday of the month
+      const nextWeek = new Date(dateObj);
+      nextWeek.setDate(dateObj.getDate() + 7);
+      return nextWeek.getMonth() !== dateObj.getMonth();
+    }
+
+    // Daily or no recurrence — just check range
+    return true;
+  }
+
+  // ── Mini month calendar picker ──
+  let pickerDate = new Date(today.getFullYear(), today.getMonth(), 1);
+  let selectedDate = new Date(today);
+
+  function buildMonthPicker(events) {
+    const title = document.getElementById('cal-month-title');
+    const daysEl = document.getElementById('cal-month-days');
+    if (!title || !daysEl) return;
+
+    const yr = pickerDate.getFullYear();
+    const mo = pickerDate.getMonth();
+    title.textContent = `${MONTHS_FULL[mo]} ${yr}`;
+
+    const firstDay = new Date(yr, mo, 1).getDay();
+    const daysInMonth = new Date(yr, mo + 1, 0).getDate();
+
+    // Build set of dates that have events using data-start attributes
+    const eventDates = new Set();
+    document.querySelectorAll('.cal-event').forEach(card => {
+      const s = card.dataset.start;
+      const en = card.dataset.end;
+      if (s) {
+        const [sy, sm, sd] = s.split('-').map(Number);
+        if (sy === yr && sm-1 === mo) eventDates.add(sd);
+        if (en) {
+          // Mark all days in range
+          const [ey, em, ed] = en.split('-').map(Number);
+          let cur = new Date(sy, sm-1, sd);
+          const endD = new Date(ey, em-1, ed);
+          while (cur <= endD) {
+            if (cur.getFullYear() === yr && cur.getMonth() === mo) eventDates.add(cur.getDate());
+            cur.setDate(cur.getDate() + 1);
+          }
+        }
+      }
+    });
+
+    daysEl.innerHTML = '';
+
+    // Empty cells for first week
+    for (let i = 0; i < firstDay; i++) {
+      const empty = document.createElement('div');
+      empty.className = 'cal-month-day empty';
+      daysEl.appendChild(empty);
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const dayEl = document.createElement('div');
+      const thisDate = new Date(yr, mo, d);
+      const isToday = thisDate.toDateString() === today.toDateString();
+      const isSelected = thisDate.toDateString() === selectedDate.toDateString();
+      const isPast = thisDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const hasEv = eventDates.has(d);
+
+      dayEl.className = 'cal-month-day' +
+        (isToday ? ' today' : '') +
+        (isSelected ? ' selected' : '') +
+        (isPast && !isToday ? ' past' : '') +
+        (hasEv ? ' has-events' : '');
+      dayEl.textContent = d;
+
+      dayEl.addEventListener('click', () => {
+        selectedDate = new Date(yr, mo, d);
+        // Update selected styling
+        document.querySelectorAll('.cal-month-day').forEach(x => x.classList.remove('selected'));
+        dayEl.classList.add('selected');
+        // Update day strip
+        document.querySelectorAll('.cal-day').forEach(x => x.classList.remove('active'));
+        // Close picker
+        document.getElementById('cal-month-picker').style.display = 'none';
+        document.getElementById('cal-month-toggle').classList.remove('active');
+        // Reset filters
+        document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+        document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+        if (searchInput) { searchInput.value = ''; searchClear.style.display = 'none'; }
+        applyDateFilter(selectedDate);
+      });
+
+      daysEl.appendChild(dayEl);
+    }
+  }
+
+  document.getElementById('cal-month-toggle').addEventListener('click', () => {
+    const picker = document.getElementById('cal-month-picker');
+    const btn = document.getElementById('cal-month-toggle');
+    const isOpen = picker.style.display !== 'none';
+    picker.style.display = isOpen ? 'none' : 'block';
+    btn.classList.toggle('active', !isOpen);
+    if (!isOpen) buildMonthPicker([]);
+  });
+
+  document.getElementById('cal-prev-month').addEventListener('click', () => {
+    pickerDate.setMonth(pickerDate.getMonth() - 1);
+    buildMonthPicker([]);
+  });
+
+  document.getElementById('cal-next-month').addEventListener('click', () => {
+    pickerDate.setMonth(pickerDate.getMonth() + 1);
+    buildMonthPicker([]);
+  });
+
+  // ── Build day chips with week offset ──
+  let weekOffset = 0;
+
+  function countEventsOnDate(dateObj) {
+    if (!allEvents.length) return 0;
+    const sel = dateToStr(dateObj);
+    const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const todayName = dayNames[dateObj.getDay()];
+    return allEvents.filter(event => {
+      const s = parseDate(event.date);
+      const en = event.end_date ? parseDate(event.end_date) : s;
+      if (!s) return false;
+      if (sel < s || sel > (en || s)) return false;
+      if (event.recurrence_days) return event.recurrence_days.split(',').includes(todayName);
+      if (event.recurrence_day) return todayName === event.recurrence_day;
+      if (event.recurrence === 'monthly_last_friday') {
+        if (dateObj.getDay() !== 5) return false;
+        const nextWeek = new Date(dateObj); nextWeek.setDate(dateObj.getDate() + 7);
+        return nextWeek.getMonth() !== dateObj.getMonth();
+      }
+      return true;
+    }).length;
+  }
+
+  function buildDayChips() {
+    dayContainer.innerHTML = '';
+    for (let i = 0; i <= 6; i++) {
+      const d = new Date(today);
+      d.setDate(today.getDate() + (weekOffset * 7) + i);
+      const div = document.createElement('div');
+      const isToday = d.toDateString() === today.toDateString();
+      const isSelected = d.toDateString() === selectedDate.toDateString();
+      div.className = 'cal-day' + (isSelected ? ' active' : '');
+      const count = countEventsOnDate(d);
+      const countHtml = count > 0 ? `<span class="day-count">${count}</span>` : `<span class="day-count" style="visibility:hidden">0</span>`;
+      div.innerHTML = `<span class="d">${DAYS[d.getDay()]}</span><span class="n">${d.getDate()}</span>${countHtml}`;
+      const captured = new Date(d);
+      div.addEventListener('click', () => {
+        selectedDate = new Date(captured);
+        document.querySelectorAll('.cal-day').forEach(x => x.classList.remove('active'));
+        div.classList.add('active');
+        document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+        document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+        activeCategory = 'all';
+        if (searchInput) { searchInput.value = ''; activeSearch = ''; searchClear.style.display = 'none'; }
+        applyDateFilter(captured);
+      });
+      dayContainer.appendChild(div);
+    }
+    // Update label
+    const label = document.getElementById('cal-days-label');
+    if (label) {
+      if (weekOffset === 0) label.textContent = 'This week';
+      else if (weekOffset === 1) label.textContent = 'Next week';
+      else if (weekOffset === -1) label.textContent = 'Last week';
+      else {
+        const start = new Date(today);
+        start.setDate(today.getDate() + weekOffset * 7);
+        label.textContent = `${MONTHS_FULL[start.getMonth()]} ${start.getDate()}+`;
+      }
+    }
+  }
+
+  document.getElementById('cal-next-week').addEventListener('click', () => {
+    weekOffset++;
+    buildDayChips();
+    // Auto-select first day of new week
+    const firstDay = new Date(today);
+    firstDay.setDate(today.getDate() + weekOffset * 7);
+    selectedDate = firstDay;
+    applyDateFilter(firstDay);
+    document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+    document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+    document.getElementById('cal-today-btn').style.display = weekOffset !== 0 ? 'inline-block' : 'none';
+  });
+
+  document.getElementById('cal-prev-week').addEventListener('click', () => {
+    weekOffset--;
+    buildDayChips();
+    const firstDay = new Date(today);
+    firstDay.setDate(today.getDate() + weekOffset * 7);
+    selectedDate = firstDay;
+    applyDateFilter(firstDay);
+    document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+    document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+    document.getElementById('cal-today-btn').style.display = weekOffset !== 0 ? 'inline-block' : 'none';
+  });
+
+  // Build day chips
+  const dayContainer = document.getElementById('cal-days-container');
+  buildDayChips();
+
+  // ── Featured event detection (used in sort and render) ──
+  // Pick one random event per day to feature (consistent all day, changes daily)
+  function getDailyFeaturedTitle(forDate) {
+    const d = forDate || new Date();
+    const start = new Date(d.getFullYear(), 0, 0);
+    const dayOfYear = Math.floor((d - start) / (1000 * 60 * 60 * 24));
+    const dateStr = (d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'));
+
+    const pool = allEvents.filter(e =>
+      e.date && e.date.slice(0, 10) === dateStr &&
+      e.featured !== true &&
+      e.source !== 'Running in the USA' &&
+      !(e.title||'').toLowerCase().includes('festival')
+    );
+
+    const seen = new Set();
+    const unique = pool.filter(e => {
+      if (seen.has(e.title)) return false;
+      seen.add(e.title);
+      return true;
+    }).sort((a, b) => a.title.localeCompare(b.title));
+
+    if (!unique.length) return null;
+    return unique[dayOfYear % unique.length].title;
+  }
+
+  let dailyFeaturedTitle = null; // set after events load
+
+  function isFeaturedEvent(event) {
+    return event.featured === true ||
+           event.source === 'Running in the USA' ||
+           (event.title||'').toLowerCase().includes('festival') ||
+           (dailyFeaturedTitle && event.title === dailyFeaturedTitle);
+  }
+
+  // ── City configuration ──
+  const CITIES = {
+    parkcity: {
+      name: 'Park City, UT',
+      label: 'Park City & Summit County',
+      eyebrow: 'Now live in Park City, Utah',
+      file: 'events.json',
+      supplementalFile: 'events-heber.json',
+      aboutLabel: 'About Park City',
+      aboutPage: 'about-park-city.html',
+      junk: ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'previous month', 'next month']
+    },
+    elkhartlake: {
+      name: 'Elkhart Lake, WI',
+      label: 'Elkhart Lake & Sheboygan County',
+      eyebrow: 'Now live in Elkhart Lake, Wisconsin',
+      file: 'events-elkhartlake.json',
+      aboutLabel: 'About Elkhart Lake',
+      aboutPage: 'about-elkhart-lake.html',
+      junk: ['previous month', 'next month']
+    }
+  };
+
+  let currentCity = 'parkcity';
+
+  function loadCity(cityKey) {
+    const city = CITIES[cityKey];
+    if (!city) return;
+    currentCity = cityKey;
+
+    // Update UI labels
+    const eyebrow = document.getElementById('hero-eyebrow');
+    if (eyebrow) {
+      document.getElementById('hero-eyebrow-text').textContent = '📍 Locations';
+      document.querySelectorAll('.eyebrow-city-option').forEach(o => o.classList.remove('active'));
+      const activeOpt = document.getElementById(`eyebrow-opt-${cityKey}`);
+      if (activeOpt) activeOpt.classList.add('active');
+    }
+    const calLoc = document.getElementById('cal-loc-label');
+    if (calLoc) calLoc.innerHTML = `📍 ${city.name} &nbsp;▾`;
+
+    // Show loading state
+    container.innerHTML = '<div style="padding:32px;text-align:center;color:rgba(255,255,255,0.4);font-size:14px;">Loading events...</div>';
+
+    // Load main events + supplemental (Heber Valley) if available
+    const mainFetch = fetch(city.file).then(r => r.json());
+    const suppFetch = city.supplementalFile
+      ? fetch(city.supplementalFile).then(r => r.json()).catch(() => ({events:[]}))
+      : Promise.resolve({events:[]});
+
+    Promise.all([mainFetch, suppFetch])
+      .then(([data, suppData]) => {
+        allEvents = [...(data.events || []), ...(suppData.events || [])];
+        allEvents = allEvents.filter(e => !city.junk.some(j => e.title.toLowerCase().includes(j)));
+
+        // Client-side dedup: same title+date from multiple sources, keep the one with a time or Park Record
+        const dedupMap = new Map();
+        allEvents.forEach(e => {
+          const titleClean = e.title.toLowerCase().replace(/^[\(\"\'\-\s]+/, '').substring(0, 35);
+          const key = `${titleClean}|${(e.date||'').substring(0,10)}`;
+          const existing = dedupMap.get(key);
+          if (!existing) {
+            dedupMap.set(key, e);
+          } else {
+            // Prefer Park Record, then events with a start_time
+            const eScore = (e.source === 'The Park Record' ? 2 : 0) + (e.start_time ? 1 : 0);
+            const exScore = (existing.source === 'The Park Record' ? 2 : 0) + (existing.start_time ? 1 : 0);
+            if (eScore > exScore) dedupMap.set(key, e);
+          }
+        });
+        allEvents = Array.from(dedupMap.values());
+        dailyFeaturedTitle = getDailyFeaturedTitle();
+
+        const heroStat = document.querySelector('.hero-stat .num');
+        if (heroStat) heroStat.textContent = allEvents.length;
+
+        if (data.updated_at) {
+          const updated = new Date(data.updated_at);
+          const hrs = Math.round((new Date() - updated) / 3600000);
+          if (dateLabel) dateLabel.textContent = `${city.label} — updated ${hrs < 1 ? 'just now' : hrs + ' hours ago'}`;
+        }
+
+        // Apply today's filter — this renders the events
+        activeDate = today;
+        selectedDate = new Date(today);
+        weekOffset = 0;
+        showAllDates = false;
+        buildDayChips(); // Build chips first with correct selected date
+        dailyFeaturedTitle = getDailyFeaturedTitle(today);
+        applyFilters();
+        checkDeepLink();
+        buildMonthPicker([]);
+      })
+      .catch(() => {
+        container.innerHTML = `<div style="padding:32px;text-align:center;color:rgba(255,255,255,0.4);font-size:14px;">Events coming soon for ${city.name}! Check back shortly.</div>`;
+      });
+  }
+
+  // City switcher function (called from location bar)
+  function switchCity(cityKey, el) {
+    if (el) {
+      document.querySelectorAll('.loc-chip').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+    }
+    // Reset filters
+    activeCategory = 'all';
+    activeSearch = '';
+    weekOffset = 0;
+    if (searchInput) { searchInput.value = ''; searchClear.style.display = 'none'; }
+    document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+    document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+    buildDayChips();
+    loadCity(cityKey);
+    updateNavLinks(cityKey);
+    // Scroll to events
+    document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
+    return false;
+  }
+
+  // Load city from URL param or default to Park City
+  const initCityKey = new URLSearchParams(window.location.search).get('city') || 'parkcity';
+  const initChip = document.querySelector(`.loc-chip[data-city="${initCityKey}"]`);
+  if (initChip) initChip.classList.add('active');
+  loadCity(initCityKey);
+
+  // Category filter clicks
+  document.querySelectorAll('.cal-filter').forEach(f => {
+    f.addEventListener('click', () => {
+      document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+      f.classList.add('active');
+      activeCategory = f.dataset.filter;
+      if (searchInput) { searchInput.value = ''; activeSearch = ''; searchClear.style.display = 'none'; }
+      applyFilters();
+    });
+  });
+
+  // Search
+  if (searchInput) {
+    searchInput.addEventListener('input', () => applySearch(searchInput.value));
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      activeSearch = '';
+      showAllDates = false;
+      searchClear.style.display = 'none';
+      applyFilters();
+    });
+  }
+
+  // ── Map view ──
+  let map = null;
+  let mapMarkers = [];
+  let currentView = 'list';
+
+  // City center coordinates and zoom levels
+  const CITY_CENTERS = {
+    parkcity:    { center: [40.6461, -111.4980], zoom: 12 },
+    elkhartlake: { center: [43.8358, -88.0051],  zoom: 13 }
+  };
+
+  function initMap() {
+    const cityConfig = CITY_CENTERS[currentCity] || CITY_CENTERS.parkcity;
+    if (map) {
+      map.setView(cityConfig.center, cityConfig.zoom);
+      return;
+    }
+    map = L.map('cal-map').setView(cityConfig.center, cityConfig.zoom);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+  }
+
+  function updateMapMarkers() {
+    if (!map) return;
+    mapMarkers.forEach(m => m.remove());
+    mapMarkers = [];
+
+    const bounds = [];
+    const cards = document.querySelectorAll('.cal-event');
+
+    cards.forEach(card => {
+      if (card.style.display === 'none') return;
+      const lat = parseFloat(card.dataset.lat);
+      const lng = parseFloat(card.dataset.lng);
+      if (!lat || !lng || isNaN(lat) || isNaN(lng)) return;
+
+      const title = card.dataset.title || '';
+      const location = card.dataset.location || '';
+      const date = card.dataset.date || '';
+      const link = card.dataset.link || '#';
+
+      const marker = L.circleMarker([lat, lng], {
+        radius: 9,
+        fillColor: '#534AB7',
+        color: 'white',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      });
+
+      marker.bindPopup(`
+        <div class="map-popup">
+          <h4>${title}</h4>
+          ${location ? `<p>📍 ${location}</p>` : ''}
+          ${date ? `<p>📅 ${date}</p>` : ''}
+          <a href="${link}" target="_blank">View event →</a>
+        </div>
+      `);
+      marker.addTo(map);
+      mapMarkers.push(marker);
+      bounds.push([lat, lng]);
+    });
+
+    if (bounds.length > 0) {
+      try { map.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 }); } catch(e) {}
+    } else {
+      // No events with coords — keep current view
+    }
+  }
+
+  function setView(view) {
+    currentView = view;
+    const listContainer = document.getElementById('cal-events-container');
+    const mapContainer = document.getElementById('cal-map-container');
+    const noResults = document.getElementById('no-results');
+    const btnList = document.getElementById('btn-list');
+    const btnMap = document.getElementById('btn-map');
+    const featBand = document.getElementById('featured-band');
+
+    if (view === 'map') {
+      listContainer.style.display = 'none';
+      noResults.style.display = 'none';
+      mapContainer.style.display = 'block';
+      if (featBand) featBand.style.display = 'none';
+      btnList.classList.remove('active');
+      btnMap.classList.add('active');
+      initMap();
+      setTimeout(() => {
+        map.invalidateSize();
+        updateMapMarkers();
+      }, 100);
+    } else {
+      listContainer.style.display = 'grid';
+      mapContainer.style.display = 'none';
+      btnList.classList.add('active');
+      btnMap.classList.remove('active');
+      applyFilters();
+    }
+  }
+
+  function updateNavLinks(cityKey) {
+    const about = document.getElementById('nav-about');
+    const weekend = document.getElementById('nav-weekend');
+    const venues = document.getElementById('nav-venues');
+    const city = CITIES[cityKey];
+    if (city) {
+      // City is selected — show all nav links
+      if (about) { about.href = city.aboutPage || 'about-yoocal.html'; about.textContent = city.aboutLabel || 'About'; }
+      if (weekend) { weekend.href = `this-weekend.html?city=${cityKey}`; weekend.style.display = ''; }
+      if (venues) { venues.href = `venues.html?city=${cityKey}`; venues.style.display = ''; }
+    } else {
+      // No city — default nav
+      if (about) { about.href = 'about-yoocal.html'; about.textContent = 'About'; }
+      if (weekend) weekend.style.display = 'none';
+      if (venues) venues.style.display = 'none';
+    }
+  }
+
+  // Nav tabs
+  document.querySelectorAll('.ftab').forEach(f => {
+    f.addEventListener('click', () => {
+      document.querySelectorAll('.ftab').forEach(x => x.classList.remove('active'));
+      f.classList.add('active');
+    });
+  });
+
+  // ── Event detail modal ──
+  let modalCardRef = null;
+
+  function openEventModal(card) {
+    modalCardRef = card;
+    const title = card.dataset.title || '';
+    const desc = card.dataset.description || '';
+    const date = card.dataset.date || '';
+    const endDate = card.dataset.endDate || '';
+    const location = card.dataset.location || '';
+    const link = card.dataset.link || '#';
+    const source = card.dataset.source || '';
+    const cats = (card.dataset.categories || '').split(' ').filter(Boolean);
+
+    // Rebuild tags from categories
+    const tagMap = {
+      music: ['t-music','Music'], outdoor: ['t-outdoor','Outdoor'], food: ['t-food','Food & Drink'],
+      arts: ['t-arts','Arts'], sports: ['t-sports','Sports'], family: ['t-family','Family'],
+      wellness: ['t-community','Wellness'], community: ['t-community','Community'],
+      free: ['t-free','Free'], paid: ['t-paid','Paid']
+    };
+    const tagsHTML = cats.slice(0,4).map(c => {
+      const t = tagMap[c];
+      return t ? `<span class="cal-tag ${t[0]}">${t[1]}</span>` : '';
+    }).join('');
+
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-desc').textContent = desc || 'See the event website for full details.';
+    document.getElementById('modal-tags').innerHTML = tagsHTML;
+    document.getElementById('modal-link').href = link;
+    document.getElementById('modal-link').style.display = link && link !== '#' ? '' : 'none';
+
+    // Format date
+    const MONTHS_FULL = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const DAYS_FULL = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    let dateStr = '';
+    if (date) {
+      const d = new Date(date + 'T12:00:00');
+      dateStr = `${DAYS_FULL[d.getDay()]}, ${MONTHS_FULL[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+      if (endDate && endDate !== date) {
+        const ed = new Date(endDate + 'T12:00:00');
+        dateStr += ` – ${DAYS_FULL[ed.getDay()]}, ${MONTHS_FULL[ed.getMonth()]} ${ed.getDate()}, ${ed.getFullYear()}`;
+      }
+    }
+
+    const meta = [];
+    if (dateStr) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📅</span>${dateStr}</div>`);
+    const startTime = card.dataset.startTime || '';
+    const endTime = card.dataset.endTime || '';
+    if (startTime) {
+      const timeRange = endTime ? `${startTime} – ${endTime}` : startTime;
+      meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">🕐</span>${timeRange}</div>`);
+    }
+    if (location) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📍</span>${location}</div>`);
+    if (source) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.4)"><span style="font-size:16px">🔗</span>via ${source}</div>`);
+    document.getElementById('modal-meta').innerHTML = meta.join('');
+
+    document.getElementById('event-modal-overlay').style.display = 'block';
+    document.getElementById('event-modal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeEventModal() {
+    document.getElementById('event-modal-overlay').style.display = 'none';
+    document.getElementById('event-modal').style.display = 'none';
+    document.body.style.overflow = '';
+    modalCardRef = null;
+  }
+
+  function openAtcFromModal() {
+    if (modalCardRef) openAtcDropdown({ preventDefault: ()=>{}, stopPropagation: ()=>{} }, document.getElementById('modal-atc'));
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEventModal(); });
+
+  // ── Share menu ──
+  function openShareMenu(e) {
+    e.stopPropagation();
+    if (!modalCardRef) return;
+    const title = modalCardRef.dataset.title || '';
+    const date = modalCardRef.dataset.date || '';
+    const city = currentCity || 'parkcity';
+
+    // Build a yoocal.com share URL that opens the modal for this event
+    const yoocalUrl = `https://www.yoocal.com/?city=${city}&event=${encodeURIComponent(title)}&date=${date}`;
+    const shareText = `Check out "${title}"${date ? ' on ' + date : ''} — via Yoocal`;
+
+    // Use native share sheet on mobile if available
+    const nativeBtn = document.getElementById('share-native');
+    if (navigator.share) {
+      nativeBtn.style.display = 'flex';
+      nativeBtn.onclick = (ev) => {
+        ev.preventDefault();
+        closeShareMenu();
+        navigator.share({ title, text: shareText, url: yoocalUrl });
+      };
+    } else {
+      nativeBtn.style.display = 'none';
+    }
+
+    document.getElementById('share-sms').href = `sms:?body=${encodeURIComponent(shareText + ' ' + yoocalUrl)}`;
+    document.getElementById('share-email').href = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText + '\n\n' + yoocalUrl)}`;
+    document.getElementById('share-x').href = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(yoocalUrl)}`;
+    document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(yoocalUrl)}`;
+
+    const dd = document.getElementById('share-dropdown');
+    const btn = document.getElementById('modal-share');
+    const rect = btn.getBoundingClientRect();
+    let left = rect.left;
+    if (left + 210 > window.innerWidth) left = window.innerWidth - 216;
+    dd.style.top = (rect.bottom + 6) + 'px';
+    dd.style.left = left + 'px';
+    dd.style.display = 'block';
+  }
+
+  function closeShareMenu() {
+    document.getElementById('share-dropdown').style.display = 'none';
+  }
+
+  function copyShareLink(e) {
+    e.preventDefault();
+    closeShareMenu();
+    const title = modalCardRef?.dataset.title || '';
+    const date = modalCardRef?.dataset.date || '';
+    const city = currentCity || 'parkcity';
+    const yoocalUrl = `https://www.yoocal.com/?city=${city}&event=${encodeURIComponent(title)}&date=${date}`;
+    navigator.clipboard.writeText(yoocalUrl).then(() => {
+      const btn = document.getElementById('modal-share');
+      const orig = btn.innerHTML;
+      btn.innerHTML = '✓ Copied!';
+      setTimeout(() => btn.innerHTML = orig, 2000);
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    const dd = document.getElementById('share-dropdown');
+    if (dd && !dd.contains(e.target) && e.target.id !== 'modal-share') {
+      dd.style.display = 'none';
+    }
+  });
+
+  // ── Radius Filter ──
+  let userLat = null, userLng = null, radiusMiles = 25;
+  let radiusActive = false;
+
+  // Haversine distance formula (miles)
+  function distanceMiles(lat1, lng1, lat2, lng2) {
+    const R = 3958.8; // Earth radius in miles
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLng = (lng2 - lng1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLng/2) * Math.sin(dLng/2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  }
+
+  // Static zip code → lat/lng for common zip codes around Park City & Elkhart Lake
+  const ZIP_COORDS = {
+    // Park City area
+    '84060': [40.6461, -111.4979], // Park City
+    '84068': [40.6461, -111.4979], // Park City
+    '84098': [40.7021, -111.5423], // Kimball Junction
+    '84032': [40.5069, -111.4133], // Heber City
+    '84036': [40.6430, -111.2797], // Kamas
+    '84047': [40.6200, -111.8944], // Midvale
+    '84070': [40.5650, -111.8994], // Sandy
+    '84093': [40.5920, -111.8638], // Sandy
+    '84094': [40.5710, -111.8638], // Sandy
+    '84096': [40.5121, -112.0160], // Herriman
+    '84101': [40.7607, -111.8910], // SLC
+    '84102': [40.7649, -111.8660], // SLC
+    '84103': [40.7849, -111.8720], // SLC
+    '84104': [40.7481, -111.9260], // SLC
+    '84105': [40.7348, -111.8610], // SLC
+    '84106': [40.7182, -111.8630], // SLC
+    '84107': [40.6948, -111.8890], // Murray
+    '84108': [40.7504, -111.8210], // SLC
+    '84109': [40.7248, -111.8320], // SLC
+    '84111': [40.7595, -111.8900], // SLC downtown
+    '84112': [40.7649, -111.8420], // U of U
+    '84115': [40.7130, -111.8880], // SLC
+    '84116': [40.7781, -111.9340], // SLC west
+    '84117': [40.6881, -111.8680], // Holladay
+    '84120': [40.7048, -112.0040], // West Valley
+    '84121': [40.6610, -111.8360], // Cottonwood Heights
+    '84124': [40.6981, -111.8240], // Millcreek
+    '84401': [41.2230, -111.9738], // Ogden
+    // Elkhart Lake area
+    '53020': [43.8352, -87.9710], // Elkhart Lake
+    '53073': [43.7447, -87.9773], // Plymouth WI
+    '53081': [43.7508, -87.7145], // Sheboygan
+    '53082': [43.7508, -87.7145], // Sheboygan
+    '53083': [43.7700, -87.7145], // Sheboygan Falls
+    '53085': [43.7274, -87.8256], // Sheboygan Falls
+    '53094': [43.6619, -88.3429], // Watertown
+    '53048': [43.5341, -88.0312], // Kewaskum
+  };
+
+  function useMyLocation() {
+    const btn = document.getElementById('radius-locate-btn');
+    const status = document.getElementById('radius-status');
+    btn.innerHTML = '⏳ Locating...';
+    status.textContent = '';
+
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        userLat = pos.coords.latitude;
+        userLng = pos.coords.longitude;
+        radiusActive = true;
+        btn.innerHTML = '✅ Location set';
+        btn.style.background = 'var(--purple)';
+        btn.style.borderColor = 'var(--purple)';
+        document.getElementById('radius-slider-wrap').style.display = 'flex';
+        status.textContent = `Showing events within ${radiusMiles} miles`;
+        applyFilters();
+      },
+      err => {
+        btn.innerHTML = '📍 Use my location';
+        status.textContent = 'Location unavailable — try a zip code';
+      },
+      { timeout: 8000 }
+    );
+  }
+
+  // Zip code lookup table
+  function zipToCoords(zip) {
+    return ZIP_COORDS[zip.trim()] || null;
+  }
+
+  // Try Nominatim for unknown zip codes
+  async function geocodeZip(zip) {
+    const known = zipToCoords(zip);
+    if (known) return known;
+    try {
+      const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${zip}&format=json&limit=1&countrycodes=us`, {headers:{'User-Agent':'Yoocal/1.0'}});
+      const data = await r.json();
+      if (data.length) return [parseFloat(data[0].lat), parseFloat(data[0].lon)];
+    } catch {}
+    return null;
+  }
+
+  let zipTimer = null;
+  function onZipInput(val) {
+    clearTimeout(zipTimer);
+    const status = document.getElementById('radius-status');
+    if (val.length < 5) { status.textContent = ''; return; }
+    zipTimer = setTimeout(async () => {
+      status.textContent = 'Looking up...';
+      const coords = await geocodeZip(val);
+      if (coords) {
+        userLat = coords[0];
+        userLng = coords[1];
+        radiusActive = true;
+        document.getElementById('radius-slider-wrap').style.display = 'flex';
+        status.textContent = `Showing events within ${radiusMiles} miles`;
+        applyFilters();
+      } else {
+        status.textContent = 'Zip code not found';
+      }
+    }, 600);
+  }
+
+  function onRadiusChange(val) {
+    radiusMiles = parseInt(val);
+    document.getElementById('radius-label').textContent = `${val} mi`;
+    document.getElementById('radius-status').textContent = `Showing events within ${val} miles`;
+    applyFilters();
+  }
+
+  function clearRadius() {
+    userLat = null; userLng = null;
+    radiusActive = false;
+    document.getElementById('radius-slider-wrap').style.display = 'none';
+    document.getElementById('radius-status').textContent = '';
+    document.getElementById('radius-zip').value = '';
+    document.getElementById('radius-locate-btn').innerHTML = '📍 Use my location';
+    document.getElementById('radius-locate-btn').style.background = 'rgba(255,255,255,0.07)';
+    document.getElementById('radius-locate-btn').style.borderColor = 'rgba(255,255,255,0.15)';
+    applyFilters();
+  }
+
+  // ── Add to Calendar ──
+  function formatICSDate(dateStr, timeStr) {
+    if (!dateStr) return null;
+    const d = dateStr.replace(/-/g, '');
+    if (!timeStr) return d;
+    const t = timeStr.replace(/:/g, '').padEnd(6, '0');
+    return `${d}T${t}`;
+  }
+
+  function makeICSContent(title, dateStr, startTime, endTime, location, description) {
+    const safe = s => (s || '').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+    const now = new Date().toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+
+    function toICSTime(date, time) {
+      if (!date) return '';
+      const d = date.replace(/-/g, '');
+      if (!time) return null; // signals all-day
+      const m = time.match(/(\d{1,2}):(\d{2})\s?(AM|PM)/i);
+      if (!m) return null;
+      let h = parseInt(m[1]);
+      const mn = m[2];
+      const ap = m[3].toUpperCase();
+      if (ap === 'PM' && h !== 12) h += 12;
+      if (ap === 'AM' && h === 12) h = 0;
+      return `${d}T${String(h).padStart(2,'0')}${mn}00`;
+    }
+
+    const dtStart = toICSTime(dateStr, startTime);
+    const dtEnd = toICSTime(dateStr, endTime || startTime);
+
+    const startLine = dtStart ? `DTSTART:${dtStart}` : `DTSTART;VALUE=DATE:${dateStr.replace(/-/g,'')}`;
+    const endLine = dtEnd ? `DTEND:${dtEnd}` : `DTEND;VALUE=DATE:${dateStr.replace(/-/g,'')}`;
+
+    return [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Yoocal//EN',
+      'BEGIN:VEVENT',
+      startLine, endLine,
+      `DTSTAMP:${now}`,
+      `SUMMARY:${safe(title)}`,
+      `LOCATION:${safe(location)}`,
+      `DESCRIPTION:${safe(description)}`,
+      'END:VEVENT', 'END:VCALENDAR'
+    ].join('\r\n');
+  }
+
+  function openAtcDropdown(e, btn) {
+    e.preventDefault();
+    e.stopPropagation();
+    const card = (btn && btn.id === 'modal-atc') ? modalCardRef : (btn ? btn.closest('.cal-event') : null);
+    if (!card) return;
+    const title = card.dataset.title || '';
+    const dateStr = card.dataset.start || card.dataset.date || '';
+    const location = card.dataset.location || '';
+    const rawLink = card.dataset.link || '';
+    const trackedLink = rawLink ? `https://yoocal.com/api/go?ref=cal&url=${encodeURIComponent(rawLink)}` : '';
+    const description = trackedLink ? `More info: ${trackedLink}` : '';
+    const startTime = card.dataset.startTime || '';
+    const endTime = card.dataset.endTime || '';
+
+    // Build datetime strings for calendar
+    function toCalTime(date, time) {
+      if (!date) return '';
+      if (!time) return date.replace(/-/g, '');
+      const m = time.match(/(\d{1,2}):(\d{2})\s?(AM|PM)/i);
+      if (!m) return date.replace(/-/g, '');
+      let h = parseInt(m[1]);
+      const mn = m[2];
+      const ap = m[3].toUpperCase();
+      if (ap === 'PM' && h !== 12) h += 12;
+      if (ap === 'AM' && h === 12) h = 0;
+      return `${date.replace(/-/g, '')}T${String(h).padStart(2,'0')}${mn}00`;
+    }
+    const gStart = toCalTime(dateStr, startTime);
+    const gEnd = startTime ? toCalTime(dateStr, endTime || startTime) : (dateStr.replace(/-/g, ''));
+
+    // Google
+    const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${gStart}/${gEnd}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(description)}`;
+    document.getElementById('atc-google').href = googleUrl;
+
+    // Apple + Outlook — both use .ics download
+    const ics = makeICSContent(title, dateStr, startTime, endTime, location, description);
+    const blob = new Blob([ics], { type: 'text/calendar' });
+    const icsUrl = URL.createObjectURL(blob);
+    const filename = `${title.slice(0, 40).replace(/\s+/g, '-')}.ics`;
+
+    const appleLink = document.getElementById('atc-apple');
+    appleLink.href = icsUrl;
+    appleLink.download = filename;
+
+    const outlookLink = document.getElementById('atc-outlook');
+    outlookLink.href = icsUrl;
+    outlookLink.download = filename;
+    outlookLink.removeAttribute('target');
+
+    // Position and show dropdown
+    const dd = document.getElementById('atc-dropdown');
+    const anchorBtn = (btn && btn.id === 'modal-atc') ? document.getElementById('modal-atc') : btn;
+    const rect = anchorBtn.getBoundingClientRect();
+    let left = rect.left;
+    if (left + 190 > window.innerWidth) left = window.innerWidth - 196;
+    dd.style.top = (rect.bottom + 6) + 'px';
+    dd.style.left = left + 'px';
+    dd.classList.add('open');
+  }
+
+  document.addEventListener('click', (e) => {
+    const dd = document.getElementById('atc-dropdown');
+    const atcBtn = e.target.closest('.atc-btn, #modal-atc');
+    if (dd && !dd.contains(e.target) && !atcBtn) dd.classList.remove('open');
+  });
+  function jumpToToday() {
+    weekOffset = 0;
+    selectedDate = new Date();
+    buildDayChips();
+    applyDateFilter(selectedDate);
+    document.getElementById('cal-today-btn').style.display = 'none';
+    document.getElementById('cal-days-label').textContent = 'This week';
+    document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
+    document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+  }
+
+  // ── Hero location functions ──
+  function setConfirmedLocation(cityName, lat, lng) {
+    // Store
+    userLat = lat;
+    userLng = lng;
+    try { localStorage.setItem('yoocal_lat', lat); localStorage.setItem('yoocal_lng', lng); localStorage.setItem('yoocal_city', cityName); } catch(e) {}
+
+    // Show confirmed band, hide chips
+    document.getElementById('confirmed-city-name').textContent = cityName;
+    document.getElementById('location-confirmed-band').style.display = 'flex';
+    document.getElementById('location-city-chips').style.display = 'none';
+
+    // Activate radius filter and scroll to events
+    radiusActive = true;
+    const sliderWrap = document.getElementById('radius-slider-wrap');
+    if (sliderWrap) sliderWrap.style.display = 'flex';
+    const radiusVal = document.getElementById('radius-slider') ? parseInt(document.getElementById('radius-slider').value) : 25;
+    document.getElementById('confirmed-radius-label').textContent = `Showing events within ${radiusVal} miles`;
+    document.getElementById('radius-status').textContent = `Showing events within ${radiusVal} mi of ${cityName}`;
+    applyFilters();
+    document.getElementById('events').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function heroUseMyLocation() {
+    const btn = document.getElementById('hero-locate-btn');
+    btn.textContent = 'Locating…';
+    btn.disabled = true;
+    if (!navigator.geolocation) {
+      btn.textContent = '📍 Use my location';
+      btn.disabled = false;
+      alert('Geolocation is not supported by your browser.');
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const lat = pos.coords.latitude;
+        const lng = pos.coords.longitude;
+        const key = document.querySelector('script[src*="maps.googleapis.com"]')
+          ?.src?.match(/key=([^&]+)/)?.[1];
+        if (key && key !== 'AIzaSyCqGr48t1K1bSsc2huAhVr954_3dNJi49A') {
+          fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${key}`)
+            .then(r => r.json())
+            .then(data => {
+              let city = 'Your location';
+              if (data.results && data.results.length) {
+                const comps = data.results[0].address_components;
+                const locality = comps.find(c => c.types.includes('locality'));
+                const state = comps.find(c => c.types.includes('administrative_area_level_1'));
+                if (locality && state) city = `${locality.long_name}, ${state.short_name}`;
+                else if (locality) city = locality.long_name;
+              }
+              btn.textContent = '📍 Use my location';
+              btn.disabled = false;
+              setConfirmedLocation(city, lat, lng);
+            })
+            .catch(() => {
+              btn.textContent = '📍 Use my location';
+              btn.disabled = false;
+              setConfirmedLocation('Your location', lat, lng);
+            });
+        } else {
+          btn.textContent = '📍 Use my location';
+          btn.disabled = false;
+          setConfirmedLocation('Your location', lat, lng);
+        }
+      },
+      () => {
+        btn.textContent = '📍 Use my location';
+        btn.disabled = false;
+        alert('Could not get your location. Please try searching by city or zip code below.');
+      }
+    );
+  }
+
+  function clearHeroLocation() {
+    userLat = null; userLng = null; radiusActive = false;
+    try { localStorage.removeItem('yoocal_lat'); localStorage.removeItem('yoocal_lng'); localStorage.removeItem('yoocal_city'); } catch(e) {}
+    document.getElementById('location-confirmed-band').style.display = 'none';
+    document.getElementById('location-city-chips').style.display = 'flex';
+    document.getElementById('hero-location-input').value = '';
+    document.getElementById('radius-slider-wrap').style.display = 'none';
+    document.getElementById('radius-status').textContent = '';
+    applyFilters();
+  }
+
+  // ── Restore saved location on page load ──
+  (function restoreLocation() {
+    try {
+      const lat = parseFloat(localStorage.getItem('yoocal_lat'));
+      const lng = parseFloat(localStorage.getItem('yoocal_lng'));
+      const city = localStorage.getItem('yoocal_city');
+      if (lat && lng && city) {
+        setConfirmedLocation(city, lat, lng);
+      }
+    } catch(e) {}
+  })();
+
+  // ── Init Google Places Autocomplete (called by Maps API callback) ──
+  function initPlacesAutocomplete() {
+    const inputs = [
+      document.getElementById('hero-location-input'),
+      document.getElementById('radius-zip')
+    ];
+    inputs.forEach(input => {
+      if (!input || !window.google) return;
+      const ac = new google.maps.places.Autocomplete(input, {
+        types: ['(regions)'],
+        componentRestrictions: { country: 'us' },
+        fields: ['geometry', 'formatted_address', 'address_components']
+      });
+      ac.addListener('place_changed', () => {
+        const place = ac.getPlace();
+        if (!place.geometry) return;
+        const lat = place.geometry.location.lat();
+        const lng = place.geometry.location.lng();
+        const comps = place.address_components || [];
+        const locality = comps.find(c => c.types.includes('locality'));
+        const state = comps.find(c => c.types.includes('administrative_area_level_1'));
+        let cityName = locality ? locality.long_name : (place.formatted_address || input.value);
+        if (locality && state) cityName = `${locality.long_name}, ${state.short_name}`;
+        setConfirmedLocation(cityName, lat, lng);
+      });
+    });
+  }
+
+  // If Maps API already loaded, init now; otherwise it calls initPlacesAutocomplete via callback
+  if (window.google && window.google.maps) initPlacesAutocomplete();
+  window.initPlacesAutocomplete = initPlacesAutocomplete;
+
+  // ── Deep link: auto-open modal from share URL ──
+  function checkDeepLink() {
+    const params = new URLSearchParams(window.location.search);
+    const eventTitle = params.get('event');
+    const eventDate = params.get('date');
+    if (!eventTitle || !allEvents.length) return;
+
+    const match = allEvents.find(e =>
+      e.title === eventTitle &&
+      (!eventDate || e.date?.slice(0,10) === eventDate)
+    ) || allEvents.find(e => e.title === eventTitle);
+
+    if (match) {
+      if (match.date) {
+        const d = new Date(match.date + 'T12:00:00');
+        activeDate = d;
+        selectedDate = new Date(d);
+        buildDayChips();
+        applyFilters();
+      }
+      setTimeout(() => {
+        const cards = document.querySelectorAll('.cal-event, .featured-band-card');
+        for (const card of cards) {
+          if (card.dataset.title === eventTitle) {
+            openEventModal(card);
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            break;
+          }
+        }
+      }, 600);
+    }
+  }
+
+  function toggleEyebrowDropdown(e) {
+    e.stopPropagation();
+    const dd = document.getElementById('hero-eyebrow-dropdown');
+    const trigger = e.currentTarget;
+    const rect = trigger.getBoundingClientRect();
+    const ddWidth = 220;
+    let left = rect.left + rect.width / 2 - ddWidth / 2;
+    left = Math.max(12, Math.min(left, window.innerWidth - ddWidth - 12));
+    dd.style.top = (rect.bottom + 8) + 'px';
+    dd.style.left = left + 'px';
+    dd.classList.toggle('open');
+  }
+  function eyebrowSwitchCity(e, cityKey) {
+    e.stopPropagation();
+    document.getElementById('hero-eyebrow-dropdown').classList.remove('open');
+    const chip = document.querySelector(`.loc-chip[data-city="${cityKey}"]`);
+    switchCity(cityKey, chip);
+  }
+  document.addEventListener('click', () => {
+    const dd = document.getElementById('hero-eyebrow-dropdown');
+    if (dd) dd.classList.remove('open');
+  });
+</script>
+
+<!-- Add to calendar dropdown -->
+<!-- Event detail modal -->
+<div id="event-modal-overlay" onclick="closeEventModal()" style="display:none; position:fixed; inset:0; background:rgba(10,8,30,0.75); z-index:10000; backdrop-filter:blur(4px);"></div>
+<div id="event-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); z-index:10001; width:min(560px, 92vw); max-height:85vh; overflow-y:auto; background:#1e1b3a; border-radius:20px; border:1px solid rgba(255,255,255,0.1); box-shadow:0 24px 80px rgba(0,0,0,0.5);">
+  <div style="padding:28px 28px 0;">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:18px;">
+      <div id="modal-tags" style="display:flex; gap:6px; flex-wrap:wrap;"></div>
+      <button onclick="closeEventModal()" style="background:rgba(255,255,255,0.08); border:none; color:rgba(255,255,255,0.6); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:18px; flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:background 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">×</button>
+    </div>
+    <h2 id="modal-title" style="font-family:'DM Serif Display',serif; font-size:clamp(20px,4vw,28px); color:white; line-height:1.2; margin-bottom:16px;"></h2>
+    <div id="modal-meta" style="display:flex; flex-direction:column; gap:10px; margin-bottom:20px;"></div>
+    <p id="modal-desc" style="font-size:15px; color:rgba(255,255,255,0.55); line-height:1.8; margin-bottom:24px;"></p>
+  </div>
+  <div style="padding:0 28px 28px; display:flex; gap:10px; flex-wrap:wrap;">
+    <a id="modal-link" href="#" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; background:var(--purple); color:white; padding:12px 24px; border-radius:100px; font-size:14px; font-weight:600; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='#7B74D4'" onmouseout="this.style.background='var(--purple)'">View full details ↗</a>
+    <button id="modal-atc" onclick="openAtcFromModal()" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); color:white; padding:12px 24px; border-radius:100px; font-size:14px; font-weight:600; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">📅 Add to calendar</button>
+    <button id="modal-share" onclick="openShareMenu(event)" style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); color:white; padding:12px 24px; border-radius:100px; font-size:14px; font-weight:600; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">↗ Share</button>
+  </div>
+</div>
+
+<div class="atc-dropdown" id="atc-dropdown">
+  <a class="atc-option" id="atc-google" href="#" target="_blank" rel="noopener" onclick="document.getElementById('atc-dropdown').classList.remove('open')">📅 Google Calendar</a>
+  <a class="atc-option" id="atc-apple" href="#" download onclick="document.getElementById('atc-dropdown').classList.remove('open')">🍎 Apple Calendar</a>
+  <a class="atc-option" id="atc-outlook" href="#" download onclick="document.getElementById('atc-dropdown').classList.remove('open')">📧 Outlook / Other</a>
+</div>
+
+<div id="share-dropdown" style="display:none; position:fixed; background:white; border-radius:14px; box-shadow:0 8px 32px rgba(0,0,0,0.25); padding:8px; z-index:20000; min-width:200px;">
+  <a id="share-native" class="atc-option" href="#" style="display:none">📱 Share...</a>
+  <a id="share-sms" class="atc-option" href="#">💬 Text message</a>
+  <a id="share-email" class="atc-option" href="#">✉️ Email</a>
+  <a id="share-x" class="atc-option" href="#" target="_blank" rel="noopener">𝕏 X / Twitter</a>
+  <a id="share-facebook" class="atc-option" href="#" target="_blank" rel="noopener">📘 Facebook</a>
+  <a id="share-copy" class="atc-option" href="#" onclick="copyShareLink(event)">🔗 Copy link</a>
+</div>
+
+<div class="hero-eyebrow-dropdown" id="hero-eyebrow-dropdown">
+  <div class="eyebrow-city-option active" id="eyebrow-opt-parkcity" onclick="eyebrowSwitchCity(event,'parkcity')">📍 Park City, UT</div>
+  <div class="eyebrow-city-option" id="eyebrow-opt-elkhartlake" onclick="eyebrowSwitchCity(event,'elkhartlake')">📍 Elkhart Lake, WI</div>
+  <div class="eyebrow-dropdown-divider"></div>
+  <div class="eyebrow-city-option coming-soon">+ Aspen, CO — coming soon</div>
+  <div class="eyebrow-city-option coming-soon">+ Jackson Hole, WY — coming soon</div>
+</div>
+
+</body>
+</html>
