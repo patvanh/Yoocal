@@ -29,7 +29,10 @@
     .hero { background: var(--dark); padding: 120px 80px 80px; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, #0a1628 0%, #1a2840 50%, #0d1f35 100%); }
     .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 20% 80%, rgba(83,74,183,0.25) 0%, transparent 70%); }
-    .hero-content { position: relative; z-index: 2; max-width: 700px; }
+    .hero-inner { position: relative; z-index: 2; display: flex; align-items: center; gap: 60px; max-width: 1200px; margin: 0 auto; }
+    .hero-content { flex: 1; min-width: 0; }
+    .hero-image { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
+    .hero-image img { width: 100%; height: 380px; object-fit: cover; display: block; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; padding: 5px 14px; border-radius: 100px; margin-bottom: 24px; letter-spacing: 0.5px; border: 1px solid rgba(255,255,255,0.15); }
     .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 6vw, 72px); color: white; line-height: 1.05; margin-bottom: 20px; }
     .hero h1 em { font-style: italic; color: var(--purple-light); }
@@ -90,6 +93,8 @@
       nav { padding: 0 20px; }
       .nav-links { display: none; }
       .hero { padding: 100px 24px 60px; }
+      .hero-inner { flex-direction: column; gap: 32px; }
+      .hero-image img { height: 220px; }
       .content { padding: 48px 24px; }
       .intro { grid-template-columns: 1fr; gap: 40px; }
       .tips-grid { grid-template-columns: 1fr; }
@@ -114,10 +119,15 @@
 </nav>
 
 <div class="hero">
-  <div class="hero-content">
-    <div class="hero-eyebrow">🏁 Elkhart Lake, Wisconsin</div>
-    <h1>America's <em>hidden gem</em> of speed & serenity.</h1>
-    <p>A charming lakeside village of 1,000 people that draws tens of thousands every summer for world-class racing, live music on the water, and a pace of life that feels like a different era.</p>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">🏁 Elkhart Lake, Wisconsin</div>
+      <h1>America's <em>hidden gem</em> of speed & serenity.</h1>
+      <p>A charming lakeside village of 1,000 people that draws tens of thousands every summer for world-class racing, live music on the water, and a pace of life that feels like a different era.</p>
+    </div>
+    <div class="hero-image">
+      <img src="roadamericaradical.webp" alt="Racing at Road America, Elkhart Lake Wisconsin">
+    </div>
   </div>
 </div>
 
