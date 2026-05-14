@@ -10,7 +10,7 @@
 <meta name="keywords" content="Park City events, things to do in Park City Utah, Park City calendar, Park City concerts, Park City festivals, Summit County events, Park City this weekend">
 <meta name="author" content="Yoocal">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.yoocal.com">
+<link rel="canonical" href="https://www.yoocal.com/">
 
 <!-- Open Graph (Facebook, iMessage, Slack previews) -->
 <meta property="og:type" content="website">
@@ -36,11 +36,11 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Yoocal",
-  "url": "https://www.yoocal.com",
-  "description": "Local events calendar for Park City, Utah. Find concerts, festivals, outdoor adventures, races and more.",
+  "url": "https://www.yoocal.com/",
+  "description": "Free local events calendar for Park City, Utah and Elkhart Lake, Wisconsin. Find concerts, festivals, outdoor adventures, races and more — updated daily.",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://www.yoocal.com/#events?q={search_term_string}",
+    "target": "https://www.yoocal.com/?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
@@ -49,23 +49,58 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "EventSeries",
-  "name": "Park City Local Events",
-  "location": {
-    "@type": "Place",
-    "name": "Park City",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Park City",
-      "addressRegion": "UT",
-      "addressCountry": "US"
-    }
+  "@type": "Organization",
+  "name": "Yoocal",
+  "url": "https://www.yoocal.com/",
+  "logo": "https://www.yoocal.com/og-image.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@yoocal.com",
+    "contactType": "customer service"
   },
-  "organizer": {
-    "@type": "Organization",
-    "name": "Yoocal",
-    "url": "https://www.yoocal.com"
-  }
+  "sameAs": []
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Things To Do in Park City, Utah",
+  "description": "Local events, concerts, outdoor activities, festivals and more in Park City, Utah — updated daily.",
+  "url": "https://www.yoocal.com/",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Park City Events Calendar",
+      "url": "https://www.yoocal.com/?city=parkcity"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Elkhart Lake Events Calendar",
+      "url": "https://www.yoocal.com/?city=elkhartlake"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "This Weekend in Park City",
+      "url": "https://www.yoocal.com/this-weekend.html?city=parkcity"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "About Park City, Utah",
+      "url": "https://www.yoocal.com/about-park-city.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "About Elkhart Lake, Wisconsin",
+      "url": "https://www.yoocal.com/about-elkhart-lake.html"
+    }
+  ]
 }
 </script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
@@ -1340,6 +1375,21 @@
 </head>
 <body>
 
+<!-- Static content for search engine indexing — hidden from users -->
+<div id="seo-content" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+  <h1>Yoocal — Things To Do in Park City, Utah</h1>
+  <p>Yoocal is Park City's free local events calendar. We automatically gather events from every local source — The Park Record, Visit Park City, Eventbrite, venue websites, and more — and put them all in one clean, searchable calendar. Updated daily.</p>
+  <h2>Park City Events Calendar</h2>
+  <p>Find concerts, outdoor adventures, festivals, food events, races, arts events, family activities, and more happening in Park City, Utah and Summit County. Browse by date, category, or search for something specific.</p>
+  <h2>Elkhart Lake, Wisconsin Events</h2>
+  <p>Yoocal also covers Elkhart Lake, Wisconsin — home of Road America. Find Road America race weekends, live music at Siebkens Resort, events at The Osthoff Resort, the Farmers &amp; Artisans Market, and everything else happening in this lakeside village.</p>
+  <h2>Sources</h2>
+  <p>Events are gathered daily from The Park Record, Visit Park City, Eventbrite, RunSignup, Road America, Siebkens Resort, Elkhart Lake Tourism, Visit Sheboygan County, Google Events, and more.</p>
+  <h2>Free &amp; Updated Daily</h2>
+  <p>Yoocal is completely free for locals and visitors. Events are updated every day so you always see what's actually happening this week.</p>
+  <p>Contact: <a href="mailto:hello@yoocal.com">hello@yoocal.com</a></p>
+</div>
+
 <!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">
@@ -1448,6 +1498,20 @@
       <div class="cal-filter" data-filter="community">🤝 Community</div>
       <div class="cal-filter" data-filter="free">🆓 Free</div>
       <div class="cal-filter" data-filter="paid">🎟 Paid</div>
+    </div>
+
+    <!-- RADIUS FILTER -->
+    <div id="radius-bar" style="display:flex; align-items:center; gap:10px; padding:10px 24px; border-bottom:1px solid rgba(255,255,255,0.06); flex-wrap:wrap;">
+      <button id="radius-locate-btn" onclick="useMyLocation()" style="display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); color:white; padding:6px 14px; border-radius:100px; font-size:13px; font-weight:500; cursor:pointer; white-space:nowrap; transition:all 0.15s;" onmouseover="this.style.background='var(--purple)';this.style.borderColor='var(--purple)'" onmouseout="if(!userLat)this.style.background='rgba(255,255,255,0.07)';if(!userLat)this.style.borderColor='rgba(255,255,255,0.15)'">📍 Use my location</button>
+      <span style="color:rgba(255,255,255,0.3); font-size:13px;">or</span>
+      <input id="radius-zip" type="text" placeholder="Enter zip code" maxlength="10" style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); color:white; padding:6px 14px; border-radius:100px; font-size:13px; width:140px; outline:none;" oninput="onZipInput(this.value)" />
+      <div id="radius-slider-wrap" style="display:none; align-items:center; gap:8px;">
+        <span style="font-size:13px; color:rgba(255,255,255,0.5); white-space:nowrap;">Within</span>
+        <input id="radius-slider" type="range" min="5" max="50" value="25" step="5" style="width:100px; accent-color:var(--purple);" oninput="onRadiusChange(this.value)" />
+        <span id="radius-label" style="font-size:13px; font-weight:600; color:white; white-space:nowrap; min-width:50px;">25 mi</span>
+        <button onclick="clearRadius()" style="background:none; border:none; color:rgba(255,255,255,0.4); font-size:18px; cursor:pointer; line-height:1; padding:0 4px;" title="Clear">✕</button>
+      </div>
+      <span id="radius-status" style="font-size:12px; color:rgba(255,255,255,0.4);"></span>
     </div>
 
     <div class="cal-days-header" style="justify-content:center; position:relative;">
@@ -1874,12 +1938,17 @@
                        event.recurrence === 'monthly_last_friday' ? 'Monthly' : '';
     const recurBadge = isRecurring && recurLabel ? `<span class="cal-tag" style="background:rgba(239,159,39,0.15);color:#EF9F27">${recurLabel}</span>` : '';
 
-    // Distance from Park City
+    // Distance — show from user location if radius active, else from Park City center
     const venueCoords = getVenueCoords(event.location);
     const lat = event.lat || (venueCoords && venueCoords[0]);
     const lng = event.lng || (venueCoords && venueCoords[1]);
-    const dist = distanceMiles(lat, lng);
-    const distLabel = dist !== null && dist > 0.5 ? ` · ${dist} mi` : '';
+    let distVal = null;
+    if (radiusActive && userLat && userLng && lat && lng) {
+      distVal = distanceMiles(userLat, userLng, lat, lng);
+    } else if (lat && lng) {
+      distVal = distanceMiles(lat, lng); // original function using PC center
+    }
+    const distLabel = distVal !== null && distVal > 0.5 ? ` · ${Math.round(distVal * 10) / 10} mi` : '';
 
     // Fix specific events
     let finalCats = cats;
@@ -1981,6 +2050,15 @@
       if (activeSearch) {
         const searchText = (event.title + ' ' + (event.description||'') + ' ' + (event.location||'')).toLowerCase();
         if (!searchText.includes(activeSearch.toLowerCase())) return false;
+      }
+
+      // Radius filter
+      if (radiusActive && userLat && userLng) {
+        if (event.lat && event.lng) {
+          const dist = distanceMiles(userLat, userLng, event.lat, event.lng);
+          if (dist > radiusMiles) return false;
+        }
+        // If event has no coords, show it anyway (don't hide unknown locations)
       }
 
       return true;
@@ -2772,6 +2850,146 @@
       dd.style.display = 'none';
     }
   });
+
+  // ── Radius Filter ──
+  let userLat = null, userLng = null, radiusMiles = 25;
+  let radiusActive = false;
+
+  // Haversine distance formula (miles)
+  function distanceMiles(lat1, lng1, lat2, lng2) {
+    const R = 3958.8; // Earth radius in miles
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLng = (lng2 - lng1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLng/2) * Math.sin(dLng/2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  }
+
+  // Static zip code → lat/lng for common zip codes around Park City & Elkhart Lake
+  const ZIP_COORDS = {
+    // Park City area
+    '84060': [40.6461, -111.4979], // Park City
+    '84068': [40.6461, -111.4979], // Park City
+    '84098': [40.7021, -111.5423], // Kimball Junction
+    '84032': [40.5069, -111.4133], // Heber City
+    '84036': [40.6430, -111.2797], // Kamas
+    '84047': [40.6200, -111.8944], // Midvale
+    '84070': [40.5650, -111.8994], // Sandy
+    '84093': [40.5920, -111.8638], // Sandy
+    '84094': [40.5710, -111.8638], // Sandy
+    '84096': [40.5121, -112.0160], // Herriman
+    '84101': [40.7607, -111.8910], // SLC
+    '84102': [40.7649, -111.8660], // SLC
+    '84103': [40.7849, -111.8720], // SLC
+    '84104': [40.7481, -111.9260], // SLC
+    '84105': [40.7348, -111.8610], // SLC
+    '84106': [40.7182, -111.8630], // SLC
+    '84107': [40.6948, -111.8890], // Murray
+    '84108': [40.7504, -111.8210], // SLC
+    '84109': [40.7248, -111.8320], // SLC
+    '84111': [40.7595, -111.8900], // SLC downtown
+    '84112': [40.7649, -111.8420], // U of U
+    '84115': [40.7130, -111.8880], // SLC
+    '84116': [40.7781, -111.9340], // SLC west
+    '84117': [40.6881, -111.8680], // Holladay
+    '84120': [40.7048, -112.0040], // West Valley
+    '84121': [40.6610, -111.8360], // Cottonwood Heights
+    '84124': [40.6981, -111.8240], // Millcreek
+    '84401': [41.2230, -111.9738], // Ogden
+    // Elkhart Lake area
+    '53020': [43.8352, -87.9710], // Elkhart Lake
+    '53073': [43.7447, -87.9773], // Plymouth WI
+    '53081': [43.7508, -87.7145], // Sheboygan
+    '53082': [43.7508, -87.7145], // Sheboygan
+    '53083': [43.7700, -87.7145], // Sheboygan Falls
+    '53085': [43.7274, -87.8256], // Sheboygan Falls
+    '53094': [43.6619, -88.3429], // Watertown
+    '53048': [43.5341, -88.0312], // Kewaskum
+  };
+
+  function useMyLocation() {
+    const btn = document.getElementById('radius-locate-btn');
+    const status = document.getElementById('radius-status');
+    btn.innerHTML = '⏳ Locating...';
+    status.textContent = '';
+
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        userLat = pos.coords.latitude;
+        userLng = pos.coords.longitude;
+        radiusActive = true;
+        btn.innerHTML = '✅ Location set';
+        btn.style.background = 'var(--purple)';
+        btn.style.borderColor = 'var(--purple)';
+        document.getElementById('radius-slider-wrap').style.display = 'flex';
+        status.textContent = `Showing events within ${radiusMiles} miles`;
+        applyFilters();
+      },
+      err => {
+        btn.innerHTML = '📍 Use my location';
+        status.textContent = 'Location unavailable — try a zip code';
+      },
+      { timeout: 8000 }
+    );
+  }
+
+  // Zip code lookup table
+  function zipToCoords(zip) {
+    return ZIP_COORDS[zip.trim()] || null;
+  }
+
+  // Try Nominatim for unknown zip codes
+  async function geocodeZip(zip) {
+    const known = zipToCoords(zip);
+    if (known) return known;
+    try {
+      const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${zip}&format=json&limit=1&countrycodes=us`, {headers:{'User-Agent':'Yoocal/1.0'}});
+      const data = await r.json();
+      if (data.length) return [parseFloat(data[0].lat), parseFloat(data[0].lon)];
+    } catch {}
+    return null;
+  }
+
+  let zipTimer = null;
+  function onZipInput(val) {
+    clearTimeout(zipTimer);
+    const status = document.getElementById('radius-status');
+    if (val.length < 5) { status.textContent = ''; return; }
+    zipTimer = setTimeout(async () => {
+      status.textContent = 'Looking up...';
+      const coords = await geocodeZip(val);
+      if (coords) {
+        userLat = coords[0];
+        userLng = coords[1];
+        radiusActive = true;
+        document.getElementById('radius-slider-wrap').style.display = 'flex';
+        status.textContent = `Showing events within ${radiusMiles} miles`;
+        applyFilters();
+      } else {
+        status.textContent = 'Zip code not found';
+      }
+    }, 600);
+  }
+
+  function onRadiusChange(val) {
+    radiusMiles = parseInt(val);
+    document.getElementById('radius-label').textContent = `${val} mi`;
+    document.getElementById('radius-status').textContent = `Showing events within ${val} miles`;
+    applyFilters();
+  }
+
+  function clearRadius() {
+    userLat = null; userLng = null;
+    radiusActive = false;
+    document.getElementById('radius-slider-wrap').style.display = 'none';
+    document.getElementById('radius-status').textContent = '';
+    document.getElementById('radius-zip').value = '';
+    document.getElementById('radius-locate-btn').innerHTML = '📍 Use my location';
+    document.getElementById('radius-locate-btn').style.background = 'rgba(255,255,255,0.07)';
+    document.getElementById('radius-locate-btn').style.borderColor = 'rgba(255,255,255,0.15)';
+    applyFilters();
+  }
 
   // ── Add to Calendar ──
   function formatICSDate(dateStr, timeStr) {
