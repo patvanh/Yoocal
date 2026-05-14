@@ -2450,6 +2450,7 @@
         buildDayChips(); // Build chips first with correct selected date
         dailyFeaturedTitle = getDailyFeaturedTitle(today);
         applyFilters();
+        checkDeepLink();
         buildMonthPicker([]);
       })
       .catch(() => {
@@ -2711,9 +2712,11 @@
     e.stopPropagation();
     if (!modalCardRef) return;
     const title = modalCardRef.dataset.title || '';
-    const link = modalCardRef.dataset.link || window.location.href;
     const date = modalCardRef.dataset.date || '';
-    const shareUrl = link || window.location.href;
+    const city = currentCity || 'parkcity';
+
+    // Build a yoocal.com share URL that opens the modal for this event
+    const yoocalUrl = `https://www.yoocal.com/?city=${city}&event=${encodeURIComponent(title)}&date=${date}`;
     const shareText = `Check out "${title}"${date ? ' on ' + date : ''} — via Yoocal`;
 
     // Use native share sheet on mobile if available
@@ -2723,16 +2726,16 @@
       nativeBtn.onclick = (ev) => {
         ev.preventDefault();
         closeShareMenu();
-        navigator.share({ title, text: shareText, url: shareUrl });
+        navigator.share({ title, text: shareText, url: yoocalUrl });
       };
     } else {
       nativeBtn.style.display = 'none';
     }
 
-    document.getElementById('share-sms').href = `sms:?body=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
-    document.getElementById('share-email').href = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText + '\n\n' + shareUrl)}`;
-    document.getElementById('share-x').href = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
-    document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+    document.getElementById('share-sms').href = `sms:?body=${encodeURIComponent(shareText + ' ' + yoocalUrl)}`;
+    document.getElementById('share-email').href = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText + '\n\n' + yoocalUrl)}`;
+    document.getElementById('share-x').href = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(yoocalUrl)}`;
+    document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(yoocalUrl)}`;
 
     const dd = document.getElementById('share-dropdown');
     const btn = document.getElementById('modal-share');
@@ -2751,8 +2754,11 @@
   function copyShareLink(e) {
     e.preventDefault();
     closeShareMenu();
-    const link = modalCardRef?.dataset.link || window.location.href;
-    navigator.clipboard.writeText(link).then(() => {
+    const title = modalCardRef?.dataset.title || '';
+    const date = modalCardRef?.dataset.date || '';
+    const city = currentCity || 'parkcity';
+    const yoocalUrl = `https://www.yoocal.com/?city=${city}&event=${encodeURIComponent(title)}&date=${date}`;
+    navigator.clipboard.writeText(yoocalUrl).then(() => {
       const btn = document.getElementById('modal-share');
       const orig = btn.innerHTML;
       btn.innerHTML = '✓ Copied!';
@@ -2886,6 +2892,39 @@
     document.getElementById('cal-days-label').textContent = 'This week';
     document.querySelectorAll('.cal-filter').forEach(x => x.classList.remove('active'));
     document.querySelector('.cal-filter[data-filter="all"]').classList.add('active');
+  }
+
+  // ── Deep link: auto-open modal from share URL ──
+  function checkDeepLink() {
+    const params = new URLSearchParams(window.location.search);
+    const eventTitle = params.get('event');
+    const eventDate = params.get('date');
+    if (!eventTitle || !allEvents.length) return;
+
+    const match = allEvents.find(e =>
+      e.title === eventTitle &&
+      (!eventDate || e.date?.slice(0,10) === eventDate)
+    ) || allEvents.find(e => e.title === eventTitle);
+
+    if (match) {
+      if (match.date) {
+        const d = new Date(match.date + 'T12:00:00');
+        activeDate = d;
+        selectedDate = new Date(d);
+        buildDayChips();
+        applyFilters();
+      }
+      setTimeout(() => {
+        const cards = document.querySelectorAll('.cal-event, .featured-band-card');
+        for (const card of cards) {
+          if (card.dataset.title === eventTitle) {
+            openEventModal(card);
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            break;
+          }
+        }
+      }, 600);
+    }
   }
 
   function toggleEyebrowDropdown(e) {
