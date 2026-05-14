@@ -2620,16 +2620,19 @@
   let mapMarkers = [];
   let currentView = 'list';
 
-  // Park City center coordinates
+  // City center coordinates and zoom levels
   const CITY_CENTERS = {
-    parkcity: [40.6461, -111.4980],
-    elkhartlake: [43.8394, -87.9734]
+    parkcity:    { center: [40.6461, -111.4980], zoom: 12 },
+    elkhartlake: { center: [43.8358, -88.0051],  zoom: 13 }
   };
 
   function initMap() {
-    if (map) return;
-    const center = CITY_CENTERS[currentCity] || CITY_CENTERS.parkcity;
-    map = L.map('cal-map').setView(center, 12);
+    const cityConfig = CITY_CENTERS[currentCity] || CITY_CENTERS.parkcity;
+    if (map) {
+      map.setView(cityConfig.center, cityConfig.zoom);
+      return;
+    }
+    map = L.map('cal-map').setView(cityConfig.center, cityConfig.zoom);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
