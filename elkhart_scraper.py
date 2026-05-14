@@ -218,191 +218,131 @@ def scrape_road_america():
 # 1b. ELKHARTLAKE.COM — Known Annual Events
 # (hardcoded since site blocks scrapers)
 # ─────────────────────────────────────────────
+def scrape_siebkens_known():
+    """Siebkens 2026 Summer Concert Series — browser-scraped from siebkens.com on 2026-05-13"""
+    print("Loading Siebkens known concert events...")
+    events = []
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    CONCERTS = [
+        {"title": "Siebkens Summer Concert: Kylar Kuzio", "date": "2026-05-27", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-kylar-kuzio-5/"},
+        {"title": "Siebkens Live Music: Jeremiah Jams (MotoAmerica Wknd)", "date": "2026-05-29", "start_time": "7:00 PM", "end_time": "11:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-jeremiah-jams-2/"},
+        {"title": "Siebkens Live Music: Dave Steffen Band (MotoAmerica Wknd)", "date": "2026-05-30", "start_time": "7:30 PM", "end_time": "11:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-dave-steffan-band/"},
+        {"title": "Siebkens Summer Concert: Lilie", "date": "2026-06-03", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-lilie-3/"},
+        {"title": "Siebkens Summer Concert: Chasing Tales", "date": "2026-06-10", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-chasing-tales-2/"},
+        {"title": "Siebkens Summer Concert: 7000apart", "date": "2026-06-17", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-7000apart-5/"},
+        {"title": "Siebkens Live Music: Wire & Nail (IndyCar Wknd)", "date": "2026-06-18", "start_time": "6:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-wire-nail-4/", "featured": True},
+        {"title": "Siebkens Live Music: Northsoul (IndyCar Wknd)", "date": "2026-06-19", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/indycar-wknd-live-music-northsoul/"},
+        {"title": "Siebkens Live Music: The Donna Woodall Group (IndyCar Wknd)", "date": "2026-06-20", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/indycar-wknd-live-music-donna-woodall/"},
+        {"title": "Siebkens Summer Concert: Ryan Scheidemeyer & Friends", "date": "2026-06-24", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-ryan-scheidemeyer-friends/"},
+        {"title": "Siebkens Summer Concert: The Chili Dogs", "date": "2026-07-01", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-the-chili-dogs-2/"},
+        {"title": "Siebkens Summer Concert: Trapper Schoepp", "date": "2026-07-08", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-trapper-schoepp/"},
+        {"title": "Siebkens Summer Concert: Erin Krebs & Paul Sucherman", "date": "2026-07-15", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-erin-krebs-and-paul-sucherman/"},
+        {"title": "Siebkens Live Music: Livin The Dream (Vintage Wknd)", "date": "2026-07-17", "start_time": "7:00 PM", "end_time": "11:00 PM", "link": "https://www.siebkens.com/event/vintage-wknd-live-music-livin-the-dream/", "featured": True},
+        {"title": "Siebkens Summer Concert: Katalysst", "date": "2026-07-22", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-katalysst-2/"},
+        {"title": "Siebkens Summer Concert: Valley Fox", "date": "2026-07-29", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-valley-fox-2/"},
+        {"title": "Siebkens Live Music: The Chocolateers (IMSA Wknd)", "date": "2026-07-30", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/imsa-wknd-live-music-the-chocolateers/", "featured": True},
+        {"title": "Siebkens Live Music: Bowser (IMSA Wknd)", "date": "2026-07-31", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/imsa-wknd-live-music-bowser/"},
+        {"title": "Siebkens Live Music: Deep Pockets (IMSA Wknd)", "date": "2026-08-01", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/imsa-weekend-live-music-deep-pockets-2/"},
+        {"title": "Siebkens Summer Concert: Mike Brumm with Trust & Follow", "date": "2026-08-05", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-mike-brumm-with-trust-follow/"},
+        {"title": "Siebkens Downtown Night Live Music: Sister Winchester", "date": "2026-08-10", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/downtown-night-live-music-sister-winchester-3/"},
+        {"title": "Siebkens Summer Concert: Bob & Connor McManus", "date": "2026-08-12", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-bob-connor-mcmanus/"},
+        {"title": "Siebkens Summer Concert: Pat McCurdy", "date": "2026-08-19", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-pat-mccurdy-5/"},
+        {"title": "Siebkens Summer Concert: Celeste Rose", "date": "2026-08-26", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-celeste-rose-2/"},
+        {"title": "GT World Challenge Welcome Party: Burgundy Ties", "date": "2026-08-27", "start_time": "6:00 PM", "end_time": "9:00 PM", "link": "https://www.siebkens.com/event/gt-world-challenge-welcome-party-with-live-music-from-burgundy-ties/"},
+        {"title": "Siebkens Live Music: Second Hand Stereo (GT World Challenge)", "date": "2026-08-28", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/gt-world-challenge-live-music-second-hand-stereo/"},
+        {"title": "Siebkens Live Music: Joseph Huber (GT World Challenge)", "date": "2026-08-29", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/gt-world-challenge-live-music-joseph-huber/"},
+        {"title": "Siebkens Live Music: Boo! The Band (Elktoberfest)", "date": "2026-09-19", "start_time": "7:00 PM", "link": "https://www.siebkens.com/event/vintage-wknd-live-music-boo-the-band/"},
+        {"title": "Siebkens Summer Concert: Brent Bel & The Boys", "date": "2026-09-02", "start_time": "7:00 PM", "end_time": "10:00 PM", "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-brent-bel-the-boys-4/"},
+    ]
+
+    for c in CONCERTS:
+        if c["date"] >= today:
+            event = {
+                "title": c["title"],
+                "date": c["date"],
+                "description": "Live music at Siebkens Resort on the shores of Elkhart Lake. Outdoor bandstand outside the Stop-Inn Tavern. Free, family & dog friendly.",
+                "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+                "link": c["link"],
+                "source": "Siebkens Resort",
+                "source_url": "https://www.siebkens.com/events/",
+                "lat": 43.8336, "lng": -87.9717,
+                "scraped_at": datetime.now().isoformat()
+            }
+            if c.get("start_time"): event["start_time"] = c["start_time"]
+            if c.get("end_time"): event["end_time"] = c["end_time"]
+            if c.get("featured"): event["featured"] = True
+            events.append(event)
+
+    print(f"  Loaded {len(events)} Siebkens concert events")
+    return events
+
+def scrape_elkhartlake_browser_json():
+    """Load events from the browser-scraped elkhartlake-live.json file if it exists."""
+    import os
+    paths = [
+        os.path.expanduser("~/Downloads/elkhartlake-live.json"),
+        os.path.join(os.path.dirname(__file__), "elkhartlake-live.json"),
+    ]
+    for path in paths:
+        if os.path.exists(path):
+            print(f"Loading browser-scraped elkhartlake.com events from {path}...")
+            try:
+                with open(path) as f:
+                    data = json.load(f)
+                events = data.get("events", [])
+                # Re-tag with correct source
+                for e in events:
+                    e["source"] = "Elkhart Lake Tourism"
+                    e["source_url"] = "https://www.elkhartlake.com/events/"
+                print(f"  Loaded {len(events)} events from browser scrape")
+                return events
+            except Exception as ex:
+                print(f"  Error loading {path}: {ex}")
+    print("  No elkhartlake-live.json found, using hardcoded events")
+    return []
+
 def scrape_elkhartlake_known():
     print("Loading known elkhartlake.com annual events...")
     events = []
     today = datetime.now().strftime("%Y-%m-%d")
 
+    # Browser-scraped directly from elkhartlake.com on 2026-05-13
+    # Includes specific named concerts, exact dates, and times
     KNOWN_EVENTS = [
-        # ── Osthoff Resort ──
-        {
-            "title": "Jazz on the Vine",
-            "date": "2026-05-01", "end_date": "2026-05-02",
-            "start_time": "7:00 PM",
-            "description": "Spectacular live music celebration at The Osthoff Resort featuring world-class jazz artists. Pairs intimate performances with the elegance of a AAA Four-Diamond resort.",
-            "location": "The Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/jazz-on-the-vine/",
-            "featured": True
-        },
-        {
-            "title": "Jazz on the Vine — Weekend 2",
-            "date": "2026-05-08", "end_date": "2026-05-09",
-            "start_time": "7:00 PM",
-            "description": "Second weekend of Jazz on the Vine at The Osthoff Resort. Live jazz performances with acclaimed artists in an intimate lakeside setting.",
-            "location": "The Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/jazz-on-the-vine/",
-        },
-        {
-            "title": "Jazz on the Vine — Weekend 3",
-            "date": "2026-05-15", "end_date": "2026-05-16",
-            "start_time": "7:00 PM",
-            "description": "Third weekend of Jazz on the Vine at The Osthoff Resort.",
-            "location": "The Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/jazz-on-the-vine/",
-        },
-        # ── Village Events ──
-        {
-            "title": "Shop & Sip Elkhart Lake",
-            "date": "2026-05-16",
-            "start_time": "11:00 AM", "end_time": "4:00 PM",
-            "description": "The 10th Annual Shop & Sip! Visit downtown Elkhart Lake shops and restaurants for a day of shopping, tastings, and community fun.",
-            "location": "Downtown Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/shop-sip-elkhart-lake/",
-            "featured": True
-        },
-        {
-            "title": "Elkhart Lake Annual Veterans Memorial Tribute",
-            "date": "2026-05-23",
-            "start_time": "10:00 AM",
-            "description": "Annual ceremony honoring veterans at the Elkhart Lake Veterans Memorial.",
-            "location": "Veterans Memorial, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/events/",
-        },
-        {
-            "title": "4 Miles of Fitness",
-            "date": "2026-05-13",
-            "start_time": "7:00 AM",
-            "description": "Bike, walk, or run your way around Road America's legendary 4-mile, 14-turn road course. A fan-favorite fitness event set against the scenic 640-acre property.",
-            "location": "Road America, N7390 US-12, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/",
-        },
-        {
-            "title": "Elkhart Lake Fireman's Picnic — Friday Night",
-            "date": "2026-07-03",
-            "start_time": "7:30 PM",
-            "description": "Annual 4th of July celebration with the Elkhart Lake Fire Department. Live music, food, drinks, and fireworks at dusk.",
-            "location": "Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/elkhart-lake-firemans-picnic/",
-            "featured": True
-        },
-        {
-            "title": "Elkhart Lake Fireman's Picnic — Sunday",
-            "date": "2026-07-05",
-            "start_time": "11:30 AM",
-            "description": "Fireman's Parade at 11:30am in downtown Elkhart Lake followed by live music 1:30-5pm.",
-            "location": "Downtown Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/elkhart-lake-firemans-picnic/",
-        },
-        {
-            "title": "Road America Concours d'Elegance",
-            "date": "2026-07-17", "end_date": "2026-07-18",
-            "start_time": "6:00 PM", "end_time": "8:00 PM",
-            "description": "Spectacular display of vintage racecars and luxury sports cars in downtown Elkhart Lake. Friday features a parade of vintage racecars; Saturday features luxury sports cars.",
-            "location": "Downtown Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/weathertech-vintage-weekend-with-brian-redman/",
-            "featured": True
-        },
-        {
-            "title": "Elktoberfest",
-            "date": "2026-09-19",
-            "start_time": "10:00 AM",
-            "description": "Bavarian fun with stein hoists, brats, pretzels, polka, and gemütlichkeit. Features the Elktoberfest Run/Walk, family games, and live music from Boo! The Band at Siebkens.",
-            "location": "Downtown Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/elktoberfest/",
-            "featured": True
-        },
-        # ── Siebkens Named Concerts ──
-        {
-            "title": "Siebkens Live Music — Kylar Kuzio",
-            "date": "2026-05-15",
-            "start_time": "7:00 PM",
-            "description": "Welcome back, Kylar Kuzio! Live music at Siebkens Resort kicking off the summer season. Outdoor bandstand outside the Stop-Inn Tavern. Free, family and dog friendly.",
-            "location": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-kylar-kuzio/",
-            "featured": True
-        },
-        {
-            "title": "Siebkens Live Music — Wire & Nail",
-            "date": "2026-06-19",
-            "start_time": "7:00 PM",
-            "description": "Milwaukee's #1 honky tonk, rock and roll band hits the stage for IndyCar Weekend. High-energy sound with classic country and rock influences. Bandstand outside the Stop-Inn Tavern.",
-            "location": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-wire-nail-2/",
-            "featured": True
-        },
-        {
-            "title": "Siebkens Live Music — 7000apart",
-            "date": "2026-07-01",
-            "start_time": "7:00 PM",
-            "recurrence": "weekly", "recurrence_day": "Wednesday",
-            "end_date": "2026-08-26",
-            "description": "7000apart returns to Siebkens Summer Concert Series on Wednesday nights. Live music on the bandstand outside the Stop-Inn Tavern. Free, family & dog friendly.",
-            "location": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-7000apart/",
-        },
-        {
-            "title": "Siebkens Block Party",
-            "date": "2026-07-11",
-            "start_time": "11:00 AM",
-            "description": "Annual Siebkens Block Party — 3 live bands, lawn games, local vendors, and a tasting by Fifth Ward Brewing Company. Stop-Inn Tavern open 11am–10pm.",
-            "location": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/event/siebkens-block-party/",
-            "featured": True
-        },
-        {
-            "title": "Siebkens Live Music — Chili Dogs",
-            "date": "2026-07-18",
-            "start_time": "7:00 PM",
-            "description": "Chili Dogs take the stage at Siebkens for a night of rock at the Summer Concert Series. Bandstand outside the Stop-Inn Tavern.",
-            "location": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/events/month/2026-07/",
-        },
-        {
-            "title": "Live Music at Siebkens",
-            "date": "2026-05-15", "start_time": "7:00 PM",
-            "recurrence": "weekly", "recurrence_day": "Friday",
-            "end_date": "2026-10-02",
-            "description": "Live music at the legendary Siebkens Resort on the shores of Elkhart Lake. A tradition since 1916.",
-            "location": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
-            "link": "https://www.siebkens.com/events/",
-        },
-        {
-            "title": "Live Music at Siebkens",
-            "date": "2026-05-16", "start_time": "7:00 PM",
-            "recurrence": "weekly", "recurrence_day": "Saturday",
-            "end_date": "2026-10-03",
-            "description": "Live music at the legendary Siebkens Resort on the shores of Elkhart Lake.",
-            "location": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
-            "link": "https://www.siebkens.com/events/",
-        },
-        # ── Osthoff recurring ──
-        {
-            "title": "Live Music at The Osthoff — The Elk Room",
-            "date": "2026-05-15", "start_time": "7:00 PM",
-            "recurrence": "weekly", "recurrence_day": "Friday",
-            "end_date": "2026-09-25",
-            "description": "Live music in The Elk Room at The Osthoff Resort. Kick back, enjoy a drink, and let the music create the perfect backdrop for a lakeside evening.",
-            "location": "The Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/events/",
-        },
-        {
-            "title": "Live Music at The Osthoff — The Elk Room",
-            "date": "2026-05-16", "start_time": "7:00 PM",
-            "recurrence": "weekly", "recurrence_day": "Saturday",
-            "end_date": "2026-09-26",
-            "description": "Live music in The Elk Room at The Osthoff Resort.",
-            "location": "The Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/events/",
-        },
-        # ── Lions Club ──
-        {
-            "title": "Elkhart Lake Lions Club Brat Fry",
-            "date": "2026-05-23",
-            "start_time": "10:00 AM", "end_time": "1:30 PM",
-            "description": "Community brat fry hosted by the Elkhart Lake Lions Club.",
-            "location": "Elkhart Lake, WI",
-            "link": "https://www.elkhartlake.com/events/",
-        },
+        {"title": "Live Music in The Elk Room: Featuring Seth James", "date": "2026-05-15", "start_time": "7:00 PM", "end_time": "10:00 PM", "location": "The Elk Room at The Osthoff Resort, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/live-music-in-the-elk-room-featuring-seth-james/"},
+        {"title": "Live Music in The Elk Room: Featuring Mark Croft", "date": "2026-05-16", "start_time": "7:00 PM", "end_time": "10:00 PM", "location": "The Elk Room at The Osthoff Resort, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/live-music-in-the-elk-room-featuring-mark-croft/"},
+        {"title": "4 Miles of Fitness", "date": "2026-05-18", "start_time": "6:00 PM", "end_time": "8:00 PM", "location": "Road America, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/", "description": "Bike, walk, or run Road America\'s legendary 4-mile, 14-turn road course. Fan-favorite fitness event on the scenic 640-acre property."},
+        {"title": "4 Miles of Fitness", "date": "2026-05-20", "start_time": "6:00 PM", "end_time": "8:00 PM", "location": "Road America, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/"},
+        {"title": "Elkhart Lake Annual Veterans Memorial Tribute", "date": "2026-05-23", "start_time": "10:00 AM", "location": "Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/elkhart-lake-annual-veterans-memorial-tribute/"},
+        {"title": "4 Miles of Fitness", "date": "2026-05-25", "start_time": "6:00 PM", "end_time": "8:00 PM", "location": "Road America, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/"},
+        {"title": "Siebkens Live Music by Kylar Kuzio", "date": "2026-05-27", "start_time": "7:00 PM", "end_time": "10:00 PM", "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-kylar-kuzio/", "description": "Kylar Kuzio kicks off the Siebkens Summer Concert Series. Live music on the bandstand outside the Stop-Inn Tavern. Free, family & dog friendly outdoor concert.", "featured": True},
+        {"title": "Siebkens Live Music by Jeremiah Jams", "date": "2026-05-29", "start_time": "7:00 PM", "end_time": "11:00 PM", "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-jeremiah-jams/", "description": "Live music on the Siebkens bandstand outside the Stop-Inn Tavern. Free, family & dog friendly outdoor concert."},
+        {"title": "The Hard Left Moto Show", "date": "2026-05-30", "start_time": "6:00 PM", "location": "Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/the-hard-left-moto-show/"},
+        {"title": "Siebkens Live Music by Dave Steffen & Friends", "date": "2026-05-30", "start_time": "7:30 PM", "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/events/"},
+        {"title": "4 Miles of Fitness", "date": "2026-06-01", "start_time": "6:00 PM", "end_time": "8:00 PM", "location": "Road America, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/"},
+        {"title": "4 Miles of Fitness", "date": "2026-06-03", "start_time": "6:00 PM", "end_time": "8:00 PM", "location": "Road America, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/"},
+        {"title": "Siebkens Live Music by Wire & Nail", "date": "2026-06-19", "start_time": "7:00 PM", "end_time": "10:00 PM", "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-wire-nail-2/", "description": "Milwaukee\'s #1 honky tonk, rock and roll band hits the stage for IndyCar Weekend. Free, family & dog friendly outdoor concert.", "featured": True},
+        {"title": "Siebkens Live Music by The Squeezebox", "date": "2026-06-20", "start_time": "7:00 PM", "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/events/"},
+        {"title": "Siebkens Live Music by Mikayla Raines", "date": "2026-06-24", "start_time": "7:00 PM", "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/events/"},
+        {"title": "Siebkens Live Music by 7000apart", "date": "2026-07-01", "start_time": "7:00 PM", "end_time": "10:00 PM", "recurrence": "weekly", "recurrence_day": "Wednesday", "end_date": "2026-08-26", "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-7000apart/", "description": "7000apart returns to Siebkens Summer Concert Series on Wednesday nights. Free, family & dog friendly outdoor concert."},
+        {"title": "Siebkens Block Party", "date": "2026-07-11", "start_time": "11:00 AM", "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/siebkens-block-party/", "description": "Annual Siebkens Block Party with 3 live bands, lawn games, local vendors, and a tasting by Fifth Ward Brewing Company.", "featured": True},
+        {"title": "Road America Concours d\'Elegance", "date": "2026-07-17", "end_date": "2026-07-18", "start_time": "6:00 PM", "end_time": "8:00 PM", "location": "Downtown Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/weathertech-vintage-weekend-with-brian-redman/", "description": "Spectacular display of vintage racecars and luxury sports cars in downtown Elkhart Lake.", "featured": True},
+        {"title": "Siebkens Live Music by Chili Dogs", "date": "2026-07-18", "start_time": "7:00 PM", "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/events/"},
+        {"title": "Downtown Night: A Taste of Elkhart Lake", "date": "2026-08-10", "start_time": "5:00 PM", "end_time": "9:00 PM", "location": "Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/downtown-night-a-taste-of-elkhart-lake/", "description": "Taste your way through signature dishes from Elkhart Lake Chamber Member restaurants, enjoy live music, and let the kids explore activities.", "featured": True},
+        {"title": "Elktoberfest", "date": "2026-09-19", "start_time": "10:00 AM", "location": "Downtown Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/elktoberfest/", "description": "Bavarian fun with stein hoists, brats, pretzels, polka and live music from Boo! The Band at Siebkens. Annual Elktoberfest Run/Walk, family games.", "featured": True},
+        {"title": "Old World Christmas Market", "date": "2026-11-21", "location": "Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/old-world-christmas-market/"},
+        # Recurring events
+        {"title": "Farmers & Artisans Market", "date": "2026-05-23", "start_time": "8:00 AM", "end_time": "12:00 PM", "recurrence": "weekly", "recurrence_day": "Saturday", "end_date": "2026-10-03", "location": "Village Square, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/farmers-artisans-market-3/", "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors."},
+        {"title": "Sunset Cruise at Road America", "date": "2026-05-23", "start_time": "5:30 PM", "end_time": "7:00 PM", "recurrence": "weekly", "recurrence_days": "Wednesday,Saturday", "end_date": "2026-09-26", "location": "Road America, N7390 US-12, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/", "description": "A leisurely 3-lap sunset experience of the iconic 4-mile Road America track in your own vehicle."},
+        {"title": "4 Miles of Fitness", "date": "2026-05-18", "start_time": "6:00 PM", "end_time": "8:00 PM", "recurrence": "weekly", "recurrence_days": "Monday,Wednesday,Friday", "end_date": "2026-10-30", "location": "Road America, N7390 US-12, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/", "description": "Bike, walk, or run Road America\'s legendary 4-mile, 14-turn road course. Fan-favorite fitness event."},
+        # Fireman\'s Picnic
+        {"title": "Elkhart Lake Fireman\'s Picnic — Friday Night", "date": "2026-07-03", "start_time": "7:30 PM", "location": "Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/elkhart-lake-firemans-picnic/", "description": "Annual 4th of July celebration with live music, food, drinks, and fireworks at dusk.", "featured": True},
+        {"title": "Elkhart Lake Fireman\'s Picnic — Sunday", "date": "2026-07-05", "start_time": "11:30 AM", "location": "Downtown Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/elkhart-lake-firemans-picnic/", "description": "Fireman\'s Parade at 11:30am in downtown Elkhart Lake followed by live music 1:30-5pm."},
+        # Jazz on the Vine at Osthoff
+        {"title": "Jazz on the Vine at The Osthoff", "date": "2026-05-01", "end_date": "2026-05-02", "start_time": "7:00 PM", "location": "The Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/jazz-on-the-vine/", "description": "Spectacular live jazz at The Osthoff Resort. Featuring Damien Escobar, Alex Bugnon, and Marqueal Jordan.", "featured": True},
+        {"title": "Jazz on the Vine at The Osthoff", "date": "2026-05-08", "end_date": "2026-05-09", "start_time": "7:00 PM", "location": "The Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/jazz-on-the-vine/"},
+        {"title": "Jazz on the Vine at The Osthoff", "date": "2026-05-15", "end_date": "2026-05-16", "start_time": "7:00 PM", "location": "The Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI", "link": "https://www.elkhartlake.com/event/jazz-on-the-vine/"},
     ]
 
     for e in KNOWN_EVENTS:
@@ -422,6 +362,7 @@ def scrape_elkhartlake_known():
             if e.get("end_date"): event["end_date"] = e["end_date"]
             if e.get("recurrence"): event["recurrence"] = e["recurrence"]
             if e.get("recurrence_day"): event["recurrence_day"] = e["recurrence_day"]
+            if e.get("recurrence_days"): event["recurrence_days"] = e["recurrence_days"]
             if e.get("featured"): event["featured"] = True
             events.append(event)
 
@@ -995,11 +936,18 @@ def scrape_osthoff_calendar():
 # DEDUP & SAVE
 # ─────────────────────────────────────────────
 def deduplicate(events):
+    # Sort: prefer Siebkens/elkhartlake.com over generic sources
+    source_priority = {"Siebkens Resort": 0, "Elkhart Lake Tourism": 1, "Road America": 2, "Google Events": 3}
+    events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
+
     seen = set()
     unique = []
     for e in events:
         title = re.sub(r'\s+', ' ', e["title"].lower().strip())
-        title_clean = re.sub(r'^[\(\"\'\-\s]+', '', title)[:35]
+        # Strip common prefixes like "siebkens summer concert:", "siebkens live music by:", etc
+        title_clean = re.sub(r'^(siebkens\s+(summer\s+)?concert\s*(series)?:?\s*|siebkens\s+live\s+music\s+(by\s+|featuring\s+)?|live\s+music\s+(in\s+the\s+elk\s+room\s*:?\s*featuring\s+|by\s+|featuring\s+)?|indycar\s+wknd\s+live\s+music\s*:\s*|motoamerica\s+wknd\s+live\s+music\s*:\s*|imsa\s+w(ee)?k(end)?\s+live\s+music\s*:\s*|vintage\s+wknd\s+live\s+music\s*:\s*|gt\s+world\s+challenge\s+live\s+music\s*:\s*|downtown\s+night\s+live\s+music\s*:\s*)', '', title).strip()
+        # Also strip leading punctuation
+        title_clean = re.sub(r'^[\(\"\'\-\s]+', '', title_clean)[:35]
         date = e.get("date", "")[:10]
         key = f"{title_clean}|{date}"
         if key not in seen:
@@ -1029,7 +977,12 @@ def main():
 
     all_events = []
     all_events += scrape_road_america()
-    all_events += scrape_elkhartlake_known()
+    all_events += scrape_siebkens_known()
+    browser_scraped = scrape_elkhartlake_browser_json()
+    if browser_scraped:
+        all_events += browser_scraped
+    else:
+        all_events += scrape_elkhartlake_known()
     all_events += scrape_elkhartlake_com()
     all_events += scrape_siebkens()
     all_events += scrape_visit_sheboygan()

@@ -1,262 +1,7 @@
 {
-  "updated_at": "2026-05-13T21:02:49.082964",
-  "total": 224,
+  "updated_at": "2026-05-13T21:09:23.109784",
+  "total": 219,
   "events": [
-    {
-      "title": "Spring Vintage Weekend with SVRA",
-      "date": "2026-05-15",
-      "description": "Classic racecars celebrate motorsport's rich heritage. Features '50s\u2013'70s sports cars, Formula 5000, Formula Ford, Lotus, Alfa Romeo, Jaguar, Porsche, and Corvette. Season opener at Road America.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events/spring-vintage-weekend",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853785",
-      "start_time": "7:00 AM",
-      "end_time": "5:00 PM",
-      "end_date": "2026-05-17",
-      "featured": true
-    },
-    {
-      "title": "MotoAmerica Superbikes & Vintage MotoFest",
-      "date": "2026-05-29",
-      "description": "MotoAmerica Superbike races return to Road America with thrilling motorcycle competition and a family-friendly Vintage Motorcycle festival.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events/motoamerica",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853788",
-      "start_time": "8:00 AM",
-      "end_date": "2026-05-31",
-      "featured": true
-    },
-    {
-      "title": "WeatherTech Chicago Region SCCA June Sprints",
-      "date": "2026-06-05",
-      "description": "The 71st running of the June Sprints. Road America's longest-running event features grassroots SCCA road racing across multiple classes.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events/june-sprints",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853790",
-      "start_time": "8:00 AM",
-      "end_date": "2026-06-07",
-      "featured": true
-    },
-    {
-      "title": "XPEL INDYCAR Grand Prix presented by AMR",
-      "date": "2026-06-18",
-      "description": "IndyCar's premier open-wheel series returns to Road America with an international lineup of drivers on one of the world's most majestic road courses.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events/indycar-grand-prix",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853791",
-      "start_time": "8:00 AM",
-      "end_date": "2026-06-21",
-      "featured": true
-    },
-    {
-      "title": "Cheese Capital Cup featuring Trans Am SpeedTour",
-      "date": "2026-06-26",
-      "description": "Trans Am SpeedTour returns to Road America for a weekend of American road racing tradition.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853792",
-      "start_time": "8:00 AM",
-      "end_date": "2026-06-28",
-      "featured": true
-    },
-    {
-      "title": "WeatherTech Vintage Weekend with Brian Redman",
-      "date": "2026-07-16",
-      "description": "One of the largest vintage racing events in the US. Features 400+ vintage and historic racecars, Dan Gurney Racing Eagles reunion, and a 60th anniversary Trans Am tribute.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events/vintage-weekend",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853793",
-      "start_time": "8:00 AM",
-      "end_date": "2026-07-19",
-      "featured": true
-    },
-    {
-      "title": "Motul SportsCar Endurance Grand Prix featuring IMSA",
-      "date": "2026-07-30",
-      "description": "A six-hour endurance event featuring IMSA's elite sportscars from nearly 20 manufacturers including Mercedes, Ferrari, Chevrolet, and Aston Martin.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events/imsa",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853794",
-      "start_time": "8:00 AM",
-      "end_date": "2026-08-02",
-      "featured": true
-    },
-    {
-      "title": "GT World Challenge America",
-      "date": "2026-08-28",
-      "description": "All-sportscar weekend at Road America featuring GT World Challenge America racing.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events/gt-world-challenge",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853795",
-      "start_time": "8:00 AM",
-      "end_date": "2026-08-30",
-      "featured": true
-    },
-    {
-      "title": "Art on Wheels Weekend with VSCDA",
-      "date": "2026-09-18",
-      "description": "300+ meticulously restored vintage and historic race cars spanning 11 racing classes. A three-day journey through automotive history.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events/vscda",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853796",
-      "start_time": "8:00 AM",
-      "end_date": "2026-09-20",
-      "featured": true
-    },
-    {
-      "title": "SCCA National Championship Runoffs",
-      "date": "2026-10-01",
-      "description": "The pinnacle of US amateur road racing. Top SCCA racers from across the country compete for national championships at Road America.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events/scca-runoffs",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853798",
-      "start_time": "8:00 AM",
-      "end_date": "2026-10-04",
-      "featured": true
-    },
-    {
-      "title": "Road America Track Day",
-      "date": "2026-05-18",
-      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment on the full 4-mile circuit.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/track-days",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853799",
-      "start_time": "7:30 AM",
-      "end_time": "5:00 PM"
-    },
-    {
-      "title": "Road America Track Day",
-      "date": "2026-06-29",
-      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment on the full 4-mile circuit.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/track-days",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853800",
-      "start_time": "7:30 AM",
-      "end_time": "5:00 PM"
-    },
-    {
-      "title": "Road America Track Day",
-      "date": "2026-07-09",
-      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/track-days",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853801",
-      "start_time": "7:30 AM",
-      "end_time": "5:00 PM"
-    },
-    {
-      "title": "Road America Track Day",
-      "date": "2026-08-20",
-      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/track-days",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853802",
-      "start_time": "7:30 AM",
-      "end_time": "5:00 PM"
-    },
-    {
-      "title": "Road America Track Day",
-      "date": "2026-10-08",
-      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/track-days",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853803",
-      "start_time": "7:30 AM",
-      "end_time": "5:00 PM"
-    },
-    {
-      "title": "Sunset Cruise at Road America",
-      "date": "2026-05-18",
-      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/get-track",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853804",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "end_date": "2026-08-19",
-      "recurrence": "weekly_multiple",
-      "recurrence_days": "Monday,Wednesday"
-    },
-    {
-      "title": "Elkhart Lake Farmers & Artisans Market",
-      "date": "2026-05-16",
-      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.7969,
-      "lng": -87.9897,
-      "scraped_at": "2026-05-13T21:01:58.853805",
-      "start_time": "8:00 AM",
-      "end_time": "12:00 PM",
-      "end_date": "2026-10-31",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday"
-    },
     {
       "title": "Siebkens Summer Concert: Kylar Kuzio",
       "date": "2026-05-27",
@@ -267,7 +12,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853853",
+      "scraped_at": "2026-05-13T21:08:32.130620",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -281,7 +26,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853855",
+      "scraped_at": "2026-05-13T21:08:32.130622",
       "start_time": "7:00 PM",
       "end_time": "11:00 PM"
     },
@@ -295,7 +40,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853873",
+      "scraped_at": "2026-05-13T21:08:32.130623",
       "start_time": "7:30 PM",
       "end_time": "11:00 PM"
     },
@@ -309,7 +54,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853875",
+      "scraped_at": "2026-05-13T21:08:32.130624",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -323,7 +68,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853876",
+      "scraped_at": "2026-05-13T21:08:32.130625",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -337,7 +82,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853877",
+      "scraped_at": "2026-05-13T21:08:32.130625",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -351,7 +96,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853878",
+      "scraped_at": "2026-05-13T21:08:32.130626",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
       "featured": true
@@ -366,7 +111,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853879",
+      "scraped_at": "2026-05-13T21:08:32.130627",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -380,7 +125,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853880",
+      "scraped_at": "2026-05-13T21:08:32.130628",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -394,7 +139,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853881",
+      "scraped_at": "2026-05-13T21:08:32.130629",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -408,7 +153,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853882",
+      "scraped_at": "2026-05-13T21:08:32.130630",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -422,7 +167,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853883",
+      "scraped_at": "2026-05-13T21:08:32.130631",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -436,7 +181,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853883",
+      "scraped_at": "2026-05-13T21:08:32.130632",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -450,7 +195,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853884",
+      "scraped_at": "2026-05-13T21:08:32.130633",
       "start_time": "7:00 PM",
       "end_time": "11:00 PM",
       "featured": true
@@ -465,7 +210,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853885",
+      "scraped_at": "2026-05-13T21:08:32.130634",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -479,7 +224,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853886",
+      "scraped_at": "2026-05-13T21:08:32.130634",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -493,7 +238,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853887",
+      "scraped_at": "2026-05-13T21:08:32.130635",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "featured": true
@@ -508,7 +253,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853888",
+      "scraped_at": "2026-05-13T21:08:32.130636",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -522,7 +267,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853889",
+      "scraped_at": "2026-05-13T21:08:32.130637",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -536,7 +281,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853892",
+      "scraped_at": "2026-05-13T21:08:32.130638",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -550,7 +295,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853893",
+      "scraped_at": "2026-05-13T21:08:32.130639",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -564,7 +309,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853894",
+      "scraped_at": "2026-05-13T21:08:32.130641",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -578,7 +323,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853895",
+      "scraped_at": "2026-05-13T21:08:32.130642",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -592,7 +337,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853896",
+      "scraped_at": "2026-05-13T21:08:32.130643",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -606,7 +351,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853896",
+      "scraped_at": "2026-05-13T21:08:32.130644",
       "start_time": "6:00 PM",
       "end_time": "9:00 PM"
     },
@@ -620,7 +365,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853897",
+      "scraped_at": "2026-05-13T21:08:32.130645",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -634,7 +379,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853898",
+      "scraped_at": "2026-05-13T21:08:32.130645",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -648,7 +393,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853899",
+      "scraped_at": "2026-05-13T21:08:32.130646",
       "start_time": "7:00 PM"
     },
     {
@@ -661,7 +406,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-13T21:01:58.853900",
+      "scraped_at": "2026-05-13T21:08:32.130647",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM"
     },
@@ -676,6 +421,17 @@
       "scraped_at": "2026-05-14T02:46:51.024Z",
       "start_time": "5:00PM",
       "end_time": "9:00PM"
+    },
+    {
+      "title": "Spring Vintage Weekend with SVRA",
+      "date": "2026-05-15",
+      "description": "Experience the thrill of racing history at Road America\u2019s Spring Vintage Weekend with SVRA. From classic \u201950s\u2013\u201970s sports cars to modern racecars, the weekend celebrates motorsport\u2019s past and present, featuring legendary marques like Lotus, Alfa Romeo, Jaguar, Porsche, and Corvette. The action-packed schedule includes SVRA SpeedTour wheel-to-wheel racing across multiple classes\u2014Formula 5000, Formu",
+      "location": "Road America",
+      "link": "https://www.elkhartlake.com/event/spring-vintage-weekend-with-svra/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-14T02:46:51.024Z",
+      "end_date": "2026-05-17"
     },
     {
       "title": "Live Music in The Elk Room: Featuring Seth James",
@@ -774,16 +530,15 @@
       "end_time": "8:00PM"
     },
     {
-      "title": "Siebkens Live Music by Kylar Kuzio",
-      "date": "2026-05-27",
-      "description": "Kylar Kuzio is kicking off opening night of the Siebkens Summer Concert Series. Enjoy live music on the Siebkens bandstand outside the Stop-Inn Tavern, with food and drinks available from Sissy\u2019s Pop-Up Bar & Gelato and the Stop-Inn Tavern. No Carry-Ins allowed. Free, family & dog friendly outdoor concert. Seating available or bring your favorite lawn chair. In case of inclement weather, music wil",
-      "location": "Siebkens Resort",
-      "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-kylar-kuzio/",
+      "title": "MotoAmerica Superbikes & Vintage MotoFest",
+      "date": "2026-05-29",
+      "description": "MotoAmerica\u00a0Superbikes races are\u00a0returning to America\u2019s National Park of Speed\u00a0on May 30-June 1,\u00a02025.\u00a0Enjoy qualifying on Friday and all-day racing on Saturday & Sunday!\u00a0 Seven classes of road racing \u2013 Medallia Superbikes, Supersport, Stock 1000, Junior Cup, Mission King of the Baggers &\u00a0Royal Enfield Women\u2019s Build.Train.Race.\u00a0 Meet the riders in our open race paddock!\u00a0 Camping, VIP, and Fan Lap ",
+      "location": "Road America",
+      "link": "https://www.elkhartlake.com/event/motoamerica-superbikes-vintage-motofest/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
       "scraped_at": "2026-05-14T02:46:51.024Z",
-      "start_time": "7:00PM",
-      "end_time": "10:00PM"
+      "end_date": "2026-05-31"
     },
     {
       "title": "Siebkens Live Music by Jeremiah Jams",
@@ -870,6 +625,17 @@
       "end_time": "10:00PM"
     },
     {
+      "title": "WeatherTech Chicago Region SCCA June Sprints",
+      "date": "2026-06-05",
+      "description": "The WeatherTech\u00a0Chicago Region SCCA June Sprints\u00a0return to Road America June 5-7, 2026. The June Sprints have been held every year at\u00a0Road America\u00a0since 1956. This year\u2019s runninig of the\u00a0WeatherTech\u00ae\u00a0Chicago Region SCCA\u00a0June Sprints\u00a0at Road America will feature everything from showroom stock to highly modified purpose-built race cars from eight distinct race groups. With Road America\u2019s park-like s",
+      "location": "Road America",
+      "link": "https://www.elkhartlake.com/event/weathertech-chicago-region-scca-june-sprints/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-14T02:46:51.024Z",
+      "end_date": "2026-06-07"
+    },
+    {
       "title": "Farmers & Artisans Market",
       "date": "2026-06-06",
       "description": "Elkhart Lake\u2019s Farmers & Artisans Market in the Village Square is a Saturday morning tradition. Pick up fresh seasonal vegetables, flowers, cheeses, local arts and specialty products from approximately 50 vendors. Every item sold is produced locally in the state of Wisconsin by the person right behind the stand! Grab your reusable grocery bags and head to the square every Saturday morning.",
@@ -904,18 +670,6 @@
       "scraped_at": "2026-05-14T02:46:51.024Z",
       "start_time": "6:00PM",
       "end_time": "8:00PM"
-    },
-    {
-      "title": "Siebkens Live Music by Chasing Tales",
-      "date": "2026-06-10",
-      "description": "Chasing Tales hits the stage for the Siebkens Summer Concert Series. Enjoy live music on the bandstand, featuring original jams from Jon Prigge, Alex Simmons, Connor Grundman, and Tony Menzer. Food and beverages available from Sissy\u2019s Pop-Up Bar and the Stop-Inn Tavern. No Carry-Ins allowed. Free, family & dog friendly outdoor concert. Seating available or bring your favorite lawn chair. In case o",
-      "location": "Siebkens Resort",
-      "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-chasing-tales/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-14T02:46:51.024Z",
-      "start_time": "7:00PM",
-      "end_time": "10:00PM"
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -988,18 +742,6 @@
       "scraped_at": "2026-05-14T02:46:51.024Z",
       "start_time": "6:00PM",
       "end_time": "8:00PM"
-    },
-    {
-      "title": "Siebkens Live Music by 7000apart",
-      "date": "2026-06-17",
-      "description": "7000apart returns to Siebkens Summer Concert on Wednesday nights! Live music on the Siebkens bandstand outside of the Stop-Inn Tavern. Food & beverage available from Sissy\u2019s Pop-Up Bar & Gelato and the Stop-Inn Tavern. No Carry-Ins allowed. Free, family & dog friendly outdoor concert. Seating available or bring your favorite lawn chair. In case of inclement weather, music will move inside the Tave",
-      "location": "Siebkens Resort",
-      "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-7000apart/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-14T02:46:51.024Z",
-      "start_time": "7:00PM",
-      "end_time": "10:00PM"
     },
     {
       "title": "INDYCAR XPEL Grand Prix Presented by AMR",
@@ -1097,6 +839,17 @@
       "end_time": "10:00PM"
     },
     {
+      "title": "Cheese Capital Cup Featuring Trans Am SpeedTour",
+      "date": "2026-06-26",
+      "description": "The\u00a0Trans Am Series\u00a0presented by Pirelli dates back to 1966. Throughout the years, some of the greatest names in\u00a0motorsports have participated in the Trans Am Series. Names like Tommy Kendall, Mark Donohue, Peter Gregg, Bob Tullius and Wally Dallenbach, Jr. have all won\u00a0multiple championships under the Trans Am name. Several distinct classes take center\u00a0stage in today\u2019s Trans Am Series as it is po",
+      "location": "Road America",
+      "link": "https://www.elkhartlake.com/event/cheese-capital-cup-featuring-trans-am-speedtour/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-14T02:46:51.024Z",
+      "end_date": "2026-06-28"
+    },
+    {
       "title": "Farmers & Artisans Market",
       "date": "2026-06-27",
       "description": "Elkhart Lake\u2019s Farmers & Artisans Market in the Village Square is a Saturday morning tradition. Pick up fresh seasonal vegetables, flowers, cheeses, local arts and specialty products from approximately 50 vendors. Every item sold is produced locally in the state of Wisconsin by the person right behind the stand! Grab your reusable grocery bags and head to the square every Saturday morning.",
@@ -1131,18 +884,6 @@
       "scraped_at": "2026-05-14T02:46:51.024Z",
       "start_time": "6:00PM",
       "end_time": "8:00PM"
-    },
-    {
-      "title": "Siebkens Live Music by The Chili Dogs",
-      "date": "2026-07-01",
-      "description": "Chili Dogs take the stage at Siebkens for a night of rock at the Summer Concert Series. Head to the bandstand outside the Stop-Inn Tavern, grab a cold drink, and enjoy an evening of live music at Siebkens Resort.",
-      "location": "Siebkens Resort",
-      "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-chili-dogs/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-14T02:46:51.024Z",
-      "start_time": "7:00PM",
-      "end_time": "10:00PM"
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1203,18 +944,6 @@
       "scraped_at": "2026-05-14T02:46:51.024Z",
       "start_time": "6:00PM",
       "end_time": "8:00PM"
-    },
-    {
-      "title": "Siebkens Live Music by Trapper Schoepp",
-      "date": "2026-07-08",
-      "description": "Milwaukee-based singer-songwriter Trapper Schoepp brings his rootsy rock and Americana sound to the Siebkens Summer Concert Series. Known for his storytelling style and dynamic live performances, he\u2019s shared stages with acts like The Wallflowers and Old 97\u2019s, delivering songs that blend rock energy with rich, character-driven lyrics. Catch him live on the bandstand outside the Stop-Inn Tavern for ",
-      "location": "Siebkens Resort",
-      "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-trapper-schoepp/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-14T02:46:51.024Z",
-      "start_time": "7:00PM",
-      "end_time": "10:00PM"
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -1289,16 +1018,15 @@
       "end_time": "8:00PM"
     },
     {
-      "title": "Siebkens Live Music by Erin Krebs & Paul Sucherman",
-      "date": "2026-07-15",
-      "description": "Erin Krebs brings her signature blend of jazz, blues, and soul to the Siebkens Summer Concert Series, joined by acclaimed drummer Paul Sucherman. A Wisconsin-based vocalist known for her rich tone and timeless style, Erin pairs seamlessly with Paul\u2019s seasoned musicianship for a performance that\u2019s both refined and engaging. Catch them live on the bandstand outside the Stop-Inn Tavern for a night of",
-      "location": "Siebkens Resort",
-      "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-erin-krebs-paul-sucherman-2/",
+      "title": "WeatherTech Vintage Weekend with Brian Redman",
+      "date": "2026-07-16",
+      "description": "International Challenge\u00a0presents the\u00a0WeatherTech\u00ae Vintage Weekend with Brian Redman at Road America, taking place July 16-19, 2026,\u00a0one of the largest vintage racing events in the United States. The\u00a0WeatherTech\u00ae Vintage Weekend\u00a0features over 400 vintage and historic racecars competing across several days. The WeatherTech Vintage Weekend presented by International Challenge\u00a0is a premier vintage gat",
+      "location": "Road America",
+      "link": "https://www.elkhartlake.com/event/weathertech-vintage-weekend-with-brian-redman/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
       "scraped_at": "2026-05-14T02:46:51.024Z",
-      "start_time": "7:00PM",
-      "end_time": "10:00PM"
+      "end_date": "2026-07-19"
     },
     {
       "title": "Vintage Concours d\u2019Elegance",
@@ -1443,6 +1171,17 @@
       "scraped_at": "2026-05-14T02:46:51.024Z",
       "start_time": "6:00PM",
       "end_time": "8:00PM"
+    },
+    {
+      "title": "Motul Sportscar Endurance Grand Prix Featuring IMSA",
+      "date": "2026-07-30",
+      "description": "North America\u2019s premier sportscar series returns to America\u2019s National Park of Speed, bringing several familiar names for race fans and a handful of down-to-the-wire battles. IMSA races feature elite sportscars from nearly 20 different manufacturers, including Mercedes, Ferrari, Chevrolet, and Aston Martin. The skill of the drivers, paired with advanced automotive technology, creates a high-stakes",
+      "location": "Road America",
+      "link": "https://www.elkhartlake.com/event/sportscar-weekend-with-imsa/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-14T02:46:51.024Z",
+      "end_date": "2026-08-02"
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1623,6 +1362,17 @@
       "scraped_at": "2026-05-14T02:46:51.024Z",
       "start_time": "6:00PM",
       "end_time": "8:00PM"
+    },
+    {
+      "title": "GT World Challenge America",
+      "date": "2026-08-28",
+      "description": "The\u00a0GT World Challenge America\u00a0headlines an all-sportscar weekend at Road America August 28-30, 2026. In addition, the event will feature rounds for GT America powered by AWS, the Toyota Gazoo Racing North America GR Cup Series, Pirelli GT4 America, McLaren Trophy America and TC America powered by Skip Barber. This weekend of thrilling sportscar racing will bring\u00a0exotic GT3, GT4, and Touring Car m",
+      "location": "Road America",
+      "link": "https://www.elkhartlake.com/event/gt-world-challenge-america/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-14T02:46:51.024Z",
+      "end_date": "2026-08-30"
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1876,6 +1626,17 @@
       "end_time": "8:00PM"
     },
     {
+      "title": "SCCA National Championship Runoffs",
+      "date": "2026-10-01",
+      "description": "The Sports Car Club of America returns to Road America in 2026\u00a0for the annual SCCA National Championship Runoffs,\u00a0a gathering where\u00a0the top SCCA racers in the country go head-to-head and prove who is best. Throughout its 60+ year history, the Runoffs have been held at legendary tracks. It is an event that caps the\u00a0SCCA Road Racing program each year and has evolved into what is widely known as the ",
+      "location": "Road America",
+      "link": "https://www.elkhartlake.com/event/scca-national-championship-runoffs/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-14T02:46:51.024Z",
+      "end_date": "2026-10-04"
+    },
+    {
       "title": "Farmers & Artisans Market",
       "date": "2026-10-03",
       "description": "Elkhart Lake\u2019s Farmers & Artisans Market in the Village Square is a Saturday morning tradition. Pick up fresh seasonal vegetables, flowers, cheeses, local arts and specialty products from approximately 50 vendors. Every item sold is produced locally in the state of Wisconsin by the person right behind the stand! Grab your reusable grocery bags and head to the square every Saturday morning.",
@@ -2015,7 +1776,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-05-13/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-13T21:02:03.693220",
+      "scraped_at": "2026-05-13T21:08:37.096690",
       "start_time": "6:00 pm"
     },
     {
@@ -2026,7 +1787,7 @@
       "link": "https://www.elkhartlake.com/event/spring-vintage-weekend-with-svra/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-13T21:02:03.693524"
+      "scraped_at": "2026-05-13T21:08:37.097068"
     },
     {
       "title": "Live Music in The Elk Room: Featuring Seth James",
@@ -2036,7 +1797,18 @@
       "link": "https://www.elkhartlake.com/event/live-music-in-the-elk-room-featuring-seth-james/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-13T21:02:03.693820",
+      "scraped_at": "2026-05-13T21:08:37.097430",
+      "start_time": "7:00 pm"
+    },
+    {
+      "title": "Live Music in The Elk Room: Featuring Mark Croft",
+      "date": "See website",
+      "description": "Unwind with live music in The Elk Room at The Osthoff Resort, featuring Mike Crofts. Grab a drink, find a cozy spot, and enjoy Mike\u2019s smooth sounds for a perfect,\u2026",
+      "location": "Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/live-music-in-the-elk-room-featuring-mark-croft/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-13T21:08:37.097791",
       "start_time": "7:00 pm"
     },
     {
@@ -2047,7 +1819,7 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market-3/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-13T21:02:03.695180",
+      "scraped_at": "2026-05-13T21:08:37.099107",
       "start_time": "8:00 am"
     },
     {
@@ -2058,7 +1830,7 @@
       "link": "https://www.elkhartlake.com/event/elkhart-lake-annual-veterans-memorial-tribute/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-13T21:02:03.695471",
+      "scraped_at": "2026-05-13T21:08:37.099464",
       "start_time": "10:00 am"
     },
     {
@@ -2069,124 +1841,222 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-05-23/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-13T21:02:03.695825",
+      "scraped_at": "2026-05-13T21:08:37.099899",
       "start_time": "5:30 pm"
     },
     {
-      "title": "SVRA Vintage Festival Weekend",
-      "date": "See website",
-      "description": "Racing\u2019s glorious past comes to life as the Spring Vintage Weekend with SVRA returns to Road America. The season kick-off event will showcase all the sights and sounds from motorsport\u2019s [\u2026]",
-      "location": "Elkhart Lake, WI",
-      "link": "https://visitsheboygancounty.com/event/svra-spring-vintage-festival-weekend/",
-      "source": "Visit Sheboygan County",
-      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
-      "scraped_at": "2026-05-13T21:02:16.991903"
-    },
-    {
-      "title": "Elkhart Lake\u2019s Farmers & Artisans Market",
-      "date": "See website",
-      "description": "Elkhart Lake\u2019s Farmers & Artisans Market in the Village Square is a Saturday morning tradition. Pick up fresh seasonal vegetables, flowers, cheeses, local arts and specialty products from approximately 50 [\u2026]",
-      "location": "Elkhart Lake, WI",
-      "link": "https://visitsheboygancounty.com/event/elkhart-lakes-farmers-artisans-market/",
-      "source": "Visit Sheboygan County",
-      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
-      "scraped_at": "2026-05-13T21:02:16.992057",
-      "start_time": "8:00 am"
-    },
-    {
-      "title": "MotoAmerica Superbikes & Vintage MotoFest",
-      "date": "See website",
-      "description": "MotoAmerica\u00a0Superbike\u00a0races are\u00a0returning to America\u2019s National Park of Speed\u00a0on May 29-31,\u00a02026.\u00a0Enjoy qualifying on Friday and all-day racing Saturday & Sunday. Five classes of road racing will compete, including\u00a0Superbike,\u00a0Motovation Supersport,\u00a0Parts Unlimited Talent [\u2026]",
-      "location": "Elkhart Lake, WI",
-      "link": "https://visitsheboygancounty.com/event/motoamerica-superbikes-vintage-motofest/",
-      "source": "Visit Sheboygan County",
-      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
-      "scraped_at": "2026-05-13T21:02:16.992186"
-    },
-    {
-      "title": "WeatherTech Chicago Region SCCA June Sprints",
-      "date": "See website",
-      "description": "The 71st running of the WeatherTech\u00ae Chicago Region June Sprints\u00ae returns to Road America \u00a0June 5\u20137, 2026. This event, part of the SCCA Majors Tour, and our longest-running event, delivers [\u2026]",
-      "location": "Elkhart Lake, WI",
-      "link": "https://visitsheboygancounty.com/event/weathertech-chicago-region-scca-june-sprints/",
-      "source": "Visit Sheboygan County",
-      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
-      "scraped_at": "2026-05-13T21:02:16.992451"
-    },
-    {
-      "title": "INDYCAR XPEL Grand Prix Presented by AMR",
-      "date": "See website",
-      "description": "The\u00a0XPEL INDYCAR Grand Prix presented by AMR takes center stage at Road America, as an international lineup of drivers will have their chance to battle it out for glory on one of the world\u2019s most majestic road courses. The INDYCAR SERIES is North America\u2019s premier open-wheel series, with athletes re",
-      "location": "Elkhart Lake, WI",
-      "link": "https://visitsheboygancounty.com/event/indycar-xpel-grand-prix-presented-by-amr/",
-      "source": "Visit Sheboygan County",
-      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
-      "scraped_at": "2026-05-13T21:02:16.992876"
-    },
-    {
-      "title": "Cheese Capital Cup Featuring Trans Am SpeedTour",
-      "date": "See website",
-      "description": "The\u00a0Trans Am Series\u00a0presented by Pirelli dates back to 1966. Throughout the years, some of the greatest names in\u00a0motorsports have participated in the Trans Am Series. Names like Tommy Kendall, Mark Donohue, Peter Gregg, Bob Tullius and Wally Dallenbach, Jr. have all won\u00a0multiple championships under ",
-      "location": "Elkhart Lake, WI",
-      "link": "https://visitsheboygancounty.com/event/trans-am-speed-tour/",
-      "source": "Visit Sheboygan County",
-      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
-      "scraped_at": "2026-05-13T21:02:16.993143"
-    },
-    {
-      "title": "Live Music at The Osthoff Resort & Spa",
-      "date": "See website",
-      "description": "From free live music on the Lake Deck to the laid-back vibe of the Elk Room\u2014and even ticketed shows in our conference center\u2014we\u2019re all about great live music and good times, just like our guests. Enjoy talented musicians, tasty drinks, and an atmosphere that\u2019s always welcoming.",
-      "location": "Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI",
-      "link": "https://osthoff.com/calendar/category/live-music/",
-      "source": "Osthoff Resort",
-      "source_url": "https://www.osthoff.com/events/",
-      "lat": 43.8347,
-      "lng": -87.9692,
-      "scraped_at": "2026-05-13T21:02:17.861105"
-    },
-    {
-      "title": "Views Navigation",
-      "date": "2026-05-13",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "https://elkhartlakewi.gov/calendar/list/",
-      "source": "Village of Elkhart Lake",
-      "source_url": "https://elkhartlakewi.gov/calendar/",
-      "scraped_at": "2026-05-13T21:02:19.550563"
-    },
-    {
-      "title": "Public Works Committee",
+      "title": "Login",
       "date": "See website",
       "description": "",
       "location": "Elkhart Lake, WI",
-      "link": "https://elkhartlakewi.gov/event/public-works-committee-8/",
-      "source": "Village of Elkhart Lake",
-      "source_url": "https://elkhartlakewi.gov/calendar/",
-      "scraped_at": "2026-05-13T21:02:19.550640",
-      "start_time": "10:45 am"
+      "link": "#",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://allevents.in/elkhart-lake/all",
+      "scraped_at": "2026-05-13T21:08:57.514079"
     },
     {
-      "title": "Board of Trustees",
+      "title": "Create an event",
       "date": "See website",
       "description": "",
       "location": "Elkhart Lake, WI",
-      "link": "https://elkhartlakewi.gov/event/board-of-trustees-4/",
-      "source": "Village of Elkhart Lake",
-      "source_url": "https://elkhartlakewi.gov/calendar/",
-      "scraped_at": "2026-05-13T21:02:19.550704",
-      "start_time": "6:00 pm"
+      "link": "https://allevents.in/manage/create.php?ref=topbar-dropdown",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://allevents.in/elkhart-lake/all",
+      "scraped_at": "2026-05-13T21:08:57.514156"
     },
     {
-      "title": "Joint Emergency Response Committee",
+      "title": "Manage events",
       "date": "See website",
       "description": "",
       "location": "Elkhart Lake, WI",
-      "link": "https://elkhartlakewi.gov/event/joint-emergency-response-committee-3/",
-      "source": "Village of Elkhart Lake",
-      "source_url": "https://elkhartlakewi.gov/calendar/",
-      "scraped_at": "2026-05-13T21:02:19.550768",
-      "start_time": "4:30 pm"
+      "link": "https://allevents.in/pages/event-listing?ref=topbar-dropdown",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://allevents.in/elkhart-lake/all",
+      "scraped_at": "2026-05-13T21:08:57.514217"
+    },
+    {
+      "title": "Get the AllEventsAppNew",
+      "date": "See website",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "https://play.google.com/store/apps/details?id=com.amitech.allevents&utm_source=Mobile_topbar&utm_medium=topbar&utm_campaign=topbar",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://allevents.in/elkhart-lake/all",
+      "scraped_at": "2026-05-13T21:08:57.514288"
+    },
+    {
+      "title": "Need help?",
+      "date": "See website",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "https://allevents.in/pages/support?ref=topbar-dropdown",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://allevents.in/elkhart-lake/all",
+      "scraped_at": "2026-05-13T21:08:57.514350"
+    },
+    {
+      "title": "Chat with AI Assistant",
+      "date": "See website",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "#",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://allevents.in/elkhart-lake/all",
+      "scraped_at": "2026-05-13T21:08:57.514420"
+    },
+    {
+      "title": "Support Centre",
+      "date": "See website",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "https://support.allevents.in/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://allevents.in/elkhart-lake/all",
+      "scraped_at": "2026-05-13T21:08:57.514488"
+    },
+    {
+      "title": "Feedback & Suggestions",
+      "date": "See website",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "#",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://allevents.in/elkhart-lake/all",
+      "scraped_at": "2026-05-13T21:08:57.514552"
+    },
+    {
+      "title": "XPEL INDYCAR Grand Prix presented by AMR",
+      "date": "2026-06-18",
+      "description": "IndyCar's premier open-wheel series returns to Road America with an international lineup of drivers on one of the world's most majestic road courses.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/events/indycar-grand-prix",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-13T21:08:32.130589",
+      "start_time": "8:00 AM",
+      "end_date": "2026-06-21",
+      "featured": true
+    },
+    {
+      "title": "Art on Wheels Weekend with VSCDA",
+      "date": "2026-09-18",
+      "description": "300+ meticulously restored vintage and historic race cars spanning 11 racing classes. A three-day journey through automotive history.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/events/vscda",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-13T21:08:32.130595",
+      "start_time": "8:00 AM",
+      "end_date": "2026-09-20",
+      "featured": true
+    },
+    {
+      "title": "Road America Track Day",
+      "date": "2026-05-18",
+      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment on the full 4-mile circuit.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/track-days",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-13T21:08:32.130597",
+      "start_time": "7:30 AM",
+      "end_time": "5:00 PM"
+    },
+    {
+      "title": "Road America Track Day",
+      "date": "2026-06-29",
+      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment on the full 4-mile circuit.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/track-days",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-13T21:08:32.130598",
+      "start_time": "7:30 AM",
+      "end_time": "5:00 PM"
+    },
+    {
+      "title": "Road America Track Day",
+      "date": "2026-07-09",
+      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/track-days",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-13T21:08:32.130599",
+      "start_time": "7:30 AM",
+      "end_time": "5:00 PM"
+    },
+    {
+      "title": "Road America Track Day",
+      "date": "2026-08-20",
+      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/track-days",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-13T21:08:32.130602",
+      "start_time": "7:30 AM",
+      "end_time": "5:00 PM"
+    },
+    {
+      "title": "Road America Track Day",
+      "date": "2026-10-08",
+      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/track-days",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-13T21:08:32.130604",
+      "start_time": "7:30 AM",
+      "end_time": "5:00 PM"
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-05-18",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-13T21:08:32.130605",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": "2026-08-19",
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday"
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-05-16",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-13T21:08:32.130606",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": "2026-10-31",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday"
     },
     {
       "title": "Spring Vintage Weekend",
@@ -2197,7 +2067,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:19.839554",
+      "scraped_at": "2026-05-13T21:08:54.100081",
       "start_time": "3:30 AM"
     },
     {
@@ -2209,7 +2079,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:19.839619"
+      "scraped_at": "2026-05-13T21:08:54.100159"
     },
     {
       "title": "2026 MotoAmerica Superbikes - 3 Day Pass",
@@ -2220,7 +2090,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:19.839698"
+      "scraped_at": "2026-05-13T21:08:54.100215"
     },
     {
       "title": "WeatherTech Vintage Weekend",
@@ -2231,8 +2101,19 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:19.839734",
+      "scraped_at": "2026-05-13T21:08:54.100234",
       "start_time": "3:30 AM"
+    },
+    {
+      "title": "WeatherTech Chicago Region SCCA June Sprints",
+      "date": "See website",
+      "description": "Join us June 5\u20137, 2026, for the 71st running of the WeatherTech\u00ae Chicago Region June Sprints\u00ae. This event, part of the SCCA Majors Tour, and our longest-running event, delivers a weekend packed...",
+      "location": "Road America\u00ae, N 7390 WI-67, Plymouth, WI",
+      "link": "https://www.fdl.com/event/weathertech-chicago-region-scca-june-sprints/2026-06-05/",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "is_free": false,
+      "scraped_at": "2026-05-13T21:08:54.100254"
     },
     {
       "title": "Cheese Capital Cup Featuring Racing America\u2019s Trans Am & International GT",
@@ -2243,7 +2124,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:19.839845",
+      "scraped_at": "2026-05-13T21:08:54.100293",
       "start_time": "3:30 AM"
     },
     {
@@ -2255,7 +2136,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:19.839880"
+      "scraped_at": "2026-05-13T21:08:54.100317"
     },
     {
       "title": "GT World Challenge America",
@@ -2266,7 +2147,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.040531",
+      "scraped_at": "2026-05-13T21:08:54.465365",
       "start_time": "3:30 AM"
     },
     {
@@ -2278,7 +2159,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.040563"
+      "scraped_at": "2026-05-13T21:08:54.465422"
     },
     {
       "title": "ACC-Wisconsin 2026 Annual Conference and Meeting of Members",
@@ -2289,7 +2170,18 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.175060"
+      "scraped_at": "2026-05-13T21:08:54.623588"
+    },
+    {
+      "title": "Elkhart Lake\u2019s Farmers & Artisans Market",
+      "date": "See website",
+      "description": "Elkhart Lake\u2019s Farmers & Artisans Market in the Village Square is a Saturday morning tradition. Pick up fresh seasonal vegetables, flowers, cheeses, local arts and specialty products from...",
+      "location": "Downtown Night, 41 E Rhine St, Elkhart Lake, WI",
+      "link": "https://visitsheboygancounty.com/event/elkhart-lakes-farmers-artisans-market/2026-05-30/",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "is_free": false,
+      "scraped_at": "2026-05-13T21:08:54.962039"
     },
     {
       "title": "Road America SpeedTour",
@@ -2300,7 +2192,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.448162",
+      "scraped_at": "2026-05-13T21:08:54.962093",
       "start_time": "11:59 PM"
     },
     {
@@ -2312,7 +2204,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.448182"
+      "scraped_at": "2026-05-13T21:08:54.962127"
     },
     {
       "title": "The Flight Crew at The Lake Deck at Osthoff Resort",
@@ -2323,7 +2215,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.448205"
+      "scraped_at": "2026-05-13T21:08:54.962166"
     },
     {
       "title": "America 250",
@@ -2334,7 +2226,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.672714",
+      "scraped_at": "2026-05-13T21:08:55.100121",
       "start_time": "10:30 PM"
     },
     {
@@ -2346,7 +2238,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.672751",
+      "scraped_at": "2026-05-13T21:08:55.100158",
       "start_time": "11:30 AM"
     },
     {
@@ -2358,7 +2250,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.672774"
+      "scraped_at": "2026-05-13T21:08:55.100181"
     },
     {
       "title": "Drift Day 109",
@@ -2369,7 +2261,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.672797"
+      "scraped_at": "2026-05-13T21:08:55.100205"
     },
     {
       "title": "Guster",
@@ -2380,7 +2272,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.672816"
+      "scraped_at": "2026-05-13T21:08:55.100224"
     },
     {
       "title": "Paint the Towns in Fall Color Plein Air",
@@ -2391,7 +2283,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.672834"
+      "scraped_at": "2026-05-13T21:08:55.100242"
     },
     {
       "title": "Great Lakes Championships",
@@ -2402,7 +2294,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.672856"
+      "scraped_at": "2026-05-13T21:08:55.100265"
     },
     {
       "title": "Wisconsin microbrewers beerfest",
@@ -2413,7 +2305,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.826384"
+      "scraped_at": "2026-05-13T21:08:55.262486"
     },
     {
       "title": "7000apart at Siebken's Resort",
@@ -2424,7 +2316,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.826468"
+      "scraped_at": "2026-05-13T21:08:55.262575"
     },
     {
       "title": "Summer Apex 2026",
@@ -2435,7 +2327,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.968967"
+      "scraped_at": "2026-05-13T21:08:55.500229"
     },
     {
       "title": "June Jams Drift Event",
@@ -2446,7 +2338,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.969021"
+      "scraped_at": "2026-05-13T21:08:55.500271"
     },
     {
       "title": "ART ON WHEELS VINTAGE WEEKEND FEATURING VSCDA",
@@ -2457,7 +2349,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.969061"
+      "scraped_at": "2026-05-13T21:08:55.500295"
     },
     {
       "title": "Arts and Crafts Fair",
@@ -2468,7 +2360,7 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.969097"
+      "scraped_at": "2026-05-13T21:08:55.500316"
     },
     {
       "title": "Cheese Capital Jazz and Blues Crawl for the Arts",
@@ -2479,8 +2371,103 @@
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "is_free": false,
-      "scraped_at": "2026-05-13T21:02:20.969135",
+      "scraped_at": "2026-05-13T21:08:55.500339",
       "start_time": "11:55 PM"
+    },
+    {
+      "title": "SVRA Vintage Festival Weekend",
+      "date": "See website",
+      "description": "Racing\u2019s glorious past comes to life as the Spring Vintage Weekend with SVRA returns to Road America. The season kick-off event will showcase all the sights and sounds from motorsport\u2019s [\u2026]",
+      "location": "Elkhart Lake, WI",
+      "link": "https://visitsheboygancounty.com/event/svra-spring-vintage-festival-weekend/",
+      "source": "Visit Sheboygan County",
+      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
+      "scraped_at": "2026-05-13T21:08:50.955539"
+    },
+    {
+      "title": "MotoAmerica Superbikes & Vintage MotoFest",
+      "date": "See website",
+      "description": "MotoAmerica\u00a0Superbike\u00a0races are\u00a0returning to America\u2019s National Park of Speed\u00a0on May 29-31,\u00a02026.\u00a0Enjoy qualifying on Friday and all-day racing Saturday & Sunday. Five classes of road racing will compete, including\u00a0Superbike,\u00a0Motovation Supersport,\u00a0Parts Unlimited Talent [\u2026]",
+      "location": "Elkhart Lake, WI",
+      "link": "https://visitsheboygancounty.com/event/motoamerica-superbikes-vintage-motofest/",
+      "source": "Visit Sheboygan County",
+      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
+      "scraped_at": "2026-05-13T21:08:50.955822"
+    },
+    {
+      "title": "INDYCAR XPEL Grand Prix Presented by AMR",
+      "date": "See website",
+      "description": "The\u00a0XPEL INDYCAR Grand Prix presented by AMR takes center stage at Road America, as an international lineup of drivers will have their chance to battle it out for glory on one of the world\u2019s most majestic road courses. The INDYCAR SERIES is North America\u2019s premier open-wheel series, with athletes re",
+      "location": "Elkhart Lake, WI",
+      "link": "https://visitsheboygancounty.com/event/indycar-xpel-grand-prix-presented-by-amr/",
+      "source": "Visit Sheboygan County",
+      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
+      "scraped_at": "2026-05-13T21:08:50.956492"
+    },
+    {
+      "title": "Cheese Capital Cup Featuring Trans Am SpeedTour",
+      "date": "See website",
+      "description": "The\u00a0Trans Am Series\u00a0presented by Pirelli dates back to 1966. Throughout the years, some of the greatest names in\u00a0motorsports have participated in the Trans Am Series. Names like Tommy Kendall, Mark Donohue, Peter Gregg, Bob Tullius and Wally Dallenbach, Jr. have all won\u00a0multiple championships under ",
+      "location": "Elkhart Lake, WI",
+      "link": "https://visitsheboygancounty.com/event/trans-am-speed-tour/",
+      "source": "Visit Sheboygan County",
+      "source_url": "https://visitsheboygancounty.com/events/category/elkhart-lake/",
+      "scraped_at": "2026-05-13T21:08:50.956758"
+    },
+    {
+      "title": "Live Music at The Osthoff Resort & Spa",
+      "date": "See website",
+      "description": "From free live music on the Lake Deck to the laid-back vibe of the Elk Room\u2014and even ticketed shows in our conference center\u2014we\u2019re all about great live music and good times, just like our guests. Enjoy talented musicians, tasty drinks, and an atmosphere that\u2019s always welcoming.",
+      "location": "Osthoff Resort, 101 Osthoff Ave, Elkhart Lake, WI",
+      "link": "https://osthoff.com/calendar/category/live-music/",
+      "source": "Osthoff Resort",
+      "source_url": "https://www.osthoff.com/events/",
+      "lat": 43.8347,
+      "lng": -87.9692,
+      "scraped_at": "2026-05-13T21:08:51.765175"
+    },
+    {
+      "title": "Views Navigation",
+      "date": "2026-05-13",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "https://elkhartlakewi.gov/calendar/list/",
+      "source": "Village of Elkhart Lake",
+      "source_url": "https://elkhartlakewi.gov/calendar/",
+      "scraped_at": "2026-05-13T21:08:53.381900"
+    },
+    {
+      "title": "Public Works Committee",
+      "date": "See website",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "https://elkhartlakewi.gov/event/public-works-committee-8/",
+      "source": "Village of Elkhart Lake",
+      "source_url": "https://elkhartlakewi.gov/calendar/",
+      "scraped_at": "2026-05-13T21:08:53.381973",
+      "start_time": "10:45 am"
+    },
+    {
+      "title": "Board of Trustees",
+      "date": "See website",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "https://elkhartlakewi.gov/event/board-of-trustees-4/",
+      "source": "Village of Elkhart Lake",
+      "source_url": "https://elkhartlakewi.gov/calendar/",
+      "scraped_at": "2026-05-13T21:08:53.382036",
+      "start_time": "6:00 pm"
+    },
+    {
+      "title": "Joint Emergency Response Committee",
+      "date": "See website",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "https://elkhartlakewi.gov/event/joint-emergency-response-committee-3/",
+      "source": "Village of Elkhart Lake",
+      "source_url": "https://elkhartlakewi.gov/calendar/",
+      "scraped_at": "2026-05-13T21:08:53.382095",
+      "start_time": "4:30 pm"
     },
     {
       "title": "A Special Evening with Psychic Medium Sara Beaupre ~ Fond du Lac",
@@ -2490,7 +2477,7 @@
       "link": "https://www.eventbrite.com/e/a-special-evening-with-psychic-medium-sara-beaupre-fond-du-lac-tickets-1979878148840?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.863337"
+      "scraped_at": "2026-05-13T21:08:57.069998"
     },
     {
       "title": "2026 WWII Pioneer Village - 1941 - The Beginning",
@@ -2500,7 +2487,7 @@
       "link": "https://www.eventbrite.com/e/2026-wwii-pioneer-village-1941-the-beginning-registration-1977670984151?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.863632"
+      "scraped_at": "2026-05-13T21:08:57.070290"
     },
     {
       "title": "WaterCity WrestlingCon 2026",
@@ -2510,7 +2497,7 @@
       "link": "https://www.eventbrite.com/e/watercity-wrestlingcon-2026-tickets-1977201465809?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.863963"
+      "scraped_at": "2026-05-13T21:08:57.070620"
     },
     {
       "title": "2026 Fond du Lac Regional Job Fair",
@@ -2520,7 +2507,7 @@
       "link": "https://www.eventbrite.com/e/2026-fond-du-lac-regional-job-fair-tickets-1981246036228?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.864250"
+      "scraped_at": "2026-05-13T21:08:57.070906"
     },
     {
       "title": "Better Together Women\u2019s Networking WashCo Coffee & Connections 5.21 Meetup",
@@ -2530,7 +2517,7 @@
       "link": "https://www.eventbrite.com/e/better-together-womens-networking-washco-coffee-connections-521-meetup-tickets-1984586160630?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.864540"
+      "scraped_at": "2026-05-13T21:08:57.071195"
     },
     {
       "title": "Book Bedazzling",
@@ -2540,7 +2527,7 @@
       "link": "https://www.eventbrite.com/e/book-bedazzling-tickets-1988565930228?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.864872"
+      "scraped_at": "2026-05-13T21:08:57.071527"
     },
     {
       "title": "Manitowoc, WI - Little Mania Mini Wrestling @ Big Apple",
@@ -2550,7 +2537,17 @@
       "link": "https://www.eventbrite.com/e/manitowoc-wi-little-mania-mini-wrestling-big-apple-tickets-1978766106692?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.865202"
+      "scraped_at": "2026-05-13T21:08:57.071853"
+    },
+    {
+      "title": "House of Hormones",
+      "date": "See website",
+      "description": "",
+      "location": "Elkhart Lake, WI",
+      "link": "https://www.eventbrite.com/e/house-of-hormones-tickets-1985575742496?aff=ebdssbcitybrowse",
+      "source": "Eventbrite",
+      "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
+      "scraped_at": "2026-05-13T21:08:57.074626"
     },
     {
       "title": "NASA's SpaceX 34th Commercial Resupply Services Mission Launch",
@@ -2560,57 +2557,37 @@
       "link": "https://www.eventbrite.com/e/nasas-spacex-34th-commercial-resupply-services-mission-launch-registration-1987131019371?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.867930"
+      "scraped_at": "2026-05-13T21:08:57.074893"
     },
     {
-      "title": "IIP TALKS | Jed Wilson | Estrutura e S\u00edncope",
+      "title": "Group Healing",
       "date": "See website",
       "description": "",
       "location": "Elkhart Lake, WI",
-      "link": "https://www.eventbrite.com.br/e/iip-talks-jed-wilson-estrutura-e-sincope-tickets-1986214361623?aff=ebdssbcitybrowse",
+      "link": "https://www.eventbrite.com.au/e/group-healing-tickets-1988448738705?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.868238"
+      "scraped_at": "2026-05-13T21:08:57.075201"
     },
     {
-      "title": "Destrave seu Potencial 30+ | Como Eliminar a Procrastina\u00e7\u00e3o",
+      "title": "Milk Street x Ooni: The Art of Indoor Pizza",
       "date": "See website",
       "description": "",
       "location": "Elkhart Lake, WI",
-      "link": "https://www.eventbrite.com.br/e/destrave-seu-potencial-30-como-eliminar-a-procrastinacao-tickets-1988494204695?aff=ebdssbcitybrowse",
+      "link": "https://www.eventbrite.com/e/milk-street-x-ooni-the-art-of-indoor-pizza-tickets-1988338730668?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.868547"
+      "scraped_at": "2026-05-13T21:08:57.075506"
     },
     {
-      "title": "A Escolha \u00e9 Sua 2k26 - CVC Roblox",
+      "title": "CYPRESS COLLEGE RADIOLOGIC TECHNOLOGY INFORMATION WORKSHOP",
       "date": "See website",
       "description": "",
       "location": "Elkhart Lake, WI",
-      "link": "https://www.eventbrite.com.br/e/a-escolha-e-sua-2k26-cvc-roblox-tickets-1985212417782?aff=ebdssbcitybrowse",
+      "link": "https://www.eventbrite.com/e/cypress-college-radiologic-technology-information-workshop-tickets-1980489140332?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.868854"
-    },
-    {
-      "title": "Managing concerns about attorneys and deputies",
-      "date": "See website",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "https://www.eventbrite.co.uk/e/managing-concerns-about-attorneys-and-deputies-tickets-1978159019879?aff=ebdssbcitybrowse",
-      "source": "Eventbrite",
-      "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.869122"
-    },
-    {
-      "title": "Simp\u00f3sio Sa\u00fade Mental & Cuidado Integral",
-      "date": "See website",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "https://www.eventbrite.com/e/simposio-saude-mental-cuidado-integral-tickets-1987018293204?aff=ebdssbcitybrowse",
-      "source": "Eventbrite",
-      "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.869390"
+      "scraped_at": "2026-05-13T21:08:57.075816"
     },
     {
       "title": "Bakersfield Career Fair",
@@ -2620,7 +2597,7 @@
       "link": "https://www.eventbrite.com/e/bakersfield-career-fair-tickets-295406437607?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.869697"
+      "scraped_at": "2026-05-13T21:08:57.076124"
     },
     {
       "title": "How to Become a  TEDx  Speaker!",
@@ -2630,87 +2607,17 @@
       "link": "https://www.eventbrite.ca/e/how-to-become-a-tedx-speaker-tickets-1000502458787?aff=ebdssbcitybrowse",
       "source": "Eventbrite",
       "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
-      "scraped_at": "2026-05-13T21:02:22.869965"
+      "scraped_at": "2026-05-13T21:08:57.076391"
     },
     {
-      "title": "Login",
+      "title": "Thriving Through Transition: Part III \u2013 The Business Breakthrough",
       "date": "See website",
       "description": "",
       "location": "Elkhart Lake, WI",
-      "link": "#",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://allevents.in/elkhart-lake/all",
-      "scraped_at": "2026-05-13T21:02:23.353324"
-    },
-    {
-      "title": "Create an event",
-      "date": "See website",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "https://allevents.in/manage/create.php?ref=topbar-dropdown",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://allevents.in/elkhart-lake/all",
-      "scraped_at": "2026-05-13T21:02:23.353397"
-    },
-    {
-      "title": "Manage events",
-      "date": "See website",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "https://allevents.in/pages/event-listing?ref=topbar-dropdown",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://allevents.in/elkhart-lake/all",
-      "scraped_at": "2026-05-13T21:02:23.353464"
-    },
-    {
-      "title": "Get the AllEventsAppNew",
-      "date": "See website",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "https://play.google.com/store/apps/details?id=com.amitech.allevents&utm_source=Mobile_topbar&utm_medium=topbar&utm_campaign=topbar",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://allevents.in/elkhart-lake/all",
-      "scraped_at": "2026-05-13T21:02:23.353534"
-    },
-    {
-      "title": "Need help?",
-      "date": "See website",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "https://allevents.in/pages/support?ref=topbar-dropdown",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://allevents.in/elkhart-lake/all",
-      "scraped_at": "2026-05-13T21:02:23.353604"
-    },
-    {
-      "title": "Chat with AI Assistant",
-      "date": "See website",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "#",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://allevents.in/elkhart-lake/all",
-      "scraped_at": "2026-05-13T21:02:23.353676"
-    },
-    {
-      "title": "Support Centre",
-      "date": "See website",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "https://support.allevents.in/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://allevents.in/elkhart-lake/all",
-      "scraped_at": "2026-05-13T21:02:23.353748"
-    },
-    {
-      "title": "Feedback & Suggestions",
-      "date": "See website",
-      "description": "",
-      "location": "Elkhart Lake, WI",
-      "link": "#",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://allevents.in/elkhart-lake/all",
-      "scraped_at": "2026-05-13T21:02:23.353811"
+      "link": "https://www.eventbrite.com/e/thriving-through-transition-part-iii-the-business-breakthrough-tickets-1985623821301?aff=ebdssbcitybrowse",
+      "source": "Eventbrite",
+      "source_url": "https://www.eventbrite.com/d/wi--elkhart-lake/events/",
+      "scraped_at": "2026-05-13T21:08:57.076697"
     }
   ]
 }
