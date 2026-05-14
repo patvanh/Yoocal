@@ -1,4 +1,4 @@
-'use client'
+// No 'use client' needed - this is a pure HTML iframe, works on server
 
 interface EventMapProps {
   lat: number
@@ -23,14 +23,9 @@ export default function EventMap({ lat, lng, title, location }: EventMapProps) {
       }}>
         Location
       </h2>
-      <div style={{
-        borderRadius: 16,
-        overflow: 'hidden',
-        border: '1px solid var(--border)',
-        position: 'relative',
-      }}>
+      <div style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid var(--border)' }}>
         <iframe
-          title={`Map showing ${title} at ${location}`}
+          title={`Map: ${title} at ${location}`}
           src={embedUrl}
           width="100%"
           height="280"
@@ -41,12 +36,8 @@ export default function EventMap({ lat, lng, title, location }: EventMapProps) {
       </div>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 10 }}>
         <p style={{ fontSize: 13, color: 'var(--muted)' }}>📍 {location}</p>
-        <a
-          href={fullUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ fontSize: 12, color: 'var(--purple)', textDecoration: 'none' }}
-        >
+        <a href={fullUrl} target="_blank" rel="noopener noreferrer"
+          style={{ fontSize: 12, color: 'var(--purple)', textDecoration: 'none' }}>
           Open in maps →
         </a>
       </div>

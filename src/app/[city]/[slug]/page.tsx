@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import dynamic from 'next/dynamic'
+import EventMap from '@/components/EventMap'
 import {
   CITY_CONFIG,
   findEvent,
@@ -12,8 +12,6 @@ import {
   type YoocalEvent,
   type CityKey,
 } from '@/lib/events'
-
-const EventMap = dynamic(() => import('@/components/EventMap'), { ssr: false })
 
 interface Props {
   params: Promise<{ city: string; slug: string }>
