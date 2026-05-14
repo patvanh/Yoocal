@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import {
   CITY_CONFIG,
   findEvent,
@@ -12,6 +12,8 @@ import {
   type YoocalEvent,
   type CityKey,
 } from '@/lib/events'
+
+const EventMap = dynamic(() => import('@/components/EventMap'), { ssr: false })
 
 interface Props {
   params: Promise<{ city: string; slug: string }>
@@ -77,12 +79,24 @@ function getCategories(event: YoocalEvent): string[] {
   return cats.length > 0 ? cats : ['Community']
 }
 
-// Related events from same city, same day or nearby
+// Related events: same venue first, then same day
 function getRelatedEvents(cityKey: CityKey, current: YoocalEvent): YoocalEvent[] {
   const events = getEventsForCity(cityKey)
-  return events
-    .filter(e => e.title !== current.title && e.date === current.date)
-    .slice(0, 3)
+  const sameVenue = events.filter(e =>
+    e.title !== current.title &&
+    e.location && current.location &&
+    e.location.toLowerCase() === current.location.toLowerCase()
+  ).slice(0, 3)
+
+  if (sameVenue.length >= 2) return sameVenue
+
+  const sameDay = events.filter(e =>
+    e.title !== current.title &&
+    e.date === current.date &&
+    !sameVenue.find(s => s.title === e.title)
+  ).slice(0, 3 - sameVenue.length)
+
+  return [...sameVenue, ...sameDay]
 }
 
 export default async function EventPage({ params }: Props) {
@@ -331,6 +345,16 @@ export default async function EventPage({ params }: Props) {
             </a>
           </div>
 
+          {/* Map */}
+          {event.lat && event.lng && (
+            <EventMap
+              lat={event.lat}
+              lng={event.lng}
+              title={event.title}
+              location={event.location || city.name}
+            />
+          )}
+
           {/* Source */}
           {event.source && (
             <p style={{ fontSize: 13, color: 'var(--muted)' }}>
@@ -363,7 +387,9 @@ export default async function EventPage({ params }: Props) {
                   marginTop: 8,
                 }}
               >
-                Also happening {dateStr.split(',')[0]}
+                {related[0].location === event.location && event.location
+                  ? `More at ${event.location}`
+                  : `Also happening ${dateStr.split(',')[0]}`}
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {related.map((rel) => (
