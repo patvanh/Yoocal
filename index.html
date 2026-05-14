@@ -938,7 +938,7 @@
   }
 
   .cal-event-time .h { font-size: 15px; font-weight: 600; color: white; line-height: 1; }
-  .cal-event-time .ap { font-size: 10px; color: rgba(255,255,255,0.4); }
+  .cal-event-time .ap { font-size: 15px; font-weight: 600; color: white; line-height: 1; margin-top: 2px; }
 
   .cal-event-info { flex: 1; }
   .cal-event-info h4 { font-size: 14px; font-weight: 500; color: white; margin-bottom: 4px; }
@@ -1019,7 +1019,7 @@
     flex-shrink: 0;
   }
   .featured-band-card .fbc-time .h { font-size: 15px; font-weight: 600; color: white; line-height: 1; }
-  .featured-band-card .fbc-time .ap { font-size: 10px; color: rgba(255,255,255,0.5); }
+  .featured-band-card .fbc-time .ap { font-size: 15px; font-weight: 600; color: white; line-height: 1; margin-top: 2px; }
   .featured-band-card .fbc-info { flex: 1; }
   .featured-band-card .fbc-info h4 {
     font-size: 14px;
@@ -1919,7 +1919,7 @@
       onclick="openEventModal(this)"
       style="cursor:pointer"
       >
-      <div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time ? `<div style="font-size:9px;color:rgba(255,255,255,0.5);margin-top:3px;white-space:nowrap">${event.start_time}${event.end_time ? `–${event.end_time}` : ''}</div>` : ''}</div>
+      <div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time ? `<div style="font-size:15px;font-weight:600;color:white;line-height:1;margin-top:2px;white-space:nowrap">${event.start_time}</div>` : ''}</div>
       <div class="cal-event-info">
         <h4>${event.title}</h4>
         <p>${(event.description || '').slice(0, 120) || 'See website for details.'}</p>
