@@ -2451,6 +2451,7 @@
       label: 'Park City & Summit County',
       eyebrow: 'Now live in Park City, Utah',
       file: 'events.json',
+      supplementalFile: 'events-heber.json',
       aboutLabel: 'About Park City',
       aboutPage: 'about-park-city.html',
       junk: ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'previous month', 'next month']
@@ -2487,10 +2488,15 @@
     // Show loading state
     container.innerHTML = '<div style="padding:32px;text-align:center;color:rgba(255,255,255,0.4);font-size:14px;">Loading events...</div>';
 
-    fetch(city.file)
-      .then(r => r.json())
-      .then(data => {
-        allEvents = data.events || [];
+    // Load main events + supplemental (Heber Valley) if available
+    const mainFetch = fetch(city.file).then(r => r.json());
+    const suppFetch = city.supplementalFile
+      ? fetch(city.supplementalFile).then(r => r.json()).catch(() => ({events:[]}))
+      : Promise.resolve({events:[]});
+
+    Promise.all([mainFetch, suppFetch])
+      .then(([data, suppData]) => {
+        allEvents = [...(data.events || []), ...(suppData.events || [])];
         allEvents = allEvents.filter(e => !city.junk.some(j => e.title.toLowerCase().includes(j)));
 
         // Client-side dedup: same title+date from multiple sources, keep the one with a time or Park Record
