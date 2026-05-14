@@ -1,4 +1,4 @@
-// No 'use client' needed - this is a pure HTML iframe, works on server
+// Server component - pure HTML iframe, no JS needed
 
 interface EventMapProps {
   lat: number
@@ -8,10 +8,10 @@ interface EventMapProps {
 }
 
 export default function EventMap({ lat, lng, title, location }: EventMapProps) {
-  const delta = 0.006
+  const delta = 0.004
   const bbox = `${lng - delta},${lat - delta},${lng + delta},${lat + delta}`
   const embedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lng}`
-  const fullUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=15/${lat}/${lng}`
+  const fullUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=17/${lat}/${lng}`
 
   return (
     <div style={{ marginBottom: 40 }}>
@@ -28,7 +28,7 @@ export default function EventMap({ lat, lng, title, location }: EventMapProps) {
           title={`Map: ${title} at ${location}`}
           src={embedUrl}
           width="100%"
-          height="280"
+          height="300"
           style={{ display: 'block', border: 'none' }}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

@@ -111,6 +111,11 @@ export default async function EventPage({ params }: Props) {
   const cats = getCategories(event)
   const dateStr = formatDate(event.date)
 
+  // Get best coordinates: precise venue lookup, then event coords, then city center
+  const venueCoords = event.location ? getVenueCoords(event.location) : null
+  const mapLat = venueCoords?.[0] ?? event.lat ?? city.center[0]
+  const mapLng = venueCoords?.[1] ?? event.lng ?? city.center[1]
+
   // Schema.org Event structured data
   const schema = {
     '@context': 'https://schema.org',
@@ -344,20 +349,15 @@ export default async function EventPage({ params }: Props) {
             </a>
           </div>
 
-          {/* Map — show precise venue location */}
-          {event.location && (() => {
-            const venueCoords = getVenueCoords(event.location!)
-            const lat = event.lat && event.lat !== 40.6461 ? event.lat : (venueCoords?.[0] || event.lat || city.center[0])
-            const lng = event.lng && event.lng !== -111.4980 ? event.lng : (venueCoords?.[1] || event.lng || city.center[1])
-            return (
-              <EventMap
-                lat={lat}
-                lng={lng}
-                title={event.title}
-                location={event.location!}
-              />
-            )
-          })()}
+          {/* Map */}
+          {event.location && (
+            <EventMap
+              lat={mapLat}
+              lng={mapLng}
+              title={event.title}
+              location={event.location}
+            />
+          )}
 
           {/* Source */}
           {event.source && (
