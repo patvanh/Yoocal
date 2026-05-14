@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-
 interface EventMapProps {
   lat: number
   lng: number
@@ -10,45 +8,10 @@ interface EventMapProps {
 }
 
 export default function EventMap({ lat, lng, title, location }: EventMapProps) {
-  const mapRef = useRef<HTMLDivElement>(null)
-  const mapInitialized = useRef(false)
-
-  useEffect(() => {
-    if (!mapRef.current || mapInitialized.current) return
-
-    // Wait for Leaflet to be available
-    const init = () => {
-      const L = (window as any).L
-      if (!L) { setTimeout(init, 200); return }
-
-      mapInitialized.current = true
-      const map = L.map(mapRef.current!, {
-        center: [lat, lng],
-        zoom: 15,
-        zoomControl: true,
-        scrollWheelZoom: false,
-        dragging: true,
-      })
-
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-      }).addTo(map)
-
-      const icon = L.divIcon({
-        html: `<div style="background:var(--purple,#534AB7);width:14px;height:14px;border-radius:50%;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.3)"></div>`,
-        className: '',
-        iconSize: [14, 14],
-        iconAnchor: [7, 7],
-      })
-
-      L.marker([lat, lng], { icon })
-        .addTo(map)
-        .bindPopup(`<strong>${title}</strong><br/>${location}`)
-        .openPopup()
-    }
-
-    init()
-  }, [lat, lng, title, location])
+  const delta = 0.006
+  const bbox = `${lng - delta},${lat - delta},${lng + delta},${lat + delta}`
+  const embedUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lng}`
+  const fullUrl = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lng}#map=15/${lat}/${lng}`
 
   return (
     <div style={{ marginBottom: 40 }}>
@@ -60,18 +23,33 @@ export default function EventMap({ lat, lng, title, location }: EventMapProps) {
       }}>
         Location
       </h2>
-      <div
-        ref={mapRef}
-        style={{
-          height: 280,
-          borderRadius: 16,
-          overflow: 'hidden',
-          border: '1px solid var(--border)',
-        }}
-      />
-      <p style={{ fontSize: 13, color: 'var(--muted)', marginTop: 10 }}>
-        📍 {location}
-      </p>
+      <div style={{
+        borderRadius: 16,
+        overflow: 'hidden',
+        border: '1px solid var(--border)',
+        position: 'relative',
+      }}>
+        <iframe
+          title={`Map showing ${title} at ${location}`}
+          src={embedUrl}
+          width="100%"
+          height="280"
+          style={{ display: 'block', border: 'none' }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 10 }}>
+        <p style={{ fontSize: 13, color: 'var(--muted)' }}>📍 {location}</p>
+        <a
+          href={fullUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ fontSize: 12, color: 'var(--purple)', textDecoration: 'none' }}
+        >
+          Open in maps →
+        </a>
+      </div>
     </div>
   )
 }
