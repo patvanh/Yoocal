@@ -28,6 +28,55 @@ export interface EventsFile {
 
 export type CityKey = 'parkcity' | 'elkhartlake'
 
+// Precise coordinates for known venues
+export const VENUE_COORDS: Record<string, [number, number]> = {
+  // Park City main venues
+  'egyptian theatre': [40.6453, -111.4978],
+  'kimball arts center': [40.6451, -111.4976],
+  'park city library': [40.6469, -111.5073],
+  'park city film': [40.6469, -111.5073],
+  'high west distillery': [40.6441, -111.4976],
+  'high west': [40.6441, -111.4976],
+  'no name saloon': [40.6448, -111.4970],
+  'spur bar': [40.6449, -111.4972],
+  'the spur': [40.6449, -111.4972],
+  'old town': [40.6449, -111.4972],
+  'main street': [40.6449, -111.4972],
+  'deer valley': [40.6374, -111.4783],
+  'snow park': [40.6374, -111.4783],
+  'park city mountain': [40.6516, -111.5080],
+  'pcmr': [40.6516, -111.5080],
+  'swaner preserve': [40.6897, -111.5430],
+  'swaner': [40.6897, -111.5430],
+  'kimball junction': [40.7021, -111.5423],
+  'jordanelle': [40.6000, -111.4280],
+  'basin rec': [40.6516, -111.5080],
+  'fieldhouse': [40.6516, -111.5080],
+  'park city municipal': [40.6494, -111.5013],
+  'summit community gardens': [40.6530, -111.5050],
+  // Elkhart Lake venues
+  'road america': [43.7997, -88.0131],
+  'siebkens resort': [43.8380, -88.0028],
+  'siebkens': [43.8380, -88.0028],
+  'osthoff': [43.8302, -87.9986],
+  'the osthoff': [43.8302, -87.9986],
+  'throttlestop': [43.8336, -88.0074],
+  'elkhart lake': [43.8358, -88.0051],
+  // Heber Valley venues
+  'heber valley railroad': [40.5069, -111.4133],
+  'deer creek': [40.6000, -111.4280],
+  'jordanelle reservoir': [40.6000, -111.4280],
+}
+
+export function getVenueCoords(location: string): [number, number] | null {
+  if (!location) return null
+  const loc = location.toLowerCase()
+  for (const [venue, coords] of Object.entries(VENUE_COORDS)) {
+    if (loc.includes(venue)) return coords
+  }
+  return null
+}
+
 export const CITY_CONFIG: Record<CityKey, {
   name: string
   label: string

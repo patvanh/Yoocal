@@ -9,6 +9,7 @@ import {
   eventSlug,
   formatDate,
   getEventsForCity,
+  getVenueCoords,
   type YoocalEvent,
   type CityKey,
 } from '@/lib/events'
@@ -343,15 +344,20 @@ export default async function EventPage({ params }: Props) {
             </a>
           </div>
 
-          {/* Map — always show if event has a location */}
-          {event.location && (
-            <EventMap
-              lat={event.lat || city.center[0]}
-              lng={event.lng || city.center[1]}
-              title={event.title}
-              location={event.location}
-            />
-          )}
+          {/* Map — show precise venue location */}
+          {event.location && (() => {
+            const venueCoords = getVenueCoords(event.location!)
+            const lat = event.lat && event.lat !== 40.6461 ? event.lat : (venueCoords?.[0] || event.lat || city.center[0])
+            const lng = event.lng && event.lng !== -111.4980 ? event.lng : (venueCoords?.[1] || event.lng || city.center[1])
+            return (
+              <EventMap
+                lat={lat}
+                lng={lng}
+                title={event.title}
+                location={event.location!}
+              />
+            )
+          })()}
 
           {/* Source */}
           {event.source && (
