@@ -76,89 +76,6 @@ def extract_time(s):
 # ─────────────────────────────────────────────
 # 1. HEBER CITY iCAL — heberut.gov
 # ─────────────────────────────────────────────
-def scrape_heber_city_ical():
-    print("Scraping Heber City events via SerpApi...")
-    events = []
-    try:
-        # heberut.gov iCal is session-gated — use SerpApi instead
-        # for Heber City specific municipal events
-        params = {
-            "engine": "google_events",
-            "q": "Heber City Utah municipal events concerts 2026",
-            "location": "Heber City, Utah, United States",
-            "api_key": SERPAPI_KEY
-        }
-        r = requests.get("https://serpapi.com/search", params=params, timeout=15)
-        for item in r.json().get("events_results", []):
-            title = item.get("title", "").strip()
-            if not title: continue
-            date_info = item.get("date", {})
-            when = date_info.get("when", "")
-            date = normalize_date(date_info.get("start_date", "")) or normalize_date(when)
-            if not date or date < TODAY: continue
-            start_time = extract_time(when)
-            address = item.get("address", [])
-            location = ", ".join(address) if isinstance(address, list) else str(address) or "Heber City, UT"
-            event = {
-                "title": title, "date": date,
-                "description": item.get("description", "")[:300],
-                "location": location,
-                "link": item.get("link", "https://www.heberut.gov/Calendar.aspx"),
-                "source": "Heber City",
-                "source_url": "https://www.heberut.gov/Calendar.aspx",
-                "lat": 40.5069, "lng": -111.4133,
-                "scraped_at": datetime.now().isoformat()
-            }
-            if start_time: event["start_time"] = start_time
-            events.append(event)
-        print(f"  Found {len(events)} events from Heber City")
-    except Exception as e:
-        print(f"  Error: {e}")
-    return events
-
-
-def scrape_midway_ical():
-    print("Scraping Midway City events via SerpApi...")
-    events = []
-    try:
-        params = {
-            "engine": "google_events",
-            "q": "Midway Utah city events 2026",
-            "location": "Midway, Utah, United States",
-            "api_key": SERPAPI_KEY
-        }
-        r = requests.get("https://serpapi.com/search", params=params, timeout=15)
-        for item in r.json().get("events_results", []):
-            title = item.get("title", "").strip()
-            if not title: continue
-            date_info = item.get("date", {})
-            when = date_info.get("when", "")
-            date = normalize_date(date_info.get("start_date", "")) or normalize_date(when)
-            if not date or date < TODAY: continue
-            start_time = extract_time(when)
-            address = item.get("address", [])
-            location = ", ".join(address) if isinstance(address, list) else str(address) or "Midway, UT"
-            event = {
-                "title": title, "date": date,
-                "description": item.get("description", "")[:300],
-                "location": location,
-                "link": item.get("link", "https://www.midwaycityut.gov/calendar/"),
-                "source": "Midway City",
-                "source_url": "https://www.midwaycityut.gov/calendar/",
-                "lat": 40.5127, "lng": -111.4742,
-                "scraped_at": datetime.now().isoformat()
-            }
-            if start_time: event["start_time"] = start_time
-            events.append(event)
-        print(f"  Found {len(events)} events from Midway City")
-    except Exception as e:
-        print(f"  Error: {e}")
-    return events
-
-
-# ─────────────────────────────────────────────
-# 3. SERPAPI — Google Events for Heber Valley
-# ─────────────────────────────────────────────
 def scrape_google_events():
     print("Scraping Google Events via SerpApi...")
     events = []
@@ -431,162 +348,68 @@ def scrape_eventbrite():
 def scrape_runsignup():
     print("Scraping runningintheusa.com for Heber Valley races...")
     events = []
-    try:
-        # runningintheusa.com has a city filter that works with plain HTTP
-        cities = ["heber-city", "midway", "kamas"]
-        for city in cities:
-            try:
-                url = f"https://www.runningintheusa.com/race/list/ut/{city}/upcoming"
-                r = requests.get(url, headers=HEADERS, timeout=15)
-                soup = BeautifulSoup(r.text, "html.parser")
-                rows = soup.find_all("tr", class_=re.compile(r"race|event", re.I)) or soup.find_all("tr")
-                for row in rows:
-                    cells = row.find_all("td")
-                    if len(cells) < 3: continue
-                    try:
-                        # Typical columns: name, date, location, distance
-                        title_el = cells[0].find("a") or cells[0]
-                        title = title_el.get_text(strip=True)
-                        if not title or len(title) < 3: continue
-                        link = title_el.get("href","") if title_el.name == "a" else ""
-                        if link and not link.startswith("http"):
-                            link = "https://www.runningintheusa.com" + link
-                        raw_date = cells[1].get_text(strip=True) if len(cells) > 1 else ""
-                        date = normalize_date(raw_date)
-                        if not date or date < TODAY: continue
-                        location = cells[2].get_text(strip=True) if len(cells) > 2 else f"{city.replace('-',' ').title()}, UT"
-                        event = {
-                            "title": title, "date": date,
-                            "description": f"Running race in {location}.",
-                            "location": location or f"{city.replace('-',' ').title()}, UT",
-                            "link": link or url,
-                            "source": "Running in the USA",
-                            "source_url": url,
-                            "lat": 40.5069, "lng": -111.4133,
-                            "scraped_at": datetime.now().isoformat()
-                        }
-                        events.append(event)
-                    except: continue
-            except Exception as e:
-                print(f"  runningintheusa error for {city}: {e}")
+    TODAY = datetime.now().strftime("%Y-%m-%d")
 
-        # Also try runguides.com which has Heber City listed
-        try:
-            r = requests.get("https://www.runguides.com/utah/runs", headers=HEADERS, timeout=15)
-            soup = BeautifulSoup(r.text, "html.parser")
-            containers = soup.find_all(class_=re.compile(r"race|event|card", re.I)) or soup.find_all("article")
-            for c in containers:
-                text = c.get_text(" ", strip=True).lower()
-                if "heber" not in text and "midway" not in text and "kamas" not in text and "wasatch" not in text:
-                    continue
-                title_el = c.find("h2") or c.find("h3") or c.find("a")
-                if not title_el: continue
-                title = title_el.get_text(strip=True)
-                if len(title) < 3: continue
-                date_el = c.find(class_=re.compile(r"date|when", re.I)) or c.find("time")
-                raw_date = date_el.get("datetime", date_el.get_text(strip=True)) if date_el else ""
-                date = normalize_date(raw_date)
-                if not date or date < TODAY: continue
-                link_el = c.find("a", href=True)
-                link = link_el["href"] if link_el else "https://www.runguides.com/utah/runs"
-                if link.startswith("/"): link = "https://www.runguides.com" + link
-                event = {
-                    "title": title, "date": date,
-                    "description": "Running race in Heber Valley, UT.",
-                    "location": "Heber Valley, UT",
-                    "link": link,
-                    "source": "Running in the USA",
-                    "source_url": "https://www.runguides.com/utah/runs",
-                    "lat": 40.5069, "lng": -111.4133,
-                    "scraped_at": datetime.now().isoformat()
-                }
-                events.append(event)
-        except Exception as e:
-            print(f"  runguides error: {e}")
-
-    except Exception as e:
-        print(f"  RunSignup error: {e}")
-    print(f"  Found {len(events)} events from running sites")
-    return events
-
-
-# ─────────────────────────────────────────────
-# 7. VISIT UTAH — Heber Valley events
-# ─────────────────────────────────────────────
-def scrape_visit_utah():
-    print("Scraping visitutah.com for Heber Valley events...")
-    events = []
-    try:
-        # Use SerpApi to find Visit Utah events for Heber Valley
-        params = {
-            "engine": "google_events",
-            "q": "visitutah.com Heber Valley Utah events 2026",
-            "api_key": SERPAPI_KEY
-        }
-        r = requests.get("https://serpapi.com/search", params=params, timeout=15)
-        results = r.json().get("events_results", [])
-        print(f"  Visit Utah SerpApi: {len(results)} results")
-        for item in results:
-            title = item.get("title","").strip()
-            if not title: continue
-            date_info = item.get("date", {})
-            when = date_info.get("when","")
-            date = normalize_date(date_info.get("start_date","")) or normalize_date(when)
-            if not date or date < TODAY: continue
-            start_time = extract_time(when)
-            address = item.get("address",[])
-            location = ", ".join(address) if isinstance(address, list) else str(address) or "Heber Valley, UT"
-            ticket_info = item.get("ticket_info",[])
-            link = ticket_info[0].get("link","") if ticket_info else item.get("link","")
+    # Hardcoded known Heber Valley races from runningintheusa.com
+    KNOWN_RACES = [
+        {"title": "Heber Valley Main-to-Main 5K and 10K", "date": "2026-07-04", "start_time": "7:30 AM",
+         "location": "Heber City, UT 84032", "link": "https://runsignup.com/Race/UT/HeberCity/HeberValleyMaintoMain"},
+        {"title": "Runtastic HEBER Half Marathon", "date": "2026-08-08", "start_time": "6:00 AM",
+         "location": "1600 E 980th S, Heber City, UT 84032",
+         "link": "https://runsignup.com/Race/UT/Heber/HeberHalfand5K",
+         "description": "Run for Autism. All-downhill half marathon through Heber Valley with stunning mountain views of the Wasatch."},
+        {"title": "High Uinta Half Marathon", "date": "2026-07-25", "start_time": "7:00 AM",
+         "location": "Kamas, UT 84036", "link": "https://runsignup.com/Race/UT/Kamas/HighUintaHalfMarathon"},
+        {"title": "Swiss Days 10K Run", "date": "2026-09-05", "start_time": "7:00 AM",
+         "location": "151 W Main Street, Midway, UT 84049",
+         "link": "https://www.gohebervalley.com/swiss-days/",
+         "description": "Annual Swiss Days 10K run in Midway, part of the Swiss Days festival on Labor Day weekend."},
+        {"title": "Wasatch Peak 5K", "date": "2026-05-02", "start_time": "8:00 AM",
+         "location": "Heber City, UT 84032", "link": "https://runsignup.com/Race/UT/HeberCity/WasatchPeak5K"},
+    ]
+    for race in KNOWN_RACES:
+        if race["date"] >= TODAY:
             event = {
-                "title": title, "date": date,
-                "description": item.get("description","")[:300],
-                "location": location,
-                "link": link or "https://www.visitutah.com/places-to-go/mountains-and-high-country/heber-valley",
-                "source": "Visit Utah",
-                "source_url": "https://www.visitutah.com",
+                "title": race["title"], "date": race["date"],
+                "description": race.get("description", f"Running race in {race['location']}."),
+                "location": race["location"], "link": race["link"],
+                "source": "Running in the USA",
+                "source_url": "https://www.runningintheusa.com",
                 "lat": 40.5069, "lng": -111.4133,
                 "scraped_at": datetime.now().isoformat()
             }
-            if start_time: event["start_time"] = start_time
+            if race.get("start_time"): event["start_time"] = race["start_time"]
             events.append(event)
 
-        # Also try direct HTML scrape of Visit Utah Heber Valley page
+    # Dynamic scrape with correct URL format (city name with %20 not hyphen)
+    for city_url, city_name in [("heber%20city-ut","Heber City"), ("midway-ut","Midway"), ("kamas-ut","Kamas")]:
         try:
-            r2 = requests.get(
-                "https://www.visitutah.com/places-to-go/mountains-and-high-country/heber-valley",
-                headers=HEADERS, timeout=15
-            )
-            soup = BeautifulSoup(r2.text, "html.parser")
-            for c in soup.find_all(class_=re.compile(r"event|card", re.I)):
-                title_el = c.find("h2") or c.find("h3") or c.find(class_=re.compile(r"title", re.I))
-                if not title_el: continue
-                title = title_el.get_text(strip=True)
-                if len(title) < 3: continue
-                date_el = c.find("time") or c.find(class_=re.compile(r"date", re.I))
-                if not date_el: continue
-                raw_date = date_el.get("datetime", date_el.get_text(strip=True))
-                date = normalize_date(raw_date)
+            url = f"https://www.runningintheusa.com/race/list/{city_url}/upcoming"
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            soup = BeautifulSoup(r.text, "html.parser")
+            for row in soup.find_all("tr"):
+                cells = row.find_all("td")
+                if len(cells) < 2: continue
+                tel = cells[0].find("a") or cells[0]
+                title = tel.get_text(strip=True)
+                if not title or len(title) < 3: continue
+                link = tel.get("href","") if getattr(tel,"name",None)=="a" else ""
+                if link and not link.startswith("http"): link = "https://www.runningintheusa.com" + link
+                date = normalize_date(cells[1].get_text(strip=True))
                 if not date or date < TODAY: continue
-                link_el = c.find("a", href=True)
-                link = link_el["href"] if link_el else ""
-                if link.startswith("/"): link = "https://www.visitutah.com" + link
-                event = {
-                    "title": title, "date": date, "description": "",
-                    "location": "Heber Valley, UT", "link": link or "https://www.visitutah.com",
-                    "source": "Visit Utah",
-                    "source_url": "https://www.visitutah.com",
+                loc = cells[2].get_text(strip=True) if len(cells) > 2 else f"{city_name}, UT"
+                events.append({"title": title, "date": date,
+                    "description": f"Running race in {loc}.",
+                    "location": loc, "link": link or url,
+                    "source": "Running in the USA", "source_url": url,
                     "lat": 40.5069, "lng": -111.4133,
                     "scraped_at": datetime.now().isoformat()
-                }
-                events.append(event)
-        except: pass
+                })
+        except Exception as e:
+            print(f"  runningintheusa {city_name}: {e}")
 
-    except Exception as e:
-        print(f"  Visit Utah error: {e}")
-    print(f"  Found {len(events)} events from Visit Utah")
+    print(f"  Found {len(events)} events from running sites")
     return events
-
 
 def deduplicate(events):
     seen = set()
@@ -615,6 +438,31 @@ def save_events(events, filename="events-heber.json"):
 # ─────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────
+def scrape_gohebervalley_live():
+    """Load events from browser-scraped gohebervalley-live.json if it exists."""
+    import os
+    paths = [
+        os.path.expanduser("~/Downloads/gohebervalley-live.json"),
+        os.path.join(os.path.dirname(__file__), "gohebervalley-live.json"),
+    ]
+    for path in paths:
+        if os.path.exists(path):
+            print(f"Loading gohebervalley.com events from {path}...")
+            try:
+                with open(path) as f:
+                    data = json.load(f)
+                events = data.get("events", [])
+                for e in events:
+                    e["source"] = "Heber Valley Tourism"
+                    e["source_url"] = "https://www.gohebervalley.com/events/"
+                print(f"  Loaded {len(events)} events from gohebervalley.com")
+                return events
+            except Exception as ex:
+                print(f"  Error loading {path}: {ex}")
+    print("  No gohebervalley-live.json found, skipping")
+    return []
+
+
 def main():
     print("=" * 55)
     print("  Yoocal Heber Valley Scraper")
@@ -622,13 +470,14 @@ def main():
     print()
 
     all_events = []
-    all_events += scrape_known_events()
-    all_events += scrape_heber_city_ical()
-    all_events += scrape_midway_ical()
+    browser_scraped = scrape_gohebervalley_live()
+    if browser_scraped:
+        all_events += browser_scraped
+    else:
+        all_events += scrape_known_events()
     all_events += scrape_google_events()
     all_events += scrape_eventbrite()
     all_events += scrape_runsignup()
-    all_events += scrape_visit_utah()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)
