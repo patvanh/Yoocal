@@ -1330,6 +1330,8 @@
     .hero { padding: 100px 20px 60px; overflow: visible; }
     .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
     .section, .calendar-section, .sources-section, .signup-section, .biz-section { padding: 70px 20px; }
+    #how { padding: 48px 20px !important; }
+    #how > div { flex-direction: column !important; gap: 40px !important; }
     .location-bar { padding: 14px 20px; }
     footer { padding: 48px 20px 32px; }
     .cal-topbar, .cal-filters, .cal-days, .cal-events { padding-left: 16px; padding-right: 16px; }
@@ -1391,30 +1393,24 @@
 </div><!-- end hero-wrapper -->
 
 <!-- HOW IT WORKS -->
-<section class="section" id="how">
-  <div class="section-label">How it works</div>
-  <h2>Stop checking <em>seven</em> different sites.</h2>
-  <p>We automatically gather events from every local source — newspapers, Facebook groups, venue websites, chamber listings — and put them all in one clean calendar.</p>
-  <div class="steps">
-    <div class="step reveal">
-      <div class="step-icon">🔍</div>
-      <h3>We scrape daily</h3>
-      <p>Our engine checks local newspapers, Facebook groups, Eventbrite, chamber websites, and venue pages every single day.</p>
+<section class="section" id="how" style="padding: 60px 80px;">
+  <div style="display:flex; align-items:center; gap:80px; max-width:1100px; margin:0 auto;">
+    <div style="flex:1;">
+      <div class="section-label">How it works</div>
+      <h2>Stop checking <em>seven</em> different sites.</h2>
+      <p style="margin-top:16px;">We automatically gather events from every local source — newspapers, Facebook groups, venue websites, chamber listings — and put them all in one clean calendar.</p>
     </div>
-    <div class="step reveal">
-      <div class="step-icon">🤖</div>
-      <h3>AI normalizes it</h3>
-      <p>Messy, inconsistent event data gets cleaned, deduplicated, and categorized automatically so you see a perfect calendar.</p>
-    </div>
-    <div class="step reveal">
-      <div class="step-icon">📅</div>
-      <h3>You browse easily</h3>
-      <p>Filter by date, category, or search. Every event links back to the original page to register or buy tickets.</p>
-    </div>
-    <div class="step reveal">
-      <div class="step-icon">📬</div>
-      <h3>We email your weekend</h3>
-      <p>Subscribe to get "This Weekend in Park City" in your inbox every Thursday — curated, local, and free.</p>
+    <div style="flex:1; display:flex; flex-direction:column; gap:16px;">
+      <div class="step reveal" style="margin:0;">
+        <div class="step-icon">🔍</div>
+        <h3>We scrape daily</h3>
+        <p>Our engine checks local newspapers, Eventbrite, chamber websites, and venue pages every single day.</p>
+      </div>
+      <div class="step reveal" style="margin:0;">
+        <div class="step-icon">📬</div>
+        <h3>We email your weekend</h3>
+        <p>Subscribe to get "This Weekend" in your inbox every Thursday — curated, local, and free.</p>
+      </div>
     </div>
   </div>
 </section>
