@@ -1044,7 +1044,16 @@ def scrape_google_events():
                     date_info = item.get("date", {})
                     when = date_info.get("when", "")
                     start_date = date_info.get("start_date", "")
-                    date = normalize_date_str(start_date) or normalize_date_str(when) or "See website"
+                    date = normalize_date_str(start_date) or normalize_date_str(when)
+                    # Drop events with unparseable dates — they were previously
+                    # falling through with date="See website" and breaking the UI
+                    if not date:
+                        continue
+                    # Drop events whose date is in the past (Google sometimes
+                    # returns stale data)
+                    today_iso = datetime.now().strftime("%Y-%m-%d")
+                    if date < today_iso:
+                        continue
                     start_time = extract_time_from_string(when)
 
                     address = item.get("address", [])
