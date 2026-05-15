@@ -98,6 +98,24 @@ function getRelatedEvents(cityKey: CityKey, current: YoocalEvent): YoocalEvent[]
   return [...sameVenue, ...sameDay]
 }
 
+function to24h(time12) {
+  if (!time12) return "00:00:00";
+  const m = String(time12).trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)?$/i);
+  if (!m) return "00:00:00";
+  let h = parseInt(m[1], 10);
+  const min = m[2];
+  const ampm = m[3] && m[3].toUpperCase();
+  if (ampm === "PM" && h !== 12) h += 12;
+  if (ampm === "AM" && h === 12) h = 0;
+  return `${String(h).padStart(2, "0")}:${min}:00`;
+}
+function addOneHourTo24h(time12) {
+  const t = to24h(time12);
+  const h = parseInt(t.slice(0,2), 10);
+  const nh = (h + 1) % 24;
+  return `${String(nh).padStart(2,"0")}${t.slice(2)}`;
+}
+
 export default async function EventPage({ params }: Props) {
   const { city: citySlug, slug } = await params
   const cityKey = cityKeyFromSlug(citySlug)
@@ -118,34 +136,63 @@ export default async function EventPage({ params }: Props) {
 
   // Schema.org Event structured data
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Event',
+    "@context": "https://schema.org",
+    "@type": "Event",
     name: event.title,
-    description: event.description || undefined,
+    description: (event.description && event.description.trim()) || event.title,
     startDate: event.start_time
-      ? `${event.date}T${event.start_time}`
+      ? `${event.date}T${to24h(event.start_time)}`
       : event.date,
     endDate: event.end_time
-      ? `${event.date}T${event.end_time}`
-      : undefined,
+      ? `${event.end_date || event.date}T${to24h(event.end_time)}`
+      : event.end_date
+        ? event.end_date
+        : event.start_time
+          ? `${event.date}T${addOneHourTo24h(event.start_time)}`
+          : event.date,
     location: event.location
       ? {
-          '@type': 'Place',
+          "@type": "Place",
           name: event.location,
           address: {
-            '@type': 'PostalAddress',
+            "@type": "PostalAddress",
             addressLocality: city.name,
+            addressRegion: city.state || undefined,
+            addressCountry: "US",
           },
         }
-      : undefined,
-    organizer: event.source
-      ? { '@type': 'Organization', name: event.source }
-      : undefined,
+      : {
+          "@type": "Place",
+          name: city.name,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: city.name,
+            addressRegion: city.state || undefined,
+            addressCountry: "US",
+          },
+        },
+    organizer: {
+      "@type": "Organization",
+      name: event.source || "Yoocal",
+      url: event.source_url || `https://www.yoocal.com/${citySlug}`,
+    },
+    performer: {
+      "@type": "PerformingGroup",
+      name: event.title,
+    },
+    offers: {
+      "@type": "Offer",
+      url: event.link || `https://www.yoocal.com/${citySlug}/${slug}`,
+      price: event.is_free === true ? "0" : (event.price && event.price.trim() ? event.price : "0"),
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      validFrom: event.date,
+    },
     url: event.link || `https://www.yoocal.com/${citySlug}/${slug}`,
-    isAccessibleForFree: event.is_free ?? undefined,
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    image: 'https://www.yoocal.com/og-image.png',
+    isAccessibleForFree: event.is_free === true,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    image: "https://www.yoocal.com/og-image.png",
   }
 
   return (
