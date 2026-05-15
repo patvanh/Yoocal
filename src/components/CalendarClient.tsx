@@ -69,6 +69,7 @@ export default function CalendarClient() {
     const CITY_CENTERS: Record<string, { center: [number, number]; zoom: number }> = {
       parkcity: { center: [40.6461, -111.4980], zoom: 12 },
       elkhartlake: { center: [43.8358, -88.0051], zoom: 13 },
+      heber: { center: [40.5071, -111.4133], zoom: 12 },
     }
 
     const CITIES: Record<string, any> = {
@@ -82,6 +83,12 @@ export default function CalendarClient() {
         name: 'Elkhart Lake, WI', label: 'Elkhart Lake & Sheboygan County',
         file: 'events-elkhartlake.json',
         aboutLabel: 'About Elkhart Lake', aboutPage: '/about/elkhart-lake',
+        junk: ['previous month', 'next month'],
+      },
+      heber: {
+        name: 'Heber Valley, UT', label: 'Heber Valley & Wasatch County',
+        file: 'events-heber.json',
+        aboutLabel: 'About Heber', aboutPage: '/about/heber',
         junk: ['previous month', 'next month'],
       },
     }
@@ -1009,6 +1016,7 @@ export default function CalendarClient() {
           <span className="loc-label">Browse by city</span>
           <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('parkcity', e.currentTarget as HTMLElement) }} data-city="parkcity">📍 Park City, UT</a>
           <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('elkhartlake', e.currentTarget as HTMLElement) }} data-city="elkhartlake">📍 Elkhart Lake, WI</a>
+          <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('heber', e.currentTarget as HTMLElement) }} data-city="heber">📍 Heber Valley, UT</a>
           <a href="#signup" className="loc-chip" style={{opacity:0.5}}>+ Aspen, CO — coming soon</a>
           <a href="#signup" className="loc-chip" style={{opacity:0.5}}>+ Jackson Hole, WY — coming soon</a>
         </div>
@@ -1227,6 +1235,7 @@ export default function CalendarClient() {
       <div className="hero-eyebrow-dropdown" id="hero-eyebrow-dropdown">
         <div className="eyebrow-city-option active" id="eyebrow-opt-parkcity" onClick={(e) => window.eyebrowSwitchCity?.(e.nativeEvent,'parkcity')}>📍 Park City, UT</div>
         <div className="eyebrow-city-option" id="eyebrow-opt-elkhartlake" onClick={(e) => window.eyebrowSwitchCity?.(e.nativeEvent,'elkhartlake')}>📍 Elkhart Lake, WI</div>
+        <div className="eyebrow-city-option" id="eyebrow-opt-heber" onClick={(e) => window.eyebrowSwitchCity?.(e.nativeEvent,'heber')}>📍 Heber Valley, UT</div>
         <div className="eyebrow-dropdown-divider" />
         <div className="eyebrow-city-option coming-soon">+ Aspen, CO — coming soon</div>
         <div className="eyebrow-city-option coming-soon">+ Jackson Hole, WY — coming soon</div>
