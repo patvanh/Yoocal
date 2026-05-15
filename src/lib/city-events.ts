@@ -10,6 +10,15 @@ function filterContaminatedHeber(events: any[]): any[] {
   const HEBER_LNG = -111.4133;
   const RADIUS_MILES = 15;
   const BAD_LOCATION_KEYWORDS = [
+    "draper",
+    "salt lake city",
+    "orem",
+    "lehi",
+    "oakley",
+    "pleasant grove",
+    "american fork",
+    "sandy, ut",
+    "provo",
     "park city",
     "egyptian theatre",
     "deer valley",
