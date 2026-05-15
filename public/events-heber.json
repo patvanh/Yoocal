@@ -1,165 +1,1504 @@
 {
-  "updated_at": "2026-05-15T17:51:30.603592",
-  "total": 70,
+  "updated_at": "2026-05-15T12:25:41.978341",
+  "total": 167,
   "events": [
     {
-      "title": "Heber Thursday Market on Main",
-      "date": "2026-06-04",
-      "description": "Weekly outdoor market with food trucks, artisan booths, and free live concerts at 6:30pm. At Heber City Main Street Park.",
-      "location": "Heber City Main Street Park, 250 S Main St, Heber City, UT 84032",
-      "link": "https://hebermarket.com/heber-market-events/",
+      "title": "Midway Art Gallery Open House",
+      "date": "2026-05-15",
+      "end_date": null,
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/midway-art-gallery-open-house",
+      "lat": null,
+      "lng": null,
       "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.607109",
-      "start_time": "5:00 PM",
-      "end_time": "9:00 PM",
-      "end_date": "2026-08-20",
-      "recurrence": "weekly",
-      "recurrence_day": "Thursday",
-      "is_free": true
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
-      "title": "Soulful Sundays Live Music",
-      "date": "2026-06-07",
-      "description": "Free Sunday evening live music at Heber City Main Street Park.",
-      "location": "Heber City Main Street Park, 250 S Main St, Heber City, UT 84032",
-      "link": "https://www.gohebervalley.com/events/",
+      "title": "The Weekly Stillness Experience @ Wasatch County Library",
+      "date": "2026-05-15",
+      "end_date": "2026-06-12",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "location": "Wasatch County Library, Heber Valley, UT",
+      "description": "Health & Wellness",
+      "link": "https://www.gohebervalley.com/haven-of-stillness-weekly-experience",
+      "lat": null,
+      "lng": null,
       "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.607123",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Baby Animal Celebration @ Heber Valley Farm",
+      "date": "2026-05-15",
+      "end_date": "2026-05-16",
+      "start_time": "10:00 AM",
+      "end_time": "6:00 PM",
+      "location": "Heber Valley Farm, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/kohler-creamery-baby-animals",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Puzzle Races @ Wasatch County Library",
+      "date": "2026-05-15",
+      "end_date": null,
+      "start_time": "10:30 AM",
+      "end_time": "11:30 AM",
+      "location": "Wasatch County Library, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/wasatch-county-library-puzzle-races",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Ritual Chocolate Public Tour and Mini Tasting",
+      "date": "2026-05-15",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Culinary Experiences",
+      "link": "https://www.gohebervalley.com/ritual-chocolate-tour-and-tasting",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Anna's European Antiques Pop-Up Event",
+      "date": "2026-05-15",
+      "end_date": null,
+      "start_time": "11:00 AM",
+      "end_time": "4:00PM",
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/annas-european-antiques-pop-up",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-05-15",
+      "end_date": null,
+      "start_time": "11:00 AM",
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Craft Cocktails Class @ Black Rock Mountain Resort",
+      "date": "2026-05-15",
+      "end_date": null,
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
-      "end_date": "2026-08-30",
-      "recurrence": "weekly",
-      "recurrence_day": "Sunday",
-      "is_free": true
+      "location": "Black Rock Mountain Resort, Heber Valley, UT",
+      "description": "Culinary Experiences",
+      "link": "https://www.gohebervalley.com/black-rock-cocktail-class",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
-      "title": "Main Stage Live Music \u2014 Heber City",
-      "date": "2026-06-01",
-      "description": "Free Monday evening live music at Heber City Main Street Park.",
-      "location": "Heber City Main Street Park, 250 S Main St, Heber City, UT 84032",
-      "link": "https://www.gohebervalley.com/events/",
+      "title": "Military Appreciation Train @ Heber Valley Railroad",
+      "date": "2026-05-15",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "location": "Heber Valley Railroad, Heber Valley, UT",
+      "description": "Heber Valley Railroad",
+      "link": "https://www.gohebervalley.com/military-appreciation-train",
+      "lat": null,
+      "lng": null,
       "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.607127",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
+      "date": "2026-05-16",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "location": "Heber City Main Street Park, Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Rocky Mountain Carver Roundup @ Midway Town Hall",
+      "date": "2026-05-18",
+      "end_date": "2026-05-22",
+      "start_time": null,
+      "end_time": null,
+      "location": "Midway Town Hall, Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/rocky-mountain-carver-roundup",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Public Works Week Backhoe Rodeo",
+      "date": "2026-05-18",
+      "end_date": null,
+      "start_time": "4:00 PM",
+      "end_time": "7:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/heber-city-public-works-backhoe-rodeo",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Monday Night Train @ Heber Valley Railroad",
+      "date": "2026-05-18",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": null,
+      "location": "Heber Valley Railroad, Heber Valley, UT",
+      "description": "Heber Valley Railroad",
+      "link": "https://www.gohebervalley.com/monday-night-train",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Cornhole @ Wallsburg Town Hall",
+      "date": "2026-05-19",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "9:00 PM",
+      "location": "Wallsburg Town Hall, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/wallsburg-cornhole-night",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Utah Junior High State Rodeo Finals",
+      "date": "2026-05-20",
+      "end_date": "2026-05-23",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Rodeo",
+      "link": "https://www.gohebervalley.com/utah-junior-high-rodeo",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+      "date": "2026-05-20",
+      "end_date": null,
+      "start_time": "10:30 AM",
+      "end_time": "11:00 AM",
+      "location": "Folklore Bookshop, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/folklore-bookshop-morning-storytime",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Heber Midday Wednesday Ride @ Southfield Park",
+      "date": "2026-05-20",
+      "end_date": null,
+      "start_time": "12:00 PM",
+      "end_time": "1:30 PM",
+      "location": "Southfield Park, Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/heber-midday-ride",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Reading with Therapy Dogs @ Wasatch County Library",
+      "date": "2026-05-20",
+      "end_date": null,
+      "start_time": "3:00 PM",
+      "end_time": "5:00 PM",
+      "location": "Wasatch County Library, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/wasatch-county-library-reading-with-therapy-dogs",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Public Works Week Party in the Park",
+      "date": "2026-05-20",
+      "end_date": null,
+      "start_time": "5:00 PM",
+      "end_time": "8:30 PM",
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/party-in-the-park-public-works",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Open Art Studio Night @ Alchemy Art Studio",
+      "date": "2026-05-20",
+      "end_date": null,
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "location": "Alchemy Art Studio, Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/alchemy-art-open-studio",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wasatch Trail Series - Heber Valley Races",
+      "date": "2026-05-20",
+      "end_date": null,
+      "start_time": "6:30 PM",
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/wasatch-trail-run",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Mahjong Mania @ Folklore Bookshop",
+      "date": "2026-05-20",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "location": "Folklore Bookshop, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/folklore-bookshop-mahjong",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Still Water, Clear Seeing 6-Week Meditation Program",
+      "date": "2026-05-20",
+      "end_date": "2026-06-10",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Health & Wellness",
+      "link": "https://www.gohebervalley.com/haven-of-stillness-meditation-retreat",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Tween Book Club @ Folklore Bookshop",
+      "date": "2026-05-21",
+      "end_date": null,
+      "start_time": "6:30 PM",
+      "end_time": "7:30 PM",
+      "location": "Folklore Bookshop, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/folklore-bookshop-tween-book-club",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Classic Sheepdog Championship and Festival @ Soldier Hollow",
+      "date": "2026-05-22",
+      "end_date": "2026-05-25",
+      "start_time": null,
+      "end_time": null,
+      "location": "Soldier Hollow, Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/soldier-hollow-classic",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wasatch Back Midway Art Festival",
+      "date": "2026-05-22",
+      "end_date": "2026-05-25",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/wasatch-back-art-festival-midway",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Mozzarella Making Class @ Kohler Creamery",
+      "date": "2026-05-22",
+      "end_date": null,
+      "start_time": "10:30 AM",
+      "end_time": "11:30 AM",
+      "location": "Kohler Creamery, Heber Valley, UT",
+      "description": "Culinary Experiences",
+      "link": "https://www.gohebervalley.com/kohler-creamery-mozzarella-making-class",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Farmstead Burrata Class @ Kohler Creamery",
+      "date": "2026-05-22",
+      "end_date": null,
+      "start_time": "1:00 PM",
+      "end_time": "2:00 PM",
+      "location": "Kohler Creamery, Heber Valley, UT",
+      "description": "Culinary Experiences",
+      "link": "https://www.gohebervalley.com/kohler-creamery-burrata-making-class",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Perfect Pairings: Ritual Chocolate & Wine Tasting @ Black Rock Mountain Resort",
+      "date": "2026-05-22",
+      "end_date": null,
+      "start_time": "6:00 PM",
+      "end_time": "7:00 PM",
+      "location": "Black Rock Mountain Resort, Heber Valley, UT",
+      "description": "Culinary Experiences",
+      "link": "https://www.gohebervalley.com/black-rock-chocolate-and-wine-tasting",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Free Concert Series @ Wasatch County Library",
+      "date": "2026-05-22",
+      "end_date": null,
+      "start_time": "6:00 PM",
+      "end_time": "7:00 PM",
+      "location": "Wasatch County Library, Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/wasatch-county-library-concert-series",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Vintage Fashion Train @ Heber Valley Railroad",
+      "date": "2026-05-22",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "location": "Heber Valley Railroad, Heber Valley, UT",
+      "description": "Heber Valley Railroad",
+      "link": "https://www.gohebervalley.com/vintage-fashion-train",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Dog's Day in the Park @ Heber City Main Street Park",
+      "date": "2026-05-23",
+      "end_date": null,
+      "start_time": "10:00 AM",
+      "end_time": "12:00 PM",
+      "location": "Heber City Main Street Park, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/heber-city-park-dogs-day",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Veteran's Tribute on Memorial Day",
+      "date": "2026-05-25",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/drive-by-tribute-to-veterans",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Memorial Day BBQ @ Sundance Resort",
+      "date": "2026-05-25",
+      "end_date": null,
+      "start_time": "11:00 AM",
+      "end_time": "4:00 PM",
+      "location": "Sundance Resort, Heber Valley, UT",
+      "description": "Culinary Experiences",
+      "link": "https://www.gohebervalley.com/sundance-memorial-day-bbq",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Heber's No Reading Book Club",
+      "date": "2026-05-26",
+      "end_date": null,
       "start_time": "6:30 PM",
       "end_time": "8:00 PM",
-      "end_date": "2026-08-31",
-      "recurrence": "weekly",
-      "recurrence_day": "Monday",
-      "is_free": true
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/heber-no-reading-book-club",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Country Swing & Line Dancing @ The Sycamore Building",
+      "date": "2026-05-26",
+      "end_date": null,
+      "start_time": "8:00 PM",
+      "end_time": "11:00PM",
+      "location": "The Sycamore Building, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/swing-dance-at-sycamore",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Princess & Pirate Train @ Heber Valley Railroad",
+      "date": "2026-05-29",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley Railroad, Heber Valley, UT",
+      "description": "Heber Valley Railroad",
+      "link": "https://www.gohebervalley.com/princess-and-pirate-train",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "State Parks",
+      "date": "2026-05-30",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/disc-golf-tournament",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Commemorative Air Force Museum Tours",
+      "date": "2026-05-30",
+      "end_date": null,
+      "start_time": "10:00 AM",
+      "end_time": "4:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/air-force-museum",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Soulful Music Sundays @ Heber City Park",
+      "date": "2026-05-31",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "8:00 PM",
+      "location": "Heber City Park, Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/soulful-sundays-at-heber-city-park",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "In Stitches Gathering @ Wasatch County Library",
+      "date": "2026-06-02",
+      "end_date": null,
+      "start_time": "6:00 PM",
+      "end_time": "7:00 PM",
+      "location": "Wasatch County Library, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/wasatch-county-library-in-stitches",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Utah High School Rodeo State Finals",
+      "date": "2026-06-03",
+      "end_date": "2026-06-06",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Rodeo",
+      "link": "https://www.gohebervalley.com/utah-high-school-rodeo-finals",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Kid's Book Club @ Wasatch County Library",
+      "date": "2026-06-04",
+      "end_date": null,
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "location": "Wasatch County Library, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/wasatch-county-library-kids-book-club",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Heber Market on Main",
+      "date": "2026-06-04",
+      "end_date": "2026-08-20",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/heber-market-on-main",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Author Book Signing @ Folklore Bookshop",
+      "date": "2026-06-04",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Folklore Bookshop, Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/folklore-bookshop-author-signing",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Ice Skating Glide In Movies @ Black Rock Event Center",
+      "date": "2026-06-05",
+      "end_date": null,
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "location": "Black Rock Event Center, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/black-rock-glide-in-movies",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wild West Days Train @ Heber Valley Railroad",
+      "date": "2026-06-05",
+      "end_date": "2026-06-09",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley Railroad, Heber Valley, UT",
+      "description": "Heber Valley Railroad",
+      "link": "https://www.gohebervalley.com/wild-west-days-train",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Free Outdoor Concerts @ Heber Valley Railroad Depot",
+      "date": "2026-06-05",
+      "end_date": null,
+      "start_time": "8:30 PM",
+      "end_time": "9:30 PM",
+      "location": "Heber Valley Railroad Depot, Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/live-music-at-heber-valley-railroad",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Free Fishing Day",
+      "date": "2026-06-06",
+      "end_date": null,
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "State Parks",
+      "link": "https://www.gohebervalley.com/free-fishing-day",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Saturday Farmers Market",
+      "date": "2026-06-06",
+      "end_date": null,
+      "start_time": "10:00 AM",
+      "end_time": "1:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/midway-farmers-market",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Classic Car Show @ Spring Gardens",
+      "date": "2026-06-06",
+      "end_date": null,
+      "start_time": "10:00 AM",
+      "end_time": "1:00 PM",
+      "location": "Spring Gardens, Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/spring-gardens-car-show-and-country-market",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Annual Victory Hangar Dance",
+      "date": "2026-06-06",
+      "end_date": null,
+      "start_time": "6:00 PM",
+      "end_time": "10:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/annual-hangar-dance",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Improv Comedy with the Belvederes",
+      "date": "2026-06-06",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/improv-comedy-with-the-belvederes",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Free Yoga on the Lawn @ Heber City Park",
+      "date": "2026-06-07",
+      "end_date": null,
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "location": "Heber City Park, Heber Valley, UT",
+      "description": "Health & Wellness",
+      "link": "https://www.gohebervalley.com/heber-city-park-yoga-on-the-lawn",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
       "title": "Midway Music on the Square",
-      "date": "2026-06-03",
-      "description": "Free Wednesday evening live music at Midway Town Square.",
-      "location": "Midway Town Square, 75 N 100 W, Midway, UT 84049",
-      "link": "https://www.gohebervalley.com/events/",
+      "date": "2026-06-10",
+      "end_date": "2026-08-12",
+      "start_time": "6:30 PM",
+      "end_time": "8:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/midway-music-on-the-square",
+      "lat": null,
+      "lng": null,
       "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5127,
-      "lng": -111.4742,
-      "scraped_at": "2026-05-15T17:51:26.607130",
-      "start_time": "6:00 PM",
-      "end_date": "2026-08-26",
-      "recurrence": "weekly",
-      "recurrence_day": "Wednesday",
-      "is_free": true
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
-      "title": "Midway Swiss Days",
-      "date": "2026-09-04",
-      "description": "Utah's second largest festival. Free 10K run at 7am, parade at 10am, live entertainment, food vendors, artisan booths. Free admission.",
-      "location": "151 W Main Street, Midway, UT 84049",
-      "link": "https://www.gohebervalley.com/swiss-days/",
+      "title": "Community Events",
+      "date": "2026-06-11",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Business & Networking",
+      "link": "https://www.gohebervalley.com/ice-cream-social",
+      "lat": null,
+      "lng": null,
       "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5127,
-      "lng": -111.4742,
-      "scraped_at": "2026-05-15T17:51:26.607132",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wine Dinner @ Midway Mercantile",
+      "date": "2026-06-11",
+      "end_date": null,
+      "start_time": "6:00 PM",
+      "end_time": null,
+      "location": "Midway Mercantile, Heber Valley, UT",
+      "description": "Culinary Experiences",
+      "link": "https://www.gohebervalley.com/midway-mercantile-wine-dinner",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Swing & Line Dancing Lessons & Community Dance",
+      "date": "2026-06-11",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/usu-extension-wasatch-class",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Midway Art Walk",
+      "date": "2026-06-12",
+      "end_date": null,
+      "start_time": "5:00 PM",
+      "end_time": "8:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/midway-art-walk",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Utah Local Author Day @ Folklore Bookshop",
+      "date": "2026-06-12",
+      "end_date": null,
+      "start_time": "5:00 PM",
+      "end_time": "7:00 PM",
+      "location": "Folklore Bookshop, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/folklore-bookshop-utah-local-authors-day",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Cheese Tasting @ Kohler Creamery",
+      "date": "2026-06-12",
+      "end_date": null,
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "location": "Kohler Creamery, Heber Valley, UT",
+      "description": "Culinary Experiences",
+      "link": "https://www.gohebervalley.com/cheese-tasting",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Gathered With Heart Summer Kick Off Event",
+      "date": "2026-06-13",
+      "end_date": null,
+      "start_time": "11:00 AM",
+      "end_time": "5:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/gathered-with-heart-market",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Cacao Ceremony @ Ritual Chocolate",
+      "date": "2026-06-18",
+      "end_date": null,
+      "start_time": "6:00 PM",
+      "end_time": "7:00 PM",
+      "location": "Ritual Chocolate, Heber Valley, UT",
+      "description": "Culinary Experiences",
+      "link": "https://www.gohebervalley.com/ritual-chocolate-cacao-ceremony",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Sundance Resort Bluebird Concert Series",
+      "date": "2026-06-19",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/sundance-bluebird-concert-series",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Jordanelle Triathlon",
+      "date": "2026-06-20",
+      "end_date": null,
+      "start_time": "7:00 AM",
+      "end_time": "11:00 AM",
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/jordanelle-triathlon",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "The Wasatch 50 Race",
+      "date": "2026-06-20",
+      "end_date": null,
+      "start_time": "7:00 AM",
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/wasatch-50-race",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "1776 The Musical @ Timpanogos Valley Theatre",
+      "date": "2026-06-24",
+      "end_date": "2026-07-04",
+      "start_time": null,
+      "end_time": null,
+      "location": "Timpanogos Valley Theatre, Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/timp-valley-theatre-performance",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Spirit Connection with Jo\u2019Anne Smith",
+      "date": "2026-06-24",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/salt-lake-medium-spirit-connection",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "RW Erickson Antique Power Show",
+      "date": "2026-06-26",
+      "end_date": "2026-06-28",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/rw-erickson-antique-power-show",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Firecracker Baseball Tournament",
+      "date": "2026-06-26",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/firecracker-baseball-tournament",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "SoHo Bike Fest @ Soldier Hollow",
+      "date": "2026-06-26",
+      "end_date": "2026-06-28",
+      "start_time": null,
+      "end_time": null,
+      "location": "Soldier Hollow, Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/soldier-hollow-mountain-bike-festival",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Back to the 50s Car Show",
+      "date": "2026-06-27",
+      "end_date": null,
+      "start_time": "9:00 AM",
+      "end_time": "3:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/back-to-the-50s-car-show",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Mother & Daughter Garden Tea @ West Side Blooms",
+      "date": "2026-06-27",
+      "end_date": null,
+      "start_time": "10:30 AM",
+      "end_time": "12:30 PM",
+      "location": "West Side Blooms, Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/women-rising-workshop",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wasatch Plein Air Paradise",
+      "date": "2026-06-30",
+      "end_date": "2026-07-04",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/wasatch-plein-air-paradise",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Toby Keith Tribute Band Free Concert",
+      "date": "2026-07-03",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/red-white-and-blue-concert",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Midway Annual July 4th Celebration",
+      "date": "2026-07-04",
+      "end_date": null,
+      "start_time": "6:00 AM",
+      "end_time": "11:00 AM",
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/midway-fourth-of-july-celebration",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Heber Valley July 4th Red, White, and Blue Festival",
+      "date": "2026-07-04",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/red-white-and-blue-festival-event",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Red, White, and Blue Festival Main-to-Main 5K & 10K Races",
+      "date": "2026-07-04",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/maintomain10k",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "July 4th Freedom Train @ Heber Valley Railroad",
+      "date": "2026-07-04",
+      "end_date": null,
+      "start_time": "9:00 AM",
+      "end_time": null,
+      "location": "Heber Valley Railroad, Heber Valley, UT",
+      "description": "Heber Valley Railroad",
+      "link": "https://www.gohebervalley.com/freedom-train",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Red, White, and Blue Festival Parade",
+      "date": "2026-07-04",
+      "end_date": null,
+      "start_time": "9:00 AM",
+      "end_time": "11:00 AM",
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/red-white-and-blue-parade",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Red, White, and Blue Festival Strength Competition",
+      "date": "2026-07-04",
+      "end_date": null,
+      "start_time": "2:30 PM",
+      "end_time": "3:30 PM",
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/strength-competition",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Midway America250 Celebrations",
+      "date": "2026-07-04",
+      "end_date": null,
+      "start_time": "11:00 AM",
+      "end_time": "1:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/midway-america-250-celebration",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Baseball Tournament of Champions",
+      "date": "2026-07-09",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/baseball-tournament-of-champions",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Deer Creek Half Marathon",
+      "date": "2026-07-11",
+      "end_date": null,
+      "start_time": "6:00 AM",
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/deer-creek-half-marathon",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Summer Fest Pro Wakeboard Tour @ Jordanelle Reservoir",
+      "date": "2026-07-11",
+      "end_date": "2026-07-12",
+      "start_time": null,
+      "end_time": null,
+      "location": "Jordanelle Reservoir, Heber Valley, UT",
+      "description": "State Parks",
+      "link": "https://www.gohebervalley.com/pro-wakeboard-tour",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "TedFest Music Festival",
+      "date": "2026-07-17",
+      "end_date": "2026-07-19",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/ted-fest",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Heber Valley Pioneer Baseball Tournament",
+      "date": "2026-07-17",
+      "end_date": "2026-07-18",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/pioneer-baseball-tournament",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wasatch Demolition Derby",
+      "date": "2026-07-23",
+      "end_date": "2026-07-25",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/demolition-derby",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Charleston Town Pioneer Day Celebration",
+      "date": "2026-07-24",
+      "end_date": null,
+      "start_time": "6:45 AM",
+      "end_time": "10:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/charleston-july-pioneer-celebration",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Charleston 5K",
+      "date": "2026-07-24",
+      "end_date": null,
+      "start_time": "7:00 AM",
+      "end_time": "9:00 AM",
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/charleston-pioneer-day-5k",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wasatch Back Heber Art Festival",
+      "date": "2026-07-24",
+      "end_date": "2026-07-26",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/wasatch-back-art-festival",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Midland in Concert @ Sundance Resort",
+      "date": "2026-07-25",
+      "end_date": null,
+      "start_time": "8:00 PM",
+      "end_time": "10:00 PM",
+      "location": "Sundance Resort, Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/sundance-outdoor-summer-concert",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wasatch County Fair Days",
+      "date": "2026-07-27",
+      "end_date": "2026-08-01",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/wasatch-county-fair",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Mountain Valley Stampede Rodeo",
+      "date": "2026-07-30",
+      "end_date": "2026-08-01",
+      "start_time": "7:30 PM",
+      "end_time": "10:30 PM",
+      "location": "Heber Valley, UT",
+      "description": "Rodeo",
+      "link": "https://www.gohebervalley.com/mountain-valley-stampede-rodeo",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Mountain Valley Special Needs Round Up Rodeo",
+      "date": "2026-07-31",
+      "end_date": null,
+      "start_time": "8:30 AM",
+      "end_time": "12:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Community Events",
+      "link": "https://www.gohebervalley.com/mountain-valley-stampede-round-up-rodeo",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Heber Half Marathon Run For Autism",
+      "date": "2026-08-08",
+      "end_date": null,
+      "start_time": "6:00 AM",
+      "end_time": "11:00 AM",
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/runtastic-heber-half-marathon",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Intermountain Mustang and All Ford Stampede",
+      "date": "2026-08-14",
+      "end_date": null,
+      "start_time": "8:00 AM",
+      "end_time": "4:00 PM",
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/intermountain-mustang-and-all-ford-stampede",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Make It Reign Fastpitch Softball Tournament",
+      "date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/make-it-reign-softball-tournament",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Soldier Hollow Ragnar Trail Relay Team Races",
+      "date": "2026-08-28",
+      "end_date": "2026-08-29",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/soldier-hollow-ragnar-trail-relay",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wasatch Boomerfest Music Festival",
+      "date": "2026-08-28",
+      "end_date": "2026-08-30",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/wasatch-boomerfest",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Wasatch All-Road Gravel Bike Race",
+      "date": "2026-08-29",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/wasatch-all-road",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
+    },
+    {
+      "title": "Midway Swiss Days Festival",
+      "date": "2026-09-04",
+      "end_date": "2026-09-05",
       "start_time": "8:00 AM",
       "end_time": "8:00 PM",
-      "end_date": "2026-09-05",
-      "is_free": true,
-      "featured": true
+      "location": "Heber Valley, UT",
+      "description": "Festivals & Markets",
+      "link": "https://www.gohebervalley.com/swiss-days-festival-event",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
-      "title": "Wasatch County Fair",
-      "date": "2026-07-28",
-      "description": "Annual county fair with rides, livestock, rodeo, live entertainment, food, and one of the biggest demolition derbies in the western US.",
-      "location": "Wasatch County Fairgrounds, Heber City, UT 84032",
-      "link": "https://www.gohebervalley.com/events/",
+      "title": "Hobo Train @ Heber Valley Railroad",
+      "date": "2026-09-04",
+      "end_date": null,
+      "start_time": "7:00 PM",
+      "end_time": "9:30 PM",
+      "location": "Heber Valley Railroad, Heber Valley, UT",
+      "description": "Heber Valley Railroad",
+      "link": "https://www.gohebervalley.com/hobo-days-train",
+      "lat": null,
+      "lng": null,
       "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.607134",
-      "start_time": "10:00 AM",
-      "end_date": "2026-08-01",
-      "featured": true
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
-      "title": "Heber City 4th of July Celebration",
-      "date": "2026-07-04",
-      "description": "Annual 4th of July parade, fireworks, and celebration in Heber City.",
-      "location": "Heber City, UT 84032",
-      "link": "https://www.heberut.gov/Calendar.aspx",
+      "title": "Utah Barrel Race",
+      "date": "2026-09-11",
+      "end_date": null,
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Rodeo",
+      "link": "https://www.gohebervalley.com/ubra-futurity-race",
+      "lat": null,
+      "lng": null,
       "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.607137",
-      "start_time": "9:00 AM"
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
-      "title": "Heber Valley Railroad Excursion",
-      "date": "2026-05-16",
-      "description": "Scenic train rides through Heber Valley on a historic railroad. Multiple excursions available including dinner trains and special events.",
-      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT 84032",
-      "link": "https://hebervalleyrailroad.org",
+      "title": "Plein Air Rendezvous",
+      "date": "2026-09-16",
+      "end_date": "2026-09-19",
+      "start_time": null,
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Arts & Performances",
+      "link": "https://www.gohebervalley.com/plein-air-rendezvous",
+      "lat": null,
+      "lng": null,
       "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.504,
-      "lng": -111.408,
-      "scraped_at": "2026-05-15T17:51:26.607139",
-      "start_time": "11:00 AM",
-      "end_date": "2026-10-31",
-      "recurrence": "weekly",
-      "recurrence_days": "Saturday,Sunday"
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
-      "title": "Deer Creek State Park \u2014 Open Season",
-      "date": "2026-05-01",
-      "description": "Boating, fishing, swimming, and camping at Deer Creek Reservoir. 20 minutes from Park City via Hwy 189.",
-      "location": "Deer Creek State Park, 4000 UT-189, Midway, UT 84049",
-      "link": "https://stateparks.utah.gov/parks/deer-creek/",
+      "title": "Mountain Bike World Series @ Soldier Hollow",
+      "date": "2026-09-19",
+      "end_date": "2026-09-20",
+      "start_time": null,
+      "end_time": null,
+      "location": "Soldier Hollow, Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/soho-whoop-uci-world-series",
+      "lat": null,
+      "lng": null,
       "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.41,
-      "lng": -111.53,
-      "scraped_at": "2026-05-15T17:51:26.607141",
-      "end_date": "2026-09-30"
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
-      "title": "Kamas Valley Cattle Drive",
-      "date": "2026-06-06",
-      "description": "Annual cattle drive through Kamas Valley \u2014 a Utah tradition. Free to watch.",
-      "location": "Kamas, UT 84036",
-      "link": "https://www.gohebervalley.com/events/",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.643,
-      "lng": -111.2797,
-      "scraped_at": "2026-05-15T17:51:26.607143",
+      "title": "Wasatch Half Marathon & 10K",
+      "date": "2026-09-26",
+      "end_date": null,
       "start_time": "8:00 AM",
-      "is_free": true
+      "end_time": null,
+      "location": "Heber Valley, UT",
+      "description": "Athletic Activities",
+      "link": "https://www.gohebervalley.com/wasatch-half-marathon",
+      "lat": null,
+      "lng": null,
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/"
     },
     {
       "title": "Heber Valley Farm Baby Animal Celebration 2026",
@@ -171,7 +1510,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.901860"
+      "scraped_at": "2026-05-15T12:25:40.767706"
     },
     {
       "title": "Sage Creek Short Tour II",
@@ -183,7 +1522,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.901883"
+      "scraped_at": "2026-05-15T12:25:40.767730"
     },
     {
       "title": "Wine Tasting & Cheese Train 2026",
@@ -195,7 +1534,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.901897"
+      "scraped_at": "2026-05-15T12:25:40.767744"
     },
     {
       "title": "Wasatch County Fair Days",
@@ -207,7 +1546,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.901910"
+      "scraped_at": "2026-05-15T12:25:40.767758"
     },
     {
       "title": "Debra Fotheringham",
@@ -219,7 +1558,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.901922",
+      "scraped_at": "2026-05-15T12:25:40.767772",
       "start_time": "10:30 PM"
     },
     {
@@ -232,7 +1571,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.901936"
+      "scraped_at": "2026-05-15T12:25:40.767788"
     },
     {
       "title": "Cousin Curtiss",
@@ -244,7 +1583,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.901947",
+      "scraped_at": "2026-05-15T12:25:40.767802",
       "start_time": "10:30 PM"
     },
     {
@@ -257,7 +1596,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:26.901970"
+      "scraped_at": "2026-05-15T12:25:40.767815"
     },
     {
       "title": "Michael",
@@ -269,7 +1608,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.207948"
+      "scraped_at": "2026-05-15T12:25:40.872891"
     },
     {
       "title": "Rocky Mountain Carver Roundup",
@@ -281,7 +1620,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.207966"
+      "scraped_at": "2026-05-15T12:25:40.872932"
     },
     {
       "title": "Hidden Peak Provisions Crawfish Boil 2026",
@@ -293,7 +1632,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.207976"
+      "scraped_at": "2026-05-15T12:25:40.872963"
     },
     {
       "title": "Wasatch Back Art Festival \u2013 Midway",
@@ -305,7 +1644,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.207987"
+      "scraped_at": "2026-05-15T12:25:40.872997"
     },
     {
       "title": "Wizard Of Oz",
@@ -317,7 +1656,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.208001"
+      "scraped_at": "2026-05-15T12:25:40.873040"
     },
     {
       "title": "Los Lobos",
@@ -329,7 +1668,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.208009"
+      "scraped_at": "2026-05-15T12:25:40.873067"
     },
     {
       "title": "2026 Utah Health Center Leadership Summit",
@@ -341,7 +1680,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.539959"
+      "scraped_at": "2026-05-15T12:25:40.975220"
     },
     {
       "title": "The Little Mermaid",
@@ -353,7 +1692,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.539981"
+      "scraped_at": "2026-05-15T12:25:40.975242"
     },
     {
       "title": "The Little Mermaid",
@@ -365,7 +1704,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.539991"
+      "scraped_at": "2026-05-15T12:25:40.975254"
     },
     {
       "title": "Music on the Square Summer Concert Series 2026",
@@ -377,7 +1716,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.540001"
+      "scraped_at": "2026-05-15T12:25:40.975265"
     },
     {
       "title": "2026 Soldier Hollow Classic",
@@ -389,7 +1728,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.540016"
+      "scraped_at": "2026-05-15T12:25:40.975283"
     },
     {
       "title": "The Little Mermaid",
@@ -401,7 +1740,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.540025"
+      "scraped_at": "2026-05-15T12:25:40.975300"
     },
     {
       "title": "The Little Mermaid",
@@ -413,7 +1752,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.540032"
+      "scraped_at": "2026-05-15T12:25:40.975311"
     },
     {
       "title": "Los Lobos",
@@ -425,7 +1764,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859352",
+      "scraped_at": "2026-05-15T12:25:41.061974",
       "start_time": "9:30 PM"
     },
     {
@@ -438,7 +1777,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859374",
+      "scraped_at": "2026-05-15T12:25:41.061994",
       "start_time": "10:30 PM"
     },
     {
@@ -451,7 +1790,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859385",
+      "scraped_at": "2026-05-15T12:25:41.062008",
       "start_time": "10:30 PM"
     },
     {
@@ -464,7 +1803,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859395",
+      "scraped_at": "2026-05-15T12:25:41.062022",
       "start_time": "10:30 PM"
     },
     {
@@ -477,7 +1816,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859403",
+      "scraped_at": "2026-05-15T12:25:41.062036",
       "start_time": "10:30 PM"
     },
     {
@@ -490,7 +1829,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859413"
+      "scraped_at": "2026-05-15T12:25:41.062047"
     },
     {
       "title": "Lissa Dee",
@@ -502,7 +1841,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859423",
+      "scraped_at": "2026-05-15T12:25:41.062058",
       "start_time": "10:30 PM"
     },
     {
@@ -515,7 +1854,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859431"
+      "scraped_at": "2026-05-15T12:25:41.062070"
     },
     {
       "title": "Utah Marathon",
@@ -527,7 +1866,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859440",
+      "scraped_at": "2026-05-15T12:25:41.062081",
       "start_time": "7:30 AM"
     },
     {
@@ -540,7 +1879,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:27.859448",
+      "scraped_at": "2026-05-15T12:25:41.062092",
       "start_time": "9:30 PM"
     },
     {
@@ -553,7 +1892,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.146403"
+      "scraped_at": "2026-05-15T12:25:41.146654"
     },
     {
       "title": "Star Wars: The Mandalorian & Grogu",
@@ -565,7 +1904,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.146422"
+      "scraped_at": "2026-05-15T12:25:41.146671"
     },
     {
       "title": "Antique Power Show 2026",
@@ -577,7 +1916,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.146434"
+      "scraped_at": "2026-05-15T12:25:41.146684"
     },
     {
       "title": "Star Wars: The Mandalorian & Grogu",
@@ -589,7 +1928,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.146449"
+      "scraped_at": "2026-05-15T12:25:41.146702"
     },
     {
       "title": "Alicia Stockman",
@@ -601,7 +1940,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.450941",
+      "scraped_at": "2026-05-15T12:25:41.316932",
       "start_time": "10:30 PM"
     },
     {
@@ -614,7 +1953,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.450965",
+      "scraped_at": "2026-05-15T12:25:41.316956",
       "start_time": "10:30 PM"
     },
     {
@@ -627,7 +1966,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.450976",
+      "scraped_at": "2026-05-15T12:25:41.316969",
       "start_time": "10:30 PM"
     },
     {
@@ -640,7 +1979,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.740783",
+      "scraped_at": "2026-05-15T12:25:41.412258",
       "start_time": "10:30 PM"
     },
     {
@@ -653,7 +1992,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.740804",
+      "scraped_at": "2026-05-15T12:25:41.412277",
       "start_time": "10:30 PM"
     },
     {
@@ -666,7 +2005,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.740814"
+      "scraped_at": "2026-05-15T12:25:41.412290"
     },
     {
       "title": "UB40",
@@ -678,7 +2017,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.740829"
+      "scraped_at": "2026-05-15T12:25:41.412308"
     },
     {
       "title": "Twisted Fork Trail Festival - Spring Classic",
@@ -690,7 +2029,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.740837"
+      "scraped_at": "2026-05-15T12:25:41.412319"
     },
     {
       "title": "The Music Of Celine Dion",
@@ -702,7 +2041,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.740846",
+      "scraped_at": "2026-05-15T12:25:41.412330",
       "start_time": "9:30 PM"
     },
     {
@@ -715,7 +2054,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.740855",
+      "scraped_at": "2026-05-15T12:25:41.412341",
       "start_time": "5:00 PM"
     },
     {
@@ -728,7 +2067,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:28.740863",
+      "scraped_at": "2026-05-15T12:25:41.412353",
       "start_time": "7:00 PM"
     },
     {
@@ -741,7 +2080,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017248"
+      "scraped_at": "2026-05-15T12:25:41.502980"
     },
     {
       "title": "Feel Good Spring Wellness Fair",
@@ -753,7 +2092,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017268"
+      "scraped_at": "2026-05-15T12:25:41.502996"
     },
     {
       "title": "Crestal Sinus Lifting With Guided Surgery / Heber City, UT",
@@ -765,7 +2104,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017278"
+      "scraped_at": "2026-05-15T12:25:41.503007"
     },
     {
       "title": "Sunday Service Drag Brunch",
@@ -777,7 +2116,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017286"
+      "scraped_at": "2026-05-15T12:25:41.503017"
     },
     {
       "title": "Sunday Service Drag Brunch",
@@ -789,7 +2128,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017295"
+      "scraped_at": "2026-05-15T12:25:41.503026"
     },
     {
       "title": "LIVE \"SPIRIT CONNECTION\" EVENT WITH SALT LAKE MEDIUM, JO'ANNE SMITH",
@@ -801,7 +2140,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017322",
+      "scraped_at": "2026-05-15T12:25:41.503037",
       "start_time": "8:30 PM"
     },
     {
@@ -814,7 +2153,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017332"
+      "scraped_at": "2026-05-15T12:25:41.503048"
     },
     {
       "title": "\"The Lake\" Screening",
@@ -826,7 +2165,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017347",
+      "scraped_at": "2026-05-15T12:25:41.503059",
       "start_time": "9:30 PM"
     },
     {
@@ -839,7 +2178,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017358",
+      "scraped_at": "2026-05-15T12:25:41.503070",
       "start_time": "10:45 AM"
     },
     {
@@ -852,7 +2191,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.017366"
+      "scraped_at": "2026-05-15T12:25:41.503079"
     },
     {
       "title": "Heber Valley Main-to-Main 5K and 10K",
@@ -864,7 +2203,7 @@
       "source_url": "https://www.runningintheusa.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.018374",
+      "scraped_at": "2026-05-15T12:25:41.503701",
       "start_time": "7:30 AM"
     },
     {
@@ -877,7 +2216,7 @@
       "source_url": "https://www.runningintheusa.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.018379",
+      "scraped_at": "2026-05-15T12:25:41.503705",
       "start_time": "6:00 AM"
     },
     {
@@ -890,7 +2229,7 @@
       "source_url": "https://www.runningintheusa.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.018382",
+      "scraped_at": "2026-05-15T12:25:41.503708",
       "start_time": "7:00 AM"
     },
     {
@@ -903,7 +2242,7 @@
       "source_url": "https://www.runningintheusa.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-05-15T17:51:29.018384",
+      "scraped_at": "2026-05-15T12:25:41.503710",
       "start_time": "7:00 AM"
     }
   ]

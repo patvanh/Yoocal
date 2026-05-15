@@ -438,29 +438,251 @@ def save_events(events, filename="public/events-heber.json"):
 # ─────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────
+EVENTS_URL = "https://www.gohebervalley.com/events/"
+CARD_SELECTOR = "a.pinnable_item"
+
+MONTH_MAP = {
+    "jan": 1, "january": 1,
+    "feb": 2, "february": 2,
+    "mar": 3, "march": 3,
+    "apr": 4, "april": 4,
+    "may": 5,
+    "jun": 6, "june": 6,
+    "jul": 7, "july": 7,
+    "aug": 8, "august": 8,
+    "sep": 9, "sept": 9, "september": 9,
+    "oct": 10, "october": 10,
+    "nov": 11, "november": 11,
+    "dec": 12, "december": 12,
+}
+
+
 def scrape_gohebervalley_live():
-    """Load events from browser-scraped gohebervalley-live.json if it exists."""
-    import os
-    paths = [
-        os.path.expanduser("~/Downloads/gohebervalley-live.json"),
-        os.path.join(os.path.dirname(__file__), "gohebervalley-live.json"),
-    ]
-    for path in paths:
-        if os.path.exists(path):
-            print(f"Loading gohebervalley.com events from {path}...")
+    """Scrape gohebervalley.com/events/ using Playwright. Never raises."""
+    print("Scraping gohebervalley.com (Playwright)...")
+
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print("  Playwright not installed; skipping. Run: pip install playwright && playwright install chromium")
+        return []
+
+    events = []
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            context = browser.new_context(
+                user_agent=(
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/124.0.0.0 Safari/537.36"
+                ),
+                viewport={"width": 1280, "height": 1800},
+            )
+            page = context.new_page()
+
+            print(f"  Loading {EVENTS_URL} ...")
+            page.goto(EVENTS_URL, wait_until="networkidle", timeout=60000)
+
+            # Wait until at least one event card has rendered, then give it
+            # a beat to render the rest.
             try:
-                with open(path) as f:
-                    data = json.load(f)
-                events = data.get("events", [])
-                for e in events:
-                    e["source"] = "Heber Valley Tourism"
-                    e["source_url"] = "https://www.gohebervalley.com/events/"
-                print(f"  Loaded {len(events)} events from gohebervalley.com")
-                return events
-            except Exception as ex:
-                print(f"  Error loading {path}: {ex}")
-    print("  No gohebervalley-live.json found, skipping")
-    return []
+                page.wait_for_selector(CARD_SELECTOR, timeout=15000)
+            except Exception:
+                print("  Warning: no event cards appeared within 15s")
+                browser.close()
+                return []
+
+            page.wait_for_timeout(2000)  # let the async batch complete
+
+            cards = page.query_selector_all(CARD_SELECTOR)
+            print(f"  Found {len(cards)} candidate cards")
+
+            seen_keys = set()
+            for card in cards:
+                try:
+                    ev = parse_card(card)
+                    if not ev:
+                        continue
+                    # Dedupe by (title, date)
+                    key = (ev["title"], ev["date"])
+                    if key in seen_keys:
+                        continue
+                    seen_keys.add(key)
+                    events.append(ev)
+                except Exception:
+                    continue
+
+            browser.close()
+
+    except Exception as ex:
+        print(f"  Playwright failed: {ex}")
+        return []
+
+    # Decorate with source metadata
+    for e in events:
+        e.setdefault("source", "Heber Valley Tourism")
+        e.setdefault("source_url", "https://www.gohebervalley.com/events/")
+
+    print(f"  Extracted {len(events)} events from gohebervalley.com")
+    return events
+
+
+def parse_card(card_element):
+    """Parse one <a class='pinnable_item'> into an event dict.
+
+    Returns None if the card looks like navigation (no real event title)
+    or if the text doesn't match the expected 4-5 line pattern.
+    """
+    text = (card_element.inner_text() or "").strip()
+    if not text:
+        return None
+
+    href = card_element.get_attribute("href") or ""
+    if href and not href.startswith("http"):
+        href = "https://www.gohebervalley.com" + href
+
+    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+    if len(lines) < 4:
+        # Could be the "Chamber Events" nav link with just 2-3 lines —
+        # not a real event
+        return None
+
+    month_text = lines[0]
+    day_text = lines[1]
+    # lines[2] is category, used to enrich description
+    category = lines[2] if len(lines) > 2 else ""
+    title = lines[3] if len(lines) > 3 else ""
+    time_date_line = lines[4] if len(lines) > 4 else ""
+
+    # Sanity check: month should be a 3-letter all-caps abbreviation
+    if not re.match(r"^[A-Z]{3,9}$", month_text):
+        return None
+
+    month_num = MONTH_MAP.get(month_text.lower())
+    if not month_num:
+        return None
+
+    # Parse the day. "15+" means multi-day starting on the 15th.
+    m = re.match(r"^(\d{1,2})(\+)?$", day_text)
+    if not m:
+        return None
+    day = int(m.group(1))
+    is_multi_day = bool(m.group(2))
+
+    # Build the start date. Year isn't shown — assume current year, but if
+    # the resulting date is more than a month in the past, roll forward.
+    today = datetime.now().date()
+    try:
+        start_date = datetime(today.year, month_num, day).date()
+    except ValueError:
+        return None
+    if (today - start_date).days > 30:
+        try:
+            start_date = datetime(today.year + 1, month_num, day).date()
+        except ValueError:
+            return None
+
+    end_date = None
+    start_time, end_time = None, None
+
+    if time_date_line:
+        # Try several patterns in order. First, embedded date range like
+        # "Fri, May 8 - Jun 12, 9:00 - 10:00 AM" — we want both date range
+        # and time range.
+        ed = extract_explicit_end_date(time_date_line, start_date.year, month_num)
+        if ed:
+            end_date = ed
+
+        # "May 15 - 16, 10:00 AM - 6:00 PM" — same month, different day
+        m = re.search(
+            r"\b([A-Za-z]+)\s+(\d{1,2})\s*[-–]\s*(\d{1,2})\b",
+            time_date_line,
+        )
+        if m and not end_date:
+            em = MONTH_MAP.get(m.group(1).lower())
+            if em == month_num:
+                try:
+                    end_date = datetime(start_date.year, em, int(m.group(3))).date()
+                except ValueError:
+                    pass
+
+        # Time range
+        start_time, end_time = parse_time_range(time_date_line)
+
+    return {
+        "title": title,
+        "date": start_date.isoformat(),
+        "end_date": end_date.isoformat() if end_date else None,
+        "start_time": start_time,
+        "end_time": end_time,
+        "location": extract_venue_from_title(title) or "Heber Valley, UT",
+        "description": category,
+        "link": href,
+        "lat": None,
+        "lng": None,
+    }
+
+
+def extract_explicit_end_date(text, year_hint, start_month):
+    """For multi-day spans like 'May 8 - Jun 12' or 'Fri, May 8 - Jun 12'."""
+    m = re.search(
+        r"\b([A-Za-z]+)\s+(\d{1,2})\s*[-–]\s*([A-Za-z]+)\s+(\d{1,2})\b",
+        text,
+    )
+    if m:
+        em = MONTH_MAP.get(m.group(3).lower())
+        if em:
+            try:
+                return datetime(year_hint, em, int(m.group(4))).date()
+            except ValueError:
+                pass
+    return None
+
+
+def parse_time_range(text):
+    """Extract '10:00 AM' / '6:00 PM' style start and end times."""
+    # Case A: explicit "10:00 AM - 6:00 PM" (AM/PM on both)
+    m = re.search(
+        r"(\d{1,2}:\d{2}\s*[AaPp][Mm])\s*[-–]\s*(\d{1,2}:\d{2}\s*[AaPp][Mm])",
+        text,
+    )
+    if m:
+        return normalize_time(m.group(1)), normalize_time(m.group(2))
+
+    # Case B: "10:30 - 11:30 AM" (AM/PM only on the end — share it with start)
+    m = re.search(
+        r"(\d{1,2}:\d{2})\s*[-–]\s*(\d{1,2}:\d{2})\s*([AaPp][Mm])",
+        text,
+    )
+    if m:
+        ampm = m.group(3).upper()
+        return normalize_time(f"{m.group(1)} {ampm}"), normalize_time(f"{m.group(2)} {ampm}")
+
+    # Case C: single time
+    m = re.search(r"(\d{1,2}:\d{2}\s*[AaPp][Mm])", text)
+    if m:
+        return normalize_time(m.group(1)), None
+
+    return None, None
+
+
+def normalize_time(t):
+    """Normalize '9:00 am' -> '9:00 AM'."""
+    return re.sub(r"\s+", " ", t.strip()).upper()
+
+
+def extract_venue_from_title(title):
+    """Many titles encode the venue inline: 'Event Name @ Venue Name'."""
+    if not title or "@" not in title:
+        return None
+    parts = title.split("@", 1)
+    if len(parts) == 2:
+        venue = parts[1].strip()
+        if venue:
+            return venue + ", Heber Valley, UT"
+    return None
 
 
 def main():
