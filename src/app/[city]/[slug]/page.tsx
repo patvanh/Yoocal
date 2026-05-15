@@ -98,7 +98,7 @@ function getRelatedEvents(cityKey: CityKey, current: YoocalEvent): YoocalEvent[]
   return [...sameVenue, ...sameDay]
 }
 
-function to24h(time12) {
+function to24h(time12: string | undefined | null): string {
   if (!time12) return "00:00:00";
   const m = String(time12).trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)?$/i);
   if (!m) return "00:00:00";
@@ -109,7 +109,7 @@ function to24h(time12) {
   if (ampm === "AM" && h === 12) h = 0;
   return `${String(h).padStart(2, "0")}:${min}:00`;
 }
-function addOneHourTo24h(time12) {
+function addOneHourTo24h(time12: string | undefined | null): string {
   const t = to24h(time12);
   const h = parseInt(t.slice(0,2), 10);
   const nh = (h + 1) % 24;
