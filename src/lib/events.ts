@@ -4,6 +4,7 @@ import path from 'path'
 export interface YoocalEvent {
   title: string
   date: string
+  end_date?: string
   description?: string
   location?: string
   link?: string
@@ -14,6 +15,9 @@ export interface YoocalEvent {
   scraped_at?: string
   start_time?: string
   end_time?: string
+  recurrence?: string
+  recurrence_day?: string
+  recurrence_days?: string
   lat?: number
   lng?: number
   featured?: boolean
