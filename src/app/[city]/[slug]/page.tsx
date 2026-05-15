@@ -157,7 +157,6 @@ export default async function EventPage({ params }: Props) {
           address: {
             "@type": "PostalAddress",
             addressLocality: city.name,
-            addressRegion: city.state || undefined,
             addressCountry: "US",
           },
         }
@@ -167,7 +166,6 @@ export default async function EventPage({ params }: Props) {
           address: {
             "@type": "PostalAddress",
             addressLocality: city.name,
-            addressRegion: city.state || undefined,
             addressCountry: "US",
           },
         },
