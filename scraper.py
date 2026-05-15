@@ -1002,7 +1002,7 @@ def deduplicate(events):
 def scrape_google_events():
     print("Scraping Google Events via SerpApi...")
     events = []
-    SERPAPI_KEY = "f0e24bf0ff2e97c60a99322c2efd147645362de5b54c8f2d913ed4af2bc4a5bd"
+    SERPAPI_KEY = os.environ.get("SERPAPI_KEY", "")
 
     queries = [
         "events in Park City Utah",
@@ -1203,7 +1203,7 @@ def scrape_arts_council():
     return events
 
 
-def save_events(events, filename="events.json"):
+def save_events(events, filename="public/events.json"):
     output = {
         "updated_at": datetime.now().isoformat(),
         "total": len(events),

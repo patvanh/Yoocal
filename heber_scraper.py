@@ -19,7 +19,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 
-SERPAPI_KEY = "f0e24bf0ff2e97c60a99322c2efd147645362de5b54c8f2d913ed4af2bc4a5bd"
+SERPAPI_KEY = os.environ.get("SERPAPI_KEY", "")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -424,7 +424,7 @@ def deduplicate(events):
             unique.append(e)
     return unique
 
-def save_events(events, filename="events-heber.json"):
+def save_events(events, filename="public/events-heber.json"):
     output = {
         "updated_at": datetime.now().isoformat(),
         "total": len(events),
