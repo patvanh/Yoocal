@@ -1244,6 +1244,25 @@ def scrape_kpcw_and_cache_heber():
     return pc_events
 
 
+
+
+# -------------------------------------------------------
+# DEER VALLEY (resort calendar — music festival, hikes, etc)
+# -------------------------------------------------------
+def scrape_deer_valley_wrapper():
+    """Run the Deer Valley scraper if available."""
+    try:
+        from deer_valley_scraper import scrape_deer_valley
+    except ImportError:
+        print("  deer_valley_scraper not available, skipping")
+        return []
+    try:
+        return scrape_deer_valley()
+    except Exception as ex:
+        print(f"  Deer Valley scraper failed: {ex}")
+        return []
+
+
 # -------------------------------------------------------
 # GEOGRAPHIC RE-ROUTING (Park City -> Heber Valley)
 # -------------------------------------------------------
@@ -1349,6 +1368,7 @@ def main():
     all_events += scrape_utah_com()
     all_events += scrape_arts_council()
     all_events += scrape_kpcw_and_cache_heber()
+    all_events += scrape_deer_valley_wrapper()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)
