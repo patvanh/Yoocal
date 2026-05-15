@@ -1213,6 +1213,37 @@ def scrape_arts_council():
 
 
 
+
+
+# -------------------------------------------------------
+# KPCW (covers both Park City and Heber Valley)
+# -------------------------------------------------------
+def scrape_kpcw_and_cache_heber():
+    """Run KPCW scraper; return PC events, cache Heber events for the other pipeline."""
+    try:
+        from kpcw_scraper import scrape_kpcw_calendar
+    except ImportError:
+        print("  kpcw_scraper not available, skipping KPCW")
+        return []
+
+    pc_events, heber_events = scrape_kpcw_calendar()
+
+    # Cache Heber events so heber_scraper.py can pick them up
+    if heber_events:
+        cache = {
+            "updated_at": datetime.now().isoformat(),
+            "events": heber_events,
+        }
+        try:
+            with open("kpcw_heber_cache.json", "w") as f:
+                json.dump(cache, f, indent=2)
+            print(f"  Cached {len(heber_events)} Heber events from KPCW for heber_scraper to merge")
+        except Exception as ex:
+            print(f"  Warning: could not write kpcw_heber_cache.json: {ex}")
+
+    return pc_events
+
+
 # -------------------------------------------------------
 # GEOGRAPHIC RE-ROUTING (Park City -> Heber Valley)
 # -------------------------------------------------------
@@ -1311,13 +1342,13 @@ def main():
 
     all_events = []
     all_events += scrape_visit_park_city()
-    all_events += scrape_kpcw()
     all_events += scrape_eventbrite()
     all_events += scrape_running_in_the_usa()
     all_events += scrape_park_record()
     all_events += scrape_google_events()
     all_events += scrape_utah_com()
     all_events += scrape_arts_council()
+    all_events += scrape_kpcw_and_cache_heber()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)

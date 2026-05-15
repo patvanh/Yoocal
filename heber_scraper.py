@@ -692,6 +692,20 @@ def main():
     print()
 
     all_events = []
+    # Pick up any Heber events KPCW scraper cached for us (KPCW covers both
+    # Park City and Heber, so we run it once from scraper.py and share results).
+    kpcw_cache_path = "kpcw_heber_cache.json"
+    if os.path.exists(kpcw_cache_path):
+        try:
+            with open(kpcw_cache_path) as f:
+                kpcw_data = json.load(f)
+            kpcw_events = kpcw_data.get("events", [])
+            if kpcw_events:
+                all_events += kpcw_events
+                print(f"Loaded {len(kpcw_events)} Heber events from KPCW cache")
+        except Exception as ex:
+            print(f"Warning: could not load {kpcw_cache_path}: {ex}")
+
     browser_scraped = scrape_gohebervalley_live()
     if browser_scraped:
         all_events += browser_scraped
