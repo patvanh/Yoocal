@@ -975,7 +975,7 @@ def handle_recurring(events):
 
 def deduplicate(events):
     # Sort so Park Record comes first — it has times, prefer it over VPC
-    source_priority = {"The Park Record": 0, "Google Events": 1, "Running in the USA": 2, "Visit Park City": 3}
+    source_priority = {"The Park Record": 0, "Park City Institute": 1, "Deer Valley Resort": 2, "KPCW Community Calendar": 3, "Google Events": 4, "Running in the USA": 5, "Visit Park City": 6}
     events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
 
     seen = set()
@@ -986,12 +986,18 @@ def deduplicate(events):
         title_clean = re.sub(r'^[\(\"\'\-\s]+', '', title)[:35]
         # Also try without subtitle (before colon) for broader matching
         title_no_sub = title_clean.split(':')[0].strip()[:30]
+        # 'Loose' key: strip everything after ' with ', ' featuring ', dash/em-dash etc
+        # This catches "Allen Stone" vs "Allen Stone with Special Guest Wyatt Pike"
+        # and "Country Weekend - Walker Hayes" vs "Walker Hayes"
+        title_loose = re.sub(r'\s*(-|\u2014|\u2013|\bwith\b|\bfeaturing\b|\bft\.?\b|\bpresented by\b|\bspecial guest\b).*$', '', title_clean).strip()[:25]
         date = e.get("date", "")[:10]
         key_full = f"{title_clean}|{date}"
         key_short = f"{title_no_sub}|{date}"
-        if key_full not in seen and key_short not in seen:
+        key_loose = f"{title_loose}|{date}"
+        if key_full not in seen and key_short not in seen and key_loose not in seen:
             seen.add(key_full)
             seen.add(key_short)
+            seen.add(key_loose)
             unique.append(e)
     return unique
 
@@ -1263,6 +1269,25 @@ def scrape_deer_valley_wrapper():
         return []
 
 
+
+
+# -------------------------------------------------------
+# PARK CITY INSTITUTE (Concerts on the Slopes via Showpass)
+# -------------------------------------------------------
+def scrape_park_city_institute_wrapper():
+    """Run the Park City Institute scraper if available."""
+    try:
+        from park_city_institute_scraper import scrape_park_city_institute
+    except ImportError:
+        print("  park_city_institute_scraper not available, skipping")
+        return []
+    try:
+        return scrape_park_city_institute()
+    except Exception as ex:
+        print(f"  Park City Institute scraper failed: {ex}")
+        return []
+
+
 # -------------------------------------------------------
 # GEOGRAPHIC RE-ROUTING (Park City -> Heber Valley)
 # -------------------------------------------------------
@@ -1369,6 +1394,7 @@ def main():
     all_events += scrape_arts_council()
     all_events += scrape_kpcw_and_cache_heber()
     all_events += scrape_deer_valley_wrapper()
+    all_events += scrape_park_city_institute_wrapper()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)
