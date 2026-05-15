@@ -37,6 +37,7 @@ export async function generateMetadata(
 
 function normalizeCity(raw?: string): CityKey {
   if (raw === "elkhartlake") return "elkhartlake";
+  if (raw === "heber") return "heber";
   return "parkcity";
 }
 

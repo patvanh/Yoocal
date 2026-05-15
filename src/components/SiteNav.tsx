@@ -10,7 +10,7 @@
  *                undefined → shows only "About" (no city-specific links)
  */
 
-type CityKey = "parkcity" | "elkhartlake";
+type CityKey = "parkcity" | "elkhartlake" | "heber";
 type ActiveKey = "about" | "weekend" | "venues" | "business" | null;
 
 export default function SiteNav({
@@ -26,13 +26,17 @@ export default function SiteNav({
       ? "/about/park-city"
       : cityKey === "elkhartlake"
         ? "/about/elkhart-lake"
-        : "/about";
+        : cityKey === "heber"
+          ? "/about/heber"
+          : "/about";
   const aboutLabel =
     cityKey === "parkcity"
       ? "About Park City"
       : cityKey === "elkhartlake"
         ? "About Elkhart Lake"
-        : "About";
+        : cityKey === "heber"
+          ? "About Heber"
+          : "About";
 
   const weekendHref = cityKey ? `/this-weekend?city=${cityKey}` : "/this-weekend";
   const venuesHref = cityKey ? `/venues?city=${cityKey}` : "/venues";

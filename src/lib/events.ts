@@ -30,7 +30,7 @@ export interface EventsFile {
   events: YoocalEvent[]
 }
 
-export type CityKey = 'parkcity' | 'elkhartlake'
+export type CityKey = 'parkcity' | 'elkhartlake' | 'heber'
 
 // Precise coordinates for known venues
 export const VENUE_COORDS: Record<string, [number, number]> = {
@@ -113,6 +113,16 @@ export const CITY_CONFIG: Record<CityKey, {
     junk: ['previous month', 'next month'],
     aboutPage: '/about/elkhart-lake',
   },
+  heber: {
+    name: 'Heber Valley, UT',
+    label: 'Heber Valley',
+    slug: 'heber',
+    file: 'events-heber.json',
+    center: [40.5071, -111.4133],
+    zoom: 12,
+    junk: ['previous month', 'next month'],
+    aboutPage: '/about/heber',
+  },
 }
 
 export function slugify(text: string): string {
@@ -133,6 +143,7 @@ export function cityKeyFromSlug(slug: string): CityKey | null {
   const map: Record<string, CityKey> = {
     'park-city': 'parkcity',
     'elkhart-lake': 'elkhartlake',
+    'heber': 'heber',
   }
   return map[slug] || null
 }
@@ -145,6 +156,14 @@ function loadFile(filename: string): YoocalEvent[] {
   } catch {
     return []
   }
+}
+
+function coerceLatLng(events: YoocalEvent[]): YoocalEvent[] {
+  return events.map(e => {
+    const lat = typeof e.lat === 'string' ? parseFloat(e.lat) : e.lat
+    const lng = typeof e.lng === 'string' ? parseFloat(e.lng) : e.lng
+    return { ...e, lat: Number.isFinite(lat) ? lat : undefined, lng: Number.isFinite(lng) ? lng : undefined }
+  })
 }
 
 export function getEventsForCity(cityKey: CityKey): YoocalEvent[] {
@@ -176,7 +195,7 @@ export function getEventsForCity(cityKey: CityKey): YoocalEvent[] {
     }
   })
 
-  return Array.from(dedupMap.values())
+  return coerceLatLng(Array.from(dedupMap.values()))
 }
 
 export function getAllEventsWithCity(): Array<YoocalEvent & { cityKey: CityKey; citySlug: string }> {

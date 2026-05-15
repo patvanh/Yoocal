@@ -1,6 +1,51 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
+
+
+// Heber Center: 40.5071, -111.4133 (Heber City, UT)
+// Reject events outside ~15 miles OR with Park City addresses
+function filterContaminatedHeber(events: any[]): any[] {
+  const HEBER_LAT = 40.5071;
+  const HEBER_LNG = -111.4133;
+  const RADIUS_MILES = 15;
+  const BAD_LOCATION_KEYWORDS = [
+    "park city",
+    "egyptian theatre",
+    "deer valley",
+    "kimball",
+    "snow park",
+    "high west distillery",
+    "no name saloon",
+    "spur bar",
+    "park city mountain",
+    "kearns blvd",
+    "main st, park city",
+  ];
+
+  function milesBetween(lat1: number, lng1: number, lat2: number, lng2: number): number {
+    const toRad = (d: number) => (d * Math.PI) / 180;
+    const R = 3958.8;
+    const dLat = toRad(lat2 - lat1);
+    const dLng = toRad(lng2 - lng1);
+    const a =
+      Math.sin(dLat / 2) ** 2 +
+      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(a));
+  }
+
+  return events.filter((e: any) => {
+    const loc = String(e.location ?? "").toLowerCase();
+    if (BAD_LOCATION_KEYWORDS.some((kw) => loc.includes(kw))) return false;
+    const lat = typeof e.lat === "string" ? parseFloat(e.lat) : e.lat;
+    const lng = typeof e.lng === "string" ? parseFloat(e.lng) : e.lng;
+    if (Number.isFinite(lat) && Number.isFinite(lng)) {
+      const dist = milesBetween(HEBER_LAT, HEBER_LNG, lat, lng);
+      if (dist > RADIUS_MILES) return false;
+    }
+    return true;
+  });
+}
 /**
  * Event shape based on actual JSON in public/.
  * Some fields are optional because the scrapers don't always fill them.
@@ -23,7 +68,7 @@ export type YoocalEvent = {
   [key: string]: unknown;
 };
 
-export type CityKey = "parkcity" | "elkhartlake";
+export type CityKey = "parkcity" | "elkhartlake" | "heber";
 
 export const CITY_CONFIG: Record<
   CityKey,
@@ -39,6 +84,11 @@ export const CITY_CONFIG: Record<
     emoji: "🏁",
     jsonFile: "events-elkhartlake.json",
   },
+  heber: {
+    label: "Heber Valley",
+    emoji: "🚂",
+    jsonFile: "events-heber.json",
+  },
 };
 
 /**
@@ -49,8 +99,13 @@ export async function loadCityEvents(city: CityKey): Promise<YoocalEvent[]> {
   try {
     const raw = await fs.readFile(filePath, "utf-8");
     const parsed = JSON.parse(raw);
-    if (Array.isArray(parsed)) return parsed as YoocalEvent[];
-    if (Array.isArray(parsed?.events)) return parsed.events as YoocalEvent[];
+    let events: YoocalEvent[] = [];
+    if (Array.isArray(parsed)) events = parsed as YoocalEvent[];
+    else if (Array.isArray(parsed?.events)) events = parsed.events as YoocalEvent[];
+    if (city === "heber") events = filterContaminatedHeber(events);
+    return events;
+    // legacy fallthrough (will not run):
+    if (false) {}
     return [];
   } catch (err) {
     console.error(`[loadCityEvents] failed for ${city}:`, err);

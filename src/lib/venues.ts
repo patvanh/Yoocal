@@ -24,7 +24,7 @@ export type Venue = {
   matchAliases?: string[];
 };
 
-export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake", Venue[]> = {
+export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber", Venue[]> = {
   parkcity: [
     {
       name: "Egyptian Theatre",
@@ -167,6 +167,56 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake", Venue[]> = {
       tags: ["sports", "outdoor"],
       desc: "A scenic public golf course in the heart of the Kettle Moraine. Hosts local tournaments, fundraisers, and community events throughout the golf season.",
       matchAliases: ["Quit Qui Oc"],
+    },
+  ],
+  heber: [
+    {
+      name: "Heber Valley Railroad",
+      emoji: "🚂",
+      address: "450 S 600 W, Heber City, UT 84032",
+      tags: ["family", "community"],
+      desc: "Historic train excursions through Heber Valley on a real steam railroad. Dinner trains, holiday rides, North Pole Express, and seasonal special events all year long.",
+      matchAliases: ["Heber Valley Railroad", "Heber Railroad"],
+    },
+    {
+      name: "Soldier Hollow",
+      emoji: "🎿",
+      address: "1370 W Soldier Hollow Ln, Midway, UT 84049",
+      tags: ["sports", "outdoor", "family"],
+      desc: "2002 Olympic biathlon and cross-country venue. Tubing in winter, hiking and biking in summer, plus the famous Soldier Hollow Classic sheepdog championships every Labor Day weekend.",
+      matchAliases: ["Soldier Hollow Nordic Center"],
+    },
+    {
+      name: "Deer Creek Reservoir",
+      emoji: "🚣",
+      address: "Deer Creek State Park, UT-189, Heber City, UT 84032",
+      tags: ["outdoor", "sports", "family"],
+      desc: "Beautiful state-park reservoir between Heber and Provo Canyon. Boating, paddleboarding, swimming, kayaking, and fishing with Wasatch views — calmer than Jordanelle.",
+      matchAliases: ["Deer Creek State Park", "Deer Creek"],
+    },
+    {
+      name: "Homestead Crater",
+      emoji: "🌋",
+      address: "700 Homestead Dr, Midway, UT 84049",
+      tags: ["wellness", "family", "outdoor"],
+      desc: "A geothermal hot spring inside a 55-foot limestone dome. Swimming, snorkeling, and SCUBA in 90°F mineral water year-round — one of the most unique experiences in Utah.",
+      matchAliases: ["Homestead Resort"],
+    },
+    {
+      name: "Heber Valley Cheese & Dairy",
+      emoji: "🐄",
+      address: "920 N 1300 W, Heber City, UT 84032",
+      tags: ["family", "food", "community"],
+      desc: "Working family dairy offering daily farm tours, fresh ice cream, cheese tastings, and barn visits. A hands-on look at Heber Valley's farming heritage that kids especially love.",
+      matchAliases: ["Heber Valley Artisan Cheese", "Heber Valley Cheese", "Dairy Farm Tour"],
+    },
+    {
+      name: "Midway Town Hall",
+      emoji: "🏛️",
+      address: "75 N 100 W, Midway, UT 84049",
+      tags: ["community", "arts", "family"],
+      desc: "Heart of historic Midway, hosting community events, town meetings, Swiss Days celebrations every Labor Day weekend, and seasonal programs throughout the year.",
+      matchAliases: ["Midway"],
     },
   ],
 };
