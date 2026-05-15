@@ -1203,6 +1203,83 @@ def scrape_arts_council():
     return events
 
 
+
+# -------------------------------------------------------
+# GEOGRAPHIC RE-ROUTING (Park City -> Heber Valley)
+# -------------------------------------------------------
+HEBER_VENUE_KEYWORDS = [
+    "heber valley",
+    "soldier hollow",
+    "heber city",
+    "midway, ut",
+    "midway town",
+    "wallsburg",
+    "deer creek state park",
+    "kamas",
+]
+
+
+def is_heber_valley_event(event):
+    """Return True if the event location is clearly in Heber Valley."""
+    loc = (event.get("location") or "").lower()
+    if not loc:
+        return False
+    return any(kw in loc for kw in HEBER_VENUE_KEYWORDS)
+
+
+def relocate_heber_events(events):
+    """Split events into (park_city_events, heber_events) by location."""
+    pc, heber = [], []
+    for e in events:
+        if is_heber_valley_event(e):
+            heber.append(e)
+        else:
+            pc.append(e)
+    print(f"  Re-routing: {len(heber)} events identified as Heber Valley (will be moved)")
+    return pc, heber
+
+
+def merge_into_heber_file(new_events, filename="public/events-heber.json"):
+    """Merge new Heber events into the Heber file with title+date dedup."""
+    if not new_events:
+        return
+
+    existing_events = []
+    if os.path.exists(filename):
+        try:
+            with open(filename) as f:
+                data = json.load(f)
+            existing_events = data.get("events", []) if isinstance(data, dict) else data
+        except Exception as ex:
+            print(f"  Warning: could not load existing {filename}: {ex}")
+
+    seen = set()
+    merged = []
+    for e in existing_events + new_events:
+        key = (
+            (e.get("title", "") or "").lower().strip()[:40],
+            (e.get("date", "") or "")[:10],
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        merged.append(e)
+
+    output = {
+        "updated_at": datetime.now().isoformat(),
+        "total": len(merged),
+        "events": merged,
+    }
+    with open(filename, "w") as f:
+        json.dump(output, f, indent=2)
+    added = len(merged) - len(existing_events)
+    print(
+        f"  Merged into {filename}: {len(existing_events)} existing + "
+        f"{len(new_events)} from PC scrape = {len(merged)} total ({added} net new)"
+    )
+
+
+
 def save_events(events, filename="public/events.json"):
     output = {
         "updated_at": datetime.now().isoformat(),
@@ -1239,7 +1316,12 @@ def main():
     unique = handle_recurring(unique)
     print(f"After recurring tagging: {len(unique)}")
 
-    save_events(unique)
+    # Re-route Heber Valley events to the Heber file BEFORE saving PC
+    pc_events, heber_events = relocate_heber_events(unique)
+    if heber_events:
+        merge_into_heber_file(heber_events)
+
+    save_events(pc_events)
 
     print()
     print("Done! Sample events found:")

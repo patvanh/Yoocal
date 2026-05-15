@@ -265,6 +265,8 @@ export default function CalendarClient() {
           const searchText = ((event.title||'')+' '+(event.description||'')+' '+(event.location||'')).toLowerCase()
           if (!searchText.includes(activeSearch.toLowerCase())) return false
         }
+        // Supplemental (cross-city) events only appear when radius is widened
+        if ((event as any)._supplemental && !(radiusActive && radiusMiles >= 20)) return false
         if (radiusActive && userLat && userLng && event.lat && event.lng) {
           if (distanceMilesFromUser(userLat, userLng, event.lat, event.lng) > radiusMiles) return false
         }
@@ -334,6 +336,7 @@ export default function CalendarClient() {
       const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
       const todayName = dayNames[dateObj.getDay()]
       return allEvents.filter(event => {
+        if ((event as any)._supplemental && !(radiusActive && radiusMiles >= 20)) return false
         const s = parseDate(event.date)
         const en = event.end_date ? parseDate(event.end_date) : s
         if (!s) return false
@@ -495,7 +498,8 @@ export default function CalendarClient() {
       const mainFetch = fetch('/'+city.file).then((r: Response) => r.json())
       const suppFetch = city.supplementalFile ? fetch('/'+city.supplementalFile).then((r: Response) => r.json()).catch(() => ({events:[]})) : Promise.resolve({events:[]})
       Promise.all([mainFetch, suppFetch]).then(([data, suppData]: any) => {
-        allEvents = [...(data.events||[]), ...(suppData.events||[])]
+        const _suppMarked = (suppData.events || []).map((e: any) => ({ ...e, _supplemental: true }))
+        allEvents = [...(data.events || []), ..._suppMarked]
         allEvents = allEvents.filter((e: any) => !city.junk.some((j: string) => e.title.toLowerCase().includes(j)))
         const dedupMap = new Map<string,any>()
         allEvents.forEach((e: any) => {
@@ -510,7 +514,7 @@ export default function CalendarClient() {
         allEvents = Array.from(dedupMap.values())
         dailyFeaturedTitle = getDailyFeaturedTitle()
         const heroStat = document.querySelector('.hero-stat .num') as HTMLElement
-        if (heroStat) heroStat.textContent = String(allEvents.length)
+        if (heroStat) heroStat.textContent = String(allEvents.filter((e: any) => !e._supplemental).length)
         if (data.updated_at) {
           const hrs = Math.round((new Date().getTime() - new Date(data.updated_at).getTime()) / 3600000)
           if (dateLabel) dateLabel.textContent = `${city.label} — updated ${hrs < 1 ? 'just now' : hrs + ' hours ago'}`
@@ -702,6 +706,7 @@ export default function CalendarClient() {
       const lbl = document.getElementById('radius-label'), status = document.getElementById('radius-status')
       if (lbl) lbl.textContent=`${val} mi`
       if (status) status.textContent=`Showing events within ${val} miles`
+      buildDayChips()
       applyFilters()
     }
 
