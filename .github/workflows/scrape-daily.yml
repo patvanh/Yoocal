@@ -1,0 +1,121 @@
+name: Daily event scrape
+
+on:
+  schedule:
+    # 10:00 UTC = 4 AM Mountain (DST) / 3 AM Mountain (standard)
+    - cron: "0 10 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    name: Run all city scrapers
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: |
+          python -m playwright install --with-deps chromium
+
+      - name: Scrape Park City events
+        id: scrape_pc
+        continue-on-error: true
+        run: |
+          echo "::group::Park City scraper"
+          python scraper.py
+          echo "::endgroup::"
+
+      - name: Scrape Heber Valley events
+        id: scrape_heber
+        continue-on-error: true
+        run: |
+          echo "::group::Heber Valley scraper"
+          python heber_scraper.py
+          echo "::endgroup::"
+
+      - name: Scrape Elkhart Lake events
+        id: scrape_elkhart
+        continue-on-error: true
+        run: |
+          echo "::group::Elkhart Lake scraper"
+          python elkhart_scraper.py
+          echo "::endgroup::"
+
+      - name: Build run summary
+        run: |
+          PC="${{ steps.scrape_pc.outcome }}"
+          HEBER="${{ steps.scrape_heber.outcome }}"
+          ELKHART="${{ steps.scrape_elkhart.outcome }}"
+
+          {
+            echo "## 🗓️ Daily scrape summary"
+            echo ""
+            echo "| City | Status |"
+            echo "| --- | --- |"
+            echo "| Park City | ${PC} |"
+            echo "| Heber Valley | ${HEBER} |"
+            echo "| Elkhart Lake | ${ELKHART} |"
+            echo ""
+            if [ -f public/events.json ]; then
+              echo "- Park City events in JSON: $(python -c "import json; d=json.load(open('public/events.json')); print(len(d.get('events', d) if isinstance(d, dict) else d))")"
+            fi
+            if [ -f public/events-heber.json ]; then
+              echo "- Heber events in JSON: $(python -c "import json; d=json.load(open('public/events-heber.json')); print(len(d.get('events', d) if isinstance(d, dict) else d))")"
+            fi
+            if [ -f public/events-elkhartlake.json ]; then
+              echo "- Elkhart Lake events in JSON: $(python -c "import json; d=json.load(open('public/events-elkhartlake.json')); print(len(d.get('events', d) if isinstance(d, dict) else d))")"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$PC" = "failure" ] && [ "$HEBER" = "failure" ] && [ "$ELKHART" = "failure" ]; then
+            echo "::error::All three scrapers failed — check logs above"
+            exit 1
+          fi
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add public/events*.json
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            git diff --cached --stat
+          fi
+
+      - name: Commit and push updated JSON
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "yoocal-bot"
+          git config user.email "actions@github.com"
+          TODAY=$(TZ='America/Denver' date '+%Y-%m-%d')
+          git commit -m "chore(data): daily scrape ${TODAY}" \
+                     -m "Automated nightly scrape via GitHub Actions."
+          git push
+
+      - name: No changes to commit
+        if: steps.changes.outputs.has_changes == 'false'
+        run: echo "No JSON changes from this run. Nothing to commit."
