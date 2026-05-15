@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 /**
  * City switcher pill tabs. Updates the ?city= query param without a full
@@ -13,12 +13,13 @@ export default function CitySwitcher({
 }) {
   const router = useRouter();
   const params = useSearchParams();
+  const pathname = usePathname();
 
   function switchTo(city: "parkcity" | "elkhartlake") {
     if (city === active) return;
     const sp = new URLSearchParams(params.toString());
     sp.set("city", city);
-    router.push(`/this-weekend?${sp.toString()}`);
+    router.push(`${pathname}?${sp.toString()}`);
   }
 
   const tabs: { key: "parkcity" | "elkhartlake"; label: string; emoji: string }[] = [
