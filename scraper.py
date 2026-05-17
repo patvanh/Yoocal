@@ -642,7 +642,14 @@ def scrape_park_record():
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
 
-            for day_offset in range(30):
+            import random, time
+            day_offsets = list(range(150))
+            random.shuffle(day_offsets)
+
+            day_results = {}
+            EARLY_EXIT_THRESHOLD = 30
+
+            for i, day_offset in enumerate(day_offsets):
                 target_date = datetime.now() + timedelta(days=day_offset)
                 date_str = target_date.strftime("%Y-%m-%d")
                 url = f"https://www.parkrecord.com/calendar/#!/show?start={date_str}"
@@ -668,15 +675,26 @@ def scrape_park_record():
                             item["_scrape_date"] = date_str
                             all_extracted.append(item)
                             day_count += 1
-                    print(f"    {date_str}: {len(extracted)} visible, {day_count} new")
+                    day_results[day_offset] = day_count
+                    print(f"    [{i+1:3d}/150] {date_str}: {len(extracted)} visible, {day_count} new")
                 except Exception as e:
-                    pass
+                    day_results[day_offset] = 0
                 finally:
                     page.close()
 
+                time.sleep(random.uniform(1.0, 3.0))
+
+                if i > 0 and i % 20 == 0:
+                    chronological = sorted(day_results.keys(), reverse=True)
+                    if len(chronological) >= EARLY_EXIT_THRESHOLD:
+                        far_end = chronological[:EARLY_EXIT_THRESHOLD]
+                        if all(day_results.get(d, 0) == 0 for d in far_end):
+                            print(f"  Early-exit: last {EARLY_EXIT_THRESHOLD} chronological days all empty, stopping")
+                            break
+
             browser.close()
 
-        print(f"  DOM scraper found {len(all_extracted)} unique events across 30 days")
+        print(f"  DOM scraper found {len(all_extracted)} unique events across up to 150 days")
         print(f"  Fetching event details (price, description)...")
 
         detail_cache = {}
@@ -975,7 +993,7 @@ def handle_recurring(events):
 
 def deduplicate(events):
     # Sort so Park Record comes first — it has times, prefer it over VPC
-    source_priority = {"The Park Record": 0, "Park City Institute": 1, "Deer Valley Resort": 2, "KPCW Community Calendar": 3, "Google Events": 4, "Running in the USA": 5, "Visit Park City": 6}
+    source_priority = {"Deer Valley Resort": 0, "Park City Institute": 1, "The Park Record": 2, "KPCW Community Calendar": 3, "Google Events": 4, "Running in the USA": 5, "Visit Park City": 6}
     events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
 
     seen = set()
