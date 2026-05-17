@@ -16,6 +16,7 @@ export const revalidate = 3600;
 function normalizeCity(raw?: string): CityKey {
   if (raw === "elkhartlake") return "elkhartlake";
   if (raw === "heber") return "heber";
+  if (raw === "jackson") return "jackson";
   return "parkcity";
 }
 

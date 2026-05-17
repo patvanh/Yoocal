@@ -30,7 +30,7 @@ export interface EventsFile {
   events: YoocalEvent[]
 }
 
-export type CityKey = 'parkcity' | 'elkhartlake' | 'heber'
+export type CityKey = 'parkcity' | 'elkhartlake' | 'heber' | 'jackson'
 
 // Precise coordinates for known venues
 export const VENUE_COORDS: Record<string, [number, number]> = {
@@ -70,6 +70,18 @@ export const VENUE_COORDS: Record<string, [number, number]> = {
   'heber valley railroad': [40.5023, -111.4245],
   'deer creek': [40.6000, -111.4280],
   'jordanelle reservoir': [40.6000, -111.4280],
+  // Jackson Hole, WY venues
+  'center for the arts': [43.4775, -110.7654],
+  'walk festival hall': [43.5874, -110.8284],
+  'snow king mountain': [43.4694, -110.7585],
+  'jackson hole high school': [43.4901, -110.7651],
+  'jackson hole mountain resort': [43.5875, -110.8281],
+  'teton village': [43.5875, -110.8281],
+  'teton village commons': [43.5879, -110.8278],
+  'murie ranch': [43.6603, -110.7038],
+  'teton county library': [43.4799, -110.7624],
+  'jackson hole rodeo': [43.4794, -110.7659],
+  'fairgrounds': [43.4731, -110.7689],
 }
 
 export function getVenueCoords(location: string): [number, number] | null {
@@ -123,6 +135,16 @@ export const CITY_CONFIG: Record<CityKey, {
     junk: ['previous month', 'next month'],
     aboutPage: '/about/heber',
   },
+  jackson: {
+    name: 'Jackson Hole, WY',
+    label: 'Jackson Hole & Teton County',
+    slug: 'jackson-hole',
+    file: 'events-jackson.json',
+    center: [43.4799, -110.7624],
+    zoom: 11,
+    junk: ['previous month', 'next month'],
+    aboutPage: '/about/jackson-hole',
+  },
 }
 
 export function slugify(text: string): string {
@@ -144,6 +166,7 @@ export function cityKeyFromSlug(slug: string): CityKey | null {
     'park-city': 'parkcity',
     'elkhart-lake': 'elkhartlake',
     'heber': 'heber',
+    'jackson-hole': 'jackson',
   }
   return map[slug] || null
 }

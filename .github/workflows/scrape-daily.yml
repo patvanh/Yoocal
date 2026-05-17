@@ -64,6 +64,14 @@ jobs:
           python elkhart_scraper.py
           echo "::endgroup::"
 
+      - name: Scrape Jackson Hole events
+        id: scrape_jackson
+        continue-on-error: true
+        run: |
+          echo "::group::Jackson Hole scraper"
+          python jackson_scraper.py
+          echo "::endgroup::"
+
       - name: Build run summary
         run: |
           PC="${{ steps.scrape_pc.outcome }}"

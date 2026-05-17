@@ -10,7 +10,7 @@
  *                undefined → shows only "About" (no city-specific links)
  */
 
-type CityKey = "parkcity" | "elkhartlake" | "heber";
+type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson";
 type ActiveKey = "about" | "weekend" | "venues" | "business" | null;
 
 export default function SiteNav({

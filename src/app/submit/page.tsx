@@ -109,6 +109,7 @@ export default function SubmitEventPage() {
                   <option value="parkcity">Park City</option>
                   <option value="heber">Heber Valley</option>
                   <option value="elkhartlake">Elkhart Lake</option>
+                  <option value="jackson">Jackson Hole</option>
                 </select>
               </Field>
 
