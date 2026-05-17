@@ -1024,8 +1024,8 @@ export default function CalendarClient() {
           <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('parkcity', e.currentTarget as HTMLElement) }} data-city="parkcity">📍 Park City, UT</a>
           <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('elkhartlake', e.currentTarget as HTMLElement) }} data-city="elkhartlake">📍 Elkhart Lake, WI</a>
           <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('heber', e.currentTarget as HTMLElement) }} data-city="heber">📍 Heber Valley, UT</a>
+          <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('jackson', e.currentTarget as HTMLElement) }} data-city="jackson">📍 Jackson Hole, WY</a>
           <a href="#signup" className="loc-chip" style={{opacity:0.5}}>+ Aspen, CO — coming soon</a>
-          <a href="#signup" className="loc-chip" style={{opacity:0.5}}>+ Jackson Hole, WY — coming soon</a>
         </div>
       </div>
 
@@ -1196,7 +1196,7 @@ export default function CalendarClient() {
           <div className="footer-links">
             <div className="footer-col"><h4>Product</h4><a href="#events">Browse events</a><a href="#how">How it works</a><a href="#signup">Newsletter</a></div>
             <div className="footer-col"><h4>Business</h4><a href="#business">List your event</a><a href="mailto:hello@yoocal.com">Advertise</a><a href="mailto:hello@yoocal.com">Partner with us</a></div>
-            <div className="footer-col"><h4>Cities</h4><a href="#">Park City, UT</a><a href="#signup">Aspen, CO (soon)</a><a href="#signup">Jackson Hole (soon)</a></div>
+            <div className="footer-col"><h4>Cities</h4><a href="/?city=parkcity">Park City, UT</a><a href="/?city=heber">Heber Valley, UT</a><a href="/?city=elkhartlake">Elkhart Lake, WI</a><a href="/?city=jackson">Jackson Hole, WY</a><a href="#signup">Aspen, CO (soon)</a></div>
           </div>
         </div>
         <div className="footer-bottom"><span>© 2026 Yoocal. All rights reserved.</span><span>hello@yoocal.com</span></div>
@@ -1244,8 +1244,8 @@ export default function CalendarClient() {
         <div className="eyebrow-city-option" id="eyebrow-opt-elkhartlake" onClick={(e) => window.eyebrowSwitchCity?.(e.nativeEvent,'elkhartlake')}>📍 Elkhart Lake, WI</div>
         <div className="eyebrow-city-option" id="eyebrow-opt-heber" onClick={(e) => window.eyebrowSwitchCity?.(e.nativeEvent,'heber')}>📍 Heber Valley, UT</div>
         <div className="eyebrow-dropdown-divider" />
+        <div className="eyebrow-city-option" id="eyebrow-opt-jackson" onClick={(e) => window.eyebrowSwitchCity?.(e.nativeEvent,'jackson')}>📍 Jackson Hole, WY</div>
         <div className="eyebrow-city-option coming-soon">+ Aspen, CO — coming soon</div>
-        <div className="eyebrow-city-option coming-soon">+ Jackson Hole, WY — coming soon</div>
       </div>
     </>
   )
