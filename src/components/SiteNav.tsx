@@ -73,7 +73,7 @@ export default function SiteNav({
               </a>
             </>
           )}
-          <a href="/submit">Submit event</a>
+          <a href="/submit" className="yc-nav-secondary">Submit event</a>
           <a href="/#business">For businesses</a>
           <a
             href="https://forms.groupmail.info/subscribe/yoocal"
@@ -146,6 +146,18 @@ export default function SiteNav({
         .yc-nav-links a.active {
           color: var(--purple);
         }
+        .yc-nav-links a.yc-nav-secondary {
+          background: transparent;
+          border: 1.5px solid var(--purple);
+          color: var(--purple) !important;
+          padding: 7px 16px;
+          border-radius: 100px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .yc-nav-links a.yc-nav-secondary:hover {
+          background: var(--purple-pale);
+        }
         .yc-nav-links a.yc-nav-cta {
           background: var(--purple);
           color: white !important;
@@ -159,7 +171,7 @@ export default function SiteNav({
         }
         @media (max-width: 768px) {
           .yc-nav { padding: 0 20px; }
-          .yc-nav-links a:not(.yc-nav-cta) { display: none; }
+          .yc-nav-links a:not(.yc-nav-cta):not(.yc-nav-secondary) { display: none; }
         }
       `}</style>
     </>
