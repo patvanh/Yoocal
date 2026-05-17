@@ -181,7 +181,14 @@ export default async function EventPage({ params }: Props) {
     offers: {
       "@type": "Offer",
       url: event.link || `https://www.yoocal.com/${citySlug}/${slug}`,
-      price: event.is_free === true ? "0" : (event.price && event.price.trim() ? event.price : "0"),
+      price: (() => {
+        if (event.is_free === true) return "0";
+        const raw = (event.price || "").toString().trim();
+        if (!raw) return "0";
+        // Match the first number (handles "$25", "$10-$229", "$10.50", "25")
+        const m = raw.match(/(\d+(?:\.\d+)?)/);
+        return m ? m[1] : "0";
+      })(),
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       validFrom: event.date,

@@ -82,7 +82,7 @@ def scrape_visit_park_city():
 
     today = datetime.now()
     start_str = today.strftime("%Y-%m-%d")
-    end_str = (today + timedelta(days=120)).strftime("%Y-%m-%d")
+    end_str = (today + timedelta(days=200)).strftime("%Y-%m-%d")
     calendar_url = f"https://www.visitparkcity.com/events/calendar/?bounds=false&view=grid&sort=date&filter_daterange%5Bstart%5D={start_str}&filter_daterange%5Bend%5D={end_str}"
 
     captured_api_url = [None]
