@@ -993,7 +993,7 @@ def handle_recurring(events):
 
 def deduplicate(events):
     # Sort so Park Record comes first — it has times, prefer it over VPC
-    source_priority = {"Deer Valley Resort": 0, "Park City Institute": 1, "The Park Record": 2, "KPCW Community Calendar": 3, "Google Events": 4, "Running in the USA": 5, "Visit Park City": 6}
+    source_priority = {"Deer Valley Resort": 0, "Mountain Trails Foundation": 1, "Park City Institute": 2, "The Park Record": 3, "KPCW Community Calendar": 4, "Google Events": 5, "Running in the USA": 6, "Visit Park City": 7}
     events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
 
     seen = set()
@@ -1306,6 +1306,25 @@ def scrape_park_city_institute_wrapper():
         return []
 
 
+
+
+# -------------------------------------------------------
+# MOUNTAIN TRAILS FOUNDATION (parkcitytrails.org)
+# -------------------------------------------------------
+def scrape_park_city_trails_wrapper():
+    """Run the Mountain Trails Foundation scraper if available."""
+    try:
+        from park_city_trails_scraper import scrape_park_city_trails
+    except ImportError:
+        print("  park_city_trails_scraper not available, skipping")
+        return []
+    try:
+        return scrape_park_city_trails()
+    except Exception as ex:
+        print(f"  Mountain Trails Foundation scraper failed: {ex}")
+        return []
+
+
 # -------------------------------------------------------
 # GEOGRAPHIC RE-ROUTING (Park City -> Heber Valley)
 # -------------------------------------------------------
@@ -1413,6 +1432,7 @@ def main():
     all_events += scrape_kpcw_and_cache_heber()
     all_events += scrape_deer_valley_wrapper()
     all_events += scrape_park_city_institute_wrapper()
+    all_events += scrape_park_city_trails_wrapper()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)
