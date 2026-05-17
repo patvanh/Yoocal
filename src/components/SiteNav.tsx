@@ -73,6 +73,7 @@ export default function SiteNav({
               </a>
             </>
           )}
+          <a href="/submit">Submit event</a>
           <a href="/#business">For businesses</a>
           <a
             href="https://forms.groupmail.info/subscribe/yoocal"
