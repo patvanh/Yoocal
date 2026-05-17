@@ -70,6 +70,7 @@ export default function CalendarClient() {
       parkcity: { center: [40.6461, -111.4980], zoom: 12 },
       elkhartlake: { center: [43.8358, -88.0051], zoom: 13 },
       heber: { center: [40.5071, -111.4133], zoom: 12 },
+      jackson: { center: [43.4799, -110.7624], zoom: 11 },
     }
 
     const CITIES: Record<string, any> = {
@@ -89,6 +90,12 @@ export default function CalendarClient() {
         name: 'Heber Valley, UT', label: 'Heber Valley & Wasatch County',
         file: 'events-heber.json',
         aboutLabel: 'About Heber', aboutPage: '/about/heber',
+        junk: ['previous month', 'next month'],
+      },
+      jackson: {
+        name: 'Jackson Hole, WY', label: 'Jackson Hole & Teton County',
+        file: 'events-jackson.json',
+        aboutLabel: 'About Jackson Hole', aboutPage: '/about/jackson-hole',
         junk: ['previous month', 'next month'],
       },
     }
