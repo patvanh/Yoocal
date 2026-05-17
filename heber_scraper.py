@@ -345,6 +345,21 @@ def scrape_eventbrite():
 # ─────────────────────────────────────────────
 # 6. RUNNING IN THE USA — Heber Valley races
 # ─────────────────────────────────────────────
+
+
+def scrape_slrc_heber_wrapper():
+    """Heber events from Salt Lake Running Co via Elfsight API."""
+    try:
+        from slrc_scraper import scrape_slrc_heber
+    except ImportError:
+        return []
+    try:
+        return scrape_slrc_heber()
+    except Exception as ex:
+        print(f"  SLRC Heber scraper failed: {ex}")
+        return []
+
+
 def scrape_runsignup():
     """Heber Valley races via RunSignup public API.
 
@@ -666,6 +681,7 @@ def main():
     all_events += scrape_google_events()
     all_events += scrape_eventbrite()
     all_events += scrape_runsignup()
+    all_events += scrape_slrc_heber_wrapper()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)
