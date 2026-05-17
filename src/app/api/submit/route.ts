@@ -59,8 +59,8 @@ Submitted at: ${new Date().toISOString()}
 
     const subjectPrefix = interestedInFeatured ? '[yoocal ⭐ FEATURED]' : '[yoocal submission]';
     const { error } = await resend.emails.send({
-      from: 'yoocal submissions <onboarding@resend.dev>',
-      to: ['patrick@vanhornpc.com'],
+      from: 'yoocal submissions <submit@yoocal.com>',
+      to: ['hello@yoocal.com'],
       replyTo: submitterEmail,
       subject: `${subjectPrefix} ${title} - ${date}`,
       text: emailBody,
