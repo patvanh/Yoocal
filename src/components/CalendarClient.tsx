@@ -1160,7 +1160,7 @@ export default function CalendarClient() {
             <div className="biz-name">Basic listing</div>
             <div className="biz-desc">Your events automatically pulled from public sources, or submit manually.</div>
             <ul className="biz-features"><li>Event listed in the calendar</li><li>Links to your registration page</li><li>Category &amp; date filtering</li><li>Sourced &amp; attributed to you</li></ul>
-            <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" rel="noopener noreferrer" className="biz-btn">Get started free</a>
+            <a href="/submit" className="biz-btn">Submit your event</a>
           </div>
           <div className="biz-card featured-card reveal">
             <div className="biz-price">$0.99<span>/day</span></div>
