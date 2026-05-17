@@ -24,8 +24,9 @@ from pathlib import Path
 # Local imports
 try:
     from wp_tribe_events_scraper import scrape_wp_tribe_events
-except ImportError:
-    print("ERROR: wp_tribe_events_scraper not found in path.")
+    from rss_scraper import scrape_rss
+except ImportError as e:
+    print(f"ERROR: scraper module not found: {e}")
     sys.exit(1)
 
 
@@ -54,11 +55,24 @@ TRIBE_EVENT_SOURCES = [
 ]
 
 
+# RSS-feed sources (chambers, tourism boards via /event/rss/)
+RSS_SOURCES = [
+    {
+        "feed_url": "https://www.jacksonholechamber.com/event/rss/",
+        "source_name": "Jackson Hole Chamber of Commerce",
+        "default_lat": JACKSON_LAT,
+        "default_lng": JACKSON_LNG,
+        "default_city": "Jackson, WY",
+    },
+]
+
+
 def deduplicate(events):
     """Dedup by (title, date). Prefer events with start_time, then by source priority."""
     source_priority = {
         "Grand Teton Music Festival": 0,
-        "The Cloudveil": 1,
+        "Jackson Hole Chamber of Commerce": 1,
+        "The Cloudveil": 2,
     }
     seen = {}
     for e in events:
@@ -94,6 +108,15 @@ def main():
         print(f"\n--- {cfg['source_name']} ---")
         try:
             events = scrape_wp_tribe_events(**cfg)
+            all_events.extend(events)
+        except Exception as ex:
+            print(f"  ERROR scraping {cfg['source_name']}: {ex}")
+            continue
+
+    for cfg in RSS_SOURCES:
+        print(f"\n--- {cfg['source_name']} (RSS) ---")
+        try:
+            events = scrape_rss(**cfg)
             all_events.extend(events)
         except Exception as ex:
             print(f"  ERROR scraping {cfg['source_name']}: {ex}")
