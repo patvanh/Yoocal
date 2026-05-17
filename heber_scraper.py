@@ -346,70 +346,22 @@ def scrape_eventbrite():
 # 6. RUNNING IN THE USA — Heber Valley races
 # ─────────────────────────────────────────────
 def scrape_runsignup():
-    print("Scraping runningintheusa.com for Heber Valley races...")
-    events = []
-    TODAY = datetime.now().strftime("%Y-%m-%d")
+    """Heber Valley races via RunSignup public API.
 
-    # Hardcoded known Heber Valley races from runningintheusa.com
-    KNOWN_RACES = [
-        {"title": "Heber Valley Main-to-Main 5K and 10K", "date": "2026-07-04", "start_time": "7:30 AM",
-         "location": "Heber City, UT 84032", "link": "https://runsignup.com/Race/UT/HeberCity/HeberValleyMaintoMain"},
-        {"title": "Runtastic HEBER Half Marathon", "date": "2026-08-08", "start_time": "6:00 AM",
-         "location": "1600 E 980th S, Heber City, UT 84032",
-         "link": "https://runsignup.com/Race/UT/Heber/HeberHalfand5K",
-         "description": "Run for Autism. All-downhill half marathon through Heber Valley with stunning mountain views of the Wasatch."},
-        {"title": "High Uinta Half Marathon", "date": "2026-07-25", "start_time": "7:00 AM",
-         "location": "Kamas, UT 84036", "link": "https://runsignup.com/Race/UT/Kamas/HighUintaHalfMarathon"},
-        {"title": "Swiss Days 10K Run", "date": "2026-09-05", "start_time": "7:00 AM",
-         "location": "151 W Main Street, Midway, UT 84049",
-         "link": "https://www.gohebervalley.com/swiss-days/",
-         "description": "Annual Swiss Days 10K run in Midway, part of the Swiss Days festival on Labor Day weekend."},
-        {"title": "Wasatch Peak 5K", "date": "2026-05-02", "start_time": "8:00 AM",
-         "location": "Heber City, UT 84032", "link": "https://runsignup.com/Race/UT/HeberCity/WasatchPeak5K"},
-    ]
-    for race in KNOWN_RACES:
-        if race["date"] >= TODAY:
-            event = {
-                "title": race["title"], "date": race["date"],
-                "description": race.get("description", f"Running race in {race['location']}."),
-                "location": race["location"], "link": race["link"],
-                "source": "Running in the USA",
-                "source_url": "https://www.runningintheusa.com",
-                "lat": 40.5069, "lng": -111.4133,
-                "scraped_at": datetime.now().isoformat()
-            }
-            if race.get("start_time"): event["start_time"] = race["start_time"]
-            events.append(event)
-
-    # Dynamic scrape with correct URL format (city name with %20 not hyphen)
-    for city_url, city_name in [("heber%20city-ut","Heber City"), ("midway-ut","Midway"), ("kamas-ut","Kamas")]:
-        try:
-            url = f"https://www.runningintheusa.com/race/list/{city_url}/upcoming"
-            r = requests.get(url, headers=HEADERS, timeout=15)
-            soup = BeautifulSoup(r.text, "html.parser")
-            for row in soup.find_all("tr"):
-                cells = row.find_all("td")
-                if len(cells) < 2: continue
-                tel = cells[0].find("a") or cells[0]
-                title = tel.get_text(strip=True)
-                if not title or len(title) < 3: continue
-                link = tel.get("href","") if getattr(tel,"name",None)=="a" else ""
-                if link and not link.startswith("http"): link = "https://www.runningintheusa.com" + link
-                date = normalize_date(cells[1].get_text(strip=True))
-                if not date or date < TODAY: continue
-                loc = cells[2].get_text(strip=True) if len(cells) > 2 else f"{city_name}, UT"
-                events.append({"title": title, "date": date,
-                    "description": f"Running race in {loc}.",
-                    "location": loc, "link": link or url,
-                    "source": "Running in the USA", "source_url": url,
-                    "lat": 40.5069, "lng": -111.4133,
-                    "scraped_at": datetime.now().isoformat()
-                })
-        except Exception as e:
-            print(f"  runningintheusa {city_name}: {e}")
-
-    print(f"  Found {len(events)} events from running sites")
-    return events
+    Replaces the old hardcoded race list + runningintheusa.com HTML scrape
+    (the HTML scrape was 403'd by Cloudflare anyway). Now uses RunSignup's
+    REST API, which auto-discovers all races in Heber City / Midway / Kamas.
+    """
+    try:
+        from runsignup_scraper import scrape_runsignup_heber
+    except ImportError:
+        print("  runsignup_scraper not available, skipping")
+        return []
+    try:
+        return scrape_runsignup_heber()
+    except Exception as ex:
+        print(f"  RunSignup Heber scraper failed: {ex}")
+        return []
 
 def deduplicate(events):
     seen = set()

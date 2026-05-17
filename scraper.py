@@ -993,7 +993,7 @@ def handle_recurring(events):
 
 def deduplicate(events):
     # Sort so Park Record comes first — it has times, prefer it over VPC
-    source_priority = {"Deer Valley Resort": 0, "Mountain Trails Foundation": 1, "Park City Institute": 2, "The Park Record": 3, "KPCW Community Calendar": 4, "Google Events": 5, "Running in the USA": 6, "Visit Park City": 7}
+    source_priority = {"Deer Valley Resort": 0, "Mountain Trails Foundation": 1, "Park City Institute": 2, "The Park Record": 3, "KPCW Community Calendar": 4, "Google Events": 5, "RunSignup": 6, "Running in the USA": 7, "Visit Park City": 8}
     events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
 
     seen = set()
@@ -1325,6 +1325,25 @@ def scrape_park_city_trails_wrapper():
         return []
 
 
+
+
+# -------------------------------------------------------
+# RUNSIGNUP (Park City races)
+# -------------------------------------------------------
+def scrape_runsignup_parkcity_wrapper():
+    """Run the RunSignup PC scraper if available."""
+    try:
+        from runsignup_scraper import scrape_runsignup_parkcity
+    except ImportError:
+        print("  runsignup_scraper not available, skipping")
+        return []
+    try:
+        return scrape_runsignup_parkcity()
+    except Exception as ex:
+        print(f"  RunSignup PC scraper failed: {ex}")
+        return []
+
+
 # -------------------------------------------------------
 # GEOGRAPHIC RE-ROUTING (Park City -> Heber Valley)
 # -------------------------------------------------------
@@ -1433,6 +1452,7 @@ def main():
     all_events += scrape_deer_valley_wrapper()
     all_events += scrape_park_city_institute_wrapper()
     all_events += scrape_park_city_trails_wrapper()
+    all_events += scrape_runsignup_parkcity_wrapper()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)
