@@ -24,7 +24,7 @@ from pathlib import Path
 # Local imports
 try:
     from wp_tribe_events_scraper import scrape_wp_tribe_events
-    from rss_scraper import scrape_rss
+    from sitemap_event_scraper import scrape_sitemap_events
 except ImportError as e:
     print(f"ERROR: scraper module not found: {e}")
     sys.exit(1)
@@ -55,14 +55,16 @@ TRIBE_EVENT_SOURCES = [
 ]
 
 
-# RSS-feed sources (chambers, tourism boards via /event/rss/)
-RSS_SOURCES = [
+# Sitemap-driven sources (Simpleview chambers/tourism, Schema.org Event JSON-LD on each detail page)
+SITEMAP_SOURCES = [
     {
-        "feed_url": "https://www.jacksonholechamber.com/event/rss/",
+        "sitemap_url": "https://www.jacksonholechamber.com/sitemap.xml",
+        "url_pattern": r"/event/",
         "source_name": "Jackson Hole Chamber of Commerce",
         "default_lat": JACKSON_LAT,
         "default_lng": JACKSON_LNG,
         "default_city": "Jackson, WY",
+        "default_categories": ["Community"],
     },
 ]
 
@@ -113,10 +115,10 @@ def main():
             print(f"  ERROR scraping {cfg['source_name']}: {ex}")
             continue
 
-    for cfg in RSS_SOURCES:
-        print(f"\n--- {cfg['source_name']} (RSS) ---")
+    for cfg in SITEMAP_SOURCES:
+        print(f"\n--- {cfg['source_name']} (sitemap) ---")
         try:
-            events = scrape_rss(**cfg)
+            events = scrape_sitemap_events(**cfg)
             all_events.extend(events)
         except Exception as ex:
             print(f"  ERROR scraping {cfg['source_name']}: {ex}")
