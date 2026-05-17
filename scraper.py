@@ -993,7 +993,7 @@ def handle_recurring(events):
 
 def deduplicate(events):
     # Sort so Park Record comes first — it has times, prefer it over VPC
-    source_priority = {"Deer Valley Resort": 0, "Mountain Trails Foundation": 1, "Park City Institute": 2, "The Park Record": 3, "KPCW Community Calendar": 4, "Google Events": 5, "RunSignup": 6, "Salt Lake Running Co": 7, "Running in the USA": 8, "Visit Park City": 9}
+    source_priority = {"Deer Valley Resort": 0, "Deer Valley Music Festival": 1, "Mountain Trails Foundation": 2, "Park City Institute": 3, "The Park Record": 4, "KPCW Community Calendar": 5, "Google Events": 6, "RunSignup": 7, "Salt Lake Running Co": 8, "Running in the USA": 9, "Visit Park City": 10}
     events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
 
     seen = set()
@@ -1363,6 +1363,25 @@ def scrape_slrc_parkcity_wrapper():
         return []
 
 
+
+
+# -------------------------------------------------------
+# DEER VALLEY MUSIC FESTIVAL
+# -------------------------------------------------------
+def scrape_dvmf_wrapper():
+    """Run the Deer Valley Music Festival scraper if available."""
+    try:
+        from deer_valley_music_festival_scraper import scrape_deer_valley_music_festival
+    except ImportError:
+        print("  deer_valley_music_festival_scraper not available, skipping")
+        return []
+    try:
+        return scrape_deer_valley_music_festival()
+    except Exception as ex:
+        print(f"  DVMF scraper failed: {ex}")
+        return []
+
+
 # -------------------------------------------------------
 # GEOGRAPHIC RE-ROUTING (Park City -> Heber Valley)
 # -------------------------------------------------------
@@ -1471,6 +1490,7 @@ def main():
     all_events += scrape_deer_valley_wrapper()
     all_events += scrape_park_city_institute_wrapper()
     all_events += scrape_park_city_trails_wrapper()
+    all_events += scrape_dvmf_wrapper()
     all_events += scrape_runsignup_parkcity_wrapper()
     all_events += scrape_slrc_parkcity_wrapper()
 
