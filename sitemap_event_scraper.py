@@ -5,36 +5,99 @@ Pattern: fetch a site's /sitemap.xml, extract URLs matching a regex
 (e.g. /event/), fetch each detail page, extract Schema.org Event JSON-LD
 via the existing schema_org_scraper.
 
-Works on any site with:
-  1. A discoverable sitemap.xml
-  2. Event detail pages at predictable URL prefixes
-  3. Schema.org Event JSON-LD on each detail page
+Expands multi-day and recurring events into per-occurrence instances so
+they show up on every day they occur, not just startDate.
 
-Validated on jacksonholechamber.com (250 URLs → 220 future events).
-Likely works on many other Simpleview tourism boards / chambers.
+Validated on jacksonholechamber.com (250 URLs).
 """
 from __future__ import annotations
 import re
 import time
-from datetime import datetime
+from datetime import datetime, date, timedelta
 from typing import Optional
 from urllib.parse import urlparse
 import requests
 from schema_org_scraper import scrape_schema_org_events
 
 
+_DAY_NAMES = {
+    "monday": 0, "tuesday": 1, "wednesday": 2, "thursday": 3,
+    "friday": 4, "saturday": 5, "sunday": 6,
+}
+
+
+def _clone_event_at_date(ev: dict, new_date: str) -> dict:
+    new_ev = dict(ev)
+    new_ev["date"] = new_date
+    return new_ev
+
+
+def _expand_event_dates(ev: dict, today: str) -> list:
+    """Expand multi-day/recurring events into per-day instances."""
+    raw_start = (ev.get("date") or "")[:10]
+    raw_end = (ev.get("end_date") or ev.get("endDate") or "")[:10]
+
+    if not raw_start or not raw_end or raw_end <= raw_start:
+        return [ev]
+
+    try:
+        start_d = date.fromisoformat(raw_start)
+        end_d = date.fromisoformat(raw_end)
+    except ValueError:
+        return [ev]
+
+    # Cap end at 1 year forward
+    max_end = date.today() + timedelta(days=365)
+    if end_d > max_end:
+        end_d = max_end
+
+    span_days = (end_d - start_d).days + 1
+
+    # Detect day-of-week recurrence
+    desc = (ev.get("description") or "").lower()
+    title = (ev.get("title") or "").lower()
+    combined = title + " " + desc
+    recurring_days = set()
+    for name, idx in _DAY_NAMES.items():
+        if (name + "s") in combined or ("every " + name) in combined:
+            recurring_days.add(idx)
+
+    if recurring_days:
+        instances = []
+        cur = start_d
+        while cur <= end_d:
+            if cur.weekday() in recurring_days:
+                instances.append(_clone_event_at_date(ev, cur.isoformat()))
+            cur += timedelta(days=1)
+            if len(instances) > 60:
+                break
+        if instances:
+            return instances
+
+    # Continuous multi-day (Restaurant Week)
+    if span_days <= 14:
+        instances = []
+        cur = start_d
+        while cur <= end_d:
+            instances.append(_clone_event_at_date(ev, cur.isoformat()))
+            cur += timedelta(days=1)
+        return instances
+
+    return [ev]
+
+
 def scrape_sitemap_events(
-    sitemap_url: str,
-    url_pattern: str = r"/event/",
-    source_name: Optional[str] = None,
-    default_lat: Optional[float] = None,
-    default_lng: Optional[float] = None,
-    default_city: Optional[str] = None,
-    default_categories: Optional[list] = None,
-    max_pages: Optional[int] = None,
-    delay_seconds: float = 0.15,
-    timeout: int = 15,
-) -> list:
+    sitemap_url,
+    url_pattern=r"/event/",
+    source_name=None,
+    default_lat=None,
+    default_lng=None,
+    default_city=None,
+    default_categories=None,
+    max_pages=None,
+    delay_seconds=0.15,
+    timeout=15,
+):
     if source_name is None:
         source_name = urlparse(sitemap_url).netloc
 
@@ -76,12 +139,14 @@ def scrape_sitemap_events(
                 timeout=timeout,
             )
             for ev in page_events:
-                d = (ev.get("date") or "")[:10]
-                if d and d < today:
-                    skipped += 1
-                    continue
-                events.append(ev)
-        except Exception:
+                expanded = _expand_event_dates(ev, today)
+                for e in expanded:
+                    d = (e.get("date") or "")[:10]
+                    if d and d < today:
+                        skipped += 1
+                        continue
+                    events.append(e)
+        except Exception as ex:
             failed += 1
         time.sleep(delay_seconds)
 

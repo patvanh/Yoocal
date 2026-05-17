@@ -115,9 +115,15 @@ def scrape_schema_org_events(
         if not parsed:
             dropped_unparseable += 1
             continue
-        if parsed["date"] < today_iso:
+        # Keep event if either start OR end date is today/future
+        eff_end = parsed.get("end_date") or parsed["date"]
+        if eff_end < today_iso:
             dropped_past += 1
             continue
+        # If start is past but end is future, bump date forward to today
+        # so the event shows up on current+future days
+        if parsed["date"] < today_iso <= eff_end:
+            parsed["date"] = today_iso
 
         # Dedup within this page
         key = (parsed["title"][:40].lower(), parsed["date"])
