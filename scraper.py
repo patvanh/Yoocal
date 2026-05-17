@@ -993,7 +993,7 @@ def handle_recurring(events):
 
 def deduplicate(events):
     # Sort so Park Record comes first — it has times, prefer it over VPC
-    source_priority = {"Deer Valley Resort": 0, "Deer Valley Music Festival": 1, "Mountain Trails Foundation": 2, "Park City Institute": 3, "The Park Record": 4, "KPCW Community Calendar": 5, "Google Events": 6, "RunSignup": 7, "Salt Lake Running Co": 8, "Running in the USA": 9, "Visit Park City": 10}
+    source_priority = {"Deer Valley Resort": 0, "Deer Valley Music Festival": 1, "Mountain Trails Foundation": 2, "Park City Opera": 3, "Park City Institute": 4, "The Park Record": 5, "KPCW Community Calendar": 6, "Google Events": 7, "RunSignup": 8, "Salt Lake Running Co": 9, "Running in the USA": 10, "Visit Park City": 11}
     events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
 
     seen = set()
@@ -1382,6 +1382,35 @@ def scrape_dvmf_wrapper():
         return []
 
 
+
+
+# -------------------------------------------------------
+# PARK CITY OPERA (via universal Schema.org v2)
+# -------------------------------------------------------
+def scrape_park_city_opera_wrapper():
+    """Run Park City Opera scraper via universal Schema.org v2 parser."""
+    try:
+        from schema_org_scraper_v2 import scrape_schema_org_v2
+    except ImportError:
+        print("  schema_org_scraper_v2 not available, skipping")
+        return []
+    try:
+        return scrape_schema_org_v2(
+            url="https://www.parkcityopera.org/events",
+            link_pattern=r"/events/[a-z0-9-]+$",
+            source_name="Park City Opera",
+            default_lat=40.6461,
+            default_lng=-111.4980,
+            default_city="Park City, UT",
+            default_categories=["Music", "Opera"],
+            max_detail_pages=40,
+            delay_seconds=0.3,
+        )
+    except Exception as ex:
+        print(f"  Park City Opera scraper failed: {ex}")
+        return []
+
+
 # -------------------------------------------------------
 # GEOGRAPHIC RE-ROUTING (Park City -> Heber Valley)
 # -------------------------------------------------------
@@ -1491,6 +1520,7 @@ def main():
     all_events += scrape_park_city_institute_wrapper()
     all_events += scrape_park_city_trails_wrapper()
     all_events += scrape_dvmf_wrapper()
+    all_events += scrape_park_city_opera_wrapper()
     all_events += scrape_runsignup_parkcity_wrapper()
     all_events += scrape_slrc_parkcity_wrapper()
 
