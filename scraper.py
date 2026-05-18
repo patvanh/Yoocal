@@ -1330,6 +1330,28 @@ def scrape_park_city_trails_wrapper():
 # -------------------------------------------------------
 # RUNSIGNUP (Park City races)
 # -------------------------------------------------------
+def scrape_visit_park_city_sitemap_wrapper():
+    """Wrapper around sitemap_event_scraper for visitparkcity.com."""
+    try:
+        from sitemap_event_scraper import scrape_sitemap_events
+    except ImportError:
+        print("[VPC sitemap] sitemap_event_scraper not available")
+        return []
+    try:
+        return scrape_sitemap_events(
+            sitemap_url="https://www.visitparkcity.com/sitemap.xml",
+            url_pattern=r"/event/",
+            source_name="Visit Park City",
+            default_lat=40.6461,
+            default_lng=-111.4980,
+            default_city="Park City, UT",
+            default_categories=["Community"],
+        )
+    except Exception as ex:
+        print(f"[VPC sitemap] failed: {ex}")
+        return []
+
+
 def scrape_runsignup_parkcity_wrapper():
     """Run the RunSignup PC scraper if available."""
     try:
@@ -1509,6 +1531,7 @@ def main():
 
     all_events = []
     all_events += scrape_visit_park_city()
+    all_events += scrape_visit_park_city_sitemap_wrapper()
     all_events += scrape_eventbrite()
     all_events += scrape_running_in_the_usa()
     all_events += scrape_park_record()
