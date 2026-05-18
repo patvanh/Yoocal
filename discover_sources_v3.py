@@ -68,6 +68,107 @@ EVENT_URL_PATTERNS = [
 ]
 
 
+# --------------------------------------------------------------
+# RICHNESS VALIDATOR
+# --------------------------------------------------------------
+
+def _validate_richness(sample_urls, max_samples=3, timeout=12):
+    """
+    Fetch a few sample event detail pages and confirm they actually
+    contain well-populated event data. Returns dict with:
+      - quality_score: 0-3 per page, averaged
+      - future_event_ratio: fraction of sampled pages with future startDate
+      - sample_count: how many we successfully parsed
+      - issues: list of human-readable problems found
+    """
+    import json as _json
+    from datetime import datetime as _dt
+
+    today_iso = _dt.utcnow().strftime("%Y-%m-%d")
+    samples = sample_urls[:max_samples]
+    parsed = 0
+    future_count = 0
+    quality_total = 0
+    issues = []
+
+    for url in samples:
+        code, text, _ = _fetch(url, timeout=timeout)
+        if code != 200 or not text:
+            issues.append(f"fetch failed: {url[:80]}")
+            continue
+        # Find Schema.org Event JSON-LD blocks
+        ld_pat = r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>'
+        ld_blocks = re.findall(ld_pat, text, re.DOTALL)
+        event_obj = None
+        for blk in ld_blocks:
+            try:
+                d = _json.loads(blk.strip())
+                items = d if isinstance(d, list) else [d]
+                for it in items:
+                    if isinstance(it, dict) and "Event" in str(it.get("@type", "")):
+                        event_obj = it
+                        break
+                if event_obj:
+                    break
+            except Exception:
+                pass
+
+        if not event_obj:
+            issues.append(f"no Event JSON-LD: {url[:80]}")
+            continue
+
+        parsed += 1
+
+        # Score this page's richness 0-3
+        score = 0
+        sd = (event_obj.get("startDate") or "")[:10]
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", sd):
+            score += 1
+            if sd >= today_iso:
+                future_count += 1
+
+        loc = event_obj.get("location")
+        if isinstance(loc, dict):
+            addr = loc.get("address")
+            if isinstance(addr, dict) and addr.get("streetAddress"):
+                score += 1
+
+        desc = event_obj.get("description") or ""
+        if isinstance(desc, str) and len(desc.strip()) > 50:
+            score += 1
+
+        quality_total += score
+
+    if parsed == 0:
+        return {
+            "quality_score": 0.0,
+            "future_event_ratio": 0.0,
+            "sample_count": 0,
+            "issues": issues or ["no pages parsed"],
+        }
+
+    return {
+        "quality_score": round(quality_total / parsed, 2),
+        "future_event_ratio": round(future_count / parsed, 2),
+        "sample_count": parsed,
+        "issues": issues,
+    }
+
+
+def _adjust_confidence_by_richness(base_confidence, richness):
+    """Downgrade confidence if richness check shows weak data."""
+    score = richness.get("quality_score", 0)
+    ratio = richness.get("future_event_ratio", 0)
+    n = richness.get("sample_count", 0)
+    if n == 0:
+        return "low-no-samples"
+    if score < 1.0 or ratio < 0.2:
+        return "low-poor-data"
+    if score < 2.0:
+        return "medium-thin-data"
+    return base_confidence
+
+
 def probe_sitemap(domain):
     """
     Fetch /sitemap.xml at the given domain (with and without www).
@@ -112,13 +213,27 @@ def probe_sitemap(domain):
             matching = [u for u in all_urls if re.search(pat, u)]
             if len(matching) >= 5:  # threshold: 5+ event URLs = real
                 if best is None or len(matching) > best["count"]:
+                    # Sample across the matching URLs: take from the END (newest)
+                    # plus middle, plus a couple from the start. Sitemaps are
+                    # typically chronological; newest = most likely to be future.
+                    n = len(matching)
+                    if n <= 6:
+                        sample = matching
+                    else:
+                        sample = [
+                            matching[-1], matching[-2], matching[-3],  # newest 3
+                            matching[n // 2],                          # middle
+                            matching[0], matching[1],                  # oldest 2
+                        ]
                     best = {
                         "pattern": pat,
-                        "count": len(matching),
-                        "sample_urls": matching[:3],
+                        "count": n,
+                        "sample_urls": sample,
                     }
 
         if best:
+            # Validate richness: do these URLs actually contain populated events?
+            richness = _validate_richness(best["sample_urls"], max_samples=3)
             return {
                 "found": True,
                 "sitemap_url": url,
@@ -126,6 +241,8 @@ def probe_sitemap(domain):
                 "event_url_count": best["count"],
                 "url_pattern": best["pattern"],
                 "sample_urls": best["sample_urls"],
+                "richness": richness,
+                "estimated_future_events": int(best["count"] * richness.get("future_event_ratio", 0)),
                 "scraper_config": {
                     "type": "sitemap_event_scraper",
                     "function": "scrape_sitemap_events",
@@ -192,11 +309,18 @@ def probe_rss(domain):
                 "calendar" in text_lo,
                 "venue" in text_lo,
             ])
+            # Extract <link> URLs from RSS items for richness validation
+            link_urls = re.findall(r"<link>([^<]+)</link>", text)
+            # Skip the first one (it's the channel link, not an item)
+            sample_links = link_urls[1:4] if len(link_urls) > 1 else []
+            richness = _validate_richness(sample_links, max_samples=3) if sample_links else {"quality_score": 0, "future_event_ratio": 0, "sample_count": 0, "issues": ["no item links"]}
             return {
                 "found": True,
                 "feed_url": url,
                 "item_count": len(items),
                 "event_signal_score": event_signal,
+                "richness": richness,
+                "estimated_future_events": int(len(items) * richness.get("future_event_ratio", 0)),
                 "scraper_config": {
                     "type": "rss_scraper",
                     "function": "scrape_rss",
@@ -410,6 +534,8 @@ BLACKLIST_DOMAINS = {
     # Nonprofits / orgs whose sitemaps surface in city searches but
     # aren't local-event aggregators (they're org-internal calendars)
     "encircletogether.org",
+    # Real-estate / professional service blogs that happen to mention events
+    "homesbymeriann.com",
 }
 
 
@@ -516,14 +642,22 @@ def discover(city, max_domains=20):
 
         # Rank: prefer sitemap (best signal), then tribe, then rss, then playwright
         if s["found"]:
+            base_conf = "high"
+            if "richness" in s:
+                base_conf = _adjust_confidence_by_richness(base_conf, s["richness"])
             report["recommendation"] = s["scraper_config"]
-            report["confidence"] = "high"
+            report["confidence"] = base_conf
+            report["estimated_future_events"] = s.get("estimated_future_events", 0)
         elif t["found"]:
             report["recommendation"] = t["scraper_config"]
             report["confidence"] = "high"
         elif r["found"]:
+            base_conf = "medium"
+            if "richness" in r:
+                base_conf = _adjust_confidence_by_richness(base_conf, r["richness"])
             report["recommendation"] = r["scraper_config"]
-            report["confidence"] = "medium"
+            report["confidence"] = base_conf
+            report["estimated_future_events"] = r.get("estimated_future_events", 0)
         elif report["probes"].get("playwright", {}).get("found"):
             report["recommendation"] = report["probes"]["playwright"]["scraper_config"]
             report["confidence"] = "low-needs-custom-adapter"
@@ -535,7 +669,15 @@ def discover(city, max_domains=20):
         time.sleep(0.3)
 
     # Sort: actionable findings first
-    confidence_rank = {"high": 0, "medium": 1, "low-needs-custom-adapter": 2, "none": 3}
+    confidence_rank = {
+        "high": 0,
+        "medium": 1,
+        "medium-thin-data": 2,
+        "low-poor-data": 3,
+        "low-no-samples": 4,
+        "low-needs-custom-adapter": 5,
+        "none": 6,
+    }
     out.sort(key=lambda x: confidence_rank.get(x["confidence"], 99))
 
     payload = {
@@ -551,7 +693,8 @@ def discover(city, max_domains=20):
     actionable = [x for x in out if x["recommendation"]]
     print(f"\nSummary: {len(actionable)} actionable findings out of {len(out)} domains.")
     for x in actionable[:10]:
-        print(f"  [{x['confidence']}] {x['domain']} -> {x['recommendation']['type']}")
+        est = x.get("estimated_future_events", "?")
+        print(f"  [{x['confidence']}] {x['domain']} -> {x['recommendation']['type']} (~{est} future events)")
 
 
 

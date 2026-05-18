@@ -1036,8 +1036,23 @@ def handle_recurring(events):
 
 def deduplicate(events):
     # Sort so Park Record comes first — it has times, prefer it over VPC
-    source_priority = {"Deer Valley Resort": 0, "Deer Valley Music Festival": 1, "Mountain Trails Foundation": 2, "Park City Opera": 3, "Park City Institute": 4, "The Park Record": 5, "KPCW Community Calendar": 6, "Google Events": 7, "RunSignup": 8, "Salt Lake Running Co": 9, "Running in the USA": 10, "Visit Park City": 11}
-    events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
+    source_priority = {"Deer Valley Resort": 0, "Deer Valley Music Festival": 1, "Mountain Trails Foundation": 2, "Park City Opera": 3, "Park City Institute": 4, "The Park Record": 5, "KPCW Community Calendar": 6, "Visit Park City (sitemap)": 7, "Google Events": 8, "RunSignup": 9, "Salt Lake Running Co": 10, "Running in the USA": 11, "Visit Park City": 12}
+    # Sort by source priority, then by data richness (real date + start_time + address)
+    # so well-populated events beat placeholder-only ones from same source
+    def _richness_score(e):
+        score = 0
+        d = e.get("date") or ""
+        if d and d != "See website" and d[:4].isdigit():
+            score -= 4  # real date wins big
+        if e.get("start_time"):
+            score -= 2
+        if e.get("address"):
+            score -= 2
+        if e.get("description"):
+            score -= 1
+        return score
+
+    events.sort(key=lambda e: (source_priority.get(e.get("source", ""), 99), _richness_score(e)))
 
     seen = set()
     unique = []
@@ -1384,7 +1399,7 @@ def scrape_visit_park_city_sitemap_wrapper():
         return scrape_sitemap_events(
             sitemap_url="https://www.visitparkcity.com/sitemap.xml",
             url_pattern=r"/event/",
-            source_name="Visit Park City",
+            source_name="Visit Park City (sitemap)",
             default_lat=40.6461,
             default_lng=-111.4980,
             default_city="Park City, UT",
