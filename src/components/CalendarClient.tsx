@@ -528,7 +528,20 @@ export default function CalendarClient() {
         allEvents = Array.from(dedupMap.values())
         dailyFeaturedTitle = getDailyFeaturedTitle()
         const heroStat = document.querySelector('.hero-stat .num') as HTMLElement
-        if (heroStat) heroStat.textContent = String(allEvents.filter((e: any) => !e._supplemental).length)
+        if (heroStat) {
+          const today = new Date()
+          today.setHours(0, 0, 0, 0)
+          const weekEnd = new Date(today)
+          weekEnd.setDate(weekEnd.getDate() + 7)
+          const weekCount = allEvents.filter((e: any) => {
+            if (e._supplemental) return false
+            const d = (e.date || '').slice(0, 10)
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) return false
+            const evDate = new Date(d + 'T00:00:00')
+            return evDate >= today && evDate < weekEnd
+          }).length
+          heroStat.textContent = weekCount.toLocaleString()
+        }
         if (data.updated_at) {
           const hrs = Math.round((new Date().getTime() - new Date(data.updated_at).getTime()) / 3600000)
           if (dateLabel) dateLabel.textContent = `${city.label} — updated ${hrs < 1 ? 'just now' : hrs + ' hours ago'}`
