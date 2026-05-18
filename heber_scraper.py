@@ -652,6 +652,33 @@ def extract_venue_from_title(title):
     return None
 
 
+def scrape_hebervalleylife_sitemap():
+    """Scrape hebervalleylife.com via its MEC events sub-sitemap.
+
+    Discovered via discover_sources_v3.py — local Heber Valley life/events site
+    running WordPress Modern Events Calendar plugin. Each event detail page has
+    clean Schema.org Event JSON-LD.
+    """
+    try:
+        from sitemap_event_scraper import scrape_sitemap_events
+    except ImportError:
+        print("[hebervalleylife] sitemap_event_scraper not available")
+        return []
+    try:
+        return scrape_sitemap_events(
+            sitemap_url="https://hebervalleylife.com/wp-sitemap-posts-mec-events-1.xml",
+            url_pattern=r"/events/",
+            source_name="Heber Valley Life",
+            default_lat=40.5066,
+            default_lng=-111.4133,
+            default_city="Heber City, UT",
+            default_categories=["Community"],
+        )
+    except Exception as ex:
+        print(f"[hebervalleylife] failed: {ex}")
+        return []
+
+
 def main():
     print("=" * 55)
     print("  Yoocal Heber Valley Scraper")
@@ -682,6 +709,7 @@ def main():
     all_events += scrape_eventbrite()
     all_events += scrape_runsignup()
     all_events += scrape_slrc_heber_wrapper()
+    all_events += scrape_hebervalleylife_sitemap()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)

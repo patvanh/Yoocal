@@ -250,7 +250,7 @@ export default function CalendarClient() {
       const featured = isFeaturedEvent(event)
       const startStr = startDate || ''
       const endStr = endDate || startStr
-      return `<div class="cal-event${featured?' featured':''}" data-categories="${cats}" data-start="${startStr}" data-end="${endStr}" data-recurrence="${event.recurrence||''}" data-recurrence-day="${event.recurrence_day||''}" data-recurrence-days="${event.recurrence_days||''}" data-lat="${event.lat||''}" data-lng="${event.lng||''}" data-title="${(event.title||'').replace(/"/g,'&quot;')}" data-location="${(event.location||'').replace(/"/g,'&quot;')}" data-date="${event.date||''}" data-end-date="${event.end_date||''}" data-link="${event.link||''}" data-description="${(event.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}" data-source="${sourceShort}" data-start-time="${event.start_time||''}" data-end-time="${event.end_time||''}" onclick="openEventModal(this)" style="cursor:pointer"><div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time?`<div style="font-size:9px;color:white;margin-top:3px;white-space:nowrap">${event.start_time}${event.end_time?"–"+event.end_time:""}</div>`:''}</div><div class="cal-event-info"><h4>${event.title}</h4><p>${(event.description||'').slice(0,120)||'See website for details.'}</p><div class="cal-tags">${tagHTML}<span class="cal-source">via ${sourceShort}${distLabel}</span></div></div><div class="cal-event-actions"><button class="atc-btn" title="Add to calendar" onclick="openAtcDropdown(event,this)">📅</button></div></div>`
+      return `<div class="cal-event${featured?' featured':''}" data-categories="${cats}" data-start="${startStr}" data-end="${endStr}" data-recurrence="${event.recurrence||''}" data-recurrence-day="${event.recurrence_day||''}" data-recurrence-days="${event.recurrence_days||''}" data-lat="${event.lat||''}" data-lng="${event.lng||''}" data-title="${(event.title||'').replace(/"/g,'&quot;')}" data-location="${(event.location||'').replace(/"/g,'&quot;')}" data-address="${(event.address||'').replace(/"/g,'&quot;')}" data-venue-name="${(event.venue_name||'').replace(/"/g,'&quot;')}" data-date="${event.date||''}" data-end-date="${event.end_date||''}" data-link="${event.link||''}" data-description="${(event.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}" data-source="${sourceShort}" data-start-time="${event.start_time||''}" data-end-time="${event.end_time||''}" onclick="openEventModal(this)" style="cursor:pointer"><div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time?`<div style="font-size:9px;color:white;margin-top:3px;white-space:nowrap">${event.start_time}${event.end_time?"–"+event.end_time:""}</div>`:''}</div><div class="cal-event-info"><h4>${event.title}</h4><p>${(event.description||'').slice(0,120)||'See website for details.'}</p><div class="cal-tags">${tagHTML}<span class="cal-source">via ${sourceShort}${distLabel}</span></div></div><div class="cal-event-actions"><button class="atc-btn" title="Add to calendar" onclick="openAtcDropdown(event,this)">📅</button></div></div>`
     }
 
     function applyFilters() {
@@ -582,6 +582,8 @@ export default function CalendarClient() {
       modalCardRef = card
       const title = card.dataset.title||'', desc = card.dataset.description||'', date = card.dataset.date||''
       const endDate = card.dataset.endDate||'', location = card.dataset.location||'', link = card.dataset.link||'#'
+      const venueName = card.dataset.venueName||''
+      const address = card.dataset.address||''
       const source = card.dataset.source||''
       const cats = (card.dataset.categories||'').split(' ').filter(Boolean)
       const tagMap: Record<string,[string,string]> = { music:['t-music','Music'], outdoor:['t-outdoor','Outdoor'], food:['t-food','Food & Drink'], arts:['t-arts','Arts'], sports:['t-sports','Sports'], family:['t-family','Family'], wellness:['t-community','Wellness'], community:['t-community','Community'], free:['t-free','Free'], paid:['t-paid','Paid'] }
@@ -605,7 +607,15 @@ export default function CalendarClient() {
       if (dateStr) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📅</span>${dateStr}</div>`)
       const startTime = card.dataset.startTime||'', endTime = card.dataset.endTime||''
       if (startTime) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">🕐</span>${endTime?startTime+' – '+endTime:startTime}</div>`)
-      if (location) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📍</span>${location}</div>`)
+      // Prefer structured venue_name + address when available (cleaner display)
+      if (venueName) {
+        meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📍</span>${venueName}</div>`)
+        if (address) {
+          meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.55);margin-left:26px">${address}</div>`)
+        }
+      } else if (location) {
+        meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📍</span>${location}</div>`)
+      }
       if (source) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.4)"><span style="font-size:16px">🔗</span>via ${source}</div>`)
       if (mMeta) mMeta.innerHTML = meta.join('')
       const overlay = document.getElementById('event-modal-overlay'), modal = document.getElementById('event-modal')

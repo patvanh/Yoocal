@@ -398,6 +398,10 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
             "lng": default_lng if default_lng is not None else 0,
             "categories": categories,
         }
+        # Don't keep orphan end_time with no start_time (looks broken in UI)
+        if end_time and not start_time:
+            end_time = None
+
         if start_time:
             event["start_time"] = start_time
         if end_time:
@@ -406,6 +410,10 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
             event["end_date"] = end_date_iso
         if image_url:
             event["image_url"] = image_url
+        if venue_address:
+            event["address"] = venue_address
+        if venue_name:
+            event["venue_name"] = venue_name
 
         return event
 

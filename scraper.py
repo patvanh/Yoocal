@@ -172,7 +172,12 @@ def scrape_visit_park_city():
                 raw_end = doc.get("endDate") or ""
                 end_date = normalize_date(raw_end)
                 raw_end_time = extract_time_from_iso(raw_end)
-                end_time = "" if raw_end_time == "12:00 AM" else raw_end_time
+                # Simpleview returns "11:59 PM", "12:00 AM", or "1:00 AM" as
+                # placeholders for all-day events — drop these.
+                end_time = "" if raw_end_time in ("12:00 AM", "11:59 PM", "1:00 AM") else raw_end_time
+                # Don't keep an orphan end_time with no start_time — looks broken in UI
+                if end_time and not start_time:
+                    end_time = ""
 
                 if start_date and start_date < today_str:
                     start_date = today_str
@@ -219,6 +224,19 @@ def scrape_visit_park_city():
                 if lat: event["lat"] = float(lat)
                 if lng: event["lng"] = float(lng)
                 if end_date: event["end_date"] = end_date
+
+                # Extract structured address from the listing's address object
+                listing = doc.get("listing") if isinstance(doc.get("listing"), dict) else {}
+                addr_obj = listing.get("address") if isinstance(listing.get("address"), dict) else {}
+                street = (addr_obj.get("address_1") or addr_obj.get("streetAddress") or "").strip()
+                city_part = (addr_obj.get("city") or addr_obj.get("addressLocality") or "").strip()
+                region = (addr_obj.get("state") or addr_obj.get("addressRegion") or "").strip()
+                postal = (addr_obj.get("zip") or addr_obj.get("postalCode") or "").strip()
+                addr_str = ", ".join(p for p in [street, city_part, region, postal] if p)
+                if addr_str:
+                    event["address"] = addr_str
+                if listing.get("title") or listing.get("name"):
+                    event["venue_name"] = (listing.get("title") or listing.get("name")).strip()
                 if recurrence:
                     event["recurrence"] = recurrence
                     event["recurrence_day"] = rec_days[0] if len(rec_days) == 1 else ""
