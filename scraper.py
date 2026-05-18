@@ -272,6 +272,31 @@ def scrape_visit_park_city():
         except Exception as e2:
             print(f"  Fallback also failed: {e2}")
 
+    # GUARD: if the VPC scrape returned an unusually low count, augment with
+    # yesterday's stored VPC events to avoid losing coverage during their
+    # server flakes. Normal runs return ~90-100 events; under 80 = weak.
+    VPC_WEAK_THRESHOLD = 80
+    if len(events) < VPC_WEAK_THRESHOLD:
+        print(f"  WARN: only {len(events)} VPC events (threshold {VPC_WEAK_THRESHOLD}) — merging with stored data")
+        try:
+            stored_path = os.path.join(os.path.dirname(__file__), "public", "events.json")
+            with open(stored_path) as f_in:
+                stored = json.load(f_in)
+            stored_vpc = [e for e in stored.get("events", []) if e.get("source") == "Visit Park City"]
+            # Only keep future events from storage
+            today_iso = datetime.now().strftime("%Y-%m-%d")
+            future_stored = [e for e in stored_vpc if (e.get("date") or "")[:10] >= today_iso]
+            # Dedup by title — prefer fresh events over stored
+            seen_titles = {e.get("title", "").lower()[:40] for e in events}
+            for e in future_stored:
+                key = e.get("title", "").lower()[:40]
+                if key and key not in seen_titles:
+                    events.append(e)
+                    seen_titles.add(key)
+            print(f"  After merge with stored VPC data: {len(events)} events")
+        except Exception as merge_ex:
+            print(f"  WARN: could not load stored VPC events for merge: {merge_ex}")
+
     return events
 
 
