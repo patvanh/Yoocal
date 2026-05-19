@@ -125,6 +125,14 @@ def scrape_schema_org_events(
         if parsed["date"] < today_iso <= eff_end:
             parsed["date"] = today_iso
 
+        # If JSON-LD didn't supply start_time, try to extract from visible HTML
+        if not parsed.get("start_time"):
+            st, et = _extract_time_from_html(html_text)
+            if st:
+                parsed["start_time"] = st
+                if et:
+                    parsed["end_time"] = et
+
         # Dedup within this page
         key = (parsed["title"][:40].lower(), parsed["date"])
         if key in seen_keys:
@@ -281,6 +289,68 @@ def _regex_extract_events(block):
         if ev.get("name") and ev.get("startDate") and ev.get("@type"):
             out.append(ev)
     return out
+
+
+
+
+# HTML time-extraction fallback for sites whose Schema.org JSON-LD has
+# date-only fields (e.g. visitparkcity.com Simpleview pages) but visible
+# HTML shows times like "Time: 9:00 AM to 10:30 AM".
+_TIME_RE = re.compile(
+    r"(\d{1,2}:\d{2}\s*[AaPp][Mm])"          # captures 9:00 AM
+    r"(?:\s*(?:to|\u2013|\u2014|-|\u2010|&ndash;|&#8211;)\s*"  # to / dash / en-dash
+    r"(\d{1,2}:\d{2}\s*[AaPp][Mm]))?",        # optional end time
+    re.IGNORECASE,
+)
+
+
+def _extract_time_from_html(html_text):
+    """
+    Look for time-range patterns in visible HTML.
+    Returns (start_time, end_time) or (None, None).
+    """
+    if not html_text:
+        return None, None
+
+    # Strip tags so labels and times are contiguous
+    text = re.sub(r"<[^>]+>", " ", html_text)
+    text = re.sub(r"\s+", " ", text)
+
+    # Look for the FIRST time-range pattern in the visible body.
+    # Pattern: "9:00 AM to 10:30 AM", "9:00 AM - 10:30 AM",
+    # "9:00 AM \u2013 10:30 AM" (en-dash), "9:00 AM \u2014 10:30 AM" (em-dash).
+    range_re = re.compile(
+        r"(\d{1,2}:\d{2}\s*[AaPp][Mm])"
+        r"\s*(?:to|\u2013|\u2014|-|&ndash;|&#8211;)\s*"
+        r"(\d{1,2}:\d{2}\s*[AaPp][Mm])",
+        re.IGNORECASE,
+    )
+    m = range_re.search(text)
+    if m:
+        s = _normalize_time(m.group(1))
+        e = _normalize_time(m.group(2))
+        if s:
+            return s, e
+
+    # If no range, fall back to first standalone time
+    single_re = re.compile(r"(\d{1,2}:\d{2}\s*[AaPp][Mm])", re.IGNORECASE)
+    m = single_re.search(text)
+    if m:
+        s = _normalize_time(m.group(1))
+        if s:
+            return s, None
+
+    return None, None
+
+def _normalize_time(s):
+    """Normalize '9:00 am' -> '9:00 AM'. Returns None if unparseable."""
+    if not s:
+        return None
+    s = s.strip().upper().replace(".", "")
+    s = re.sub(r"\s+", " ", s)
+    # Ensure space before AM/PM
+    s = re.sub(r"([0-9])([AP]M)", r"\1 \2", s)
+    return s if re.match(r"^\d{1,2}:\d{2} [AP]M$", s) else None
 
 
 def _parse_event(raw, source_name, source_url, default_lat, default_lng,
