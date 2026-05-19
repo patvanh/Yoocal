@@ -72,7 +72,7 @@ export default function HomeBrand() {
     if (match) {
       pickCity(match.key)
     } else {
-      router.push(`/submit?city=${encodeURIComponent(query.trim())}`)
+      router.push(`/request-town?city=${encodeURIComponent(query.trim())}`)
     }
   }
 
@@ -144,7 +144,7 @@ export default function HomeBrand() {
             We&apos;re expanding fast. Tell us where you live and we&apos;ll
             start pulling local events for your community next.
           </p>
-          <a href="/submit" className="hb-cta-btn">
+          <a href="/request-town" className="hb-cta-btn">
             Submit your town →
           </a>
         </div>
