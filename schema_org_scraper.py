@@ -363,7 +363,13 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
             name = (name.get("@value") or "").strip()
         if not name or len(name) < 3:
             return None
+        # Decode entities FIRST so HTML-encoded tags like &lt;em&gt;
+        # become literal <em> tags, THEN strip them. Some sources (e.g.
+        # National Museum of Wildlife Art) double-encode their titles, so
+        # the order matters — stripping before decode misses everything.
         title = html.unescape(name)
+        title = re.sub(r"<[^>]+>", "", title)
+        title = re.sub(r"\s+", " ", title).strip()
 
         # Date/time — Schema.org gives "2026-07-17T20:00" or "2026-07-17"
         start_str = raw.get("startDate") or ""

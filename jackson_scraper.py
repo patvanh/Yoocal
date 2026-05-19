@@ -67,6 +67,30 @@ SITEMAP_SOURCES = [
         "default_city": "Jackson, WY",
         "default_categories": ["Community"],
     },
+    {
+        "sitemap_url": "https://www.jhcenterforthearts.org/events-sitemap.xml",
+        "url_pattern": r"/event/",
+        "source_name": "Center for the Arts Jackson Hole",
+        "default_lat": JACKSON_LAT,
+        "default_lng": JACKSON_LNG,
+        "default_city": "Jackson, WY",
+        "default_categories": ["Arts"],
+    },
+]
+
+
+# Single-page sources (one URL with multiple Schema.org Event JSON-LD blocks)
+# Used when the source lists all events on a single page rather than having
+# per-event detail URLs in a sitemap.
+SINGLE_PAGE_SOURCES = [
+    {
+        "url": "https://www.wildlifeart.org/events/",
+        "source_name": "National Museum of Wildlife Art",
+        "default_lat": 43.4925,
+        "default_lng": -110.7438,
+        "default_city": "Jackson, WY",
+        "default_categories": ["Arts"],
+    },
 ]
 
 
@@ -74,6 +98,8 @@ def deduplicate(events):
     """Dedup by (title, date). Prefer events with start_time, then by source priority."""
     source_priority = {
         "Grand Teton Music Festival": 0,
+        "Center for the Arts Jackson Hole": 0,
+        "National Museum of Wildlife Art": 0,
         "Jackson Hole Chamber of Commerce": 1,
         "The Cloudveil": 2,
     }
@@ -127,6 +153,20 @@ def main():
         print(f"\n--- {cfg['source_name']} (sitemap) ---")
         try:
             events = scrape_sitemap_events(**cfg)
+            all_events.extend(events)
+        except Exception as ex:
+            print(f"  ERROR scraping {cfg['source_name']}: {ex}")
+            continue
+
+    for cfg in SINGLE_PAGE_SOURCES:
+        print(f"\n--- {cfg['source_name']} (single-page) ---")
+        try:
+            from schema_org_scraper import scrape_schema_org_events
+            events = scrape_schema_org_events(
+                max_events=50,
+                timeout=20,
+                **cfg,
+            )
             all_events.extend(events)
         except Exception as ex:
             print(f"  ERROR scraping {cfg['source_name']}: {ex}")
