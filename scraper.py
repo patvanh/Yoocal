@@ -15,6 +15,7 @@ Output: events.json
 import requests
 from schema_org_scraper import _extract_time_from_html
 from venue_lookup import lookup_venue_address
+from mountain_town_music_scraper import scrape_mountain_town_music
 import os
 from bs4 import BeautifulSoup
 import json
@@ -1066,7 +1067,7 @@ def handle_recurring(events):
 
 def deduplicate(events):
     # Sort so Park Record comes first — it has times, prefer it over VPC
-    source_priority = {"Deer Valley Resort": 0, "Deer Valley Music Festival": 1, "Mountain Trails Foundation": 2, "Park City Opera": 3, "Park City Institute": 4, "The Park Record": 5, "KPCW Community Calendar": 6, "Visit Park City (sitemap)": 7, "Google Events": 8, "RunSignup": 9, "Salt Lake Running Co": 10, "Running in the USA": 11, "Visit Park City": 12}
+    source_priority = {"Deer Valley Resort": 0, "Deer Valley Music Festival": 1, "Mountain Trails Foundation": 2, "Park City Opera": 3, "Park City Institute": 4, "Mountain Town Music": 5, "The Park Record": 6, "KPCW Community Calendar": 7, "Visit Park City (sitemap)": 8, "Google Events": 9, "RunSignup": 10, "Salt Lake Running Co": 11, "Running in the USA": 12, "Visit Park City": 13}
     # Sort by source priority, then by data richness (real date + start_time + address)
     # so well-populated events beat placeholder-only ones from same source
     def _richness_score(e):
@@ -1620,6 +1621,10 @@ def main():
     all_events = []
     all_events += scrape_visit_park_city()
     all_events += scrape_visit_park_city_sitemap_wrapper()
+    try:
+        all_events += scrape_mountain_town_music()
+    except Exception as ex:
+        print(f"  [MTM] scraper failed: {ex}")
     all_events += scrape_eventbrite()
     all_events += scrape_running_in_the_usa()
     all_events += scrape_park_record()
