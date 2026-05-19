@@ -29,7 +29,7 @@ CITYSPARK_URL = "https://portal.cityspark.com/api/events/GetEvents/ParkRecord"
 PORTAL_ID = 8838
 PARK_CITY_LAT = 40.6461
 PARK_CITY_LNG = -111.4980
-SEARCH_RADIUS_MILES = 50
+SEARCH_RADIUS_MILES = 15  # was 50, but that pulled entire Wasatch Front
 PAGE_SIZE = 25  # CitySpark returns 25 per page (server-capped)
 
 # Known recurring Park City events that the unfiltered crawl misses because
@@ -94,10 +94,30 @@ def _categorize(tags: list, name: str, venue: str) -> list:
     return sorted(cats) if cats else ["Community"]
 
 
+import math
+
+PARK_CITY_CENTER_LAT = 40.6461
+PARK_CITY_CENTER_LNG = -111.4980
+MAX_DISTANCE_MILES = 12  # hard cap; CitySpark sometimes returns events well beyond the radius param
+
+
+def _haversine_miles(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
+    """Great-circle distance in miles."""
+    R = 3958.7613
+    dlat = math.radians(lat2 - lat1)
+    dlng = math.radians(lng2 - lng1)
+    a = (math.sin(dlat / 2) ** 2 +
+         math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) *
+         math.sin(dlng / 2) ** 2)
+    return 2 * R * math.asin(math.sqrt(a))
+
+
 def _normalize_event(cs: dict) -> dict | None:
     """Convert a CitySpark event dict to a yoocal event dict.
 
-    Returns None if the event lacks the minimum fields (name + date).
+    Returns None if the event lacks the minimum fields (name + date) or if
+    the venue is more than MAX_DISTANCE_MILES from Park City center (the
+    CitySpark API\'s distance filter is permissive — we hard-filter here).
     """
     name = (cs.get("Name") or "").strip()
     date_start = cs.get("DateStart") or ""
@@ -145,6 +165,22 @@ def _normalize_event(cs: dict) -> dict | None:
             link = links[0].get("url") or ""
     if not link:
         link = "https://www.parkrecord.com/calendar/"
+
+    # Hard geo filter: drop events outside ~12 miles of Park City center.
+    # CitySpark sometimes returns events 30-50 miles away despite the
+    # distance request, which leaks Salt Lake metro events into PC.
+    ev_lat = cs.get("latitude")
+    ev_lng = cs.get("longitude")
+    if ev_lat and ev_lng:
+        try:
+            dist = _haversine_miles(
+                float(ev_lat), float(ev_lng),
+                PARK_CITY_CENTER_LAT, PARK_CITY_CENTER_LNG
+            )
+            if dist > MAX_DISTANCE_MILES:
+                return None
+        except (TypeError, ValueError):
+            pass  # if lat/lng malformed, keep the event
 
     event = {
         "title": name,
