@@ -645,7 +645,22 @@ export default function CalendarClient() {
         if (ap==='PM'&&h!==12) h+=12; if (ap==='AM'&&h===12) h=0
         return `${d}T${String(h).padStart(2,'0')}${mn}00`
       }
-      const dtStart = toICSTime(dateStr, startTime), dtEnd = toICSTime(dateStr, endTime||startTime)
+      // If start_time is present but end_time is missing, default to start + 1 hour
+      // so the entry isn't a zero-duration blip in the user's calendar.
+      function toICSTimePlusHour(date: string, time: string) {
+        if (!date || !time) return null
+        const d = date.replace(/-/g,'')
+        const m = time.match(/(\d{1,2}):(\d{2})\s?(AM|PM)/i)
+        if (!m) return null
+        let h = parseInt(m[1]); const mn = m[2]; const ap = m[3].toUpperCase()
+        if (ap==='PM'&&h!==12) h+=12; if (ap==='AM'&&h===12) h=0
+        h = (h + 1) % 24
+        return `${d}T${String(h).padStart(2,'0')}${mn}00`
+      }
+      const dtStart = toICSTime(dateStr, startTime)
+      const dtEnd = endTime
+        ? toICSTime(dateStr, endTime)
+        : (startTime ? toICSTimePlusHour(dateStr, startTime) : null)
       const startLine = dtStart ? `DTSTART:${dtStart}` : `DTSTART;VALUE=DATE:${dateStr.replace(/-/g,'')}`
       const endLine = dtEnd ? `DTEND:${dtEnd}` : `DTEND;VALUE=DATE:${dateStr.replace(/-/g,'')}`
       return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Yoocal//EN','BEGIN:VEVENT',startLine,endLine,`DTSTAMP:${now}`,`SUMMARY:${safe(title)}`,`LOCATION:${safe(location)}`,`DESCRIPTION:${safe(description)}`,'END:VEVENT','END:VCALENDAR'].join('\r\n')
@@ -668,7 +683,22 @@ export default function CalendarClient() {
         if (ap==='PM'&&h!==12) h+=12; if (ap==='AM'&&h===12) h=0
         return `${date.replace(/-/g,'')}T${String(h).padStart(2,'0')}${mn}00`
       }
-      const gStart = toCalTime(dateStr, startTime), gEnd = startTime ? toCalTime(dateStr, endTime||startTime) : dateStr.replace(/-/g,'')
+      // If we have start_time but no end_time, default to start + 1 hour so the
+      // calendar entry isn't a zero-duration blip. If no start_time at all, it's
+      // an all-day event (date-only formatting).
+      function addHourToCalTime(date: string, time: string): string {
+        if (!date || !time) return date.replace(/-/g,'')
+        const m = time.match(/(\d{1,2}):(\d{2})\s?(AM|PM)/i)
+        if (!m) return date.replace(/-/g,'')
+        let h = parseInt(m[1]); const mn = m[2]; const ap = m[3].toUpperCase()
+        if (ap==='PM'&&h!==12) h+=12; if (ap==='AM'&&h===12) h=0
+        h = (h + 1) % 24  // wrap to 0 if event starts at 11 PM
+        return `${date.replace(/-/g,'')}T${String(h).padStart(2,'0')}${mn}00`
+      }
+      const gStart = toCalTime(dateStr, startTime)
+      const gEnd = startTime
+        ? (endTime ? toCalTime(dateStr, endTime) : addHourToCalTime(dateStr, startTime))
+        : dateStr.replace(/-/g,'')
       const googleLink = document.getElementById('atc-google') as HTMLAnchorElement
       if (googleLink) googleLink.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${gStart}/${gEnd}&location=${encodeURIComponent(location)}&details=${encodeURIComponent(description)}`
       const ics = makeICSContent(title, dateStr, startTime, endTime, location, description)
