@@ -20,6 +20,7 @@ import json
 import sys
 from datetime import datetime
 from pathlib import Path
+from jhiff_scraper import scrape_jhiff
 
 # Local imports
 try:
@@ -106,6 +107,13 @@ def main():
     print("=" * 60)
 
     all_events = []
+
+    # JHiFF — Jackson Hole International Film Festival screenings
+    try:
+        jhiff_events = scrape_jhiff()
+        all_events.extend(jhiff_events)
+    except Exception as ex:
+        print(f"  [JHiFF] scraper failed: {ex}")
     for cfg in TRIBE_EVENT_SOURCES:
         print(f"\n--- {cfg['source_name']} ---")
         try:
