@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import SiteNav from "@/components/SiteNav"
 import SiteFooter from "@/components/SiteFooter"
@@ -46,9 +46,45 @@ const CITIES: City[] = [
   },
 ]
 
+// ZIP -> city key. Small static map for the 4 live cities; expand as we grow.
+const ZIP_TO_CITY: Record<string, string> = {
+  // Park City + surrounding
+  "84060": "parkcity",
+  "84068": "parkcity",
+  "84098": "parkcity",
+  // Jackson Hole + Teton County
+  "83001": "jackson",
+  "83002": "jackson",
+  "83014": "jackson",
+  "83025": "jackson",
+  // Heber Valley
+  "84032": "heber",
+  "84049": "heber",
+  // Elkhart Lake
+  "53020": "elkhartlake",
+}
+
+// Aliases — typing these resolves to the matching city
+const ALIASES: Record<string, string> = {
+  "pc": "parkcity",
+  "park city ut": "parkcity",
+  "jh": "jackson",
+  "jackson wy": "jackson",
+  "midway": "heber",
+  "wasatch back": "heber",
+  "road america": "elkhartlake",
+}
+
+type SearchOption =
+  | { kind: "city"; city: City }
+  | { kind: "request"; rawQuery: string }
+
 export default function HomeBrand() {
   const router = useRouter()
   const [query, setQuery] = useState("")
+  const [open, setOpen] = useState(false)
+  const [activeIdx, setActiveIdx] = useState(0)
+  const wrapRef = useRef<HTMLDivElement>(null)
 
   function pickCity(key: string) {
     try {
@@ -59,20 +95,94 @@ export default function HomeBrand() {
     router.push(`/?city=${key}`)
   }
 
+  // Strip ", UT" or ", Wyoming" and similar suffixes for cleaner matching
+  function normalizeQuery(raw: string): string {
+    return raw
+      .toLowerCase()
+      .trim()
+      .replace(/,\s*[a-z .]+$/, "") // drop trailing state suffix
+      .replace(/\s+/g, " ")
+  }
+
+  function buildOptions(raw: string): SearchOption[] {
+    const trimmed = raw.trim()
+    if (!trimmed) return []
+
+    // ZIP shortcut: 5-digit -> direct city
+    const zipOnly = trimmed.match(/^\d{5}$/)
+    if (zipOnly) {
+      const k = ZIP_TO_CITY[trimmed]
+      if (k) {
+        const c = CITIES.find((x) => x.key === k)
+        if (c) return [{ kind: "city", city: c }]
+      }
+      // Unknown ZIP -> request
+      return [{ kind: "request", rawQuery: trimmed }]
+    }
+
+    const q = normalizeQuery(trimmed)
+
+    // Alias direct hit
+    if (ALIASES[q]) {
+      const c = CITIES.find((x) => x.key === ALIASES[q])
+      if (c) return [{ kind: "city", city: c }]
+    }
+
+    // Substring match against name + region + key
+    const matches = CITIES.filter((c) => {
+      const hay = `${c.name} ${c.region} ${c.key}`.toLowerCase()
+      return hay.includes(q)
+    })
+
+    const opts: SearchOption[] = matches.map((c) => ({ kind: "city", city: c }))
+    // Always offer a request fallback at the end so unknown queries route correctly
+    opts.push({ kind: "request", rawQuery: trimmed })
+    return opts
+  }
+
+  const options = buildOptions(query)
+  // Keep activeIdx in bounds when options change
+  useEffect(() => {
+    if (activeIdx >= options.length) setActiveIdx(0)
+  }, [options.length, activeIdx])
+
+  // Click outside to close dropdown
+  useEffect(() => {
+    function handler(e: MouseEvent) {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
+        setOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handler)
+    return () => document.removeEventListener("mousedown", handler)
+  }, [])
+
+  function chooseOption(opt: SearchOption) {
+    if (opt.kind === "city") {
+      pickCity(opt.city.key)
+    } else {
+      router.push(`/request-town?city=${encodeURIComponent(opt.rawQuery)}`)
+    }
+    setOpen(false)
+  }
+
   function handleSearch(e: React.FormEvent) {
     e.preventDefault()
-    const q = query.trim().toLowerCase()
-    if (!q) return
-    const match = CITIES.find(
-      (c) =>
-        c.name.toLowerCase().includes(q) ||
-        c.key.toLowerCase() === q ||
-        c.region.toLowerCase().includes(q),
-    )
-    if (match) {
-      pickCity(match.key)
-    } else {
-      router.push(`/request-town?city=${encodeURIComponent(query.trim())}`)
+    if (!query.trim()) return
+    const opt = options[activeIdx] ?? options[0]
+    if (opt) chooseOption(opt)
+  }
+
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (!open || options.length === 0) return
+    if (e.key === "ArrowDown") {
+      e.preventDefault()
+      setActiveIdx((i) => (i + 1) % options.length)
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault()
+      setActiveIdx((i) => (i - 1 + options.length) % options.length)
+    } else if (e.key === "Escape") {
+      setOpen(false)
     }
   }
 
@@ -93,17 +203,60 @@ export default function HomeBrand() {
             mountain communities. Free, updated daily for locals and visitors.
           </p>
 
-          <form className="hb-search" onSubmit={handleSearch}>
-            <span className="hb-search-icon">🔍</span>
-            <input
-              type="text"
-              placeholder="Search a city — Park City, Jackson Hole, your hometown…"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              autoFocus
-            />
-            <button type="submit">Go</button>
-          </form>
+          <div className="hb-search-wrap" ref={wrapRef}>
+            <form className="hb-search" onSubmit={handleSearch}>
+              <span className="hb-search-icon">🔍</span>
+              <input
+                type="text"
+                placeholder="Search a city, town, or ZIP — try 'Park City' or '84060'"
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value)
+                  setOpen(true)
+                  setActiveIdx(0)
+                }}
+                onFocus={() => setOpen(true)}
+                onKeyDown={handleKeyDown}
+                autoFocus
+              />
+              <button type="submit">Go</button>
+            </form>
+
+            {open && options.length > 0 && (
+              <ul className="hb-suggest" role="listbox">
+                {options.map((opt, i) => (
+                  <li
+                    key={opt.kind === "city" ? `c-${opt.city.key}` : `r-${i}`}
+                    role="option"
+                    aria-selected={i === activeIdx}
+                    className={i === activeIdx ? "active" : ""}
+                    onMouseEnter={() => setActiveIdx(i)}
+                    onMouseDown={(e) => {
+                      // mousedown so it fires before input blur closes the dropdown
+                      e.preventDefault()
+                      chooseOption(opt)
+                    }}
+                  >
+                    {opt.kind === "city" ? (
+                      <>
+                        <span className="hb-suggest-emoji">{opt.city.emoji}</span>
+                        <span className="hb-suggest-name">{opt.city.name}</span>
+                        <span className="hb-suggest-region">{opt.city.region}</span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="hb-suggest-emoji">📍</span>
+                        <span className="hb-suggest-name">
+                          Request <strong>{opt.rawQuery}</strong>
+                        </span>
+                        <span className="hb-suggest-region">Not in network yet</span>
+                      </>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
 
@@ -217,6 +370,37 @@ export default function HomeBrand() {
           cursor: pointer; transition: background 0.2s;
         }
         .hb-search button:hover { background: var(--purple-light); }
+
+        .hb-search-wrap { position: relative; max-width: 560px; margin: 0 auto; }
+        .hb-suggest {
+          position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+          background: white;
+          border: 1px solid var(--border);
+          border-radius: 14px;
+          box-shadow: 0 16px 40px rgba(14,10,38,0.18);
+          padding: 8px; margin: 0;
+          list-style: none;
+          z-index: 20;
+          text-align: left;
+          max-height: 320px; overflow-y: auto;
+        }
+        .hb-suggest li {
+          display: flex; align-items: center; gap: 12px;
+          padding: 10px 12px;
+          border-radius: 10px;
+          cursor: pointer;
+          font-size: 14px;
+          color: var(--text);
+        }
+        .hb-suggest li.active,
+        .hb-suggest li:hover {
+          background: rgba(83,74,183,0.08);
+        }
+        .hb-suggest-emoji { font-size: 20px; flex-shrink: 0; }
+        .hb-suggest-name { flex: 1; }
+        .hb-suggest-region {
+          font-size: 12px; color: var(--muted);
+        }
 
         .hb-content { max-width: 1100px; margin: 0 auto; padding: 80px 40px 120px; }
         .hb-section-label {
