@@ -427,6 +427,7 @@ def probe_playwright(domain, timeout_seconds=15):
         bases = [f"https://www.{domain}"]
 
     api_hits = []  # captured network URLs matching our patterns
+    dom_hits = []  # DOM selectors that matched event cards
     schema_event_count = 0
     visited_url = None
 
@@ -460,30 +461,65 @@ def probe_playwright(domain, timeout_seconds=15):
                         schema_event_count = html.count('"@type":"Event"') + html.count("'@type':'Event'")
                     except Exception:
                         pass
-                    if api_hits or schema_event_count >= 3:
+
+                    # DOM-scrape: look for common event-card selectors in the rendered page.
+                    # Many JS-rendered sites don't expose APIs we recognize but DO render
+                    # event cards into the DOM with predictable class names.
+                    try:
+                        dom_selectors = [
+                            ".tribe-events-calendar-list__event",
+                            ".tribe-events-calendar-day__event",
+                            ".tribe-events-loop .type-tribe_events",
+                            "[class*='event-card']",
+                            "[class*='event-item']",
+                            "[class*='EventCard']",
+                            "[data-event-id]",
+                            "article.event",
+                            "li.event",
+                            ".event-listing",
+                            ".calendar-event",
+                            "[itemtype*='Event']",
+                        ]
+                        for sel in dom_selectors:
+                            count = page.locator(sel).count()
+                            if count >= 5:
+                                dom_hits.append({"selector": sel, "count": count})
+                    except Exception:
+                        pass
+
+                    if api_hits or schema_event_count >= 3 or dom_hits:
                         break
-                if api_hits or schema_event_count >= 3:
+                if api_hits or schema_event_count >= 3 or dom_hits:
                     break
 
             browser.close()
     except Exception as e:
         return {"found": False, "error": f"playwright failed: {type(e).__name__}: {e}"}
 
-    if not api_hits and schema_event_count < 3:
+    if not api_hits and schema_event_count < 3 and not dom_hits:
         return {"found": False, "visited_url": visited_url}
 
     # Pick the most common API label as the primary hint
     label_counts = {}
     for h in api_hits:
         label_counts[h["label"]] = label_counts.get(h["label"], 0) + 1
-    primary_label = max(label_counts, key=label_counts.get) if label_counts else "schema-org-rendered"
+
+    if api_hits:
+        primary_label = max(label_counts, key=label_counts.get)
+    elif dom_hits:
+        primary_label = f"dom-scrape:{dom_hits[0]['selector']}"
+    else:
+        primary_label = "schema-org-rendered"
+
     sample_api_url = api_hits[0]["url"] if api_hits else None
+    best_dom_selector = max(dom_hits, key=lambda x: x["count"]) if dom_hits else None
 
     return {
         "found": True,
         "visited_url": visited_url,
         "schema_event_count_in_dom": schema_event_count,
         "api_calls_captured": len(api_hits),
+        "dom_selectors_matched": dom_hits,
         "primary_label": primary_label,
         "sample_api_url": sample_api_url,
         "scraper_config": {
@@ -492,9 +528,11 @@ def probe_playwright(domain, timeout_seconds=15):
             "args": {
                 "page_url": visited_url,
                 "api_url_pattern": sample_api_url,
+                "dom_selector": best_dom_selector["selector"] if best_dom_selector else None,
+                "dom_event_count": best_dom_selector["count"] if best_dom_selector else 0,
                 "primary_label": primary_label,
             },
-            "notes": "Last-resort scraper — needs custom adapter per `primary_label`.",
+            "notes": "Last-resort scraper — DOM-scrape if dom_selector set, network capture otherwise.",
         },
     }
 
@@ -638,7 +676,11 @@ def discover(city, max_domains=20):
             pw = probe_playwright(d)
             report["probes"]["playwright"] = pw
             if pw["found"]:
-                print(f"    playwright: FOUND label={pw['primary_label']!r}")
+                dom_info = ""
+                if pw.get("dom_selectors_matched"):
+                    sel = pw["dom_selectors_matched"][0]
+                    dom_info = f", DOM: {sel['count']} {sel['selector']!r}"
+                print(f"    playwright: FOUND label={pw['primary_label']!r}{dom_info}")
 
         # Rank: prefer sitemap (best signal), then tribe, then rss, then playwright
         if s["found"]:
