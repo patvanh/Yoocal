@@ -13,6 +13,8 @@ Output: events.json
 """
 
 import requests
+from schema_org_scraper import _extract_time_from_html
+from venue_lookup import lookup_venue_address
 import os
 from bs4 import BeautifulSoup
 import json
@@ -241,6 +243,25 @@ def scrape_visit_park_city():
                     event["recurrence"] = recurrence
                     event["recurrence_day"] = rec_days[0] if len(rec_days) == 1 else ""
                     event["recurrence_days"] = ",".join(rec_days) if len(rec_days) > 1 else ""
+
+                # Smart-API doesn't return times for many events. If we have a
+                # detail-page URL and no start_time yet, fetch the page and
+                # extract from visible HTML (e.g. "Time: 9:00 AM to 10:30 AM").
+                if not event.get("start_time") and event.get("link", "").startswith("http"):
+                    try:
+                        page_resp = requests.get(
+                            event["link"],
+                            headers={"User-Agent": "Mozilla/5.0 (Macintosh) Chrome/124.0"},
+                            timeout=10,
+                        )
+                        if page_resp.status_code == 200:
+                            st, et = _extract_time_from_html(page_resp.text)
+                            if st:
+                                event["start_time"] = st
+                                if et:
+                                    event["end_time"] = et
+                    except Exception:
+                        pass  # fail silently — no time worse than crash
 
                 events.append(event)
             except:
@@ -837,6 +858,15 @@ def scrape_park_record():
                 "is_free": is_free,
                 "scraped_at": datetime.now().isoformat()
             }
+
+            # Venue address lookup — Park Record only gives venue NAME,
+            # not address. Look up known PC venues for street address.
+            v_name, v_addr = lookup_venue_address(venue or "")
+            if v_name:
+                event["venue_name"] = v_name
+            if v_addr:
+                event["address"] = v_addr
+
             if start_time: event["start_time"] = start_time
             if end_time: event["end_time"] = end_time
             events.append(event)
