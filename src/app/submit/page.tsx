@@ -71,12 +71,52 @@ export default function SubmitEventPage() {
   return (
     <main style={{ paddingTop: 64, minHeight: '100vh', background: 'var(--bg, #faf9ff)' }}>
       <div style={{ maxWidth: 640, margin: '40px auto', padding: '0 24px 80px' }}>
+        {/* Chooser: event vs town request */}
+        <div style={{
+          display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12,
+          marginBottom: 32, padding: 6,
+          background: 'rgba(83,74,183,0.06)',
+          borderRadius: 16,
+        }}>
+          <div style={{
+            padding: '14px 18px',
+            background: 'white',
+            borderRadius: 12,
+            textAlign: 'center',
+            fontWeight: 600,
+            fontSize: 14,
+            color: '#1e1b3a',
+            boxShadow: '0 2px 6px rgba(83,74,183,0.08)',
+          }}>
+            📅 Submit an event
+          </div>
+          <a href="/request-town" style={{
+            padding: '14px 18px',
+            borderRadius: 12,
+            textAlign: 'center',
+            fontWeight: 600,
+            fontSize: 14,
+            color: '#6B7280',
+            textDecoration: 'none',
+            transition: 'background 0.15s',
+          }}
+          onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.6)'; }}
+          onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; }}
+          >
+            📍 Request a new town
+          </a>
+        </div>
+
         <h1 style={{ fontSize: 36, marginBottom: 8, color: '#1e1b3a', fontFamily: "'DM Serif Display', serif" }}>
           Submit an event
         </h1>
         <p style={{ color: '#6B7280', marginBottom: 32, fontSize: 16, lineHeight: 1.5 }}>
-          Know about a Park City, Heber Valley, or Elkhart Lake event we&apos;re missing?
-          Tell us about it. We&apos;ll review and add it within 24 hours.
+          Know about a Park City, Jackson Hole, Heber Valley, or Elkhart Lake
+          event we&apos;re missing? Tell us about it. We&apos;ll review and
+          add it within 24 hours. Want yoocal in a different city?{' '}
+          <a href="/request-town" style={{ color: 'var(--purple, #534AB7)', textDecoration: 'underline' }}>
+            Request your town
+          </a>.
         </p>
 
         {status === 'success' ? (
