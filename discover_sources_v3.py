@@ -338,6 +338,55 @@ def probe_rss(domain):
 # PROBE 3: WORDPRESS TRIBE EVENTS API
 # --------------------------------------------------------------
 
+
+
+def _validate_tribe_richness(events):
+    """
+    Score Tribe API events directly from their JSON fields, rather than
+    fetching each event's HTML page and looking for JSON-LD.
+
+    Tribe events come back with: id, title, start_date, end_date, venue,
+    description, url, etc. Quality is high if title + start_date + a venue
+    OR description are present, and the start date is in the future.
+    """
+    from datetime import datetime
+    today_iso = datetime.now().strftime("%Y-%m-%d")
+
+    if not events:
+        return {"quality_score": 0.0, "future_event_ratio": 0.0, "sample_count": 0, "issues": ["no events to score"]}
+
+    sampled = events[:5]  # score up to 5
+    total_score = 0
+    future_count = 0
+    issues = []
+
+    for e in sampled:
+        score = 0
+        if e.get("title"):
+            score += 1
+        # start_date in Tribe is usually "2026-05-20 18:00:00" or ISO format
+        sd = e.get("start_date") or ""
+        if sd and len(sd) >= 10:
+            score += 1
+            if sd[:10] >= today_iso:
+                future_count += 1
+        # Venue or description as the "richness" indicator
+        venue = e.get("venue") or {}
+        if (isinstance(venue, dict) and venue.get("venue")) or e.get("description"):
+            score += 1
+        total_score += score
+        if score < 2:
+            issues.append(f"thin event: {(e.get('title') or '?')[:40]}")
+
+    avg = total_score / len(sampled)
+    return {
+        "quality_score": round(avg, 2),
+        "future_event_ratio": round(future_count / len(sampled), 2),
+        "sample_count": len(sampled),
+        "issues": issues,
+    }
+
+
 def probe_wp_tribe(domain):
     """
     Try /wp-json/tribe/events/v1/events?per_page=1 with browser headers.
@@ -364,10 +413,28 @@ def probe_wp_tribe(domain):
         if not isinstance(data, dict) or "events" not in data:
             continue
         total = data.get("total") or len(data.get("events", []))
+
+        # Score richness directly from the API response (not from HTML pages).
+        # The Tribe API gives us all the fields we need to assess quality
+        # without an extra HTTP round-trip per event.
+        sample_events = []
+        try:
+            batch_url = f"{base}/wp-json/tribe/events/v1/events?per_page=5"
+            bcode, btext, _ = _fetch(batch_url, timeout=12, accept_json=True)
+            if bcode == 200 and btext:
+                bdata = json.loads(btext)
+                sample_events = bdata.get("events", []) or []
+        except Exception:
+            pass
+
+        richness = _validate_tribe_richness(sample_events)
+
         return {
             "found": True,
             "api_url": url,
             "total_events": total,
+            "richness": richness,
+            "estimated_future_events": int(total * richness.get("future_event_ratio", 0)),
             "scraper_config": {
                 "type": "wp_tribe_events_scraper",
                 "function": "scrape_wp_tribe_events",
@@ -691,8 +758,12 @@ def discover(city, max_domains=20):
             report["confidence"] = base_conf
             report["estimated_future_events"] = s.get("estimated_future_events", 0)
         elif t["found"]:
+            base_conf = "high"
+            if "richness" in t:
+                base_conf = _adjust_confidence_by_richness(base_conf, t["richness"])
             report["recommendation"] = t["scraper_config"]
-            report["confidence"] = "high"
+            report["confidence"] = base_conf
+            report["estimated_future_events"] = t.get("estimated_future_events", 0)
         elif r["found"]:
             base_conf = "medium"
             if "richness" in r:
