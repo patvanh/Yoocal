@@ -111,15 +111,7 @@ jobs:
             echo ""
             if [ -f audit_issues.json ]; then
               echo "### Quality audit summary"
-              python <<'PYEOF_SUMMARY'
-import json
-d = json.load(open("audit_issues.json"))
-for r in d.get("reports", []):
-    s1 = r["by_severity"].get(1, 0)
-    s2 = r["by_severity"].get(2, 0)
-    s3 = r["by_severity"].get(3, 0)
-    print(f"- **{r['city']}**: {r['total_events']} events, {r['total_issues']} issues (sev1: {s1}, sev2: {s2}, sev3: {s3})")
-PYEOF_SUMMARY
+              python audit_summary_for_github.py
               echo ""
             fi
             if [ -f public/events.json ]; then
