@@ -1,12 +1,18 @@
 import type { Metadata } from 'next'
-import CalendarClient from '@/components/CalendarClient'
+import HomeRouter from '@/components/HomeRouter'
+
+// HomeRouter reads query params and localStorage to decide which view
+// to render; can't be statically prerendered.
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Yoocal — Things To Do in Park City, Utah | Local Events Calendar',
-  description: 'Find everything happening in Park City, Utah — concerts, outdoor adventures, festivals, food events, races and more. One free calendar updated daily from every local source.',
+  title: 'Yoocal — Local events in scenic towns across the US',
+  description:
+    'One place for everything happening in scenic resort towns and mountain communities — concerts, festivals, races, outdoor adventures, and more. Free, updated daily.',
   openGraph: {
-    title: 'Yoocal — Things To Do in Park City, Utah',
-    description: 'One place for everything happening in Park City. Concerts, races, festivals, food events and more — updated daily. Free for locals and visitors.',
+    title: 'Yoocal — Local events in scenic towns',
+    description:
+      'One place for everything happening in scenic resort towns. Free, updated daily for locals and visitors alike.',
     url: 'https://www.yoocal.com',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
@@ -14,5 +20,5 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return <CalendarClient />
+  return <HomeRouter />
 }
