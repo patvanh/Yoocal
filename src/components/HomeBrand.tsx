@@ -314,7 +314,7 @@ export default function HomeBrand() {
         }
         .hb-hero {
           background: var(--dark);
-          padding: 140px 80px 90px;
+          padding: 140px 80px 200px;
           position: relative;
           overflow: hidden;
           text-align: center;
@@ -382,7 +382,7 @@ export default function HomeBrand() {
           list-style: none;
           z-index: 20;
           text-align: left;
-          max-height: 320px; overflow-y: auto;
+          max-height: 280px; overflow-y: auto;
         }
         .hb-suggest li {
           display: flex; align-items: center; gap: 12px;

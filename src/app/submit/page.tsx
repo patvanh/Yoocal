@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import SiteNav from '@/components/SiteNav';
+import SiteFooter from '@/components/SiteFooter';
 
 export default function SubmitEventPage() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -69,7 +71,9 @@ export default function SubmitEventPage() {
   }
 
   return (
-    <main style={{ paddingTop: 64, minHeight: '100vh', background: 'var(--bg, #faf9ff)' }}>
+    <>
+      <SiteNav />
+      <main style={{ paddingTop: 64, minHeight: '100vh', background: 'var(--bg, #faf9ff)' }}>
       <div style={{ maxWidth: 640, margin: '40px auto', padding: '0 24px 80px' }}>
         {/* Chooser: event vs town request */}
         <div style={{
@@ -308,6 +312,8 @@ export default function SubmitEventPage() {
         )}
       </div>
     </main>
+    <SiteFooter />
+    </>
   );
 }
 
