@@ -162,7 +162,13 @@ def audit_event(e: dict, today_iso: str) -> list[dict]:
             d1 = date.fromisoformat(date_val)
             d2 = date.fromisoformat(end_date)
             span_days = (d2 - d1).days + 1
-            if 1 < span_days <= 14:
+            # Late-night past-midnight events (e.g. 9 PM Thursday → 1 AM Friday)
+            # have span=1 but start_time is in the evening. Skip flagging these.
+            start_time = e.get("start_time") or ""
+            is_late_night = bool(re.match(r"(8|9|10|11):", start_time)) and ("PM" in start_time or "pm" in start_time)
+            if span_days == 2 and is_late_night:
+                pass  # Not actually multi-day — single late-night event
+            elif 1 < span_days <= 14:
                 issues.append({
                     "severity": 1,
                     "type": "multi_day_span",

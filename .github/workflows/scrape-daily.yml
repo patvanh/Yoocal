@@ -72,6 +72,22 @@ jobs:
           python jackson_scraper.py
           echo "::endgroup::"
 
+      - name: Auto-repair quality issues
+        id: auto_repair
+        continue-on-error: true
+        run: |
+          echo "::group::Event auto-repair"
+          python event_auto_repair.py
+          echo "::endgroup::"
+
+      - name: Run quality audit
+        id: audit
+        continue-on-error: true
+        run: |
+          echo "::group::Event quality audit"
+          python event_quality_audit.py
+          echo "::endgroup::"
+
       - name: Build run summary
         run: |
           PC="${{ steps.scrape_pc.outcome }}"
@@ -86,7 +102,23 @@ jobs:
             echo "| Park City | ${PC} |"
             echo "| Heber Valley | ${HEBER} |"
             echo "| Elkhart Lake | ${ELKHART} |"
+            echo "| Jackson Hole | ${{ steps.scrape_jackson.outcome }} |"
+            echo "| Auto-repair | ${{ steps.auto_repair.outcome }} |"
+            echo "| Quality audit | ${{ steps.audit.outcome }} |"
             echo ""
+            if [ -f audit_issues.json ]; then
+              echo "### Quality audit summary"
+              python <<'PYEOF_SUMMARY'
+import json
+d = json.load(open("audit_issues.json"))
+for r in d.get("reports", []):
+    s1 = r["by_severity"].get(1, 0)
+    s2 = r["by_severity"].get(2, 0)
+    s3 = r["by_severity"].get(3, 0)
+    print(f"- **{r['city']}**: {r['total_events']} events, {r['total_issues']} issues (sev1: {s1}, sev2: {s2}, sev3: {s3})")
+PYEOF_SUMMARY
+              echo ""
+            fi
             if [ -f public/events.json ]; then
               echo "- Park City events in JSON: $(python -c "import json; d=json.load(open('public/events.json')); print(len(d.get('events', d) if isinstance(d, dict) else d))")"
             fi
@@ -95,6 +127,9 @@ jobs:
             fi
             if [ -f public/events-elkhartlake.json ]; then
               echo "- Elkhart Lake events in JSON: $(python -c "import json; d=json.load(open('public/events-elkhartlake.json')); print(len(d.get('events', d) if isinstance(d, dict) else d))")"
+            fi
+            if [ -f public/events-jackson.json ]; then
+              echo "- Jackson Hole events in JSON: $(python -c "import json; d=json.load(open('public/events-jackson.json')); print(len(d.get('events', d) if isinstance(d, dict) else d))")"
             fi
           } >> "$GITHUB_STEP_SUMMARY"
 
@@ -106,7 +141,7 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git add public/events*.json
+          git add public/events*.json audit_issues.json repair_log.json
           if git diff --cached --quiet; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
