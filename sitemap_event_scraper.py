@@ -27,8 +27,13 @@ _DAY_NAMES = {
 
 
 def _clone_event_at_date(ev: dict, new_date: str) -> dict:
+    # IMPORTANT: stamp BOTH date and end_date to new_date so each per-day
+    # clone is self-contained. Inheriting the original range end_date causes
+    # the frontend visibility filter to re-render every clone on every day
+    # in the original range — compounding duplication.
     new_ev = dict(ev)
     new_ev["date"] = new_date
+    new_ev["end_date"] = new_date
     return new_ev
 
 
@@ -74,15 +79,11 @@ def _expand_event_dates(ev: dict, today: str) -> list:
         if instances:
             return instances
 
-    # Continuous multi-day (Restaurant Week)
-    if span_days <= 14:
-        instances = []
-        cur = start_d
-        while cur <= end_d:
-            instances.append(_clone_event_at_date(ev, cur.isoformat()))
-            cur += timedelta(days=1)
-        return instances
-
+    # Continuous multi-day events (Restaurant Week, festivals spanning days):
+    # Return ONE record with date=start, end_date=end. The frontend filter
+    # renders multi-day events on every day in range from a single record.
+    # Do NOT expand into per-day clones — that produces duplicates because
+    # clones inherit the original end_date, causing range-overlap rendering.
     return [ev]
 
 
