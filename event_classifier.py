@@ -21,7 +21,7 @@ import re
 
 
 CANONICAL_CATEGORIES = [
-    "Music", "Food & Drink", "Arts", "Theater", "Sports",
+    "Music", "Food & Drink", "Arts", "Theater", "Film", "Sports",
     "Outdoor", "Family", "Kids", "Wellness", "Education",
     "Festival", "Government", "Community",
 ]
@@ -53,7 +53,7 @@ LEGACY_MAP = {
     "food": "Food & Drink",
     "drink": "Food & Drink",
     "library": "Education",
-    "film": "Arts",
+    "film": "Film",
     "running": "Sports",
     "on site": "Music",
     "musical adventures": "Music",
@@ -82,6 +82,14 @@ CLASSIFIER_RULES: list[tuple[str, list[str]]] = [
     ]),
     ("Music", [
         r"\blive music\b", r"\bconcert\b", r"\bband\b(?!\s*camp)",
+        r"\bperformance at\b", r"\bguitar performance\b",
+        r"\bat .{0,20}park silly\b",
+        r"\bat .{0,15}lake deck\b",
+        r"\bat .{0,20}sunday market\b",
+        r"\bat the mangy moose\b",
+        r"\bat the wort\b", r"\bat silver dollar\b",
+        r"\bat the cowboy bar\b", r"\bat million dollar cowboy\b",
+        r"\bat the spur\b", r"\bat dornan'?s\b",
         r"\bdj\b", r"\bsongwriter\b", r"\bjam session\b",
         r"\borchestra\b", r"\bchamber music\b", r"\bsymphony\b",
         r"\bopera\b", r"\bjazz\b", r"\bbluegrass\b",
@@ -91,9 +99,17 @@ CLASSIFIER_RULES: list[tuple[str, list[str]]] = [
     ]),
     ("Theater", [
         r"\btheat(re|er)\b", r"\bmusical theatre?\b",
-        r"\bbroadway\b", r"\bshakespeare\b",
+        r"\bbroadway (musical|show|tour|production|hit|cast|revival|classic|favorite)\b", r"\bshakespeare\b",
         r"\bcomedy (show|night|tour)\b", r"\bstand-?up comedy\b",
         r"\bcabaret\b",
+    ]),
+    ("Film", [
+        r"\bfilm (fest|festival|series|night|screening|presents)\b",
+        r"\bfilm fest\b",
+        r"\bmovie (night|screening|series)\b",
+        r"\b(documentary|cinema|screening)\b",
+        r"\bsundance film\b",
+        r"\bshort films?\b",
     ]),
     ("Arts", [
         r"\b(art|fine art) (show|exhibit|opening|walk|class|workshop|festival)\b",
@@ -106,8 +122,12 @@ CLASSIFIER_RULES: list[tuple[str, list[str]]] = [
     ]),
     ("Food & Drink", [
         r"\bfarmers? market\b", r"\bfarmers? & artisans?\b",
-        r"\btasting\b", r"\bwine\s+(tasting|dinner|night|pairing)\b",
-        r"\bbeer\s+(fest|garden|tasting|night)\b",
+        r"\btasting\b", r"\bwines?\b",
+        r"\bbeer\b", r"\bbeer\s+(fest|garden|tasting|night)\b",
+        r"\bbrewfest\b", r"\bbrew fest\b",
+        r"\bshot ski\b", r"\bdistillery\b", r"\bspirits?\b",
+        r"\bsake\b", r"\bsangria\b", r"\bbloody mary\b",
+        r"\bhappy hour\b",
         r"\bsupper club\b", r"\bbrunch\b",
         r"\bbrewery (tour|tasting)\b",
         r"\bculinary\b", r"\bchef\b", r"\bfood truck\b",
@@ -141,6 +161,8 @@ CLASSIFIER_RULES: list[tuple[str, list[str]]] = [
         r"\bsnowshoe\b", r"\bski day\b",
         r"\bclimbing wall\b",
         r"\blakefront\b", r"\blakeside\b",
+        r"\bpark silly\b", r"\blake deck\b",
+        r"\bsunday market\b", r"\boutdoor market\b",
         r"\bopen[- ]air\b", r"\bstreet (festival|fair|party)\b",
         r"\bin the park\b",
         r"\bon the shore\b",
@@ -197,6 +219,11 @@ FACET_RULES: list[tuple[str, list[str]]] = [
     ("21+", [
         r"\b21\+\b", r"\b21 and (over|up|older)\b",
         r"\badults only\b", r"\bmust be 21\b",
+        r"\bwines?\b", r"\bbrewfest\b", r"\bbrew fest\b",
+        r"\bbeer (fest|garden|tasting|night)\b",
+        r"\bcocktail\b", r"\bmixology\b",
+        r"\bshot ski\b", r"\bdistillery\b",
+        r"\bsake (tasting|night|dinner)\b",
     ]),
     ("Drop-in", [
         r"\bdrop[- ]in\b", r"\bno (rsvp|registration|reservation) (required|needed)\b",

@@ -14,7 +14,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts"
       ],
       "end_date": "2026-07-15",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/11-1-_B32C9646-BE22-4793-8EE6746EB7F8C53E_b347b468-0f7c-abfa-0d2ae9dfe114fed5.jpg",
@@ -42,24 +42,6 @@
       "venue_name": "Virginian Saloon",
       "start_time": "6:00 PM",
       "end_time": "7:30 PM"
-    },
-    {
-      "title": "Jackson Hole Restaurant Week",
-      "date": "2026-05-19",
-      "description": "Jackson Hole Restaurant Week May 15\u201322, 2026 Savor the Best of Jackson Hole \u2014 One Delicious Day at a Time Get ready to dine your way through...",
-      "location": "30+ Restaurants around Jackson Hole, Jackson, WY, 83001",
-      "link": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
-      "source": "Jackson Hole Chamber of Commerce",
-      "source_url": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
-      "lat": 43.4799,
-      "lng": -110.7624,
-      "categories": [
-        "Community"
-      ],
-      "end_date": "2026-05-22",
-      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Restaurant-Week-_468E5AE9-C608-068B-A7AB5C7DCA667D98_4691724f-b547-ce7d-0bf55786ef489bb7.png",
-      "address": "Jackson, WY, 83001",
-      "venue_name": "30+ Restaurants around Jackson Hole"
     },
     {
       "title": "Raptor Adaptations: Masters of Survival",
@@ -132,7 +114,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Kids"
       ],
       "end_date": "2026-05-19",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/0-5_91115536-FC2F-1A5D-394799845CD96F94_911fec74-dbe8-4116-334a2e3ce923424f.jpg",
@@ -171,7 +153,6 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
         "Community"
       ],
       "end_date": "2026-05-23",
@@ -228,7 +209,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Arts",
+        "Family",
+        "Education"
       ],
       "end_date": "2026-06-01",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2024/05/Patrick-Dougherty_Spring-2025_web.png",
@@ -246,7 +229,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Family"
       ],
       "end_date": "2026-11-18",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/11/Chess-Club.png",
@@ -266,12 +249,14 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Kids",
+        "Family"
       ],
-      "end_date": "2030-12-31",
+      "end_date": null,
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2024/01/Piano3.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
-      "venue_name": "Center for the Arts"
+      "venue_name": "Center for the Arts",
+      "is_ongoing": true
     },
     {
       "title": "Visual Arts Classes",
@@ -284,12 +269,14 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Arts",
+        "Kids"
       ],
-      "end_date": "2030-12-31",
+      "end_date": null,
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2024/01/1920x1080-for-website-5.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
-      "venue_name": "Center for the Arts"
+      "venue_name": "Center for the Arts",
+      "is_ongoing": true
     },
     {
       "title": "Writing Classes and Workshops",
@@ -302,12 +289,13 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Community"
       ],
-      "end_date": "2030-12-31",
+      "end_date": null,
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/JH-Writers-conference-room.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
-      "venue_name": "Center for the Arts"
+      "venue_name": "Center for the Arts",
+      "is_ongoing": true
     },
     {
       "title": "Dance and Movement Classes",
@@ -320,12 +308,15 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Kids",
+        "Family",
+        "Education"
       ],
-      "end_date": "2030-12-31",
+      "end_date": null,
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2024/01/1920x1080-for-website-4.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
-      "venue_name": "Center for the Arts"
+      "venue_name": "Center for the Arts",
+      "is_ongoing": true
     },
     {
       "title": "Youth Art Programming",
@@ -338,12 +329,14 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Kids",
+        "Family"
       ],
-      "end_date": "2030-01-30",
+      "end_date": null,
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/01/Youth-Art-Classes-and-Camps.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
-      "venue_name": "Center for the Arts"
+      "venue_name": "Center for the Arts",
+      "is_ongoing": true
     },
     {
       "title": "Adult Art Programming",
@@ -358,10 +351,11 @@
       "categories": [
         "Arts"
       ],
-      "end_date": "2030-01-01",
+      "end_date": null,
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/01/Adult-Classes.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
-      "venue_name": "Center for the Arts"
+      "venue_name": "Center for the Arts",
+      "is_ongoing": true
     },
     {
       "title": "Bordando Esperanza \u2013 Embroidering Hope",
@@ -392,7 +386,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Community"
       ],
       "end_date": "2026-06-02",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/Rufous-tailed-hummingbird-at-a-torch-ginger-Osa-Peninsula-Costa-Rica-April-2023_website.png",
@@ -428,7 +422,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -464,7 +458,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-05-20",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -482,7 +478,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/05.21.26-CPR-identity_52886C79-D7AA-D611-51C56D6ED807054B_528caf80-c15a-91ea-fd8c07c3df2c8a9e.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -501,7 +497,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "end_date": "2026-05-21",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/FREE-LESSONS_F538953A-CFDC-A004-8AA667D7B7889D39_f5dabc3f-a60d-1c57-ea073e5ca518d08b.png",
@@ -520,7 +516,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/05.21.26-First-Aid-identity_F16FB3C0-01B1-7437-E9B371D9558C9A18_f1792cfe-0d3a-a34f-cad4d78ab83a2279.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -558,7 +554,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Old-West-Days-Chamber-Mixer_19A2A118-A299-2F38-015B7DEEB89A4525_19a49943-e27a-6e65-ccc96cf0d8cb8d94.png",
       "address": "175 E Broadway, Jackson, WY, 83001",
@@ -577,7 +573,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-05-21",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -595,7 +593,12 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Theater",
+        "Film",
+        "Food & Drink",
+        "Kids",
+        "Education",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/BFF2026JacksonHole1920x1080.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -614,7 +617,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -648,7 +651,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YMLF-Photo_868CA3BD-B9DB-11FE-7401B01BC51D2A33_86905495-9d31-bcab-42953c05f5dedb3b.png",
       "address": "25 N. Cache Street Jackon, WYOMING 83001, Jackson, WY, 83001",
@@ -667,7 +670,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Banner-Image-1-_478EE174-0868-E06B-9112B2446ED8C607_47aa8917-e306-288c-1524137a30ac27d8.png",
       "address": "25 N Cache St, Jackson, WY 83001",
@@ -705,7 +709,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Foster_Sneak_Peak-7_C77AC422-ED43-48F6-93A8365C253BD101_195fbbd9-fbf4-4889-818987f5da3c12ac.jpg",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
@@ -795,7 +799,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Poster---Festival-Fun-Facebook-Post-_CB81800D-0B06-B2B1-AF47F5D7C5DB7A31_cb93b5c5-d387-ecc3-abcc0b72622edd19.jpg",
       "address": "10 E Snow King, Jackson, WY, 83001",
@@ -814,7 +818,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Family"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/cowboy-kid-parade_EACA74CD-B8FC-327B-ACECECDD40D1BC4C_eae4ce47-e197-3577-2cee30e9b9e2222b.jpg",
       "address": "Jackson, WY, 83001",
@@ -852,14 +856,15 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
-      "end_date": "2026-09-19",
+      "end_date": null,
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Hovia-Edwards2_C4D10535-A915-A43D-B374984332EE2AA6_c533645c-93cc-0cd8-1c5fcd3d9fd2bfd1.jpg",
       "address": "Colter Bay Marina Rd, Moran, WY, 83013",
       "venue_name": "Colter Bay Amphitheater",
       "start_time": "8:00 PM",
-      "end_time": "9:00 PM"
+      "end_time": "9:00 PM",
+      "is_ongoing": true
     },
     {
       "title": "Old West Brewfest",
@@ -872,13 +877,16 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Food & Drink"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/20240525_122309_29E80E4F-D74B-2176-BCD5796CF0BBC1F2_29f4d881-f0c8-251c-b2599d6b35034153.jpg",
       "address": "390 W Karns Ave, Jackson , WY, 83001",
       "venue_name": "Community Fairgrounds Building",
       "start_time": "12:00 PM",
-      "end_time": "4:00 PM"
+      "end_time": "4:00 PM",
+      "facets": [
+        "21+"
+      ]
     },
     {
       "title": "Old West Days: Hands on History Weekend",
@@ -891,14 +899,18 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Family"
       ],
       "end_date": "2026-05-24",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/DSC06061_2BAA8CE3-A131-A71C-23CAA1BD1CC50B63_2c0cc582-ad1b-7944-b35116a66f07e07d.jpg",
       "address": "175 E Broadway, Jackson, WY, 83001",
       "venue_name": "Saturday & Sunday at History Jackson Hole",
       "start_time": "10:00 AM",
-      "end_time": "5:00 PM"
+      "end_time": "5:00 PM",
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Music Together Classes",
@@ -911,7 +923,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-05-23",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -929,7 +943,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "4:00 PM",
       "end_time": "10:00 PM",
@@ -946,7 +961,10 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music",
+        "Outdoor",
+        "Family",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Banner-Image-1-_4600F1F1-9B6D-F87F-390BD4BD2095D9F6_46195ea5-0394-c0d2-60161bade501e743.png",
       "address": "50 N. Glenwood Street, Jackson, WY, 83001-0",
@@ -1040,7 +1058,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-05-25",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -1077,7 +1097,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -1094,7 +1114,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/05.27.26-WFR-identity_F32CB4D1-C11A-C26D-172BB71A466D2C3A_f33082d0-f0b8-0f4b-544aa23cf73789c2.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -1113,7 +1133,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-05-27",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -1131,7 +1153,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/JHBF-Event-Image-CFTA.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -1149,8 +1171,7 @@
       "lat": 43.4925,
       "lng": -110.7438,
       "categories": [
-        "Arts",
-        "Community"
+        "Arts"
       ],
       "start_time": "5:00 PM",
       "end_time": "7:00 PM",
@@ -1169,7 +1190,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "end_date": "2026-05-28",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/FREE-LESSONS_F538953A-CFDC-A004-8AA667D7B7889D39_f5dabc3f-a60d-1c57-ea073e5ca518d08b.png",
@@ -1188,8 +1209,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Community"
+        "Theater",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/05/CFA-website-ad.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -1207,7 +1228,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-05-28",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -1225,7 +1248,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -1300,7 +1323,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/whale1-scaled_7769129E-DF7C-41FC-857D3D71CF153D6F_a9901eff-5cec-4203-8eda480b14b5d1d1.jpg",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
@@ -1319,8 +1342,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Community"
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/YOUR-BRAIN-ON-ART-4.png",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -1373,7 +1395,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Kids"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/22_TAT-8836_7781F33B-5FDE-4523-9BAB6AB35CCB3892_1c314906-87a4-453b-8f7b5ff425d3f731.jpg",
       "address": "105 Mercill Ave, Jackson, WY, 83001",
@@ -1392,7 +1415,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/947022f2-428e-4451-a0b7-701581805aa6-banner_5AB04156-691F-4BFE-B83964C88D17C1AF_f796cc16-775f-488a-bf6fb201310e37c3.jpg",
       "address": "5570 South Highway 89, Jackson, WY, 83001",
@@ -1430,7 +1453,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-05-30",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -1448,7 +1473,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Food & Drink"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Culinary-Crawl-Flyer_FAA89ACD-A358-4175-A217533CDAE4080A_bfdd2bd8-afd1-4d4b-9756045d811e2b25.png",
       "address": "200 West Broadway, Jackson, WY, 83001",
@@ -1487,7 +1512,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/03/Trey-Anastasio-Acoustic-2026-Josh-Weichman-e1773624911844.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -1525,7 +1551,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-01",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -1543,7 +1571,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -1600,7 +1628,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Kids"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/dustin-tramel-jXkeRL4k6-g-unsplash_93308987-F603-C791-1EAB9962B806CB14_934493dc-b89d-bc2b-1023dfb6d7afb2ab.jpg",
       "address": "170 N. Glenwood Street, Jackson, WY, 83001-1",
@@ -1619,7 +1647,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-03",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -1654,7 +1684,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/06.04.26-CPR-identity_529E463D-F8B8-72A8-07ABF07A024D3FE6_52a4e041-94d0-d6b5-2a2c2febf0bcaad6.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -1673,7 +1703,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/06.04.26-First-Aid-identity_F18956B7-B52E-6EC1-00B3C57164FB1BB6_f18cd84c-a676-a850-7e3d6d37c9f4485a.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -1692,7 +1722,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-04",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -1710,7 +1742,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/05/IMG_3104.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -1728,7 +1760,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -1765,7 +1797,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Outdoor",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/SnakeFest2026-_Draft2_E7DF48D7-C5CA-CC6E-8DB9F5033CC6EC86_e7df7161-ceef-9503-a0f0ad5f699b5968.png",
       "address": "Jackson, WY, 83002",
@@ -1784,7 +1817,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Outdoor",
+        "Festival"
       ],
       "end_date": "2026-06-07",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/SnakeFest2026_53FC9EA0-BFB5-EAE7-72ACAFA8998ADA70_54c4132c-e734-3163-d039b80c60c8c368.png",
@@ -1804,7 +1838,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/05/JHCS-1.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -1839,7 +1873,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Classroom_25009080-CC1E-C2B4-27A0C83586DE82EE_250e513c-c508-71f3-40bfb37f97fd1750.jpg",
       "address": "125 Virginian Ln, Jackson, WY, 83001-1",
@@ -1858,7 +1892,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/06.06.25-WFA-identity_F2D49944-F37C-4709-9450F20C1EA98AD2_f2d8a5a1-d1b5-a55e-4d1cd4f4730e7b41.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -1877,7 +1911,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-06",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -1895,11 +1931,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Events at the Center",
-        "Metropolitan Opera in HD",
-        "Community",
-        "Film"
+        "Music",
+        "Film",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/09/Met-Opera-Eugene.jpg",
       "address": "240 South Glenwood Street\nJackson, WY, 83001\nUnited States",
@@ -1918,7 +1952,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -1954,7 +1988,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-08",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -1972,13 +2008,14 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Kids"
       ],
       "end_date": "2026-10-13",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Screenshot-2026-04-16-110528_E856CCA0-F8E8-1281-17E4111E212047CE_e8595b08-0f50-508c-3c0bee475e778419.png",
       "address": "5450 W Hwy 22, Wilson, WY, 83014",
       "venue_name": "Teton Raptor Center",
-      "start_time": "11:00 AM"
+      "start_time": "11:00 AM",
+      "end_time": "11:30 AM"
     },
     {
       "title": "Nitty Gritty Dirt Band",
@@ -1991,7 +2028,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music"
       ],
       "end_date": "2026-06-10",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/01/Nitty-Gritty-Dirt-Band-by-Joshua-Britt-and-Neilson-Hubbard-F-scaled-e1769055838157.jpg",
@@ -2010,7 +2047,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -2066,12 +2103,14 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music",
+        "Theater"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Nitty-Gritty-Dirt-Band-by-Joshua-Britt-and-Neilson-Hubbard-F-2-_07BA4438-B07F-80FE-9666CF963DF0D0C7_07e0b381-a400-0316-5138b9f2852e9108.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
       "venue_name": "Center for the Arts",
-      "start_time": "8:00 PM"
+      "start_time": "8:00 PM",
+      "end_time": "9:00 PM"
     },
     {
       "title": "Music Together Classes",
@@ -2084,7 +2123,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-10",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -2102,7 +2143,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/06.11.26-CPR-identity_52B8D698-F9FE-C6F2-8FADAE312F240986_52bacae1-e8b3-a4ea-00745fc9c9beeb86.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -2140,7 +2181,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/06.11.26-First-Aid-identity_F19DD47C-9E42-B43C-1DE694352B719749_f1a0224f-b870-7beb-d9642a13f9a19b4a.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -2159,7 +2200,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-11",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -2177,7 +2220,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -2193,7 +2236,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -2245,7 +2288,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Sports",
+        "Education"
       ],
       "start_time": "7:00 AM",
       "end_time": "12:00 PM",
@@ -2281,7 +2325,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Plein_Air_Fest_2025-34-scaled_8468DDDF-F7C5-452B-AA7D91CEF2A768A0_d4d4e69d-5887-4d27-832636721ffba2d9.jpg",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
@@ -2300,7 +2345,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-13",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -2338,7 +2385,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-15",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -2356,7 +2405,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -2372,7 +2421,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/05/Save-the-Date-1920-x-1080-px.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -2390,7 +2439,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -2417,26 +2466,6 @@
       "end_time": "7:00 PM"
     },
     {
-      "title": "Teton Mudpots Summer Sale",
-      "date": "2026-06-17",
-      "description": "The Teton Mudpots Summer Sale and annual fundraiser for the Art Association of Jackson Hole takes place this June 17, 18 and 19, at 240 S Glenwood....",
-      "location": "Art Association of Jackson Hole, 240 S Glenwood, Jackson, WY, 83001-1",
-      "link": "https://www.jacksonholechamber.com/event/teton-mudpots-summer-sale/3556/",
-      "source": "Jackson Hole Chamber of Commerce",
-      "source_url": "https://www.jacksonholechamber.com/event/teton-mudpots-summer-sale/3556/",
-      "lat": 43.4799,
-      "lng": -110.7624,
-      "categories": [
-        "Community"
-      ],
-      "end_date": "2026-06-19",
-      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Teton-Mudpots-2026_64112442-DF45-6822-4D1500165412671B_6416409a-c8bc-1fc7-fcfa56467b74a29d.png",
-      "address": "240 S Glenwood, Jackson, WY, 83001-1",
-      "venue_name": "Art Association of Jackson Hole",
-      "start_time": "10:00 AM",
-      "end_time": "5:00 PM"
-    },
-    {
       "title": "The Center Presents: An Evening with Fran Lebowitz",
       "date": "2026-06-17",
       "description": "Join The Center for An Evening with Fran Lebowitz at The Center Theater! Fran Lebowitz In a cultural landscape filled with endless pundits and talking...",
@@ -2447,7 +2476,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Theater"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Fran-Lebowitz-Vienna-Gartenbaukino-_48B9D88A-C2DE-AA5E-0C796395F7BAF633_48bd21cc-0342-bda7-90387a4db3bd2f99.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -2465,7 +2494,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Wellness"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Massage-p_348D2F48-F895-FD8B-F3AB6B72E81DC135_349011c4-0508-6b2c-407b6fd549b53556.png",
       "address": "970 W Broadway, Suite 204, Jackson, WY, 83001",
@@ -2484,7 +2513,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-17",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -2502,7 +2533,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/03/Fran-Lebowitz-CREDIT-Bill-Hayes-1080-plz.jpeg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -2520,7 +2551,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -2594,7 +2625,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-18",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -2612,7 +2645,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -2647,7 +2680,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/2026-silent-disco-CFA.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -2665,7 +2698,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Outdoor",
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/slide-lake-symposium_0904589D-168B-4BE1-AD0B7084D8EAB00E_c7805422-69d4-4011-8dd7616832e4297a.jpg",
       "address": "945 W. Broadway, Jackson, WY, 83002",
@@ -2703,7 +2737,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-20",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -2741,7 +2777,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-22",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -2759,7 +2797,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -2812,7 +2850,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Kids"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/05/Event-Image.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -2830,7 +2868,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -2867,7 +2905,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-24",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -2885,7 +2925,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -2901,12 +2941,16 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Food & Drink",
+        "Festival"
       ],
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
       "end_date": "2026-06-27",
-      "image_url": "https://thecloudveil.com/wp-content/uploads/2022/05/Savor21-125.jpeg"
+      "image_url": "https://thecloudveil.com/wp-content/uploads/2022/05/Savor21-125.jpeg",
+      "facets": [
+        "21+"
+      ]
     },
     {
       "title": "Adult CPR / AED and Child CPR Course",
@@ -2919,7 +2963,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/06.25.26-CPR-identity_52CD3E11-0408-5B1C-9D15F615A1BBD816_52d57c1e-e391-d3f7-58c979b47830811e.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -2957,7 +3001,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/06.25.26-First-Aid-identity_F1AE2949-BFC9-AF7C-BE9B5783479B7093_f1b2a36d-086d-008b-023e738d0341e7f7.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -3015,7 +3059,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Food & Drink",
+        "Festival"
       ],
       "end_date": "2026-06-27",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/SF26_2_A158F7D2-0597-6F96-9A7FA1B8684007E5_a1617bb2-ac74-dc89-1769a8cd26a5b9c6.png",
@@ -3032,7 +3077,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-25",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -3050,7 +3097,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -3067,7 +3114,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/horizontal-flyer_AF64E687-0104-7EC0-9A8455BEA590A5F3_af745f70-e418-ed7e-336d21bb66690a7c.png",
       "address": "750 W Broadway, Jackson, WY, 83001",
@@ -3106,7 +3153,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -3122,7 +3169,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/06.27.26-WFA-identity_F2E7E68F-CB14-11A5-3ECC9D79C65DFCFF_f2f0fd55-c64a-6adb-1dc93dd03f564151.jpg",
       "address": "240 S Glenwood Street, Suite 124, Jackson, WY, 83001",
@@ -3141,7 +3188,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-27",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -3159,8 +3208,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Community"
+        "Music"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/02/062826-Center-Benefit-California-Honeydrops_digital-website-9.16.png",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -3179,7 +3227,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/02/AW-Provisions-26-12-13-13-scaled-e1772122803394.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -3197,8 +3245,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures",
-        "Community"
+        "Festival"
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
@@ -3237,7 +3284,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-06-29",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -3255,7 +3304,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Family",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -3272,7 +3322,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -3362,8 +3412,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Community"
+        "Music"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/01/Jakob-Dylan-16.9-2.png",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -3381,9 +3430,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures",
-        "Teton Valley Events",
-        "Community"
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -3402,7 +3449,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -3459,7 +3506,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-01",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -3477,9 +3526,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Outdoor Concerts",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/GTMF\u2014Opening-Night.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -3498,7 +3546,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "end_date": "2026-08-15",
       "image_url": "https://thecloudveil.com/wp-content/uploads/2022/05/960x640-38.webp"
@@ -3514,7 +3562,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "end_date": "2026-08-15",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/GTMFConcertJul4_2023__0893_D84E2181-0C86-0C8A-B119CBA0779CB216_d8603cb1-cc6c-71fc-dfe8943a9e21a30f.jpg",
@@ -3551,7 +3599,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Wellness"
       ],
       "end_date": "2026-07-02",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YOTT-_Margaux-Lee-1_07527AB7-2F81-4D91-9FBCEB02851B137E_d8fb2a1a-91b9-4774-839055d6b922555e.jpg",
@@ -3571,7 +3620,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-02",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -3589,8 +3640,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Family",
+        "Festival"
       ],
       "start_time": "10:45 AM",
       "end_time": "11:45 AM",
@@ -3609,11 +3660,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Outdoor Concerts",
-        "Events at the Center",
-        "Other Community Events",
-        "Community"
+        "Music",
+        "Family",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/GTMF\u2014Free-Family-Jam.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -3632,7 +3681,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -3669,8 +3718,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures",
-        "Community"
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
@@ -3689,10 +3737,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Outdoor Concerts",
-        "Events at the Center",
-        "Community"
+        "Music",
+        "Family",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/GTMF\u2014Patriotic-Pops.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -3711,7 +3758,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Family"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/INSTAGRAM-MEDIA-26_ED5F02D1-B311-006F-CFC99133553D206D_ed6710db-03c2-3647-db0f5cf76b886c5e.jpg",
       "address": "Jackson, WY, 83001",
@@ -3730,7 +3777,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-04",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -3748,7 +3797,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Festival"
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
@@ -3765,8 +3814,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
@@ -3785,14 +3834,18 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts",
-        "Community"
+        "Music",
+        "Family",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20240701-gtmf-on-the-road-190-scaled.jpg",
       "venue_name": "Murie Ranch",
-      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012"
+      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012",
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Gateway Series: The King's Singers",
@@ -3805,8 +3858,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Gateway Series",
-        "Community"
+        "Theater",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -3865,7 +3918,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-06",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -3883,7 +3938,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Theater",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/King-SIngers.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -3901,7 +3958,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Family",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -3918,9 +3976,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures",
-        "Teton Valley Events",
-        "Community"
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -3939,8 +3995,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Music",
+        "Family",
+        "Festival"
       ],
       "start_time": "5:00 PM",
       "end_time": "6:00 PM",
@@ -3959,8 +4016,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Teton House Concert Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "5:00 PM",
       "end_time": "7:00 PM",
@@ -3979,7 +4036,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -4016,7 +4073,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-08",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -4034,8 +4093,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Benoliel Chamber Music Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -4054,7 +4113,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/07.09.26-CPR-identity_DBB5CEAD-9422-CC99-4520781543AD2E1F_dbbc4d71-d8ec-a92f-9279ff3916be5674.jpg",
       "address": "Jackson, WY, 83001",
@@ -4073,7 +4132,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/07.09.26-First-Aid-identity_DCEEBBF3-F0F5-3F03-33E9DC2130CAAA1C_dceffc50-9e7b-2c15-62860d51dab27da8.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -4092,7 +4151,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Screen-Shot-2026-04-17-at-4.17.11-PM_A01C852D-16F8-4F79-BE6BD6E7C92AA488_c7dfa532-d15d-41a7-9614f54709c2d46f.png",
       "address": "58 N. Main Street, Victor, ID, 83455",
@@ -4131,7 +4190,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Wellness"
       ],
       "end_date": "2026-07-09",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YOTT-_Margaux-Lee-1_07527AB7-2F81-4D91-9FBCEB02851B137E_d8fb2a1a-91b9-4774-839055d6b922555e.jpg",
@@ -4151,7 +4211,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-09",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -4169,7 +4231,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Open Rehearsals"
+        "Music",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
@@ -4186,8 +4249,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -4206,7 +4269,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -4243,9 +4306,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts",
-        "Teton Valley Events",
-        "Community"
+        "Family",
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
@@ -4264,8 +4326,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
@@ -4284,7 +4346,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-11",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -4302,7 +4366,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Outdoor"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Screenshot-2026-01-07-at-12.47.47-PM_31BAD513-09FC-407C-A9169508FE251A57_3fa14984-6670-4fc1-b6efadb03909cecd.png",
       "address": "450 Aspen Leaf Drive, Big Sky, MT, 59716",
@@ -4321,7 +4385,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Festival"
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
@@ -4338,8 +4402,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "8:00 PM",
       "end_time": "10:00 PM",
@@ -4414,7 +4478,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-13",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -4432,7 +4498,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/03/dawes_2024_2-by_jon_churesized.jpeg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -4450,7 +4516,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Family",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -4467,8 +4534,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Teton House Concert Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "5:00 PM",
       "end_time": "7:00 PM",
@@ -4487,7 +4554,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -4503,7 +4570,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -4540,7 +4607,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Wellness"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Massage-p_349C2DEA-0CB3-0AF8-9D667D2B57B5A2F1_34a80ae1-b78b-83a0-ca54a2ae9d380e9a.png",
       "address": "970 W Broadway, Suite 204, Jackson, WY, 83001",
@@ -4559,7 +4626,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-15",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -4577,8 +4646,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Benoliel Chamber Music Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -4597,7 +4666,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -4651,7 +4720,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Wellness"
       ],
       "end_date": "2026-07-16",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YOTT-_Margaux-Lee-1_07527AB7-2F81-4D91-9FBCEB02851B137E_d8fb2a1a-91b9-4774-839055d6b922555e.jpg",
@@ -4671,7 +4741,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-16",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -4689,7 +4761,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Open Rehearsals"
+        "Music",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
@@ -4706,7 +4779,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events"
+        "Music",
+        "Theater",
+        "Festival"
       ],
       "start_time": "2:30 PM",
       "end_time": "3:30 PM",
@@ -4723,8 +4798,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -4743,7 +4818,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -4759,7 +4834,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -4776,7 +4851,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Family",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/BJW-Festival-12-x-5-in-_907AC0C5-9F0C-2DEB-8C6AE16AD4FA303F_90879eb9-bcc3-3151-bf7c554103e2b2db.png",
       "address": "200 N Willow St, Jackson, WY, 83001",
@@ -4815,8 +4891,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Scholarship Competition",
-        "Community"
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -4835,8 +4910,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
@@ -4855,7 +4930,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 PM",
@@ -4872,7 +4947,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/0K8A7582_A68AD048-A404-0233-9CF95F6E4FF9377E_a69b860d-9d06-d764-b8dac4c7a3077517.jpg",
       "address": "1200 Spring Gulch Road Mead Ranch, Jackson, WY, 83001",
@@ -4891,7 +4966,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-18",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -4909,8 +4986,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Scholarship Competition",
-        "Community"
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
@@ -4929,7 +5005,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 PM",
@@ -4946,7 +5022,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Festival"
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
@@ -4963,8 +5039,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
@@ -4983,9 +5059,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Teton Valley Events",
-        "Other Community Events",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
@@ -5004,7 +5079,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 PM",
@@ -5021,7 +5096,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/IMG_8657-photocredSTARLAGROVES-_3A22C189-FDAD-CBD8-854BDE68D0B3BC8C_65b000f8-0247-298f-f5d4d2735b94828c.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -5060,7 +5135,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-20",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -5078,7 +5155,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/11/IMG_9233photocredSTARLAGROVES-scaled-e1763029155835.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -5096,7 +5173,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Family",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -5113,7 +5191,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts"
+        "Music",
+        "Arts",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
@@ -5130,7 +5210,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 PM",
@@ -5147,7 +5227,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -5181,7 +5261,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/14_4EC8FDDF-A26F-DEBD-CF6E975019F24FC8_4ed1d5e8-0213-e2f7-aa89d3592b70de59.png",
       "address": "175 E Broadway Ave, Jackson, WY, 83001",
@@ -5200,8 +5280,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Family",
+        "Festival"
       ],
       "start_time": "10:45 AM",
       "end_time": "11:45 AM",
@@ -5220,8 +5300,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Family",
+        "Festival"
       ],
       "start_time": "12:00 PM",
       "end_time": "1:00 PM",
@@ -5240,7 +5320,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 PM",
@@ -5257,7 +5337,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -5273,7 +5353,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -5328,7 +5408,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-22",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -5346,7 +5428,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 PM",
@@ -5402,7 +5484,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Wellness"
       ],
       "end_date": "2026-07-23",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YOTT-_Margaux-Lee-1_07527AB7-2F81-4D91-9FBCEB02851B137E_d8fb2a1a-91b9-4774-839055d6b922555e.jpg",
@@ -5422,7 +5505,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-23",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -5440,13 +5525,19 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Theater",
+        "Food & Drink",
+        "Education"
       ],
       "end_date": "2026-07-24",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/05/Center-POB-Website.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
       "venue_name": "Center for the Arts",
-      "start_time": "7:00 PM"
+      "start_time": "7:00 PM",
+      "facets": [
+        "21+"
+      ]
     },
     {
       "title": "Music of the American West",
@@ -5459,8 +5550,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Outdoor Concerts",
-        "Community"
+        "Music",
+        "Food & Drink",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
@@ -5479,7 +5571,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 PM",
@@ -5496,7 +5588,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On Site"
+        "Community"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -5513,8 +5605,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Community"
+        "Arts"
       ],
       "end_date": "2026-07-26",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/01/Art-Fair-July.png",
@@ -5553,11 +5644,16 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts"
+        "Music",
+        "Family",
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/IMG_3717-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/IMG_3717-scaled.jpg",
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Fantasia 2026",
@@ -5570,8 +5666,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Outdoor Concerts",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "6:30 PM",
       "end_time": "7:30 PM",
@@ -5590,7 +5686,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 PM",
@@ -5626,7 +5722,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-25",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -5644,7 +5742,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/05/KHOL-2026-Vinyl-and-Style-CFA-event-image.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -5662,7 +5760,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 PM",
@@ -5679,7 +5777,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Festival"
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
@@ -5696,8 +5794,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
@@ -5716,14 +5814,17 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "5:30 PM",
       "end_time": "6:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20250717-gtmf-community-jam-289-1-scaled.jpg",
       "venue_name": "Center for the Arts Lawn",
-      "address": "265 S Cache Street, Jackson, WY, 83001"
+      "address": "265 S Cache Street, Jackson, WY, 83001",
+      "facets": [
+        "Drop-in"
+      ]
     },
     {
       "title": "Gateway Series: Punch Brothers",
@@ -5736,8 +5837,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Gateway Series",
-        "Community"
+        "Music",
+        "Theater",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -5776,7 +5878,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-27",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -5794,7 +5898,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Theater",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/Punch-Bros.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -5812,7 +5918,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Family",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -5829,8 +5936,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures",
-        "Teton Valley Events"
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -5847,8 +5953,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Teton House Concert Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "5:00 PM",
       "end_time": "7:00 PM",
@@ -5867,7 +5973,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -5921,7 +6027,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-29",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -5939,7 +6047,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events"
+        "Family",
+        "Festival"
       ],
       "start_time": "12:00 PM",
       "end_time": "1:00 PM",
@@ -5956,8 +6065,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts",
-        "Community"
+        "Festival"
       ],
       "start_time": "3:00 PM",
       "end_time": "4:00 PM",
@@ -5976,8 +6084,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Benoliel Chamber Music Series",
-        "Community"
+        "Music",
+        "Family",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -6035,7 +6144,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Wellness"
       ],
       "end_date": "2026-07-30",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YOTT-_Margaux-Lee-1_07527AB7-2F81-4D91-9FBCEB02851B137E_d8fb2a1a-91b9-4774-839055d6b922555e.jpg",
@@ -6055,7 +6165,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-07-30",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -6073,7 +6185,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Open Rehearsals"
+        "Music",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
@@ -6090,8 +6203,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -6110,7 +6223,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -6146,8 +6259,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Community"
+        "Music"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/02/3T3A3071-2426x1365-1-e1772080390452.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -6183,8 +6295,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
@@ -6203,8 +6315,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
@@ -6223,7 +6335,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -6239,7 +6351,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-01",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -6257,7 +6371,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music",
+        "Food & Drink"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Screen-Shot-2026-04-17-at-4.40.14-PM_E3CBBDCA-9F04-4674-B9B01E3E9EFC6B2C_434e368c-1aca-4016-8762add2d53e6a7d.png",
       "address": "58 N Main, Victor, ID, 83455",
@@ -6276,7 +6391,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Festival"
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
@@ -6293,7 +6408,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events"
+        "Music",
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
@@ -6310,14 +6426,19 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts",
-        "Community"
+        "Music",
+        "Food & Drink",
+        "Family",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20240701-gtmf-on-the-road-190-scaled.jpg",
       "venue_name": "Murie Ranch",
-      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012"
+      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012",
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Gateway Series: Give Our Regards to Broadway",
@@ -6330,8 +6451,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Gateway Series",
-        "Community"
+        "Theater",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -6370,7 +6491,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-03",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -6388,7 +6511,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Theater",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/04/GTMF\u2014Broadway.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -6406,7 +6530,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Family",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -6423,8 +6548,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures",
-        "Teton Valley Events"
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -6441,14 +6565,18 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Teton House Concert Series",
-        "Community"
+        "Music",
+        "Food & Drink",
+        "Festival"
       ],
       "start_time": "5:00 PM",
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert-Flute-in-Focus.png",
       "venue_name": "Private Home, Fall Creek Road",
-      "address": "Jackson, WY"
+      "address": "Jackson, WY",
+      "facets": [
+        "21+"
+      ]
     },
     {
       "title": "Slow Food in the Tetons People's Market",
@@ -6481,7 +6609,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-05",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -6499,8 +6629,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Festival"
       ],
       "start_time": "5:00 PM",
       "end_time": "6:00 PM",
@@ -6519,8 +6648,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Benoliel Chamber Music Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -6539,7 +6668,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -6555,7 +6684,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/08.06.26-CPR-identity_DC1FEF60-B12D-0357-09FCD10D7761CA6E_dc231075-0271-3817-543c5afee89d9c77.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -6574,8 +6703,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Community"
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/03/SBA-Speaker-Page-Williams-e1774303753171.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -6593,7 +6721,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/08.06.26-First-Aid-identity_DD062713-9FBC-E726-B29DB76E656EBA78_dd083d46-fe3c-a102-44d52cee9793f6a0.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -6612,7 +6740,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Screen-Shot-2026-04-17-at-4.43.43-PM_5C6DE021-80AD-4DDF-A9C2C7FB38794931_c1a19ab3-a96c-400c-9e901103e99e8da7.png",
       "address": "58 N Main, Victor, ID, 83455",
@@ -6669,7 +6797,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Wellness"
       ],
       "end_date": "2026-08-06",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YOTT-_Margaux-Lee-1_07527AB7-2F81-4D91-9FBCEB02851B137E_d8fb2a1a-91b9-4774-839055d6b922555e.jpg",
@@ -6689,7 +6818,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-06",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -6707,7 +6838,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Open Rehearsals"
+        "Music",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
@@ -6724,8 +6856,10 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Theater",
+        "Education",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -6764,9 +6898,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts",
-        "Teton Valley Events",
-        "Community"
+        "Theater",
+        "Family",
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
@@ -6785,8 +6919,10 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Theater",
+        "Education",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
@@ -6805,7 +6941,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-08",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -6823,7 +6961,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Festival"
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
@@ -6840,7 +6978,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events"
+        "Music",
+        "Festival"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
@@ -6877,7 +7016,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-10",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -6895,7 +7036,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures"
+        "Family",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -6912,8 +7054,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Music",
+        "Kids",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
@@ -6951,9 +7094,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Musical Adventures",
-        "Teton Valley Events",
-        "Community"
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
@@ -6992,8 +7133,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts",
-        "Community"
+        "Music",
+        "Food & Drink"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/02/SPBB_website.png",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -7011,7 +7152,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-12",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7029,8 +7172,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "On the Road Concerts",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "5:00 PM",
       "end_time": "6:00 PM",
@@ -7049,8 +7192,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Benoliel Chamber Music Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -7127,7 +7270,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Wellness"
       ],
       "end_date": "2026-08-13",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YOTT-_Margaux-Lee-1_07527AB7-2F81-4D91-9FBCEB02851B137E_d8fb2a1a-91b9-4774-839055d6b922555e.jpg",
@@ -7147,7 +7291,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-13",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7165,7 +7311,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Open Rehearsals"
+        "Music",
+        "Festival"
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
@@ -7182,8 +7329,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Other Community Events",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "6:30 PM",
       "end_time": "7:00 PM",
@@ -7202,8 +7349,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
@@ -7242,7 +7389,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Community"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/02/Little-Feat-scaled-e1770931416279.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -7260,8 +7407,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Festival\u00a0Orchestra Series",
-        "Community"
+        "Music",
+        "Festival"
       ],
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
@@ -7280,7 +7427,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-15",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7298,7 +7447,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -7352,7 +7501,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-17",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7390,7 +7541,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Wellness"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Massage-p_34B216FB-C273-795A-09672779027D9E50_34bd5d79-0a12-0a44-a780b4658b687366.png",
       "address": "970 W Broadway, Suite 204, Jackson, WY, 83001",
@@ -7409,7 +7560,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-19",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7427,7 +7580,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -7480,7 +7633,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Wellness"
       ],
       "end_date": "2026-08-20",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YOTT-_Margaux-Lee-1_07527AB7-2F81-4D91-9FBCEB02851B137E_d8fb2a1a-91b9-4774-839055d6b922555e.jpg",
@@ -7500,7 +7654,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-20",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7538,7 +7694,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -7572,7 +7728,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-22",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7590,7 +7748,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "start_time": "4:30 PM",
       "end_time": "9:00 PM"
@@ -7644,7 +7802,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-24",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7682,7 +7842,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-26",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7739,7 +7901,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Wellness"
       ],
       "end_date": "2026-08-27",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/YOTT-_Margaux-Lee-1_07527AB7-2F81-4D91-9FBCEB02851B137E_d8fb2a1a-91b9-4774-839055d6b922555e.jpg",
@@ -7759,7 +7922,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-27",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7797,7 +7962,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Food & Drink"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/05/Q1000968-Enhanced-NR-e1777663505455.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -7815,7 +7981,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-29",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7853,7 +8021,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-08-31",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -7891,7 +8061,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Kids",
+        "Family"
       ],
       "end_date": "2026-09-02",
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2025/01/Digi-Kiosk.png",
@@ -8009,7 +8181,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/DSC05189-1-_D5009263-A9FF-E717-C7790B40D8338ED4_d501954c-f105-20ad-be57132e4e8ed815.jpg",
       "address": "Jackson Hole, WY, 83001",
@@ -8048,7 +8221,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Western-Visions-Guests_D5546BF9-AAD5-89E0-924258DC7F8B6700_d5550ab7-ed8a-e56f-1bfc9a86d5705476.jpg",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
@@ -8065,8 +8239,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
+        "Music",
         "Arts",
-        "Community"
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/01/5.png",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8105,7 +8280,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/DSC05056-1-_D001237D-A581-32E7-B61FEF4813618426_d001ad13-9741-c1c2-704fb5bc629a605e.jpg",
       "venue_name": "Various gallery locations in Jackson Hole",
@@ -8162,7 +8337,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/09.17.26-CPR-identity_DC4644D5-0520-E3A1-4536FF1F082631C1_dc4e2248-e110-846f-b208537ee80a1e06.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8181,7 +8356,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/09.17.26-First-Aid-identity_DD236A7C-C9CF-A008-D54778C4A80108A7_dd251e16-c959-06ed-6b030c2fa484f31f.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8200,7 +8375,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Music"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/DSCF1526-1-_6E959075-E012-6520-0047F1C928C1CE8C_6ea8411b-b79e-a556-eabf0d374e58e521.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8239,7 +8414,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/20220915LRPhoto_141_5FD1C1D8-040C-BDAC-5FC2A38597CCF1A5_5fd4b74a-ff90-43dd-33067be142260cbb.jpg",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
@@ -8297,7 +8472,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Arts",
+        "Festival"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/03/All-Star-West-Cropped-for-CFA.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -8334,7 +8510,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/JH-Art-Auction_D1362E3C-B58E-E383-BB68A33A2C59D064_d13722a0-ffce-e39f-dde4b4cf294652b6.png",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8371,7 +8547,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Food & Drink",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/octfest24-28-2-_EA6453C2-DAA4-20A6-006DEE44D7E96555_ea64a6bc-d317-cddf-e521302103e93ba0.jpg",
       "address": "101 E Snow King, Jackson, WY, 83001",
@@ -8390,7 +8567,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Food & Drink",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/DSC05652_D0207063-E40F-422E-E2048A264D72A527_d020e9f0-b187-6b9a-6a1cbebf26db0bfb.jpg",
       "address": "Town of Jackson, Jackson, WY, 83001",
@@ -8509,7 +8687,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Music",
+        "Theater"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/03/big-thief-alexa-viscius-010-e1772556372786.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -8527,7 +8706,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/10.08.26-CPR-identity_DC76D91F-97F6-DC35-E025BE17DD3889B4_dc7f8e15-a874-5116-ad8523c78a9cf868.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8546,7 +8725,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/10.08.26-First-Aid-identity_DD3A82D6-E683-0B94-0B3C6F9D55D0657E_dd3dd6e8-084a-7212-d5af549e566ee06e.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8565,7 +8744,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/10.10.26-WFA-identity_DDD7B570-A462-E5F4-E2227147736EE3F3_dddcb707-9ec3-d3c8-e7d255aa667c3b7e.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8584,7 +8763,9 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Arts",
+        "Food & Drink",
+        "Family"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/01/6.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -8601,7 +8782,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/10.17.26-WFR-R-identity_DE95EAB6-E7DB-3531-8DD7E885EF9F9B31_de9f5d10-dcd6-03dc-8c7bf599a0e3eb04.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8620,7 +8801,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/BIOPOLYMERS2026-Conplus-Backdrop_ABF2B935-D0F1-587F-6591FFDC39E713F2_abf5ac56-b53e-bfa3-f0ffcadb9a62645d.jpg",
       "address": "Venice, Italy, Italy, VT, 30100",
@@ -8639,7 +8820,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/11.12.26-CPR-identity_DCA03A0A-F09C-CF18-5883FB2A0BC0F628_dca3eabe-9690-543d-617a7a053ff4b350.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8658,7 +8839,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/11.12.26-First-Aid-identity_DD542DF0-E685-27E4-D8EDD2400FBB5211_dd598a06-ffa1-88f5-c6c1fba7ad9d28fd.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8696,7 +8877,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/12.03.26-CPR-identity_DCC39752-04F5-EAA4-E19ED5EA9E0A361F_dcc6d0e8-026b-675e-85461469c9c6e29a.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8715,7 +8896,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/12.03.26-First-Aid-identity_DDAB356C-0843-A267-632B01227A8E5092_ddad51b4-0d32-3ea5-7f23f0fb5eeb7928.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8734,7 +8915,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Education"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/12.05.25-WFA-identity_DE1D09BB-F3FF-0241-C1D25DFE55058525_de2c8e4d-d9b4-ebd3-559a0a17b82a6b5d.jpg",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8772,7 +8953,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Arts"
+        "Arts",
+        "Food & Drink"
       ],
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/01/7.png",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
@@ -8829,7 +9011,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/IMG_8902_820AA68F-E03C-54EC-3A66D77CA6A1CA46_820b5022-bf78-a89b-9cbcb6bc1b81483b.jpg",
       "address": "Jackson Hole, WY, 83001",
@@ -8848,7 +9031,8 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/20220915LRPhoto_141_5FEE1F3C-CC45-CBED-7028CA29B30E844F_5ff39bf6-0bd5-fcf6-7c506200514355e7.jpg",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
@@ -8865,7 +9049,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Events-Calendar-Digital-Banner-1-_63144C85-F5CB-946D-E958EA54C4A6210F_631d7748-9282-ea0c-13b0312a626473c9.png",
       "address": "265 S Cache Street, Jackson, WY, 83001",
@@ -8884,7 +9068,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Art-Walks-Event-Banner_6D15462A-F764-DE72-680208835F54AD39_6d27585d-010a-c793-7991403ce5ecff3c.png",
       "venue_name": "Various gallery locations in Jackson Hole",
@@ -8940,7 +9124,7 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Arts"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/20220915LRPhoto_141_5FD1C1D8-040C-BDAC-5FC2A38597CCF1A5_5fd4b74a-ff90-43dd-33067be142260cbb.jpg",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
@@ -8995,32 +9179,14 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Food & Drink",
+        "Festival"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Mimosa_5E4D8114-EB58-F0A7-C6454EAD25B45E5D_5e518cb0-f9c7-d480-7d233d8b68654a12.jpg",
       "address": "Town of Jackson, Jackson, WY, 83001",
       "venue_name": "Various Galleries",
       "start_time": "11:00 AM",
       "end_time": "3:00 PM"
-    },
-    {
-      "title": "Old West Film Fest",
-      "date": "2026-05-18",
-      "description": "The Old West Film Fest is a community-driven celebration of classic Western cinema during Jackson Hole\u2019s Old West Days. Tickets are $10 per person,...",
-      "location": "860 S Highway 89, Jackson, WY 83001",
-      "link": "https://www.jacksonholechamber.com/event/old-west-film-fest/3386/",
-      "source": "Jackson Hole Chamber of Commerce",
-      "source_url": "https://www.jacksonholechamber.com/event/old-west-film-fest/3386/",
-      "lat": 43.4799,
-      "lng": -110.7624,
-      "categories": [
-        "Community"
-      ],
-      "end_date": "2026-05-18",
-      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/WFF-Event-image-header_B3646A3A-A3A3-D710-4B00362ADCB029C8_b3d371ed-acfd-2dba-8b6a2b135d1baafa.png",
-      "address": "860 S Highway 89, Jackson, WY 83001",
-      "venue_name": "Movieworks Cinema 4",
-      "start_time": "7:30 PM"
     },
     {
       "title": "Old West Film Fest",
@@ -9033,13 +9199,15 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Film",
+        "Festival"
       ],
       "end_date": "2026-05-19",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/WFF-Event-image-header_B3646A3A-A3A3-D710-4B00362ADCB029C8_b3d371ed-acfd-2dba-8b6a2b135d1baafa.png",
       "address": "860 S Highway 89, Jackson, WY 83001",
       "venue_name": "Movieworks Cinema 4",
-      "start_time": "7:30 PM"
+      "start_time": "7:30 PM",
+      "end_time": "9:30 PM"
     },
     {
       "title": "Old West Film Fest",
@@ -9052,13 +9220,154 @@
       "lat": 43.4799,
       "lng": -110.7624,
       "categories": [
-        "Community"
+        "Film",
+        "Festival"
       ],
       "end_date": "2026-05-20",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/WFF-Event-image-header_B3646A3A-A3A3-D710-4B00362ADCB029C8_b3d371ed-acfd-2dba-8b6a2b135d1baafa.png",
       "address": "860 S Highway 89, Jackson, WY 83001",
       "venue_name": "Movieworks Cinema 4",
-      "start_time": "7:30 PM"
+      "start_time": "7:30 PM",
+      "end_time": "9:30 PM"
+    },
+    {
+      "title": "Jackson Hole Restaurant Week",
+      "date": "2026-05-19",
+      "description": "Jackson Hole Restaurant Week May 15\u201322, 2026 Savor the Best of Jackson Hole \u2014 One Delicious Day at a Time Get ready to dine your way through...",
+      "location": "30+ Restaurants around Jackson Hole, Jackson, WY, 83001",
+      "link": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
+      "source": "Jackson Hole Chamber of Commerce",
+      "source_url": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
+      "lat": 43.4799,
+      "lng": -110.7624,
+      "categories": [
+        "Festival"
+      ],
+      "end_date": "2026-05-19",
+      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Restaurant-Week-_468E5AE9-C608-068B-A7AB5C7DCA667D98_4691724f-b547-ce7d-0bf55786ef489bb7.png",
+      "address": "Jackson, WY, 83001",
+      "venue_name": "30+ Restaurants around Jackson Hole",
+      "_repaired_from": "multi_day_split (was 2026-05-19 to 2026-05-22)"
+    },
+    {
+      "title": "Jackson Hole Restaurant Week",
+      "date": "2026-05-20",
+      "description": "Jackson Hole Restaurant Week May 15\u201322, 2026 Savor the Best of Jackson Hole \u2014 One Delicious Day at a Time Get ready to dine your way through...",
+      "location": "30+ Restaurants around Jackson Hole, Jackson, WY, 83001",
+      "link": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
+      "source": "Jackson Hole Chamber of Commerce",
+      "source_url": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
+      "lat": 43.4799,
+      "lng": -110.7624,
+      "categories": [
+        "Festival"
+      ],
+      "end_date": "2026-05-20",
+      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Restaurant-Week-_468E5AE9-C608-068B-A7AB5C7DCA667D98_4691724f-b547-ce7d-0bf55786ef489bb7.png",
+      "address": "Jackson, WY, 83001",
+      "venue_name": "30+ Restaurants around Jackson Hole",
+      "_repaired_from": "multi_day_split (was 2026-05-19 to 2026-05-22)"
+    },
+    {
+      "title": "Jackson Hole Restaurant Week",
+      "date": "2026-05-21",
+      "description": "Jackson Hole Restaurant Week May 15\u201322, 2026 Savor the Best of Jackson Hole \u2014 One Delicious Day at a Time Get ready to dine your way through...",
+      "location": "30+ Restaurants around Jackson Hole, Jackson, WY, 83001",
+      "link": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
+      "source": "Jackson Hole Chamber of Commerce",
+      "source_url": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
+      "lat": 43.4799,
+      "lng": -110.7624,
+      "categories": [
+        "Festival"
+      ],
+      "end_date": "2026-05-21",
+      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Restaurant-Week-_468E5AE9-C608-068B-A7AB5C7DCA667D98_4691724f-b547-ce7d-0bf55786ef489bb7.png",
+      "address": "Jackson, WY, 83001",
+      "venue_name": "30+ Restaurants around Jackson Hole",
+      "_repaired_from": "multi_day_split (was 2026-05-19 to 2026-05-22)"
+    },
+    {
+      "title": "Jackson Hole Restaurant Week",
+      "date": "2026-05-22",
+      "description": "Jackson Hole Restaurant Week May 15\u201322, 2026 Savor the Best of Jackson Hole \u2014 One Delicious Day at a Time Get ready to dine your way through...",
+      "location": "30+ Restaurants around Jackson Hole, Jackson, WY, 83001",
+      "link": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
+      "source": "Jackson Hole Chamber of Commerce",
+      "source_url": "https://www.jacksonholechamber.com/event/jackson-hole-restaurant-week/3337/",
+      "lat": 43.4799,
+      "lng": -110.7624,
+      "categories": [
+        "Festival"
+      ],
+      "end_date": "2026-05-22",
+      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Restaurant-Week-_468E5AE9-C608-068B-A7AB5C7DCA667D98_4691724f-b547-ce7d-0bf55786ef489bb7.png",
+      "address": "Jackson, WY, 83001",
+      "venue_name": "30+ Restaurants around Jackson Hole",
+      "_repaired_from": "multi_day_split (was 2026-05-19 to 2026-05-22)"
+    },
+    {
+      "title": "Teton Mudpots Summer Sale",
+      "date": "2026-06-17",
+      "description": "The Teton Mudpots Summer Sale and annual fundraiser for the Art Association of Jackson Hole takes place this June 17, 18 and 19, at 240 S Glenwood....",
+      "location": "Art Association of Jackson Hole, 240 S Glenwood, Jackson, WY, 83001-1",
+      "link": "https://www.jacksonholechamber.com/event/teton-mudpots-summer-sale/3556/",
+      "source": "Jackson Hole Chamber of Commerce",
+      "source_url": "https://www.jacksonholechamber.com/event/teton-mudpots-summer-sale/3556/",
+      "lat": 43.4799,
+      "lng": -110.7624,
+      "categories": [
+        "Community"
+      ],
+      "end_date": "2026-06-17",
+      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Teton-Mudpots-2026_64112442-DF45-6822-4D1500165412671B_6416409a-c8bc-1fc7-fcfa56467b74a29d.png",
+      "address": "240 S Glenwood, Jackson, WY, 83001-1",
+      "venue_name": "Art Association of Jackson Hole",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "_repaired_from": "multi_day_split (was 2026-06-17 to 2026-06-19)"
+    },
+    {
+      "title": "Teton Mudpots Summer Sale",
+      "date": "2026-06-18",
+      "description": "The Teton Mudpots Summer Sale and annual fundraiser for the Art Association of Jackson Hole takes place this June 17, 18 and 19, at 240 S Glenwood....",
+      "location": "Art Association of Jackson Hole, 240 S Glenwood, Jackson, WY, 83001-1",
+      "link": "https://www.jacksonholechamber.com/event/teton-mudpots-summer-sale/3556/",
+      "source": "Jackson Hole Chamber of Commerce",
+      "source_url": "https://www.jacksonholechamber.com/event/teton-mudpots-summer-sale/3556/",
+      "lat": 43.4799,
+      "lng": -110.7624,
+      "categories": [
+        "Community"
+      ],
+      "end_date": "2026-06-18",
+      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Teton-Mudpots-2026_64112442-DF45-6822-4D1500165412671B_6416409a-c8bc-1fc7-fcfa56467b74a29d.png",
+      "address": "240 S Glenwood, Jackson, WY, 83001-1",
+      "venue_name": "Art Association of Jackson Hole",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "_repaired_from": "multi_day_split (was 2026-06-17 to 2026-06-19)"
+    },
+    {
+      "title": "Teton Mudpots Summer Sale",
+      "date": "2026-06-19",
+      "description": "The Teton Mudpots Summer Sale and annual fundraiser for the Art Association of Jackson Hole takes place this June 17, 18 and 19, at 240 S Glenwood....",
+      "location": "Art Association of Jackson Hole, 240 S Glenwood, Jackson, WY, 83001-1",
+      "link": "https://www.jacksonholechamber.com/event/teton-mudpots-summer-sale/3556/",
+      "source": "Jackson Hole Chamber of Commerce",
+      "source_url": "https://www.jacksonholechamber.com/event/teton-mudpots-summer-sale/3556/",
+      "lat": 43.4799,
+      "lng": -110.7624,
+      "categories": [
+        "Community"
+      ],
+      "end_date": "2026-06-19",
+      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Teton-Mudpots-2026_64112442-DF45-6822-4D1500165412671B_6416409a-c8bc-1fc7-fcfa56467b74a29d.png",
+      "address": "240 S Glenwood, Jackson, WY, 83001-1",
+      "venue_name": "Art Association of Jackson Hole",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "_repaired_from": "multi_day_split (was 2026-06-17 to 2026-06-19)"
     }
   ]
 }

@@ -74,7 +74,8 @@
       "featured": true,
       "categories": [
         "Sports"
-      ]
+      ],
+      "end_time": "9:00 AM"
     },
     {
       "title": "WeatherTech Vintage Weekend with Brian Redman",
@@ -825,7 +826,6 @@
       "venue_name": "Elkhart Lake Depot & Village Square",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "categories": [
-        "Outdoor",
         "Food & Drink"
       ]
     },
@@ -836,8 +836,8 @@
       "venue_name": "Siebkens Resort",
       "description": "Annual motorcycle show at Siebkens during MotoAmerica weekend at Road America. Vintage and custom bikes on display.",
       "categories": [
-        "Sports",
-        "Music"
+        "Music",
+        "Sports"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -863,26 +863,7 @@
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/moto-america-road-america.avif",
       "categories": [
         "Sports",
-        "Festival",
         "Outdoor"
-      ]
-    },
-    {
-      "title": "WeatherTech Chicago Region SCCA June Sprints",
-      "date": "2026-06-05",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "The WeatherTech Chicago Region SCCA June Sprints return to Road America June 5-7, 2026. The June Sprints have been held every year at Road America since 1956. This year\u2019s runninig of the WeatherTech\u00ae Chicago Region SCCA June Sprints at Road America will feature everything from showroom stock to highly modified purpose-built race cars from eight distinct race groups. With Road America\u2019s park-like setting, trackside viewing, up-close access to drivers and teams, and legendary cuisine appealing to drivers and fans alike, it\u2019s no wonder the June Sprints remains one of the nation\u2019s premier amate...",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:43:03.232886",
-      "end_date": "2026-06-07",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/june_sprints_-_2025-8.avif",
-      "categories": [
-        "Sports"
       ]
     },
     {
@@ -894,7 +875,6 @@
       "description": "NTT IndyCar Series race weekend at Road America's historic 4-mile road course. The series' premier Wisconsin event.",
       "categories": [
         "Sports",
-        "Festival",
         "Education"
       ],
       "link": "https://www.elkhartlake.com/events/",
@@ -929,9 +909,8 @@
       "venue_name": "Elkhart Lake Lakefront & Fireman's Park",
       "description": "Annual Independence Day weekend fireworks over the lake plus the fireman's picnic. Family-friendly community tradition.",
       "categories": [
-        "Family",
-        "Festival",
-        "Outdoor"
+        "Outdoor",
+        "Family"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -968,7 +947,6 @@
       "venue_name": "Lake Street Cafe",
       "description": "Annual acoustic music festival featuring regional singer-songwriters and folk acts at Lake Street Cafe.",
       "categories": [
-        "Music",
         "Festival"
       ],
       "link": "https://www.elkhartlake.com/events/",
@@ -979,32 +957,12 @@
       "scraped_at": "2026-05-19T14:43:02.827711"
     },
     {
-      "title": "WeatherTech Vintage Weekend with Brian Redman",
-      "date": "2026-07-16",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "International Challenge presents the WeatherTech\u00ae Vintage Weekend with Brian Redman at Road America, taking place July 16-19, 2026, one of the largest vintage racing events in the United States. The WeatherTech\u00ae Vintage Weekend features over 400 vintage and historic racecars competing across several days. The WeatherTech Vintage Weekend presented by International Challenge is a premier vintage gathering featuring everything from the sights and sounds of the past 100 years of racing to a special Concours d\u2019Elegance on Friday and Saturday along the streets of Elkhart Lake. The 2026 event is a...",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:43:03.467694",
-      "end_date": "2026-07-19",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
-      "categories": [
-        "Sports",
-        "Festival"
-      ]
-    },
-    {
       "title": "Vintage Concours d'Elegance & Parade - Racecars",
       "date": "2026-07-17",
       "location": "Downtown Elkhart Lake, WI",
       "venue_name": "Downtown Elkhart Lake",
       "description": "Vintage racecar concours and parade through downtown Elkhart Lake during Vintage Weekend. Open to the public, free to attend.",
       "categories": [
-        "Sports",
         "Family"
       ],
       "link": "https://www.elkhartlake.com/events/",
@@ -1024,7 +982,7 @@
       "venue_name": "Downtown Elkhart Lake",
       "description": "Vintage sportscar concours in downtown Elkhart Lake. Classic cars on display throughout the village.",
       "categories": [
-        "Sports"
+        "Community"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -1051,8 +1009,7 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
       "categories": [
-        "Sports",
-        "Festival"
+        "Sports"
       ]
     },
     {
@@ -1062,7 +1019,6 @@
       "venue_name": "Downtown Elkhart Lake",
       "description": "Annual downtown street party in Elkhart Lake. Live music, food vendors, family activities.",
       "categories": [
-        "Festival",
         "Music",
         "Food & Drink",
         "Outdoor"
@@ -1117,7 +1073,6 @@
       "location": "Elkhart Lake, WI",
       "description": "Annual Elkhart Lake Oktoberfest celebration. German food, beer, music, and family activities downtown.",
       "categories": [
-        "Festival",
         "Food & Drink"
       ],
       "link": "https://www.elkhartlake.com/events/",
@@ -1142,8 +1097,7 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
       "categories": [
-        "Sports",
-        "Festival"
+        "Sports"
       ]
     },
     {
@@ -1154,9 +1108,7 @@
       "venue_name": "The Osthoff Resort",
       "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
       "categories": [
-        "Festival",
-        "Family",
-        "Food & Drink"
+        "Community"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -1742,7 +1694,10 @@
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/swine-pink-wine-e1777482456613.avif",
       "price": "$48",
       "categories": [
-        "Community"
+        "Food & Drink"
+      ],
+      "facets": [
+        "21+"
       ]
     },
     {
@@ -3300,24 +3255,6 @@
       ]
     },
     {
-      "title": "GT World Challenge America",
-      "date": "2026-08-28",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "The GT World Challenge America headlines an all-sportscar weekend at Road America August 28-30, 2026. In addition, the event will feature rounds for GT America powered by AWS, the Toyota Gazoo Racing North America GR Cup Series, Pirelli GT4 America, McLaren Trophy America and TC America powered by Skip Barber. This weekend of thrilling sportscar racing will bring exotic GT3, GT4, and Touring Car machinery from global luxury auto brands like Acura, Aston Martin, Audi, BMW, Ferrari, Lamborghini, McLaren, Mercedes-AMG, and Porsche to America\u2019s National Park of Speed in Elkhart Lake, Wisconsin....",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/gt-world-challenge-america/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:43:03.615875",
-      "end_date": "2026-08-30",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
-      "categories": [
-        "Sports"
-      ]
-    },
-    {
       "title": "Farmers & Artisans Market",
       "date": "2026-08-29",
       "start_time": "8:00 AM",
@@ -3572,6 +3509,9 @@
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/Facebook-Cover-Event-Header-Banner-Birthday-Party-Invitation-Invite.png",
       "categories": [
         "Food & Drink"
+      ],
+      "facets": [
+        "21+"
       ]
     },
     {
@@ -3952,6 +3892,9 @@
       "image_url": "https://osthoff.com/wp-content/uploads/SUMMER.jpg",
       "categories": [
         "Food & Drink"
+      ],
+      "facets": [
+        "21+"
       ]
     },
     {
@@ -4016,7 +3959,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Until-Dawn-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4032,7 +3976,10 @@
       "scraped_at": "2026-05-19T14:43:04.211270",
       "image_url": "https://osthoff.com/wp-content/uploads/PAELLA-scaled.png",
       "categories": [
-        "Community"
+        "Food & Drink"
+      ],
+      "facets": [
+        "21+"
       ]
     },
     {
@@ -4049,7 +3996,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Mark-Croft-Band-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4066,7 +4014,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Abler-McManus-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4083,7 +4032,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Abler-McManus-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4100,7 +4050,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_That-90s-Band-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4117,7 +4068,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Burgundy-Ties-Band-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4134,7 +4086,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Third-Wheels-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4151,7 +4104,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Rob-Anthony-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4168,7 +4122,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Abler-Boys-1-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4185,7 +4140,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Bazooka-Joe-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4202,7 +4158,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Fire-on-High-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4219,7 +4176,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Alex-Simmons_Jon-Prigge-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4236,7 +4194,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Jacob-Fannin-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4253,7 +4212,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Bowser-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4270,7 +4230,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Brent-Bel-the-Boys-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4287,7 +4248,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Wisco-Daddy-AKA-MCMANUS-DUO-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4304,7 +4266,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Abler-McManus-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4321,7 +4284,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Cold-Soda-Club-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4338,7 +4302,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Dirty-Boogie-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4355,7 +4320,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Gene-Gruber-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4372,7 +4338,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Sadie-Acoustic-Duo-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4389,7 +4356,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Bad-Habitz-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4406,7 +4374,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Breaking-Cadence-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4423,7 +4392,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Abler-Boys-1-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4440,7 +4410,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Tones-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4457,7 +4428,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Empty-Vees-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4474,7 +4446,8 @@
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Maddie-Jo-Band-scaled.png",
       "series": "The Osthoff Lake Deck",
       "categories": [
-        "Music"
+        "Music",
+        "Outdoor"
       ]
     },
     {
@@ -4489,6 +4462,196 @@
       "categories": [
         "Community"
       ]
+    },
+    {
+      "title": "WeatherTech Chicago Region SCCA June Sprints",
+      "date": "2026-06-05",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "The WeatherTech Chicago Region SCCA June Sprints return to Road America June 5-7, 2026. The June Sprints have been held every year at Road America since 1956. This year\u2019s runninig of the WeatherTech\u00ae Chicago Region SCCA June Sprints at Road America will feature everything from showroom stock to highly modified purpose-built race cars from eight distinct race groups. With Road America\u2019s park-like setting, trackside viewing, up-close access to drivers and teams, and legendary cuisine appealing to drivers and fans alike, it\u2019s no wonder the June Sprints remains one of the nation\u2019s premier amate...",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.232886",
+      "end_date": "2026-06-05",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/june_sprints_-_2025-8.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-06-05 to 2026-06-07)"
+    },
+    {
+      "title": "WeatherTech Chicago Region SCCA June Sprints",
+      "date": "2026-06-06",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "The WeatherTech Chicago Region SCCA June Sprints return to Road America June 5-7, 2026. The June Sprints have been held every year at Road America since 1956. This year\u2019s runninig of the WeatherTech\u00ae Chicago Region SCCA June Sprints at Road America will feature everything from showroom stock to highly modified purpose-built race cars from eight distinct race groups. With Road America\u2019s park-like setting, trackside viewing, up-close access to drivers and teams, and legendary cuisine appealing to drivers and fans alike, it\u2019s no wonder the June Sprints remains one of the nation\u2019s premier amate...",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.232886",
+      "end_date": "2026-06-06",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/june_sprints_-_2025-8.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-06-05 to 2026-06-07)"
+    },
+    {
+      "title": "WeatherTech Chicago Region SCCA June Sprints",
+      "date": "2026-06-07",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "The WeatherTech Chicago Region SCCA June Sprints return to Road America June 5-7, 2026. The June Sprints have been held every year at Road America since 1956. This year\u2019s runninig of the WeatherTech\u00ae Chicago Region SCCA June Sprints at Road America will feature everything from showroom stock to highly modified purpose-built race cars from eight distinct race groups. With Road America\u2019s park-like setting, trackside viewing, up-close access to drivers and teams, and legendary cuisine appealing to drivers and fans alike, it\u2019s no wonder the June Sprints remains one of the nation\u2019s premier amate...",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.232886",
+      "end_date": "2026-06-07",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/june_sprints_-_2025-8.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-06-05 to 2026-06-07)"
+    },
+    {
+      "title": "WeatherTech Vintage Weekend with Brian Redman",
+      "date": "2026-07-16",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "International Challenge presents the WeatherTech\u00ae Vintage Weekend with Brian Redman at Road America, taking place July 16-19, 2026, one of the largest vintage racing events in the United States. The WeatherTech\u00ae Vintage Weekend features over 400 vintage and historic racecars competing across several days. The WeatherTech Vintage Weekend presented by International Challenge is a premier vintage gathering featuring everything from the sights and sounds of the past 100 years of racing to a special Concours d\u2019Elegance on Friday and Saturday along the streets of Elkhart Lake. The 2026 event is a...",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.467694",
+      "end_date": "2026-07-16",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
+    },
+    {
+      "title": "WeatherTech Vintage Weekend with Brian Redman",
+      "date": "2026-07-17",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "International Challenge presents the WeatherTech\u00ae Vintage Weekend with Brian Redman at Road America, taking place July 16-19, 2026, one of the largest vintage racing events in the United States. The WeatherTech\u00ae Vintage Weekend features over 400 vintage and historic racecars competing across several days. The WeatherTech Vintage Weekend presented by International Challenge is a premier vintage gathering featuring everything from the sights and sounds of the past 100 years of racing to a special Concours d\u2019Elegance on Friday and Saturday along the streets of Elkhart Lake. The 2026 event is a...",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.467694",
+      "end_date": "2026-07-17",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
+    },
+    {
+      "title": "WeatherTech Vintage Weekend with Brian Redman",
+      "date": "2026-07-18",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "International Challenge presents the WeatherTech\u00ae Vintage Weekend with Brian Redman at Road America, taking place July 16-19, 2026, one of the largest vintage racing events in the United States. The WeatherTech\u00ae Vintage Weekend features over 400 vintage and historic racecars competing across several days. The WeatherTech Vintage Weekend presented by International Challenge is a premier vintage gathering featuring everything from the sights and sounds of the past 100 years of racing to a special Concours d\u2019Elegance on Friday and Saturday along the streets of Elkhart Lake. The 2026 event is a...",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.467694",
+      "end_date": "2026-07-18",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
+    },
+    {
+      "title": "WeatherTech Vintage Weekend with Brian Redman",
+      "date": "2026-07-19",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "International Challenge presents the WeatherTech\u00ae Vintage Weekend with Brian Redman at Road America, taking place July 16-19, 2026, one of the largest vintage racing events in the United States. The WeatherTech\u00ae Vintage Weekend features over 400 vintage and historic racecars competing across several days. The WeatherTech Vintage Weekend presented by International Challenge is a premier vintage gathering featuring everything from the sights and sounds of the past 100 years of racing to a special Concours d\u2019Elegance on Friday and Saturday along the streets of Elkhart Lake. The 2026 event is a...",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.467694",
+      "end_date": "2026-07-19",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
+    },
+    {
+      "title": "GT World Challenge America",
+      "date": "2026-08-28",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "The GT World Challenge America headlines an all-sportscar weekend at Road America August 28-30, 2026. In addition, the event will feature rounds for GT America powered by AWS, the Toyota Gazoo Racing North America GR Cup Series, Pirelli GT4 America, McLaren Trophy America and TC America powered by Skip Barber. This weekend of thrilling sportscar racing will bring exotic GT3, GT4, and Touring Car machinery from global luxury auto brands like Acura, Aston Martin, Audi, BMW, Ferrari, Lamborghini, McLaren, Mercedes-AMG, and Porsche to America\u2019s National Park of Speed in Elkhart Lake, Wisconsin....",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/gt-world-challenge-america/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.615875",
+      "end_date": "2026-08-28",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)"
+    },
+    {
+      "title": "GT World Challenge America",
+      "date": "2026-08-29",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "The GT World Challenge America headlines an all-sportscar weekend at Road America August 28-30, 2026. In addition, the event will feature rounds for GT America powered by AWS, the Toyota Gazoo Racing North America GR Cup Series, Pirelli GT4 America, McLaren Trophy America and TC America powered by Skip Barber. This weekend of thrilling sportscar racing will bring exotic GT3, GT4, and Touring Car machinery from global luxury auto brands like Acura, Aston Martin, Audi, BMW, Ferrari, Lamborghini, McLaren, Mercedes-AMG, and Porsche to America\u2019s National Park of Speed in Elkhart Lake, Wisconsin....",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/gt-world-challenge-america/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.615875",
+      "end_date": "2026-08-29",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)"
+    },
+    {
+      "title": "GT World Challenge America",
+      "date": "2026-08-30",
+      "start_time": "",
+      "end_time": "11:59 PM",
+      "description": "The GT World Challenge America headlines an all-sportscar weekend at Road America August 28-30, 2026. In addition, the event will feature rounds for GT America powered by AWS, the Toyota Gazoo Racing North America GR Cup Series, Pirelli GT4 America, McLaren Trophy America and TC America powered by Skip Barber. This weekend of thrilling sportscar racing will bring exotic GT3, GT4, and Touring Car machinery from global luxury auto brands like Acura, Aston Martin, Audi, BMW, Ferrari, Lamborghini, McLaren, Mercedes-AMG, and Porsche to America\u2019s National Park of Speed in Elkhart Lake, Wisconsin....",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/gt-world-challenge-america/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-05-19T14:43:03.615875",
+      "end_date": "2026-08-30",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
+      "categories": [
+        "Sports"
+      ],
+      "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)"
     }
   ]
 }

@@ -1,0 +1,280 @@
+{
+  "generated_at": "2026-05-19T17:22:38.172347",
+  "audit_date": "2026-05-19",
+  "reports": [
+    {
+      "city": "park-city",
+      "before_count": 1603,
+      "passes": {
+        "past_dates": {
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Running with Ed 2026",
+              "date": "2026-05-16"
+            }
+          ]
+        },
+        "absurd_spans": {
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Old Town walking tour",
+              "had_span": 85
+            }
+          ]
+        },
+        "multi_day_splits": {
+          "fixed": 4,
+          "examples": [
+            {
+              "title": "Chef Sarah Glover Weekend",
+              "original_span": "2026-07-11 to 2026-07-12",
+              "split_into": [
+                "2026-07-11",
+                "2026-07-12"
+              ]
+            },
+            {
+              "title": "Matilda & Gozney Weekend",
+              "original_span": "2026-07-18 to 2026-07-19",
+              "split_into": [
+                "2026-07-18",
+                "2026-07-19"
+              ]
+            },
+            {
+              "title": "Chef Ryan Arensdorf Weekend",
+              "original_span": "2026-08-01 to 2026-08-02",
+              "split_into": [
+                "2026-08-01",
+                "2026-08-02"
+              ]
+            },
+            {
+              "title": "Chef Ryan Arensdorf Weekend",
+              "original_span": "2026-08-08 to 2026-08-09",
+              "split_into": [
+                "2026-08-08",
+                "2026-08-09"
+              ]
+            }
+          ]
+        },
+        "missing_end_times": {
+          "fixed": 19,
+          "examples": [
+            {
+              "title": "HOMETOWN SHOW Jessie Ritter @ Jackson MO City Park Rock Garden",
+              "start_time": "6:00 PM",
+              "new_end_time": "8:00 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Concerts on the Slopes",
+              "start_time": "7:00 PM",
+              "new_end_time": "10:00 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "Haydn, Mendelssohn, & A Viola Concerto",
+              "start_time": "8:00 PM",
+              "new_end_time": "11:00 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "2026 Deer Valley Music Festival: Chicago the Musical In Concert",
+              "start_time": "7:30 PM",
+              "new_end_time": "10:30 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "Concerts on the Slopes",
+              "start_time": "7:00 PM",
+              "new_end_time": "10:00 PM",
+              "duration_hours": 3
+            }
+          ]
+        },
+        "classification": {
+          "fixed": 0,
+          "examples": []
+        }
+      },
+      "after_count": 1606,
+      "total_fixes": 25
+    },
+    {
+      "city": "elkhart-lake",
+      "before_count": 245,
+      "passes": {
+        "past_dates": {
+          "fixed": 0,
+          "examples": []
+        },
+        "absurd_spans": {
+          "fixed": 0,
+          "examples": []
+        },
+        "multi_day_splits": {
+          "fixed": 3,
+          "examples": [
+            {
+              "title": "WeatherTech Chicago Region SCCA June Sprints",
+              "original_span": "2026-06-05 to 2026-06-07",
+              "split_into": [
+                "2026-06-05",
+                "2026-06-06",
+                "2026-06-07"
+              ]
+            },
+            {
+              "title": "WeatherTech Vintage Weekend with Brian Redman",
+              "original_span": "2026-07-16 to 2026-07-19",
+              "split_into": [
+                "2026-07-16",
+                "2026-07-17",
+                "2026-07-18",
+                "2026-07-19"
+              ]
+            },
+            {
+              "title": "GT World Challenge America",
+              "original_span": "2026-08-28 to 2026-08-30",
+              "split_into": [
+                "2026-08-28",
+                "2026-08-29",
+                "2026-08-30"
+              ]
+            }
+          ]
+        },
+        "missing_end_times": {
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Cheese Capital Cup featuring Trans Am SpeedTour",
+              "start_time": "8:00 AM",
+              "new_end_time": "9:00 AM",
+              "duration_hours": 1
+            }
+          ]
+        },
+        "classification": {
+          "fixed": 0,
+          "examples": []
+        }
+      },
+      "after_count": 252,
+      "total_fixes": 4
+    },
+    {
+      "city": "heber",
+      "before_count": 339,
+      "passes": {
+        "past_dates": {
+          "fixed": 6,
+          "examples": [
+            {
+              "title": "Kamas Library Classic Cinema Series",
+              "date": "2026-05-18"
+            },
+            {
+              "title": "Meet the Cows - Dairy Farm Tour",
+              "date": "2026-05-18"
+            },
+            {
+              "title": "Public Works Week Backhoe Rodeo",
+              "date": "2026-05-18"
+            },
+            {
+              "title": "Monday Night Train @ Heber Valley Railroad",
+              "date": "2026-05-18"
+            },
+            {
+              "title": "Rocky Mountain Carver Roundup",
+              "date": "2026-05-18"
+            }
+          ]
+        },
+        "absurd_spans": {
+          "fixed": 0,
+          "examples": []
+        },
+        "multi_day_splits": {
+          "fixed": 0,
+          "examples": []
+        },
+        "missing_end_times": {
+          "fixed": 10,
+          "examples": [
+            {
+              "title": "Oakley Rodeo",
+              "start_time": "10:30 PM",
+              "new_end_time": "12:30 AM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Oakley Rodeo",
+              "start_time": "10:30 PM",
+              "new_end_time": "12:30 AM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Utah Marathon",
+              "start_time": "7:30 AM",
+              "new_end_time": "9:30 AM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Oakley Rodeo",
+              "start_time": "10:30 PM",
+              "new_end_time": "12:30 AM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Three Decades Tour",
+              "start_time": "7:00 PM",
+              "new_end_time": "8:00 PM",
+              "duration_hours": 1
+            }
+          ]
+        },
+        "classification": {
+          "fixed": 0,
+          "examples": []
+        }
+      },
+      "after_count": 333,
+      "total_fixes": 16
+    },
+    {
+      "city": "jackson",
+      "before_count": 489,
+      "passes": {
+        "past_dates": {
+          "fixed": 0,
+          "examples": []
+        },
+        "absurd_spans": {
+          "fixed": 0,
+          "examples": []
+        },
+        "multi_day_splits": {
+          "fixed": 0,
+          "examples": []
+        },
+        "missing_end_times": {
+          "fixed": 0,
+          "examples": []
+        },
+        "classification": {
+          "fixed": 0,
+          "examples": []
+        }
+      },
+      "after_count": 489,
+      "total_fixes": 0
+    }
+  ]
+}
