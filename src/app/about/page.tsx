@@ -82,7 +82,7 @@ export default function AboutYoocalPage() {
 
         <div className="cities-section">
           <div className="section-label">Cities</div>
-          <h2>Now live in two cities</h2>
+          <h2>Now live in four cities</h2>
           <p className="subtitle">
             With more on the way. Each city gets its own daily-updated
             calendar.
@@ -95,6 +95,28 @@ export default function AboutYoocalPage() {
                 <p>
                   Concerts, festivals, outdoor adventures, races and more —
                   updated daily from every local source.
+                </p>
+              </div>
+              <span className="city-badge live">Live</span>
+            </a>
+            <a href="/?city=jackson" className="city-card">
+              <div className="city-emoji">🦌</div>
+              <div className="city-info">
+                <h3>Jackson Hole, Wyoming</h3>
+                <p>
+                  Music festivals, chamber events, outdoor adventures, and
+                  everything happening in Teton County.
+                </p>
+              </div>
+              <span className="city-badge live">Live</span>
+            </a>
+            <a href="/?city=heber" className="city-card">
+              <div className="city-emoji">🏞️</div>
+              <div className="city-info">
+                <h3>Heber Valley, Utah</h3>
+                <p>
+                  Rodeos, fairs, train rides, and small-town events from
+                  Heber, Midway, and the surrounding Wasatch Back.
                 </p>
               </div>
               <span className="city-badge live">Live</span>
@@ -114,14 +136,6 @@ export default function AboutYoocalPage() {
               <div className="city-emoji">🏔️</div>
               <div className="city-info">
                 <h3>Aspen, Colorado</h3>
-                <p>Coming soon.</p>
-              </div>
-              <span className="city-badge soon">Coming soon</span>
-            </div>
-            <div className="city-card coming-soon">
-              <div className="city-emoji">🦌</div>
-              <div className="city-info">
-                <h3>Jackson Hole, Wyoming</h3>
                 <p>Coming soon.</p>
               </div>
               <span className="city-badge soon">Coming soon</span>
@@ -175,10 +189,16 @@ export default function AboutYoocalPage() {
           <p>Pick your city and start exploring — it&apos;s free, always.</p>
           <div className="cta-actions">
             <a href="/?city=parkcity" className="cta-btn">
-              Park City events →
+              Park City →
+            </a>
+            <a href="/?city=jackson" className="cta-btn secondary">
+              Jackson Hole →
+            </a>
+            <a href="/?city=heber" className="cta-btn secondary">
+              Heber Valley →
             </a>
             <a href="/?city=elkhartlake" className="cta-btn secondary">
-              Elkhart Lake events →
+              Elkhart Lake →
             </a>
           </div>
         </div>
