@@ -1003,110 +1003,156 @@ ARTICLE:
 # ─────────────────────────────────────────────
 # HANDLE RECURRING EVENTS
 # ─────────────────────────────────────────────
-def handle_recurring(events):
-    today = datetime.now().strftime("%Y-%m-%d")
-    end_of_year = "2026-12-31"
 
-    RECURRING = {
-        "fascia rolling class": {
-            "recurrence": "weekly", "day": "Monday",
-            "start": today, "end": "2026-10-31",
-            "description": "Weekly fascia rolling wellness class every Monday at Rise Dental Wellness."
-        },
-        "group fitness classes": {
-            "recurrence": "daily",
-            "start": today, "end": end_of_year,
-            "description": "Daily group fitness classes at Park City Municipal Athletic & Recreation Center."
-        },
-        "plunj park city": {
-            "recurrence": "daily",
-            "start": today, "end": end_of_year,
-            "description": "Cold plunge and wellness experience open daily at PLUNJ Park City."
-        },
-        "progressive art experience": {
-            "recurrence": "daily",
-            "start": today, "end": end_of_year,
-            "description": "Ongoing rotating art experience at Park City Fine Art on Main Street."
-        },
-        "last friday gallery stroll": {
-            "recurrence": "monthly_last_friday",
-            "start": today, "end": end_of_year,
-            "description": "Monthly gallery stroll on the last Friday of each month on Main Street."
-        },
-        "park silly sunday market": {
-            "recurrence": "weekly", "day": "Sunday",
-            "start": "2026-06-14", "end": "2026-09-27",
-            "description": "Weekly outdoor market every Sunday. Local vendors, food, and live music."
-        },
-        "deer creek express": {
-            "recurrence": "weekly_multiple", "days": ["Monday","Thursday","Friday","Saturday"],
-            "start": "2026-05-11", "end": "2026-10-31",
-            "description": "Scenic train ride through Heber Valley. Runs Monday, Thursday, Friday & Saturday through October."
-        },
-        "website is live selling gift boxes": {
-            "recurrence": "daily",
-            "start": today, "end": end_of_year,
-            "description": "Local artisan gift boxes available online and in-store at Maker Union."
-        },
-    }
 
-    for event in events:
-        title_key = event["title"].lower().strip()
-        for key, info in RECURRING.items():
-            if key in title_key:
-                event["date"] = info["start"]
-                event["end_date"] = info["end"]
-                event["recurrence"] = info.get("recurrence", "")
-                event["recurrence_day"] = info.get("day", "")
-                event["recurrence_days"] = ",".join(info.get("days", []))
-                if info.get("description"):
-                    event["description"] = info["description"]
-                break
+SOURCE_PRIORITY = {
+    "Deer Valley Resort": 0,
+    "Deer Valley Music Festival": 1,
+    "Mountain Trails Foundation": 2,
+    "Park City Opera": 3,
+    "Park City Institute": 4,
+    "Mountain Town Music": 5,
+    "The Park Record": 6,
+    "KPCW Community Calendar": 7,
+    "Park Silly Sunday Market": 8,
+    "Park City Annual Events": 8,
+    "Park City Farmers Market": 8,
+    "Park City Song Summit": 8,
+    "Park City Gallery Association": 8,
+    "Visit Park City (sitemap)": 9,
+    "Google Events": 10,
+    "RunSignup": 11,
+    "Salt Lake Running Co": 12,
+    "Running in the USA": 13,
+    "Visit Park City": 14,
+}
 
-    return events
+
+def _pc_richness_score(e):
+    """Lower score = better record. Used to order dedup groups so the
+    richest record wins as the merge base."""
+    score = 0
+    d = e.get("date") or ""
+    if d and d != "See website" and d[:4].isdigit():
+        score -= 4
+    if e.get("start_time"):
+        score -= 2
+    if e.get("address"):
+        score -= 2
+    if e.get("description"):
+        score -= 1
+    if e.get("image_url"):
+        score -= 1
+    if e.get("end_time"):
+        score -= 1
+    return score
+
+
+def _pc_norm_title(title: str) -> str:
+    """Normalize a title for dedup matching. Strips leading punctuation,
+    subtitles after colons, trailing 'with/featuring/special guest', dashes."""
+    t = re.sub(r"\s+", " ", (title or "").lower().strip())
+    t = re.sub(r"^[\(\"\'\-\s]+", "", t)
+    # Drop "with/featuring/special guest" tails
+    t = re.sub(
+        r"\s*(-|\u2014|\u2013|\bwith\b|\bfeaturing\b|\bft\.?\b|\bpresented by\b|\bspecial guest\b).*$",
+        "", t,
+    ).strip()
+    # Drop subtitle after colon
+    if ":" in t:
+        t = t.split(":")[0].strip()
+    return t[:35]
+
+
+def _pc_merge_records(records: list) -> dict:
+    """Merge a group of records (all same date + normalized title) into one
+    enriched record. Strategy:
+      - Base = highest-priority source + richest data
+      - Title: prefer the longest non-redundant title
+      - Description: longest
+      - venue_name / address / location: longest non-empty
+      - image_url / end_time: first non-empty from richness order
+      - categories: union (preserve order)
+      - link: best source's link
+    """
+    records.sort(key=lambda e: (SOURCE_PRIORITY.get(e.get("source", ""), 99), _pc_richness_score(e)))
+    base = records[0]
+    merged = dict(base)
+
+    # Title: longest from records (more context preferred — e.g. include "at Drift" suffix)
+    titles = [r.get("title") for r in records if r.get("title")]
+    if titles:
+        titles.sort(key=lambda t: (-len(t), t))
+        merged["title"] = titles[0]
+
+    # Description: longest
+    descs = [r.get("description") or "" for r in records]
+    descs.sort(key=lambda d: -len(d))
+    if descs and descs[0]:
+        merged["description"] = descs[0]
+
+    # Image: first non-empty walking richness order
+    for r in records:
+        if r.get("image_url"):
+            merged["image_url"] = r["image_url"]
+            break
+
+    # End time: first non-empty
+    for r in records:
+        if r.get("end_time"):
+            merged["end_time"] = r["end_time"]
+            break
+
+    # Venue / address / location: longest non-empty
+    for field in ("venue_name", "address", "location"):
+        candidates = [r.get(field) for r in records if r.get(field)]
+        candidates.sort(key=lambda v: -len(v))
+        if candidates:
+            merged[field] = candidates[0]
+
+    # Categories: union preserving order
+    cats: list = []
+    for r in records:
+        for c in r.get("categories") or []:
+            if c not in cats:
+                cats.append(c)
+    if cats:
+        merged["categories"] = cats
+
+    # Facets: union
+    facets = set()
+    for r in records:
+        for f in r.get("facets") or []:
+            facets.add(f)
+    if facets:
+        merged["facets"] = sorted(facets)
+
+    return merged
 
 
 def deduplicate(events):
-    # Sort so Park Record comes first — it has times, prefer it over VPC
-    source_priority = {"Deer Valley Resort": 0, "Deer Valley Music Festival": 1, "Mountain Trails Foundation": 2, "Park City Opera": 3, "Park City Institute": 4, "Mountain Town Music": 5, "The Park Record": 6, "KPCW Community Calendar": 7, "Visit Park City (sitemap)": 8, "Google Events": 9, "RunSignup": 10, "Salt Lake Running Co": 11, "Running in the USA": 12, "Visit Park City": 13}
-    # Sort by source priority, then by data richness (real date + start_time + address)
-    # so well-populated events beat placeholder-only ones from same source
-    def _richness_score(e):
-        score = 0
-        d = e.get("date") or ""
-        if d and d != "See website" and d[:4].isdigit():
-            score -= 4  # real date wins big
-        if e.get("start_time"):
-            score -= 2
-        if e.get("address"):
-            score -= 2
-        if e.get("description"):
-            score -= 1
-        return score
-
-    events.sort(key=lambda e: (source_priority.get(e.get("source", ""), 99), _richness_score(e)))
-
-    seen = set()
-    unique = []
+    """Merge-aware dedup for Park City. Groups by (date, normalized_title)
+    and consolidates duplicate records into one enriched entry."""
+    groups: dict = {}
     for e in events:
-        title = re.sub(r'\s+', ' ', e["title"].lower().strip())[:40]
-        # Strip leading punctuation like quotes/parens
-        title_clean = re.sub(r'^[\(\"\'\-\s]+', '', title)[:35]
-        # Also try without subtitle (before colon) for broader matching
-        title_no_sub = title_clean.split(':')[0].strip()[:30]
-        # 'Loose' key: strip everything after ' with ', ' featuring ', dash/em-dash etc
-        # This catches "Allen Stone" vs "Allen Stone with Special Guest Wyatt Pike"
-        # and "Country Weekend - Walker Hayes" vs "Walker Hayes"
-        title_loose = re.sub(r'\s*(-|\u2014|\u2013|\bwith\b|\bfeaturing\b|\bft\.?\b|\bpresented by\b|\bspecial guest\b).*$', '', title_clean).strip()[:25]
-        date = e.get("date", "")[:10]
-        key_full = f"{title_clean}|{date}"
-        key_short = f"{title_no_sub}|{date}"
-        key_loose = f"{title_loose}|{date}"
-        if key_full not in seen and key_short not in seen and key_loose not in seen:
-            seen.add(key_full)
-            seen.add(key_short)
-            seen.add(key_loose)
-            unique.append(e)
+        date = (e.get("date") or "")[:10]
+        if not date or not e.get("title"):
+            continue
+        norm = _pc_norm_title(e["title"])
+        key = (date, norm)
+        groups.setdefault(key, []).append(e)
+
+    unique = []
+    merged_count = 0
+    for key, records in groups.items():
+        if len(records) == 1:
+            unique.append(records[0])
+        else:
+            unique.append(_pc_merge_records(records))
+            merged_count += len(records) - 1
+
+    if merged_count:
+        print(f"  [PC dedup] merged {merged_count} duplicate records into existing entries")
     return unique
 
 
@@ -1326,9 +1372,6 @@ def scrape_arts_council():
     return events
 
 
-
-
-
 # -------------------------------------------------------
 # KPCW (covers both Park City and Heber Valley)
 # -------------------------------------------------------
@@ -1362,8 +1405,6 @@ def scrape_kpcw_and_cache_heber():
     return pc_events
 
 
-
-
 # -------------------------------------------------------
 # DEER VALLEY (resort calendar — music festival, hikes, etc)
 # -------------------------------------------------------
@@ -1379,8 +1420,6 @@ def scrape_deer_valley_wrapper():
     except Exception as ex:
         print(f"  Deer Valley scraper failed: {ex}")
         return []
-
-
 
 
 # -------------------------------------------------------
@@ -1400,8 +1439,6 @@ def scrape_park_city_institute_wrapper():
         return []
 
 
-
-
 # -------------------------------------------------------
 # MOUNTAIN TRAILS FOUNDATION (parkcitytrails.org)
 # -------------------------------------------------------
@@ -1417,8 +1454,6 @@ def scrape_park_city_trails_wrapper():
     except Exception as ex:
         print(f"  Mountain Trails Foundation scraper failed: {ex}")
         return []
-
-
 
 
 # -------------------------------------------------------
@@ -1460,8 +1495,6 @@ def scrape_runsignup_parkcity_wrapper():
         return []
 
 
-
-
 # -------------------------------------------------------
 # SLRC (Salt Lake Running Co)
 # -------------------------------------------------------
@@ -1479,8 +1512,6 @@ def scrape_slrc_parkcity_wrapper():
         return []
 
 
-
-
 # -------------------------------------------------------
 # DEER VALLEY MUSIC FESTIVAL
 # -------------------------------------------------------
@@ -1496,8 +1527,6 @@ def scrape_dvmf_wrapper():
     except Exception as ex:
         print(f"  DVMF scraper failed: {ex}")
         return []
-
-
 
 
 # -------------------------------------------------------
@@ -1602,8 +1631,15 @@ def merge_into_heber_file(new_events, filename="public/events-heber.json"):
     )
 
 
-
 def save_events(events, filename="public/events.json"):
+    # Drop records with non-ISO dates ("See website", "TBA", etc).
+    # These come from HTML scrapers that couldn't parse a real date.
+    import re as _re
+    before = len(events)
+    events = [e for e in events if _re.match(r"^\d{4}-\d{2}-\d{2}$", str(e.get("date","")))]
+    dropped = before - len(events)
+    if dropped:
+        print(f"  [save_events] dropped {dropped} records with non-ISO dates")
     output = {
         "updated_at": datetime.now().isoformat(),
         "total": len(events),
@@ -1671,7 +1707,6 @@ def main():
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)
     print(f"After deduplication: {len(unique)}")
-    unique = handle_recurring(unique)
     print(f"After recurring tagging: {len(unique)}")
 
     # Re-route Heber Valley events to the Heber file BEFORE saving PC
