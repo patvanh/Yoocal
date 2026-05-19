@@ -16,6 +16,7 @@ Output: events-elkhartlake.json
 
 import requests
 import json
+from event_classifier import classify_events
 import re
 import os
 from bs4 import BeautifulSoup
@@ -1136,6 +1137,10 @@ def save_events(events, filename="public/events-elkhartlake.json"):
     dropped = before - len(events)
     if dropped:
         print(f"  [save_events] dropped {dropped} records with non-ISO dates")
+    # Apply canonical category classification before writing.
+    from event_classifier import classify_events as _classify_events
+    events = _classify_events(events)
+
     output = {
         "updated_at": datetime.now().isoformat(),
         "total": len(events),

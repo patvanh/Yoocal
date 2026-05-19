@@ -17,6 +17,7 @@ parser code. Adding a new tribe-events source = ~5 lines of config.
 """
 
 import json
+from event_classifier import classify_events
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -199,6 +200,10 @@ def main():
         "total": len(deduped),
         "events": deduped,
     }
+    # Apply canonical category classification before writing.
+    from event_classifier import classify_events as _classify_events
+    events = _classify_events(events)
+
     with open(out_path, "w") as f:
         json.dump(payload, f, indent=2)
     print(f"\nSaved {len(deduped)} events to {out_path}")

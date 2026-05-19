@@ -13,6 +13,7 @@ Output: events-heber.json
 
 import requests
 import json
+from event_classifier import classify_events
 import re
 import os
 import urllib.request
@@ -392,6 +393,10 @@ def deduplicate(events):
     return unique
 
 def save_events(events, filename="public/events-heber.json"):
+    # Apply canonical category classification before writing.
+    from event_classifier import classify_events as _classify_events
+    events = _classify_events(events)
+
     output = {
         "updated_at": datetime.now().isoformat(),
         "total": len(events),

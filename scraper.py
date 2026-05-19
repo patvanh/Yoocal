@@ -19,6 +19,7 @@ from mountain_town_music_scraper import scrape_mountain_town_music
 import os
 from bs4 import BeautifulSoup
 import json
+from event_classifier import classify_events
 import re
 from datetime import datetime, timedelta
 
@@ -1348,6 +1349,10 @@ def scrape_kpcw_and_cache_heber():
             "events": heber_events,
         }
         try:
+            # Apply canonical category classification before writing.
+            from event_classifier import classify_events as _classify_events
+            events = _classify_events(events)
+
             with open("kpcw_heber_cache.json", "w") as f:
                 json.dump(cache, f, indent=2)
             print(f"  Cached {len(heber_events)} Heber events from KPCW for heber_scraper to merge")

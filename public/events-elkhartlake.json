@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19T14:26:22.423388",
+  "updated_at": "2026-05-19T14:43:43.457027",
   "total": 245,
   "events": [
     {
@@ -12,10 +12,15 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300386",
+      "scraped_at": "2026-05-19T14:43:02.827351",
       "start_time": "8:00 AM",
       "end_date": "2026-05-31",
-      "featured": true
+      "featured": true,
+      "categories": [
+        "Sports",
+        "Family",
+        "Festival"
+      ]
     },
     {
       "title": "WeatherTech Chicago Region SCCA June Sprints",
@@ -27,10 +32,13 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300388",
+      "scraped_at": "2026-05-19T14:43:02.827354",
       "start_time": "8:00 AM",
       "end_date": "2026-06-07",
-      "featured": true
+      "featured": true,
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "XPEL INDYCAR Grand Prix presented by AMR",
@@ -42,10 +50,13 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300390",
+      "scraped_at": "2026-05-19T14:43:02.827355",
       "start_time": "8:00 AM",
       "end_date": "2026-06-21",
-      "featured": true
+      "featured": true,
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Cheese Capital Cup featuring Trans Am SpeedTour",
@@ -57,10 +68,13 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300391",
+      "scraped_at": "2026-05-19T14:43:02.827356",
       "start_time": "8:00 AM",
       "end_date": "2026-06-28",
-      "featured": true
+      "featured": true,
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "WeatherTech Vintage Weekend with Brian Redman",
@@ -72,10 +86,13 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300392",
+      "scraped_at": "2026-05-19T14:43:02.827357",
       "start_time": "8:00 AM",
       "end_date": "2026-07-19",
-      "featured": true
+      "featured": true,
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Motul SportsCar Endurance Grand Prix featuring IMSA",
@@ -87,10 +104,13 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300393",
+      "scraped_at": "2026-05-19T14:43:02.827358",
       "start_time": "8:00 AM",
       "end_date": "2026-08-02",
-      "featured": true
+      "featured": true,
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "GT World Challenge America",
@@ -102,10 +122,13 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300394",
+      "scraped_at": "2026-05-19T14:43:02.827359",
       "start_time": "8:00 AM",
       "end_date": "2026-08-30",
-      "featured": true
+      "featured": true,
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Art on Wheels Weekend with VSCDA",
@@ -117,10 +140,13 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300395",
+      "scraped_at": "2026-05-19T14:43:02.827360",
       "start_time": "8:00 AM",
       "end_date": "2026-09-20",
-      "featured": true
+      "featured": true,
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "SCCA National Championship Runoffs",
@@ -132,10 +158,13 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300395",
+      "scraped_at": "2026-05-19T14:43:02.827361",
       "start_time": "8:00 AM",
       "end_date": "2026-10-04",
-      "featured": true
+      "featured": true,
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Road America Track Day",
@@ -147,9 +176,12 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300396",
+      "scraped_at": "2026-05-19T14:43:02.827362",
       "start_time": "7:30 AM",
-      "end_time": "5:00 PM"
+      "end_time": "5:00 PM",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Road America Track Day",
@@ -161,9 +193,12 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300397",
+      "scraped_at": "2026-05-19T14:43:02.827363",
       "start_time": "7:30 AM",
-      "end_time": "5:00 PM"
+      "end_time": "5:00 PM",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Road America Track Day",
@@ -175,9 +210,12 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300398",
+      "scraped_at": "2026-05-19T14:43:02.827364",
       "start_time": "7:30 AM",
-      "end_time": "5:00 PM"
+      "end_time": "5:00 PM",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Road America Track Day",
@@ -189,9 +227,12 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300399",
+      "scraped_at": "2026-05-19T14:43:02.827365",
       "start_time": "7:30 AM",
-      "end_time": "5:00 PM"
+      "end_time": "5:00 PM",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -203,12 +244,15 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300400",
+      "scraped_at": "2026-05-19T14:43:02.827366",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": "2026-08-19",
       "recurrence": "weekly_multiple",
-      "recurrence_days": "Monday,Wednesday"
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Elkhart Lake Farmers & Artisans Market",
@@ -220,12 +264,15 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.7969,
       "lng": -87.9897,
-      "scraped_at": "2026-05-19T14:25:41.300401",
+      "scraped_at": "2026-05-19T14:43:02.827367",
       "start_time": "8:00 AM",
       "end_time": "12:00 PM",
       "end_date": "2026-10-31",
       "recurrence": "weekly",
-      "recurrence_day": "Saturday"
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Siebkens Live Music by Kylar Kuzio",
@@ -237,10 +284,15 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-kylar-kuzio/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479274",
+      "scraped_at": "2026-05-19T14:43:03.232229",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/kylar-kuzio.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Food & Drink",
+        "Outdoor"
+      ]
     },
     {
       "title": "Siebkens Live Music by Jeremiah Jams",
@@ -252,10 +304,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-jeremiah-jams-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479435",
+      "scraped_at": "2026-05-19T14:43:03.232404",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/jermimiah-jams.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Live Music: Dave Steffen Band (MotoAmerica Wknd)",
@@ -267,10 +323,14 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300412",
+      "scraped_at": "2026-05-19T14:43:02.827378",
       "start_time": "7:30 PM",
       "end_time": "11:00 PM",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Summer Concert: Lilie",
@@ -282,10 +342,13 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300413",
+      "scraped_at": "2026-05-19T14:43:02.827379",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by Chasing Tales",
@@ -297,10 +360,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-chasing-tales/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480154",
+      "scraped_at": "2026-05-19T14:43:03.233256",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/chasing-tales-1-e1776199926251.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Siebkens Live Music by 7000apart",
@@ -312,10 +379,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-7000apart/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480645",
+      "scraped_at": "2026-05-19T14:43:03.233886",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/7000apart.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Siebkens Live Music by Wire & Nail",
@@ -327,10 +398,15 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-wire-nail-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480798",
+      "scraped_at": "2026-05-19T14:43:03.234064",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/wire-and-nail-siebkens.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Food & Drink",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Live Music by Northsoul",
@@ -342,10 +418,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-northsoul/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480861",
+      "scraped_at": "2026-05-19T14:43:03.234140",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/northsoul-live-music-siebkens.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by The Donna Woodall Group",
@@ -357,10 +436,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-donna-woodall-group/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480954",
+      "scraped_at": "2026-05-19T14:43:03.234252",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/donna-goodall.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Summer Concert: Ryan Scheidemeyer & Friends",
@@ -372,10 +454,13 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300417",
+      "scraped_at": "2026-05-19T14:43:02.827384",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by The Chili Dogs",
@@ -387,10 +472,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-chili-dogs/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715732",
+      "scraped_at": "2026-05-19T14:43:03.466248",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-chili-dogs-siebkens-music.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by Trapper Schoepp",
@@ -402,10 +490,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-trapper-schoepp/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716375",
+      "scraped_at": "2026-05-19T14:43:03.466950",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/1.-TrapperPromo2025-CreditLucianMcAfee.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by Erin Krebs & Paul Sucherman",
@@ -417,10 +508,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-erin-krebs-paul-sucherman-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716901",
+      "scraped_at": "2026-05-19T14:43:03.467572",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/erin-krebs.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by Livin The Dream",
@@ -432,10 +526,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-livin-the-dream/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717200",
+      "scraped_at": "2026-05-19T14:43:03.467937",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/lviin-the-dream-siebkens-live-music.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by Katalysst",
@@ -447,10 +544,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-katalysst/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717738",
+      "scraped_at": "2026-05-19T14:43:03.468593",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/katalysst.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Summer Concert: Valley Fox",
@@ -462,10 +562,13 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300422",
+      "scraped_at": "2026-05-19T14:43:02.827390",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music: The Chocolateers (IMSA Wknd)",
@@ -477,11 +580,15 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300423",
+      "scraped_at": "2026-05-19T14:43:02.827391",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "featured": true,
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Live Music by Bowser",
@@ -493,10 +600,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-bowser/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869059",
+      "scraped_at": "2026-05-19T14:43:03.614635",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bowser-band.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Live Music by Deep Pockets",
@@ -508,10 +619,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-deep-pockets/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869197",
+      "scraped_at": "2026-05-19T14:43:03.614745",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/fd8cab_83382145273b49a9be40fc9b65c82b61mv2.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Live Music by Mike Brumm with Trust & Follow",
@@ -523,10 +638,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-mike-brumm-with-trust-follow/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869402",
+      "scraped_at": "2026-05-19T14:43:03.614911",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/mike-brumm-music-e1779215999327.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Downtown Night Live Music: Sister Winchester",
@@ -538,10 +656,13 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300426",
+      "scraped_at": "2026-05-19T14:43:02.827394",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by Bob & Connor McManus",
@@ -553,10 +674,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-bob-connor-mcmanus/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869908",
+      "scraped_at": "2026-05-19T14:43:03.615328",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bob-connor-mcmanus.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by Pat McCurdy",
@@ -568,10 +692,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-pat-mccurdy/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870149",
+      "scraped_at": "2026-05-19T14:43:03.615520",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/Pat-McCurdy-hand.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Siebkens Live Music by Celeste Rose",
@@ -583,10 +710,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-celeste-rose/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870442",
+      "scraped_at": "2026-05-19T14:43:03.615752",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/celeste-e1779218629655.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "GT World Challenge Welcome Party: Burgundy Ties",
@@ -598,10 +728,14 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300430",
+      "scraped_at": "2026-05-19T14:43:02.827397",
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Live Music by Second Hand Stereo",
@@ -613,10 +747,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-second-hand-stereo/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870639",
+      "scraped_at": "2026-05-19T14:43:03.615905",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/second-hand-stereo.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Live Music: Joseph Huber (GT World Challenge)",
@@ -628,10 +766,14 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300432",
+      "scraped_at": "2026-05-19T14:43:02.827399",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Live Music: Boo! The Band (Elktoberfest)",
@@ -643,9 +785,13 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300432",
+      "scraped_at": "2026-05-19T14:43:02.827399",
       "start_time": "7:00 PM",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Food & Drink"
+      ]
     },
     {
       "title": "Siebkens Summer Concert: Brent Bel & The Boys",
@@ -657,10 +803,13 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.8336,
       "lng": -87.9717,
-      "scraped_at": "2026-05-19T14:25:41.300433",
+      "scraped_at": "2026-05-19T14:43:02.827400",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -672,13 +821,12 @@
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.478941",
+      "scraped_at": "2026-05-19T14:43:03.231853",
       "venue_name": "Elkhart Lake Depot & Village Square",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "categories": [
         "Outdoor",
-        "Food & Drink",
-        "Community"
+        "Food & Drink"
       ]
     },
     {
@@ -688,15 +836,15 @@
       "venue_name": "Siebkens Resort",
       "description": "Annual motorcycle show at Siebkens during MotoAmerica weekend at Road America. Vintage and custom bikes on display.",
       "categories": [
-        "Community",
-        "Sports"
+        "Sports",
+        "Music"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300650",
+      "scraped_at": "2026-05-19T14:43:02.827704",
       "series": "Siebkens Live Music"
     },
     {
@@ -709,13 +857,14 @@
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479369",
+      "scraped_at": "2026-05-19T14:43:03.232328",
       "end_date": "2026-05-31",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/moto-america-road-america.avif",
       "categories": [
         "Sports",
-        "Festival"
+        "Festival",
+        "Outdoor"
       ]
     },
     {
@@ -728,7 +877,7 @@
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479861",
+      "scraped_at": "2026-05-19T14:43:03.232886",
       "end_date": "2026-06-07",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/june_sprints_-_2025-8.avif",
@@ -745,14 +894,15 @@
       "description": "NTT IndyCar Series race weekend at Road America's historic 4-mile road course. The series' premier Wisconsin event.",
       "categories": [
         "Sports",
-        "Festival"
+        "Festival",
+        "Education"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300653"
+      "scraped_at": "2026-05-19T14:43:02.827707"
     },
     {
       "title": "Cheese Capital Cup Featuring Trans Am SpeedTour",
@@ -764,7 +914,7 @@
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715383",
+      "scraped_at": "2026-05-19T14:43:03.465838",
       "end_date": "2026-06-28",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/cheese-capital-cup.avif",
@@ -779,17 +929,19 @@
       "venue_name": "Elkhart Lake Lakefront & Fireman's Park",
       "description": "Annual Independence Day weekend fireworks over the lake plus the fireman's picnic. Family-friendly community tradition.",
       "categories": [
-        "Community",
         "Family",
         "Festival",
-        "Free"
+        "Outdoor"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300654"
+      "scraped_at": "2026-05-19T14:43:02.827710",
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Fireman's 4th of July Parade & Annual Picnic",
@@ -797,16 +949,17 @@
       "location": "Elkhart Lake & Fireman's Park, Elkhart Lake, WI",
       "description": "Independence Day parade through downtown Elkhart Lake followed by the annual fireman's picnic at Fireman's Park.",
       "categories": [
-        "Community",
-        "Family",
-        "Free"
+        "Family"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300655"
+      "scraped_at": "2026-05-19T14:43:02.827711",
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Midwest Acoustic Music Festival",
@@ -823,7 +976,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300656"
+      "scraped_at": "2026-05-19T14:43:02.827711"
     },
     {
       "title": "WeatherTech Vintage Weekend with Brian Redman",
@@ -835,7 +988,7 @@
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717006",
+      "scraped_at": "2026-05-19T14:43:03.467694",
       "end_date": "2026-07-19",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
@@ -852,15 +1005,17 @@
       "description": "Vintage racecar concours and parade through downtown Elkhart Lake during Vintage Weekend. Open to the public, free to attend.",
       "categories": [
         "Sports",
-        "Community",
-        "Free"
+        "Family"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300657"
+      "scraped_at": "2026-05-19T14:43:02.827713",
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Vintage Concours d'Elegance - Sportscars",
@@ -869,16 +1024,17 @@
       "venue_name": "Downtown Elkhart Lake",
       "description": "Vintage sportscar concours in downtown Elkhart Lake. Classic cars on display throughout the village.",
       "categories": [
-        "Sports",
-        "Community",
-        "Free"
+        "Sports"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300658"
+      "scraped_at": "2026-05-19T14:43:02.827714",
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Motul Sportscar Endurance Grand Prix Featuring IMSA",
@@ -890,7 +1046,7 @@
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868939",
+      "scraped_at": "2026-05-19T14:43:03.614538",
       "end_date": "2026-08-02",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
@@ -906,16 +1062,20 @@
       "venue_name": "Downtown Elkhart Lake",
       "description": "Annual downtown street party in Elkhart Lake. Live music, food vendors, family activities.",
       "categories": [
-        "Community",
         "Festival",
-        "Free"
+        "Music",
+        "Food & Drink",
+        "Outdoor"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300660"
+      "scraped_at": "2026-05-19T14:43:02.827716",
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Fanatec GT World Challenge America",
@@ -932,7 +1092,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300662"
+      "scraped_at": "2026-05-19T14:43:02.827716"
     },
     {
       "title": "Art on Wheels Weekend with VSCDA",
@@ -942,15 +1102,14 @@
       "venue_name": "Road America",
       "description": "Vintage Sports Car Drivers Association weekend at Road America. Vintage racing and car show.",
       "categories": [
-        "Sports",
-        "Community"
+        "Sports"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300662"
+      "scraped_at": "2026-05-19T14:43:02.827717"
     },
     {
       "title": "Elktoberfest",
@@ -958,7 +1117,6 @@
       "location": "Elkhart Lake, WI",
       "description": "Annual Elkhart Lake Oktoberfest celebration. German food, beer, music, and family activities downtown.",
       "categories": [
-        "Community",
         "Festival",
         "Food & Drink"
       ],
@@ -967,7 +1125,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300663"
+      "scraped_at": "2026-05-19T14:43:02.827718"
     },
     {
       "title": "SCCA National Championship Runoffs",
@@ -979,7 +1137,7 @@
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010470",
+      "scraped_at": "2026-05-19T14:43:03.789926",
       "end_date": "2026-10-04",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
@@ -1005,7 +1163,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-19T14:25:41.300665"
+      "scraped_at": "2026-05-19T14:43:02.827720"
     },
     {
       "title": "4 Miles of Fitness",
@@ -1017,9 +1175,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-05-20/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.478840",
+      "scraped_at": "2026-05-19T14:43:03.231739",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Arilya",
@@ -1031,10 +1195,14 @@
       "link": "https://www.elkhartlake.com/event/osthoff-lake-deck-live-music-by-arilya/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.478893",
+      "scraped_at": "2026-05-19T14:43:03.231800",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/arilya-band-osthoff-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Elkhart Lake Annual Veterans Memorial Tribute",
@@ -1046,9 +1214,12 @@
       "link": "https://www.elkhartlake.com/event/elkhart-lake-annual-veterans-memorial-tribute/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.478987",
+      "scraped_at": "2026-05-19T14:43:03.231901",
       "venue_name": "Memorial Park",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/memorial-park-_-elkhart-lake-2-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/memorial-park-_-elkhart-lake-2-jpg.webp",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -1060,9 +1231,12 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-05-23/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479025",
+      "scraped_at": "2026-05-19T14:43:03.231943",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Suzie & the Detonators",
@@ -1074,10 +1248,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-suzie-the-detonators/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479063",
+      "scraped_at": "2026-05-19T14:43:03.231986",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/suzie-osthoff-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Brady Lee",
@@ -1089,10 +1267,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-brady-lee/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479093",
+      "scraped_at": "2026-05-19T14:43:03.232031",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/brady-lee-osthoff-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1104,9 +1286,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-05-25/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479168",
+      "scraped_at": "2026-05-19T14:43:03.232109",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1118,9 +1306,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-05-27/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479233",
+      "scraped_at": "2026-05-19T14:43:03.232179",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Road Trip",
@@ -1132,10 +1326,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-road-trip/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479400",
+      "scraped_at": "2026-05-19T14:43:03.232364",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-trip-osthoff-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1147,9 +1345,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-05-30/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479473",
+      "scraped_at": "2026-05-19T14:43:03.232446",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "The Hard Left Moto Show",
@@ -1161,10 +1362,13 @@
       "link": "https://www.elkhartlake.com/event/the-hard-left-moto-show/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479542",
+      "scraped_at": "2026-05-19T14:43:03.232516",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-hard-left-moto-show.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Asphalt Gypsies",
@@ -1176,10 +1380,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-asphalt-gypsies/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479581",
+      "scraped_at": "2026-05-19T14:43:03.232552",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/asphalt-gypsies-osthoff-resort.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Siebkens Live Music by Dave Steffen & Friends",
@@ -1191,10 +1399,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-dave-steffen-friends/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479615",
+      "scraped_at": "2026-05-19T14:43:03.232591",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/Dave-Steffen-Band-3.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1206,9 +1418,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-06-01/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479680",
+      "scraped_at": "2026-05-19T14:43:03.232670",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1220,9 +1438,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-06-03/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479746",
+      "scraped_at": "2026-05-19T14:43:03.232746",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Siebkens Live Music by Lilie Collins",
@@ -1234,10 +1458,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-lilie-collins/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479785",
+      "scraped_at": "2026-05-19T14:43:03.232795",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/lilie-collins.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Ethan Keller",
@@ -1249,10 +1477,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-ethan-keller/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479814",
+      "scraped_at": "2026-05-19T14:43:03.232831",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/ethan-keller.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "The Abler Boys",
@@ -1264,10 +1496,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-the-abler-boys/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479892",
+      "scraped_at": "2026-05-19T14:43:03.232923",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/abler-boys-osthoff-resort.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1279,9 +1515,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-06-06/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479929",
+      "scraped_at": "2026-05-19T14:43:03.232980",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Breaking Cadence",
@@ -1293,10 +1532,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-breaking-cadence/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479960",
+      "scraped_at": "2026-05-19T14:43:03.233018",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Breaking-Cadence-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Gould & Jaeger",
@@ -1308,10 +1551,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-gould-jaeger/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.479994",
+      "scraped_at": "2026-05-19T14:43:03.233057",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/gould-and-jaeger-osthoff-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1323,9 +1570,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-06-08/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480056",
+      "scraped_at": "2026-05-19T14:43:03.233135",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1337,9 +1590,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-06-10/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480117",
+      "scraped_at": "2026-05-19T14:43:03.233208",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Bowser",
@@ -1351,10 +1610,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-bowser/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480183",
+      "scraped_at": "2026-05-19T14:43:03.233295",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bowser-lake-deck-music-e1747918750646.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "The Cougars",
@@ -1366,10 +1629,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-the-cougars/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480213",
+      "scraped_at": "2026-05-19T14:43:03.233331",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-cougars.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -1381,9 +1648,12 @@
       "link": "https://www.elkhartlake.com/event/throttlestop-cars-coffee/2026-06-13/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480304",
+      "scraped_at": "2026-05-19T14:43:03.233442",
       "venue_name": "Throttlestop",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif",
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1395,9 +1665,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-06-13/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480344",
+      "scraped_at": "2026-05-19T14:43:03.233498",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -1409,9 +1682,12 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-06-13/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480380",
+      "scraped_at": "2026-05-19T14:43:03.233543",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Brent Bel & the Boys",
@@ -1423,10 +1699,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-brent-bel-the-boys/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480415",
+      "scraped_at": "2026-05-19T14:43:03.233589",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/brent-bel-and-the-boys-osthoff-resort.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Mark Croft",
@@ -1438,10 +1718,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-mark-croft/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480443",
+      "scraped_at": "2026-05-19T14:43:03.233633",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/mark-croft-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Swine & Pink Wine",
@@ -1453,10 +1737,13 @@
       "link": "https://www.elkhartlake.com/event/swine-pink-wine/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480489",
+      "scraped_at": "2026-05-19T14:43:03.233691",
       "venue_name": "Vintage Elkhart Lake",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/swine-pink-wine-e1777482456613.avif",
-      "price": "$48"
+      "price": "$48",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1468,9 +1755,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-06-15/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480549",
+      "scraped_at": "2026-05-19T14:43:03.233769",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1482,9 +1775,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-06-17/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480609",
+      "scraped_at": "2026-05-19T14:43:03.233842",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "INDYCAR XPEL Grand Prix Presented by AMR",
@@ -1496,10 +1795,13 @@
       "link": "https://www.elkhartlake.com/event/indycar-xpel-grand-prix-presented-by-amr/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480702",
+      "scraped_at": "2026-05-19T14:43:03.233952",
       "end_date": "2026-06-21",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/indycar-road-america-1.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/indycar-road-america-1.avif",
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "IndyCar Weekend Elkhart Lake Welcome Party",
@@ -1511,10 +1813,15 @@
       "link": "https://www.elkhartlake.com/event/indycar-weekend-elkhart-lake-welcome-party/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480759",
+      "scraped_at": "2026-05-19T14:43:03.234017",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/elkhart-lake-indycar-welcome-party.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports",
+        "Kids"
+      ]
     },
     {
       "title": "Hipp-Jones Duo",
@@ -1526,10 +1833,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-hipp-jones-duo/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480830",
+      "scraped_at": "2026-05-19T14:43:03.234103",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/hipp-jones-duo.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Eight Second Ride",
@@ -1541,10 +1852,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-eight-second-ride/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480891",
+      "scraped_at": "2026-05-19T14:43:03.234176",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/8-second-ride-osthoff-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1556,9 +1871,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-06-20/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480927",
+      "scraped_at": "2026-05-19T14:43:03.234219",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Until Dawn",
@@ -1570,10 +1888,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-until-dawn/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.480983",
+      "scraped_at": "2026-05-19T14:43:03.234288",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/until-dawn.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Skyhouse",
@@ -1585,10 +1907,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-skyhouse/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.481011",
+      "scraped_at": "2026-05-19T14:43:03.234322",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/skyhouse.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1600,9 +1926,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-06-22/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715141",
+      "scraped_at": "2026-05-19T14:43:03.465566",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1614,9 +1946,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-06-24/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715242",
+      "scraped_at": "2026-05-19T14:43:03.465672",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Siebkens Live Music by Ryan Scheidemeyer",
@@ -1628,10 +1966,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-ryan-scheidemeyer/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715282",
+      "scraped_at": "2026-05-19T14:43:03.465722",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/ryan-siebkens-live-music.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Sadie Acoustic Duo",
@@ -1643,10 +1984,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-sadie-acoustic-duo/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715324",
+      "scraped_at": "2026-05-19T14:43:03.465765",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/sadie-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Suzie & the Detonators",
@@ -1658,10 +2003,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-suzie-the-detonators-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715433",
+      "scraped_at": "2026-05-19T14:43:03.465892",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/suzie-osthoff-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1673,9 +2022,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-06-27/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715482",
+      "scraped_at": "2026-05-19T14:43:03.465947",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Mark Croft",
@@ -1687,10 +2039,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-mark-croft-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715516",
+      "scraped_at": "2026-05-19T14:43:03.465992",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/mark-croft-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Abler McManus Duo",
@@ -1702,10 +2058,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-abler-mcmanus-duo/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715550",
+      "scraped_at": "2026-05-19T14:43:03.466035",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/abler-mcmanus-duo-osthoff-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1717,9 +2077,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-06-29/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715626",
+      "scraped_at": "2026-05-19T14:43:03.466122",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1731,9 +2097,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-01/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715697",
+      "scraped_at": "2026-05-19T14:43:03.466208",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "The \u2018Tones",
@@ -1745,10 +2117,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-the-tones/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715772",
+      "scraped_at": "2026-05-19T14:43:03.466296",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-tones.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "7th Annual 4th of July Boat Parade",
@@ -1760,9 +2136,12 @@
       "link": "https://www.elkhartlake.com/event/4th-of-july-boat-parade/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715811",
+      "scraped_at": "2026-05-19T14:43:03.466339",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/4th-of-july-boat-parade-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/4th-of-july-boat-parade-jpg.webp",
+      "categories": [
+        "Family"
+      ]
     },
     {
       "title": "Elkhart Lake Fireman\u2019s Picnic",
@@ -1774,9 +2153,13 @@
       "link": "https://www.elkhartlake.com/event/elkhart-lake-firemans-picnic/2026-07-03/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715888",
+      "scraped_at": "2026-05-19T14:43:03.466416",
       "venue_name": "Fireman&#8217;s Park &#038; Beach",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/449307969_882933360527294_2343988888644531544_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/449307969_882933360527294_2343988888644531544_n.avif",
+      "categories": [
+        "Music",
+        "Family"
+      ]
     },
     {
       "title": "Spicy Tie Band",
@@ -1788,10 +2171,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-spicy-tie-band/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715923",
+      "scraped_at": "2026-05-19T14:43:03.466453",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/spicy-tie-band-osthoff-lake-deck.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Elkhart Lake Fireman\u2019s Fireworks",
@@ -1803,9 +2190,13 @@
       "link": "https://www.elkhartlake.com/event/elkhart-lake-fireworks/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.715962",
+      "scraped_at": "2026-05-19T14:43:03.466493",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/20230630_215319-1.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/20230630_215319-1.avif",
+      "categories": [
+        "Outdoor",
+        "Family"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1817,9 +2208,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-07-04/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716002",
+      "scraped_at": "2026-05-19T14:43:03.466543",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Frank Childress & The Main Street Band",
@@ -1831,10 +2225,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-frank-childress-the-main-street-band/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716041",
+      "scraped_at": "2026-05-19T14:43:03.466585",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/frank-childress-osthoff.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Elkhart Lake Fireman\u2019s 4th of July Parade",
@@ -1846,10 +2244,14 @@
       "link": "https://www.elkhartlake.com/event/4th-of-july-parade/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716104",
+      "scraped_at": "2026-05-19T14:43:03.466651",
       "venue_name": "Elkhart Lake",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/IMG_7886-e1642094461310-jpg.webp",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Family"
+      ]
     },
     {
       "title": "Elkhart Lake Fireman\u2019s Picnic",
@@ -1861,9 +2263,13 @@
       "link": "https://www.elkhartlake.com/event/elkhart-lake-firemans-picnic/2026-07-05/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716168",
+      "scraped_at": "2026-05-19T14:43:03.466722",
       "venue_name": "Fireman&#8217;s Park &#038; Beach",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/449307969_882933360527294_2343988888644531544_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/449307969_882933360527294_2343988888644531544_n.avif",
+      "categories": [
+        "Music",
+        "Family"
+      ]
     },
     {
       "title": "Chasing Tales",
@@ -1875,10 +2281,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-chasing-tales/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716203",
+      "scraped_at": "2026-05-19T14:43:03.466762",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/chasing-tales-1-e1776199926251.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1890,9 +2300,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-06/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716270",
+      "scraped_at": "2026-05-19T14:43:03.466834",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1904,9 +2320,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-08/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716337",
+      "scraped_at": "2026-05-19T14:43:03.466906",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Seth & Kylar",
@@ -1918,10 +2340,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-seth-kylar/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716410",
+      "scraped_at": "2026-05-19T14:43:03.466989",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/seth-and-kylar-osthoff-e1779211618214.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Dave Steffen Band",
@@ -1933,10 +2359,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-dave-steffen-band/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716447",
+      "scraped_at": "2026-05-19T14:43:03.467028",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/RK_ElkhartLake_LiveMusic1.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -1948,9 +2378,12 @@
       "link": "https://www.elkhartlake.com/event/throttlestop-cars-coffee/2026-07-11/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716541",
+      "scraped_at": "2026-05-19T14:43:03.467135",
       "venue_name": "Throttlestop",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif",
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1962,9 +2395,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-07-11/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716583",
+      "scraped_at": "2026-05-19T14:43:03.467184",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Midwest Acoustic Music Festival",
@@ -1976,9 +2412,12 @@
       "link": "https://www.elkhartlake.com/event/midwest-acoustic-music-festival/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716620",
+      "scraped_at": "2026-05-19T14:43:03.467225",
       "venue_name": "Lake Street Caf\u00e9",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/midwest-acoustic-festival-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/midwest-acoustic-festival-jpg.webp",
+      "categories": [
+        "Festival"
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -1990,9 +2429,12 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-07-11/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716661",
+      "scraped_at": "2026-05-19T14:43:03.467272",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Bowser",
@@ -2004,10 +2446,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-bowser-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716693",
+      "scraped_at": "2026-05-19T14:43:03.467312",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bowser-lake-deck-music-e1747918750646.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Abler McManus Duo",
@@ -2019,10 +2465,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-abler-mcmanus-duo-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716726",
+      "scraped_at": "2026-05-19T14:43:03.467352",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/abler-mcmanus-duo-osthoff-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2034,9 +2484,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-13/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716792",
+      "scraped_at": "2026-05-19T14:43:03.467436",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2048,9 +2504,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-15/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.716858",
+      "scraped_at": "2026-05-19T14:43:03.467518",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Sadie Acoustic Duo",
@@ -2062,10 +2524,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-sadie-acoustic-duo-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717041",
+      "scraped_at": "2026-05-19T14:43:03.467736",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/sadie-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Vintage Concours d\u2019Elegance",
@@ -2077,9 +2543,12 @@
       "link": "https://www.elkhartlake.com/event/vintage-concours-delegance/2026-07-17/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717166",
+      "scraped_at": "2026-05-19T14:43:03.467895",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-elkhart-lake-road-america-jpg.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-elkhart-lake-road-america-jpg.avif",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by That \u201990s Band",
@@ -2091,10 +2560,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-that-90s-band/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717238",
+      "scraped_at": "2026-05-19T14:43:03.467987",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/that-90s-band.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2106,9 +2579,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-07-18/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717279",
+      "scraped_at": "2026-05-19T14:43:03.468036",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Throttlestop Open House",
@@ -2120,9 +2596,12 @@
       "link": "https://www.elkhartlake.com/event/throttlestop-open-house/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717355",
+      "scraped_at": "2026-05-19T14:43:03.468118",
       "venue_name": "Throttlestop",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/654685113_1393299896147849_937036720986135078_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/654685113_1393299896147849_937036720986135078_n.avif",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Vintage Concours d\u2019Elegance",
@@ -2134,9 +2613,12 @@
       "link": "https://www.elkhartlake.com/event/vintage-concours-delegance/2026-07-18/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717477",
+      "scraped_at": "2026-05-19T14:43:03.468259",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-elkhart-lake-road-america-jpg.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-elkhart-lake-road-america-jpg.avif",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Siebkens Live Music by Livin The Dream",
@@ -2148,10 +2630,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-boo-the-band/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717509",
+      "scraped_at": "2026-05-19T14:43:03.468301",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/Boo-the-bad-jpg-e1692817092548.webp",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "The Flight Crew",
@@ -2163,10 +2648,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-the-flight-crew/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717542",
+      "scraped_at": "2026-05-19T14:43:03.468345",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-flight-crew-osthoff-lake-deck.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Luke Abler",
@@ -2178,10 +2667,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-luke-abler/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717576",
+      "scraped_at": "2026-05-19T14:43:03.468386",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/luke-abler-live-music-e1779213095821.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2193,9 +2686,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-20/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717644",
+      "scraped_at": "2026-05-19T14:43:03.468469",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2207,9 +2706,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-22/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.717708",
+      "scraped_at": "2026-05-19T14:43:03.468554",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Hipp-Jones Duo",
@@ -2221,10 +2726,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-hipp-jones-duo-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868384",
+      "scraped_at": "2026-05-19T14:43:03.614088",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/hipp-jones-duo.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Boat Drinks",
@@ -2236,10 +2745,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-boat-drinks/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868453",
+      "scraped_at": "2026-05-19T14:43:03.614139",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/boat-drink-osthoff-e1779213397329.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2251,9 +2764,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-07-25/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868521",
+      "scraped_at": "2026-05-19T14:43:03.614193",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "BoomBoxx",
@@ -2265,10 +2781,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-boomboxx/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868561",
+      "scraped_at": "2026-05-19T14:43:03.614225",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/boomboxx-osthoff-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Skyhouse",
@@ -2280,10 +2800,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-skyhouse-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868601",
+      "scraped_at": "2026-05-19T14:43:03.614257",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/skyhouse.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -2295,9 +2819,12 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-07-26/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868648",
+      "scraped_at": "2026-05-19T14:43:03.614297",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2309,9 +2836,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-27/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868743",
+      "scraped_at": "2026-05-19T14:43:03.614377",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2323,9 +2856,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-29/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868831",
+      "scraped_at": "2026-05-19T14:43:03.614449",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Siebkens Live Music by Katalysst",
@@ -2337,10 +2876,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-katalysst-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868867",
+      "scraped_at": "2026-05-19T14:43:03.614479",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/valleyfox.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "IMSA Welcome Party",
@@ -2352,10 +2894,14 @@
       "link": "https://www.elkhartlake.com/event/imsa-welcome-party/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.868991",
+      "scraped_at": "2026-05-19T14:43:03.614581",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/imsa-welcome-party.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Siebkens Live Music by The Chocolateers",
@@ -2367,10 +2913,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-the-chocolateers-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869026",
+      "scraped_at": "2026-05-19T14:43:03.614609",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-chocolateers-1.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "Suzie & the Detonators",
@@ -2382,10 +2932,14 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-suzie-the-detonators-3/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869104",
+      "scraped_at": "2026-05-19T14:43:03.614673",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/suzie-osthoff-live-music.avif",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2397,9 +2951,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869155",
+      "scraped_at": "2026-05-19T14:43:03.614714",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2411,9 +2968,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-03/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869278",
+      "scraped_at": "2026-05-19T14:43:03.614812",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2425,9 +2988,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-05/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869359",
+      "scraped_at": "2026-05-19T14:43:03.614876",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -2439,9 +3008,12 @@
       "link": "https://www.elkhartlake.com/event/throttlestop-cars-coffee/2026-08-08/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869514",
+      "scraped_at": "2026-05-19T14:43:03.615004",
       "venue_name": "Throttlestop",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif",
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2453,9 +3025,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-08-08/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869562",
+      "scraped_at": "2026-05-19T14:43:03.615043",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -2467,9 +3042,12 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-08-08/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869608",
+      "scraped_at": "2026-05-19T14:43:03.615081",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Downtown Night: A Taste of Elkhart Lake",
@@ -2481,9 +3059,14 @@
       "link": "https://www.elkhartlake.com/event/downtown-night-a-taste-of-elkhart-lake/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869674",
+      "scraped_at": "2026-05-19T14:43:03.615138",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/downtown-night-elkhart-lake.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/downtown-night-elkhart-lake.avif",
+      "categories": [
+        "Music",
+        "Kids",
+        "Family"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2495,9 +3078,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-10/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869754",
+      "scraped_at": "2026-05-19T14:43:03.615203",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Siebkens Live Music by Sister Winchester",
@@ -2509,10 +3098,13 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-sister-winchester-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869788",
+      "scraped_at": "2026-05-19T14:43:03.615231",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/sister-winchester-1-e1752155680252.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2524,9 +3116,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-12/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869866",
+      "scraped_at": "2026-05-19T14:43:03.615294",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2538,9 +3136,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-08-15/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.869958",
+      "scraped_at": "2026-05-19T14:43:03.615366",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2552,9 +3153,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-17/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870038",
+      "scraped_at": "2026-05-19T14:43:03.615428",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2566,9 +3173,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-19/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870116",
+      "scraped_at": "2026-05-19T14:43:03.615492",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2580,9 +3193,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-08-22/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870198",
+      "scraped_at": "2026-05-19T14:43:03.615558",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -2594,9 +3210,12 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-08-22/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870244",
+      "scraped_at": "2026-05-19T14:43:03.615597",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2608,9 +3227,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-24/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870323",
+      "scraped_at": "2026-05-19T14:43:03.615661",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2622,9 +3247,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-26/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870402",
+      "scraped_at": "2026-05-19T14:43:03.615722",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "GT Parade and Welcome Party",
@@ -2636,10 +3267,18 @@
       "link": "https://www.elkhartlake.com/event/gt-parade-and-welcome-party/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870482",
+      "scraped_at": "2026-05-19T14:43:03.615784",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/528040139_1777525296207135_8713793072170812499_n-e1755005760937.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports",
+        "Family"
+      ],
+      "facets": [
+        "Free"
+      ]
     },
     {
       "title": "Siebkens Live Music by Burgundy Ties",
@@ -2651,10 +3290,14 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-burgundy-ties-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870519",
+      "scraped_at": "2026-05-19T14:43:03.615814",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/burgundy-ties-siebkens.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Sports"
+      ]
     },
     {
       "title": "GT World Challenge America",
@@ -2666,10 +3309,13 @@
       "link": "https://www.elkhartlake.com/event/gt-world-challenge-america/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870600",
+      "scraped_at": "2026-05-19T14:43:03.615875",
       "end_date": "2026-08-30",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2681,9 +3327,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-08-29/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870685",
+      "scraped_at": "2026-05-19T14:43:03.615942",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2695,9 +3344,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-31/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870769",
+      "scraped_at": "2026-05-19T14:43:03.616002",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2709,9 +3364,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-02/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870837",
+      "scraped_at": "2026-05-19T14:43:03.616062",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2723,9 +3384,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-09-05/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870877",
+      "scraped_at": "2026-05-19T14:43:03.616100",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2737,9 +3401,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-07/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.870945",
+      "scraped_at": "2026-05-19T14:43:03.616162",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2751,9 +3421,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-09/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.871014",
+      "scraped_at": "2026-05-19T14:43:03.616233",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -2765,9 +3441,12 @@
       "link": "https://www.elkhartlake.com/event/throttlestop-cars-coffee/2026-09-12/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.871107",
+      "scraped_at": "2026-05-19T14:43:03.616329",
       "venue_name": "Throttlestop",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif",
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2779,9 +3458,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-09-12/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.871148",
+      "scraped_at": "2026-05-19T14:43:03.616367",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -2793,9 +3475,12 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-09-12/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.871188",
+      "scraped_at": "2026-05-19T14:43:03.616411",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2807,9 +3492,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-14/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:41.871258",
+      "scraped_at": "2026-05-19T14:43:03.616498",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2821,9 +3512,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-16/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.009673",
+      "scraped_at": "2026-05-19T14:43:03.789179",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Art on Wheels Vintage Weekend with VSCDA",
@@ -2835,10 +3532,13 @@
       "link": "https://www.elkhartlake.com/event/art-on-wheels-vintage-weekend-with-vscda/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.009769",
+      "scraped_at": "2026-05-19T14:43:03.789276",
       "end_date": "2026-09-20",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/ariens-art-on-wheels-road-america-1.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/ariens-art-on-wheels-road-america-1.avif",
+      "categories": [
+        "Sports"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2850,9 +3550,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-09-19/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.009830",
+      "scraped_at": "2026-05-19T14:43:03.789338",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Elktoberfest Wine & Beer Run 5K",
@@ -2864,9 +3567,12 @@
       "link": "https://www.elkhartlake.com/event/elktoberfest-wine-beer-run-5k/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.009893",
+      "scraped_at": "2026-05-19T14:43:03.789400",
       "venue_name": "Vintage Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/Facebook-Cover-Event-Header-Banner-Birthday-Party-Invitation-Invite.png"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/Facebook-Cover-Event-Header-Banner-Birthday-Party-Invitation-Invite.png",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Elktoberfest",
@@ -2878,10 +3584,16 @@
       "link": "https://www.elkhartlake.com/event/elktoberfest/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.009950",
+      "scraped_at": "2026-05-19T14:43:03.789452",
       "venue_name": "Elkhart Lake",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/485881709_1078310650989563_2450560291702216146_n.avif",
-      "series": "Siebkens Live Music"
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Food & Drink",
+        "Outdoor",
+        "Family"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2893,9 +3605,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-21/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010042",
+      "scraped_at": "2026-05-19T14:43:03.789541",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2907,9 +3625,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-23/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010127",
+      "scraped_at": "2026-05-19T14:43:03.789618",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2921,9 +3645,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-09-26/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010179",
+      "scraped_at": "2026-05-19T14:43:03.789667",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -2935,9 +3662,12 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-09-26/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010228",
+      "scraped_at": "2026-05-19T14:43:03.789723",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2949,9 +3679,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-28/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010310",
+      "scraped_at": "2026-05-19T14:43:03.789809",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2963,9 +3699,15 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-30/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010418",
+      "scraped_at": "2026-05-19T14:43:03.789882",
       "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2977,9 +3719,12 @@
       "link": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-10-03/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010522",
+      "scraped_at": "2026-05-19T14:43:03.789970",
       "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif"
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -2991,10 +3736,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-04/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010655",
+      "scraped_at": "2026-05-19T14:43:03.790080",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -3006,10 +3754,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-05/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010772",
+      "scraped_at": "2026-05-19T14:43:03.790183",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -3021,10 +3772,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-06/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.010888",
+      "scraped_at": "2026-05-19T14:43:03.790284",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -3036,10 +3790,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-07/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.011000",
+      "scraped_at": "2026-05-19T14:43:03.790384",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -3051,10 +3808,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-08/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.011112",
+      "scraped_at": "2026-05-19T14:43:03.790483",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -3066,10 +3826,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-09/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.011221",
+      "scraped_at": "2026-05-19T14:43:03.790583",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -3081,10 +3844,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-10/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.011333",
+      "scraped_at": "2026-05-19T14:43:03.790741",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -3096,10 +3862,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-11/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.011445",
+      "scraped_at": "2026-05-19T14:43:03.790879",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -3111,10 +3880,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-12/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.011556",
+      "scraped_at": "2026-05-19T14:43:03.790978",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -3126,10 +3898,13 @@
       "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-13/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-19T14:25:42.011668",
+      "scraped_at": "2026-05-19T14:43:03.791080",
       "venue_name": "The Osthoff Resort &#038; Spa",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8"
+      "price": "$8",
+      "categories": [
+        "Wellness"
+      ]
     },
     {
       "title": "Gluten-Free Cooking",
@@ -3141,8 +3916,11 @@
       "link": "https://osthoff.com/event/gluten-free-cooking/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.251038",
-      "image_url": "https://osthoff.com/wp-content/uploads/GLUTEN.jpg"
+      "scraped_at": "2026-05-19T14:43:04.210114",
+      "image_url": "https://osthoff.com/wp-content/uploads/GLUTEN.jpg",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Sushi Making",
@@ -3154,8 +3932,11 @@
       "link": "https://osthoff.com/event/sushi-making-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.251229",
-      "image_url": "https://osthoff.com/wp-content/uploads/SUSHI-1.jpg"
+      "scraped_at": "2026-05-19T14:43:04.210244",
+      "image_url": "https://osthoff.com/wp-content/uploads/SUSHI-1.jpg",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Summer Cocktail Making Class",
@@ -3167,8 +3948,11 @@
       "link": "https://osthoff.com/event/summer-cocktail-making-class/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.251367",
-      "image_url": "https://osthoff.com/wp-content/uploads/SUMMER.jpg"
+      "scraped_at": "2026-05-19T14:43:04.210335",
+      "image_url": "https://osthoff.com/wp-content/uploads/SUMMER.jpg",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Pasta III",
@@ -3180,8 +3964,11 @@
       "link": "https://osthoff.com/event/pasta-iii/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.251471",
-      "image_url": "https://osthoff.com/wp-content/uploads/PASTA3-scaled.png"
+      "scraped_at": "2026-05-19T14:43:04.210402",
+      "image_url": "https://osthoff.com/wp-content/uploads/PASTA3-scaled.png",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Argentine Steak and Sausage",
@@ -3193,8 +3980,11 @@
       "link": "https://osthoff.com/event/argentine-steak-and-sausage/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.251677",
-      "image_url": "https://osthoff.com/wp-content/uploads/ARG-scaled.png"
+      "scraped_at": "2026-05-19T14:43:04.210566",
+      "image_url": "https://osthoff.com/wp-content/uploads/ARG-scaled.png",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Persian Style Rice and Kabob",
@@ -3206,8 +3996,11 @@
       "link": "https://osthoff.com/event/persian-style-rice-and-kabob/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.251877",
-      "image_url": "https://osthoff.com/wp-content/uploads/KABOB-scaled.png"
+      "scraped_at": "2026-05-19T14:43:04.210966",
+      "image_url": "https://osthoff.com/wp-content/uploads/KABOB-scaled.png",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Until Dawn",
@@ -3219,9 +4012,12 @@
       "link": "https://osthoff.com/event/until-dawn/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.251913",
+      "scraped_at": "2026-05-19T14:43:04.211037",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Until-Dawn-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Paella Dinner",
@@ -3233,8 +4029,11 @@
       "link": "https://osthoff.com/event/paella-dinner/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252073",
-      "image_url": "https://osthoff.com/wp-content/uploads/PAELLA-scaled.png"
+      "scraped_at": "2026-05-19T14:43:04.211270",
+      "image_url": "https://osthoff.com/wp-content/uploads/PAELLA-scaled.png",
+      "categories": [
+        "Community"
+      ]
     },
     {
       "title": "Mark Croft Band",
@@ -3246,9 +4045,12 @@
       "link": "https://osthoff.com/event/mark-croft-band/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252109",
+      "scraped_at": "2026-05-19T14:43:04.211313",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Mark-Croft-Band-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Abler McManus",
@@ -3260,9 +4062,12 @@
       "link": "https://osthoff.com/event/abler-mcmanus/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252144",
+      "scraped_at": "2026-05-19T14:43:04.211354",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Abler-McManus-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Abler McManus",
@@ -3274,9 +4079,12 @@
       "link": "https://osthoff.com/event/abler-mcmanus-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252438",
+      "scraped_at": "2026-05-19T14:43:04.211625",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Abler-McManus-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "That 90s Band",
@@ -3288,9 +4096,12 @@
       "link": "https://osthoff.com/event/that-90s-band/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252509",
+      "scraped_at": "2026-05-19T14:43:04.211679",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_That-90s-Band-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Burgundy Ties Band",
@@ -3302,9 +4113,12 @@
       "link": "https://osthoff.com/event/burgundy-ties-band/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252768",
+      "scraped_at": "2026-05-19T14:43:04.211878",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Burgundy-Ties-Band-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "The Third Wheels",
@@ -3316,9 +4130,12 @@
       "link": "https://osthoff.com/event/the-third-wheels/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252843",
+      "scraped_at": "2026-05-19T14:43:04.211936",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Third-Wheels-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Rob Anthony",
@@ -3330,9 +4147,12 @@
       "link": "https://osthoff.com/event/rob-anthony/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252879",
+      "scraped_at": "2026-05-19T14:43:04.211964",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Rob-Anthony-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "The Abler Boys",
@@ -3344,9 +4164,12 @@
       "link": "https://osthoff.com/event/the-abler-boys-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252915",
+      "scraped_at": "2026-05-19T14:43:04.211992",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Abler-Boys-1-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Bazooka Joe",
@@ -3358,9 +4181,12 @@
       "link": "https://osthoff.com/event/bazooka-joe/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.252951",
+      "scraped_at": "2026-05-19T14:43:04.212019",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Bazooka-Joe-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Fire on High",
@@ -3372,9 +4198,12 @@
       "link": "https://osthoff.com/event/fire-on-high/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.445884",
+      "scraped_at": "2026-05-19T14:43:04.408819",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Fire-on-High-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Alex Simmons / Jon Prigge",
@@ -3386,9 +4215,12 @@
       "link": "https://osthoff.com/event/alex-simmons-jon-prigge/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.445951",
+      "scraped_at": "2026-05-19T14:43:04.408935",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Alex-Simmons_Jon-Prigge-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Jacob Fannin",
@@ -3400,9 +4232,12 @@
       "link": "https://osthoff.com/event/jacob-fannin/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.445994",
+      "scraped_at": "2026-05-19T14:43:04.408989",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Jacob-Fannin-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Bowser",
@@ -3414,9 +4249,12 @@
       "link": "https://osthoff.com/event/bowser-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446040",
+      "scraped_at": "2026-05-19T14:43:04.409033",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Bowser-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Brent Bel & The Boys",
@@ -3428,9 +4266,12 @@
       "link": "https://osthoff.com/event/brent-bel-the-boys-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446098",
+      "scraped_at": "2026-05-19T14:43:04.409090",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Brent-Bel-the-Boys-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Wisco Daddy \u2013 aka McManus Duo",
@@ -3442,9 +4283,12 @@
       "link": "https://osthoff.com/event/wisco-daddy-aka-mcmanus-duo/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446150",
+      "scraped_at": "2026-05-19T14:43:04.409140",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Wisco-Daddy-AKA-MCMANUS-DUO-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Abler McManus",
@@ -3456,9 +4300,12 @@
       "link": "https://osthoff.com/event/abler-mcmanus-3/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446191",
+      "scraped_at": "2026-05-19T14:43:04.409184",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Abler-McManus-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Cold Soda Club",
@@ -3470,9 +4317,12 @@
       "link": "https://osthoff.com/event/cold-soda-club/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446234",
+      "scraped_at": "2026-05-19T14:43:04.409226",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Cold-Soda-Club-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Dirty Boogie",
@@ -3484,9 +4334,12 @@
       "link": "https://osthoff.com/event/dirty-boogie/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446277",
+      "scraped_at": "2026-05-19T14:43:04.409269",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Dirty-Boogie-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Gene Gruber",
@@ -3498,9 +4351,12 @@
       "link": "https://osthoff.com/event/gene-gruber/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446318",
+      "scraped_at": "2026-05-19T14:43:04.409312",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Gene-Gruber-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Sadie Acoustic Duo",
@@ -3512,9 +4368,12 @@
       "link": "https://osthoff.com/event/sadie-acoustic-duo/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446362",
+      "scraped_at": "2026-05-19T14:43:04.409355",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Sadie-Acoustic-Duo-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Bad Habitz",
@@ -3526,9 +4385,12 @@
       "link": "https://osthoff.com/event/bad-habitz/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446403",
+      "scraped_at": "2026-05-19T14:43:04.409398",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Bad-Habitz-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Breaking Cadence",
@@ -3540,9 +4402,12 @@
       "link": "https://osthoff.com/event/breaking-cadence-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446446",
+      "scraped_at": "2026-05-19T14:43:04.409440",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Breaking-Cadence-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "The Abler Boys",
@@ -3554,9 +4419,12 @@
       "link": "https://osthoff.com/event/the-abler-boys-3/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446490",
+      "scraped_at": "2026-05-19T14:43:04.409487",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Abler-Boys-1-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "The \u2018Tones",
@@ -3568,9 +4436,12 @@
       "link": "https://osthoff.com/event/the-tones-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446534",
+      "scraped_at": "2026-05-19T14:43:04.409584",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Tones-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "The Empty Vees",
@@ -3582,9 +4453,12 @@
       "link": "https://osthoff.com/event/the-empty-vees/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446583",
+      "scraped_at": "2026-05-19T14:43:04.409633",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_The-Empty-Vees-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Maddie Jo Band",
@@ -3596,9 +4470,12 @@
       "link": "https://osthoff.com/event/maddie-jo-band/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-05-19T14:25:42.446625",
+      "scraped_at": "2026-05-19T14:43:04.409666",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Maddie-Jo-Band-scaled.png",
-      "series": "The Osthoff Lake Deck"
+      "series": "The Osthoff Lake Deck",
+      "categories": [
+        "Music"
+      ]
     },
     {
       "title": "Views Navigation",
@@ -3608,7 +4485,10 @@
       "link": "https://elkhartlakewi.gov/calendar/list/",
       "source": "Village of Elkhart Lake",
       "source_url": "https://elkhartlakewi.gov/calendar/",
-      "scraped_at": "2026-05-19T14:25:53.414947"
+      "scraped_at": "2026-05-19T14:43:14.111744",
+      "categories": [
+        "Community"
+      ]
     }
   ]
 }
