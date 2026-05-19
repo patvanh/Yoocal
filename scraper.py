@@ -1627,7 +1627,30 @@ def main():
         print(f"  [MTM] scraper failed: {ex}")
     all_events += scrape_eventbrite()
     all_events += scrape_running_in_the_usa()
-    all_events += scrape_park_record()
+    # Park Record: use the CitySpark API (the data source behind
+    # parkrecord.com/calendar/). The old HTML-walker is kept as a fallback
+    # in case the API ever changes shape.
+    try:
+        from park_record_cityspark_scraper import scrape_park_record_cityspark
+        pr_events = scrape_park_record_cityspark()
+        if pr_events:
+            all_events += pr_events
+        else:
+            print("  [Park Record/CitySpark] returned 0 — falling back to legacy HTML scraper")
+            all_events += scrape_park_record()
+    except Exception as ex:
+        print(f"  [Park Record/CitySpark] failed: {ex} — falling back")
+        all_events += scrape_park_record()
+    try:
+        from pc_recurring_locals import scrape_recurring_locals
+        all_events += scrape_recurring_locals()
+    except Exception as ex:
+        print(f"  [recurring_locals] skipped: {ex}")
+    try:
+        from park_silly_scraper import scrape_park_silly
+        all_events += scrape_park_silly()
+    except Exception as ex:
+        print(f"  [park_silly] skipped: {ex}")
     all_events += scrape_google_events()
     all_events += scrape_utah_com()
     all_events += scrape_arts_council()
