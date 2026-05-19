@@ -1,44 +1,23 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useSearchParams, useRouter } from "next/navigation"
+import { useSearchParams } from "next/navigation"
 import CalendarClient from "@/components/CalendarClient"
 import HomeBrand from "@/components/HomeBrand"
 
 /**
- * Decides which homepage view to render:
- *  - If ?city=... is in the URL, show the calendar.
- *  - Else if a returning visitor has yoocal.lastCity in localStorage, redirect
- *    to that city so they skip the brand page.
- *  - Else show the brand landing page (city picker + search).
+ * Bare / always renders the brand homepage. ?city=foo renders the calendar
+ * for that city. No localStorage-based redirects — the bare root is always
+ * brand for every visitor.
  */
 export default function HomeRouter() {
   const params = useSearchParams()
-  const router = useRouter()
   const [view, setView] = useState<"loading" | "brand" | "calendar">("loading")
 
   useEffect(() => {
-    // Server-rendered query param has priority
     const cityParam = params.get("city")
-    if (cityParam) {
-      setView("calendar")
-      return
-    }
-    // Returning-visitor shortcut
-    try {
-      const last =
-        typeof window !== "undefined"
-          ? window.localStorage.getItem("yoocal.lastCity")
-          : null
-      if (last) {
-        router.replace(`/?city=${last}`)
-        return
-      }
-    } catch {
-      // localStorage blocked — fall through to brand view
-    }
-    setView("brand")
-  }, [params, router])
+    setView(cityParam ? "calendar" : "brand")
+  }, [params])
 
   if (view === "loading") {
     return (
