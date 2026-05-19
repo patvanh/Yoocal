@@ -93,6 +93,9 @@ jobs:
           PC="${{ steps.scrape_pc.outcome }}"
           HEBER="${{ steps.scrape_heber.outcome }}"
           ELKHART="${{ steps.scrape_elkhart.outcome }}"
+          JACKSON="${{ steps.scrape_jackson.outcome }}"
+          REPAIR="${{ steps.auto_repair.outcome }}"
+          AUDIT="${{ steps.audit.outcome }}"
 
           {
             echo "## 🗓️ Daily scrape summary"
@@ -102,9 +105,9 @@ jobs:
             echo "| Park City | ${PC} |"
             echo "| Heber Valley | ${HEBER} |"
             echo "| Elkhart Lake | ${ELKHART} |"
-            echo "| Jackson Hole | ${{ steps.scrape_jackson.outcome }} |"
-            echo "| Auto-repair | ${{ steps.auto_repair.outcome }} |"
-            echo "| Quality audit | ${{ steps.audit.outcome }} |"
+            echo "| Jackson Hole | ${JACKSON} |"
+            echo "| Auto-repair | ${REPAIR} |"
+            echo "| Quality audit | ${AUDIT} |"
             echo ""
             if [ -f audit_issues.json ]; then
               echo "### Quality audit summary"
