@@ -935,27 +935,207 @@ def scrape_osthoff_calendar():
 # ─────────────────────────────────────────────
 # DEDUP & SAVE
 # ─────────────────────────────────────────────
-def deduplicate(events):
-    # Sort: prefer Siebkens/elkhartlake.com over generic sources
-    source_priority = {"Siebkens Resort": 0, "Elkhart Lake Tourism": 1, "Road America": 2, "Google Events": 3}
-    events.sort(key=lambda e: source_priority.get(e.get("source", ""), 99))
+def _normalize_title_for_match(title: str) -> str:
+    """Strip series/venue prefixes and parenthetical suffixes so we can match
+    "Bazooka Joe" (osthoff.com) against "The Osthoff Lake Deck Live Music by
+    Bazooka Joe" (elkhartlake.com). Returns the bare act name."""
+    if not title:
+        return ""
+    t = re.sub(r"\s+", " ", title.lower().strip())
+    # Drop parenthetical event suffixes like "(IMSA Wknd)", "(Indycar Wknd)"
+    t = re.sub(r"\s*\([^)]*\)\s*$", "", t)
+    # Drop common series/venue prefixes
+    prefixes = [
+        r"the osthoff lake deck live music by\s+",
+        r"osthoff lake deck live music by\s+",
+        r"siebkens summer concert series:?\s*",
+        r"siebkens summer concert:?\s*",
+        r"siebkens live music by\s+",
+        r"siebkens live music:?\s*",
+        r"siebkens live music featuring\s+",
+        r"live music in the elk room:?\s*featuring\s+",
+        r"live music by\s+",
+        r"live music featuring\s+",
+        r"indycar wknd live music:?\s*",
+        r"motoamerica wknd live music:?\s*",
+        r"imsa w(ee)?k(end)?\s+live music:?\s*",
+        r"vintage wknd live music:?\s*",
+        r"gt world challenge live music:?\s*",
+        r"downtown night live music:?\s*",
+    ]
+    for prefix in prefixes:
+        new_t = re.sub(r"^" + prefix, "", t)
+        if new_t != t:
+            t = new_t
+            break  # only strip one prefix
+    # Strip leading punctuation/quotes
+    t = re.sub(r"^[\(\"\'\-\s]+", "", t).strip()
+    return t
 
-    seen = set()
-    unique = []
+
+def _series_label_from_record(rec: dict) -> str:
+    """Detect which performance series a record belongs to. Checks title,
+    venue, location, and description — important for Osthoff API records
+    where the title is just the act name ("Bazooka Joe"), the venue is
+    empty, and the series ("Live Music at The Lake Deck") is buried in the
+    description prose."""
+    text = " ".join([
+        str(rec.get("title") or ""),
+        str(rec.get("venue_name") or ""),
+        str(rec.get("location") or ""),
+        str(rec.get("description") or ""),
+    ]).lower()
+    if "lake deck" in text:
+        return "The Osthoff Lake Deck"
+    if "elk room" in text:
+        return "The Elk Room at Osthoff"
+    if "siebkens" in text:
+        return "Siebkens Live Music"
+    return ""
+
+
+def _series_label(title: str) -> str:
+    """Legacy title-only series detection (kept for backwards compat)."""
+    return _series_label_from_record({"title": title})
+
+
+def _merge_duplicate_events(records: list) -> dict:
+    """Given multiple records that all refer to the same event (same date,
+    same normalized title, same start_time), produce a single merged record.
+
+    Strategy:
+      - Title: prefer the shortest non-empty title (cleanest act name)
+      - Description: prefer the longest
+      - Venue / location / address: prefer the most specific
+      - Image: prefer the first non-empty
+      - Categories: union all
+      - Source: prefer the highest-priority source (elkhartlake.com > Osthoff > Siebkens > Google Events)
+      - Series: add a `series` field if we detect the act is part of a known
+        venue's series (Lake Deck, Siebkens, Elk Room)
+    """
+    source_priority = {
+        "Elkhart Lake Tourism": 0,
+        "The Osthoff Resort": 1,
+        "Siebkens Resort": 2,
+        "Road America": 3,
+        "Google Events": 9,
+        "Eventbrite": 9,
+        "AllEvents": 9,
+    }
+
+    # Pick a base record: the one with the most-specific source priority that
+    # also has a real description, to maximize information preserved.
+    base = sorted(
+        records,
+        key=lambda e: (
+            source_priority.get(e.get("source", ""), 99),
+            -len(e.get("description") or ""),
+        ),
+    )[0]
+
+    merged = dict(base)
+
+    # Title: shortest non-empty title that's not just the series name
+    candidates = []
+    for r in records:
+        t = (r.get("title") or "").strip()
+        if t and len(t) > 3 and "lake deck" not in t.lower()[:20]:
+            candidates.append(t)
+    if not candidates:
+        candidates = [r.get("title") or "" for r in records if r.get("title")]
+    if candidates:
+        # Pick the cleanest shortest title — usually that's the act name
+        # without the venue/series wrapper.
+        candidates.sort(key=lambda t: (len(t), t))
+        merged["title"] = candidates[0]
+
+    # Description: longest
+    descs = [r.get("description") or "" for r in records]
+    descs.sort(key=lambda d: -len(d))
+    if descs and descs[0]:
+        merged["description"] = descs[0]
+
+    # Image: first non-empty
+    for r in records:
+        if r.get("image_url"):
+            merged["image_url"] = r["image_url"]
+            break
+
+    # Venue / address: most specific (longest non-empty)
+    for field in ("venue_name", "address", "location"):
+        candidates = [r.get(field) for r in records if r.get(field)]
+        candidates.sort(key=lambda v: -len(v))
+        if candidates:
+            merged[field] = candidates[0]
+
+    # Categories: union (preserve order)
+    cats: list = []
+    for r in records:
+        for c in r.get("categories") or []:
+            if c not in cats:
+                cats.append(c)
+    if cats:
+        merged["categories"] = cats
+
+    # Link: prefer the one matching the canonical source we picked
+    base_source = merged.get("source", "")
+    for r in records:
+        if r.get("source") == base_source and r.get("link"):
+            merged["link"] = r["link"]
+            break
+
+    # Series label: check title, venue, and location of any input record.
+    for r in records:
+        series = _series_label_from_record(r)
+        if series:
+            merged["series"] = series
+            break
+
+    return merged
+
+
+def deduplicate(events):
+    """Merge-aware dedup. Groups by (date, normalized_title, start_time) and
+    consolidates duplicate records into one enriched entry."""
+    groups: dict = {}
     for e in events:
-        title = re.sub(r'\s+', ' ', e["title"].lower().strip())
-        # Strip common prefixes like "siebkens summer concert:", "siebkens live music by:", etc
-        title_clean = re.sub(r'^(siebkens\s+(summer\s+)?concert\s*(series)?:?\s*|siebkens\s+live\s+music\s+(by\s+|featuring\s+)?|live\s+music\s+(in\s+the\s+elk\s+room\s*:?\s*featuring\s+|by\s+|featuring\s+)?|indycar\s+wknd\s+live\s+music\s*:\s*|motoamerica\s+wknd\s+live\s+music\s*:\s*|imsa\s+w(ee)?k(end)?\s+live\s+music\s*:\s*|vintage\s+wknd\s+live\s+music\s*:\s*|gt\s+world\s+challenge\s+live\s+music\s*:\s*|downtown\s+night\s+live\s+music\s*:\s*)', '', title).strip()
-        # Also strip leading punctuation
-        title_clean = re.sub(r'^[\(\"\'\-\s]+', '', title_clean)[:35]
-        date = e.get("date", "")[:10]
-        key = f"{title_clean}|{date}"
-        if key not in seen:
-            seen.add(key)
-            unique.append(e)
+        date = (e.get("date") or "")[:10]
+        norm_title = _normalize_title_for_match(e.get("title", ""))[:50]
+        start_time = (e.get("start_time") or "").strip().lower()
+        # Some Google Events records have no start_time but the same act
+        # might have one elsewhere. Match more loosely if start_time is empty.
+        key = (date, norm_title, start_time)
+        groups.setdefault(key, []).append(e)
+
+    unique = []
+    merged_count = 0
+    for key, records in groups.items():
+        if len(records) == 1:
+            # Still tag single records with their series (helps Osthoff-only
+            # records show the Lake Deck badge).
+            rec = dict(records[0])
+            series = _series_label_from_record(rec)
+            if series:
+                rec["series"] = series
+            unique.append(rec)
+        else:
+            unique.append(_merge_duplicate_events(records))
+            merged_count += len(records) - 1
+
+    if merged_count:
+        print(f"  [dedup] merged {merged_count} duplicate records into existing entries")
     return unique
 
 def save_events(events, filename="public/events-elkhartlake.json"):
+    # Drop records with non-ISO dates. These are usually UI chrome
+    # ("Login", "Need help?") that fragile HTML scrapers grabbed as events,
+    # or records where the date field couldn't be parsed (e.g. "See website").
+    import re as _re
+    before = len(events)
+    events = [e for e in events if _re.match(r"^\d{4}-\d{2}-\d{2}$", str(e.get("date","")))]
+    dropped = before - len(events)
+    if dropped:
+        print(f"  [save_events] dropped {dropped} records with non-ISO dates")
     output = {
         "updated_at": datetime.now().isoformat(),
         "total": len(events),
@@ -978,12 +1158,42 @@ def main():
     all_events = []
     all_events += scrape_road_america()
     all_events += scrape_siebkens_known()
-    browser_scraped = scrape_elkhartlake_browser_json()
-    if browser_scraped:
-        all_events += browser_scraped
-    else:
-        all_events += scrape_elkhartlake_known()
-    all_events += scrape_elkhartlake_com()
+    # Elkhart Lake 2026 Major Events poster — curated annuals.
+    try:
+        from elkhart_recurring_locals import scrape_elkhart_recurring_locals
+        all_events += scrape_elkhart_recurring_locals()
+    except Exception as ex:
+        print(f"  [elkhart_recurring_locals] skipped: {ex}")
+    # elkhartlake.com via the Tribe REST API (the data source behind the
+    # public tourism calendar). This replaces the old HTML scrape +
+    # hardcoded events list which produced "See website" date entries.
+    try:
+        from elkhart_tribe_api_scraper import scrape_elkhartlake_tribe_api, scrape_osthoff_tribe_api
+        elk_tribe = scrape_elkhartlake_tribe_api()
+        if elk_tribe:
+            all_events += elk_tribe
+        else:
+            print("  [Elkhart/Tribe] returned 0 — falling back to legacy hardcoded list")
+        # Osthoff publishes its own calendar (Tribe REST) with Aug+Sept Lake
+        # Deck shows that elkhartlake.com hasn't syndicated yet.
+        try:
+            osth_tribe = scrape_osthoff_tribe_api()
+            if osth_tribe:
+                all_events += osth_tribe
+        except Exception as ex2:
+            print(f"  [Osthoff/Tribe] failed: {ex2}")
+    except Exception as ex:
+        print(f"  [Elkhart/Tribe] failed: {ex} — falling back to hardcoded list")
+        elk_tribe = []
+    # Legacy paths — only used if Tribe API returned nothing (i.e. the API
+    # changed or the site is down).
+    if not elk_tribe:
+        browser_scraped = scrape_elkhartlake_browser_json()
+        if browser_scraped:
+            all_events += browser_scraped
+        else:
+            all_events += scrape_elkhartlake_known()
+        all_events += scrape_elkhartlake_com()
     all_events += scrape_siebkens()
     all_events += scrape_visit_sheboygan()
     all_events += scrape_osthoff()
