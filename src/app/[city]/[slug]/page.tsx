@@ -18,13 +18,28 @@ interface Props {
   params: Promise<{ city: string; slug: string }>
 }
 
-// Pre-generate all event pages at build time
+// Hybrid SSG: pre-build only the next 14 days of events (~600-800 pages).
+// Events further out are rendered on demand and cached by Vercel. This
+// keeps deploys under ~2 minutes while preserving SEO/perf for the events
+// users are most likely to click.
+export const dynamicParams = true  // allow on-demand rendering for non-prebuilt slugs
+
 export async function generateStaticParams() {
   const allEvents = getAllEventsWithCity()
-  return allEvents.map((e) => ({
-    city: e.citySlug,
-    slug: eventSlug(e),
-  }))
+  const today = new Date().toISOString().slice(0, 10)
+  const horizon = new Date()
+  horizon.setDate(horizon.getDate() + 14)
+  const horizonStr = horizon.toISOString().slice(0, 10)
+
+  return allEvents
+    .filter((e) => {
+      const date = (e.date || '').slice(0, 10)
+      return /^\d{4}-\d{2}-\d{2}$/.test(date) && date >= today && date <= horizonStr
+    })
+    .map((e) => ({
+      city: e.citySlug,
+      slug: eventSlug(e),
+    }))
 }
 
 // Generate SEO metadata per event

@@ -52,7 +52,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/submit`, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
-  // Event pages — only future events, dedup by slug
+  // Event pages — only future events within a 90-day window, dedup by slug.
+  // 90 days balances SEO coverage (search engines crawl upcoming events)
+  // with build speed. Events past the horizon are still accessible at their
+  // canonical URLs, just not listed in the sitemap.
+  const horizon = new Date();
+  horizon.setDate(horizon.getDate() + 90);
+  const horizonStr = horizon.toISOString().slice(0, 10);
+
   const eventPages: MetadataRoute.Sitemap = [];
   const seenSlugs = new Set<string>();
 
@@ -60,9 +67,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const events = loadEvents(file);
     for (const e of events) {
       const date = (e.date || '').slice(0, 10);
-      // Require ISO format YYYY-MM-DD; skip malformed or past dates
+      // Require ISO format YYYY-MM-DD; skip malformed, past, or far-future
       if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) continue;
       if (date < today) continue;
+      if (date > horizonStr) continue;
 
       const titleSlug = slugify(e.title || '');
       if (!titleSlug) continue;
