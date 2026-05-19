@@ -136,6 +136,14 @@ def main():
     deduped = deduplicate(all_events)
     print(f"After dedup: {len(deduped)}")
 
+    # Enrich Cloudveil's generic "King Concerts 2026" records with
+    # per-date band names scraped from snowkingmountain.com.
+    try:
+        from snow_king_concerts import enrich_king_concerts
+        enrich_king_concerts(deduped)
+    except Exception as ex:
+        print(f"  [Snow King] enrich skipped: {ex}")
+
     # Per-source breakdown
     from collections import Counter
     print("\nSources:")
