@@ -1695,7 +1695,11 @@ def main():
     all_events += scrape_google_events()
     all_events += scrape_utah_com()
     all_events += scrape_arts_council()
-    all_events += scrape_kpcw_and_cache_heber()
+    # KPCW dropped from PC — Tockify calendar duplicates events as multi-day
+    # promotional billboards (e.g. "Pools Grand Opening: June 6" appears on
+    # 5+ days leading up to the event). Heber events from KPCW are still
+    # cached via the call below for heber_scraper.py to pick up.
+    _ = scrape_kpcw_and_cache_heber()  # side effect only: caches Heber events to disk
     all_events += scrape_deer_valley_wrapper()
     all_events += scrape_park_city_institute_wrapper()
     all_events += scrape_park_city_trails_wrapper()
