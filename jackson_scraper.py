@@ -95,37 +95,128 @@ SINGLE_PAGE_SOURCES = [
 ]
 
 
+SOURCE_PRIORITY = {
+    "Grand Teton Music Festival": 0,
+    "Center for the Arts Jackson Hole": 0,
+    "National Museum of Wildlife Art": 0,
+    "Jackson Hole Chamber of Commerce": 1,
+    "The Cloudveil": 2,
+}
+
+
+def _jh_richness_score(e):
+    """Lower score = better record. Used to pick a merge base."""
+    score = 0
+    if e.get("start_time"):
+        score -= 2
+    if e.get("address"):
+        score -= 2
+    if e.get("description"):
+        score -= 1
+    if e.get("image_url"):
+        score -= 1
+    if e.get("end_time"):
+        score -= 1
+    if e.get("link"):
+        score -= 1
+    return score
+
+
+def _jh_norm_title(title: str) -> str:
+    """Normalize a title for dedup matching."""
+    import re
+    t = re.sub(r"\s+", " ", (title or "").lower().strip())
+    t = re.sub(r"^[\(\"\'\-\s]+", "", t)
+    t = re.sub(
+        r"\s*(-|\u2014|\u2013|\bwith\b|\bfeaturing\b|\bft\.?\b|\bpresented by\b).*$",
+        "", t,
+    ).strip()
+    if ":" in t:
+        t = t.split(":")[0].strip()
+    return t[:40]
+
+
+def _jh_merge_records(records: list) -> dict:
+    """Merge a group of duplicate records into one enriched entry."""
+    records.sort(key=lambda e: (
+        SOURCE_PRIORITY.get(e.get("source", ""), 99),
+        _jh_richness_score(e),
+    ))
+    base = records[0]
+    merged = dict(base)
+
+    # Longest title wins (more context preferred)
+    titles = [r.get("title") for r in records if r.get("title")]
+    if titles:
+        titles.sort(key=lambda t: (-len(t), t))
+        merged["title"] = titles[0]
+
+    # Longest description wins
+    descs = [r.get("description") or "" for r in records]
+    descs.sort(key=lambda d: -len(d))
+    if descs and descs[0]:
+        merged["description"] = descs[0]
+
+    # First non-empty image / end_time / link
+    for r in records:
+        if r.get("image_url"):
+            merged["image_url"] = r["image_url"]; break
+    for r in records:
+        if r.get("end_time"):
+            merged["end_time"] = r["end_time"]; break
+
+    # Longest venue / address / location
+    for field in ("venue_name", "address", "location"):
+        candidates = [r.get(field) for r in records if r.get(field)]
+        candidates.sort(key=lambda v: -len(v))
+        if candidates:
+            merged[field] = candidates[0]
+
+    # Categories: union preserving order
+    cats: list = []
+    for r in records:
+        for c in r.get("categories") or []:
+            if c not in cats:
+                cats.append(c)
+    if cats:
+        merged["categories"] = cats
+
+    # Facets: union
+    facets = set()
+    for r in records:
+        for f in r.get("facets") or []:
+            facets.add(f)
+    if facets:
+        merged["facets"] = sorted(facets)
+
+    return merged
+
+
 def deduplicate(events):
-    """Dedup by (title, date). Prefer events with start_time, then by source priority."""
-    source_priority = {
-        "Grand Teton Music Festival": 0,
-        "Center for the Arts Jackson Hole": 0,
-        "National Museum of Wildlife Art": 0,
-        "Jackson Hole Chamber of Commerce": 1,
-        "The Cloudveil": 2,
-    }
-    seen = {}
+    """Merge-aware dedup. Groups by (date, normalized_title) and merges
+    duplicate records into one enriched entry."""
+    groups: dict = {}
     for e in events:
-        title = (e.get("title") or "").lower().strip()[:40]
         date = (e.get("date") or "")[:10]
-        if not title or not date:
+        if not date or not e.get("title"):
             continue
-        key = (title, date)
-        existing = seen.get(key)
-        if existing is None:
-            seen[key] = e
-            continue
-        # Tiebreak: source priority first, then has-time, then longer description
-        e_pri = source_priority.get(e.get("source", ""), 99)
-        ex_pri = source_priority.get(existing.get("source", ""), 99)
-        if e_pri < ex_pri:
-            seen[key] = e
-        elif e_pri == ex_pri:
-            e_score = (1 if e.get("start_time") else 0) + len(e.get("description") or "") / 1000
-            ex_score = (1 if existing.get("start_time") else 0) + len(existing.get("description") or "") / 1000
-            if e_score > ex_score:
-                seen[key] = e
-    return sorted(seen.values(), key=lambda e: e.get("date", ""))
+        norm = _jh_norm_title(e["title"])
+        key = (date, norm)
+        groups.setdefault(key, []).append(e)
+
+    unique = []
+    merged_count = 0
+    for key, records in groups.items():
+        if len(records) == 1:
+            unique.append(records[0])
+        else:
+            unique.append(_jh_merge_records(records))
+            merged_count += len(records) - 1
+
+    if merged_count:
+        print(f"  [JH dedup] merged {merged_count} duplicate records into existing entries")
+
+    return sorted(unique, key=lambda e: e.get("date", ""))
 
 
 def main():
