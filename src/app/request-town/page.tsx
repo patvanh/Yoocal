@@ -48,6 +48,42 @@ function RequestTownInner() {
       <SiteNav />
       <div className="rt-page">
         <div className="rt-card">
+          {/* Chooser: event vs town request — matches /submit */}
+          <div style={{
+            display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12,
+            marginBottom: 32, padding: 6,
+            background: 'rgba(83,74,183,0.06)',
+            borderRadius: 16,
+          }}>
+            <a href="/submit" style={{
+              padding: '14px 18px',
+              borderRadius: 12,
+              textAlign: 'center',
+              fontWeight: 600,
+              fontSize: 14,
+              color: '#6B7280',
+              textDecoration: 'none',
+              transition: 'background 0.15s',
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.6)'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'transparent'; }}
+            >
+              📅 Submit an event
+            </a>
+            <div style={{
+              padding: '14px 18px',
+              background: 'white',
+              borderRadius: 12,
+              textAlign: 'center',
+              fontWeight: 600,
+              fontSize: 14,
+              color: '#1e1b3a',
+              boxShadow: '0 2px 6px rgba(83,74,183,0.08)',
+            }}>
+              📍 Request a new town
+            </div>
+          </div>
+
           <div className="rt-eyebrow">✦ Request a town</div>
           <h1>Tell us where you live.</h1>
           <p className="rt-sub">
