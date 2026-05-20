@@ -13,7 +13,7 @@ Validated on jacksonholechamber.com (250 URLs).
 from __future__ import annotations
 import re
 import time
-from datetime import datetime, date, timedelta
+from datetime import datetime, date, timedelta, timezone
 from typing import Optional
 from urllib.parse import urlparse
 import requests
@@ -123,7 +123,8 @@ def scrape_sitemap_events(
     if max_pages and len(urls) > max_pages:
         urls = urls[:max_pages]
 
-    today = datetime.utcnow().strftime("%Y-%m-%d")
+    _MOUNTAIN = timezone(timedelta(hours=-6))
+    today = datetime.now(_MOUNTAIN).strftime("%Y-%m-%d")
     events = []
     skipped = 0
     failed = 0

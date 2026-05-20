@@ -19,7 +19,10 @@ parser code. Adding a new tribe-events source = ~5 lines of config.
 import json
 from event_classifier import classify_events
 import sys
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+
+# Mountain Time for today_iso filtering
+MOUNTAIN = timezone(timedelta(hours=-6))
 from pathlib import Path
 from jhiff_scraper import scrape_jhiff
 

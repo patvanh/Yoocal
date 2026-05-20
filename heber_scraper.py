@@ -18,7 +18,10 @@ import re
 import os
 import urllib.request
 from bs4 import BeautifulSoup
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+
+# Mountain Time for today_iso filtering
+MOUNTAIN = timezone(timedelta(hours=-6))
 
 SERPAPI_KEY = os.environ.get("SERPAPI_KEY", "")
 

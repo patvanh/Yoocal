@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 import json
 from event_classifier import classify_events
 import re
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 def normalize_date_str(s):
     """Convert ISO datetime string to YYYY-MM-DD"""
@@ -153,7 +153,7 @@ def scrape_visit_park_city():
         total = r.json().get("docs", {}).get("count", 0)
         print(f"  Got {len(docs)} events (total available: {total})")
 
-        today_str = datetime.now().strftime("%Y-%m-%d")
+        today_str = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
         junk = ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'beauty & wellness']
         seen = set()
 
@@ -307,7 +307,7 @@ def scrape_visit_park_city():
                 stored = json.load(f_in)
             stored_vpc = [e for e in stored.get("events", []) if e.get("source") == "Visit Park City"]
             # Only keep future events from storage
-            today_iso = datetime.now().strftime("%Y-%m-%d")
+            today_iso = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
             future_stored = [e for e in stored_vpc if (e.get("date") or "")[:10] >= today_iso]
             # Dedup by title — prefer fresh events over stored
             seen_titles = {e.get("title", "").lower()[:40] for e in events}
@@ -795,7 +795,7 @@ def scrape_park_record():
         with ThreadPoolExecutor(max_workers=10) as executor:
             executor.map(fetch_event_detail, unique_links)
 
-        today_str = datetime.now().strftime("%Y-%m-%d")
+        today_str = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
         for item in all_extracted:
             title = item.get("title", "").strip()
             if not title or len(title) < 3: continue
@@ -1211,7 +1211,7 @@ def scrape_google_events():
                         continue
                     # Drop events whose date is in the past (Google sometimes
                     # returns stale data)
-                    today_iso = datetime.now().strftime("%Y-%m-%d")
+                    today_iso = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
                     if date < today_iso:
                         continue
                     start_time = extract_time_from_string(when)

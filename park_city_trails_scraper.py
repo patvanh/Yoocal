@@ -40,7 +40,10 @@ Public entry point:
 import requests
 import time
 import re
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+
+# Mountain Time for today_iso filtering
+MOUNTAIN = timezone(timedelta(hours=-6))
 
 API_URL = "https://parkcitytrails.org/"
 SOURCE_NAME = "Mountain Trails Foundation"
@@ -64,7 +67,7 @@ def scrape_park_city_trails():
 
     print(f"  Got {len(raw_events)} raw events from MTF API")
 
-    today_iso = datetime.now().strftime("%Y-%m-%d")
+    today_iso = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
     seen = set()
     dropped_past = 0
 

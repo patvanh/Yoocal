@@ -19,7 +19,10 @@ from __future__ import annotations
 
 import re
 import time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+
+# Mountain Time for today_iso filtering
+MOUNTAIN = timezone(timedelta(hours=-6))
 from typing import Iterable, List
 
 import requests
@@ -429,7 +432,7 @@ def scrape_park_record_cityspark(max_pages: int = 200) -> list:
     once.
     """
     print("Scraping Park Record (CitySpark API)...")
-    today_iso = datetime.now().strftime("%Y-%m-%d")
+    today_iso = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
     all_events: list = []
     seen_pids: set = set()
     pid_occurrence_count: dict = {}

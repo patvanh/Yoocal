@@ -20,7 +20,10 @@ from event_classifier import classify_events
 import re
 import os
 from bs4 import BeautifulSoup
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+
+# Mountain Time for today_iso filtering
+MOUNTAIN = timezone(timedelta(hours=-6))
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
