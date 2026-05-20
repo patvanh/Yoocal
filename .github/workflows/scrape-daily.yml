@@ -177,6 +177,8 @@ jobs:
           TODAY=$(TZ='America/Denver' date '+%Y-%m-%d')
           git commit -m "chore(data): daily scrape ${TODAY}" \
                      -m "Automated nightly scrape via GitHub Actions."
+          # Pull-rebase so manual pushes during the run don't cause race
+          git pull --rebase origin main || true
           git push
 
       - name: No changes to commit

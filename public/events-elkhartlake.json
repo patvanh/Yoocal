@@ -181,7 +181,8 @@
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -198,7 +199,8 @@
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -215,7 +217,8 @@
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -232,7 +235,8 @@
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -252,7 +256,8 @@
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -826,7 +831,6 @@
       "venue_name": "Elkhart Lake Depot & Village Square",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "categories": [
-        "Outdoor",
         "Food & Drink"
       ]
     },
@@ -837,8 +841,8 @@
       "venue_name": "Siebkens Resort",
       "description": "Annual motorcycle show at Siebkens during MotoAmerica weekend at Road America. Vintage and custom bikes on display.",
       "categories": [
-        "Sports",
-        "Music"
+        "Music",
+        "Sports"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -864,7 +868,6 @@
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/moto-america-road-america.avif",
       "categories": [
         "Sports",
-        "Festival",
         "Outdoor"
       ]
     },
@@ -877,7 +880,6 @@
       "description": "NTT IndyCar Series race weekend at Road America's historic 4-mile road course. The series' premier Wisconsin event.",
       "categories": [
         "Sports",
-        "Festival",
         "Education"
       ],
       "link": "https://www.elkhartlake.com/events/",
@@ -912,9 +914,8 @@
       "venue_name": "Elkhart Lake Lakefront & Fireman's Park",
       "description": "Annual Independence Day weekend fireworks over the lake plus the fireman's picnic. Family-friendly community tradition.",
       "categories": [
-        "Family",
-        "Festival",
-        "Outdoor"
+        "Outdoor",
+        "Family"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -951,7 +952,6 @@
       "venue_name": "Lake Street Cafe",
       "description": "Annual acoustic music festival featuring regional singer-songwriters and folk acts at Lake Street Cafe.",
       "categories": [
-        "Music",
         "Festival"
       ],
       "link": "https://www.elkhartlake.com/events/",
@@ -968,8 +968,11 @@
       "venue_name": "Downtown Elkhart Lake",
       "description": "Vintage racecar concours and parade through downtown Elkhart Lake during Vintage Weekend. Open to the public, free to attend.",
       "categories": [
+        "Arts",
         "Sports",
-        "Family"
+        "Outdoor",
+        "Family",
+        "Festival"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -988,7 +991,10 @@
       "venue_name": "Downtown Elkhart Lake",
       "description": "Vintage sportscar concours in downtown Elkhart Lake. Classic cars on display throughout the village.",
       "categories": [
-        "Sports"
+        "Arts",
+        "Sports",
+        "Outdoor",
+        "Festival"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -1015,8 +1021,7 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
       "categories": [
-        "Sports",
-        "Festival"
+        "Sports"
       ]
     },
     {
@@ -1026,7 +1031,6 @@
       "venue_name": "Downtown Elkhart Lake",
       "description": "Annual downtown street party in Elkhart Lake. Live music, food vendors, family activities.",
       "categories": [
-        "Festival",
         "Music",
         "Food & Drink",
         "Outdoor"
@@ -1081,8 +1085,8 @@
       "location": "Elkhart Lake, WI",
       "description": "Annual Elkhart Lake Oktoberfest celebration. German food, beer, music, and family activities downtown.",
       "categories": [
-        "Festival",
-        "Food & Drink"
+        "Food & Drink",
+        "Festival"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -1106,8 +1110,7 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
       "categories": [
-        "Sports",
-        "Festival"
+        "Sports"
       ]
     },
     {
@@ -1118,9 +1121,7 @@
       "venue_name": "The Osthoff Resort",
       "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
       "categories": [
-        "Festival",
-        "Family",
-        "Food & Drink"
+        "Community"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -1147,6 +1148,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1199,7 +1203,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -1258,6 +1263,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1278,6 +1286,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1331,7 +1342,8 @@
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-hard-left-moto-show.avif",
       "series": "Siebkens Live Music",
       "categories": [
-        "Music"
+        "Music",
+        "Festival"
       ]
     },
     {
@@ -1369,6 +1381,7 @@
       "series": "Siebkens Live Music",
       "categories": [
         "Music",
+        "Theater",
         "Sports"
       ]
     },
@@ -1390,6 +1403,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1410,6 +1426,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1542,6 +1561,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1562,6 +1584,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1650,7 +1675,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -1706,10 +1732,12 @@
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/swine-pink-wine-e1777482456613.avif",
       "price": "$48",
       "categories": [
-        "Food & Drink"
+        "Food & Drink",
+        "Festival"
       ],
       "facets": [
-        "21+"
+        "21+",
+        "Paid"
       ]
     },
     {
@@ -1730,6 +1758,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1750,6 +1781,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1901,6 +1935,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -1921,6 +1958,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2052,6 +2092,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2072,6 +2115,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2275,6 +2321,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2295,6 +2344,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2400,7 +2452,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -2459,6 +2512,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2479,6 +2535,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2514,7 +2573,10 @@
       "venue_name": "Elkhart Lake",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-elkhart-lake-road-america-jpg.avif",
       "categories": [
-        "Community"
+        "Arts",
+        "Sports",
+        "Outdoor",
+        "Festival"
       ]
     },
     {
@@ -2567,6 +2629,10 @@
       "venue_name": "Throttlestop",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/654685113_1393299896147849_937036720986135078_n.avif",
       "categories": [
+        "Arts",
+        "Sports",
+        "Outdoor",
+        "Festival",
         "Community"
       ]
     },
@@ -2584,7 +2650,10 @@
       "venue_name": "Elkhart Lake",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-elkhart-lake-road-america-jpg.avif",
       "categories": [
-        "Community"
+        "Arts",
+        "Sports",
+        "Outdoor",
+        "Festival"
       ]
     },
     {
@@ -2661,6 +2730,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2681,6 +2753,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2790,7 +2865,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -2811,6 +2887,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -2831,6 +2910,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3000,6 +3082,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3020,6 +3105,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3108,7 +3196,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -3186,6 +3275,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3224,6 +3316,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3337,6 +3432,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3357,6 +3455,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3428,7 +3529,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -3487,6 +3589,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3507,6 +3612,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3662,6 +3770,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3682,6 +3793,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3776,6 +3890,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3796,6 +3913,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3846,7 +3966,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -3867,6 +3988,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3887,6 +4011,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3983,6 +4110,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -4003,6 +4133,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -4036,7 +4169,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "categories": [
-        "Community"
+        "Sports",
+        "Outdoor"
       ]
     },
     {
@@ -4057,6 +4191,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -4077,6 +4214,9 @@
         "Wellness",
         "Kids",
         "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -4289,7 +4429,10 @@
       "scraped_at": "2026-05-20T00:24:51.012794",
       "image_url": "https://osthoff.com/wp-content/uploads/GLUTEN.jpg",
       "categories": [
-        "Community"
+        "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -4305,7 +4448,10 @@
       "scraped_at": "2026-05-20T00:24:51.012875",
       "image_url": "https://osthoff.com/wp-content/uploads/SUSHI-1.jpg",
       "categories": [
-        "Community"
+        "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -4324,7 +4470,8 @@
         "Food & Drink"
       ],
       "facets": [
-        "21+"
+        "21+",
+        "Paid"
       ]
     },
     {
@@ -4340,7 +4487,10 @@
       "scraped_at": "2026-05-20T00:24:51.012971",
       "image_url": "https://osthoff.com/wp-content/uploads/PASTA3-scaled.png",
       "categories": [
-        "Community"
+        "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -4356,7 +4506,10 @@
       "scraped_at": "2026-05-20T00:24:51.013072",
       "image_url": "https://osthoff.com/wp-content/uploads/ARG-scaled.png",
       "categories": [
-        "Community"
+        "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -4372,7 +4525,10 @@
       "scraped_at": "2026-05-20T00:24:51.013188",
       "image_url": "https://osthoff.com/wp-content/uploads/KABOB-scaled.png",
       "categories": [
-        "Community"
+        "Education"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -4406,10 +4562,12 @@
       "scraped_at": "2026-05-20T00:24:51.013281",
       "image_url": "https://osthoff.com/wp-content/uploads/PAELLA-scaled.png",
       "categories": [
-        "Food & Drink"
+        "Food & Drink",
+        "Education"
       ],
       "facets": [
-        "21+"
+        "21+",
+        "Paid"
       ]
     },
     {
@@ -4610,8 +4768,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
       "categories": [
-        "Sports",
-        "Festival"
+        "Arts",
+        "Sports"
       ],
       "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
     },
@@ -4630,8 +4788,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
       "categories": [
-        "Sports",
-        "Festival"
+        "Arts",
+        "Sports"
       ],
       "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
     },
@@ -4650,8 +4808,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
       "categories": [
-        "Sports",
-        "Festival"
+        "Arts",
+        "Sports"
       ],
       "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
     },
@@ -4670,8 +4828,8 @@
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
       "categories": [
-        "Sports",
-        "Festival"
+        "Arts",
+        "Sports"
       ],
       "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
     },

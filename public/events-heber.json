@@ -20,6 +20,7 @@
       "recurrence_day": "Thursday",
       "is_free": true,
       "categories": [
+        "Food & Drink",
         "Outdoor"
       ]
     },
@@ -126,6 +127,12 @@
       "end_date": "2026-08-01",
       "featured": true,
       "categories": [
+        "Music",
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
         "Community"
       ]
     },
@@ -142,7 +149,8 @@
       "scraped_at": "2026-05-19T23:56:25.351628",
       "start_time": "9:00 AM",
       "categories": [
-        "Family"
+        "Family",
+        "Festival"
       ]
     },
     {
@@ -161,7 +169,8 @@
       "recurrence": "weekly",
       "recurrence_days": "Saturday,Sunday",
       "categories": [
-        "Community"
+        "Outdoor",
+        "Family"
       ]
     },
     {
@@ -241,6 +250,9 @@
       "start_time": "10:30 PM",
       "categories": [
         "Community"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -270,7 +282,13 @@
       "lng": -111.4133,
       "scraped_at": "2026-05-19T23:56:26.509215",
       "categories": [
-        "Family"
+        "Music",
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
+        "Community"
       ]
     },
     {
@@ -285,7 +303,7 @@
       "lng": -111.4133,
       "scraped_at": "2026-05-19T23:56:26.509226",
       "categories": [
-        "Community"
+        "Family"
       ]
     },
     {
@@ -300,7 +318,8 @@
       "lng": -111.4133,
       "scraped_at": "2026-05-19T23:56:26.509235",
       "categories": [
-        "Community"
+        "Outdoor",
+        "Family"
       ]
     },
     {
@@ -363,6 +382,9 @@
       "scraped_at": "2026-05-19T23:56:27.521413",
       "categories": [
         "Community"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -439,7 +461,7 @@
       "lng": -111.4133,
       "scraped_at": "2026-05-19T23:56:29.608739",
       "categories": [
-        "Community"
+        "Sports"
       ]
     },
     {
@@ -455,6 +477,9 @@
       "scraped_at": "2026-05-19T23:56:29.608747",
       "categories": [
         "Theater"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -470,6 +495,9 @@
       "scraped_at": "2026-05-19T23:56:29.608754",
       "categories": [
         "Theater"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -485,6 +513,9 @@
       "scraped_at": "2026-05-19T23:56:29.608760",
       "categories": [
         "Theater"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -500,6 +531,9 @@
       "scraped_at": "2026-05-19T23:56:29.608766",
       "categories": [
         "Theater"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -544,7 +578,7 @@
       "lng": -111.4133,
       "scraped_at": "2026-05-19T23:56:29.608786",
       "categories": [
-        "Community"
+        "Sports"
       ]
     },
     {
@@ -561,24 +595,37 @@
       "start_time": "10:30 PM",
       "categories": [
         "Community"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
-      "title": "Oakley Rodeo",
+      "title": "Oakley PRCA Rodeo",
       "date": "2026-07-01",
-      "description": "Oakley Rodeo is coming to Oakley Rodeo in Oakley, UT for an unforgettable event",
-      "location": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
-      "link": "https://www.eventticketscenter.com/oakley-rodeo-oakley-07-01-2026/7467443/t",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
+      "description": "Annual Oakley Independence Day PRCA Rodeo at the Oakley Outdoor Arena. Ranked among the top rodeos in the country over the July 4th holiday. Fireworks immediately follow the rodeo. Tickets available via etix.",
+      "location": "Oakley City Recreational Complex, 960 W Center Street, Oakley, UT 84055",
+      "link": "https://www.etix.com/ticket/e/1056709/oakley-rodeo-oakley-oakley-city-recreational-complex",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "lat": 40.71472,
+      "lng": -111.30056,
       "scraped_at": "2026-05-19T23:56:33.651869",
-      "start_time": "10:30 PM",
+      "start_time": "7:30 PM",
       "categories": [
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
         "Community"
       ],
-      "end_time": "12:30 AM"
+      "end_time": "10:00 PM",
+      "venue_name": "Oakley City Recreational Complex",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "facets": [
+        "Paid"
+      ]
     },
     {
       "title": "Iris DeMent",
@@ -597,37 +644,31 @@
       ]
     },
     {
-      "title": "Oakley Xtreme Bulls",
-      "date": "2026-07-06",
-      "description": "Oakley Xtreme Bulls is coming to Oakley Rodeo in Oakley, UT for an unforgettable event",
-      "location": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
-      "link": "https://www.eventticketscenter.com/oakley-xtreme-bulls-oakley-07-06-2026/7467453/t",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-19T23:56:33.651885",
-      "start_time": "10:30 PM",
-      "categories": [
-        "Community"
-      ]
-    },
-    {
-      "title": "Oakley Rodeo",
+      "title": "Oakley PRCA Rodeo",
       "date": "2026-07-04",
-      "description": "Oakley Rodeo is coming to Oakley Rodeo in Oakley, UT for an unforgettable event",
-      "location": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
-      "link": "https://www.eventticketscenter.com/oakley-rodeo-oakley-07-04-2026/7467447/t",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
+      "description": "Annual Oakley Independence Day PRCA Rodeo at the Oakley Outdoor Arena. Ranked among the top rodeos in the country over the July 4th holiday. Fireworks immediately follow the rodeo. Tickets available via etix.",
+      "location": "Oakley City Recreational Complex, 960 W Center Street, Oakley, UT 84055",
+      "link": "https://www.etix.com/ticket/e/1056709/oakley-rodeo-oakley-oakley-city-recreational-complex",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "lat": 40.71472,
+      "lng": -111.30056,
       "scraped_at": "2026-05-19T23:56:33.651892",
-      "start_time": "10:30 PM",
+      "start_time": "7:30 PM",
       "categories": [
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
         "Community"
       ],
-      "end_time": "12:30 AM"
+      "end_time": "10:00 PM",
+      "venue_name": "Oakley City Recreational Complex",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "facets": [
+        "Paid"
+      ]
     },
     {
       "title": "Iris DeMent",
@@ -658,26 +699,41 @@
       "scraped_at": "2026-05-19T23:56:33.651918",
       "start_time": "7:30 AM",
       "categories": [
-        "Sports"
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
+        "Community"
       ],
       "end_time": "9:30 AM"
     },
     {
-      "title": "Oakley Rodeo",
+      "title": "Oakley PRCA Rodeo",
       "date": "2026-07-03",
-      "description": "Oakley Rodeo is coming to Oakley Rodeo in Oakley, UT for an unforgettable event",
-      "location": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
-      "link": "https://www.eventticketscenter.com/oakley-rodeo-oakley-07-03-2026/7467446/t",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
+      "description": "Annual Oakley Independence Day PRCA Rodeo at the Oakley Outdoor Arena. Ranked among the top rodeos in the country over the July 4th holiday. Fireworks immediately follow the rodeo. Tickets available via etix.",
+      "location": "Oakley City Recreational Complex, 960 W Center Street, Oakley, UT 84055",
+      "link": "https://www.etix.com/ticket/e/1056709/oakley-rodeo-oakley-oakley-city-recreational-complex",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "lat": 40.71472,
+      "lng": -111.30056,
       "scraped_at": "2026-05-19T23:56:33.651925",
-      "start_time": "10:30 PM",
+      "start_time": "7:30 PM",
       "categories": [
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
         "Community"
       ],
-      "end_time": "12:30 AM"
+      "end_time": "10:00 PM",
+      "venue_name": "Oakley City Recreational Complex",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "facets": [
+        "Paid"
+      ]
     },
     {
       "title": "The Sheep Detectives",
@@ -724,6 +780,9 @@
       "start_time": "10:30 PM",
       "categories": [
         "Community"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -740,6 +799,9 @@
       "start_time": "10:30 PM",
       "categories": [
         "Community"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -756,6 +818,9 @@
       "start_time": "10:30 PM",
       "categories": [
         "Community"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -772,6 +837,9 @@
       "start_time": "10:30 PM",
       "categories": [
         "Festival"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -788,6 +856,9 @@
       "start_time": "10:30 PM",
       "categories": [
         "Festival"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -805,6 +876,9 @@
       "categories": [
         "Music",
         "Festival"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -837,6 +911,9 @@
       "is_free": true,
       "categories": [
         "Festival"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -854,6 +931,9 @@
         "Music",
         "Food & Drink",
         "Outdoor"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -932,7 +1012,6 @@
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
-        "Sports",
         "Education"
       ],
       "start_time": "7:00 PM",
@@ -949,7 +1028,6 @@
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
-        "Sports",
         "Family"
       ],
       "start_time": "10:00 AM",
@@ -1017,11 +1095,13 @@
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
-        "Sports",
         "Kids",
         "Family"
       ],
-      "start_time": "8:00 AM"
+      "start_time": "8:00 AM",
+      "facets": [
+        "Paid"
+      ]
     },
     {
       "title": "Jordanelle Triathlon",
@@ -1034,7 +1114,7 @@
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
-        "Sports"
+        "Community"
       ],
       "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/5845833a-f47f-40e7-95c6-28b8315f77dc/rs-w_1023-h_769.webp"
     },
@@ -1161,7 +1241,14 @@
       "lat": 40.5066,
       "lng": -111.4133,
       "categories": [
-        "Outdoor"
+        "Music",
+        "Food & Drink",
+        "Sports",
+        "Outdoor",
+        "Kids",
+        "Family",
+        "Festival",
+        "Community"
       ],
       "start_time": "12:00 PM",
       "end_time": "4:00 PM",
@@ -1221,7 +1308,10 @@
       "start_time": "3:00 AM",
       "end_time": "6:30 AM",
       "address": "450 S 6th W, Heber City, UT 84032",
-      "venue_name": "Heber Valley Railroad"
+      "venue_name": "Heber Valley Railroad",
+      "facets": [
+        "Paid"
+      ]
     },
     {
       "title": "Ice Cream Social at the Market on Main",
@@ -1234,7 +1324,7 @@
       "lat": 40.5066,
       "lng": -111.4133,
       "categories": [
-        "Community"
+        "Family"
       ],
       "start_time": "11:00 AM",
       "end_time": "3:00 PM",
@@ -1253,14 +1343,20 @@
       "lng": -111.4133,
       "categories": [
         "Music",
-        "Family"
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
+        "Community"
       ],
       "start_time": "1:30 PM",
       "end_time": "4:30 PM",
       "address": "415 South Southfield Road Heber City, Utah 84032",
       "venue_name": "Wasatch County Outdoor Arena",
       "facets": [
-        "Free"
+        "Free",
+        "Paid"
       ]
     },
     {
@@ -1274,7 +1370,8 @@
       "lat": 40.5066,
       "lng": -111.4133,
       "categories": [
-        "Community"
+        "Outdoor",
+        "Family"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:30 PM",
@@ -1300,27 +1397,6 @@
       "image_url": "https://i0.wp.com/hebervalleylife.com/wp-content/uploads/2023/04/wildwest.webp?fit=1920%2C1080&#038;ssl=1",
       "address": "450 S 6th W, Heber City, UT 84032",
       "venue_name": "Heber Valley Railroad"
-    },
-    {
-      "title": "Red, White, and Blue Festival",
-      "date": "2026-07-04",
-      "description": "Join us for a multi-day celebration of independence, family, faith, and country. Check out our lineup and join us for this annual celebration. THURSDAY, JULY 2: Heber Market on Main FRIDAY, JULY 3: Live concert with headliner, American Soldier, a tribute to Toby Keith SATURDAY, JULY 4: 5K and a 10K Main-to-Main run/walk, pancake breakfast, flag ceremony, patriotic walk, parade, evening fireworks 2026 schedule is in progress. Check back soon!",
-      "location": "Heber City Main Street, Heber City, UT 84032",
-      "link": "https://hebervalleylife.com/events/red-white-and-blue-festival/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/red-white-and-blue-festival/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Music",
-        "Family",
-        "Festival"
-      ],
-      "start_time": "1:00 AM",
-      "end_time": "4:30 PM",
-      "image_url": "https://i0.wp.com/hebervalleylife.com/wp-content/uploads/2023/05/rwb-fest.webp?fit=1920%2C1080&#038;ssl=1",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street"
     },
     {
       "title": "Summer Concerts at the Depot",
@@ -1375,12 +1451,20 @@
       "lat": 40.5066,
       "lng": -111.4133,
       "categories": [
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
         "Community"
       ],
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "address": "415 South Southfield Road Heber City, Utah 84032",
-      "venue_name": "Wasatch County Outdoor Arena"
+      "venue_name": "Wasatch County Outdoor Arena",
+      "facets": [
+        "Paid"
+      ]
     },
     {
       "title": "Midway Music on the Square",
@@ -1393,7 +1477,8 @@
       "lat": 40.5066,
       "lng": -111.4133,
       "categories": [
-        "Music"
+        "Music",
+        "Food & Drink"
       ],
       "start_time": "12:30 PM",
       "end_time": "2:00 PM",
@@ -1403,27 +1488,6 @@
       "facets": [
         "Free"
       ]
-    },
-    {
-      "title": "Red, White, and Blue Festival Parade",
-      "date": "2026-07-04",
-      "description": "Join us for the second annual Red, White, and Blue Festival Parade, a celebration of our nation\u2019s spirit, local culture, and rich heritage! This exciting event will take place in Heber Valley as part of our Fourth of July festivities. We invite businesses, organizations, veterans, and community groups to take part in the fun. We are looking for parade participants who will showcase their patriotic pride! All entries must align with this year's theme: America celebrates 250. We will be giving a $500 cash prize to the best decorated float for this year's theme. The top three floats will be sh...",
-      "location": "Southfield Park, 895 W 100 S, Heber City, UT 84032",
-      "link": "https://hebervalleylife.com/events/red-white-and-blue-festival-parade/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/red-white-and-blue-festival-parade/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Food & Drink",
-        "Family",
-        "Festival"
-      ],
-      "start_time": "3:00 AM",
-      "end_time": "4:00 AM",
-      "image_url": "https://i0.wp.com/hebervalleylife.com/wp-content/uploads/2025/05/HeberCityRedWhiteBlueFestival2024-parade.webp?fit=1024%2C576&#038;ssl=1",
-      "address": "895 W 100 S, Heber City, UT 84032",
-      "venue_name": "Southfield Park"
     },
     {
       "title": "Free Yoga on the Lawn @ Heber City Park",
@@ -1458,13 +1522,17 @@
       "lat": 40.5066,
       "lng": -111.4133,
       "categories": [
-        "Music"
+        "Music",
+        "Theater"
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
       "image_url": "https://i0.wp.com/hebervalleylife.com/wp-content/uploads/2025/06/Soulful-Sunday.webp?fit=1920%2C1080&#038;ssl=1",
       "address": "Main Street Park, 200 S Main St., Heber City UT",
-      "venue_name": "Main Street Park Heber City"
+      "venue_name": "Main Street Park Heber City",
+      "facets": [
+        "Paid"
+      ]
     },
     {
       "title": "Midway Fourth of July Celebration",
@@ -1544,7 +1612,10 @@
       "start_time": "12:00 PM",
       "end_time": "1:30 PM",
       "address": "1255 Park Avenue, Park City, UT, 84060",
-      "venue_name": "Jim Santy Auditorium"
+      "venue_name": "Jim Santy Auditorium",
+      "facets": [
+        "Paid"
+      ]
     },
     {
       "title": "Saturday Sunset Music Series",
@@ -1600,26 +1671,9 @@
       "lng": -111.4133,
       "categories": [
         "Music",
-        "Outdoor"
-      ],
-      "address": "Main Street Park, 200 S Main St., Heber City UT",
-      "venue_name": "Main Street Park Heber City"
-    },
-    {
-      "title": "Red, White, and Blue Festival Strength Competition",
-      "date": "2026-07-04",
-      "description": "Join us for a Strength Competition at the Heber City Main Street Park during the Red, White, and Blue Festival! The competition begins at 2:30 pm. The events this year will include: Last Man Standing: 3 attempts; men's log starts at 135 lbs, women's log starts at 65 lbs Weighted Jumps: men's 40-50 lbs, women's 20-40 lbs Farmer's Carry / Sandbag Medley: 50 feet out and back; 60-second time limit Stone-to-Shoulder: reps for 60 seconds If you are interested in participating, contact Micah Gogan at micah@goganfitness.com.",
-      "location": "Main Street Park Heber City, Main Street Park, 200 S Main St., Heber City UT",
-      "link": "https://hebervalleylife.com/events/red-white-and-blue-festival-strength-competition/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/red-white-and-blue-festival-strength-competition/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
+        "Outdoor",
         "Festival"
       ],
-      "start_time": "8:30 AM",
-      "end_time": "9:30 AM",
       "address": "Main Street Park, 200 S Main St., Heber City UT",
       "venue_name": "Main Street Park Heber City"
     },
@@ -1636,7 +1690,8 @@
       "categories": [
         "Music",
         "Food & Drink",
-        "Family"
+        "Family",
+        "Festival"
       ],
       "start_time": "2:00 PM",
       "end_time": "3:00 PM",
@@ -1657,6 +1712,12 @@
       "lat": 40.5066,
       "lng": -111.4133,
       "categories": [
+        "Music",
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
         "Community"
       ],
       "start_time": "2:30 AM",
@@ -1665,6 +1726,208 @@
       "venue_name": "Wasatch County Rodeo Grounds",
       "facets": [
         "Free"
+      ]
+    },
+    {
+      "title": "Oakley PRCA Rodeo",
+      "start_time": "7:30 PM",
+      "end_time": "10:00 PM",
+      "venue_name": "Oakley City Recreational Complex",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "location": "Oakley City Recreational Complex, 960 W Center Street, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "Annual Oakley Independence Day PRCA Rodeo at the Oakley Outdoor Arena. Ranked among the top rodeos in the country over the July 4th holiday. Fireworks immediately follow the rodeo. Tickets available via etix.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "link": "https://www.etix.com/ticket/e/1056709/oakley-rodeo-oakley-oakley-city-recreational-complex",
+      "date": "2026-07-02",
+      "categories": [
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
+        "Community"
+      ],
+      "facets": [
+        "Paid"
+      ]
+    },
+    {
+      "title": "Xtreme Bulls \u2014 Presented by Grade Tech",
+      "date": "2026-07-06",
+      "start_time": "7:30 PM",
+      "end_time": "10:00 PM",
+      "venue_name": "Oakley City Recreational Complex",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "location": "Oakley City Recreational Complex, 960 W Center Street, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "Annual Xtreme Bulls competition presented by Grade Tech. Fireworks immediately follow. The culminating event of the Oakley Independence Day Celebration.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "categories": [
+        "Sports",
+        "Festival"
+      ]
+    },
+    {
+      "title": "Oakley Kids Fun Run 1k & 5k",
+      "date": "2026-07-04",
+      "start_time": "7:00 AM",
+      "end_time": "9:00 AM",
+      "venue_name": "Oakley City Complex",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "location": "Oakley City Complex, 960 W Center Street, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "Kids Fun Run (1k) at 7:00 AM followed by 5k at 7:30 AM. Sponsored by the South Summit Cross Country Team. Registration: $15 (10 & under), $20-25 (11 & over). T-shirt included. Begins & ends at the Oakley City Complex.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "link": "https://runnercard.com/roadrace/public/raceGroup/977515",
+      "categories": [
+        "Kids"
+      ],
+      "facets": [
+        "Paid"
+      ]
+    },
+    {
+      "title": "Oakley July 4th Parade",
+      "date": "2026-07-04",
+      "start_time": "10:00 AM",
+      "end_time": "12:00 PM",
+      "venue_name": "SR 32 & Center Street",
+      "address": "SR 32 & Center Street, Oakley, UT 84055",
+      "location": "SR 32 & Center Street, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "Annual Oakley Independence Day Parade along SR 32 & Center Street. Free and open to the public. Bring chairs and blankets.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "categories": [
+        "Family"
+      ]
+    },
+    {
+      "title": "Patriotic Program \u2014 Oakley Red Barn",
+      "date": "2026-07-04",
+      "start_time": "11:30 AM",
+      "end_time": "1:00 PM",
+      "venue_name": "Oakley Red Barn",
+      "address": "Oakley Red Barn, Oakley, UT 84055",
+      "location": "Oakley Red Barn, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "Annual Patriotic Program held at the Oakley Red Barn \u2014 community celebration of Independence Day with music, speakers, and recognition of veterans.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "categories": [
+        "Festival"
+      ]
+    },
+    {
+      "title": "Jr. Rodeo & Kid's Activities",
+      "date": "2026-07-04",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "venue_name": "Oakley Outdoor Arena",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "location": "Oakley Outdoor Arena, 960 W Center Street, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "Junior Rodeo and Kids Activities at the Oakley Outdoor Arena. Treasure Dig, Arena Race, and Chicken Chase are free and open to the public for ages 12 & under. Sheep & Steer riding to follow.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "categories": [
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
+        "Community"
+      ]
+    },
+    {
+      "title": "Oakley Rodeo Men's Slack Events",
+      "date": "2026-06-30",
+      "start_time": "9:00 AM",
+      "end_time": "1:00 PM",
+      "venue_name": "Oakley Outdoor Arena",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "location": "Oakley Outdoor Arena, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "Men's slack events ahead of the Oakley PRCA Rodeo: Tie Down, Steer Wrestling, and Team Roping at the Oakley Outdoor Arena.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "categories": [
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
+        "Community"
+      ]
+    },
+    {
+      "title": "Oakley Rodeo Women's Slack Events",
+      "date": "2026-06-30",
+      "start_time": "5:00 PM",
+      "end_time": "8:00 PM",
+      "venue_name": "Oakley Outdoor Arena",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "location": "Oakley Outdoor Arena, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "Women's slack events ahead of the Oakley PRCA Rodeo: Barrels and Breakaway at the Oakley Outdoor Arena.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "categories": [
+        "Food & Drink",
+        "Sports",
+        "Kids",
+        "Family",
+        "Festival",
+        "Community"
+      ]
+    },
+    {
+      "title": "3rd Annual Oakley Pickleball Tournament",
+      "date": "2026-06-26",
+      "end_date": "2026-06-27",
+      "venue_name": "Oakley City Recreational Complex",
+      "address": "960 W Center Street, Oakley, UT 84055",
+      "location": "Oakley City Recreational Complex, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "3rd Annual Oakley Pickleball Tournament \u2014 June 26 (Friday) and June 27 (Saturday). Registration $35 (includes first event), second event $10. Registration opened March 23rd, closes June 12th. Start times posted once brackets are made.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "link": "https://pickleballtournaments.com/tournaments/oakley-pickleball-tournament-2026",
+      "categories": [
+        "Sports"
+      ],
+      "facets": [
+        "Paid"
+      ]
+    },
+    {
+      "title": "Tough Enough to Wear Pink Dinner & Auction",
+      "date": "2026-06-26",
+      "start_time": "6:00 PM",
+      "end_time": "9:00 PM",
+      "venue_name": "Oakley Red Barn",
+      "address": "Oakley Red Barn, Oakley, UT 84055",
+      "location": "Oakley Red Barn, Oakley, UT 84055",
+      "lat": 40.71472,
+      "lng": -111.30056,
+      "description": "Annual Tough Enough to Wear Pink Dinner & Auction at the Oakley Red Barn \u2014 a community fundraiser raising awareness and funds for cancer research.",
+      "source": "Oakley City",
+      "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
+      "categories": [
+        "Community"
       ]
     }
   ]
