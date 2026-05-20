@@ -1130,7 +1130,36 @@ def deduplicate(events):
         print(f"  [dedup] merged {merged_count} duplicate records into existing entries")
     return unique
 
+
+# Source-based geo defaults — if a scraper produced an event without lat/lng,
+# fill in the city center coordinates so radius filtering still works.
+ELKHART_SOURCE_DEFAULTS = {
+    "Elkhart Lake Tourism": (43.8330, -88.0426),
+    "Road America": (43.7969, -87.9897),
+    "The Osthoff Resort": (43.8347, -88.0398),
+    "Siebkens Resort": (43.8324, -88.0386),
+    "Village of Elkhart Lake": (43.8330, -88.0426),
+}
+
+def _fill_default_geo(events):
+    """Backfill missing lat/lng from source name. Returns list of patched events."""
+    filled = 0
+    for e in events:
+        if not e.get("lat") or not e.get("lng"):
+            src = e.get("source", "")
+            if src in ELKHART_SOURCE_DEFAULTS:
+                lat, lng = ELKHART_SOURCE_DEFAULTS[src]
+                e["lat"] = lat
+                e["lng"] = lng
+                e["_geo_source"] = "default"  # mark so we know it's not exact
+                filled += 1
+    if filled:
+        print(f"  Filled lat/lng defaults for {filled} events without geo")
+    return events
+
+
 def save_events(events, filename="public/events-elkhartlake.json"):
+    events = _fill_default_geo(events)
     # Drop records with non-ISO dates. These are usually UI chrome
     # ("Login", "Need help?") that fragile HTML scrapers grabbed as events,
     # or records where the date field couldn't be parsed (e.g. "See website").
