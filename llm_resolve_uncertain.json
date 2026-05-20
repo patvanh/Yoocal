@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T19:12:33.053854",
+  "generated_at": "2026-05-20T14:35:03.289692",
   "uncertain": [
     {
       "city": "park-city",
@@ -10,7 +10,7 @@
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which typically runs continuously over multiple days where attendees can come any day during the event period."
+        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, and festivals of this nature typically run continuously over multiple days where attendees can come any day during the August 7-9, 2026 date range."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
@@ -21,13 +21,13 @@
       "type": "multi_day_span",
       "link": "https://www.visitparkcity.com/event/summer-program-registration/28987/",
       "resolution": {
-        "confidence": "low",
+        "confidence": "medium",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The event appears to be a registration period spanning from May 19 to June 1, 2026, representing a continuous window of time when registration is open, though the source text is incomplete and doesn't clearly confirm the date range or structure."
+        "reasoning": "This appears to be a registration period that is open continuously from May 20 to June 1, 2026, rather than separate registration events on specific days within that range."
       },
       "applied": false,
-      "note": "confidence=low, not applying"
+      "note": "confidence=medium, not applying"
     },
     {
       "city": "park-city",
@@ -40,23 +40,10 @@
         "explicit_dates": [
           "2026-07-03"
         ],
-        "reasoning": "The description states 'every weekend beginning June 12' suggesting multiple recurring instances, though only July 03, 2026 is explicitly mentioned for this listing."
+        "reasoning": "The description specifies 'held on July 03, 2026' (singular date) and the source text says 'every weekend beginning June 12', indicating multiple separate weekend instances rather than one continuous event."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Flying Ace All-Stars Freestyle Show",
-      "type": "title_venue_only",
-      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-54/",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source text describes the 'Flying Ace All-Stars Freestyle Show' as a performance by Olympians and National Team skiers and snowboarders, but does not identify any specific named artist, band, or individual performer."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
     },
     {
       "city": "park-city",
@@ -67,7 +54,7 @@
         "confidence": "medium",
         "kind": "split",
         "explicit_dates": [],
-        "reasoning": "The description says 'every weekend beginning June 12' and the event is listed for a specific date (July 10, 2026), suggesting this is one instance of a recurring weekly show rather than a continuous multi-day event, though specific dates are not enumerated in the source text."
+        "reasoning": "The description mentions the event is held on July 10, 2026, and the page text says shows occur 'every weekend beginning June 12,' suggesting multiple separate performances rather than one continuous event, though specific dates aren't listed in the source text."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
@@ -80,10 +67,8 @@
       "resolution": {
         "confidence": "medium",
         "kind": "split",
-        "explicit_dates": [
-          "2026-07-17"
-        ],
-        "reasoning": "The description states 'The event is held on July 17, 2026' (singular occurrence) while the page text says 'every weekend beginning June 12', suggesting this is one instance of a recurring weekend show series."
+        "explicit_dates": [],
+        "reasoning": "The page describes a recurring show 'every weekend beginning June 12' but the event listing specifies only July 17, 2026, suggesting this is one specific instance of a recurring event series, though the exact occurrence dates are not listed in the source text."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
@@ -97,91 +82,50 @@
         "confidence": "high",
         "kind": "split",
         "explicit_dates": [],
-        "reasoning": "This is a recurring weekly Sunday run club that meets every Sunday at 10 AM, not a single multi-day event or specific dated instances."
+        "reasoning": "This is a recurring weekly event that happens every Sunday at 10 AM, not a one-time multi-day event, as indicated by the 'SLOW Sunday' section showing it as part of regular weekly programming alongside Tuesday and Friday runs."
       },
       "applied": false,
       "note": "split kind but no valid dates"
     },
     {
       "city": "park-city",
-      "title": "Moose on the Loose",
-      "type": "title_venue_only",
-      "link": "https://www.parkcityss.org/moose-on-the-loose",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source text describes 'Moose on the Loose' as a trail running race series for kids ages 3-14, not a concert or performance with an artist/band, so there is no performer to identify."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Elemental Harmony: Hormones + Seasons Wellness Coh",
+      "title": "Fred Tackett & Scott Sharrard (from Little Feat)",
       "type": "multi_day_span",
-      "link": "http://wildwomentribe.net/wander-1",
+      "link": "https://www.bandsintown.com/e/108229696?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
       "resolution": {
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "This is a 12-month continuous wellness cohort series running from Fall (Nov 15) through Summer (Aug 22) with four quarterly in-person sessions plus eight monthly Zoom check-ins, designed as one ongoing program where participants attend all sessions together."
+        "reasoning": "The source shows a single concert event on Aug 1, 2026 at 7:00 PM at the Egyptian Theatre, not multiple separate instances."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
     },
     {
       "city": "park-city",
-      "title": "Wine and Cheese Pairing: Gold Creek Farms & Bon Vi",
+      "title": "\"Little Artists\" Series: Design Your Own Canvas To",
       "type": "title_venue_only",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-wine-and-cheese-pairing",
-      "resolution": {
-        "confidence": "medium",
-        "new_title": "Wine and Cheese Pairing with Fernando Chavez-Sandoval & Brad Jensen: Gold Creek Farms & Bon Vivant Imports",
-        "reasoning": "The event is guided by head cheesemonger Fernando Chavez-Sandoval and wine expert Brad Jensen, who are the specific instructors/presenters for this tasting class."
-      },
-      "applied": false,
-      "note": "confidence=medium, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Park City Miner's Day 2026",
-      "type": "title_venue_only",
-      "link": "https://historicparkcityutah.com/park-city-miners-day-2024",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-artists-design-your-own-canvas-tote",
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source text describes a community festival celebrating Park City's mining history with no specific artist, band, or performer mentioned - it's a local holiday event rather than a concert or performance."
+        "reasoning": "This is a craft workshop class called 'Little Artists' Series: Design Your Own Canvas Tote, not a performance with a specific artist or performer."
       },
       "applied": false,
       "note": "confidence=low, not applying"
     },
     {
       "city": "park-city",
-      "title": "Park City Miner's Day 2026",
-      "type": "multi_day_span",
-      "link": "https://historicparkcityutah.com/park-city-miners-day-2024",
+      "title": "Cooking with Precision: A Sous Vide Workshop",
+      "type": "title_venue_only",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-sous-vide-workshop",
       "resolution": {
-        "confidence": "high",
-        "kind": "continuous",
-        "explicit_dates": [],
-        "reasoning": "This is a single-day annual celebration held on September 7, 2026 (the first Monday in September), not a multi-day event or multiple separate instances."
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "This is a cooking workshop class offered by Creative Academy at Deer Valley Resort, not a performance event with an artist or performer - it's an educational class teaching sous vide cooking techniques."
       },
       "applied": false,
-      "note": "confirmed continuous, no change"
-    },
-    {
-      "city": "park-city",
-      "title": "Last Friday Gallery Stroll",
-      "type": "multi_day_span",
-      "link": "https://www.parkcitygalleryassociation.com/",
-      "resolution": {
-        "confidence": "high",
-        "kind": "split",
-        "explicit_dates": [],
-        "reasoning": "This is a recurring monthly event that occurs only on the last Friday of every month, not a continuous multi-day event, though specific dates are not listed in the source text."
-      },
-      "applied": false,
-      "note": "split kind but no valid dates"
+      "note": "confidence=low, not applying"
     }
   ]
 }

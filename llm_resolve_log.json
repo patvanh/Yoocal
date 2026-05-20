@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-19T19:12:33.053454",
+  "generated_at": "2026-05-20T14:35:03.289109",
   "attempted": 30,
-  "applied": 10,
+  "applied": 17,
   "log": [
     {
       "city": "park-city",
@@ -12,7 +12,7 @@
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which typically runs continuously over multiple days where attendees can come any day during the event period."
+        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, and festivals of this nature typically run continuously over multiple days where attendees can come any day during the August 7-9, 2026 date range."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
@@ -23,13 +23,13 @@
       "type": "multi_day_span",
       "link": "https://www.visitparkcity.com/event/summer-program-registration/28987/",
       "resolution": {
-        "confidence": "low",
+        "confidence": "medium",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The event appears to be a registration period spanning from May 19 to June 1, 2026, representing a continuous window of time when registration is open, though the source text is incomplete and doesn't clearly confirm the date range or structure."
+        "reasoning": "This appears to be a registration period that is open continuously from May 20 to June 1, 2026, rather than separate registration events on specific days within that range."
       },
       "applied": false,
-      "note": "confidence=low, not applying"
+      "note": "confidence=medium, not applying"
     },
     {
       "city": "park-city",
@@ -39,7 +39,7 @@
       "resolution": {
         "confidence": "high",
         "new_title": "The Proper Way at Silver Lake",
-        "reasoning": "The source text clearly shows 'Friday, June 26' features 'The Proper Way' in the weekend's lineup section, matching the event date of 2026-06-26."
+        "reasoning": "The source text clearly lists 'The Proper Way' as the performer for Friday, June 26, 2026, which matches the event date."
       },
       "applied": true,
       "note": "title: 'Live Music at Silver Lake' \u2192 'The Proper Way at Silver Lake'"
@@ -55,7 +55,7 @@
         "explicit_dates": [
           "2026-06-26"
         ],
-        "reasoning": "The page shows 'The Proper Way' performs only on Friday, June 26, while different artists (Michelle Moonshine Trio and Will Baxter Trio) perform on Saturday and Sunday respectively, making this a single-day performance within a multi-day event series."
+        "reasoning": "The lineup shows 'The Proper Way' performs only on Friday, June 26, while different artists perform on Saturday and Sunday, making this a single performance instance rather than a continuous multi-day event."
       },
       "applied": true,
       "note": "split into 1 per-day records: ['2026-06-26']"
@@ -68,7 +68,7 @@
       "resolution": {
         "confidence": "high",
         "new_title": "Flying Ace All-Stars Freestyle Show",
-        "reasoning": "The 'Flying Ace All-Stars' is the performing group name itself, featuring Olympians and National Team skiers and snowboarders, not just a venue name."
+        "reasoning": "The 'Flying Ace All-Stars' is itself the name of the performing group/show featuring Olympians and National Team skiers and snowboarders, not just a venue or generic description."
       },
       "applied": true,
       "note": "title: 'Flying Ace All-Stars Freestyle Show' \u2192 'Flying Ace All-Stars Freestyle Show'"
@@ -84,7 +84,7 @@
         "explicit_dates": [
           "2026-07-03"
         ],
-        "reasoning": "The description states 'every weekend beginning June 12' suggesting multiple recurring instances, though only July 03, 2026 is explicitly mentioned for this listing."
+        "reasoning": "The description specifies 'held on July 03, 2026' (singular date) and the source text says 'every weekend beginning June 12', indicating multiple separate weekend instances rather than one continuous event."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
@@ -95,12 +95,12 @@
       "type": "title_venue_only",
       "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-54/",
       "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source text describes the 'Flying Ace All-Stars Freestyle Show' as a performance by Olympians and National Team skiers and snowboarders, but does not identify any specific named artist, band, or individual performer."
+        "confidence": "high",
+        "new_title": "Flying Ace All-Stars Freestyle Show",
+        "reasoning": "The 'Flying Ace All-Stars' is the name of the performing group/act itself, featuring Olympians and National Team skiers and snowboarders, so the title already contains the artist/performer name rather than just a venue."
       },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "applied": true,
+      "note": "title: 'Flying Ace All-Stars Freestyle Show' \u2192 'Flying Ace All-Stars Freestyle Show'"
     },
     {
       "city": "park-city",
@@ -111,7 +111,7 @@
         "confidence": "medium",
         "kind": "split",
         "explicit_dates": [],
-        "reasoning": "The description says 'every weekend beginning June 12' and the event is listed for a specific date (July 10, 2026), suggesting this is one instance of a recurring weekly show rather than a continuous multi-day event, though specific dates are not enumerated in the source text."
+        "reasoning": "The description mentions the event is held on July 10, 2026, and the page text says shows occur 'every weekend beginning June 12,' suggesting multiple separate performances rather than one continuous event, though specific dates aren't listed in the source text."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
@@ -124,10 +124,8 @@
       "resolution": {
         "confidence": "medium",
         "kind": "split",
-        "explicit_dates": [
-          "2026-07-17"
-        ],
-        "reasoning": "The description states 'The event is held on July 17, 2026' (singular occurrence) while the page text says 'every weekend beginning June 12', suggesting this is one instance of a recurring weekend show series."
+        "explicit_dates": [],
+        "reasoning": "The page describes a recurring show 'every weekend beginning June 12' but the event listing specifies only July 17, 2026, suggesting this is one specific instance of a recurring event series, though the exact occurrence dates are not listed in the source text."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
@@ -139,16 +137,16 @@
       "link": "https://deervalleymusicfestival.org/event/id/39280/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Utah Symphony with Time for Three - Stravinsky's Firebird Suite",
-        "reasoning": "The source text clearly identifies the performing artists as the Utah Symphony conducted by Markus Poschner, featuring the string trio Time for Three, performing works by Kevin Puts and Stravinsky.",
-        "artist": "Utah Symphony, Time for Three"
+        "new_title": "Utah Symphony with Time for Three: Stravinsky's Firebird Suite",
+        "reasoning": "The source text clearly identifies Utah Symphony as the performing orchestra with conductor Markus Poschner and guest artists Time for Three (string trio) performing works by Kevin Puts and Stravinsky.",
+        "artist": "Utah Symphony"
       },
       "applied": true,
-      "note": "title: 'Stravinsky\\'s Firebird Suite & String Trio \"Time for Three\"' \u2192 \"Utah Symphony with Time for Three - Stravinsky's Firebird Suite\""
+      "note": "title: 'Stravinsky\\'s Firebird Suite & String Trio \"Time for Three\"' \u2192 \"Utah Symphony with Time for Three: Stravinsky's Firebird Suite\""
     },
     {
       "city": "park-city",
-      "title": "Utah Symphony with Time for Three - Stravinsky's F",
+      "title": "Utah Symphony with Time for Three: Stravinsky's Fi",
       "type": "multi_day_span",
       "link": "https://deervalleymusicfestival.org/event/id/39280/",
       "resolution": {
@@ -157,7 +155,7 @@
         "explicit_dates": [
           "2026-07-25"
         ],
-        "reasoning": "The page shows a single showtime 'Saturday, July 25, 2026 7:30 PM' for this symphony concert, indicating one specific performance rather than a multi-day continuous event."
+        "reasoning": "The page shows a single showtime 'Saturday, July 25, 2026 7:30 PM' for this specific concert performance, and the 'Trending Now' section lists it as occurring only on 'Jul 25', indicating this is one discrete performance rather than a multi-day event."
       },
       "applied": true,
       "note": "split into 1 per-day records: ['2026-07-25']"
@@ -171,7 +169,7 @@
         "confidence": "high",
         "kind": "split",
         "explicit_dates": [],
-        "reasoning": "This is a recurring weekly Sunday run club that meets every Sunday at 10 AM, not a single multi-day event or specific dated instances."
+        "reasoning": "This is a recurring weekly event that happens every Sunday at 10 AM, not a one-time multi-day event, as indicated by the 'SLOW Sunday' section showing it as part of regular weekly programming alongside Tuesday and Friday runs."
       },
       "applied": false,
       "note": "split kind but no valid dates"
@@ -180,195 +178,220 @@
       "city": "park-city",
       "title": "Fred Tackett & Scott Sharrard (from Little Feat)",
       "type": "title_venue_only",
-      "skipped": "[fetch failed: 403 Client Error: Forbidden for url: https://www.bandsintown.com/e/108229696?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event]"
+      "link": "https://www.bandsintown.com/e/108229696?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Fred Tackett & Scott Sharrard (from Little Feat)",
+        "reasoning": "The event title already correctly identifies the specific artists/performers (Fred Tackett & Scott Sharrard) and is not just a venue name, as the source text confirms these are the two musicians performing in an acoustic format."
+      },
+      "applied": true,
+      "note": "title: 'Fred Tackett & Scott Sharrard (from Little Feat)' \u2192 'Fred Tackett & Scott Sharrard (from Little Feat)'"
     },
     {
       "city": "park-city",
       "title": "Fred Tackett & Scott Sharrard (from Little Feat)",
       "type": "multi_day_span",
-      "skipped": "[fetch failed: 403 Client Error: Forbidden for url: https://www.bandsintown.com/e/108229696?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event]"
-    },
-    {
-      "city": "park-city",
-      "title": "The Smithereens",
-      "type": "title_venue_only",
-      "skipped": "[fetch failed: 403 Client Error: Forbidden for url: https://www.bandsintown.com/e/1038765825?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event]"
-    },
-    {
-      "city": "park-city",
-      "title": "The Smithereens",
-      "type": "multi_day_span",
-      "skipped": "[fetch failed: 403 Client Error: Forbidden for url: https://www.bandsintown.com/e/1038765825?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event]"
-    },
-    {
-      "city": "park-city",
-      "title": "Moose on the Loose",
-      "type": "title_venue_only",
-      "link": "https://www.parkcityss.org/moose-on-the-loose",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source text describes 'Moose on the Loose' as a trail running race series for kids ages 3-14, not a concert or performance with an artist/band, so there is no performer to identify."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Moose on the Loose",
-      "type": "multi_day_span",
-      "link": "https://www.parkcityss.org/moose-on-the-loose",
-      "resolution": {
-        "confidence": "high",
-        "kind": "split",
-        "explicit_dates": [
-          "2026-06-13",
-          "2026-07-18",
-          "2026-08-15",
-          "2026-09-12"
-        ],
-        "reasoning": "This is a four-race series where each race occurs on a separate date (June 13, July 18, August 15, and September 12) at different venues, with participants registering for individual races or the full series."
-      },
-      "applied": true,
-      "note": "split into 4 per-day records: ['2026-06-13', '2026-07-18', '2026-08-15', '2026-09-12']"
-    },
-    {
-      "city": "park-city",
-      "title": "Elemental Harmony: Hormones + Seasons Wellness Coh",
-      "type": "title_venue_only",
-      "link": "http://wildwomentribe.net/wander-1",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Elemental Harmony: Hormones + Seasons Wellness Cohort (Pt 1) with Dr. Trevor Cates & Renee Huang - Wild Women Tribe",
-        "reasoning": "The source text clearly identifies this as a 12-month coaching series co-hosted by Dr. Trevor Cates (naturopathic physician) and Renee Huang, organized by Wild Women Tribe, with the August 22nd date corresponding to the Summer session (Part 1 of the quarterly series)."
-      },
-      "applied": true,
-      "note": "title: 'Elemental Harmony: Hormones + Seasons Wellness Cohort (Pt 1)' \u2192 'Elemental Harmony: Hormones + Seasons Wellness Cohort (Pt 1) with Dr. Trevor Cates & Renee Huang - Wild Women Tribe'"
-    },
-    {
-      "city": "park-city",
-      "title": "Elemental Harmony: Hormones + Seasons Wellness Coh",
-      "type": "multi_day_span",
-      "link": "http://wildwomentribe.net/wander-1",
+      "link": "https://www.bandsintown.com/e/108229696?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
       "resolution": {
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "This is a 12-month continuous wellness cohort series running from Fall (Nov 15) through Summer (Aug 22) with four quarterly in-person sessions plus eight monthly Zoom check-ins, designed as one ongoing program where participants attend all sessions together."
+        "reasoning": "The source shows a single concert event on Aug 1, 2026 at 7:00 PM at the Egyptian Theatre, not multiple separate instances."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
     },
     {
       "city": "park-city",
-      "title": "Wine and Cheese Pairing: Gold Creek Farms & Bon Vi",
+      "title": "The Smithereens",
       "type": "title_venue_only",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-wine-and-cheese-pairing",
+      "link": "https://www.bandsintown.com/e/1038765825?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
       "resolution": {
-        "confidence": "medium",
-        "new_title": "Wine and Cheese Pairing with Fernando Chavez-Sandoval & Brad Jensen: Gold Creek Farms & Bon Vivant Imports",
-        "reasoning": "The event is guided by head cheesemonger Fernando Chavez-Sandoval and wine expert Brad Jensen, who are the specific instructors/presenters for this tasting class."
+        "confidence": "high",
+        "new_title": "The Smithereens at Egyptian Theatre",
+        "reasoning": "The source page clearly identifies The Smithereens as the performing artist, with extensive information about the band including their biography, description as an '80s rock band, and their hits like 'Blood and Roses' and 'A Girl Like You'."
       },
-      "applied": false,
-      "note": "confidence=medium, not applying"
+      "applied": true,
+      "note": "title: 'The Smithereens' \u2192 'The Smithereens at Egyptian Theatre'"
     },
     {
       "city": "park-city",
-      "title": "Wine and Cheese Pairing: Gold Creek Farms & Bon Vi",
+      "title": "The Smithereens at Egyptian Theatre",
       "type": "multi_day_span",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-wine-and-cheese-pairing",
+      "link": "https://www.bandsintown.com/e/1038765825?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
       "resolution": {
         "confidence": "high",
         "kind": "split",
         "explicit_dates": [
-          "2026-08-29"
+          "2026-08-08"
         ],
-        "reasoning": "This is a single class session on August 29, 2026 from 3:30-5:00 PM with a specific time slot and 'Reserve Now' registration, indicating one discrete instance rather than a multi-day continuous event."
+        "reasoning": "This is a single concert performance on August 8, 2026 at 8:00 PM MDT at the Egyptian Theatre, not a multi-day event."
       },
       "applied": true,
-      "note": "split into 1 per-day records: ['2026-08-29']"
+      "note": "split into 1 per-day records: ['2026-08-08']"
     },
     {
       "city": "park-city",
-      "title": "Park City Miner's Day 2026",
+      "title": "2026 Deer Valley Music Festival: The Music of Celi",
       "type": "title_venue_only",
-      "link": "https://historicparkcityutah.com/park-city-miners-day-2024",
+      "link": "https://nowplayingutah.com/event/2026-deer-valley-music-festival-the-music-of-celine-dion/",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "2026 Deer Valley Music Festival: The Music of Celine Dion featuring Olivia Valli with Utah Symphony",
+        "reasoning": "The source text clearly states that vocalist Olivia Valli (granddaughter of Frankie Valli) will be paying tribute to Celine Dion's music together with the Utah Symphony."
+      },
+      "applied": true,
+      "note": "title: '2026 Deer Valley Music Festival: The Music of Celine Dion' \u2192 '2026 Deer Valley Music Festival: The Music of Celine Dion featuring Olivia Valli with Utah Symphony'"
+    },
+    {
+      "city": "park-city",
+      "title": "2026 Deer Valley Music Festival: The Music of Celi",
+      "type": "multi_day_span",
+      "link": "https://nowplayingutah.com/event/2026-deer-valley-music-festival-the-music-of-celine-dion/",
+      "resolution": {
+        "confidence": "high",
+        "kind": "split",
+        "explicit_dates": [
+          "2026-08-15"
+        ],
+        "reasoning": "The event listing shows only a single date and time ('Aug 15, 2026 at 7:30pm') with no indication of multiple days or continuous duration, making this a single performance instance."
+      },
+      "applied": true,
+      "note": "split into 1 per-day records: ['2026-08-15']"
+    },
+    {
+      "city": "park-city",
+      "title": "\"Little Artists\" Series: Design Your Own Canvas To",
+      "type": "title_venue_only",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-artists-design-your-own-canvas-tote",
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source text describes a community festival celebrating Park City's mining history with no specific artist, band, or performer mentioned - it's a local holiday event rather than a concert or performance."
+        "reasoning": "This is a craft workshop class called 'Little Artists' Series: Design Your Own Canvas Tote, not a performance with a specific artist or performer."
       },
       "applied": false,
       "note": "confidence=low, not applying"
     },
     {
       "city": "park-city",
-      "title": "Park City Miner's Day 2026",
+      "title": "\"Little Artists\" Series: Design Your Own Canvas To",
       "type": "multi_day_span",
-      "link": "https://historicparkcityutah.com/park-city-miners-day-2024",
-      "resolution": {
-        "confidence": "high",
-        "kind": "continuous",
-        "explicit_dates": [],
-        "reasoning": "This is a single-day annual celebration held on September 7, 2026 (the first Monday in September), not a multi-day event or multiple separate instances."
-      },
-      "applied": false,
-      "note": "confirmed continuous, no change"
-    },
-    {
-      "city": "park-city",
-      "title": "Gorgeous Gourds",
-      "type": "title_venue_only",
-      "skipped": "[fetch failed: 403 Client Error: Forbidden for url: https://www.bandsintown.com/e/108291748?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event]"
-    },
-    {
-      "city": "park-city",
-      "title": "Gorgeous Gourds",
-      "type": "multi_day_span",
-      "skipped": "[fetch failed: 403 Client Error: Forbidden for url: https://www.bandsintown.com/e/108291748?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event]"
-    },
-    {
-      "city": "park-city",
-      "title": "Shannon Runyon at  Park City Senior Center",
-      "type": "title_venue_only",
-      "link": "https://mountaintownmusic.org/show/shannon-runyon-44/",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Shannon Runyon at Park City Senior Center",
-        "reasoning": "The source page clearly identifies Shannon Runyon as the singer/songwriter performing at the Park City Senior Center on September 21, 2026."
-      },
-      "applied": true,
-      "note": "title: 'Shannon Runyon at  Park City Senior Center' \u2192 'Shannon Runyon at Park City Senior Center'"
-    },
-    {
-      "city": "park-city",
-      "title": "Shannon Runyon at Park City Senior Center",
-      "type": "multi_day_span",
-      "link": "https://mountaintownmusic.org/show/shannon-runyon-44/",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-artists-design-your-own-canvas-tote",
       "resolution": {
         "confidence": "high",
         "kind": "split",
         "explicit_dates": [
-          "2026-09-21"
+          "2026-08-22"
         ],
-        "reasoning": "This is a single performance event occurring on one specific date and time (September 21, 2026 from 1:30 pm to 2:00 pm), not a multi-day continuous event."
+        "reasoning": "This is a single Creative Academy class session occurring on one specific date and time (Aug. 22, 2026, 3:30 PM - 5:00 PM), not a multi-day continuous event."
       },
       "applied": true,
-      "note": "split into 1 per-day records: ['2026-09-21']"
+      "note": "split into 1 per-day records: ['2026-08-22']"
     },
     {
       "city": "park-city",
-      "title": "Last Friday Gallery Stroll",
+      "title": "Cooking with Precision: A Sous Vide Workshop",
+      "type": "title_venue_only",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-sous-vide-workshop",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "This is a cooking workshop class offered by Creative Academy at Deer Valley Resort, not a performance event with an artist or performer - it's an educational class teaching sous vide cooking techniques."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Cooking with Precision: A Sous Vide Workshop",
       "type": "multi_day_span",
-      "link": "https://www.parkcitygalleryassociation.com/",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-sous-vide-workshop",
       "resolution": {
         "confidence": "high",
         "kind": "split",
-        "explicit_dates": [],
-        "reasoning": "This is a recurring monthly event that occurs only on the last Friday of every month, not a continuous multi-day event, though specific dates are not listed in the source text."
+        "explicit_dates": [
+          "2026-08-30"
+        ],
+        "reasoning": "This is a single-day workshop scheduled for August 30, 2026 from 3:30 PM to 5:00 PM with a specific 1.5-hour time slot, not a multi-day event."
       },
-      "applied": false,
-      "note": "split kind but no valid dates"
+      "applied": true,
+      "note": "split into 1 per-day records: ['2026-08-30']"
+    },
+    {
+      "city": "park-city",
+      "title": "A.J. Croce Presents CROCE PLAYS CROCE",
+      "type": "title_venue_only",
+      "link": "https://www.bandsintown.com/e/107983861?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "A.J. Croce Presents CROCE PLAYS CROCE at Egyptian Theatre",
+        "reasoning": "The event title already contains the artist name 'A.J. Croce' and the show name 'CROCE PLAYS CROCE', which is confirmed throughout the source page text as A.J. Croce's performance at the Egyptian Theatre on September 10, 2026."
+      },
+      "applied": true,
+      "note": "title: 'A.J. Croce Presents CROCE PLAYS CROCE' \u2192 'A.J. Croce Presents CROCE PLAYS CROCE at Egyptian Theatre'"
+    },
+    {
+      "city": "park-city",
+      "title": "A.J. Croce Presents CROCE PLAYS CROCE at Egyptian ",
+      "type": "multi_day_span",
+      "link": "https://www.bandsintown.com/e/107983861?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "resolution": {
+        "confidence": "high",
+        "kind": "split",
+        "explicit_dates": [
+          "2026-09-10"
+        ],
+        "reasoning": "The source shows a single concert date (Sep 10, 2026 at 7:00 PM) with ticket purchasing options, indicating one specific performance rather than a multi-day festival."
+      },
+      "applied": true,
+      "note": "split into 1 per-day records: ['2026-09-10']"
+    },
+    {
+      "city": "park-city",
+      "title": "City Council Meeting",
+      "type": "title_venue_only",
+      "skipped": "[fetch failed: 404 Client Error: Not Found for url: https://www.parkcity.gov/Home/Components/Calendar/Event/41447/14?curm=09&cury=2026]"
+    },
+    {
+      "city": "park-city",
+      "title": "City Council Meeting",
+      "type": "multi_day_span",
+      "skipped": "[fetch failed: 404 Client Error: Not Found for url: https://www.parkcity.gov/Home/Components/Calendar/Event/41447/14?curm=09&cury=2026]"
+    },
+    {
+      "city": "park-city",
+      "title": "Angie Petty",
+      "type": "title_venue_only",
+      "link": "https://www.bandsintown.com/e/108206335?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Angie Petty at Hidden Ace",
+        "reasoning": "The page clearly identifies Angie Petty as the performing artist with a full biography, and 'Hidden Ace - acoustic soul duo' appears to be a venue description rather than the event title."
+      },
+      "applied": true,
+      "note": "title: 'Angie Petty' \u2192 'Angie Petty at Hidden Ace'"
+    },
+    {
+      "city": "park-city",
+      "title": "Angie Petty at Hidden Ace",
+      "type": "multi_day_span",
+      "link": "https://www.bandsintown.com/e/108206335?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "resolution": {
+        "confidence": "high",
+        "kind": "split",
+        "explicit_dates": [
+          "2026-09-24"
+        ],
+        "reasoning": "This is a single concert performance on September 24, 2026 at 8:00 PM, not a multi-day event."
+      },
+      "applied": true,
+      "note": "split into 1 per-day records: ['2026-09-24']"
+    },
+    {
+      "city": "park-city",
+      "title": "Group Fitness Classes at Park City Athletic & Rec ",
+      "type": "multi_day_span",
+      "skipped": "[fetch failed: 404 Client Error: Not Found for url: https://www.visitparkcity.com/event/group-fitness-classes/]"
     },
     {
       "city": "park-city",
