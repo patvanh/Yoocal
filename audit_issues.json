@@ -1,19 +1,18 @@
 {
-  "generated_at": "2026-05-20T00:28:33.731409",
-  "audit_date": "2026-05-20",
+  "generated_at": "2026-05-19T19:02:19.476516",
+  "audit_date": "2026-05-19",
   "reports": [
     {
       "city": "park-city",
       "total_events": 1576,
-      "total_issues": 519,
+      "total_issues": 516,
       "by_severity": {
         "3": 172,
-        "1": 39,
+        "1": 36,
         "2": 308
       },
       "by_type": {
         "community_only_cat": 172,
-        "past_date": 3,
         "absurd_span": 2,
         "multi_day_span": 19,
         "missing_start_time": 67,
@@ -46,18 +45,6 @@
           "type": "community_only_cat",
           "message": "Only category is 'Community' (no specific tag)",
           "suggested_fix": "Check if title/description matches any specific classifier rule. If genuinely uncategorizable, leave as-is."
-        },
-        {
-          "city": "park-city",
-          "event_index": 11,
-          "event_title": "Coffee & Calm: Designer Chats",
-          "event_date": "2026-05-19",
-          "event_source": "Visit Park City (sitemap)",
-          "event_link": "https://www.visitparkcity.com/event/coffee-%26-calm%3a-designer-chats/28768/",
-          "severity": 1,
-          "type": "past_date",
-          "message": "Event date 2026-05-19 is in the past",
-          "suggested_fix": "Drop from events.json (handled by date filter)"
         },
         {
           "city": "park-city",
@@ -193,18 +180,6 @@
         },
         {
           "city": "park-city",
-          "event_index": 33,
-          "event_title": "Old Town walking tour",
-          "event_date": "2026-05-19",
-          "event_source": "Visit Park City (sitemap)",
-          "event_link": "https://www.visitparkcity.com/event/old-town-walking-tour/29138/",
-          "severity": 1,
-          "type": "past_date",
-          "message": "Event date 2026-05-19 is in the past",
-          "suggested_fix": "Drop from events.json (handled by date filter)"
-        },
-        {
-          "city": "park-city",
           "event_index": 37,
           "event_title": "Park City Shot Ski",
           "event_date": "2026-10-10",
@@ -262,18 +237,6 @@
           "type": "absurd_span",
           "message": "Event spans 61 days (2026-06-08 to 2026-08-07). This is likely a data bug \u2014 exhibitions/ongoing events should be marked as recurring, not stamped with a long range.",
           "suggested_fix": "Re-scrape or model as a recurring/daily event"
-        },
-        {
-          "city": "park-city",
-          "event_index": 59,
-          "event_title": "Summer Program Registration",
-          "event_date": "2026-05-19",
-          "event_source": "Visit Park City (sitemap)",
-          "event_link": "https://www.visitparkcity.com/event/summer-program-registration/28987/",
-          "severity": 1,
-          "type": "past_date",
-          "message": "Event date 2026-05-19 is in the past",
-          "suggested_fix": "Drop from events.json (handled by date filter)"
         },
         {
           "city": "park-city",
