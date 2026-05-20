@@ -1,17 +1,33 @@
 {
-  "generated_at": "2026-05-19T17:22:38.172347",
-  "audit_date": "2026-05-19",
+  "generated_at": "2026-05-20T00:28:33.647441",
+  "audit_date": "2026-05-20",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1603,
+      "before_count": 1599,
       "passes": {
         "past_dates": {
-          "fixed": 1,
+          "fixed": 27,
           "examples": [
             {
-              "title": "Running with Ed 2026",
-              "date": "2026-05-16"
+              "title": "MegaMind PubQuiz",
+              "date": "2026-05-19"
+            },
+            {
+              "title": "Friday Nights Live",
+              "date": "2026-05-19"
+            },
+            {
+              "title": "Live Free (Kick Butt) & Thrive Tribe",
+              "date": "2026-05-19"
+            },
+            {
+              "title": "Wheel Try It",
+              "date": "2026-05-19"
+            },
+            {
+              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
+              "date": "2026-05-19"
             }
           ]
         },
@@ -97,20 +113,72 @@
           ]
         },
         "classification": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 327,
+          "examples": [
+            {
+              "title": "4th of July Parade and Celebration",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Family"
+              ]
+            },
+            {
+              "title": "Candlelight Kundalini",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Food & Drink",
+                "Wellness"
+              ]
+            },
+            {
+              "title": "Family Friendly: Wind Chimes in Clay",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Family"
+              ]
+            },
+            {
+              "title": "Kimball Arts Festival",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Festival"
+              ]
+            },
+            {
+              "title": "Park City Marketing Club Workshop: What's Your Story, with Paul Hochman from Humongous Media",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Education"
+              ]
+            }
+          ]
         }
       },
-      "after_count": 1606,
-      "total_fixes": 25
+      "after_count": 1576,
+      "total_fixes": 378
     },
     {
       "city": "elkhart-lake",
-      "before_count": 245,
+      "before_count": 248,
       "passes": {
         "past_dates": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Views Navigation",
+              "date": "2026-05-19"
+            }
+          ]
         },
         "absurd_spans": {
           "fixed": 0,
@@ -165,35 +233,31 @@
           "examples": []
         }
       },
-      "after_count": 252,
-      "total_fixes": 4
+      "after_count": 254,
+      "total_fixes": 5
     },
     {
       "city": "heber",
-      "before_count": 339,
+      "before_count": 99,
       "passes": {
         "past_dates": {
-          "fixed": 6,
+          "fixed": 4,
           "examples": [
             {
-              "title": "Kamas Library Classic Cinema Series",
-              "date": "2026-05-18"
-            },
-            {
-              "title": "Meet the Cows - Dairy Farm Tour",
-              "date": "2026-05-18"
-            },
-            {
-              "title": "Public Works Week Backhoe Rodeo",
-              "date": "2026-05-18"
-            },
-            {
-              "title": "Monday Night Train @ Heber Valley Railroad",
-              "date": "2026-05-18"
-            },
-            {
               "title": "Rocky Mountain Carver Roundup",
-              "date": "2026-05-18"
+              "date": "2026-05-19"
+            },
+            {
+              "title": "Michael",
+              "date": "2026-05-19"
+            },
+            {
+              "title": "AAAP Spring 2026 Conference in Park City, Utah!",
+              "date": "2026-05-19"
+            },
+            {
+              "title": "The Sheep Detectives",
+              "date": "2026-05-19"
             }
           ]
         },
@@ -206,7 +270,7 @@
           "examples": []
         },
         "missing_end_times": {
-          "fixed": 10,
+          "fixed": 4,
           "examples": [
             {
               "title": "Oakley Rodeo",
@@ -231,12 +295,6 @@
               "start_time": "10:30 PM",
               "new_end_time": "12:30 AM",
               "duration_hours": 2
-            },
-            {
-              "title": "Three Decades Tour",
-              "start_time": "7:00 PM",
-              "new_end_time": "8:00 PM",
-              "duration_hours": 1
             }
           ]
         },
@@ -245,36 +303,148 @@
           "examples": []
         }
       },
-      "after_count": 333,
-      "total_fixes": 16
+      "after_count": 95,
+      "total_fixes": 8
     },
     {
       "city": "jackson",
-      "before_count": 489,
+      "before_count": 481,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 7,
+          "examples": [
+            {
+              "title": "Music Classes",
+              "had_span": 1687
+            },
+            {
+              "title": "Visual Arts Classes",
+              "had_span": 1687
+            },
+            {
+              "title": "Writing Classes and Workshops",
+              "had_span": 1687
+            },
+            {
+              "title": "Dance and Movement Classes",
+              "had_span": 1687
+            },
+            {
+              "title": "Youth Art Programming",
+              "had_span": 1352
+            }
+          ]
         },
         "multi_day_splits": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 2,
+          "examples": [
+            {
+              "title": "Jackson Hole Restaurant Week",
+              "original_span": "2026-05-20 to 2026-05-22",
+              "split_into": [
+                "2026-05-20",
+                "2026-05-21",
+                "2026-05-22"
+              ]
+            },
+            {
+              "title": "Teton Mudpots Summer Sale",
+              "original_span": "2026-06-17 to 2026-06-19",
+              "split_into": [
+                "2026-06-17",
+                "2026-06-18",
+                "2026-06-19"
+              ]
+            }
+          ]
         },
         "missing_end_times": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 4,
+          "examples": [
+            {
+              "title": "Old West Film Fest",
+              "start_time": "7:30 PM",
+              "new_end_time": "9:30 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Old West Days - Jackson Hole Rodeo",
+              "start_time": "8:00 PM",
+              "new_end_time": "10:00 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Little Wings Story Time",
+              "start_time": "11:00 AM",
+              "new_end_time": "11:30 AM",
+              "duration_hours": 0.5
+            },
+            {
+              "title": "The Center Presents: Nitty Gritty Dirt Band \u2013 The Farewell Tour",
+              "start_time": "8:00 PM",
+              "new_end_time": "9:00 PM",
+              "duration_hours": 1
+            }
+          ]
         },
         "classification": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 129,
+          "examples": [
+            {
+              "title": "Al Hubbard: When Turtles Talk",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Arts"
+              ]
+            },
+            {
+              "title": "Old West Film Fest",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Film",
+                "Festival"
+              ]
+            },
+            {
+              "title": "Adult CPR/AED and Child CPR Course",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Education"
+              ]
+            },
+            {
+              "title": "Dance Lessons at The Cowboy Bar",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Music"
+              ]
+            },
+            {
+              "title": "First Aid - Blended Learning Course",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Education"
+              ]
+            }
+          ]
         }
       },
-      "after_count": 489,
-      "total_fixes": 0
+      "after_count": 485,
+      "total_fixes": 142
     }
   ]
 }
