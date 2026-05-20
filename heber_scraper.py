@@ -433,76 +433,14 @@ MONTH_MAP = {
 
 
 def scrape_gohebervalley_live():
-    """Scrape gohebervalley.com/events/ using Playwright. Never raises."""
-    print("Scraping gohebervalley.com (Playwright)...")
-
+    """Scrape gohebervalley.com/events/ via universal_scraper.
+    Replaces old Playwright function whose CSS selector broke."""
     try:
-        from playwright.sync_api import sync_playwright
-    except ImportError:
-        print("  Playwright not installed; skipping. Run: pip install playwright && playwright install chromium")
+        from universal_scraper import scrape_gohebervalley
+        return scrape_gohebervalley()
+    except Exception as e:
+        print(f"  [scrape_gohebervalley_live] failed: {e}")
         return []
-
-    events = []
-
-    try:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            context = browser.new_context(
-                user_agent=(
-                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) "
-                    "Chrome/124.0.0.0 Safari/537.36"
-                ),
-                viewport={"width": 1280, "height": 1800},
-            )
-            page = context.new_page()
-
-            print(f"  Loading {EVENTS_URL} ...")
-            page.goto(EVENTS_URL, wait_until="networkidle", timeout=60000)
-
-            # Wait until at least one event card has rendered, then give it
-            # a beat to render the rest.
-            try:
-                page.wait_for_selector(CARD_SELECTOR, timeout=15000)
-            except Exception:
-                print("  Warning: no event cards appeared within 15s")
-                browser.close()
-                return []
-
-            page.wait_for_timeout(2000)  # let the async batch complete
-
-            cards = page.query_selector_all(CARD_SELECTOR)
-            print(f"  Found {len(cards)} candidate cards")
-
-            seen_keys = set()
-            for card in cards:
-                try:
-                    ev = parse_card(card)
-                    if not ev:
-                        continue
-                    # Dedupe by (title, date)
-                    key = (ev["title"], ev["date"])
-                    if key in seen_keys:
-                        continue
-                    seen_keys.add(key)
-                    events.append(ev)
-                except Exception:
-                    continue
-
-            browser.close()
-
-    except Exception as ex:
-        print(f"  Playwright failed: {ex}")
-        return []
-
-    # Decorate with source metadata
-    for e in events:
-        e.setdefault("source", "Heber Valley Tourism")
-        e.setdefault("source_url", "https://www.gohebervalley.com/events/")
-
-    print(f"  Extracted {len(events)} events from gohebervalley.com")
-    return events
-
 
 def parse_card(card_element):
     """Parse one <a class='pinnable_item'> into an event dict.

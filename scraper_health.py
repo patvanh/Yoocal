@@ -45,7 +45,7 @@ HEALTH_FLOORS = {
     ("park-city", "Park City Annual Events"): 200,
     ("park-city", "Mountain Town Music"): 50,
     ("park-city", "Deer Valley Resort"): 20,
-    ("park-city", "Visit Park City"): 40,
+    ("park-city", "Visit Park City"): 15,  # Most VPC events get deduped to higher-priority sources
     ("park-city", "Visit Park City (sitemap)"): 40,
     ("park-city", "Park City Farmers Market"): 10,
     ("park-city", "Park City Institute"): 5,
