@@ -73,6 +73,14 @@ jobs:
           python jackson_scraper.py
           echo "::endgroup::"
 
+      - name: Apply event overrides
+        id: overrides
+        continue-on-error: true
+        run: |
+          echo "::group::Event overrides"
+          python event_overrides.py
+          echo "::endgroup::"
+
       - name: Auto-repair quality issues
         id: auto_repair
         continue-on-error: true
