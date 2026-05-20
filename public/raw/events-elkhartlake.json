@@ -1,14 +1,6 @@
 {
-  "version": 2,
-  "city": "elkhart-lake",
-  "city_center": {
-    "lat": 43.833,
-    "lng": -88.0426
-  },
-  "radius_mi": 15,
-  "generated_at": "2026-05-20T15:42:41.238647-06:00",
-  "today": "2026-05-20",
-  "event_count": 255,
+  "updated_at": "2026-05-20T15:30:38.905478",
+  "total": 250,
   "events": [
     {
       "title": "MotoAmerica Superbikes & Vintage MotoFest",
@@ -28,8 +20,7 @@
         "Sports",
         "Family",
         "Festival"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "WeatherTech Chicago Region SCCA June Sprints",
@@ -47,8 +38,7 @@
       "featured": true,
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "XPEL INDYCAR Grand Prix presented by AMR",
@@ -66,8 +56,7 @@
       "featured": true,
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "Cheese Capital Cup featuring Trans Am SpeedTour",
@@ -86,8 +75,7 @@
       "categories": [
         "Sports"
       ],
-      "end_time": "9:00 AM",
-      "_distance_mi": 3.6
+      "end_time": "9:00 AM"
     },
     {
       "title": "WeatherTech Vintage Weekend with Brian Redman",
@@ -105,8 +93,7 @@
       "featured": true,
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "Motul SportsCar Endurance Grand Prix featuring IMSA",
@@ -124,8 +111,7 @@
       "featured": true,
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "GT World Challenge America",
@@ -143,8 +129,7 @@
       "featured": true,
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "Art on Wheels Weekend with VSCDA",
@@ -162,8 +147,7 @@
       "featured": true,
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "SCCA National Championship Runoffs",
@@ -181,8 +165,7 @@
       "featured": true,
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "Road America Track Day",
@@ -200,8 +183,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "Road America Track Day",
@@ -219,8 +201,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "Road America Track Day",
@@ -238,8 +219,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 3.6
+      ]
     },
     {
       "title": "Road America Track Day",
@@ -257,8 +237,48 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 3.6
+      ]
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-05-18",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-20T15:29:54.454837",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": "2026-08-19",
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ]
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-05-16",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-20T15:29:54.454838",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": "2026-10-31",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ]
     },
     {
       "title": "Siebkens Live Music by Kylar Kuzio",
@@ -281,8 +301,7 @@
         "Music",
         "Food & Drink",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Jeremiah Jams",
@@ -304,8 +323,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music: Dave Steffen Band (MotoAmerica Wknd)",
@@ -324,8 +342,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 3.5
+      ]
     },
     {
       "title": "Siebkens Summer Concert: Lilie",
@@ -343,8 +360,7 @@
       "series": "Siebkens Live Music",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 3.5
+      ]
     },
     {
       "title": "Siebkens Live Music by Chasing Tales",
@@ -366,8 +382,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by 7000apart",
@@ -389,8 +404,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Wire & Nail",
@@ -413,8 +427,7 @@
         "Music",
         "Food & Drink",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Northsoul",
@@ -435,8 +448,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by The Donna Woodall Group",
@@ -457,8 +469,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Summer Concert: Ryan Scheidemeyer & Friends",
@@ -476,8 +487,7 @@
       "series": "Siebkens Live Music",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 3.5
+      ]
     },
     {
       "title": "Siebkens Live Music by The Chili Dogs",
@@ -498,8 +508,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Trapper Schoepp",
@@ -520,8 +529,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Erin Krebs & Paul Sucherman",
@@ -542,8 +550,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Livin The Dream",
@@ -564,8 +571,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Katalysst",
@@ -586,8 +592,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Summer Concert: Valley Fox",
@@ -605,8 +610,7 @@
       "series": "Siebkens Live Music",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 3.5
+      ]
     },
     {
       "title": "Siebkens Live Music: The Chocolateers (IMSA Wknd)",
@@ -626,8 +630,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 3.5
+      ]
     },
     {
       "title": "Siebkens Live Music by Bowser",
@@ -649,8 +652,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Deep Pockets",
@@ -672,8 +674,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Mike Brumm with Trust & Follow",
@@ -694,8 +695,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Downtown Night Live Music: Sister Winchester",
@@ -713,8 +713,7 @@
       "series": "Siebkens Live Music",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 3.5
+      ]
     },
     {
       "title": "Siebkens Live Music by Bob & Connor McManus",
@@ -735,8 +734,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Pat McCurdy",
@@ -757,8 +755,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Celeste Rose",
@@ -779,8 +776,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "GT World Challenge Welcome Party: Burgundy Ties",
@@ -799,8 +795,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 3.5
+      ]
     },
     {
       "title": "Siebkens Live Music by Second Hand Stereo",
@@ -822,8 +817,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Joseph Huber",
@@ -845,8 +839,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music: Boo! The Band (Elktoberfest)",
@@ -864,8 +857,7 @@
       "categories": [
         "Music",
         "Food & Drink"
-      ],
-      "_distance_mi": 3.5
+      ]
     },
     {
       "title": "Siebkens Live Music by Brent Bel & The Boys",
@@ -886,8 +878,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -909,8 +900,7 @@
       ],
       "lat": 43.833,
       "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
+      "_geo_source": "default"
     },
     {
       "title": "The Hard Left Moto Show",
@@ -929,8 +919,7 @@
       "lat": 43.8347,
       "lng": -88.0398,
       "scraped_at": "2026-05-20T15:29:54.455090",
-      "series": "Siebkens Live Music",
-      "_distance_mi": 0.2
+      "series": "Siebkens Live Music"
     },
     {
       "title": "MotoAmerica Superbikes & Vintage MotoFest",
@@ -953,8 +942,7 @@
       ],
       "lat": 43.833,
       "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
+      "_geo_source": "default"
     },
     {
       "title": "XPEL IndyCar Grand Prix presented by AMR",
@@ -973,8 +961,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-20T15:29:54.455093",
-      "_distance_mi": 0.2
+      "scraped_at": "2026-05-20T15:29:54.455093"
     },
     {
       "title": "Cheese Capital Cup Featuring Trans Am SpeedTour",
@@ -995,8 +982,7 @@
       ],
       "lat": 43.833,
       "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
+      "_geo_source": "default"
     },
     {
       "title": "Elkhart Lake Fireman's Fireworks & Annual Picnic",
@@ -1018,8 +1004,7 @@
       "scraped_at": "2026-05-20T15:29:54.455095",
       "facets": [
         "Free"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Fireman's 4th of July Parade & Annual Picnic",
@@ -1038,8 +1023,7 @@
       "scraped_at": "2026-05-20T15:29:54.455095",
       "facets": [
         "Free"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Midwest Acoustic Music Festival",
@@ -1056,8 +1040,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-20T15:29:54.455096",
-      "_distance_mi": 0.2
+      "scraped_at": "2026-05-20T15:29:54.455096"
     },
     {
       "title": "Vintage Concours d'Elegance & Parade - Racecars",
@@ -1081,8 +1064,7 @@
       "scraped_at": "2026-05-20T15:29:54.455098",
       "facets": [
         "Free"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Vintage Concours d'Elegance - Sportscars",
@@ -1105,8 +1087,7 @@
       "scraped_at": "2026-05-20T15:29:54.455100",
       "facets": [
         "Free"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Motul Sportscar Endurance Grand Prix Featuring IMSA",
@@ -1128,8 +1109,7 @@
       ],
       "lat": 43.833,
       "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
+      "_geo_source": "default"
     },
     {
       "title": "Downtown Night",
@@ -1152,8 +1132,7 @@
       "scraped_at": "2026-05-20T15:29:54.455102",
       "facets": [
         "Free"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Fanatec GT World Challenge America",
@@ -1170,8 +1149,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-20T15:29:54.455103",
-      "_distance_mi": 0.2
+      "scraped_at": "2026-05-20T15:29:54.455103"
     },
     {
       "title": "Art on Wheels Weekend with VSCDA",
@@ -1189,8 +1167,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-20T15:29:54.455104",
-      "_distance_mi": 0.2
+      "scraped_at": "2026-05-20T15:29:54.455104"
     },
     {
       "title": "Elktoberfest",
@@ -1207,8 +1184,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-20T15:29:54.455104",
-      "_distance_mi": 0.2
+      "scraped_at": "2026-05-20T15:29:54.455104"
     },
     {
       "title": "SCCA National Championship Runoffs",
@@ -1230,8 +1206,7 @@
       ],
       "lat": 43.833,
       "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
+      "_geo_source": "default"
     },
     {
       "title": "Old World Christmas Market",
@@ -1250,8 +1225,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.8347,
       "lng": -88.0398,
-      "scraped_at": "2026-05-20T15:29:54.455106",
-      "_distance_mi": 0.2
+      "scraped_at": "2026-05-20T15:29:54.455106"
     },
     {
       "title": "4 Miles of Fitness",
@@ -1277,8 +1251,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Arilya",
@@ -1300,8 +1273,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Elkhart Lake Annual Veterans Memorial Tribute",
@@ -1321,8 +1293,7 @@
       "_geo_source": "default",
       "categories": [
         "Community"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -1343,8 +1314,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Suzie & the Detonators",
@@ -1366,8 +1336,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Brady Lee",
@@ -1389,8 +1358,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1416,8 +1384,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1443,8 +1410,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Road Trip",
@@ -1466,8 +1432,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1487,8 +1452,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Hard Left Moto Show",
@@ -1510,8 +1474,7 @@
       "categories": [
         "Music",
         "Festival"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Asphalt Gypsies",
@@ -1533,8 +1496,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Dave Steffen & Friends",
@@ -1557,8 +1519,7 @@
         "Music",
         "Theater",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1584,8 +1545,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1611,8 +1571,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Lilie Collins",
@@ -1634,8 +1593,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Ethan Keller",
@@ -1657,8 +1615,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Abler Boys",
@@ -1680,8 +1637,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1701,8 +1657,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Breaking Cadence",
@@ -1724,8 +1679,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Gould & Jaeger",
@@ -1747,8 +1701,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1774,8 +1727,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -1801,8 +1753,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Bowser",
@@ -1824,8 +1775,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Cougars",
@@ -1847,8 +1797,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -1868,8 +1817,7 @@
       "_geo_source": "default",
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -1889,8 +1837,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -1911,8 +1858,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Brent Bel & the Boys",
@@ -1934,8 +1880,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Mark Croft",
@@ -1957,8 +1902,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Swine & Pink Wine",
@@ -1984,8 +1928,7 @@
       "facets": [
         "21+",
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2011,8 +1954,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2038,8 +1980,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "INDYCAR XPEL Grand Prix Presented by AMR",
@@ -2060,8 +2001,7 @@
       "_geo_source": "default",
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "IndyCar Weekend Elkhart Lake Welcome Party",
@@ -2084,8 +2024,7 @@
         "Music",
         "Sports",
         "Kids"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Hipp-Jones Duo",
@@ -2107,8 +2046,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Eight Second Ride",
@@ -2130,8 +2068,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2151,8 +2088,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Until Dawn",
@@ -2174,8 +2110,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Skyhouse",
@@ -2197,8 +2132,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2224,8 +2158,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2251,8 +2184,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Ryan Scheidemeyer",
@@ -2273,8 +2205,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sadie Acoustic Duo",
@@ -2296,8 +2227,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Suzie & the Detonators",
@@ -2319,8 +2249,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2340,8 +2269,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Mark Croft",
@@ -2363,8 +2291,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Abler McManus Duo",
@@ -2386,8 +2313,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2413,8 +2339,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2440,8 +2365,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The \u2018Tones",
@@ -2463,8 +2387,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "7th Annual 4th of July Boat Parade",
@@ -2484,8 +2407,7 @@
       "_geo_source": "default",
       "categories": [
         "Family"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Elkhart Lake Fireman\u2019s Picnic",
@@ -2506,8 +2428,7 @@
       "categories": [
         "Music",
         "Family"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Spicy Tie Band",
@@ -2529,8 +2450,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Elkhart Lake Fireman\u2019s Fireworks",
@@ -2551,8 +2471,7 @@
       "categories": [
         "Outdoor",
         "Family"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2572,8 +2491,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Frank Childress & The Main Street Band",
@@ -2595,8 +2513,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Elkhart Lake Fireman\u2019s 4th of July Parade",
@@ -2618,8 +2535,7 @@
       "categories": [
         "Music",
         "Family"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Elkhart Lake Fireman\u2019s Picnic",
@@ -2640,8 +2556,7 @@
       "categories": [
         "Music",
         "Family"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Chasing Tales",
@@ -2663,8 +2578,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2690,8 +2604,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2717,8 +2630,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Seth & Kylar",
@@ -2740,8 +2652,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Dave Steffen Band",
@@ -2763,8 +2674,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -2784,8 +2694,7 @@
       "_geo_source": "default",
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -2805,8 +2714,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Midwest Acoustic Music Festival",
@@ -2826,8 +2734,7 @@
       "_geo_source": "default",
       "categories": [
         "Festival"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -2848,8 +2755,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Bowser",
@@ -2871,8 +2777,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Abler McManus Duo",
@@ -2894,8 +2799,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2921,8 +2825,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -2948,8 +2851,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sadie Acoustic Duo",
@@ -2971,8 +2873,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Vintage Concours d\u2019Elegance",
@@ -2995,8 +2896,7 @@
         "Sports",
         "Outdoor",
         "Festival"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by That \u201990s Band",
@@ -3018,8 +2918,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -3039,8 +2938,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Throttlestop Open House",
@@ -3064,8 +2962,7 @@
         "Outdoor",
         "Festival",
         "Community"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Vintage Concours d\u2019Elegance",
@@ -3088,8 +2985,7 @@
         "Sports",
         "Outdoor",
         "Festival"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Livin The Dream",
@@ -3110,8 +3006,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Flight Crew",
@@ -3133,8 +3028,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Luke Abler",
@@ -3156,8 +3050,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -3183,8 +3076,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -3210,8 +3102,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Hipp-Jones Duo",
@@ -3233,8 +3124,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Boat Drinks",
@@ -3256,8 +3146,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -3277,8 +3166,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "BoomBoxx",
@@ -3300,8 +3188,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Skyhouse",
@@ -3323,8 +3210,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -3345,8 +3231,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -3372,8 +3257,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -3399,8 +3283,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Katalysst",
@@ -3421,8 +3304,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "IMSA Welcome Party",
@@ -3444,8 +3326,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by The Chocolateers",
@@ -3467,8 +3348,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Burgundy Ties Band",
@@ -3490,8 +3370,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Suzie & the Detonators",
@@ -3513,8 +3392,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -3534,8 +3412,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Third Wheels",
@@ -3557,8 +3434,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Rob Anthony",
@@ -3580,8 +3456,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -3607,8 +3482,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -3634,8 +3508,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Abler Boys",
@@ -3657,8 +3530,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Bazooka Joe",
@@ -3680,8 +3552,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -3701,8 +3572,7 @@
       "_geo_source": "default",
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -3722,8 +3592,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -3744,8 +3613,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Fire on High",
@@ -3767,8 +3635,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Alex Simmons & Jon Prigge",
@@ -3790,8 +3657,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Downtown Night: A Taste of Elkhart Lake",
@@ -3813,8 +3679,7 @@
         "Music",
         "Kids",
         "Family"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -3840,8 +3705,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Sister Winchester",
@@ -3862,8 +3726,7 @@
       "_geo_source": "default",
       "categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -3889,8 +3752,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Jacob Fannin",
@@ -3912,8 +3774,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Bowser",
@@ -3935,8 +3796,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -3956,8 +3816,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Brent Bel & The Boys",
@@ -3979,8 +3838,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Wisco Daddy",
@@ -4002,8 +3860,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4029,8 +3886,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4056,8 +3912,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Abler McManus Duo",
@@ -4079,8 +3934,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Cold Soda Club",
@@ -4102,8 +3956,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -4123,8 +3976,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -4145,8 +3997,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Osthoff Lake Deck Live Music by Dirty Boogie",
@@ -4168,8 +4019,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Gene Gruber",
@@ -4191,8 +4041,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4218,8 +4067,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4245,8 +4093,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "GT Parade and Welcome Party",
@@ -4272,8 +4119,7 @@
       ],
       "facets": [
         "Free"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Siebkens Live Music by Burgundy Ties",
@@ -4295,8 +4141,7 @@
       "categories": [
         "Music",
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sadie Acoustic Duo",
@@ -4318,8 +4163,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Bad Habitz",
@@ -4341,8 +4185,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -4362,8 +4205,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Breaking Cadence",
@@ -4385,8 +4227,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Abler Boys",
@@ -4408,8 +4249,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4435,8 +4275,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4462,8 +4301,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The \u2018Tones",
@@ -4485,8 +4323,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "The Empty Vees",
@@ -4508,8 +4345,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -4529,8 +4365,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Maddie Jo Band",
@@ -4552,8 +4387,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4579,8 +4413,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4606,8 +4439,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -4627,8 +4459,7 @@
       "_geo_source": "default",
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -4648,8 +4479,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -4670,8 +4500,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4697,8 +4526,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4724,8 +4552,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Art on Wheels Vintage Weekend with VSCDA",
@@ -4746,8 +4573,7 @@
       "_geo_source": "default",
       "categories": [
         "Sports"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -4767,8 +4593,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Elktoberfest Wine & Beer Run 5K",
@@ -4791,8 +4616,7 @@
       ],
       "facets": [
         "21+"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Elktoberfest",
@@ -4816,8 +4640,7 @@
         "Food & Drink",
         "Outdoor",
         "Family"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4843,8 +4666,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4870,8 +4692,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -4891,8 +4712,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Sunset Cruise at Road America",
@@ -4913,8 +4733,7 @@
       "categories": [
         "Sports",
         "Outdoor"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4940,8 +4759,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "4 Miles of Fitness",
@@ -4967,8 +4785,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Farmers & Artisans Market",
@@ -4988,8 +4805,7 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5010,8 +4826,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5032,8 +4847,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5054,8 +4868,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5076,8 +4889,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5098,8 +4910,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5120,8 +4931,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5142,8 +4952,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5164,8 +4973,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5186,8 +4994,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Old World Christmas Market",
@@ -5208,8 +5015,7 @@
       "_geo_source": "default",
       "categories": [
         "Wellness"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "Gluten-Free Cooking",
@@ -5231,8 +5037,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Sushi Making",
@@ -5254,8 +5059,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Summer Cocktail Making Class",
@@ -5278,8 +5082,7 @@
       "facets": [
         "21+",
         "Paid"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Pasta III",
@@ -5301,8 +5104,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Argentine Steak and Sausage",
@@ -5324,8 +5126,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Persian Style Rice and Kabob",
@@ -5347,8 +5148,7 @@
       ],
       "facets": [
         "Paid"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Until Dawn",
@@ -5369,8 +5169,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Paella Dinner",
@@ -5394,8 +5193,7 @@
       "facets": [
         "21+",
         "Paid"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Mark Croft Band",
@@ -5416,8 +5214,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Abler McManus",
@@ -5438,8 +5235,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Abler McManus",
@@ -5460,8 +5256,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "That 90s Band",
@@ -5482,8 +5277,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Burgundy Ties Duo",
@@ -5504,8 +5298,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Alex Simmons / Jon Prigge",
@@ -5526,8 +5319,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Wisco Daddy \u2013 aka McManus Duo",
@@ -5548,8 +5340,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Abler McManus",
@@ -5570,8 +5361,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Model Citizens",
@@ -5591,8 +5381,7 @@
       "categories": [
         "Music",
         "Outdoor"
-      ],
-      "_distance_mi": 0.2
+      ]
     },
     {
       "title": "Views Navigation",
@@ -5608,8 +5397,7 @@
       "_geo_source": "default",
       "categories": [
         "Community"
-      ],
-      "_distance_mi": 0.0
+      ]
     },
     {
       "title": "WeatherTech Chicago Region SCCA June Sprints",
@@ -5631,8 +5419,7 @@
       "lat": 43.833,
       "lng": -88.0426,
       "_geo_source": "default",
-      "_repaired_from": "multi_day_split (was 2026-06-05 to 2026-06-07)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-06-05 to 2026-06-07)"
     },
     {
       "title": "WeatherTech Chicago Region SCCA June Sprints",
@@ -5654,8 +5441,7 @@
       "lat": 43.833,
       "lng": -88.0426,
       "_geo_source": "default",
-      "_repaired_from": "multi_day_split (was 2026-06-05 to 2026-06-07)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-06-05 to 2026-06-07)"
     },
     {
       "title": "WeatherTech Chicago Region SCCA June Sprints",
@@ -5677,8 +5463,7 @@
       "lat": 43.833,
       "lng": -88.0426,
       "_geo_source": "default",
-      "_repaired_from": "multi_day_split (was 2026-06-05 to 2026-06-07)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-06-05 to 2026-06-07)"
     },
     {
       "title": "WeatherTech Vintage Weekend with Brian Redman",
@@ -5702,8 +5487,7 @@
       "lat": 43.833,
       "lng": -88.0426,
       "_geo_source": "default",
-      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
     },
     {
       "title": "WeatherTech Vintage Weekend with Brian Redman",
@@ -5727,8 +5511,7 @@
       "lat": 43.833,
       "lng": -88.0426,
       "_geo_source": "default",
-      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
     },
     {
       "title": "WeatherTech Vintage Weekend with Brian Redman",
@@ -5752,8 +5535,7 @@
       "lat": 43.833,
       "lng": -88.0426,
       "_geo_source": "default",
-      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
     },
     {
       "title": "WeatherTech Vintage Weekend with Brian Redman",
@@ -5777,8 +5559,7 @@
       "lat": 43.833,
       "lng": -88.0426,
       "_geo_source": "default",
-      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-07-16 to 2026-07-19)"
     },
     {
       "title": "GT World Challenge America",
@@ -5800,8 +5581,7 @@
       "categories": [
         "Sports"
       ],
-      "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)"
     },
     {
       "title": "GT World Challenge America",
@@ -5823,8 +5603,7 @@
       "categories": [
         "Sports"
       ],
-      "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)"
     },
     {
       "title": "GT World Challenge America",
@@ -5846,8 +5625,7 @@
       "categories": [
         "Sports"
       ],
-      "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)",
-      "_distance_mi": 0.0
+      "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)"
     }
   ]
 }

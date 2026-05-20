@@ -46,10 +46,10 @@ ANTHROPIC_API = "https://api.anthropic.com/v1/messages"
 RESOLVABLE_TYPES = {"title_venue_only", "multi_day_span", "title_truncated"}
 
 CITY_FILES = {
-    "park-city": "public/events.json",
-    "elkhart-lake": "public/events-elkhartlake.json",
-    "heber": "public/events-heber.json",
-    "jackson": "public/events-jackson.json",
+    "park-city": "public/raw/events.json",
+    "elkhart-lake": "public/raw/events-elkhartlake.json",
+    "heber": "public/raw/events-heber.json",
+    "jackson": "public/raw/events-jackson.json",
 }
 
 

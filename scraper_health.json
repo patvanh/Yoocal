@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-05-20T13:11:11.630585-06:00",
+  "checked_at": "2026-05-20T15:42:39.540804-06:00",
   "today": "2026-05-20",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 795,
+        "actual": 782,
         "baseline": null,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=795 (no baseline yet)"
+        "message": "actual=782 (no baseline yet)"
       },
       {
         "source": "Park City Annual Events",
@@ -53,11 +53,11 @@
       },
       {
         "source": "Visit Park City",
-        "actual": 20,
+        "actual": 19,
         "baseline": null,
-        "floor": 40,
-        "severity": "CRITICAL",
-        "message": "actual=20, floor=40 (below catastrophic threshold)"
+        "floor": 15,
+        "severity": "OK",
+        "message": "actual=19 (no baseline yet)"
       },
       {
         "source": "Park City Institute",
@@ -109,6 +109,14 @@
       },
       {
         "source": "Park City Gallery Association",
+        "actual": 2,
+        "baseline": null,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=2 (no baseline yet)"
+      },
+      {
+        "source": "Heber Valley Tourism",
         "actual": 2,
         "baseline": null,
         "floor": null,
@@ -168,6 +176,14 @@
     ],
     "heber": [
       {
+        "source": "Deer Valley Resort",
+        "actual": 59,
+        "baseline": null,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=59 (no baseline yet)"
+      },
+      {
         "source": "Google Events",
         "actual": 35,
         "baseline": null,
@@ -184,12 +200,20 @@
         "message": "actual=27 (no baseline yet)"
       },
       {
+        "source": "The Park Record",
+        "actual": 24,
+        "baseline": null,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=24 (no baseline yet)"
+      },
+      {
         "source": "KPCW Community Calendar",
-        "actual": 15,
+        "actual": 13,
         "baseline": null,
         "floor": 50,
         "severity": "CRITICAL",
-        "message": "actual=15, floor=50 (below catastrophic threshold)"
+        "message": "actual=13, floor=50 (below catastrophic threshold)"
       },
       {
         "source": "Oakley City",
@@ -198,14 +222,6 @@
         "floor": null,
         "severity": "OK",
         "message": "actual=13 (no baseline yet)"
-      },
-      {
-        "source": "Heber Valley Tourism",
-        "actual": 10,
-        "baseline": null,
-        "floor": 30,
-        "severity": "CRITICAL",
-        "message": "actual=10, floor=30 (below catastrophic threshold)"
       },
       {
         "source": "Eventbrite",
@@ -224,12 +240,36 @@
         "message": "actual=9 (no baseline yet)"
       },
       {
+        "source": "Heber Valley Tourism",
+        "actual": 7,
+        "baseline": null,
+        "floor": 30,
+        "severity": "CRITICAL",
+        "message": "actual=7, floor=30 (below catastrophic threshold)"
+      },
+      {
         "source": "Salt Lake Running Co",
         "actual": 4,
         "baseline": null,
         "floor": null,
         "severity": "OK",
         "message": "actual=4 (no baseline yet)"
+      },
+      {
+        "source": "Visit Park City",
+        "actual": 1,
+        "baseline": null,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=1 (no baseline yet)"
+      },
+      {
+        "source": "Deer Valley Music Festival",
+        "actual": 1,
+        "baseline": null,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=1 (no baseline yet)"
       }
     ],
     "jackson": [
@@ -277,22 +317,16 @@
   },
   "critical_alerts": [
     {
-      "city": "park-city",
-      "source": "Visit Park City",
-      "severity": "CRITICAL",
-      "message": "actual=20, floor=40 (below catastrophic threshold)"
-    },
-    {
       "city": "heber",
       "source": "KPCW Community Calendar",
       "severity": "CRITICAL",
-      "message": "actual=15, floor=50 (below catastrophic threshold)"
+      "message": "actual=13, floor=50 (below catastrophic threshold)"
     },
     {
       "city": "heber",
       "source": "Heber Valley Tourism",
       "severity": "CRITICAL",
-      "message": "actual=10, floor=30 (below catastrophic threshold)"
+      "message": "actual=7, floor=30 (below catastrophic threshold)"
     }
   ]
 }

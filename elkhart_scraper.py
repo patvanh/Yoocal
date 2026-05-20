@@ -1158,7 +1158,7 @@ def _fill_default_geo(events):
     return events
 
 
-def save_events(events, filename="public/events-elkhartlake.json"):
+def save_events(events, filename="public/raw/events-elkhartlake.json"):
     events = _fill_default_geo(events)
     # Drop records with non-ISO dates. These are usually UI chrome
     # ("Login", "Need help?") that fragile HTML scrapers grabbed as events,

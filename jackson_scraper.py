@@ -286,7 +286,7 @@ def main():
         print(f"  {s}: {n}")
 
     # Write out
-    out_path = Path(__file__).parent / "public" / "events-jackson.json"
+    out_path = Path(__file__).parent / "public" / "raw" / "events-jackson.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "updated_at": datetime.now().isoformat(),

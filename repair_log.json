@@ -1,147 +1,34 @@
 {
-  "generated_at": "2026-05-20T19:09:15.274880",
+  "generated_at": "2026-05-20T15:42:39.314452",
   "audit_date": "2026-05-20",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1606,
+      "before_count": 1600,
       "passes": {
         "past_dates": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Running with Ed 2026",
-              "date": "2026-05-16"
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "absurd_spans": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Old Town walking tour",
-              "had_span": 84
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "multi_day_splits": {
-          "fixed": 4,
-          "examples": [
-            {
-              "title": "Chef Sarah Glover Weekend",
-              "original_span": "2026-07-11 to 2026-07-12",
-              "split_into": [
-                "2026-07-11",
-                "2026-07-12"
-              ]
-            },
-            {
-              "title": "Matilda & Gozney Weekend",
-              "original_span": "2026-07-18 to 2026-07-19",
-              "split_into": [
-                "2026-07-18",
-                "2026-07-19"
-              ]
-            },
-            {
-              "title": "Chef Ryan Arensdorf Weekend",
-              "original_span": "2026-08-01 to 2026-08-02",
-              "split_into": [
-                "2026-08-01",
-                "2026-08-02"
-              ]
-            },
-            {
-              "title": "Chef Ryan Arensdorf Weekend",
-              "original_span": "2026-08-08 to 2026-08-09",
-              "split_into": [
-                "2026-08-08",
-                "2026-08-09"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "missing_end_times": {
-          "fixed": 19,
-          "examples": [
-            {
-              "title": "HOMETOWN SHOW Jessie Ritter @ Jackson MO City Park Rock Garden",
-              "start_time": "6:00 PM",
-              "new_end_time": "8:00 PM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Concerts on the Slopes",
-              "start_time": "7:00 PM",
-              "new_end_time": "10:00 PM",
-              "duration_hours": 3
-            },
-            {
-              "title": "Haydn, Mendelssohn, & A Viola Concerto",
-              "start_time": "8:00 PM",
-              "new_end_time": "11:00 PM",
-              "duration_hours": 3
-            },
-            {
-              "title": "2026 Deer Valley Music Festival: Chicago the Musical In Concert",
-              "start_time": "7:30 PM",
-              "new_end_time": "10:30 PM",
-              "duration_hours": 3
-            },
-            {
-              "title": "Concerts on the Slopes",
-              "start_time": "7:00 PM",
-              "new_end_time": "10:00 PM",
-              "duration_hours": 3
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "classification": {
-          "fixed": 391,
-          "examples": [
-            {
-              "title": "Fascia Rolling Class",
-              "before": [],
-              "after": [
-                "Wellness"
-              ]
-            },
-            {
-              "title": "Group Fitness Classes",
-              "before": [],
-              "after": [
-                "Government",
-                "Wellness",
-                "Education"
-              ]
-            },
-            {
-              "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
-              "before": [],
-              "after": [
-                "Food & Drink"
-              ]
-            },
-            {
-              "title": "Progressive Art Experience",
-              "before": [],
-              "after": [
-                "Food & Drink",
-                "Education"
-              ]
-            },
-            {
-              "title": "Rise + Release: Block",
-              "before": [],
-              "after": [
-                "Wellness"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         }
       },
-      "after_count": 1609,
-      "total_fixes": 416
+      "after_count": 1600,
+      "total_fixes": 0
     },
     {
       "city": "elkhart-lake",
@@ -209,16 +96,11 @@
     },
     {
       "city": "heber",
-      "before_count": 124,
+      "before_count": 203,
       "passes": {
         "past_dates": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Kamas Library Classic Cinema Series",
-              "date": "2026-05-19"
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "absurd_spans": {
           "fixed": 0,
@@ -229,21 +111,8 @@
           "examples": []
         },
         "missing_end_times": {
-          "fixed": 2,
-          "examples": [
-            {
-              "title": "Utah Marathon",
-              "start_time": "7:30 AM",
-              "new_end_time": "9:30 AM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Yoga in the Park",
-              "start_time": "10:45 AM",
-              "new_end_time": "11:45 AM",
-              "duration_hours": 1
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "classification": {
           "fixed": 13,
@@ -307,155 +176,36 @@
           ]
         }
       },
-      "after_count": 123,
-      "total_fixes": 16
+      "after_count": 203,
+      "total_fixes": 13
     },
     {
       "city": "jackson",
-      "before_count": 483,
+      "before_count": 487,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 7,
-          "examples": [
-            {
-              "title": "Music Classes",
-              "had_span": 1687
-            },
-            {
-              "title": "Visual Arts Classes",
-              "had_span": 1687
-            },
-            {
-              "title": "Writing Classes and Workshops",
-              "had_span": 1687
-            },
-            {
-              "title": "Dance and Movement Classes",
-              "had_span": 1687
-            },
-            {
-              "title": "Youth Art Programming",
-              "had_span": 1352
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "multi_day_splits": {
-          "fixed": 2,
-          "examples": [
-            {
-              "title": "Jackson Hole Restaurant Week",
-              "original_span": "2026-05-20 to 2026-05-22",
-              "split_into": [
-                "2026-05-20",
-                "2026-05-21",
-                "2026-05-22"
-              ]
-            },
-            {
-              "title": "Teton Mudpots Summer Sale",
-              "original_span": "2026-06-17 to 2026-06-19",
-              "split_into": [
-                "2026-06-17",
-                "2026-06-18",
-                "2026-06-19"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "missing_end_times": {
-          "fixed": 4,
-          "examples": [
-            {
-              "title": "Old West Film Fest",
-              "start_time": "7:30 PM",
-              "new_end_time": "9:30 PM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Old West Days - Jackson Hole Rodeo",
-              "start_time": "8:00 PM",
-              "new_end_time": "10:00 PM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Little Wings Story Time",
-              "start_time": "11:00 AM",
-              "new_end_time": "11:30 AM",
-              "duration_hours": 0.5
-            },
-            {
-              "title": "The Center Presents: Nitty Gritty Dirt Band \u2013 The Farewell Tour",
-              "start_time": "8:00 PM",
-              "new_end_time": "9:00 PM",
-              "duration_hours": 1
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "classification": {
-          "fixed": 213,
-          "examples": [
-            {
-              "title": "After the Diagnosis: A cancer symptoms management panel and Q&A",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Education"
-              ]
-            },
-            {
-              "title": "Al Hubbard: When Turtles Talk",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Arts"
-              ]
-            },
-            {
-              "title": "Old West Film Fest",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Film",
-                "Festival"
-              ]
-            },
-            {
-              "title": "Raptor Adaptations: Masters of Survival",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Kids",
-                "Education"
-              ]
-            },
-            {
-              "title": "Raptor Discovery: Masters of the Sky",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Kids",
-                "Education"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         }
       },
       "after_count": 487,
-      "total_fixes": 226
+      "total_fixes": 0
     }
   ]
 }

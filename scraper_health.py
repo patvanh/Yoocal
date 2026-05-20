@@ -23,10 +23,10 @@ import requests
 MOUNTAIN = timezone(timedelta(hours=-6))
 
 CITY_FILES = {
-    "park-city": "public/events.json",
-    "elkhart-lake": "public/events-elkhartlake.json",
-    "heber": "public/events-heber.json",
-    "jackson": "public/events-jackson.json",
+    "park-city": "public/raw/events.json",
+    "elkhart-lake": "public/raw/events-elkhartlake.json",
+    "heber": "public/raw/events-heber.json",
+    "jackson": "public/raw/events-jackson.json",
 }
 
 BASELINES_FILE = "scraper_baselines.json"

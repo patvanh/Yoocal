@@ -395,7 +395,7 @@ def deduplicate(events):
             unique.append(e)
     return unique
 
-def save_events(events, filename="public/events-heber.json"):
+def save_events(events, filename="public/raw/events-heber.json"):
     # Apply canonical category classification before writing.
     from event_classifier import classify_events as _classify_events
     events = _classify_events(events)

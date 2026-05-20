@@ -44,10 +44,10 @@ CITIES = {
 
 # Source files to read (current per-city files act as INPUT until we migrate scrapers)
 INPUT_FILES = [
-    "public/events.json",
-    "public/events-heber.json",
-    "public/events-jackson.json",
-    "public/events-elkhartlake.json",
+    "public/raw/events.json",
+    "public/raw/events-heber.json",
+    "public/raw/events-jackson.json",
+    "public/raw/events-elkhartlake.json",
 ]
 
 MASTER_FILE = "public/events-all.json"

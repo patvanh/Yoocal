@@ -1634,7 +1634,7 @@ def merge_into_heber_file(new_events, filename="public/events-heber.json"):
     )
 
 
-def save_events(events, filename="public/events.json"):
+def save_events(events, filename="public/raw/events.json"):
     # Drop records with non-ISO dates ("See website", "TBA", etc).
     # These come from HTML scrapers that couldn't parse a real date.
     import re as _re
