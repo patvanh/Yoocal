@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-20T14:33:18.148656",
+  "generated_at": "2026-05-20T19:09:15.274880",
   "audit_date": "2026-05-20",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1586,
+      "before_count": 1606,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -97,74 +97,55 @@
           ]
         },
         "classification": {
-          "fixed": 371,
+          "fixed": 391,
           "examples": [
             {
-              "title": "2026 Oakley Rodeo BBQ",
-              "before": [
-                "Community"
-              ],
+              "title": "Fascia Rolling Class",
+              "before": [],
               "after": [
-                "Community",
-                "Food & Drink",
-                "Sports",
-                "Kids",
-                "Family",
-                "Festival"
-              ]
-            },
-            {
-              "title": "4th of July Parade and Celebration",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Family",
-                "Festival"
-              ]
-            },
-            {
-              "title": "Candlelight Kundalini",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Food & Drink",
                 "Wellness"
               ]
             },
             {
-              "title": "Coffee & Calm: Designer Chats",
-              "before": [
-                "Community"
-              ],
+              "title": "Group Fitness Classes",
+              "before": [],
               "after": [
-                "Community",
+                "Government",
                 "Wellness",
                 "Education"
               ]
             },
             {
-              "title": "Family Friendly: Wind Chimes in Clay",
-              "before": [
-                "Community"
-              ],
+              "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
+              "before": [],
               "after": [
-                "Community",
-                "Family"
+                "Food & Drink"
+              ]
+            },
+            {
+              "title": "Progressive Art Experience",
+              "before": [],
+              "after": [
+                "Food & Drink",
+                "Education"
+              ]
+            },
+            {
+              "title": "Rise + Release: Block",
+              "before": [],
+              "after": [
+                "Wellness"
               ]
             }
           ]
         }
       },
-      "after_count": 1589,
-      "total_fixes": 396
+      "after_count": 1609,
+      "total_fixes": 416
     },
     {
       "city": "elkhart-lake",
-      "before_count": 248,
+      "before_count": 250,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -223,16 +204,21 @@
           "examples": []
         }
       },
-      "after_count": 255,
+      "after_count": 257,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 102,
+      "before_count": 124,
       "passes": {
         "past_dates": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Kamas Library Classic Cinema Series",
+              "date": "2026-05-19"
+            }
+          ]
         },
         "absurd_spans": {
           "fixed": 0,
@@ -243,13 +229,19 @@
           "examples": []
         },
         "missing_end_times": {
-          "fixed": 1,
+          "fixed": 2,
           "examples": [
             {
               "title": "Utah Marathon",
               "start_time": "7:30 AM",
               "new_end_time": "9:30 AM",
               "duration_hours": 2
+            },
+            {
+              "title": "Yoga in the Park",
+              "start_time": "10:45 AM",
+              "new_end_time": "11:45 AM",
+              "duration_hours": 1
             }
           ]
         },
@@ -315,12 +307,12 @@
           ]
         }
       },
-      "after_count": 102,
-      "total_fixes": 14
+      "after_count": 123,
+      "total_fixes": 16
     },
     {
       "city": "jackson",
-      "before_count": 481,
+      "before_count": 483,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -462,7 +454,7 @@
           ]
         }
       },
-      "after_count": 485,
+      "after_count": 487,
       "total_fixes": 226
     }
   ]

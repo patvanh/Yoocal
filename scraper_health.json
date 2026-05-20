@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-05-20T11:14:16.035386-06:00",
+  "checked_at": "2026-05-20T13:11:11.630585-06:00",
   "today": "2026-05-20",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 792,
+        "actual": 795,
         "baseline": null,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=792 (no baseline yet)"
+        "message": "actual=795 (no baseline yet)"
       },
       {
         "source": "Park City Annual Events",
@@ -29,11 +29,11 @@
       },
       {
         "source": "Deer Valley Resort",
-        "actual": 56,
+        "actual": 60,
         "baseline": null,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=56 (no baseline yet)"
+        "message": "actual=60 (no baseline yet)"
       },
       {
         "source": "Visit Park City (sitemap)",
@@ -116,14 +116,6 @@
         "message": "actual=2 (no baseline yet)"
       },
       {
-        "source": "Running in the USA",
-        "actual": 1,
-        "baseline": null,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=1 (no baseline yet)"
-      },
-      {
         "source": "Park City Song Summit",
         "actual": 1,
         "baseline": null,
@@ -142,15 +134,15 @@
         "message": "actual=216 (no baseline yet)"
       },
       {
-        "source": "Road America",
-        "actual": 15,
+        "source": "The Osthoff Resort",
+        "actual": 17,
         "baseline": null,
         "floor": null,
         "severity": "OK",
-        "message": "actual=15 (no baseline yet)"
+        "message": "actual=17 (no baseline yet)"
       },
       {
-        "source": "The Osthoff Resort",
+        "source": "Road America",
         "actual": 15,
         "baseline": null,
         "floor": null,
@@ -176,36 +168,28 @@
     ],
     "heber": [
       {
-        "source": "The Park Record",
-        "actual": 85,
-        "baseline": null,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=85 (no baseline yet)"
-      },
-      {
         "source": "Google Events",
-        "actual": 40,
+        "actual": 35,
         "baseline": null,
         "floor": null,
         "severity": "OK",
-        "message": "actual=40 (no baseline yet)"
+        "message": "actual=35 (no baseline yet)"
       },
       {
         "source": "Heber Valley Life",
-        "actual": 26,
+        "actual": 27,
         "baseline": null,
         "floor": 10,
         "severity": "OK",
-        "message": "actual=26 (no baseline yet)"
+        "message": "actual=27 (no baseline yet)"
       },
       {
-        "source": "Mountain Town Music",
-        "actual": 16,
+        "source": "KPCW Community Calendar",
+        "actual": 15,
         "baseline": null,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=16 (no baseline yet)"
+        "floor": 50,
+        "severity": "CRITICAL",
+        "message": "actual=15, floor=50 (below catastrophic threshold)"
       },
       {
         "source": "Oakley City",
@@ -224,20 +208,20 @@
         "message": "actual=10, floor=30 (below catastrophic threshold)"
       },
       {
+        "source": "Eventbrite",
+        "actual": 10,
+        "baseline": null,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=10 (no baseline yet)"
+      },
+      {
         "source": "RunSignup",
         "actual": 9,
         "baseline": null,
         "floor": null,
         "severity": "OK",
         "message": "actual=9 (no baseline yet)"
-      },
-      {
-        "source": "Visit Park City (sitemap)",
-        "actual": 7,
-        "baseline": null,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=7 (no baseline yet)"
       },
       {
         "source": "Salt Lake Running Co",
@@ -251,11 +235,11 @@
     "jackson": [
       {
         "source": "Jackson Hole Chamber of Commerce",
-        "actual": 234,
+        "actual": 236,
         "baseline": null,
         "floor": 100,
         "severity": "OK",
-        "message": "actual=234 (no baseline yet)"
+        "message": "actual=236 (no baseline yet)"
       },
       {
         "source": "Center for the Arts Jackson Hole",
@@ -297,6 +281,12 @@
       "source": "Visit Park City",
       "severity": "CRITICAL",
       "message": "actual=20, floor=40 (below catastrophic threshold)"
+    },
+    {
+      "city": "heber",
+      "source": "KPCW Community Calendar",
+      "severity": "CRITICAL",
+      "message": "actual=15, floor=50 (below catastrophic threshold)"
     },
     {
       "city": "heber",
