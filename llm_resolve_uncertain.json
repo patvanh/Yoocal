@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-05-19T19:12:33.053854",
+  "uncertain": [
+    {
+      "city": "park-city",
+      "title": "Kimball Arts Festival",
+      "type": "multi_day_span",
+      "link": "https://www.visitparkcity.com/event/kimball-arts-festival/28982/",
+      "resolution": {
+        "confidence": "high",
+        "kind": "continuous",
+        "explicit_dates": [],
+        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which typically runs continuously over multiple days where attendees can come any day during the event period."
+      },
+      "applied": false,
+      "note": "confirmed continuous, no change"
+    },
+    {
+      "city": "park-city",
+      "title": "Summer Program Registration",
+      "type": "multi_day_span",
+      "link": "https://www.visitparkcity.com/event/summer-program-registration/28987/",
+      "resolution": {
+        "confidence": "low",
+        "kind": "continuous",
+        "explicit_dates": [],
+        "reasoning": "The event appears to be a registration period spanning from May 19 to June 1, 2026, representing a continuous window of time when registration is open, though the source text is incomplete and doesn't clearly confirm the date range or structure."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Flying Ace All-Stars Freestyle Show",
+      "type": "multi_day_span",
+      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-52/",
+      "resolution": {
+        "confidence": "medium",
+        "kind": "split",
+        "explicit_dates": [
+          "2026-07-03"
+        ],
+        "reasoning": "The description states 'every weekend beginning June 12' suggesting multiple recurring instances, though only July 03, 2026 is explicitly mentioned for this listing."
+      },
+      "applied": false,
+      "note": "confidence=medium, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Flying Ace All-Stars Freestyle Show",
+      "type": "title_venue_only",
+      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-54/",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source text describes the 'Flying Ace All-Stars Freestyle Show' as a performance by Olympians and National Team skiers and snowboarders, but does not identify any specific named artist, band, or individual performer."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Flying Ace All-Stars Freestyle Show",
+      "type": "multi_day_span",
+      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-54/",
+      "resolution": {
+        "confidence": "medium",
+        "kind": "split",
+        "explicit_dates": [],
+        "reasoning": "The description says 'every weekend beginning June 12' and the event is listed for a specific date (July 10, 2026), suggesting this is one instance of a recurring weekly show rather than a continuous multi-day event, though specific dates are not enumerated in the source text."
+      },
+      "applied": false,
+      "note": "confidence=medium, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Flying Ace All-Stars Freestyle Show",
+      "type": "multi_day_span",
+      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-56/",
+      "resolution": {
+        "confidence": "medium",
+        "kind": "split",
+        "explicit_dates": [
+          "2026-07-17"
+        ],
+        "reasoning": "The description states 'The event is held on July 17, 2026' (singular occurrence) while the page text says 'every weekend beginning June 12', suggesting this is one instance of a recurring weekend show series."
+      },
+      "applied": false,
+      "note": "confidence=medium, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Slow Sunday Run Club!",
+      "type": "multi_day_span",
+      "link": "https://rendezvousrun.com/",
+      "resolution": {
+        "confidence": "high",
+        "kind": "split",
+        "explicit_dates": [],
+        "reasoning": "This is a recurring weekly Sunday run club that meets every Sunday at 10 AM, not a single multi-day event or specific dated instances."
+      },
+      "applied": false,
+      "note": "split kind but no valid dates"
+    },
+    {
+      "city": "park-city",
+      "title": "Moose on the Loose",
+      "type": "title_venue_only",
+      "link": "https://www.parkcityss.org/moose-on-the-loose",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source text describes 'Moose on the Loose' as a trail running race series for kids ages 3-14, not a concert or performance with an artist/band, so there is no performer to identify."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Elemental Harmony: Hormones + Seasons Wellness Coh",
+      "type": "multi_day_span",
+      "link": "http://wildwomentribe.net/wander-1",
+      "resolution": {
+        "confidence": "high",
+        "kind": "continuous",
+        "explicit_dates": [],
+        "reasoning": "This is a 12-month continuous wellness cohort series running from Fall (Nov 15) through Summer (Aug 22) with four quarterly in-person sessions plus eight monthly Zoom check-ins, designed as one ongoing program where participants attend all sessions together."
+      },
+      "applied": false,
+      "note": "confirmed continuous, no change"
+    },
+    {
+      "city": "park-city",
+      "title": "Wine and Cheese Pairing: Gold Creek Farms & Bon Vi",
+      "type": "title_venue_only",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-wine-and-cheese-pairing",
+      "resolution": {
+        "confidence": "medium",
+        "new_title": "Wine and Cheese Pairing with Fernando Chavez-Sandoval & Brad Jensen: Gold Creek Farms & Bon Vivant Imports",
+        "reasoning": "The event is guided by head cheesemonger Fernando Chavez-Sandoval and wine expert Brad Jensen, who are the specific instructors/presenters for this tasting class."
+      },
+      "applied": false,
+      "note": "confidence=medium, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Park City Miner's Day 2026",
+      "type": "title_venue_only",
+      "link": "https://historicparkcityutah.com/park-city-miners-day-2024",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source text describes a community festival celebrating Park City's mining history with no specific artist, band, or performer mentioned - it's a local holiday event rather than a concert or performance."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Park City Miner's Day 2026",
+      "type": "multi_day_span",
+      "link": "https://historicparkcityutah.com/park-city-miners-day-2024",
+      "resolution": {
+        "confidence": "high",
+        "kind": "continuous",
+        "explicit_dates": [],
+        "reasoning": "This is a single-day annual celebration held on September 7, 2026 (the first Monday in September), not a multi-day event or multiple separate instances."
+      },
+      "applied": false,
+      "note": "confirmed continuous, no change"
+    },
+    {
+      "city": "park-city",
+      "title": "Last Friday Gallery Stroll",
+      "type": "multi_day_span",
+      "link": "https://www.parkcitygalleryassociation.com/",
+      "resolution": {
+        "confidence": "high",
+        "kind": "split",
+        "explicit_dates": [],
+        "reasoning": "This is a recurring monthly event that occurs only on the last Friday of every month, not a continuous multi-day event, though specific dates are not listed in the source text."
+      },
+      "applied": false,
+      "note": "split kind but no valid dates"
+    }
+  ]
+}
