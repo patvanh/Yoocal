@@ -1,44 +1,23 @@
 {
-  "generated_at": "2026-05-20T00:28:33.647441",
-  "audit_date": "2026-05-20",
+  "generated_at": "2026-05-19T20:41:26.579876",
+  "audit_date": "2026-05-19",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1599,
+      "before_count": 1590,
       "passes": {
         "past_dates": {
-          "fixed": 27,
+          "fixed": 1,
           "examples": [
             {
-              "title": "MegaMind PubQuiz",
-              "date": "2026-05-19"
-            },
-            {
-              "title": "Friday Nights Live",
-              "date": "2026-05-19"
-            },
-            {
-              "title": "Live Free (Kick Butt) & Thrive Tribe",
-              "date": "2026-05-19"
-            },
-            {
-              "title": "Wheel Try It",
-              "date": "2026-05-19"
-            },
-            {
-              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
-              "date": "2026-05-19"
+              "title": "Running with Ed 2026",
+              "date": "2026-05-16"
             }
           ]
         },
         "absurd_spans": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Old Town walking tour",
-              "had_span": 85
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "multi_day_splits": {
           "fixed": 4,
@@ -113,15 +92,31 @@
           ]
         },
         "classification": {
-          "fixed": 327,
+          "fixed": 376,
           "examples": [
+            {
+              "title": "2026 Oakley Rodeo BBQ",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Food & Drink",
+                "Sports",
+                "Kids",
+                "Family",
+                "Festival"
+              ]
+            },
             {
               "title": "4th of July Parade and Celebration",
               "before": [
                 "Community"
               ],
               "after": [
-                "Family"
+                "Community",
+                "Family",
+                "Festival"
               ]
             },
             {
@@ -130,6 +125,7 @@
                 "Community"
               ],
               "after": [
+                "Community",
                 "Food & Drink",
                 "Wellness"
               ]
@@ -140,6 +136,7 @@
                 "Community"
               ],
               "after": [
+                "Community",
                 "Family"
               ]
             },
@@ -149,84 +146,35 @@
                 "Community"
               ],
               "after": [
+                "Community",
                 "Festival"
-              ]
-            },
-            {
-              "title": "Park City Marketing Club Workshop: What's Your Story, with Paul Hochman from Humongous Media",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Education"
               ]
             }
           ]
         }
       },
-      "after_count": 1576,
-      "total_fixes": 378
+      "after_count": 1593,
+      "total_fixes": 400
     },
     {
       "city": "elkhart-lake",
-      "before_count": 248,
+      "before_count": 254,
       "passes": {
         "past_dates": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Views Navigation",
-              "date": "2026-05-19"
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "absurd_spans": {
           "fixed": 0,
           "examples": []
         },
         "multi_day_splits": {
-          "fixed": 3,
-          "examples": [
-            {
-              "title": "WeatherTech Chicago Region SCCA June Sprints",
-              "original_span": "2026-06-05 to 2026-06-07",
-              "split_into": [
-                "2026-06-05",
-                "2026-06-06",
-                "2026-06-07"
-              ]
-            },
-            {
-              "title": "WeatherTech Vintage Weekend with Brian Redman",
-              "original_span": "2026-07-16 to 2026-07-19",
-              "split_into": [
-                "2026-07-16",
-                "2026-07-17",
-                "2026-07-18",
-                "2026-07-19"
-              ]
-            },
-            {
-              "title": "GT World Challenge America",
-              "original_span": "2026-08-28 to 2026-08-30",
-              "split_into": [
-                "2026-08-28",
-                "2026-08-29",
-                "2026-08-30"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "missing_end_times": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Cheese Capital Cup featuring Trans Am SpeedTour",
-              "start_time": "8:00 AM",
-              "new_end_time": "9:00 AM",
-              "duration_hours": 1
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "classification": {
           "fixed": 0,
@@ -234,32 +182,15 @@
         }
       },
       "after_count": 254,
-      "total_fixes": 5
+      "total_fixes": 0
     },
     {
       "city": "heber",
-      "before_count": 99,
+      "before_count": 323,
       "passes": {
         "past_dates": {
-          "fixed": 4,
-          "examples": [
-            {
-              "title": "Rocky Mountain Carver Roundup",
-              "date": "2026-05-19"
-            },
-            {
-              "title": "Michael",
-              "date": "2026-05-19"
-            },
-            {
-              "title": "AAAP Spring 2026 Conference in Park City, Utah!",
-              "date": "2026-05-19"
-            },
-            {
-              "title": "The Sheep Detectives",
-              "date": "2026-05-19"
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "absurd_spans": {
           "fixed": 0,
@@ -270,19 +201,13 @@
           "examples": []
         },
         "missing_end_times": {
-          "fixed": 4,
+          "fixed": 7,
           "examples": [
             {
-              "title": "Oakley Rodeo",
-              "start_time": "10:30 PM",
-              "new_end_time": "12:30 AM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Oakley Rodeo",
-              "start_time": "10:30 PM",
-              "new_end_time": "12:30 AM",
-              "duration_hours": 2
+              "title": "Meet the Cows - Dairy Farm Tour",
+              "start_time": "11:00 AM",
+              "new_end_time": "12:00 PM",
+              "duration_hours": 1
             },
             {
               "title": "Utah Marathon",
@@ -291,160 +216,111 @@
               "duration_hours": 2
             },
             {
-              "title": "Oakley Rodeo",
-              "start_time": "10:30 PM",
-              "new_end_time": "12:30 AM",
+              "title": "Yoga in the Park",
+              "start_time": "10:45 AM",
+              "new_end_time": "11:45 AM",
+              "duration_hours": 1
+            },
+            {
+              "title": "Mountain Valley Stampede Rodeo",
+              "start_time": "7:30 PM",
+              "new_end_time": "9:30 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Mountain Valley Stampede PRCA Rodeo",
+              "start_time": "7:30 PM",
+              "new_end_time": "9:30 PM",
               "duration_hours": 2
             }
           ]
         },
         "classification": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 19,
+          "examples": [
+            {
+              "title": "Reading with Therapy Dogs",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Family"
+              ]
+            },
+            {
+              "title": "Debra Fotheringham",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Music"
+              ]
+            },
+            {
+              "title": "Reading with Therapy Dogs",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Family"
+              ]
+            },
+            {
+              "title": "Michelle Moonshine",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Music"
+              ]
+            },
+            {
+              "title": "Debra Fotheringham",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Music"
+              ]
+            }
+          ]
         }
       },
-      "after_count": 95,
-      "total_fixes": 8
+      "after_count": 323,
+      "total_fixes": 26
     },
     {
       "city": "jackson",
-      "before_count": 481,
+      "before_count": 485,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 7,
-          "examples": [
-            {
-              "title": "Music Classes",
-              "had_span": 1687
-            },
-            {
-              "title": "Visual Arts Classes",
-              "had_span": 1687
-            },
-            {
-              "title": "Writing Classes and Workshops",
-              "had_span": 1687
-            },
-            {
-              "title": "Dance and Movement Classes",
-              "had_span": 1687
-            },
-            {
-              "title": "Youth Art Programming",
-              "had_span": 1352
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "multi_day_splits": {
-          "fixed": 2,
-          "examples": [
-            {
-              "title": "Jackson Hole Restaurant Week",
-              "original_span": "2026-05-20 to 2026-05-22",
-              "split_into": [
-                "2026-05-20",
-                "2026-05-21",
-                "2026-05-22"
-              ]
-            },
-            {
-              "title": "Teton Mudpots Summer Sale",
-              "original_span": "2026-06-17 to 2026-06-19",
-              "split_into": [
-                "2026-06-17",
-                "2026-06-18",
-                "2026-06-19"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "missing_end_times": {
-          "fixed": 4,
-          "examples": [
-            {
-              "title": "Old West Film Fest",
-              "start_time": "7:30 PM",
-              "new_end_time": "9:30 PM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Old West Days - Jackson Hole Rodeo",
-              "start_time": "8:00 PM",
-              "new_end_time": "10:00 PM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Little Wings Story Time",
-              "start_time": "11:00 AM",
-              "new_end_time": "11:30 AM",
-              "duration_hours": 0.5
-            },
-            {
-              "title": "The Center Presents: Nitty Gritty Dirt Band \u2013 The Farewell Tour",
-              "start_time": "8:00 PM",
-              "new_end_time": "9:00 PM",
-              "duration_hours": 1
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "classification": {
-          "fixed": 129,
-          "examples": [
-            {
-              "title": "Al Hubbard: When Turtles Talk",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Arts"
-              ]
-            },
-            {
-              "title": "Old West Film Fest",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Film",
-                "Festival"
-              ]
-            },
-            {
-              "title": "Adult CPR/AED and Child CPR Course",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Education"
-              ]
-            },
-            {
-              "title": "Dance Lessons at The Cowboy Bar",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Music"
-              ]
-            },
-            {
-              "title": "First Aid - Blended Learning Course",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Education"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         }
       },
       "after_count": 485,
-      "total_fixes": 142
+      "total_fixes": 0
     }
   ]
 }

@@ -28,7 +28,9 @@ from __future__ import annotations
 import json
 import re
 import sys
-from datetime import datetime, date, timedelta
+from datetime import datetime, date, timedelta, timezone
+# Mountain Time = UTC-7 (MST) or UTC-6 (MDT) — current US daylight saving
+MOUNTAIN = timezone(timedelta(hours=-6))
 from collections import Counter
 from pathlib import Path
 
@@ -384,7 +386,7 @@ def repair_city(city_key: str, filename: str, today_iso: str) -> dict:
 
 
 def main(target_city: str | None = None):
-    today_iso = datetime.now().strftime("%Y-%m-%d")
+    today_iso = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
     print(f"Event Auto-Repair — {today_iso}")
     print("=" * 60)
 
