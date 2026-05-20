@@ -23,6 +23,9 @@ from event_classifier import classify_events
 import re
 from datetime import datetime, timedelta, timezone
 
+# Mountain Time for date filtering across DST changes
+MOUNTAIN = timezone(timedelta(hours=-6))
+
 def normalize_date_str(s):
     """Convert ISO datetime string to YYYY-MM-DD"""
     if not s: return None

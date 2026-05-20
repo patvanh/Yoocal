@@ -113,6 +113,14 @@ jobs:
           python event_quality_audit.py
           echo "::endgroup::"
 
+      - name: Scraper health check
+        id: health_check
+        continue-on-error: true
+        run: |
+          echo "::group::Scraper health"
+          python scraper_health.py
+          echo "::endgroup::"
+
       - name: Send daily digest email
         id: digest_email
         continue-on-error: true
@@ -169,7 +177,7 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git add public/events*.json audit_issues.json repair_log.json llm_resolve_log.json llm_resolve_uncertain.json
+          git add public/events*.json audit_issues.json repair_log.json llm_resolve_log.json llm_resolve_uncertain.json scraper_baselines.json scraper_health.json kpcw_heber_cache.json
           if git diff --cached --quiet; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
