@@ -89,6 +89,22 @@ jobs:
           python event_quality_audit.py
           echo "::endgroup::"
 
+      - name: LLM resolve ambiguous issues
+        id: llm_resolve
+        continue-on-error: true
+        run: |
+          echo "::group::LLM resolver"
+          python event_llm_resolve.py
+          echo "::endgroup::"
+
+      - name: Re-run quality audit after LLM resolve
+        id: audit_after_llm
+        continue-on-error: true
+        run: |
+          echo "::group::Quality audit (post-LLM)"
+          python event_quality_audit.py
+          echo "::endgroup::"
+
       - name: Send daily digest email
         id: digest_email
         continue-on-error: true
@@ -145,7 +161,7 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git add public/events*.json audit_issues.json repair_log.json
+          git add public/events*.json audit_issues.json repair_log.json llm_resolve_log.json llm_resolve_uncertain.json
           if git diff --cached --quiet; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
