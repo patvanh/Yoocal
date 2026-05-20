@@ -18,6 +18,7 @@ jobs:
     env:
       SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
 
     steps:
       - name: Checkout repo
@@ -86,6 +87,14 @@ jobs:
         run: |
           echo "::group::Event quality audit"
           python event_quality_audit.py
+          echo "::endgroup::"
+
+      - name: Send daily digest email
+        id: digest_email
+        continue-on-error: true
+        run: |
+          echo "::group::Email digest"
+          python audit_email_digest.py
           echo "::endgroup::"
 
       - name: Build run summary
