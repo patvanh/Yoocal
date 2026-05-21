@@ -1,6 +1,636 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import EventModal, { type EventModalData } from './EventModal'
+
+// ===== V2 EVENTS WIDGET =====
+// Modern chips + cards UI with React state. Replaces the imperative DOM
+// manipulation that used to live in the legacy calendar-section.
+// Reads from /events.json (Park City). City switching still routes via
+// the legacy ?city= param.
+
+interface V2YocEvent {
+  title: string
+  date: string
+  end_date?: string
+  start_time?: string
+  end_time?: string
+  description?: string
+  venue_name?: string
+  location?: string
+  address?: string
+  lat?: number
+  lng?: number
+  link?: string
+  source?: string
+  image_url?: string
+  categories?: string[]
+  facets?: string[]
+  hook?: string
+  is_free?: boolean | null
+  price?: string
+}
+
+type V2DayFilter = 'all' | 'today' | 'tomorrow' | 'weekend' | '7days' | 'pickdate'
+type V2TimeFilter = 'any' | 'morning' | 'afternoon' | 'evening' | 'latenight'
+
+const V2_ALL_CATEGORIES = [
+  'Music', 'Food & Drink', 'Outdoor', 'Family', 'Arts', 'Theater', 'Film',
+  'Sports', 'Kids', 'Wellness', 'Education', 'Festival', 'Government', 'Community',
+]
+const V2_PRIMARY_CATEGORIES = ['Music', 'Food & Drink', 'Outdoor', 'Family']
+
+const V2_CATEGORY_COLORS: Record<string, { bg: string; fg: string }> = {
+  Music:          { bg: '#EEEDFE', fg: '#534AB7' },
+  'Food & Drink': { bg: '#FAEEDA', fg: '#B45309' },
+  Arts:           { bg: '#FCE7F3', fg: '#9D174D' },
+  Theater:        { bg: '#EDE9FE', fg: '#5B21B6' },
+  Film:           { bg: '#E0E7FF', fg: '#3730A3' },
+  Sports:         { bg: '#DBEAFE', fg: '#1E40AF' },
+  Outdoor:        { bg: '#D1FAE5', fg: '#065F46' },
+  Family:         { bg: '#FFEDD5', fg: '#9A3412' },
+  Kids:           { bg: '#FEF3C7', fg: '#92400E' },
+  Wellness:       { bg: '#CCFBF1', fg: '#115E59' },
+  Education:      { bg: '#FEF9C3', fg: '#854D0E' },
+  Festival:       { bg: '#FEE2E2', fg: '#991B1B' },
+  Government:     { bg: '#F1F5F9', fg: '#334155' },
+  Community:      { bg: '#F3E8FF', fg: '#6B21A8' },
+}
+
+const V2_FACET_COLORS: Record<string, { bg: string; fg: string }> = {
+  Free:      { bg: '#D1FAE5', fg: '#065F46' },
+  '21+':     { bg: '#F1F5F9', fg: '#334155' },
+  Paid:      { bg: '#F1F5F9', fg: '#334155' },
+  'Drop-in': { bg: '#F1F5F9', fg: '#334155' },
+}
+
+const V2_MOUNTAIN_OFFSET = -6
+
+function v2TodayMountain(): Date {
+  const now = new Date()
+  const utc = now.getTime() + now.getTimezoneOffset() * 60000
+  return new Date(utc + V2_MOUNTAIN_OFFSET * 3600000)
+}
+
+function v2DateToStr(d: Date): string {
+  return d.toISOString().slice(0, 10)
+}
+
+function v2ParseEventDate(s: string | undefined): Date | null {
+  if (!s) return null
+  const m = s.match(/^(\d{4})-(\d{2})-(\d{2})/)
+  if (!m) return null
+  return new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]))
+}
+
+function v2ParseTime12h(t: string | undefined): number | null {
+  if (!t) return null
+  const m = t.trim().match(/^(\d{1,2}):?(\d{2})?\s*(AM|PM)?$/i)
+  if (!m) return null
+  let h = Number(m[1])
+  const mn = Number(m[2] || 0)
+  const ampm = (m[3] || '').toUpperCase()
+  if (ampm === 'PM' && h < 12) h += 12
+  if (ampm === 'AM' && h === 12) h = 0
+  return h * 60 + mn
+}
+
+function v2FormatTimeDisplay(t: string | undefined): { hour: string; period: string } {
+  if (!t) return { hour: '--', period: '' }
+  const m = t.trim().match(/^(\d{1,2}):?(\d{2})?\s*(AM|PM)?$/i)
+  if (!m) return { hour: t, period: '' }
+  const h = m[1]
+  const mn = m[2] || '00'
+  const ampm = (m[3] || '').toUpperCase()
+  return { hour: `${h}:${mn}`, period: ampm }
+}
+
+function v2WeekendDates(): { start: Date; end: Date } {
+  const t = v2TodayMountain()
+  const dow = t.getDay()
+  let daysToFri = (5 - dow + 7) % 7
+  if (dow === 5) daysToFri = 0
+  const start = new Date(t)
+  start.setDate(t.getDate() + daysToFri)
+  const end = new Date(start)
+  end.setDate(start.getDate() + 2)
+  return { start, end }
+}
+
+function V2Chip({ active, onClick, children, color, compact = false }: {
+  active: boolean
+  onClick: () => void
+  children: React.ReactNode
+  color?: { bg: string; fg: string }
+  compact?: boolean
+}) {
+  const activeStyle = color
+    ? { background: color.bg, color: color.fg, border: '1px solid transparent', fontWeight: 600 }
+    : { background: '#534AB7', color: '#fff', border: '1px solid transparent', fontWeight: 500 }
+  const inactiveStyle = {
+    background: 'rgba(255,255,255,0.06)',
+    color: '#fff',
+    border: '1px solid rgba(255,255,255,0.18)',
+  }
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        padding: compact ? '5px 12px' : '7px 14px',
+        fontSize: compact ? 12 : 13,
+        borderRadius: 999,
+        whiteSpace: 'nowrap',
+        cursor: 'pointer',
+        fontFamily: "'DM Sans', sans-serif",
+        transition: 'all 0.15s ease',
+        ...(active ? activeStyle : inactiveStyle),
+      }}
+    >
+      {children}
+    </button>
+  )
+}
+
+function V2CategoryPill({ name, role = 'category' }: { name: string; role?: 'category' | 'facet' }) {
+  const colors = role === 'category' ? V2_CATEGORY_COLORS[name] : V2_FACET_COLORS[name]
+  const fallback = { bg: '#F1F5F9', fg: '#334155' }
+  const { bg, fg } = colors || fallback
+  return (
+    <span style={{
+      background: bg, color: fg,
+      fontSize: 11, padding: '2px 9px', borderRadius: 999,
+      fontWeight: 600,
+    }}>{name}</span>
+  )
+}
+
+function V2EventCard({ event, onClick, featured = false }: { event: V2YocEvent; onClick: () => void; featured?: boolean }) {
+  const date = v2ParseEventDate(event.date)
+  const dayOfWeek = date ? ['SUN','MON','TUE','WED','THU','FRI','SAT'][date.getDay()] : '?'
+  const monthDay = date ? `${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][date.getMonth()]} ${date.getDate()}` : ''
+  const time = v2FormatTimeDisplay(event.start_time)
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        width: '100%', textAlign: 'left',
+        background: featured ? 'rgba(45, 40, 83, 0.85)' : 'rgba(255,255,255,0.06)',
+        border: featured ? '1px solid rgba(175,169,236,0.2)' : '1px solid rgba(255,255,255,0.10)',
+        backdropFilter: 'blur(8px)',
+        borderRadius: 10, padding: '12px 14px',
+        display: 'flex', gap: 14, alignItems: 'flex-start',
+        marginBottom: 0, cursor: 'pointer',
+        fontFamily: "'DM Sans', sans-serif",
+        transition: 'all 0.15s ease',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = 'rgba(175,169,236,0.4)'
+        e.currentTarget.style.background = 'rgba(255,255,255,0.10)'
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'
+        e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+      }}
+    >
+      {/* Stacked date pill: MON DD / DAY / TIME */}
+      <div style={{
+        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+        background: 'rgba(127,119,221,0.20)', borderRadius: 10,
+        padding: '10px 8px', minWidth: 70, flexShrink: 0, gap: 2,
+        border: '1px solid rgba(175,169,236,0.25)',
+      }}>
+        <span style={{ fontSize: 14, fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>{monthDay}</span>
+        <span style={{ fontSize: 10, color: '#AFA9EC', fontWeight: 600, letterSpacing: 0.5, lineHeight: 1 }}>{dayOfWeek}</span>
+        {event.start_time && (
+          <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 500, lineHeight: 1, marginTop: 2 }}>
+            {time.hour}{time.period.toLowerCase()}
+          </span>
+        )}
+      </div>
+      
+      {/* Title + venue + pills, wraps if needed */}
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{
+          fontWeight: 600, fontSize: 14, color: '#fff',
+          lineHeight: 1.3, marginBottom: 4,
+          display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
+          overflow: 'hidden',
+        }}>
+          {event.title}
+        </div>
+        {(event.venue_name || event.location) && (
+          <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: 4, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {event.venue_name || event.location}
+            {event.price && <span style={{ color: '#EF9F27', marginLeft: 8, fontWeight: 600 }}>· {event.price}</span>}
+            {event.is_free === true && <span style={{ color: '#10b981', marginLeft: 8, fontWeight: 600 }}>· Free</span>}
+          </div>
+        )}
+        {event.description && (
+          <div style={{
+            fontSize: 12, color: 'rgba(255,255,255,0.45)',
+            marginBottom: 6, lineHeight: 1.4,
+            display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+          }}>
+            {event.description}
+          </div>
+        )}
+        <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
+          {(event.categories || []).slice(0, 3).map(c => <V2CategoryPill key={c} name={c} role="category" />)}
+          {(event.facets || []).slice(0, 2).map(f => <V2CategoryPill key={f} name={f} role="facet" />)}
+        </div>
+      </div>
+    </button>
+  )
+}
+
+function EventsV2Embedded() {
+  const [events, setEvents] = useState<V2YocEvent[]>([])
+  const [loading, setLoading] = useState(true)
+  const [dayFilter, setDayFilter] = useState<V2DayFilter>('today')
+  const [timeFilter, setTimeFilter] = useState<V2TimeFilter>('any')
+  const [activeCategory, setActiveCategory] = useState<string>('all')
+  const [showAllCategories, setShowAllCategories] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [pickedDate, setPickedDate] = useState<string>(v2DateToStr(v2TodayMountain()))
+  const [selectedEvent, setSelectedEvent] = useState<EventModalData | null>(null)
+  const [radius, setRadius] = useState<number>(10)
+  const [locationMode, setLocationMode] = useState<'city' | 'mylocation' | 'zip'>('city')
+  const [zipCode, setZipCode] = useState<string>('')
+  const [userCoords, setUserCoords] = useState<{ lat: number; lng: number } | null>(null)
+  
+  useEffect(() => {
+    // Detect city from URL
+    const params = new URLSearchParams(window.location.search)
+    const cityKey = params.get('city') || 'parkcity'
+    const fileMap: Record<string, string> = {
+      parkcity: '/events.json',
+      heber: '/events-heber.json',
+      jackson: '/events-jackson.json',
+      elkhartlake: '/events-elkhartlake.json',
+    }
+    const file = fileMap[cityKey] || '/events.json'
+    setLoading(true)
+    fetch(file)
+      .then(r => r.json())
+      .then(d => {
+        setEvents((d.events || d) as V2YocEvent[])
+        setLoading(false)
+      })
+      .catch(e => {
+        console.error('V2: failed to load events', e)
+        setLoading(false)
+      })
+  }, [])
+  
+  const filteredEvents = useMemo(() => {
+    let result = events
+    const today = v2TodayMountain()
+    const todayStr = v2DateToStr(today)
+    result = result.filter(e => (e.date || '') >= todayStr)
+    
+    if (dayFilter === 'today') result = result.filter(e => e.date === todayStr)
+    else if (dayFilter === 'tomorrow') {
+      const tom = new Date(today); tom.setDate(today.getDate() + 1)
+      const tomStr = v2DateToStr(tom)
+      result = result.filter(e => e.date === tomStr)
+    } else if (dayFilter === 'weekend') {
+      const { start, end } = v2WeekendDates()
+      result = result.filter(e => e.date && e.date >= v2DateToStr(start) && e.date <= v2DateToStr(end))
+    } else if (dayFilter === '7days') {
+      const week = new Date(today); week.setDate(today.getDate() + 7)
+      result = result.filter(e => e.date && e.date >= todayStr && e.date <= v2DateToStr(week))
+    } else if (dayFilter === 'pickdate') {
+      result = result.filter(e => e.date === pickedDate)
+    }
+    
+    if (timeFilter !== 'any') {
+      result = result.filter(e => {
+        const t = v2ParseTime12h(e.start_time)
+        if (t === null) return true
+        if (timeFilter === 'morning') return t < 12 * 60
+        if (timeFilter === 'afternoon') return t >= 12 * 60 && t < 17 * 60
+        if (timeFilter === 'evening') return t >= 17 * 60 && t < 21 * 60
+        if (timeFilter === 'latenight') return t >= 21 * 60
+        return true
+      })
+    }
+    
+    if (activeCategory !== 'all') {
+      result = result.filter(e => (e.categories || []).includes(activeCategory))
+    }
+    
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase()
+      result = result.filter(e => {
+        const text = [
+          e.title, e.description, e.venue_name, e.location, e.address,
+          e.source, ...(e.categories || []), ...(e.facets || [])
+        ].filter(Boolean).join(' ').toLowerCase()
+        return text.includes(q)
+      })
+    }
+    
+    result.sort((a, b) => {
+      if (a.date !== b.date) return (a.date || '').localeCompare(b.date || '')
+      const ta = v2ParseTime12h(a.start_time) ?? 24 * 60
+      const tb = v2ParseTime12h(b.start_time) ?? 24 * 60
+      return ta - tb
+    })
+    return result
+  }, [events, dayFilter, timeFilter, activeCategory, searchQuery, pickedDate])
+  
+  // Featured events: prefer manually flagged, else top events with rich tagging
+  const featuredEvents = useMemo(() => {
+    const today = v2TodayMountain()
+    const todayStr = v2DateToStr(today)
+    const next7 = new Date(today); next7.setDate(today.getDate() + 7)
+    const next7Str = v2DateToStr(next7)
+    
+    // Tier 1: manual flag (featured: true)
+    const manual = events.filter((e: any) => e.featured === true && (e.date || '') >= todayStr)
+    
+    if (manual.length >= 3) {
+      return manual.slice(0, 5)
+    }
+    
+    // Tier 2: auto-pick — upcoming events with rich tagging (3+ categories OR has hook)
+    const auto = events
+      .filter(e => (e.date || '') >= todayStr && (e.date || '') <= next7Str)
+      .filter(e => (e.categories?.length || 0) >= 3 || !!e.hook)
+      .filter(e => !manual.includes(e))
+      .sort((a, b) => (a.date || '').localeCompare(b.date || ''))
+      .slice(0, 5 - manual.length)
+    
+    return [...manual, ...auto]
+  }, [events])
+  
+  const todayDow = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][v2TodayMountain().getDay()]
+  
+  // Date range label that updates with the day filter
+  const dateRangeLabel = useMemo(() => {
+    const fmt = (d: Date) => d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })
+    const fmtShort = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+    const today = v2TodayMountain()
+    if (dayFilter === 'today') return fmt(today)
+    if (dayFilter === 'tomorrow') {
+      const tom = new Date(today); tom.setDate(today.getDate() + 1)
+      return fmt(tom)
+    }
+    if (dayFilter === 'weekend') {
+      const { start, end } = v2WeekendDates()
+      return `${fmtShort(start)} – ${fmtShort(end)}`
+    }
+    if (dayFilter === '7days') {
+      const week = new Date(today); week.setDate(today.getDate() + 7)
+      return `${fmtShort(today)} – ${fmtShort(week)}`
+    }
+    if (dayFilter === 'pickdate') {
+      const parts = pickedDate.split('-')
+      if (parts.length === 3) {
+        const d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]))
+        return fmt(d)
+      }
+      return pickedDate
+    }
+    return 'All upcoming'
+  }, [dayFilter, pickedDate])
+  
+  // Shift day filter forward/back by N days. Sets to pickdate mode.
+  const shiftDay = (delta: number) => () => {
+    const base = (() => {
+      if (dayFilter === 'today') return v2TodayMountain()
+      if (dayFilter === 'tomorrow') {
+        const t = v2TodayMountain(); t.setDate(t.getDate() + 1); return t
+      }
+      if (dayFilter === 'pickdate') {
+        const parts = pickedDate.split('-')
+        return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]))
+      }
+      // For weekend/7days/all, anchor on today
+      return v2TodayMountain()
+    })()
+    base.setDate(base.getDate() + delta)
+    setPickedDate(v2DateToStr(base))
+    setDayFilter('pickdate')
+  }
+  
+  const handleEventClick = (ev: V2YocEvent) => {
+    setSelectedEvent({
+      title: ev.title, date: ev.date, end_date: ev.end_date,
+      start_time: ev.start_time, end_time: ev.end_time,
+      location: ev.venue_name || ev.location,
+      description: ev.description, link: ev.link, source: ev.source,
+      is_free: ev.is_free, price: ev.price, categories: ev.categories,
+    })
+  }
+  
+  return (
+    <div style={{ fontFamily: "'DM Sans', sans-serif" }}>
+      {/* Radius / Location bar */}
+      <div style={{
+        background: 'rgba(255,255,255,0.04)',
+        border: '1px solid rgba(255,255,255,0.10)',
+        borderRadius: 16, padding: '14px 18px', marginBottom: 12,
+        backdropFilter: 'blur(8px)',
+        display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap',
+      }}>
+        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600, minWidth: 56 }}>Where:</span>
+        <button
+          onClick={() => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                  setUserCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude })
+                  setLocationMode('mylocation')
+                },
+                (err) => console.error('Location error:', err)
+              )
+            }
+          }}
+          style={{
+            padding: '6px 14px', fontSize: 13, borderRadius: 999,
+            background: locationMode === 'mylocation' ? '#534AB7' : 'rgba(255,255,255,0.06)',
+            color: '#fff',
+            border: locationMode === 'mylocation' ? '1px solid transparent' : '1px solid rgba(255,255,255,0.18)',
+            cursor: 'pointer', fontFamily: "'DM Sans', sans-serif",
+          }}
+        >📍 Use my location</button>
+        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>or</span>
+        <input
+          type="text"
+          value={zipCode}
+          onChange={(e) => {
+            setZipCode(e.target.value)
+            // Accept zip (5 digits) or city name (3+ chars)
+            const v = e.target.value.trim()
+            if (/^\d{5}$/.test(v) || v.length >= 3) setLocationMode('zip')
+          }}
+          placeholder="City or zip"
+          style={{
+            padding: '6px 14px', fontSize: 13, borderRadius: 999,
+            background: 'rgba(255,255,255,0.06)',
+            color: '#fff',
+            border: '1px solid rgba(255,255,255,0.18)',
+            width: 160, fontFamily: "'DM Sans', sans-serif",
+            outline: 'none',
+          }}
+          className="v2-search-input"
+        />
+        <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', gap: 12 }}>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600 }}>Radius:</span>
+          <input
+            type="range"
+            min={5} max={50} step={5}
+            value={radius}
+            onChange={(e) => setRadius(Number(e.target.value))}
+            style={{ flex: 1, accentColor: '#7F77DD', minWidth: 100 }}
+          />
+          <span style={{ fontSize: 13, color: '#fff', fontWeight: 600, minWidth: 50, textAlign: 'right' }}>{radius} mi</span>
+        </div>
+      </div>
+      
+      {/* Search + filter chips */}
+      <div style={{
+        background: 'rgba(255,255,255,0.04)',
+        border: '1px solid rgba(255,255,255,0.10)',
+        borderRadius: 16, padding: 18, marginBottom: 18,
+        backdropFilter: 'blur(8px)',
+      }}>
+        <input
+          type="text"
+          placeholder="Search bands, venues, or what to do..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{
+            width: '100%', padding: '11px 16px', fontSize: 14,
+            border: '1px solid rgba(255,255,255,0.18)', borderRadius: 10,
+            color: '#fff', marginBottom: 16, boxSizing: 'border-box',
+            background: 'rgba(255,255,255,0.06)',
+            outline: 'none',
+          }}
+          className="v2-search-input"
+        />
+        <div style={{ display: 'flex', gap: 6, marginBottom: 12, overflowX: 'auto', alignItems: 'center' }}>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', minWidth: 56, fontWeight: 600 }}>When:</span>
+          <V2Chip active={dayFilter === 'all'} onClick={() => setDayFilter('all')}>All upcoming</V2Chip>
+          <V2Chip active={dayFilter === 'today'} onClick={() => setDayFilter('today')}>Today · {todayDow}</V2Chip>
+          <V2Chip active={dayFilter === 'tomorrow'} onClick={() => setDayFilter('tomorrow')}>Tomorrow</V2Chip>
+          <V2Chip active={dayFilter === 'weekend'} onClick={() => setDayFilter('weekend')}>This weekend</V2Chip>
+          <V2Chip active={dayFilter === '7days'} onClick={() => setDayFilter('7days')}>Next 7 days</V2Chip>
+          <V2Chip active={dayFilter === 'pickdate'} onClick={() => setDayFilter('pickdate')}>Pick date</V2Chip>
+          {dayFilter === 'pickdate' && (
+            <input type="date" value={pickedDate} onChange={(e) => setPickedDate(e.target.value)}
+              style={{ padding: '6px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(83,74,183,0.18)' }}
+            />
+          )}
+        </div>
+        <div style={{ display: 'flex', gap: 6, marginBottom: 12, overflowX: 'auto', alignItems: 'center' }}>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', minWidth: 56, fontWeight: 600 }}>Time:</span>
+          <V2Chip compact active={timeFilter === 'any'} onClick={() => setTimeFilter('any')}>Any time</V2Chip>
+          <V2Chip compact active={timeFilter === 'morning'} onClick={() => setTimeFilter('morning')}>Morning</V2Chip>
+          <V2Chip compact active={timeFilter === 'afternoon'} onClick={() => setTimeFilter('afternoon')}>Afternoon</V2Chip>
+          <V2Chip compact active={timeFilter === 'evening'} onClick={() => setTimeFilter('evening')}>Evening</V2Chip>
+          <V2Chip compact active={timeFilter === 'latenight'} onClick={() => setTimeFilter('latenight')}>Late night</V2Chip>
+        </div>
+        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', minWidth: 56, fontWeight: 600 }}>Vibe:</span>
+          <V2Chip compact active={activeCategory === 'all'} onClick={() => setActiveCategory('all')}>All categories</V2Chip>
+          {V2_ALL_CATEGORIES.map(cat => (
+            <V2Chip key={cat} compact active={activeCategory === cat}
+              onClick={() => setActiveCategory(cat)}
+              color={activeCategory === cat ? V2_CATEGORY_COLORS[cat] : undefined}
+            >{cat}</V2Chip>
+          ))}
+        </div>
+      </div>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr auto 1fr',
+        alignItems: 'center',
+        margin: '12px 4px 20px',
+      }}>
+        <div /> {/* left spacer */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16, justifyContent: 'center' }}>
+          <button onClick={shiftDay(-1)} style={{
+            background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)',
+            color: '#fff', width: 36, height: 36, borderRadius: '50%',
+            fontSize: 18, cursor: 'pointer', lineHeight: 1,
+          }} title="Previous day">‹</button>
+          <div style={{
+            fontSize: 22, fontWeight: 600, color: '#fff',
+            fontFamily: "'DM Serif Display', serif", minWidth: 280, textAlign: 'center',
+          }}>
+            {dateRangeLabel}
+          </div>
+          <button onClick={shiftDay(1)} style={{
+            background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)',
+            color: '#fff', width: 36, height: 36, borderRadius: '50%',
+            fontSize: 18, cursor: 'pointer', lineHeight: 1,
+          }} title="Next day">›</button>
+        </div>
+        <div style={{
+          fontSize: 22, fontWeight: 600, color: '#fff',
+          fontFamily: "'DM Serif Display', serif", textAlign: 'right',
+        }}>
+          {filteredEvents.length} event{filteredEvents.length !== 1 ? 's' : ''}
+        </div>
+      </div>
+      {/* Featured events orange band */}
+      {featuredEvents.length > 0 && (
+        <div style={{
+          background: 'linear-gradient(135deg, #FAEEDA 0%, #FCD9A8 50%, #FAEEDA 100%)',
+          padding: '24px 20px',
+          borderRadius: 16,
+          margin: '0 0 24px',
+          border: '1px solid rgba(239,159,39,0.5)',
+          boxShadow: '0 4px 20px rgba(239,159,39,0.25)',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
+            <div style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: '#EF9F27', color: 'white',
+              padding: '5px 14px', borderRadius: 100,
+              fontSize: 11, fontWeight: 700, letterSpacing: 0.5,
+              textTransform: 'uppercase',
+            }}>★ Featured</div>
+            <span style={{ fontSize: 12, color: 'rgba(154,52,18,0.85)', fontWeight: 600 }}>
+              {featuredEvents.length} hand-picked
+            </span>
+          </div>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(440px, 1fr))',
+            gap: 8,
+          }}>
+            {featuredEvents.map((ev, i) => (
+              <V2EventCard key={`featured-${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} featured />
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {loading ? (
+        <div style={{ textAlign: 'center', padding: 60, color: '#6b6880' }}>Loading events...</div>
+      ) : filteredEvents.length === 0 ? (
+        <div style={{ textAlign: 'center', padding: 60, color: '#6b6880', background: '#fff', borderRadius: 14, border: '1px solid rgba(83,74,183,0.12)' }}>
+          No events match your filters. Try widening the time range or clearing search.
+        </div>
+      ) : (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(440px, 1fr))',
+          gap: 8,
+        }}>
+          {filteredEvents.map((ev, i) => (
+            <V2EventCard key={`${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} />
+          ))}
+        </div>
+      )}
+      <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
+    </div>
+  )
+}
 
 declare global {
   interface Window {
@@ -1125,84 +1755,12 @@ export default function CalendarClient() {
         </div>
       </section>
 
-      {/* CALENDAR */}
-      <section className="calendar-section" id="events">
-        <div className="section-label">Live calendar</div>
-        <h2>What&apos;s happening <em>now</em></h2>
-        <p style={{marginBottom:'40px'}}>Park City &amp; Summit County — updated daily</p>
-        <div className="cal-ui">
-          <div className="cal-topbar">
-            <div className="cal-logo"><div className="cal-logo-dot" /> yoocal</div>
-            <div className="cal-view-toggle">
-              <button className="cal-view-btn active" id="btn-list" onClick={() => window.setView?.('list')}>☰ List</button>
-              <button className="cal-view-btn" id="btn-map" onClick={() => window.setView?.('map')}>🗺 Map</button>
-            </div>
-            <div className="cal-loc" id="cal-loc-label" onClick={(e) => window.toggleEyebrowDropdown?.(e.nativeEvent)} style={{cursor:'pointer',userSelect:'none'}}>📍 Park City, UT &nbsp;▾</div>
-          </div>
-          <div className="cal-search">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            <input type="text" id="event-search" placeholder="Search events, venues, categories..." autoComplete="off" />
-            <button id="search-clear" aria-label="Clear search" style={{display:'none'}}>✕</button>
-          </div>
-          <div className="cal-filters">
-            {[['all','All'],['music','🎵 Music'],['outdoor','🌲 Outdoor'],['food','🍽 Food & Drink'],['arts','🎨 Arts'],['sports','⛷ Sports'],['family','👨‍👩‍👧 Family'],['wellness','🧘 Wellness'],['community','🤝 Community'],['free','🆓 Free'],['paid','🎟 Paid']].map(([f,l]) => (
-              <div key={f} className={`cal-filter${f==='all'?' active':''}`} data-filter={f}>{l}</div>
-            ))}
-          </div>
-          {/* Radius filter */}
-          <div id="radius-bar" style={{display:'flex',alignItems:'center',gap:'10px',padding:'10px 24px',borderBottom:'1px solid rgba(255,255,255,0.06)',flexWrap:'wrap'}}>
-            <button id="radius-locate-btn" onClick={() => window.useMyLocation?.()} style={{display:'inline-flex',alignItems:'center',gap:'6px',background:'rgba(255,255,255,0.07)',border:'1px solid rgba(255,255,255,0.15)',color:'white',padding:'6px 14px',borderRadius:'100px',fontSize:'13px',fontWeight:500,cursor:'pointer',whiteSpace:'nowrap',transition:'all 0.15s'}}>📍 Use my location</button>
-            <span style={{color:'rgba(255,255,255,0.3)',fontSize:'13px'}}>or</span>
-            <input id="radius-zip" type="text" placeholder="City, state or zip code" maxLength={100} style={{background:'rgba(255,255,255,0.07)',border:'1px solid rgba(255,255,255,0.15)',color:'white',padding:'6px 14px',borderRadius:'100px',fontSize:'13px',width:'200px',outline:'none'}} />
-            <div id="radius-slider-wrap" style={{display:'none',alignItems:'center',gap:'8px'}}>
-              <span style={{fontSize:'13px',color:'rgba(255,255,255,0.5)',whiteSpace:'nowrap'}}>Within</span>
-              <input id="radius-slider" type="range" min="5" max="50" defaultValue="25" step="5" style={{width:'100px',accentColor:'var(--purple)'}} onInput={(e) => window.onRadiusChange?.((e.target as HTMLInputElement).value)} />
-              <span id="radius-label" style={{fontSize:'13px',fontWeight:600,color:'white',whiteSpace:'nowrap',minWidth:'50px'}}>25 mi</span>
-              <button onClick={() => window.clearRadius?.()} style={{background:'none',border:'none',color:'rgba(255,255,255,0.4)',fontSize:'18px',cursor:'pointer',lineHeight:1,padding:'0 4px'}} title="Clear">✕</button>
-            </div>
-            <span id="radius-status" style={{fontSize:'12px',color:'rgba(255,255,255,0.4)'}} />
-          </div>
-          {/* Day chips */}
-          <div className="cal-days-header" style={{justifyContent:'center',position:'relative'}}>
-            <div className="cal-days-label" id="cal-days-label">This week</div>
-            <div style={{display:'flex',alignItems:'center',gap:'8px',position:'absolute',right:'24px',top:'50%',transform:'translateY(-50%)'}}>
-              <button id="cal-today-btn" onClick={() => window.jumpToToday?.()} style={{display:'none',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.15)',color:'white',padding:'4px 12px',borderRadius:'100px',fontSize:'12px',fontWeight:600,cursor:'pointer'}}>↩ Today</button>
-              <button className="cal-month-btn" id="cal-month-toggle" title="Pick a date">📅</button>
-            </div>
-          </div>
-          <div style={{display:'flex',alignItems:'center',justifyContent:'center',borderBottom:'1px solid rgba(255,255,255,0.06)',padding:'0 16px'}}>
-            <div style={{display:'inline-flex',alignItems:'center'}}>
-              <button className="cal-week-arrow" id="cal-prev-week" title="Previous week">‹</button>
-              <div className="cal-days" id="cal-days-container" style={{padding:'14px 6px',borderBottom:'none',flexShrink:0}} />
-              <button className="cal-week-arrow" id="cal-next-week" title="Next week">›</button>
-            </div>
-          </div>
-          {/* Month picker */}
-          <div className="cal-month-picker" id="cal-month-picker" style={{display:'none'}}>
-            <div className="cal-month-nav">
-              <button id="cal-prev-month">‹</button>
-              <span id="cal-month-title" />
-              <button id="cal-next-month">›</button>
-            </div>
-            <div className="cal-month-grid">
-              {['Su','Mo','Tu','We','Th','Fr','Sa'].map(d => <div key={d} className="cal-month-dow">{d}</div>)}
-            </div>
-            <div className="cal-month-days" id="cal-month-days" />
-          </div>
-          {/* Featured band */}
-          <div className="featured-band" id="featured-band" style={{display:'none'}}>
-            <div className="featured-band-header"><span className="featured-band-label">⭐ Featured events</span></div>
-            <div className="featured-band-cards" id="featured-band-cards" />
-          </div>
-          {/* Events container */}
-          <div className="cal-events" id="cal-events-container">
-            <div style={{padding:'32px',textAlign:'center',color:'rgba(255,255,255,0.4)',fontSize:'14px'}}>Loading events...</div>
-          </div>
-          <div className="cal-no-results" id="no-results" style={{display:'none',padding:'32px',textAlign:'center',color:'rgba(255,255,255,0.4)',fontSize:'14px'}}>No events found for this filter. Check back soon!</div>
-          {/* Map view */}
-          <div id="cal-map-container" style={{display:'none',height:'600px',width:'100%',position:'relative'}}>
-            <div id="cal-map" style={{height:'100%',width:'100%'}} />
-          </div>
+      {/* CALENDAR (V2 — chips + cards in React state) */}
+      <section className="calendar-section" id="events" style={{textAlign:'center'}}>
+        <h2 style={{fontSize:'clamp(48px, 7vw, 80px)',lineHeight:1.05}}>What&apos;s happening <em>now</em></h2>
+        <p style={{marginBottom:'40px',marginTop:'12px',fontSize:'18px',color:'rgba(255,255,255,0.7)'}}>Park City — updated daily</p>
+        <div style={{maxWidth:1100,margin:'0 auto',padding:'0 16px',textAlign:'left'}}>
+          <EventsV2Embedded />
         </div>
       </section>
 
