@@ -29,9 +29,29 @@ declare global {
 }
 
 export default function CalendarClient() {
+  // Scroll reveal observer — runs even in V2 mode so reveal sections become visible.
+  useEffect(() => {
+    const reveals = document.querySelectorAll('.reveal')
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80)
+          revealObserver.unobserve(e.target)
+        }
+      })
+    }, { threshold: 0.1 })
+    reveals.forEach(el => revealObserver.observe(el))
+    return () => revealObserver.disconnect()
+  }, [])
+
   useEffect(() => {
     // ── All initialization JavaScript ──
-    // This is the full calendar app logic, adapted from the original index.html
+    // This is the full calendar app logic, adapted from the original index.html.
+    // EARLY BAIL: V2 calendar widget replaces the imperative DOM portion.
+    // If the legacy DOM elements aren't present, skip all the old logic.
+    if (!document.getElementById('cal-events-container')) {
+      return  // V2 calendar is active — skip legacy DOM manipulation
+    }
 
     const DAYS = ['SUN','MON','TUE','WED','THU','FRI','SAT']
     const MONTHS_FULL = ['January','February','March','April','May','June','July','August','September','October','November','December']
