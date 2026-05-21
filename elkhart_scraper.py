@@ -504,45 +504,102 @@ def scrape_siebkens():
             html = page.content()
             browser.close()
 
-        soup = BeautifulSoup(html, "html.parser")
-        containers = (
-            soup.find_all("article") or
-            soup.find_all("div", class_=re.compile(r"event|tribe|card", re.I))
+        # Siebkens uses The Events Calendar Pro WordPress plugin. The full
+        # event roster is embedded as a JSON-LD list of Event objects.
+        # Parsing JSON-LD is much more reliable than trying to walk the DOM.
+        import json as _json
+        ld_blocks = re.findall(
+            r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>',
+            html, re.DOTALL,
         )
-
-        for c in containers:
+        raw_events = []
+        for block in ld_blocks:
             try:
-                title_el = c.find("h2") or c.find("h3") or c.find("h4") or c.find(class_=re.compile(r"title", re.I))
-                if not title_el: continue
-                title = title_el.get_text(strip=True)
-                if len(title) < 3: continue
+                data = _json.loads(block)
+            except _json.JSONDecodeError:
+                continue
+            items = data if isinstance(data, list) else [data]
+            for item in items:
+                if isinstance(item, dict) and item.get("@type") == "Event":
+                    raw_events.append(item)
 
-                date_el = c.find(class_=re.compile(r"date|time|start", re.I)) or c.find("time") or c.find("abbr")
-                raw_date = date_el.get_text(strip=True) if date_el else ""
-                date = normalize_date(raw_date) or "See website"
-                start_time = extract_time(raw_date)
+        for ev in raw_events:
+            try:
+                title = (ev.get("name") or "").strip()
+                # Decode HTML entities like &#038; -> &
+                import html as _html
+                title = _html.unescape(title)
+                if len(title) < 3:
+                    continue
+                start = ev.get("startDate") or ""
+                end = ev.get("endDate") or ""
+                if not start:
+                    continue
+                # Parse "2026-05-27T19:00:00+00:00"
+                try:
+                    sdt = datetime.fromisoformat(start.replace("Z", "+00:00"))
+                except ValueError:
+                    continue
+                date_str = sdt.strftime("%Y-%m-%d")
+                start_time = sdt.strftime("%-I:%M %p")
+                end_time = None
+                end_date = None
+                if end:
+                    try:
+                        edt = datetime.fromisoformat(end.replace("Z", "+00:00"))
+                        end_time = edt.strftime("%-I:%M %p")
+                        if edt.date() != sdt.date():
+                            end_date = edt.strftime("%Y-%m-%d")
+                    except ValueError:
+                        pass
 
-                desc_el = c.find("p")
-                description = desc_el.get_text(strip=True)[:300] if desc_el else "Live music at Siebkens Resort on the shores of Elkhart Lake."
+                # Description has HTML-entity-encoded HTML tags — strip them
+                desc_raw = ev.get("description") or ""
+                desc_unescaped = (
+                    desc_raw.replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")
+                            .replace("&#039;", "'").replace("\\'", "'").replace('\\"', '"')
+                )
+                description = re.sub(r"<[^>]+>", "", desc_unescaped).strip()
+                description = re.sub(r"\s+", " ", description)[:400]
+                if not description:
+                    description = "Live music at Siebkens Resort on the shores of Elkhart Lake."
 
-                link_el = c.find("a", href=True)
-                link = link_el["href"] if link_el else "https://www.siebkens.com/events/"
-                if link.startswith("/"): link = "https://www.siebkens.com" + link
+                # Venue name from nested location
+                venue_name = None
+                loc = ev.get("location") or {}
+                if isinstance(loc, dict):
+                    venue_name = loc.get("name")
+
+                link = ev.get("url") or "https://www.siebkens.com/events/"
 
                 event = {
-                    "title": title, "date": date, "description": description,
+                    "title": title,
+                    "date": date_str,
+                    "description": description,
                     "location": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
+                    "venue_name": venue_name or "Siebkens Resort",
                     "link": link,
                     "source": "Siebkens Resort",
                     "source_url": "https://www.siebkens.com/events/",
-                    "lat": 43.8336, "lng": -87.9717,
-                    "scraped_at": datetime.now().isoformat()
+                    "lat": 43.8336,
+                    "lng": -87.9717,
+                    "scraped_at": datetime.now().isoformat(),
                 }
-                if start_time: event["start_time"] = start_time
-                events.append(event)
-            except: continue
+                if start_time:
+                    event["start_time"] = start_time
+                if end_time:
+                    event["end_time"] = end_time
+                if end_date:
+                    event["end_date"] = end_date
+                image = ev.get("image")
+                if image:
+                    event["image_url"] = image
 
-        print(f"  Found {len(events)} events from Siebkens")
+                events.append(event)
+            except Exception:
+                continue
+
+        print(f"  Found {len(events)} events from Siebkens (JSON-LD)")
     except Exception as e:
         print(f"  Error scraping Siebkens: {e}")
     return events
