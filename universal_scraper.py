@@ -131,9 +131,25 @@ def fetch(url: str, *, use_cache: bool = True, force_playwright: bool = False) -
         from playwright.sync_api import sync_playwright
 
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled"],
+            )
             try:
-                page = browser.new_page(user_agent=USER_AGENT)
+                ctx = browser.new_context(
+                    user_agent=USER_AGENT,
+                    viewport={"width": 1400, "height": 900},
+                    locale="en-US",
+                    timezone_id="America/Denver",
+                )
+                page = ctx.new_page()
+                page.set_extra_http_headers({
+                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                    "Accept-Language": "en-US,en;q=0.9",
+                    "Sec-Fetch-Dest": "document",
+                    "Sec-Fetch-Mode": "navigate",
+                    "Sec-Fetch-Site": "none",
+                })
                 page.goto(url, wait_until="domcontentloaded", timeout=30000)
                 page.wait_for_timeout(3000)
                 # Try to wait for common event-list indicators (any of these = events loaded)
