@@ -6,9 +6,9 @@
     "lng": -88.0426
   },
   "radius_mi": 15,
-  "generated_at": "2026-05-21T14:30:21.065596-06:00",
+  "generated_at": "2026-05-21T14:59:01.930847-06:00",
   "today": "2026-05-21",
-  "event_count": 247,
+  "event_count": 234,
   "events": [
     {
       "title": "MotoAmerica Superbikes & Vintage MotoFest",
@@ -25,11 +25,18 @@
       "end_date": "2026-05-31",
       "featured": true,
       "categories": [
-        "Sports",
         "Family",
-        "Festival"
+        "Festival",
+        "Outdoor",
+        "Sports"
       ],
+      "end_time": "11:59 PM",
       "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/moto-america-road-america.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
       "_distance_mi": 3.6
     },
     {
@@ -49,7 +56,13 @@
       "categories": [
         "Sports"
       ],
+      "end_time": "11:59 PM",
       "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/june_sprints_-_2025-8.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
       "_distance_mi": 3.6
     },
     {
@@ -67,9 +80,15 @@
       "end_date": "2026-06-21",
       "featured": true,
       "categories": [
+        "Education",
+        "Festival",
         "Sports"
       ],
       "venue_name": "Road America",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
       "_distance_mi": 3.6
     },
     {
@@ -89,7 +108,13 @@
       "categories": [
         "Sports"
       ],
+      "end_time": "11:59 PM",
       "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/cheese-capital-cup.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
       "_distance_mi": 3.6
     },
     {
@@ -107,9 +132,17 @@
       "end_date": "2026-07-19",
       "featured": true,
       "categories": [
+        "Arts",
+        "Festival",
         "Sports"
       ],
+      "end_time": "11:59 PM",
       "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
       "_distance_mi": 3.6
     },
     {
@@ -127,9 +160,16 @@
       "end_date": "2026-08-02",
       "featured": true,
       "categories": [
+        "Festival",
         "Sports"
       ],
+      "end_time": "11:59 PM",
       "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
       "_distance_mi": 3.6
     },
     {
@@ -149,7 +189,13 @@
       "categories": [
         "Sports"
       ],
+      "end_time": "11:59 PM",
       "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
       "_distance_mi": 3.6
     },
     {
@@ -167,9 +213,14 @@
       "end_date": "2026-09-20",
       "featured": true,
       "categories": [
+        "Community",
         "Sports"
       ],
       "venue_name": "Road America",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
       "_distance_mi": 3.6
     },
     {
@@ -187,9 +238,16 @@
       "end_date": "2026-10-04",
       "featured": true,
       "categories": [
+        "Festival",
         "Sports"
       ],
+      "end_time": "11:59 PM",
       "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
       "_distance_mi": 3.6
     },
     {
@@ -940,8 +998,9 @@
       "description": "Annual motorcycle show at Siebkens during MotoAmerica weekend at Road America. Vintage and custom bikes on display.",
       "categories": [
         "Community",
-        "Sports",
-        "Music"
+        "Festival",
+        "Music",
+        "Sports"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -950,95 +1009,13 @@
       "lng": -88.0398,
       "scraped_at": "2026-05-21T13:20:37.650645",
       "series": "Siebkens Live Music",
+      "start_time": "6:00 PM",
+      "end_time": "9:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-hard-left-moto-show.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism"
+      ],
       "_distance_mi": 0.2
-    },
-    {
-      "title": "MotoAmerica Superbikes & Vintage MotoFest",
-      "date": "2026-05-29",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "MotoAmerica Superbikes races are returning to America\u2019s National Park of Speed on May 30-June 1, 2025. Enjoy qualifying on Friday and all-day racing on Saturday & Sunday! Seven classes of road racing \u2013 Medallia Superbikes, Supersport, Stock 1000, Junior Cup, Mission King of the Baggers & Royal Enfield Women\u2019s Build.Train.Race. Meet the riders in our open race paddock! Camping, VIP, and Fan Lap packages are available. Saturday features Vintage MotoFest, which includes a ride-in bike show and competition, live bands, and stunt shows. Children 16 years old and younger receive free general admi...",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:38.328082",
-      "end_date": "2026-05-31",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/moto-america-road-america.avif",
-      "categories": [
-        "Sports",
-        "Festival",
-        "Outdoor"
-      ],
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "WeatherTech Chicago Region SCCA June Sprints",
-      "date": "2026-06-05",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "The WeatherTech Chicago Region SCCA June Sprints return to Road America June 5-7, 2026. The June Sprints have been held every year at Road America since 1956. This year\u2019s runninig of the WeatherTech\u00ae Chicago Region SCCA June Sprints at Road America will feature everything from showroom stock to highly modified purpose-built race cars from eight distinct race groups. With Road America\u2019s park-like setting, trackside viewing, up-close access to drivers and teams, and legendary cuisine appealing to drivers and fans alike, it\u2019s no wonder the June Sprints remains one of the nation\u2019s premier amate...",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:38.328659",
-      "end_date": "2026-06-07",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/june_sprints_-_2025-8.avif",
-      "categories": [
-        "Sports"
-      ],
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "XPEL IndyCar Grand Prix presented by AMR",
-      "date": "2026-06-18",
-      "end_date": "2026-06-21",
-      "location": "Road America, Elkhart Lake, WI",
-      "venue_name": "Road America",
-      "description": "NTT IndyCar Series race weekend at Road America's historic 4-mile road course. The series' premier Wisconsin event.",
-      "categories": [
-        "Sports",
-        "Festival",
-        "Education"
-      ],
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/",
-      "lat": 43.8347,
-      "lng": -88.0398,
-      "scraped_at": "2026-05-21T13:20:37.650648",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Cheese Capital Cup Featuring Trans Am SpeedTour",
-      "date": "2026-06-26",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "The Trans Am Series presented by Pirelli dates back to 1966. Throughout the years, some of the greatest names in motorsports have participated in the Trans Am Series. Names like Tommy Kendall, Mark Donohue, Peter Gregg, Bob Tullius and Wally Dallenbach, Jr. have all won multiple championships under the Trans Am name. Several distinct classes take center stage in today\u2019s Trans Am Series as it is positioned to power into the future. Trans Am grids are populated by Mustangs, Camaros, Challengers and Corvettes\u2014 a massive dose of pure Americana. A Trans Am Series race is 100 miles in length, and...",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:38.594202",
-      "end_date": "2026-06-28",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/cheese-capital-cup.avif",
-      "categories": [
-        "Sports"
-      ],
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
     },
     {
       "title": "Elkhart Lake Fireman's Fireworks & Annual Picnic",
@@ -1090,8 +1067,8 @@
       "venue_name": "Lake Street Cafe",
       "description": "Annual acoustic music festival featuring regional singer-songwriters and folk acts at Lake Street Cafe.",
       "categories": [
-        "Music",
-        "Festival"
+        "Festival",
+        "Music"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -1099,31 +1076,13 @@
       "lat": 43.8347,
       "lng": -88.0398,
       "scraped_at": "2026-05-21T13:20:37.650652",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "WeatherTech Vintage Weekend with Brian Redman",
-      "date": "2026-07-16",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "International Challenge presents the WeatherTech\u00ae Vintage Weekend with Brian Redman at Road America, taking place July 16-19, 2026, one of the largest vintage racing events in the United States. The WeatherTech\u00ae Vintage Weekend features over 400 vintage and historic racecars competing across several days. The WeatherTech Vintage Weekend presented by International Challenge is a premier vintage gathering featuring everything from the sights and sounds of the past 100 years of racing to a special Concours d\u2019Elegance on Friday and Saturday along the streets of Elkhart Lake. The 2026 event is a...",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:38.595996",
-      "end_date": "2026-07-19",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
-      "categories": [
-        "Sports",
-        "Festival",
-        "Arts"
+      "start_time": "11:00 AM",
+      "end_time": "11:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/midwest-acoustic-festival-jpg.webp",
+      "_all_sources": [
+        "Elkhart Lake Tourism"
       ],
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
+      "_distance_mi": 0.2
     },
     {
       "title": "Vintage Concours d'Elegance & Parade - Racecars",
@@ -1175,29 +1134,6 @@
       "_distance_mi": 0.2
     },
     {
-      "title": "Motul Sportscar Endurance Grand Prix Featuring IMSA",
-      "date": "2026-07-30",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "North America\u2019s premier sportscar series returns to America\u2019s National Park of Speed, bringing several familiar names for race fans and a handful of down-to-the-wire battles. IMSA races feature elite sportscars from nearly 20 different manufacturers, including Mercedes, Ferrari, Chevrolet, and Aston Martin. The skill of the drivers, paired with advanced automotive technology, creates a high-stakes, adrenaline-fueled race weekend you do not want to miss. The midsummer WeatherTech Championship race at Road America will evolve into a six-hour endurance event in 2026, with Motul continuing as t...",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:38.892303",
-      "end_date": "2026-08-02",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
-      "categories": [
-        "Sports",
-        "Festival"
-      ],
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Downtown Night",
       "date": "2026-08-10",
       "location": "Downtown Elkhart Lake, WI",
@@ -1240,33 +1176,17 @@
       "_distance_mi": 0.2
     },
     {
-      "title": "Art on Wheels Weekend with VSCDA",
-      "date": "2026-09-18",
-      "end_date": "2026-09-20",
-      "location": "Road America, Elkhart Lake, WI",
-      "venue_name": "Road America",
-      "description": "Vintage Sports Car Drivers Association weekend at Road America. Vintage racing and car show.",
-      "categories": [
-        "Sports",
-        "Community"
-      ],
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/",
-      "lat": 43.8347,
-      "lng": -88.0398,
-      "scraped_at": "2026-05-21T13:20:37.650658",
-      "_distance_mi": 0.2
-    },
-    {
       "title": "Elktoberfest",
       "date": "2026-09-19",
       "location": "Elkhart Lake, WI",
       "description": "Annual Elkhart Lake Oktoberfest celebration. German food, beer, music, and family activities downtown.",
       "categories": [
         "Community",
+        "Family",
         "Festival",
-        "Food & Drink"
+        "Food & Drink",
+        "Music",
+        "Outdoor"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -1274,31 +1194,14 @@
       "lat": 43.8347,
       "lng": -88.0398,
       "scraped_at": "2026-05-21T13:20:37.650659",
-      "venue_name": "Road America",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "SCCA National Championship Runoffs",
-      "date": "2026-10-01",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "The Sports Car Club of America returns to Road America in 2026 for the annual SCCA National Championship Runoffs, a gathering where the top SCCA racers in the country go head-to-head and prove who is best. Throughout its 60+ year history, the Runoffs have been held at legendary tracks. It is an event that caps the SCCA Road Racing program each year and has evolved into what is widely known as the pinnacle of U.S. amateur road racing.",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:39.095550",
-      "end_date": "2026-10-04",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
-      "categories": [
-        "Sports",
-        "Festival"
+      "start_time": "9:00 AM",
+      "end_time": "9:00 PM",
+      "venue_name": "Elkhart Lake",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/485881709_1078310650989563_2450560291702216146_n.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism"
       ],
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "_distance_mi": 0.0
+      "_distance_mi": 0.2
     },
     {
       "title": "Old World Christmas Market",
@@ -1308,9 +1211,10 @@
       "venue_name": "The Osthoff Resort",
       "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
       "categories": [
-        "Festival",
         "Family",
-        "Food & Drink"
+        "Festival",
+        "Food & Drink",
+        "Wellness"
       ],
       "link": "https://www.elkhartlake.com/events/",
       "source": "Elkhart Lake Tourism",
@@ -1318,6 +1222,12 @@
       "lat": 43.8347,
       "lng": -88.0398,
       "scraped_at": "2026-05-21T13:20:37.650662",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism"
+      ],
       "_distance_mi": 0.2
     },
     {
@@ -1527,29 +1437,6 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "The Hard Left Moto Show",
-      "date": "2026-05-30",
-      "start_time": "6:00 PM",
-      "end_time": "9:00 PM",
-      "description": "The Hard Left Moto Show, presented by Hoban Brothers Motorcycle, is a summertime celebration of motorcycle culture, craftsmanship and community. Set against the backdrop of the legendary Siebkens Resort on Saturday night of the Moto America Weekend at Road America. Post Race Bike Show 6-9PM Performance Bike along with Vintage Motorcycles on display in Siebkens Resort Courtyard. Meet & Greet From 7 \u2013 8PM meet some of the Moto America Racers, including some King of The Baggers Riders. Live Music Enjoy Live Music by Dave Steffen from 7:30PM to 11PM, sponsored by Darkhorse Motor Company. Hoban ...",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-hard-left-moto-show/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:38.328297",
-      "venue_name": "Siebkens Resort",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-hard-left-moto-show.avif",
-      "series": "Siebkens Live Music",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Festival"
       ],
       "_distance_mi": 0.0
     },
@@ -2845,27 +2732,6 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Midwest Acoustic Music Festival",
-      "date": "2026-07-11",
-      "start_time": "11:00 AM",
-      "end_time": "11:00 PM",
-      "description": "Get ready for a day of non-stop acoustic jams at Lake Street Caf\u00e9 with the Midwest Acoustic Music Festival! 12 hours, 12-15 awesome acts from across the Midwest, plus amazing food, drinks, and good vibes all day long. Don\u2019t miss out on the fun.",
-      "location": "Lake Street Caf\u00e9, 21 S Lake St, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/midwest-acoustic-music-festival/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:38.595603",
-      "venue_name": "Lake Street Caf\u00e9",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/midwest-acoustic-festival-jpg.webp",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Festival"
       ],
       "_distance_mi": 0.0
     },
@@ -4362,28 +4228,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "GT World Challenge America",
-      "date": "2026-08-28",
-      "start_time": "",
-      "end_time": "11:59 PM",
-      "description": "The GT World Challenge America headlines an all-sportscar weekend at Road America August 28-30, 2026. In addition, the event will feature rounds for GT America powered by AWS, the Toyota Gazoo Racing North America GR Cup Series, Pirelli GT4 America, McLaren Trophy America and TC America powered by Skip Barber. This weekend of thrilling sportscar racing will bring exotic GT3, GT4, and Touring Car machinery from global luxury auto brands like Acura, Aston Martin, Audi, BMW, Ferrari, Lamborghini, McLaren, Mercedes-AMG, and Porsche to America\u2019s National Park of Speed in Elkhart Lake, Wisconsin....",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/gt-world-challenge-america/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:39.093659",
-      "end_date": "2026-08-30",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Bad Habitz",
       "date": "2026-08-28",
       "start_time": "7:00 PM",
@@ -4857,31 +4701,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Elktoberfest",
-      "date": "2026-09-19",
-      "start_time": "9:00 AM",
-      "end_time": "9:00 PM",
-      "description": "Prost! Elktoberfest returns to Elkhart Lake on Saturday, September 19, 2026! It\u2019s one full day of Bavarian fun with stein hoists, brats, pretzels, polka, and plenty of gem\u00fctlichkeit. Throw on your lederhosen or dirndl and celebrate German heritage in true Elkhart Lake style. Kick things off with the Elktoberfest Run Walk, enjoy family fun and games in the park, and end the night with live music from Boo! The Band at Siebkens. View the full schedule of events and join the festivities: 2026 Elktoberfest Schedule of Events",
-      "location": "Elkhart Lake, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/elktoberfest/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:39.095099",
-      "venue_name": "Elkhart Lake",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/485881709_1078310650989563_2450560291702216146_n.avif",
-      "series": "Siebkens Live Music",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Food & Drink",
-        "Outdoor",
-        "Family"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
       "title": "4 Miles of Fitness",
       "date": "2026-09-21",
       "start_time": "6:00 PM",
@@ -5050,28 +4869,6 @@
       "_geo_source": "default",
       "categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Old World Christmas Market",
-      "date": "2026-12-04",
-      "start_time": "10:00 AM",
-      "end_time": "5:00 PM",
-      "description": "Reminiscent of the centuries-old Christkindlesmarkt of N\u00fcremberg, Germany, the 27th annual Old World Christmas Market at The Osthoff Resort offers the warmth and merriment of this Old World tradition. For ten consecutive days, guests stroll the aisles of a grand heated tent bedecked with fragrant boughs of fresh evergreens and the tantalizing scents of roasted almonds and N\u00fcremberg bratwurst as they browse for unique and specialty items among international and regional artisans. Czech blown-glass ornaments, Russian nesting dolls, German hand-carved smokers and nutcrackers, fine apparel, han...",
-      "location": "The Osthoff Resort &#038; Spa, 101 Osthoff Avenue, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-04/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-05-21T13:20:39.095734",
-      "venue_name": "The Osthoff Resort &#038; Spa",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "price": "$8",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Wellness"
       ],
       "_distance_mi": 0.0
     },

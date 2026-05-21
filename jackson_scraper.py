@@ -57,6 +57,14 @@ TRIBE_EVENT_SOURCES = [
         "default_categories": ["Community"],
         "default_city": "Jackson, WY",
     },
+    {
+        "base_url": "https://www.wildlifeart.org",
+        "source_name": "National Museum of Wildlife Art",
+        "default_lat": 43.4925,
+        "default_lng": -110.7438,
+        "default_categories": ["Arts"],
+        "default_city": "Jackson, WY",
+    },
 ]
 
 
@@ -86,16 +94,7 @@ SITEMAP_SOURCES = [
 # Single-page sources (one URL with multiple Schema.org Event JSON-LD blocks)
 # Used when the source lists all events on a single page rather than having
 # per-event detail URLs in a sitemap.
-SINGLE_PAGE_SOURCES = [
-    {
-        "url": "https://www.wildlifeart.org/events/",
-        "source_name": "National Museum of Wildlife Art",
-        "default_lat": 43.4925,
-        "default_lng": -110.7438,
-        "default_city": "Jackson, WY",
-        "default_categories": ["Arts"],
-    },
-]
+SINGLE_PAGE_SOURCES = []
 
 
 SOURCE_PRIORITY = {

@@ -6,9 +6,9 @@
     "lng": -111.498
   },
   "radius_mi": 10,
-  "generated_at": "2026-05-21T14:30:21.031667-06:00",
+  "generated_at": "2026-05-21T14:59:01.896410-06:00",
   "today": "2026-05-21",
-  "event_count": 1633,
+  "event_count": 1616,
   "events": [
     {
       "title": "\u2018Frida Kahlo: the Making of an Icon\u2019",
@@ -1543,8 +1543,9 @@
       "lat": 40.65337467,
       "lng": -111.50318667,
       "categories": [
-        "Wellness",
-        "Community"
+        "Community",
+        "Outdoor",
+        "Wellness"
       ],
       "start_time": "9:30 AM",
       "end_time": "10:45 AM",
@@ -1552,6 +1553,10 @@
       "venue_name": "City Park",
       "address": "Ste 105, Park City, UT, 94060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/nG_Ugghlo0ydCElQbOExXA.large.png",
+      "_all_sources": [
+        "Eventbrite",
+        "The Park Record"
+      ],
       "_distance_mi": 0.6
     },
     {
@@ -2231,8 +2236,8 @@
       "lat": 40.6461,
       "lng": -111.498,
       "categories": [
-        "Music",
-        "Community"
+        "Community",
+        "Music"
       ],
       "is_free": true,
       "price": "Free",
@@ -2242,6 +2247,10 @@
       "venue_name": "Deer Valley Resort",
       "scraped_at": "2026-05-21T17:39:54.860244",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/IKD5d0oYSUyMIL2AQ2lcYg.large.png",
+      "_all_sources": [
+        "Google Events",
+        "Mountain Town Music"
+      ],
       "_distance_mi": 0.0
     },
     {
@@ -5650,11 +5659,16 @@
       "lat": 40.6461,
       "lng": -111.498,
       "categories": [
-        "Running",
-        "Outdoor"
+        "Outdoor",
+        "Running"
       ],
       "start_time": "8:00 AM",
       "end_time": "10:00 AM",
+      "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/2fe0ae11-2744-41a1-b2ec-023f7cb18fb5/Elfsight-Calendar-Size-800X500-px-63-.jpg",
+      "_all_sources": [
+        "RunSignup",
+        "Salt Lake Running Co"
+      ],
       "_distance_mi": 0.0
     },
     {
@@ -5668,11 +5682,16 @@
       "lat": 40.6461,
       "lng": -111.498,
       "categories": [
-        "Running",
-        "Outdoor"
+        "Outdoor",
+        "Running"
       ],
       "start_time": "8:00 AM",
       "end_time": "12:00 PM",
+      "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/4e34db29-3538-4e2b-be4d-e3c2181e70aa/Elfsight-Calendar-Size-800X500-px-64-.jpg",
+      "_all_sources": [
+        "RunSignup",
+        "Salt Lake Running Co"
+      ],
       "_distance_mi": 0.0
     },
     {
@@ -5885,6 +5904,7 @@
       ],
       "_all_sources": [
         "Egyptian Theatre",
+        "Google Events",
         "The Park Record"
       ],
       "_distance_mi": 0.2
@@ -5909,31 +5929,6 @@
       "venue_name": "The Spur Bar and Grill",
       "address": "352 Main Street",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/e1df09d4-9a93-4342-a573-3b5df14130f1.large.png",
-      "_distance_mi": 0.3
-    },
-    {
-      "title": "An Evening with Iris DeMent",
-      "date": "2026-05-21",
-      "description": "Simply one of the finest singer-songwriters in America. With an inimitable voice, unforgettable melodies rooted in hymns, gospel, f olk & old-time country music. Her rich lyrical landscapes & captivating music have earned two Grammy nominations.\n\nNO OPENER! Thurs-Sat @ 8pm. Reduced priced tickets on Thursday. Pharaohs use your promo code for the best seats. Buy tickets here! https://parkcityshows.com/shows-ticketing/upcoming-shows/event/an-evening-with-iris-dement-455811",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://tockify.com/pcscart/detail/2224/1779343200000",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
-      "categories": [
-        "Community",
-        "Theater"
-      ],
-      "start_time": "",
-      "end_time": "",
-      "scraped_at": "2026-05-21T17:41:20.162603",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/9sZfxd3F5USkIVpl9s8rdw.large.png",
-      "facets": [
-        "Paid"
-      ],
       "_distance_mi": 0.3
     },
     {
@@ -6224,6 +6219,7 @@
       ],
       "_all_sources": [
         "Egyptian Theatre",
+        "Google Events",
         "The Park Record"
       ],
       "_distance_mi": 0.2
@@ -6581,6 +6577,7 @@
       ],
       "_all_sources": [
         "Egyptian Theatre",
+        "Google Events",
         "The Park Record"
       ],
       "_distance_mi": 0.2
@@ -9270,28 +9267,26 @@
     {
       "title": "Something Rotten!",
       "date": "2026-06-03",
-      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.\n\nThis witty celebration of theater is presented by the Ziegfeld Theater. Parental Guidance Suggested. Reduced pricing weekdays & matinee. Pharaohs use your promo code for the Best Seats. Buy tickets here! https://parkcityshows.com/shows-ticketing/upcoming-shows/event/something-rotten-454352",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://tockify.com/pcscart/detail/2226/1780466400000",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/454352?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
-        "Theater",
-        "Festival"
+        "Festival",
+        "Theater"
       ],
-      "start_time": "",
-      "end_time": "",
-      "scraped_at": "2026-05-21T17:41:25.746672",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UHy_3CW9DEaH5J7-Vf_k8g.large.png",
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ],
-      "_distance_mi": 0.3
+      "_distance_mi": 0.2
     },
     {
       "title": "Learn Spanish at the Library!",
@@ -15843,23 +15838,24 @@
     {
       "title": "Frozen - The Live Musical",
       "date": "2026-07-08",
-      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.\n\nPresented by the Ziegfeld Theater. Reduced pricing weekdays & matinee. Showtimes: 7pm Wed-Sat, 3pm Matinee Saturday, & 5pm Sunday. Pharaohs use your promo code for the Best Seats. Buy tickets here! https://parkcityshows.com/shows-ticketing/upcoming-shows/event/frozen-the-live-musical-456260",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://tockify.com/pcscart/detail/2231/1783490400000",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "7:00 PM",
+      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456260?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Music"
       ],
-      "start_time": "",
-      "end_time": "",
-      "scraped_at": "2026-05-21T17:41:39.885717",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/15aYPIVnf0y4VmDVByBadA.large.png",
-      "_distance_mi": 0.3
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ],
+      "_distance_mi": 0.2
     },
     {
       "title": "Music On The Patio",
@@ -17156,6 +17152,7 @@
       ],
       "_all_sources": [
         "Egyptian Theatre",
+        "Google Events",
         "The Park Record"
       ],
       "_distance_mi": 0.2
@@ -19166,13 +19163,18 @@
       "lat": 40.6374,
       "lng": -111.4783,
       "categories": [
-        "Music",
         "Concert",
+        "Festival",
+        "Music",
         "Outdoor"
       ],
       "image_url": "https://usuo.org/app/uploads/2026/03/DVMF4-Chris-Botti.jpg",
       "venue_name": "Deer Valley Ski Resort Main Base",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "Google Events"
+      ],
       "_distance_mi": 1.2
     },
     {
@@ -22040,28 +22042,26 @@
     {
       "title": "The Drifters",
       "date": "2026-09-04",
-      "description": "R&B/soul doo-wop legends form this Rock & Roll Hall of Fame band that has spanned almost six decades and boasts classic hits such as \"Under the Boardwalk, \"Stand by Me,\" \"This Magic Moment,\" \"Up On The Ro of,\" and more.\n\nFriday & Saturday at 8pm, Sunday at 5pm. No Opener. Pharaohs use your promo code for the best seats. Buy tickets here! https://parkcityshows.com/shows-ticketing/upcoming-shows/event/the-drifters-456527",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://tockify.com/pcscart/detail/2235/1788501600000",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "R&B/soul doo-wop legends form this Rock & Roll Hall of Fame band that has spanned almost six decades and boasts classic hits such as \"Under the Boardwalk, \"Stand by Me,\" \"This Magic Moment,\" \"Up On The Roof,\" and more.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456527?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/a7dx5vxmubq5nr4th292.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "",
-      "end_time": "",
-      "scraped_at": "2026-05-21T17:41:56.654883",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Yv4PK4Ig6E-PLY66VpXQ1w.large.png",
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ],
-      "_distance_mi": 0.3
+      "_distance_mi": 0.2
     },
     {
       "title": "Main Street Historic Walking Tour",
@@ -22141,24 +22141,25 @@
     {
       "title": "A.J. Croce Presents CROCE PLAYS CROCE",
       "date": "2026-09-09",
-      "description": "According to Willie Nelson, \u201cA.J. Croce has wisdom beyond his years. With his music, he represents his generation with a profound sense of honesty in his lyrics and quality in his delivery. The future of entertainment is safe in his hands!\u201d    \n\nSome artists are afforded the chance to tell their personal stories as they see fit, at a particular moment when they know the time has come. But for many, there is no choice \u2014 the story emerges hardwired to the music and they become forever identified with it no matter how their story may evolve or change.\n\nA.J. Croce has been inextricably linked t...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/107983865?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458281?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "7:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T17:41:57.523100",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/F5qi54ng4UqXyJgDjXycRg.large.png",
-      "_distance_mi": 0.3
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ],
+      "_distance_mi": 0.2
     },
     {
       "title": "A.J. Croce",
@@ -22228,24 +22229,25 @@
     {
       "title": "A.J. Croce Presents CROCE PLAYS CROCE",
       "date": "2026-09-11",
-      "description": "According to Willie Nelson, \u201cA.J. Croce has wisdom beyond his years. With his music, he represents his generation with a profound sense of honesty in his lyrics and quality in his delivery. The future of entertainment is safe in his hands!\u201d    \n\nSome artists are afforded the chance to tell their personal stories as they see fit, at a particular moment when they know the time has come. But for many, there is no choice \u2014 the story emerges hardwired to the music and they become forever identified with it no matter how their story may evolve or change.\n\nA.J. Croce has been inextricably linked t...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/107983932?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458387",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "7:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T17:41:57.523170",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/F5qi54ng4UqXyJgDjXycRg.large.png",
-      "_distance_mi": 0.3
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ],
+      "_distance_mi": 0.2
     },
     {
       "title": "Live Music at Silver Lake",
@@ -22317,24 +22319,25 @@
     {
       "title": "A.J. Croce Presents CROCE PLAYS CROCE",
       "date": "2026-09-12",
-      "description": "According to Willie Nelson, \u201cA.J. Croce has wisdom beyond his years. With his music, he represents his generation with a profound sense of honesty in his lyrics and quality in his delivery. The future of entertainment is safe in his hands!\u201d    \n\nSome artists are afforded the chance to tell their personal stories as they see fit, at a particular moment when they know the time has come. But for many, there is no choice \u2014 the story emerges hardwired to the music and they become forever identified with it no matter how their story may evolve or change.\n\nA.J. Croce has been inextricably linked t...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/107983949?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458388",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "7:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T17:41:57.523223",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/F5qi54ng4UqXyJgDjXycRg.large.png",
-      "_distance_mi": 0.3
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ],
+      "_distance_mi": 0.2
     },
     {
       "title": "Divorce Options Workshop",
@@ -22673,25 +22676,26 @@
     {
       "title": "Mason Jennings",
       "date": "2026-09-25",
-      "description": "Mason Jennings is a Minnesota-based pop-folk singer-songwriter. Jennings is originally from Honolulu, Hawaii. He is well known for his simple yet catchy melodies, intimate lyrics, intensely literary and historical themes, and deep tenor's voice. His music has appeared in the surf film Shelter and he has toured extensively. Jennings is married to Amy Jennings \\(nee Turany\\) and has a son, August, born in January 2003.\n\n \n\n Jennings produced his self-titled debut album in 1997 on an analog four-track in the basement of a rented home, manning all instruments himself. In October 1998, after bri...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/108027472?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Returning to the Egyptian stage with a brand new album, Underneath The Roses. Well known for his simple yet catchy melodies. Mason Jennings is an American folk-pop singer-songwriter with intimate lyrics, literary & historical themes, & distinctive voice.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459161",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/vrnc69561agpqcp9zk55.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "7:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T17:41:59.142708",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/f19bd6b2-bbc6-4f17-a443-6291ebdcdb40.large.png",
-      "_distance_mi": 0.3
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ],
+      "_distance_mi": 0.2
     },
     {
       "title": "Art & Music Gallery Stroll",
@@ -22717,25 +22721,26 @@
     {
       "title": "Mason Jennings",
       "date": "2026-09-26",
-      "description": "Mason Jennings is a Minnesota-based pop-folk singer-songwriter. Jennings is originally from Honolulu, Hawaii. He is well known for his simple yet catchy melodies, intimate lyrics, intensely literary and historical themes, and deep tenor's voice. His music has appeared in the surf film Shelter and he has toured extensively. Jennings is married to Amy Jennings \\(nee Turany\\) and has a son, August, born in January 2003.\n\n \n\n Jennings produced his self-titled debut album in 1997 on an analog four-track in the basement of a rented home, manning all instruments himself. In October 1998, after bri...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/108027477?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Returning to the Egyptian stage with a brand new album, Underneath The Roses. Well known for his simple yet catchy melodies. Mason Jennings is an American folk-pop singer-songwriter with intimate lyrics, literary & historical themes, & distinctive voice.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459162",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/vrnc69561agpqcp9zk55.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "7:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T17:41:59.893360",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/f19bd6b2-bbc6-4f17-a443-6291ebdcdb40.large.png",
-      "_distance_mi": 0.3
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ],
+      "_distance_mi": 0.2
     },
     {
       "title": "Park Silly Sunday Market",
@@ -33462,40 +33467,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Park City Trail Series 10K",
-      "date": "2026-07-11",
-      "description": "Fill your summer calendar with trail races! Park City Trail Series is a 3-race series that runs from June \u2013 August. It starts with a 5K and works up to a half marathon. The courses are forgiving enough for new trail runners but bring the excitement that seasoned trail runners love. You can mix and match which races you would like to sign up for or get all three at an amazing price! Plus, you can 10% per person by signing up 4 or more people for the series. So, get your family, friends, neighbors, or whoever you need to recruit, and get signed up today! THERE ARE NO DEFERRALS OR REFUNDS.",
-      "location": "Park City, UT",
-      "link": "https://pctrailseries.com",
-      "source": "Salt Lake Running Co",
-      "source_url": "https://slrc.com/event-calendar/",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Running"
-      ],
-      "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/2fe0ae11-2744-41a1-b2ec-023f7cb18fb5/Elfsight-Calendar-Size-800X500-px-63-.jpg",
-      "venue_name": "Egyptian Theatre",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Park City Trail Series Half Marathon",
-      "date": "2026-08-01",
-      "description": "Fill your summer calendar with trail races! Park City Trail Series is a 3-race series that runs from June \u2013 August. It starts with a 5K and works up to a half marathon. The courses are forgiving enough for new trail runners but bring the excitement that seasoned trail runners love. You can mix and match which races you would like to sign up for or get all three at an amazing price! Plus, you can 10% per person by signing up 4 or more people for the series. So, get your family, friends, neighbors, or whoever you need to recruit, and get signed up today! THERE ARE NO DEFERRALS OR REFUNDS.",
-      "location": "Park City, UT",
-      "link": "https://pctrailseries.com",
-      "source": "Salt Lake Running Co",
-      "source_url": "https://slrc.com/event-calendar/",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Running"
-      ],
-      "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/4e34db29-3538-4e2b-be4d-e3c2181e70aa/Elfsight-Calendar-Size-800X500-px-64-.jpg",
-      "venue_name": "Egyptian Theatre",
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Women's Epic 10K at Deer Valley",
       "date": "2026-09-26",
       "description": "Women's Epic Race at Deer Valley Resort is a 10k loop with a 1335ft vertical trek to the peak and back down. You can hike, jog, or run your journey through gorgeous trees with changing fall leaves and steep climbs. You will undoubtedly come off the mountain with more confidence and grit after completing this race to the top of the world-class Deer Valley Resort located in Park City Utah. And when you get to the finish line you can grab a drink and celebrate!",
@@ -33915,21 +33886,6 @@
     },
     {
       "title": "A.J. Croce Presents CROCE PLAYS CROCE",
-      "date": "2026-09-09",
-      "start_time": "8:00 PM",
-      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/458281?tc=website",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "A.J. Croce Presents CROCE PLAYS CROCE",
       "date": "2026-09-10",
       "start_time": "8:00 PM",
       "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
@@ -33938,36 +33894,6 @@
       "lat": 40.6428,
       "lng": -111.4965,
       "link": "https://tickets.holdmyticket.com/seats/458386",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "A.J. Croce Presents CROCE PLAYS CROCE",
-      "date": "2026-09-11",
-      "start_time": "8:00 PM",
-      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/458387",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "A.J. Croce Presents CROCE PLAYS CROCE",
-      "date": "2026-09-12",
-      "start_time": "8:00 PM",
-      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/458388",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
       "source": "Egyptian Theatre",
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
@@ -34080,21 +34006,6 @@
     },
     {
       "title": "Frozen - The Live Musical",
-      "date": "2026-07-08",
-      "start_time": "7:00 PM",
-      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/456260?tc=website",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Frozen - The Live Musical",
       "date": "2026-07-09",
       "start_time": "7:00 PM",
       "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
@@ -34136,21 +34047,9 @@
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
       "source": "Egyptian Theatre",
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Frozen - The Live Musical",
-      "date": "2026-07-11",
-      "start_time": "7:00 PM",
-      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/456265",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "_all_sources": [
+        "Egyptian Theatre"
+      ],
       "_distance_mi": 0.2
     },
     {
@@ -34211,21 +34110,9 @@
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
       "source": "Egyptian Theatre",
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Little Shop of Horrors",
-      "date": "2026-10-31",
-      "start_time": "8:00 PM",
-      "description": "Deviously delicious Broadway & Hollywood sci-fi smash musical. A darkly comedic musical about Seymour, a timid flower shop clerk, who discovers a mysterious plant that brings fame & fortune - at a deadly cost.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/462834",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "_all_sources": [
+        "Egyptian Theatre"
+      ],
       "_distance_mi": 0.2
     },
     {
@@ -34259,36 +34146,6 @@
       "_distance_mi": 0.2
     },
     {
-      "title": "Mason Jennings",
-      "date": "2026-09-25",
-      "start_time": "8:00 PM",
-      "description": "Returning to the Egyptian stage with a brand new album, Underneath The Roses. Well known for his simple yet catchy melodies. Mason Jennings is an American folk-pop singer-songwriter with intimate lyrics, literary & historical themes, & distinctive voice.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/459161",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/vrnc69561agpqcp9zk55.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Mason Jennings",
-      "date": "2026-09-26",
-      "start_time": "8:00 PM",
-      "description": "Returning to the Egyptian stage with a brand new album, Underneath The Roses. Well known for his simple yet catchy melodies. Mason Jennings is an American folk-pop singer-songwriter with intimate lyrics, literary & historical themes, & distinctive voice.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/459162",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/vrnc69561agpqcp9zk55.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
       "title": "Shrek The Musical Jr.",
       "date": "2026-07-24",
       "start_time": "7:00 PM",
@@ -34316,36 +34173,9 @@
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/b1el401sreswek19cm5y.jpg",
       "source": "Egyptian Theatre",
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Shrek The Musical Jr.",
-      "date": "2026-07-25",
-      "start_time": "7:00 PM",
-      "description": "Adaptation of the Broadway musical & DreamWorks film. This is a one-of-a-kind, hilarious fairy tale in which curses are reversed; monsters get the girls, donkeys & dragons find love, & princesses are beautiful in all shapes & sizes.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/461033",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/b1el401sreswek19cm5y.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Something Rotten!",
-      "date": "2026-06-03",
-      "start_time": "8:00 PM",
-      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/454352?tc=website",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "_all_sources": [
+        "Egyptian Theatre"
+      ],
       "_distance_mi": 0.2
     },
     {
@@ -34391,21 +34221,9 @@
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
       "source": "Egyptian Theatre",
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Something Rotten!",
-      "date": "2026-06-06",
-      "start_time": "8:00 PM",
-      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/454359",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "_all_sources": [
+        "Egyptian Theatre"
+      ],
       "_distance_mi": 0.2
     },
     {
@@ -34464,21 +34282,6 @@
       "lng": -111.4965,
       "link": "https://tickets.holdmyticket.com/seats/459903",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/obv0mvfvbtq2lxgqw3kn.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "The Drifters",
-      "date": "2026-09-04",
-      "start_time": "8:00 PM",
-      "description": "R&B/soul doo-wop legends form this Rock & Roll Hall of Fame band that has spanned almost six decades and boasts classic hits such as \"Under the Boardwalk, \"Stand by Me,\" \"This Magic Moment,\" \"Up On The Roof,\" and more.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/456527?tc=website",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/a7dx5vxmubq5nr4th292.jpg",
       "source": "Egyptian Theatre",
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "_distance_mi": 0.2
@@ -34661,21 +34464,9 @@
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
       "source": "Egyptian Theatre",
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Thriller - Odyssey Dance Theatre",
-      "date": "2026-10-03",
-      "start_time": "8:00 PM",
-      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/461070",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "_all_sources": [
+        "Egyptian Theatre"
+      ],
       "_distance_mi": 0.2
     },
     {
@@ -34721,21 +34512,9 @@
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
       "source": "Egyptian Theatre",
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Thriller - Odyssey Dance Theatre",
-      "date": "2026-10-07",
-      "start_time": "8:00 PM",
-      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main Street, Park City, UT 84060",
-      "lat": 40.6428,
-      "lng": -111.4965,
-      "link": "https://tickets.holdmyticket.com/seats/461065",
-      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
-      "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "_all_sources": [
+        "Egyptian Theatre"
+      ],
       "_distance_mi": 0.2
     }
   ]

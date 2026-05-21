@@ -87,7 +87,16 @@ def _normalize_title(title: str) -> str:
 
 
 def event_key(e: dict) -> tuple:
-    """Unique key for global dedup: (normalized_title, date, start_time).
+    """Unique key for global dedup: (normalized_title, date).
+
+    We deliberately do NOT include start_time. Aggregators (Park Record,
+    Google Events) often have empty or wrong times for events that the
+    venue-direct source (Egyptian Theatre) has correctly. Including time
+    in the key would prevent the merge and we would see duplicate cards.
+
+    Tradeoff: a venue running two different shows of the same act on the
+    same date (8pm + 10:30pm separate ticketed sets) will collapse to one
+    record. This is rare and the merged record retains the earlier time.
 
     Title normalization is aggressive — drops filler words ("tickets",
     "an evening with", "live", etc.) so aggregator titles collapse to the
@@ -95,8 +104,7 @@ def event_key(e: dict) -> tuple:
     """
     title = _normalize_title(e.get("title") or "")
     date = (e.get("date") or "")[:10]
-    start = (e.get("start_time") or "").strip()
-    return (title, date, start)
+    return (title, date)
 
 
 def _backfill_venue(record: dict) -> dict:
