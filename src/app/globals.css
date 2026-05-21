@@ -421,38 +421,9 @@
 
   /* CALENDAR SECTION */
   .calendar-section {
-    background: 
-      linear-gradient(180deg, #2d2853 0%, #353063 50%, #2d2853 100%),
-      radial-gradient(ellipse at top, rgba(127,119,221,0.15) 0%, transparent 60%);
+    background: var(--dark);
     padding: 100px 0;
     color: white;
-    position: relative;
-  }
-  
-  /* ONE soft fade from light section above into dark calendar */
-  .calendar-section::before {
-    content: '';
-    position: absolute;
-    top: -120px;
-    left: 0;
-    right: 0;
-    height: 120px;
-    background: linear-gradient(180deg, transparent 0%, rgba(45,40,83,0.4) 50%, #2d2853 100%);
-    pointer-events: none;
-    z-index: 1;
-  }
-  
-  /* Mirror fade from dark calendar into light section below */
-  .calendar-section::after {
-    content: '';
-    position: absolute;
-    bottom: -120px;
-    left: 0;
-    right: 0;
-    height: 120px;
-    background: linear-gradient(180deg, #2d2853 0%, rgba(45,40,83,0.4) 50%, transparent 100%);
-    pointer-events: none;
-    z-index: 1;
   }
 
   .calendar-section .section-label { color: var(--amber); padding-left: 40px; }
@@ -1284,6 +1255,3 @@
     footer { padding: 48px 20px 32px; }
     .cal-topbar, .cal-filters, .cal-days, .cal-events { padding-left: 16px; padding-right: 16px; }
   }
-
-  /* V2 search input placeholder color */
-  .v2-search-input::placeholder { color: rgba(255,255,255,0.5); }
