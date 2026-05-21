@@ -131,10 +131,10 @@ jobs:
 
       - name: Send daily digest email
         id: digest_email
-        continue-on-error: true
         run: |
           echo "::group::Email digest"
-          python audit_email_digest.py
+          python -u audit_email_digest.py
+          echo "RESEND_API_KEY length: ${#RESEND_API_KEY}"
           echo "::endgroup::"
 
       - name: Build run summary
