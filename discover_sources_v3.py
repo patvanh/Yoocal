@@ -500,9 +500,24 @@ def probe_playwright(domain, timeout_seconds=15):
 
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            ctx = browser.new_context(user_agent=BROWSER_HEADERS["User-Agent"])
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled"],
+            )
+            ctx = browser.new_context(
+                user_agent=BROWSER_HEADERS["User-Agent"],
+                viewport={"width": 1400, "height": 900},
+                locale="en-US",
+                timezone_id="America/Denver",
+            )
             page = ctx.new_page()
+            page.set_extra_http_headers({
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Sec-Fetch-Dest": "document",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "none",
+            })
 
             def on_request(req):
                 u = req.url
