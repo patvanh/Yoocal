@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T14:36:56.179169",
+  "generated_at": "2026-05-21T18:20:37.229198",
   "uncertain": [
     {
       "city": "park-city",
@@ -10,7 +10,7 @@
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which typically runs continuously over multiple days where attendees can come any day during the event period."
+        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which by nature are continuous multi-day events where attendees can visit on any or all days during the festival period."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
@@ -21,78 +21,68 @@
       "type": "multi_day_span",
       "link": "https://www.visitparkcity.com/event/summer-program-registration/28987/",
       "resolution": {
-        "confidence": "medium",
+        "confidence": "low",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "This appears to be a registration period (May 21 - June 1, 2026) for summer programs rather than the programs themselves, representing a continuous window when registration is open."
-      },
-      "applied": false,
-      "note": "confidence=medium, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Demonstration Garden Volunteer",
-      "type": "title_venue_only",
-      "link": "https://swanerecocenter.volunteermatters.org/project-catalog",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "This is a volunteer opportunity for garden maintenance work, not a performance event with an artist or performer; the only person mentioned is Colie Belieu who provides gardening instruction to volunteers."
+        "reasoning": "The source text is incomplete and doesn't provide clear information about whether this is a registration period spanning multiple days or separate registration events, though the description suggests it's a registration window opening on specific dates for different groups."
       },
       "applied": false,
       "note": "confidence=low, not applying"
     },
     {
       "city": "park-city",
-      "title": "80s Weekend with Taylor Dayne and Expos\u00e9",
+      "title": "The Proper Way at Silver Lake",
       "type": "multi_day_span",
-      "link": "https://www.bandsintown.com/e/108269749?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-062626",
       "resolution": {
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The event is titled '80s Weekend' and shows a single start date of July 25, 2026, indicating a multi-day weekend festival format where attendees experience the entire weekend event."
+        "reasoning": "The event runs continuously Friday through Sunday (June 26-28) at the same location and time (1-4 PM), with different artists performing each day as part of a single weekend event experience."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
     },
     {
       "city": "park-city",
-      "title": "Crafternoons To-Go Series",
-      "type": "title_venue_only",
-      "link": "https://tockify.com/pcscart/detail/2111/1785564000000",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source text only contains the event title 'Crafternoons To-Go Series' and a status placeholder, with no information about a specific artist or performer."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Crafternoons To-Go Series",
+      "title": "Flying Ace All-Stars Freestyle Show",
       "type": "multi_day_span",
-      "link": "https://tockify.com/pcscart/detail/2111/1785564000000",
+      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-54/",
       "resolution": {
-        "confidence": "low",
-        "kind": "continuous",
+        "confidence": "medium",
+        "kind": "split",
         "explicit_dates": [],
-        "reasoning": "The title 'Series' and description of picking up craft kits 'first come, first served' suggests an ongoing program rather than specific event instances, though the source text provides no explicit dates or schedule to confirm either interpretation."
+        "reasoning": "The description states 'every weekend beginning June 12' which indicates multiple recurring separate shows, though the listing only shows a single date of July 10, 2026 which appears to be one specific instance of this recurring event."
       },
       "applied": false,
-      "note": "confidence=low, not applying"
+      "note": "confidence=medium, not applying"
     },
     {
       "city": "park-city",
-      "title": "Alicia Stockman Band at Park City Arts Festival",
+      "title": "Flying Ace All-Stars Freestyle Show",
+      "type": "multi_day_span",
+      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-56/",
+      "resolution": {
+        "confidence": "medium",
+        "kind": "split",
+        "explicit_dates": [
+          "2026-07-17"
+        ],
+        "reasoning": "The description specifies a single date (July 17, 2026) while the page text mentions the show occurs 'every weekend beginning June 12', suggesting multiple separate weekend performances rather than one continuous event."
+      },
+      "applied": false,
+      "note": "confidence=medium, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Alicia Stockman at Park City Arts Festival",
       "type": "multi_day_span",
       "link": "https://www.bandsintown.com/e/108056978?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
       "resolution": {
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "This is a single performance by Alicia Stockman Band at the Park City Arts Festival on August 8, 2026 at 1:00 PM, not multiple separate instances."
+        "reasoning": "This is a single performance by Alicia Stockman at the Park City Arts Festival on August 8, 2026 at 1:00 PM MDT at the Kimball Stage, not multiple separate instances."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
@@ -105,7 +95,7 @@
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source page text only contains the event title 'Art on the Trails' and a status notification placeholder, with no information about specific artists or performers."
+        "reasoning": "The source text only contains the event title 'Art on the Trails' and a status notifier placeholder, with no information about specific artists or performers."
       },
       "applied": false,
       "note": "confidence=low, not applying"
@@ -118,7 +108,7 @@
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source text only contains the market name and a status notification placeholder, with no information about any specific artist or performer."
+        "reasoning": "The source text only contains the market name and a status placeholder, with no specific artist or performer information provided."
       },
       "applied": false,
       "note": "confidence=low, not applying"
