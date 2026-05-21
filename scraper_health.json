@@ -1,332 +1,290 @@
 {
-  "checked_at": "2026-05-20T15:42:39.540804-06:00",
-  "today": "2026-05-20",
+  "checked_at": "2026-05-21T08:36:56.499874-06:00",
+  "today": "2026-05-21",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 782,
-        "baseline": null,
+        "actual": 812,
+        "baseline": 782,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=782 (no baseline yet)"
+        "message": "actual=812, baseline=782"
       },
       {
         "source": "Park City Annual Events",
-        "actual": 448,
-        "baseline": null,
+        "actual": 446,
+        "baseline": 448,
         "floor": 200,
         "severity": "OK",
-        "message": "actual=448 (no baseline yet)"
+        "message": "actual=446, baseline=448"
       },
       {
         "source": "Mountain Town Music",
         "actual": 164,
-        "baseline": null,
+        "baseline": 164,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=164 (no baseline yet)"
+        "message": "actual=164, baseline=164"
       },
       {
         "source": "Deer Valley Resort",
         "actual": 60,
-        "baseline": null,
+        "baseline": 60,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=60 (no baseline yet)"
+        "message": "actual=60, baseline=60"
       },
       {
         "source": "Visit Park City (sitemap)",
-        "actual": 40,
-        "baseline": null,
+        "actual": 32,
+        "baseline": 40,
         "floor": 40,
-        "severity": "OK",
-        "message": "actual=40 (no baseline yet)"
+        "severity": "CRITICAL",
+        "message": "actual=32, floor=40 (below catastrophic threshold)"
       },
       {
         "source": "Park City Farmers Market",
         "actual": 22,
-        "baseline": null,
+        "baseline": 22,
         "floor": 10,
         "severity": "OK",
-        "message": "actual=22 (no baseline yet)"
-      },
-      {
-        "source": "Visit Park City",
-        "actual": 19,
-        "baseline": null,
-        "floor": 15,
-        "severity": "OK",
-        "message": "actual=19 (no baseline yet)"
+        "message": "actual=22, baseline=22"
       },
       {
         "source": "Park City Institute",
         "actual": 14,
-        "baseline": null,
+        "baseline": 14,
         "floor": 5,
         "severity": "OK",
-        "message": "actual=14 (no baseline yet)"
+        "message": "actual=14, baseline=14"
       },
       {
         "source": "Mountain Trails Foundation",
         "actual": 14,
-        "baseline": null,
+        "baseline": 14,
         "floor": null,
         "severity": "OK",
-        "message": "actual=14 (no baseline yet)"
+        "message": "actual=14, baseline=14"
       },
       {
         "source": "Park City Opera",
         "actual": 12,
-        "baseline": null,
+        "baseline": 12,
         "floor": null,
         "severity": "OK",
-        "message": "actual=12 (no baseline yet)"
+        "message": "actual=12, baseline=12"
       },
       {
         "source": "RunSignup",
         "actual": 9,
-        "baseline": null,
+        "baseline": 9,
         "floor": null,
         "severity": "OK",
-        "message": "actual=9 (no baseline yet)"
+        "message": "actual=9, baseline=9"
       },
       {
         "source": "Salt Lake Running Co",
         "actual": 6,
-        "baseline": null,
+        "baseline": 6,
         "floor": null,
         "severity": "OK",
-        "message": "actual=6 (no baseline yet)"
+        "message": "actual=6, baseline=6"
       },
       {
         "source": "Deer Valley Music Festival",
         "actual": 5,
-        "baseline": null,
+        "baseline": 5,
         "floor": null,
         "severity": "OK",
-        "message": "actual=5 (no baseline yet)"
+        "message": "actual=5, baseline=5"
       },
       {
         "source": "Park City Gallery Association",
         "actual": 2,
-        "baseline": null,
+        "baseline": 2,
         "floor": null,
         "severity": "OK",
-        "message": "actual=2 (no baseline yet)"
-      },
-      {
-        "source": "Heber Valley Tourism",
-        "actual": 2,
-        "baseline": null,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=2 (no baseline yet)"
+        "message": "actual=2, baseline=2"
       },
       {
         "source": "Park City Song Summit",
         "actual": 1,
-        "baseline": null,
+        "baseline": 1,
         "floor": null,
         "severity": "OK",
-        "message": "actual=1 (no baseline yet)"
+        "message": "actual=1, baseline=1"
       }
     ],
     "elkhart-lake": [
       {
         "source": "Elkhart Lake Tourism",
-        "actual": 216,
-        "baseline": null,
+        "actual": 215,
+        "baseline": 216,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=216 (no baseline yet)"
+        "message": "actual=215, baseline=216"
       },
       {
         "source": "The Osthoff Resort",
         "actual": 17,
-        "baseline": null,
+        "baseline": 17,
         "floor": null,
         "severity": "OK",
-        "message": "actual=17 (no baseline yet)"
+        "message": "actual=17, baseline=17"
       },
       {
         "source": "Road America",
         "actual": 15,
-        "baseline": null,
+        "baseline": 15,
         "floor": null,
         "severity": "OK",
-        "message": "actual=15 (no baseline yet)"
+        "message": "actual=15, baseline=15"
       },
       {
         "source": "Siebkens Resort",
         "actual": 8,
-        "baseline": null,
+        "baseline": 8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=8 (no baseline yet)"
+        "message": "actual=8, baseline=8"
       },
       {
         "source": "Village of Elkhart Lake",
         "actual": 1,
-        "baseline": null,
+        "baseline": 1,
         "floor": null,
         "severity": "OK",
-        "message": "actual=1 (no baseline yet)"
+        "message": "actual=1, baseline=1"
       }
     ],
     "heber": [
       {
-        "source": "Deer Valley Resort",
-        "actual": 59,
-        "baseline": null,
+        "source": "Google Events",
+        "actual": 38,
+        "baseline": 35,
         "floor": null,
         "severity": "OK",
-        "message": "actual=59 (no baseline yet)"
+        "message": "actual=38, baseline=35"
       },
       {
-        "source": "Google Events",
-        "actual": 35,
-        "baseline": null,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=35 (no baseline yet)"
+        "source": "Heber Valley Tourism",
+        "actual": 29,
+        "baseline": 7,
+        "floor": 30,
+        "severity": "CRITICAL",
+        "message": "actual=29, floor=30 (below catastrophic threshold)"
       },
       {
         "source": "Heber Valley Life",
-        "actual": 27,
-        "baseline": null,
+        "actual": 26,
+        "baseline": 27,
         "floor": 10,
         "severity": "OK",
-        "message": "actual=27 (no baseline yet)"
-      },
-      {
-        "source": "The Park Record",
-        "actual": 24,
-        "baseline": null,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=24 (no baseline yet)"
-      },
-      {
-        "source": "KPCW Community Calendar",
-        "actual": 13,
-        "baseline": null,
-        "floor": 50,
-        "severity": "CRITICAL",
-        "message": "actual=13, floor=50 (below catastrophic threshold)"
+        "message": "actual=26, baseline=27"
       },
       {
         "source": "Oakley City",
         "actual": 13,
-        "baseline": null,
+        "baseline": 13,
         "floor": null,
         "severity": "OK",
-        "message": "actual=13 (no baseline yet)"
+        "message": "actual=13, baseline=13"
+      },
+      {
+        "source": "KPCW Community Calendar",
+        "actual": 12,
+        "baseline": 13,
+        "floor": 50,
+        "severity": "CRITICAL",
+        "message": "actual=12, floor=50 (below catastrophic threshold)"
       },
       {
         "source": "Eventbrite",
         "actual": 10,
-        "baseline": null,
+        "baseline": 10,
         "floor": null,
         "severity": "OK",
-        "message": "actual=10 (no baseline yet)"
+        "message": "actual=10, baseline=10"
       },
       {
         "source": "RunSignup",
         "actual": 9,
-        "baseline": null,
+        "baseline": 9,
         "floor": null,
         "severity": "OK",
-        "message": "actual=9 (no baseline yet)"
-      },
-      {
-        "source": "Heber Valley Tourism",
-        "actual": 7,
-        "baseline": null,
-        "floor": 30,
-        "severity": "CRITICAL",
-        "message": "actual=7, floor=30 (below catastrophic threshold)"
+        "message": "actual=9, baseline=9"
       },
       {
         "source": "Salt Lake Running Co",
         "actual": 4,
-        "baseline": null,
+        "baseline": 4,
         "floor": null,
         "severity": "OK",
-        "message": "actual=4 (no baseline yet)"
-      },
-      {
-        "source": "Visit Park City",
-        "actual": 1,
-        "baseline": null,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=1 (no baseline yet)"
-      },
-      {
-        "source": "Deer Valley Music Festival",
-        "actual": 1,
-        "baseline": null,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=1 (no baseline yet)"
+        "message": "actual=4, baseline=4"
       }
     ],
     "jackson": [
       {
         "source": "Jackson Hole Chamber of Commerce",
-        "actual": 236,
-        "baseline": null,
+        "actual": 232,
+        "baseline": 236,
         "floor": 100,
         "severity": "OK",
-        "message": "actual=236 (no baseline yet)"
+        "message": "actual=232, baseline=236"
       },
       {
         "source": "Center for the Arts Jackson Hole",
         "actual": 112,
-        "baseline": null,
+        "baseline": 112,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=112 (no baseline yet)"
+        "message": "actual=112, baseline=112"
       },
       {
         "source": "Grand Teton Music Festival",
         "actual": 77,
-        "baseline": null,
+        "baseline": 77,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=77 (no baseline yet)"
+        "message": "actual=77, baseline=77"
       },
       {
         "source": "The Cloudveil",
-        "actual": 55,
-        "baseline": null,
+        "actual": 54,
+        "baseline": 55,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=55 (no baseline yet)"
+        "message": "actual=54, baseline=55"
       },
       {
         "source": "National Museum of Wildlife Art",
         "actual": 7,
-        "baseline": null,
+        "baseline": 7,
         "floor": null,
         "severity": "OK",
-        "message": "actual=7 (no baseline yet)"
+        "message": "actual=7, baseline=7"
       }
     ]
   },
   "critical_alerts": [
     {
-      "city": "heber",
-      "source": "KPCW Community Calendar",
+      "city": "park-city",
+      "source": "Visit Park City (sitemap)",
       "severity": "CRITICAL",
-      "message": "actual=13, floor=50 (below catastrophic threshold)"
+      "message": "actual=32, floor=40 (below catastrophic threshold)"
     },
     {
       "city": "heber",
       "source": "Heber Valley Tourism",
       "severity": "CRITICAL",
-      "message": "actual=7, floor=30 (below catastrophic threshold)"
+      "message": "actual=29, floor=30 (below catastrophic threshold)"
+    },
+    {
+      "city": "heber",
+      "source": "KPCW Community Calendar",
+      "severity": "CRITICAL",
+      "message": "actual=12, floor=50 (below catastrophic threshold)"
     }
   ]
 }

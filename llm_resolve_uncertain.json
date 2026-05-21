@@ -1,20 +1,6 @@
 {
-  "generated_at": "2026-05-20T19:11:11.308880",
+  "generated_at": "2026-05-21T14:36:56.179169",
   "uncertain": [
-    {
-      "city": "park-city",
-      "title": "Summer Program Registration",
-      "type": "multi_day_span",
-      "link": "https://www.visitparkcity.com/event/summer-program-registration/28987/",
-      "resolution": {
-        "confidence": "low",
-        "kind": "continuous",
-        "explicit_dates": [],
-        "reasoning": "The date range appears to be a registration period window rather than event occurrence dates, and the source text does not provide specific dates when the summer programs themselves run, only when registration opens (April 1st and 3rd)."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
-    },
     {
       "city": "park-city",
       "title": "Kimball Arts Festival",
@@ -24,191 +10,118 @@
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The description refers to it as 'the arts festival' (singular) that 'showcases' work over the period, and mentions it's in its 57th year as an annual event, indicating one continuous multi-day festival rather than separate recurring instances."
+        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which typically runs continuously over multiple days where attendees can come any day during the event period."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
     },
     {
       "city": "park-city",
-      "title": "Flying Ace All-Stars Freestyle Show",
+      "title": "Summer Program Registration",
       "type": "multi_day_span",
-      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-52/",
+      "link": "https://www.visitparkcity.com/event/summer-program-registration/28987/",
       "resolution": {
         "confidence": "medium",
-        "kind": "split",
-        "explicit_dates": [
-          "2026-07-03"
-        ],
-        "reasoning": "The description states the event is held on a specific date (July 03, 2026), but the source text indicates it runs 'every weekend beginning June 12', suggesting multiple separate weekend instances rather than one continuous event."
-      },
-      "applied": false,
-      "note": "confidence=medium, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Flying Ace All-Stars Freestyle Show",
-      "type": "multi_day_span",
-      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-54/",
-      "resolution": {
-        "confidence": "medium",
-        "kind": "split",
-        "explicit_dates": [],
-        "reasoning": "The description mentions 'every weekend beginning June 12' for the show, but the specific event listing is for July 10, 2026, suggesting this is one instance of a recurring weekend show series, though the exact recurring dates are not explicitly listed in the source."
-      },
-      "applied": false,
-      "note": "confidence=medium, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Flying Ace All-Stars Freestyle Show",
-      "type": "multi_day_span",
-      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-56/",
-      "resolution": {
-        "confidence": "medium",
-        "kind": "split",
-        "explicit_dates": [],
-        "reasoning": "The description mentions 'every weekend beginning June 12' for the show, suggesting multiple separate instances, but the specific date of July 17, 2026 is given as one particular occurrence rather than a continuous multi-day event."
-      },
-      "applied": false,
-      "note": "confidence=medium, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Slow Sunday Run Club!",
-      "type": "multi_day_span",
-      "link": "https://rendezvousrun.com/",
-      "resolution": {
-        "confidence": "high",
-        "kind": "split",
-        "explicit_dates": [],
-        "reasoning": "This is a recurring weekly event that happens every Sunday at 10 AM, not a one-time multi-day event or specific dates within a range."
-      },
-      "applied": false,
-      "note": "split kind but no valid dates"
-    },
-    {
-      "city": "park-city",
-      "title": "Fred Tackett & Scott Sharrard (from Little Feat)",
-      "type": "multi_day_span",
-      "link": "https://www.bandsintown.com/e/108229696?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "resolution": {
-        "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The source shows a single concert event on August 1, 2026 at 7:00 PM at the Egyptian Theatre with one ticket purchase option, not multiple separate performances."
+        "reasoning": "This appears to be a registration period (May 21 - June 1, 2026) for summer programs rather than the programs themselves, representing a continuous window when registration is open."
       },
       "applied": false,
-      "note": "confirmed continuous, no change"
+      "note": "confidence=medium, not applying"
     },
     {
       "city": "park-city",
-      "title": "The Smithereens at Egyptian Theatre",
-      "type": "multi_day_span",
-      "link": "https://www.bandsintown.com/e/1038765825?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "resolution": {
-        "confidence": "high",
-        "kind": "continuous",
-        "explicit_dates": [],
-        "reasoning": "The source lists a single concert date of August 8, 2026 at 8:00 PM with one 'Get Tickets' link, indicating this is a one-time show, not multiple separate instances."
-      },
-      "applied": false,
-      "note": "confirmed continuous, no change"
-    },
-    {
-      "city": "park-city",
-      "title": "Moose on the Loose",
+      "title": "Demonstration Garden Volunteer",
       "type": "title_venue_only",
-      "link": "https://www.parkcityss.org/moose-on-the-loose",
+      "link": "https://swanerecocenter.volunteermatters.org/project-catalog",
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source text describes 'Moose on the Loose' as a trail running race series for children, not a performance event with an artist or act, so there is no performer to identify."
+        "reasoning": "This is a volunteer opportunity for garden maintenance work, not a performance event with an artist or performer; the only person mentioned is Colie Belieu who provides gardening instruction to volunteers."
       },
       "applied": false,
       "note": "confidence=low, not applying"
     },
     {
       "city": "park-city",
-      "title": "Elemental Harmony: Hormones + Seasons Wellness Coh",
+      "title": "80s Weekend with Taylor Dayne and Expos\u00e9",
       "type": "multi_day_span",
-      "link": "http://wildwomentribe.net/wander-1",
+      "link": "https://www.bandsintown.com/e/108269749?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
       "resolution": {
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "This is a 12-month continuous wellness cohort series with four quarterly in-person sessions (Nov 15, Jan 31, Apr 18, Aug 22) plus eight monthly Zoom check-ins, designed as one integrated program where participants attend all components together."
+        "reasoning": "The event is titled '80s Weekend' and shows a single start date of July 25, 2026, indicating a multi-day weekend festival format where attendees experience the entire weekend event."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
     },
     {
       "city": "park-city",
-      "title": "Wine and Cheese Pairing: Gold Creek Farms & Bon Vi",
+      "title": "Crafternoons To-Go Series",
       "type": "title_venue_only",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-wine-and-cheese-pairing",
-      "resolution": {
-        "confidence": "medium",
-        "new_title": "Wine and Cheese Pairing with Fernando Chavez-Sandoval & Brad Jensen: Gold Creek Farms & Bon Vivant Imports",
-        "reasoning": "The event is guided by head cheesemonger Fernando Chavez-Sandoval and wine expert Brad Jensen, who are the specific presenters leading this tasting class."
-      },
-      "applied": false,
-      "note": "confidence=medium, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Park City Miner's Day 2026",
-      "type": "title_venue_only",
-      "link": "https://historicparkcityutah.com/park-city-miners-day-2024",
+      "link": "https://tockify.com/pcscart/detail/2111/1785564000000",
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source text describes a community festival celebrating Park City's mining history with various activities, but does not mention any specific artist, band, or performer for this event."
+        "reasoning": "The source text only contains the event title 'Crafternoons To-Go Series' and a status placeholder, with no information about a specific artist or performer."
       },
       "applied": false,
       "note": "confidence=low, not applying"
     },
     {
       "city": "park-city",
-      "title": "Park City Miner's Day 2026",
+      "title": "Crafternoons To-Go Series",
       "type": "multi_day_span",
-      "link": "https://historicparkcityutah.com/park-city-miners-day-2024",
+      "link": "https://tockify.com/pcscart/detail/2111/1785564000000",
+      "resolution": {
+        "confidence": "low",
+        "kind": "continuous",
+        "explicit_dates": [],
+        "reasoning": "The title 'Series' and description of picking up craft kits 'first come, first served' suggests an ongoing program rather than specific event instances, though the source text provides no explicit dates or schedule to confirm either interpretation."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Alicia Stockman Band at Park City Arts Festival",
+      "type": "multi_day_span",
+      "link": "https://www.bandsintown.com/e/108056978?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
       "resolution": {
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "This is a single-day annual celebration held on September 7, 2026 (the first Monday in September), not a multi-day event or multiple separate instances."
+        "reasoning": "This is a single performance by Alicia Stockman Band at the Park City Arts Festival on August 8, 2026 at 1:00 PM, not multiple separate instances."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
     },
     {
       "city": "park-city",
-      "title": "Gorgeous Gourds at Solitude Mountain Resort",
-      "type": "multi_day_span",
-      "link": "https://www.bandsintown.com/e/108291748?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "title": "Art on the Trails",
+      "type": "title_venue_only",
+      "link": "https://tockify.com/pcscart/detail/2287/1787428800000",
       "resolution": {
-        "confidence": "high",
-        "kind": "continuous",
-        "explicit_dates": [],
-        "reasoning": "The source shows a single concert event on Sep 13, 2026 at 5:00 PM MDT with one specific start time, not multiple separate instances."
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only contains the event title 'Art on the Trails' and a status notification placeholder, with no information about specific artists or performers."
       },
       "applied": false,
-      "note": "confirmed continuous, no change"
+      "note": "confidence=low, not applying"
     },
     {
       "city": "park-city",
-      "title": "Last Friday Gallery Stroll",
-      "type": "multi_day_span",
-      "link": "https://www.parkcitygalleryassociation.com/",
+      "title": "Park Silly Sunday Market",
+      "type": "title_venue_only",
+      "link": "https://tockify.com/pcscart/detail/2150/1788105600000",
       "resolution": {
-        "confidence": "high",
-        "kind": "split",
-        "explicit_dates": [],
-        "reasoning": "This is a recurring monthly event that occurs only on the last Friday of each month, not a continuous multi-day event, though specific dates are not listed in the source text."
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source text only contains the market name and a status notification placeholder, with no information about any specific artist or performer."
       },
       "applied": false,
-      "note": "split kind but no valid dates"
+      "note": "confidence=low, not applying"
     }
   ]
 }

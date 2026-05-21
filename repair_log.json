@@ -1,38 +1,170 @@
 {
-  "generated_at": "2026-05-20T15:42:39.314452",
-  "audit_date": "2026-05-20",
+  "generated_at": "2026-05-21T14:35:17.446538",
+  "audit_date": "2026-05-21",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1600,
+      "before_count": 1585,
       "passes": {
         "past_dates": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Running with Ed 2026",
+              "date": "2026-05-16"
+            }
+          ]
         },
         "absurd_spans": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Old Town walking tour",
+              "had_span": 83
+            }
+          ]
         },
         "multi_day_splits": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 4,
+          "examples": [
+            {
+              "title": "Chef Sarah Glover Weekend",
+              "original_span": "2026-07-11 to 2026-07-12",
+              "split_into": [
+                "2026-07-11",
+                "2026-07-12"
+              ]
+            },
+            {
+              "title": "Matilda & Gozney Weekend",
+              "original_span": "2026-07-18 to 2026-07-19",
+              "split_into": [
+                "2026-07-18",
+                "2026-07-19"
+              ]
+            },
+            {
+              "title": "Chef Ryan Arensdorf Weekend",
+              "original_span": "2026-08-01 to 2026-08-02",
+              "split_into": [
+                "2026-08-01",
+                "2026-08-02"
+              ]
+            },
+            {
+              "title": "Chef Ryan Arensdorf Weekend",
+              "original_span": "2026-08-08 to 2026-08-09",
+              "split_into": [
+                "2026-08-08",
+                "2026-08-09"
+              ]
+            }
+          ]
         },
         "missing_end_times": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 19,
+          "examples": [
+            {
+              "title": "HOMETOWN SHOW Jessie Ritter @ Jackson MO City Park Rock Garden",
+              "start_time": "6:00 PM",
+              "new_end_time": "8:00 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Concerts on the Slopes",
+              "start_time": "7:00 PM",
+              "new_end_time": "10:00 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "Haydn, Mendelssohn, & A Viola Concerto",
+              "start_time": "8:00 PM",
+              "new_end_time": "11:00 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "2026 Deer Valley Music Festival: Chicago the Musical In Concert",
+              "start_time": "7:30 PM",
+              "new_end_time": "10:30 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "Concerts on the Slopes",
+              "start_time": "7:00 PM",
+              "new_end_time": "10:00 PM",
+              "duration_hours": 3
+            }
+          ]
         },
         "classification": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 363,
+          "examples": [
+            {
+              "title": "2026 Oakley Rodeo BBQ",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Food & Drink",
+                "Sports",
+                "Kids",
+                "Family",
+                "Festival"
+              ]
+            },
+            {
+              "title": "4th of July Parade and Celebration",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Family",
+                "Festival"
+              ]
+            },
+            {
+              "title": "Candlelight Kundalini",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Food & Drink",
+                "Wellness"
+              ]
+            },
+            {
+              "title": "Coffee & Calm: Designer Chats",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Wellness",
+                "Education"
+              ]
+            },
+            {
+              "title": "Family Friendly: Wind Chimes in Clay",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Family"
+              ]
+            }
+          ]
         }
       },
-      "after_count": 1600,
-      "total_fixes": 0
+      "after_count": 1588,
+      "total_fixes": 388
     },
     {
       "city": "elkhart-lake",
-      "before_count": 250,
+      "before_count": 249,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -91,16 +223,33 @@
           "examples": []
         }
       },
-      "after_count": 257,
+      "after_count": 256,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 203,
+      "before_count": 145,
       "passes": {
         "past_dates": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 4,
+          "examples": [
+            {
+              "title": "Kamas Library Classic Cinema Series",
+              "date": "2026-05-19"
+            },
+            {
+              "title": "Albion SC Utah TRYOUTS - May 18-30, 2026",
+              "date": "2026-05-20"
+            },
+            {
+              "title": "Reading with Therapy Dogs - Every Wednesday in May",
+              "date": "2026-05-20"
+            },
+            {
+              "title": "Kamas Library Classic Cinema Series",
+              "date": "2026-05-20"
+            }
+          ]
         },
         "absurd_spans": {
           "fixed": 0,
@@ -111,8 +260,27 @@
           "examples": []
         },
         "missing_end_times": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 3,
+          "examples": [
+            {
+              "title": "Mountain Valley Stampede Rodeo",
+              "start_time": "10:30 PM",
+              "new_end_time": "12:30 AM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Utah Marathon",
+              "start_time": "7:30 AM",
+              "new_end_time": "9:30 AM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Yoga in the Park",
+              "start_time": "10:45 AM",
+              "new_end_time": "11:45 AM",
+              "duration_hours": 1
+            }
+          ]
         },
         "classification": {
           "fixed": 13,
@@ -176,36 +344,145 @@
           ]
         }
       },
-      "after_count": 203,
-      "total_fixes": 13
+      "after_count": 141,
+      "total_fixes": 20
     },
     {
       "city": "jackson",
-      "before_count": 487,
+      "before_count": 479,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 7,
+          "examples": [
+            {
+              "title": "Music Classes",
+              "had_span": 1686
+            },
+            {
+              "title": "Visual Arts Classes",
+              "had_span": 1686
+            },
+            {
+              "title": "Writing Classes and Workshops",
+              "had_span": 1686
+            },
+            {
+              "title": "Dance and Movement Classes",
+              "had_span": 1686
+            },
+            {
+              "title": "Youth Art Programming",
+              "had_span": 1351
+            }
+          ]
         },
         "multi_day_splits": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 2,
+          "examples": [
+            {
+              "title": "Jackson Hole Restaurant Week",
+              "original_span": "2026-05-21 to 2026-05-22",
+              "split_into": [
+                "2026-05-21",
+                "2026-05-22"
+              ]
+            },
+            {
+              "title": "Teton Mudpots Summer Sale",
+              "original_span": "2026-06-17 to 2026-06-19",
+              "split_into": [
+                "2026-06-17",
+                "2026-06-18",
+                "2026-06-19"
+              ]
+            }
+          ]
         },
         "missing_end_times": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 3,
+          "examples": [
+            {
+              "title": "Old West Days - Jackson Hole Rodeo",
+              "start_time": "8:00 PM",
+              "new_end_time": "10:00 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Little Wings Story Time",
+              "start_time": "11:00 AM",
+              "new_end_time": "11:30 AM",
+              "duration_hours": 0.5
+            },
+            {
+              "title": "The Center Presents: Nitty Gritty Dirt Band \u2013 The Farewell Tour",
+              "start_time": "8:00 PM",
+              "new_end_time": "9:00 PM",
+              "duration_hours": 1
+            }
+          ]
         },
         "classification": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 209,
+          "examples": [
+            {
+              "title": "Adult CPR/AED and Child CPR Course",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Al Hubbard: When Turtles Talk",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Arts"
+              ]
+            },
+            {
+              "title": "First Aid - Blended Learning Course",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Mountain Academy Coffee Chats",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Old West Days Mixer - History Jackson Hole",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Arts"
+              ]
+            }
+          ]
         }
       },
-      "after_count": 487,
-      "total_fixes": 0
+      "after_count": 482,
+      "total_fixes": 221
     }
   ]
 }
