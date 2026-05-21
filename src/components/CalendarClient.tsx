@@ -182,14 +182,17 @@ function V2EventCard({ event, onClick, featured = false }: { event: V2YocEvent; 
         marginBottom: 0, cursor: 'pointer',
         fontFamily: "'DM Sans', sans-serif",
         transition: 'all 0.15s ease',
+        color: 'inherit',
+        font: 'inherit',
+        WebkitAppearance: 'none',
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.borderColor = 'rgba(175,169,236,0.4)'
-        e.currentTarget.style.background = 'rgba(255,255,255,0.10)'
+        if (!featured) e.currentTarget.style.background = 'rgba(255,255,255,0.10)'
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.10)'
-        e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+        e.currentTarget.style.borderColor = featured ? 'rgba(175,169,236,0.2)' : 'rgba(255,255,255,0.10)'
+        if (!featured) e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
       }}
     >
       {/* Stacked date pill: MON DD / DAY / TIME */}
