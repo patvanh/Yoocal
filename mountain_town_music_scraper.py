@@ -154,6 +154,30 @@ def _parse_show(url):
     start_time = _normalize_time(m.group(2))
     end_time = _normalize_time(m.group(3))
     venue_name, address = _split_venue_address(m.group(4))
+
+    # MTM publishes the venue name in a /venue/<slug>/ link near the title.
+    # Pattern in the HTML:
+    #   <a href="...band/whitney-lusk/">Whitney Lusk</a> at <br />
+    #   <a href="...venue/grand-hyatt-deer-valley/">Grand Hyatt Deer Valley</a>
+    # Extract the link text, which is the proper venue name.
+    venue_link_m = re.search(
+        r'<a[^>]+href="[^"]*/venue/[^"]+"[^>]*>([^<]+)</a>',
+        decoded,
+    )
+    if venue_link_m:
+        scraped_venue = venue_link_m.group(1).strip()
+        if scraped_venue and len(scraped_venue) > 1:
+            # Use the actual venue name from the link, and treat the entire
+            # group(4) string as the street address.
+            full_addr = m.group(4).strip().rstrip(",")
+            # If it has the "<street> // <city>" form, split for cleaner display.
+            if "//" in full_addr:
+                street, city = full_addr.split("//", 1)
+                address = f"{street.strip()}, {city.strip()}"
+            else:
+                address = full_addr
+            venue_name = scraped_venue
+
     is_free = "FREE SHOW" in text
 
     return {

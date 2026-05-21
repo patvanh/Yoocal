@@ -97,17 +97,33 @@ def lookup_venue_by_address(address_str):
     if not address_str:
         return None, None
     table = _load_venue_table()
-    addr_lo = address_str.strip().lower()
+    raw_addr = address_str.strip().lower()
 
-    # Check every venue's canonical address and aliases for a match
+    def _norm(s):
+        # Strip punctuation that varies between sources (periods in "E.", commas)
+        # and collapse whitespace so "3925 e. snowbasin rd" matches "3925 e snowbasin rd"
+        s = re.sub(r"[.,]", " ", s)
+        s = re.sub(r"\s+", " ", s).strip()
+        return s
+
+    addr_lo = _norm(raw_addr)
+
+    # Inputs that don't start with a street number are city-level strings
+    # (e.g. "Jackson, WY"). Allow exact alias match only.
+    if not re.match(r"^\d+\s+\w", addr_lo):
+        for key, v in table.items():
+            if addr_lo == _norm(key):
+                return v["name"], v["address"]
+        return None, None
+
+    # Street-level address — match by prefix on normalized canonical
     for key, v in table.items():
-        canonical = v["address"].lower()
-        # Match if the input is contained in the canonical address
-        # (e.g. "1361 woodside ave" in "1361 woodside ave, park city, ut 84060")
-        if addr_lo in canonical or canonical.startswith(addr_lo):
+        canonical = _norm(v["address"].lower())
+        if canonical.startswith(addr_lo):
             return v["name"], v["address"]
-        # Also check if the table key (which may include aliases) matches
-        if key in addr_lo or addr_lo in key:
+        # Also check matchAliases (the value's address may be longer than the alias)
+        # Aliases include things like "3925 E. Snowbasin Rd" stored as alias keys
+        if addr_lo == _norm(key):
             return v["name"], v["address"]
     return None, None
 
