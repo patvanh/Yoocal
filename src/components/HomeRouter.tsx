@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import CalendarClient from "@/components/CalendarClient"
+import CalendarClientV2 from "@/components/CalendarClientV2"
 import HomeBrand from "@/components/HomeBrand"
 
 /**
@@ -36,6 +37,9 @@ export default function HomeRouter() {
       </div>
     )
   }
-  if (view === "calendar") return <CalendarClient />
+  if (view === "calendar") {
+    const isV2 = params.get("v") === "2"
+    return isV2 ? <CalendarClientV2 /> : <CalendarClient />
+  }
   return <HomeBrand />
 }
