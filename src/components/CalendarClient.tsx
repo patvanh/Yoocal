@@ -225,7 +225,7 @@ function V2EventCard({ event, onClick, featured = false }: { event: V2YocEvent; 
           <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: 4, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {event.venue_name || event.location}
             {event.price && <span style={{ color: '#EF9F27', marginLeft: 8, fontWeight: 600 }}>· {event.price}</span>}
-            {event.is_free === true && <span style={{ color: '#10b981', marginLeft: 8, fontWeight: 600 }}>· Free</span>}
+            {event.is_free === true && !event.price && <span style={{ color: '#10b981', marginLeft: 8, fontWeight: 600 }}>· Free</span>}
           </div>
         )}
         {event.description && (

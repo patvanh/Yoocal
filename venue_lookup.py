@@ -86,6 +86,32 @@ def lookup_venue_address(location_str):
     return None, None
 
 
+def lookup_venue_by_address(address_str):
+    """
+    Given an address string, return (venue_name, canonical_address) if a
+    known venue lives at that address, else (None, None).
+
+    Useful for scrapers like Mountain Town Music that publish only an
+    address (e.g. "1361 Woodside Ave") without the venue name.
+    """
+    if not address_str:
+        return None, None
+    table = _load_venue_table()
+    addr_lo = address_str.strip().lower()
+
+    # Check every venue's canonical address and aliases for a match
+    for key, v in table.items():
+        canonical = v["address"].lower()
+        # Match if the input is contained in the canonical address
+        # (e.g. "1361 woodside ave" in "1361 woodside ave, park city, ut 84060")
+        if addr_lo in canonical or canonical.startswith(addr_lo):
+            return v["name"], v["address"]
+        # Also check if the table key (which may include aliases) matches
+        if key in addr_lo or addr_lo in key:
+            return v["name"], v["address"]
+    return None, None
+
+
 if __name__ == "__main__":
     table = _load_venue_table()
     print(f"Loaded {len(table)} venue entries")

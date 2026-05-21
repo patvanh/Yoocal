@@ -16,6 +16,7 @@ on BOTH calendars without duplication.
 from __future__ import annotations
 
 import json
+from venue_lookup import lookup_venue_by_address
 import math
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -98,10 +99,25 @@ def event_key(e: dict) -> tuple:
     return (title, date, start)
 
 
+def _backfill_venue(record: dict) -> dict:
+    """If venue_name is missing or looks like an address, resolve via venues.ts."""
+    current_venue = (record.get("venue_name") or "").strip()
+    looks_like_address = current_venue and current_venue[:1].isdigit()
+    if not current_venue or looks_like_address:
+        for candidate in [current_venue, record.get("location"), record.get("address")]:
+            if not candidate:
+                continue
+            resolved_name, _ = lookup_venue_by_address(candidate)
+            if resolved_name:
+                record["venue_name"] = resolved_name
+                break
+    return record
+
+
 def merge_events(records: list[dict]) -> dict:
     """When multiple records dedupe to the same key, pick the best fields."""
     if len(records) == 1:
-        return records[0]
+        return _backfill_venue(dict(records[0]))
     
     # Sort by source priority (lower = better).
     # Default for unknown sources is now Tier 2 (3), not below Tier 4 — a new
@@ -158,8 +174,8 @@ def merge_events(records: list[dict]) -> dict:
         srcs.add(r.get("source", ""))
         srcs.discard("")
         base["_all_sources"] = sorted(srcs)
-    
-    return base
+
+    return _backfill_venue(base)
 
 
 def main():

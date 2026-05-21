@@ -81,6 +81,14 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
       matchAliases: ["Swaner"],
     },
     {
+      name: "Park City Senior Center",
+      emoji: "🎵",
+      address: "1361 Woodside Ave, Park City, UT 84060",
+      tags: ["community", "music"],
+      desc: "Community center hosting Mountain Town Music free outdoor concerts on Wednesday afternoons throughout the summer. A local favorite for picnic-style live music.",
+      matchAliases: ["1361 Woodside Ave", "1361 Woodside"],
+    },
+    {
       name: "Eccles Center for the Performing Arts",
       emoji: "🎼",
       address: "1750 Kearns Blvd, Park City, UT 84060",
