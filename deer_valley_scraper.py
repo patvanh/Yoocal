@@ -103,32 +103,50 @@ def _parse_event(raw):
         if not title or len(title) < 3:
             return None
 
-        # Date and time from startDateDateTime: "2026-07-17T18:00:00"
-        start_str = raw.get("startDateDateTime") or ""
-        end_str = raw.get("endDateDateTime") or ""
-        all_day = bool(raw.get("allDay"))
+        # Date and time. Prefer ISO datetime fields when present (timed events),
+        # fall back to MM/DD/YYYY startDate fields (all-day events).
+        start_dt_str = raw.get("startDateDateTime") or ""
+        end_dt_str = raw.get("endDateDateTime") or ""
+        start_date_str = raw.get("startDate") or ""  # MM/DD/YYYY
+        end_date_str = raw.get("endDate") or ""
+        all_day = bool(raw.get("allDay")) or not start_dt_str
 
-        if not start_str:
-            return None
-
-        try:
-            start_dt = datetime.fromisoformat(start_str)
-        except Exception:
+        # Parse start
+        start_dt = None
+        if start_dt_str:
+            try:
+                start_dt = datetime.fromisoformat(start_dt_str)
+            except Exception:
+                pass
+        if not start_dt and start_date_str:
+            try:
+                start_dt = datetime.strptime(start_date_str, "%m/%d/%Y")
+            except Exception:
+                return None
+        if not start_dt:
             return None
 
         date_iso = start_dt.strftime("%Y-%m-%d")
         start_time = None if all_day else start_dt.strftime("%-I:%M %p")
 
+        # Parse end
         end_time = None
         end_date_iso = None
-        if end_str:
+        end_dt = None
+        if end_dt_str:
             try:
-                end_dt = datetime.fromisoformat(end_str)
-                end_date_iso = end_dt.strftime("%Y-%m-%d")
-                if not all_day:
-                    end_time = end_dt.strftime("%-I:%M %p")
+                end_dt = datetime.fromisoformat(end_dt_str)
             except Exception:
                 pass
+        if not end_dt and end_date_str:
+            try:
+                end_dt = datetime.strptime(end_date_str, "%m/%d/%Y")
+            except Exception:
+                pass
+        if end_dt:
+            end_date_iso = end_dt.strftime("%Y-%m-%d")
+            if not all_day and end_dt_str:
+                end_time = end_dt.strftime("%-I:%M %p")
 
         # Subtitle = tagline (often more useful than the full description)
         # Description = full HTML body (we strip tags)
