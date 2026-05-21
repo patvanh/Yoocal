@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "generated_at": "2026-05-21T08:36:56.815588-06:00",
+  "generated_at": "2026-05-21T09:03:26.679933-06:00",
   "today": "2026-05-21",
-  "event_count": 2465,
+  "event_count": 2515,
   "events": [
     {
       "title": "\u2018Frida Kahlo: the Making of an Icon\u2019",
@@ -5368,10 +5368,15 @@
       "lat": 40.67,
       "lng": -111.491,
       "categories": [
-        "Running",
-        "Outdoor"
+        "Outdoor",
+        "Running"
       ],
-      "end_time": "9:00 AM"
+      "end_time": "9:00 AM",
+      "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/98978829-308a-47f8-996e-53e570c322c5/Elfsight-Calendar-Size-800X500-px-62-.jpg",
+      "_all_sources": [
+        "Mountain Trails Foundation",
+        "Salt Lake Running Co"
+      ]
     },
     {
       "title": "Park City Trail Series \u2014 10K",
@@ -5590,27 +5595,25 @@
       ]
     },
     {
-      "title": "Iris DeMent Tickets",
+      "title": "An Evening with Iris DeMent",
       "date": "2026-05-21",
-      "description": "Iris DeMent delivers heartfelt folk and country with soulful storytelling. Warm vocals, honest lyrics, and timeless melodies. A beautifully intimate live experience. \\#IrisDeMent \\#FolkMusic \\#LiveMusic \\#CountryFolk",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.facebook.com/events/890966680331845/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22lov_feed%22%2C%22surface%22%3A%22bookmark%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Simply one of the finest singer-songwriters in America. With an inimitable voice, unforgettable melodies rooted in hymns, gospel, folk & old-time country music. Her rich lyrical landscapes & captivating music have earned two Grammy nominations.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/455811?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/l18l5t5rcei13w5neemx.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:48.876113",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Ow-Z0b1UwkqoMwsIBBUZkA.large.png",
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ]
     },
     {
@@ -5896,27 +5899,25 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/7sdV6VbaSU2qcWBE7meDZQ.large.png"
     },
     {
-      "title": "Iris DeMent Tickets",
+      "title": "An Evening with Iris DeMent",
       "date": "2026-05-22",
-      "description": "Iris DeMent delivers heartfelt folk and country with soulful storytelling. Warm vocals, honest lyrics, and timeless melodies. A beautifully intimate live experience. \\#IrisDeMent \\#FolkMusic \\#LiveMusic \\#CountryFolk",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.facebook.com/events/1594090076194999/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22lov_feed%22%2C%22surface%22%3A%22bookmark%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Simply one of the finest singer-songwriters in America. With an inimitable voice, unforgettable melodies rooted in hymns, gospel, folk & old-time country music. Her rich lyrical landscapes & captivating music have earned two Grammy nominations.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/455880",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/l18l5t5rcei13w5neemx.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:49.345653",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Ow-Z0b1UwkqoMwsIBBUZkA.large.png",
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ]
     },
     {
@@ -6259,27 +6260,25 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/X3bLv7PCdUaYxrnP47Ucsw.large.png"
     },
     {
-      "title": "Iris DeMent Tickets",
+      "title": "An Evening with Iris DeMent",
       "date": "2026-05-23",
-      "description": "Iris DeMent delivers heartfelt folk and country with soulful storytelling. Warm vocals, honest lyrics, and timeless melodies. A beautifully intimate live experience. \\#IrisDeMent \\#FolkMusic \\#LiveMusic \\#CountryFolk",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.facebook.com/events/1959421918265117/?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22lov_feed%22%2C%22surface%22%3A%22bookmark%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Simply one of the finest singer-songwriters in America. With an inimitable voice, unforgettable melodies rooted in hymns, gospel, folk & old-time country music. Her rich lyrical landscapes & captivating music have earned two Grammy nominations.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/455881",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/l18l5t5rcei13w5neemx.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:49.824413",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Ow-Z0b1UwkqoMwsIBBUZkA.large.png",
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ]
     },
     {
@@ -7215,23 +7214,24 @@
     {
       "title": "Keller Williams & The Keels",
       "date": "2026-05-28",
+      "start_time": "8:00 PM",
       "description": "Keller built his reputation initially on his engaging live performances, no two of which are ever alike. Joining him on stage is award winning flat picker Larry Keel and his rock solid, in the pocket bass playing wife, Jenny Keel.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1037313014?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/454896?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/8fyahejphc1gt74r43vi.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:50.776117",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/4rhNdhpGpkaqDDP8z_YSWw.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Saemore & Kieran",
@@ -7581,23 +7581,24 @@
     {
       "title": "Keller Williams & The Keels",
       "date": "2026-05-29",
+      "start_time": "8:00 PM",
       "description": "Keller built his reputation initially on his engaging live performances, no two of which are ever alike. Joining him on stage is award winning flat picker Larry Keel and his rock solid, in the pocket bass playing wife, Jenny Keel.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1037312200?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/455477",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/8fyahejphc1gt74r43vi.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:50.776368",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/4rhNdhpGpkaqDDP8z_YSWw.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Aspen Anonda",
@@ -8005,23 +8006,24 @@
     {
       "title": "Keller Williams & The Keels",
       "date": "2026-05-30",
+      "start_time": "8:00 PM",
       "description": "Keller built his reputation initially on his engaging live performances, no two of which are ever alike. Joining him on stage is award winning flat picker Larry Keel and his rock solid, in the pocket bass playing wife, Jenny Keel.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1037311819?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/455478",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/8fyahejphc1gt74r43vi.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:51.258198",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/4rhNdhpGpkaqDDP8z_YSWw.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Swaner Saturday Morning Nature Walks",
@@ -10312,26 +10314,24 @@
     {
       "title": "Dustbowl Revival",
       "date": "2026-06-11",
+      "start_time": "8:00 PM",
       "description": "Dustbowl's ever-evolving collective plays a spicy cocktail of folky-funk & booty-shaking jangly rock n' soul: expertly mixing their New Orleans-tinted brass section with their signature Laurel Canyon harmonies & fearless lyrics.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038397999?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/460489?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/1wfi7mbqvoy7i73qeykr.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
-        "Theater",
-        "Food & Drink"
+        "Food & Drink",
+        "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:54.129960",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/K5BBcdM1oU6g_7455z2mmA.large.png",
-      "facets": [
-        "21+"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ]
     },
     {
@@ -10500,26 +10500,24 @@
     {
       "title": "Dustbowl Revival",
       "date": "2026-06-12",
+      "start_time": "8:00 PM",
       "description": "Dustbowl's ever-evolving collective plays a spicy cocktail of folky-funk & booty-shaking jangly rock n' soul: expertly mixing their New Orleans-tinted brass section with their signature Laurel Canyon harmonies & fearless lyrics.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038398130?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/460490",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/1wfi7mbqvoy7i73qeykr.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
-        "Theater",
-        "Food & Drink"
+        "Food & Drink",
+        "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:54.603136",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/K5BBcdM1oU6g_7455z2mmA.large.png",
-      "facets": [
-        "21+"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ]
     },
     {
@@ -10797,26 +10795,24 @@
     {
       "title": "Dustbowl Revival",
       "date": "2026-06-13",
+      "start_time": "8:00 PM",
       "description": "Dustbowl's ever-evolving collective plays a spicy cocktail of folky-funk & booty-shaking jangly rock n' soul: expertly mixing their New Orleans-tinted brass section with their signature Laurel Canyon harmonies & fearless lyrics.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038399398?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/460491",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/1wfi7mbqvoy7i73qeykr.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
-        "Theater",
-        "Food & Drink"
+        "Food & Drink",
+        "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:54.603390",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/K5BBcdM1oU6g_7455z2mmA.large.png",
-      "facets": [
-        "21+"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ]
     },
     {
@@ -11711,24 +11707,25 @@
     {
       "title": "The Grass Roots",
       "date": "2026-06-18",
+      "start_time": "8:00 PM",
       "description": "The highly successful rock band from the 60's-70's era takes the stage with hits - \"Midnight Confessions\", \"Let's Live For Today\", \"Two Divided by Love\", & many more.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038276073?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459898?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/06itfs8bimrp90b4hwsw.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:56.019106",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/lDwNwvcfUU2t6GKSBO03Rg.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Preschool Storytime",
@@ -11856,24 +11853,25 @@
     {
       "title": "The Grass Roots",
       "date": "2026-06-19",
+      "start_time": "8:00 PM",
       "description": "The highly successful rock band from the 60's-70's era takes the stage with hits - \"Midnight Confessions\", \"Let's Live For Today\", \"Two Divided by Love\", & many more.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038279182?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459899",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/06itfs8bimrp90b4hwsw.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:56.019285",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/lDwNwvcfUU2t6GKSBO03Rg.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Nate Robinson Music",
@@ -12060,24 +12058,25 @@
     {
       "title": "The Grass Roots",
       "date": "2026-06-20",
+      "start_time": "8:00 PM",
       "description": "The highly successful rock band from the 60's-70's era takes the stage with hits - \"Midnight Confessions\", \"Let's Live For Today\", \"Two Divided by Love\", & many more.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038278424?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459900",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/06itfs8bimrp90b4hwsw.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:56.497676",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/lDwNwvcfUU2t6GKSBO03Rg.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Nate Robinson Music",
@@ -14421,24 +14420,25 @@
     {
       "title": "Electric Avenue: The 80's MTV Experience",
       "date": "2026-07-02",
-      "description": "We don\u2019t get to repeat even one minute of our time here, but what if you could experience all the youthful energy and sonic celebration that was 1980s New Wave & Radio Pop?  Every sound. Every nuance. Every time.  That\u2019s Electric Avenue. \n\nThe Best 80s music hits performed the way you remember them.      \n\nwww.ElectricAvenueMusic.com\n\nwww.Facebook.com/ElectricAvenue\n\nwww.Instagram.com/ElectricAve80s\n\nWhat started out as a one-off party gig has turned into a decade-long run, playing 100\\+ live concerts each year across the US and abroad.\n\nAn Electric Avenue show is a high energy space that r...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/107833902?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "What if you could experience all of the youthful energy & sonic celebration that was 1980s New Wave & Radio Pop? Every sound. Every nuance. Every feeling. That's Electric Avenue.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/457178?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/1gctoztxj2sq1zxdzuau.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
-        "Theater",
-        "Festival"
+        "Festival",
+        "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:59.406881",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/u4Yh_oApTEeuc6FCSZxYiQ.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Girls, On Film: An 80s Themed Ladies Night",
@@ -14529,24 +14529,25 @@
     {
       "title": "Electric Avenue: The 80's MTV Experience",
       "date": "2026-07-03",
-      "description": "We don\u2019t get to repeat even one minute of our time here, but what if you could experience all the youthful energy and sonic celebration that was 1980s New Wave & Radio Pop?  Every sound. Every nuance. Every time.  That\u2019s Electric Avenue. \n\nThe Best 80s music hits performed the way you remember them.      \n\nwww.ElectricAvenueMusic.com\n\nwww.Facebook.com/ElectricAvenue\n\nwww.Instagram.com/ElectricAve80s\n\nWhat started out as a one-off party gig has turned into a decade-long run, playing 100\\+ live concerts each year across the US and abroad.\n\nAn Electric Avenue show is a high energy space that r...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/107833914?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "What if you could experience all of the youthful energy & sonic celebration that was 1980s New Wave & Radio Pop? Every sound. Every nuance. Every feeling. That's Electric Avenue.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/457179",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/1gctoztxj2sq1zxdzuau.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
-        "Theater",
-        "Festival"
+        "Festival",
+        "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:05:59.880283",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/u4Yh_oApTEeuc6FCSZxYiQ.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Nate Robinson Music",
@@ -15863,22 +15864,23 @@
     {
       "title": "Frozen - The Live Musical",
       "date": "2026-07-12",
-      "description": "The event is held on July 12, 2026 at Egyptian Theatre in Park City, UT.The cost is 68.00 - 94.30",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.parkrecord.com/calendar/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "5:00 PM",
+      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456263",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Music"
       ],
-      "start_time": "5:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:01.782481",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/15aYPIVnf0y4VmDVByBadA.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Cat Mountain at  Billy Blanco's Concert Series",
@@ -16203,23 +16205,24 @@
     {
       "title": "Russell Thompkins Jr. and The New Stylistics",
       "date": "2026-07-15",
+      "start_time": "8:00 PM",
       "description": "Russell Thompkins, Jr.\u00a0is\u00a0best known as the original lead singer of the legendary R&B vocal group\u00a0out of Philadelphia, The Stylistics. The Stylistics had 12 straight Top 10 Billboard R&B singles, & 5 gold singles from 1971 through 1974.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1037492692?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456256?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/g9ho431hub8i6wkci9cm.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:02.258227",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/lOfbUMXHe0CqJcdsV1j3EA.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Twilight Ride Series",
@@ -16326,23 +16329,24 @@
     {
       "title": "Russell Thompkins Jr. and The New Stylistics",
       "date": "2026-07-16",
+      "start_time": "8:00 PM",
       "description": "Russell Thompkins, Jr.\u00a0is\u00a0best known as the original lead singer of the legendary R&B vocal group\u00a0out of Philadelphia, The Stylistics. The Stylistics had 12 straight Top 10 Billboard R&B singles, & 5 gold singles from 1971 through 1974.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1037494003?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456257",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/g9ho431hub8i6wkci9cm.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:02.258339",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/lOfbUMXHe0CqJcdsV1j3EA.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Nate Robinson Music",
@@ -16367,23 +16371,24 @@
     {
       "title": "Russell Thompkins Jr. and The New Stylistics",
       "date": "2026-07-17",
+      "start_time": "8:00 PM",
       "description": "Russell Thompkins, Jr.\u00a0is\u00a0best known as the original lead singer of the legendary R&B vocal group\u00a0out of Philadelphia, The Stylistics. The Stylistics had 12 straight Top 10 Billboard R&B singles, & 5 gold singles from 1971 through 1974.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1037492438?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456258",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/g9ho431hub8i6wkci9cm.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:02.258419",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/lOfbUMXHe0CqJcdsV1j3EA.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Friday Run Club: 6am & 7am!",
@@ -16597,23 +16602,24 @@
     {
       "title": "Russell Thompkins Jr. and The New Stylistics",
       "date": "2026-07-18",
+      "start_time": "8:00 PM",
       "description": "Russell Thompkins, Jr.\u00a0is\u00a0best known as the original lead singer of the legendary R&B vocal group\u00a0out of Philadelphia, The Stylistics. The Stylistics had 12 straight Top 10 Billboard R&B singles, & 5 gold singles from 1971 through 1974.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1037493776?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456259",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/g9ho431hub8i6wkci9cm.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:02.731560",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/lOfbUMXHe0CqJcdsV1j3EA.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Gorgeous Gourds",
@@ -17153,24 +17159,28 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/MMpu1AXvb0Ggo6hTpcmwtQ.large.jpg"
     },
     {
-      "title": "Mozart's \"Jupiter\"",
+      "title": "Mozart\u2019s \u201cJupiter\u201d",
       "date": "2026-07-22",
-      "description": "Utah Symphony Music Director Designate Markus Poschner leads an all-Mozart program starring Concertmaster Madeline Adkins in Mozart's second violin concerto. Written when he was just 18, the concerto showcases effortless virtuosity with the elegance and clarity that would continue to define his voice throughout his career. Framing the concerto are Mozart's two final symphonies\u2014written just weeks apart\u2014revealing the fascinating journey of the composer&\\#03's musical maturation and his unmistakable brilliance.One of Mozart's most recognizable works, his Symphony No. 40 uses a minor key\u2014a rare...",
-      "location": "St. Mary's Church, Park City, UT",
-      "link": "https://deervalleymusicfestival.org/event/id/39243/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.682285,
-      "lng": -111.536979,
+      "description": "Utah Symphony Music Director Designate Markus Poschner leads an all-Mozart program starring Concertmaster Madeline Adkins in Mozart\u2019s second violin concerto. Written when he was just 18, the concerto showcases effortless virtuosity with the elegance and clarity that would continue to define his voice throughout his career. Framing the concerto are Mozart\u2019s two final symphonies\u2014written just weeks apart\u2014revealing the fascinating journey of the composer's musical maturation and his unmistakable brilliance. One of Mozart\u2019s most recognizable works, his Symphony No. 40 uses a minor key\u2014a rare cho...",
+      "location": "St. Mary's Catholic Church, 1505 White Pine Canyon Rd, Park City, UT 84060, USA",
+      "link": "https://deervalleymusicfestival.org/schedule/",
+      "source": "Deer Valley Music Festival",
+      "source_url": "https://deervalleymusicfestival.org/schedule/",
+      "lat": 40.6889,
+      "lng": -111.5197,
       "categories": [
-        "Arts"
+        "Arts",
+        "Concert",
+        "Music"
       ],
       "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:03.685212",
-      "venue_name": "St. Mary's Church",
+      "image_url": "https://usuo.org/app/uploads/2026/03/STMARY1-Mozarts-_Jupiter_-Symphony-2.jpg",
       "address": "1505 White Pine Canyon Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/k3yMfsSo90SOAUWlk5IhXw.large.png"
+      "venue_name": "St. Mary's Church",
+      "_all_sources": [
+        "Deer Valley Music Festival",
+        "The Park Record"
+      ]
     },
     {
       "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
@@ -17477,25 +17487,24 @@
     {
       "title": "80s Weekend with Taylor Dayne and Expos\u00e9",
       "date": "2026-07-25",
-      "description": "Taylor Dayne is an American pop icon. With a career spanning three decades, Taylor\u2019s groundbreaking debut single \u201cTell It To My Heart\u201d turned her into an overnight international star in 1987. She followed the smash hit with seventeen Top 20 singles over the course of her three-decade career, including Number Ones \u201cLove Will Lead You Back\u201d \u201cProve Your Love\u201d and \u201cI\u2019ll always\u200b Love You.\u201d Taylor has sold over 75 million albums and singles worldwide, earned three GRAMMY nominations, an American Music Award, multiple New York Music Awards, received New York Music Hall of Fame honors and ranked as...",
-      "location": "Canyons Village at Park City, Park City, UT",
-      "link": "https://www.bandsintown.com/e/108269749?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6840695441,
-      "lng": -111.5537575632,
+      "start_time": "7:00 PM",
+      "description": "Taylor Dayne\nTaylor Dayne is an American pop icon. With a career spanning three decades, Taylor\u2019s Groundbreaking debut single \u201cTell It To My Heart\u201d turned her into an overnight international star in 1987. She followed the smash hit with seventeen Top 20 singles over the course of",
+      "location": "4000 Canyons Resort Drive, Park City, UT",
+      "link": "https://www.showpass.com/80s-weekend-with-taylor-dayne-and-expose/",
+      "source": "Park City Institute",
+      "source_url": "https://www.parkcityinstitute.org/bsbn",
+      "lat": 40.6707,
+      "lng": -111.5559,
       "categories": [
         "Community",
         "Education",
         "Music"
       ],
-      "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "scraped_at": "2026-05-21T14:06:04.157835",
-      "venue_name": "Canyons Village at Park City",
+      "price_range": "$10-$149",
       "address": "4000 Canyons Resort Drive",
+      "venue_name": "Canyons Village at Park City",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/ssQAceYRAU-og6YTsoP-cQ.large.png",
-      "_resolved_from": "Taylor Dayne",
       "_all_sources": [
         "Park City Institute",
         "The Park Record"
@@ -18822,24 +18831,25 @@
     {
       "title": "The Smithereens",
       "date": "2026-08-06",
+      "start_time": "8:00 PM",
       "description": "'80s rock band known for their distinctive sound rooted in the melodic punch of the British Invasion, fused with the raw energy of American garage rock. With modern rock classics \"Blood and Roses\", \"Behind the Wall of Sleep\", \"A Girl Like You\", & more.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038766408?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461158?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/lbdxlb12hgm4kag6p1wj.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:06.558893",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/PyyrnXU7tE6_34dg_vCBiw.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "The Secrets of BBQ with Chef Ryan Arensdorf",
@@ -18926,24 +18936,25 @@
     {
       "title": "The Smithereens",
       "date": "2026-08-07",
+      "start_time": "8:00 PM",
       "description": "'80s rock band known for their distinctive sound rooted in the melodic punch of the British Invasion, fused with the raw energy of American garage rock. With modern rock classics \"Blood and Roses\", \"Behind the Wall of Sleep\", \"A Girl Like You\", & more.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038767347?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461159",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/lbdxlb12hgm4kag6p1wj.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:06.559047",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/PyyrnXU7tE6_34dg_vCBiw.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "2026 Deer Valley Music Festival: Chicago the Musical In Concert",
@@ -19157,24 +19168,25 @@
     {
       "title": "The Smithereens",
       "date": "2026-08-08",
+      "start_time": "8:00 PM",
       "description": "'80s rock band known for their distinctive sound rooted in the melodic punch of the British Invasion, fused with the raw energy of American garage rock. With modern rock classics \"Blood and Roses\", \"Behind the Wall of Sleep\", \"A Girl Like You\", & more.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038765825?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461160",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/lbdxlb12hgm4kag6p1wj.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:07.043538",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/PyyrnXU7tE6_34dg_vCBiw.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "2026 Deer Valley Music Festival: Idina Menzel",
@@ -19537,25 +19549,28 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
     },
     {
-      "title": "Beethoven's Symphony No. 7",
+      "title": "Beethoven\u2019s Symphony No. 7",
       "date": "2026-08-12",
-      "description": "Promising a night of lyrical beauty and orchestral drama, conductor Louis Lohraseb shapes a program that follows an arc of adoration to heartbreak in the first half. The season finale at St. Mary's Catholic Church opens with Wagner's tender Siegfried Idyll, a deeply personal expression of love written as a birthday gift for his wife. Then the spotlight turns to Erica Petrocelli in two dramatic works that showcase the brilliance and expressive power of the soprano voice: Mozart's virtuosic \u201cCome scoglio\u201d from Cos\u00ec fan tutte, a declaration of unwavering fidelity, and Mendelsohn&\\#03's \u201cInfeli...",
-      "location": "St. Mary's Church, Park City, UT",
-      "link": "https://deervalleymusicfestival.org/event/id/39246/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.682285,
-      "lng": -111.536979,
+      "description": "Promising a night of lyrical beauty and orchestral drama, conductor Louis Lohraseb shapes a program that follows an arc of adoration to heartbreak in the first half. The season finale at St. Mary\u2019s Catholic Church opens with Wagner\u2019s tender Siegfried Idyll, a deeply personal expression of love written as a birthday gift for his wife. Then the spotlight turns to Erica Petrocelli in two dramatic works that showcase the brilliance and expressive power of the soprano voice: Mozart\u2019s virtuosic \u201cCome scoglio\u201d from Cos\u00ec fan tutte, a declaration of unwavering fidelity, and Mendelsohn's \u201cInfelice,\u201d ...",
+      "location": "St. Mary's Catholic Church, 1505 White Pine Canyon Rd, Park City, UT 84060, USA",
+      "link": "https://deervalleymusicfestival.org/schedule/",
+      "source": "Deer Valley Music Festival",
+      "source_url": "https://deervalleymusicfestival.org/schedule/",
+      "lat": 40.6889,
+      "lng": -111.5197,
       "categories": [
         "Community",
+        "Concert",
         "Music"
       ],
       "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:07.520840",
-      "venue_name": "St. Mary's Church",
+      "image_url": "https://usuo.org/app/uploads/2026/03/STMARY4-Beethovens-Symphony-No.-7.jpg",
       "address": "1505 White Pine Canyon Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UkmmZ_hG-UK5y76FaUI7Fg.large.png"
+      "venue_name": "St. Mary's Church",
+      "_all_sources": [
+        "Deer Valley Music Festival",
+        "The Park Record"
+      ]
     },
     {
       "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
@@ -20162,27 +20177,25 @@
     {
       "title": "Sixpence None The Richer",
       "date": "2026-08-20",
-      "description": "Alternative rock band known for their distinctive blend of indie-rock & introspective songwriting. Best known for their hits \"Kiss Me\", \"There She Goes\", \"Breathe Your Name\", and \"Don't Dream It's Over\".\n\n \n\nEvent Showtimes:\n\nThu August 20, 2026 / 8:00PM\n\nFri August 21, 2026 / 8:00PM\n\nSat August 22, 2026 / 8:00PM\n\nAll Ages\n\nThe Egyptian Theatre, Celebrating 100 Years as the Jewel of Main Street!\n\nThe Egyptian Theatre has no third-party ticket sales affiliates. We cannot guarantee third-party tickets will be valid.\n\nThe Egyptian has no taxes or services fees on any ticket.\n\n \n\nIf public seat...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/107982809?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Alternative rock band known for their distinctive blend of indie-rock & introspective songwriting. Best known for their hits \"Kiss Me\", \"There She Goes\", \"Breathe Your Name\", and \"Don't Dream It's Over\".",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458282?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/m4pgk4q1yvmc4irah242.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
+        "Family",
         "Music",
-        "Theater",
-        "Family"
+        "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:08.958317",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/udccNuuO5kORVwRR85xNUQ.large.png",
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ]
     },
     {
@@ -20254,27 +20267,25 @@
     {
       "title": "Sixpence None The Richer",
       "date": "2026-08-21",
-      "description": "Alternative rock band known for their distinctive blend of indie-rock & introspective songwriting. Best known for their hits \"Kiss Me\", \"There She Goes\", \"Breathe Your Name\", and \"Don't Dream It's Over\".\n\n \n\nEvent Showtimes:\n\nThu August 20, 2026 / 8:00PM\n\nFri August 21, 2026 / 8:00PM\n\nSat August 22, 2026 / 8:00PM\n\nAll Ages\n\nThe Egyptian Theatre, Celebrating 100 Years as the Jewel of Main Street!\n\nThe Egyptian Theatre has no third-party ticket sales affiliates. We cannot guarantee third-party tickets will be valid.\n\nThe Egyptian has no taxes or services fees on any ticket.\n\n \n\nIf public seat...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038133332?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Alternative rock band known for their distinctive blend of indie-rock & introspective songwriting. Best known for their hits \"Kiss Me\", \"There She Goes\", \"Breathe Your Name\", and \"Don't Dream It's Over\".",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458417",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/m4pgk4q1yvmc4irah242.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
+        "Family",
         "Music",
-        "Theater",
-        "Family"
+        "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:08.958433",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/udccNuuO5kORVwRR85xNUQ.large.png",
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ]
     },
     {
@@ -20366,27 +20377,25 @@
     {
       "title": "Sixpence None The Richer",
       "date": "2026-08-22",
-      "description": "Alternative rock band known for their distinctive blend of indie-rock & introspective songwriting. Best known for their hits \"Kiss Me\", \"There She Goes\", \"Breathe Your Name\", and \"Don't Dream It's Over\".\n\n \n\nEvent Showtimes:\n\nThu August 20, 2026 / 8:00PM\n\nFri August 21, 2026 / 8:00PM\n\nSat August 22, 2026 / 8:00PM\n\nAll Ages\n\nThe Egyptian Theatre, Celebrating 100 Years as the Jewel of Main Street!\n\nThe Egyptian Theatre has no third-party ticket sales affiliates. We cannot guarantee third-party tickets will be valid.\n\nThe Egyptian has no taxes or services fees on any ticket.\n\n \n\nIf public seat...",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1038133801?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "start_time": "8:00 PM",
+      "description": "Alternative rock band known for their distinctive blend of indie-rock & introspective songwriting. Best known for their hits \"Kiss Me\", \"There She Goes\", \"Breathe Your Name\", and \"Don't Dream It's Over\".",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458418",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/m4pgk4q1yvmc4irah242.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
+        "Family",
         "Music",
-        "Theater",
-        "Family"
+        "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:08.958515",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/udccNuuO5kORVwRR85xNUQ.large.png",
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
       ]
     },
     {
@@ -20674,24 +20683,25 @@
     {
       "title": "Pure Prairie League",
       "date": "2026-08-28",
+      "start_time": "8:00 PM",
       "description": "Returning to our stage - 1960s' rock band with a heavy dose of country and high-flying harmony. Featuring founding member/innovative pedal steel guitarist John David Call.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1037492212?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456253?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/sqo3izl43mvfuz0gvowh.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:09.914136",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/NVVjKEPRxkiYKi12YdyiWw.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Barrage \u00e0 Trois at  Miner's Park Concert Series",
@@ -20782,24 +20792,25 @@
     {
       "title": "Pure Prairie League",
       "date": "2026-08-29",
+      "start_time": "8:00 PM",
       "description": "Returning to our stage - 1960s' rock band with a heavy dose of country and high-flying harmony. Featuring founding member/innovative pedal steel guitarist John David Call.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.bandsintown.com/e/1037492048?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456254",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/sqo3izl43mvfuz0gvowh.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:09.914232",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/NVVjKEPRxkiYKi12YdyiWw.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Wine and Cheese Pairing: Gold Creek Farms & Bon Vivant Imports",
@@ -20824,24 +20835,25 @@
     {
       "title": "Pure Prairie League",
       "date": "2026-08-30",
+      "start_time": "5:00 PM",
       "description": "Returning to our stage - 1960s' rock band with a heavy dose of country and high-flying harmony. Featuring founding member/innovative pedal steel guitarist John David Call.",
-      "location": "Egyptian Theatre, Park City, UT",
-      "link": "https://www.parkrecord.com/calendar/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6425590515,
-      "lng": -111.4948883057,
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456255",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/sqo3izl43mvfuz0gvowh.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
         "Music",
         "Theater"
       ],
-      "start_time": "5:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-21T14:06:10.393999",
-      "venue_name": "Egyptian Theatre",
-      "address": "328 Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/NVVjKEPRxkiYKi12YdyiWw.large.png"
+      "_all_sources": [
+        "Egyptian Theatre",
+        "The Park Record"
+      ]
     },
     {
       "title": "Cooking with Precision: A Sous Vide Workshop",
@@ -31664,40 +31676,6 @@
       "image_url": "https://usuo.org/app/uploads/2026/03/DVMF1-Beethovens-Symphony-No.-9.jpg"
     },
     {
-      "title": "Mozart\u2019s \u201cJupiter\u201d",
-      "date": "2026-07-22",
-      "description": "Utah Symphony Music Director Designate Markus Poschner leads an all-Mozart program starring Concertmaster Madeline Adkins in Mozart\u2019s second violin concerto. Written when he was just 18, the concerto showcases effortless virtuosity with the elegance and clarity that would continue to define his voice throughout his career. Framing the concerto are Mozart\u2019s two final symphonies\u2014written just weeks apart\u2014revealing the fascinating journey of the composer's musical maturation and his unmistakable brilliance. One of Mozart\u2019s most recognizable works, his Symphony No. 40 uses a minor key\u2014a rare cho...",
-      "location": "St. Mary's Catholic Church, 1505 White Pine Canyon Rd, Park City, UT 84060, USA",
-      "link": "https://deervalleymusicfestival.org/schedule/",
-      "source": "Deer Valley Music Festival",
-      "source_url": "https://deervalleymusicfestival.org/schedule/",
-      "lat": 40.6889,
-      "lng": -111.5197,
-      "categories": [
-        "Music",
-        "Concert"
-      ],
-      "start_time": "8:00 PM",
-      "image_url": "https://usuo.org/app/uploads/2026/03/STMARY1-Mozarts-_Jupiter_-Symphony-2.jpg"
-    },
-    {
-      "title": "Beethoven\u2019s Symphony No. 7",
-      "date": "2026-08-12",
-      "description": "Promising a night of lyrical beauty and orchestral drama, conductor Louis Lohraseb shapes a program that follows an arc of adoration to heartbreak in the first half. The season finale at St. Mary\u2019s Catholic Church opens with Wagner\u2019s tender Siegfried Idyll, a deeply personal expression of love written as a birthday gift for his wife. Then the spotlight turns to Erica Petrocelli in two dramatic works that showcase the brilliance and expressive power of the soprano voice: Mozart\u2019s virtuosic \u201cCome scoglio\u201d from Cos\u00ec fan tutte, a declaration of unwavering fidelity, and Mendelsohn's \u201cInfelice,\u201d ...",
-      "location": "St. Mary's Catholic Church, 1505 White Pine Canyon Rd, Park City, UT 84060, USA",
-      "link": "https://deervalleymusicfestival.org/schedule/",
-      "source": "Deer Valley Music Festival",
-      "source_url": "https://deervalleymusicfestival.org/schedule/",
-      "lat": 40.6889,
-      "lng": -111.5197,
-      "categories": [
-        "Music",
-        "Concert"
-      ],
-      "start_time": "8:00 PM",
-      "image_url": "https://usuo.org/app/uploads/2026/03/STMARY4-Beethovens-Symphony-No.-7.jpg"
-    },
-    {
       "title": "American Music in Provo: Presented by The A-Frame Concert Series \u2014 Park City Opera",
       "date": "2026-07-07",
       "description": "American Music in Provo: Presented by The A-Frame Concert Series \u2014 Park City Opera",
@@ -31929,21 +31907,6 @@
         "Running"
       ],
       "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/3a77fce5-f318-4d4a-9215-a1169a9224cc/Screenshot-2025-11-26-at-6-15-50-PM-Finn-Melanson.png"
-    },
-    {
-      "title": "Park City Trail Series 5K",
-      "date": "2026-06-06",
-      "description": "Fill your summer calendar with trail races! Park City Trail Series is a 3-race series that runs from June \u2013 August. It starts with a 5K and works up to a half marathon. The courses are forgiving enough for new trail runners but bring the excitement that seasoned trail runners love. You can mix and match which races you would like to sign up for or get all three at an amazing price! Plus, you can 10% per person by signing up 4 or more people for the series. So, get your family, friends, neighbors, or whoever you need to recruit, and get signed up today! THERE ARE NO DEFERRALS OR REFUNDS.",
-      "location": "Park City, UT",
-      "link": "https://pctrailseries.com",
-      "source": "Salt Lake Running Co",
-      "source_url": "https://slrc.com/event-calendar/",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Running"
-      ],
-      "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/98978829-308a-47f8-996e-53e570c322c5/Elfsight-Calendar-Size-800X500-px-62-.jpg"
     },
     {
       "title": "RVR 1/2 Marathon & 7K Trail Run",
@@ -35898,26 +35861,30 @@
       "end_time": "10:00 PM"
     },
     {
-      "title": "Sneak Peek of \"From Sea to Shining Sea: Wildlife Above & Below the Waves\"",
+      "title": "Sneak Peek of From Sea to Shining Sea: Wildlife Above & Below the Waves",
       "date": "2026-05-22",
-      "description": "FREE to Museum members and included in the cost of general admission. This is an exciting opportunity to preview a new exhibit prior to its public...",
-      "location": "National Museum of Wildlife Art, 2820 Rungius Road, Jackson, WY, 83001",
-      "link": "https://www.jacksonholechamber.com/event/sneak-peek-of-from-sea-to-shining-sea%3a-wildlife-above-%26-below-the-waves/3430/",
-      "source": "Jackson Hole Chamber of Commerce",
-      "source_url": "https://www.jacksonholechamber.com/event/sneak-peek-of-from-sea-to-shining-sea%3a-wildlife-above-%26-below-the-waves/3430/",
-      "lat": 43.4799,
-      "lng": -110.7624,
+      "description": "FREE to Museum members and included in the cost of general admission. This is an exciting opportunity to preview a new exhibit prior to its...",
+      "location": "Jackson, WY",
+      "link": "https://www.wildlifeart.org/events/sneak-peek-of-from-sea-to-shining-sea-wildlife-above-below-the-waves/",
+      "source": "National Museum of Wildlife Art",
+      "source_url": "https://www.wildlifeart.org/events/",
+      "lat": 43.4925,
+      "lng": -110.7438,
       "categories": [
-        "Community",
-        "Arts"
+        "Arts",
+        "Community"
       ],
-      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Foster_Sneak_Peak-7_C77AC422-ED43-48F6-93A8365C253BD101_195fbbd9-fbf4-4889-818987f5da3c12ac.jpg",
-      "address": "2820 Rungius Road, Jackson, WY, 83001",
-      "venue_name": "National Museum of Wildlife Art",
       "start_time": "11:30 AM",
       "end_time": "12:00 PM",
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/04/1991052-Bateman-Bright-Day-Atlantic-Puffins-scaled.jpg",
       "facets": [
         "Paid"
+      ],
+      "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "venue_name": "National Museum of Wildlife Art",
+      "_all_sources": [
+        "Jackson Hole Chamber of Commerce",
+        "National Museum of Wildlife Art"
       ]
     },
     {
@@ -35955,26 +35922,6 @@
       "start_time": "10:30 AM",
       "end_time": "11:00 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2021/12/Laurie-Bay_FFF_2019.jpg"
-    },
-    {
-      "title": "Sneak Peek of From Sea to Shining Sea: Wildlife Above & Below the Waves",
-      "date": "2026-05-22",
-      "description": "FREE to Museum members and included in the cost of general admission. This is an exciting opportunity to preview a new exhibit prior to its...",
-      "location": "Jackson, WY",
-      "link": "https://www.wildlifeart.org/events/sneak-peek-of-from-sea-to-shining-sea-wildlife-above-below-the-waves/",
-      "source": "National Museum of Wildlife Art",
-      "source_url": "https://www.wildlifeart.org/events/",
-      "lat": 43.4925,
-      "lng": -110.7438,
-      "categories": [
-        "Arts"
-      ],
-      "start_time": "11:30 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/04/1991052-Bateman-Bright-Day-Atlantic-Puffins-scaled.jpg",
-      "facets": [
-        "Paid"
-      ]
     },
     {
       "title": "Jackson Hole Rodeo",
@@ -36532,26 +36479,30 @@
       "end_time": "5:00 PM"
     },
     {
-      "title": "Sneak Peek of \"Art in Motion: Kinetic Sculpture with Ivan Iler\"",
+      "title": "Sneak Peek of Art in Motion: Kinetic Sculpture with Ivan Iler",
       "date": "2026-05-29",
-      "description": "FREE to Museum members and included in the cost of general admission. This is an exciting opportunity to preview a new exhibit prior to its public...",
-      "location": "National Museum of Wildlife Art, 2820 Rungius Road, Jackson, WY, 83001",
-      "link": "https://www.jacksonholechamber.com/event/sneak-peek-of-art-in-motion%3a-kinetic-sculpture-with-ivan-iler/3432/",
-      "source": "Jackson Hole Chamber of Commerce",
-      "source_url": "https://www.jacksonholechamber.com/event/sneak-peek-of-art-in-motion%3a-kinetic-sculpture-with-ivan-iler/3432/",
-      "lat": 43.4799,
-      "lng": -110.7624,
+      "description": "FREE to Museum members and included in the cost of general admission. Join us for a sneak peek of Art in Motion: Kinetic Sculpture with...",
+      "location": "Jackson, WY",
+      "link": "https://www.wildlifeart.org/events/sneak-peek-of-art-in-motion-kinetic-sculpture-with-ivan-iler/",
+      "source": "National Museum of Wildlife Art",
+      "source_url": "https://www.wildlifeart.org/events/",
+      "lat": 43.4925,
+      "lng": -110.7438,
       "categories": [
-        "Community",
-        "Arts"
+        "Arts",
+        "Community"
       ],
-      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/whale1-scaled_7769129E-DF7C-41FC-857D3D71CF153D6F_a9901eff-5cec-4203-8eda480b14b5d1d1.jpg",
-      "address": "2820 Rungius Road, Jackson, WY, 83001",
-      "venue_name": "National Museum of Wildlife Art",
       "start_time": "11:30 AM",
       "end_time": "12:00 PM",
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/01/elephant2-scaled.jpg",
       "facets": [
         "Paid"
+      ],
+      "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "venue_name": "National Museum of Wildlife Art",
+      "_all_sources": [
+        "Jackson Hole Chamber of Commerce",
+        "National Museum of Wildlife Art"
       ]
     },
     {
@@ -36590,26 +36541,6 @@
       "start_time": "10:30 AM",
       "end_time": "11:00 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2021/12/Laurie-Bay_FFF_2019.jpg"
-    },
-    {
-      "title": "Sneak Peek of Art in Motion: Kinetic Sculpture with Ivan Iler",
-      "date": "2026-05-29",
-      "description": "FREE to Museum members and included in the cost of general admission. Join us for a sneak peek of Art in Motion: Kinetic Sculpture with...",
-      "location": "Jackson, WY",
-      "link": "https://www.wildlifeart.org/events/sneak-peek-of-art-in-motion-kinetic-sculpture-with-ivan-iler/",
-      "source": "National Museum of Wildlife Art",
-      "source_url": "https://www.wildlifeart.org/events/",
-      "lat": 43.4925,
-      "lng": -110.7438,
-      "categories": [
-        "Arts"
-      ],
-      "start_time": "11:30 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/01/elephant2-scaled.jpg",
-      "facets": [
-        "Paid"
-      ]
     },
     {
       "title": "14th Annual Touch-A-Truck",
@@ -50177,6 +50108,776 @@
         "Sports"
       ],
       "_repaired_from": "multi_day_split (was 2026-08-28 to 2026-08-30)"
+    },
+    {
+      "title": "A.J. Croce Presents CROCE PLAYS CROCE",
+      "date": "2026-09-09",
+      "start_time": "8:00 PM",
+      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458281?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "A.J. Croce Presents CROCE PLAYS CROCE",
+      "date": "2026-09-10",
+      "start_time": "8:00 PM",
+      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458386",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "A.J. Croce Presents CROCE PLAYS CROCE",
+      "date": "2026-09-11",
+      "start_time": "8:00 PM",
+      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458387",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "A.J. Croce Presents CROCE PLAYS CROCE",
+      "date": "2026-09-12",
+      "start_time": "8:00 PM",
+      "description": "Acclaimed singer songwriter, piano virtuoso & multi-instrumentalist returns. Through stories, humor, & remarkable musicianship, A.J. connects audiences to both his father's iconic body of work & his own evolution as one of today's most respected artists.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/458388",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Chris Isaak",
+      "date": "2026-10-09",
+      "start_time": "8:00 PM",
+      "description": "Platinum-selling & GRAMMY-nominated singer/songwriter & actor. Part of our 100th Anniversary year - Featuring Big Acts in our Intimate, Historic Theatre! Oh, what a Wicked Game!",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462411?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/jwfcmkq8yagbyy9vuzac.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Chris Isaak",
+      "date": "2026-10-10",
+      "start_time": "8:00 PM",
+      "description": "Platinum-selling & GRAMMY-nominated singer/songwriter & actor. Part of our 100th Anniversary year - Featuring Big Acts in our Intimate, Historic Theatre! Oh, what a Wicked Game!",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462414",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/jwfcmkq8yagbyy9vuzac.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Chris Isaak",
+      "date": "2026-10-11",
+      "start_time": "5:00 PM",
+      "description": "Platinum-selling & GRAMMY-nominated singer/songwriter & actor. Part of our 100th Anniversary year - Featuring Big Acts in our Intimate, Historic Theatre! Oh, what a Wicked Game!",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462415",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/jwfcmkq8yagbyy9vuzac.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Fred Tackett & Scott Sharrard (of Little Feat)",
+      "date": "2026-07-30",
+      "start_time": "8:00 PM",
+      "description": "These talented musicians and songwriters are stepping out from the electric swamp boogie of Little Feat and hitting the road with a couple of acoustic guitars, along with some great songs and stories.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/460647?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/kqufgcmqm0e1i7bbczhg.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Fred Tackett & Scott Sharrard (of Little Feat)",
+      "date": "2026-07-31",
+      "start_time": "8:00 PM",
+      "description": "These talented musicians and songwriters are stepping out from the electric swamp boogie of Little Feat and hitting the road with a couple of acoustic guitars, along with some great songs and stories.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461161",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/kqufgcmqm0e1i7bbczhg.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Fred Tackett & Scott Sharrard (of Little Feat)",
+      "date": "2026-08-01",
+      "start_time": "8:00 PM",
+      "description": "These talented musicians and songwriters are stepping out from the electric swamp boogie of Little Feat and hitting the road with a couple of acoustic guitars, along with some great songs and stories.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461163",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/kqufgcmqm0e1i7bbczhg.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Fred Tackett & Scott Sharrard (of Little Feat)",
+      "date": "2026-08-02",
+      "start_time": "5:00 PM",
+      "description": "These talented musicians and songwriters are stepping out from the electric swamp boogie of Little Feat and hitting the road with a couple of acoustic guitars, along with some great songs and stories.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461162",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/kqufgcmqm0e1i7bbczhg.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Frozen - The Live Musical",
+      "date": "2026-07-08",
+      "start_time": "7:00 PM",
+      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456260?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Frozen - The Live Musical",
+      "date": "2026-07-09",
+      "start_time": "7:00 PM",
+      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456261",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Frozen - The Live Musical",
+      "date": "2026-07-10",
+      "start_time": "7:00 PM",
+      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456262",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Frozen - The Live Musical",
+      "date": "2026-07-11",
+      "start_time": "3:00 PM",
+      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456264",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Frozen - The Live Musical",
+      "date": "2026-07-11",
+      "start_time": "7:00 PM",
+      "description": "The Broadway Musical brings Disney's beloved story to the stage, following sisters Elsa and Anna as they discover the power of love and family amid a kingdom trapped in eternal winter.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456265",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Little Shop of Horrors",
+      "date": "2026-10-28",
+      "start_time": "8:00 PM",
+      "description": "Deviously delicious Broadway & Hollywood sci-fi smash musical. A darkly comedic musical about Seymour, a timid flower shop clerk, who discovers a mysterious plant that brings fame & fortune - at a deadly cost.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462829?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Little Shop of Horrors",
+      "date": "2026-10-29",
+      "start_time": "8:00 PM",
+      "description": "Deviously delicious Broadway & Hollywood sci-fi smash musical. A darkly comedic musical about Seymour, a timid flower shop clerk, who discovers a mysterious plant that brings fame & fortune - at a deadly cost.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462830",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Little Shop of Horrors",
+      "date": "2026-10-30",
+      "start_time": "8:00 PM",
+      "description": "Deviously delicious Broadway & Hollywood sci-fi smash musical. A darkly comedic musical about Seymour, a timid flower shop clerk, who discovers a mysterious plant that brings fame & fortune - at a deadly cost.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462832",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Little Shop of Horrors",
+      "date": "2026-10-31",
+      "start_time": "3:00 PM",
+      "description": "Deviously delicious Broadway & Hollywood sci-fi smash musical. A darkly comedic musical about Seymour, a timid flower shop clerk, who discovers a mysterious plant that brings fame & fortune - at a deadly cost.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462831",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Little Shop of Horrors",
+      "date": "2026-10-31",
+      "start_time": "8:00 PM",
+      "description": "Deviously delicious Broadway & Hollywood sci-fi smash musical. A darkly comedic musical about Seymour, a timid flower shop clerk, who discovers a mysterious plant that brings fame & fortune - at a deadly cost.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462834",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Little Shop of Horrors",
+      "date": "2026-11-01",
+      "start_time": "5:00 PM",
+      "description": "Deviously delicious Broadway & Hollywood sci-fi smash musical. A darkly comedic musical about Seymour, a timid flower shop clerk, who discovers a mysterious plant that brings fame & fortune - at a deadly cost.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462833",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Mason Jennings",
+      "date": "2026-09-24",
+      "start_time": "8:00 PM",
+      "description": "Returning to the Egyptian stage with a brand new album, Underneath The Roses. Well known for his simple yet catchy melodies. Mason Jennings is an American folk-pop singer-songwriter with intimate lyrics, literary & historical themes, & distinctive voice.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459160?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/vrnc69561agpqcp9zk55.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Mason Jennings",
+      "date": "2026-09-25",
+      "start_time": "8:00 PM",
+      "description": "Returning to the Egyptian stage with a brand new album, Underneath The Roses. Well known for his simple yet catchy melodies. Mason Jennings is an American folk-pop singer-songwriter with intimate lyrics, literary & historical themes, & distinctive voice.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459161",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/vrnc69561agpqcp9zk55.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Mason Jennings",
+      "date": "2026-09-26",
+      "start_time": "8:00 PM",
+      "description": "Returning to the Egyptian stage with a brand new album, Underneath The Roses. Well known for his simple yet catchy melodies. Mason Jennings is an American folk-pop singer-songwriter with intimate lyrics, literary & historical themes, & distinctive voice.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459162",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/vrnc69561agpqcp9zk55.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Shrek The Musical Jr.",
+      "date": "2026-07-24",
+      "start_time": "7:00 PM",
+      "description": "Adaptation of the Broadway musical & DreamWorks film. This is a one-of-a-kind, hilarious fairy tale in which curses are reversed; monsters get the girls, donkeys & dragons find love, & princesses are beautiful in all shapes & sizes.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/460787?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/b1el401sreswek19cm5y.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Shrek The Musical Jr.",
+      "date": "2026-07-25",
+      "start_time": "2:00 PM",
+      "description": "Adaptation of the Broadway musical & DreamWorks film. This is a one-of-a-kind, hilarious fairy tale in which curses are reversed; monsters get the girls, donkeys & dragons find love, & princesses are beautiful in all shapes & sizes.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461034",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/b1el401sreswek19cm5y.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Shrek The Musical Jr.",
+      "date": "2026-07-25",
+      "start_time": "7:00 PM",
+      "description": "Adaptation of the Broadway musical & DreamWorks film. This is a one-of-a-kind, hilarious fairy tale in which curses are reversed; monsters get the girls, donkeys & dragons find love, & princesses are beautiful in all shapes & sizes.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461033",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/b1el401sreswek19cm5y.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Something Rotten!",
+      "date": "2026-06-03",
+      "start_time": "8:00 PM",
+      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/454352?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Something Rotten!",
+      "date": "2026-06-04",
+      "start_time": "8:00 PM",
+      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/454355",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Something Rotten!",
+      "date": "2026-06-05",
+      "start_time": "8:00 PM",
+      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/454357",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Something Rotten!",
+      "date": "2026-06-06",
+      "start_time": "3:00 PM",
+      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/454356",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Something Rotten!",
+      "date": "2026-06-06",
+      "start_time": "8:00 PM",
+      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/454359",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Something Rotten!",
+      "date": "2026-06-07",
+      "start_time": "5:00 PM",
+      "description": "A hilarious musical comedy set in the Renaissance, where brothers Nick & Nigel Bottom struggle to compete with Shakespeare. Desperate for a hit, they set out to write the world's first musical, leading to outrageous mishaps & show-stopping numbers.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/454358",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "THE BABYS",
+      "date": "2026-06-24",
+      "start_time": "8:00 PM",
+      "description": "Celebrating 50 Years! Led by original member and legendary drummer Tony Brock - the iconic sound of THE BABYS takes you on a nostalgic and scintillating journey of musical craftsmanship and rock & roll!",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459901?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/obv0mvfvbtq2lxgqw3kn.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "THE BABYS",
+      "date": "2026-06-25",
+      "start_time": "8:00 PM",
+      "description": "Celebrating 50 Years! Led by original member and legendary drummer Tony Brock - the iconic sound of THE BABYS takes you on a nostalgic and scintillating journey of musical craftsmanship and rock & roll!",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459902",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/obv0mvfvbtq2lxgqw3kn.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "THE BABYS",
+      "date": "2026-06-26",
+      "start_time": "8:00 PM",
+      "description": "Celebrating 50 Years! Led by original member and legendary drummer Tony Brock - the iconic sound of THE BABYS takes you on a nostalgic and scintillating journey of musical craftsmanship and rock & roll!",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/459903",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/obv0mvfvbtq2lxgqw3kn.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "The Drifters",
+      "date": "2026-09-04",
+      "start_time": "8:00 PM",
+      "description": "R&B/soul doo-wop legends form this Rock & Roll Hall of Fame band that has spanned almost six decades and boasts classic hits such as \"Under the Boardwalk, \"Stand by Me,\" \"This Magic Moment,\" \"Up On The Roof,\" and more.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456527?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/a7dx5vxmubq5nr4th292.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "The Drifters",
+      "date": "2026-09-05",
+      "start_time": "8:00 PM",
+      "description": "R&B/soul doo-wop legends form this Rock & Roll Hall of Fame band that has spanned almost six decades and boasts classic hits such as \"Under the Boardwalk, \"Stand by Me,\" \"This Magic Moment,\" \"Up On The Roof,\" and more.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456529",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/a7dx5vxmubq5nr4th292.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "The Drifters",
+      "date": "2026-09-06",
+      "start_time": "5:00 PM",
+      "description": "R&B/soul doo-wop legends form this Rock & Roll Hall of Fame band that has spanned almost six decades and boasts classic hits such as \"Under the Boardwalk, \"Stand by Me,\" \"This Magic Moment,\" \"Up On The Roof,\" and more.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/456528",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/a7dx5vxmubq5nr4th292.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "The SteelDrivers",
+      "date": "2026-10-22",
+      "start_time": "8:00 PM",
+      "description": "Grammy Award Winning Bluegrass band from Nashville. The SteelDrivers bring a passion to their delivery that adds a distinctive flavor, & forceful grit adding undertones of blues, soul, & rock.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462537?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zceewrkfphlhuisamdlw.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "The SteelDrivers",
+      "date": "2026-10-23",
+      "start_time": "8:00 PM",
+      "description": "Grammy Award Winning Bluegrass band from Nashville. The SteelDrivers bring a passion to their delivery that adds a distinctive flavor, & forceful grit adding undertones of blues, soul, & rock.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462543",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zceewrkfphlhuisamdlw.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "The SteelDrivers",
+      "date": "2026-10-24",
+      "start_time": "8:00 PM",
+      "description": "Grammy Award Winning Bluegrass band from Nashville. The SteelDrivers bring a passion to their delivery that adds a distinctive flavor, & forceful grit adding undertones of blues, soul, & rock.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/462546",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zceewrkfphlhuisamdlw.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "The Sweet",
+      "date": "2026-11-06",
+      "start_time": "8:00 PM",
+      "description": "British rock band that rose to worldwide fame in the '70s as one of the top three \"Glam Rock Acts\" of its era. With 39 #1 singles including \"Ballroom Blitz,\" \"Fox On the Run\", \"Love Is Like Oxygen,\" \"Blockbuster\", \"Teenage Rampage\", & many more.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/460648?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/sxt7gh22j0zz0h0yhnf0.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "The Sweet",
+      "date": "2026-11-07",
+      "start_time": "8:00 PM",
+      "description": "British rock band that rose to worldwide fame in the '70s as one of the top three \"Glam Rock Acts\" of its era. With 39 #1 singles including \"Ballroom Blitz,\" \"Fox On the Run\", \"Love Is Like Oxygen,\" \"Blockbuster\", \"Teenage Rampage\", & many more.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461165",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/sxt7gh22j0zz0h0yhnf0.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "The Sweet",
+      "date": "2026-11-08",
+      "start_time": "5:00 PM",
+      "description": "British rock band that rose to worldwide fame in the '70s as one of the top three \"Glam Rock Acts\" of its era. With 39 #1 singles including \"Ballroom Blitz,\" \"Fox On the Run\", \"Love Is Like Oxygen,\" \"Blockbuster\", \"Teenage Rampage\", & many more.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461164",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/sxt7gh22j0zz0h0yhnf0.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Thriller - Odyssey Dance Theatre",
+      "date": "2026-09-30",
+      "start_time": "8:00 PM",
+      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461061?tc=website",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Thriller - Odyssey Dance Theatre",
+      "date": "2026-10-01",
+      "start_time": "8:00 PM",
+      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461063",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Thriller - Odyssey Dance Theatre",
+      "date": "2026-10-02",
+      "start_time": "8:00 PM",
+      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461068",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Thriller - Odyssey Dance Theatre",
+      "date": "2026-10-03",
+      "start_time": "3:00 PM",
+      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461066",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Thriller - Odyssey Dance Theatre",
+      "date": "2026-10-03",
+      "start_time": "8:00 PM",
+      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461070",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Thriller - Odyssey Dance Theatre",
+      "date": "2026-10-04",
+      "start_time": "5:00 PM",
+      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461069",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Thriller - Odyssey Dance Theatre",
+      "date": "2026-10-06",
+      "start_time": "8:00 PM",
+      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461064",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Thriller - Odyssey Dance Theatre",
+      "date": "2026-10-07",
+      "start_time": "3:00 PM",
+      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461067",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+    },
+    {
+      "title": "Thriller - Odyssey Dance Theatre",
+      "date": "2026-10-07",
+      "start_time": "8:00 PM",
+      "description": "If Odyssey Dance Theatre's Thriller isn't part of your yearly Halloween tradition, it should be. The spooky spectacular combines technical aspects of dance while paying homage to the stars of All Hallows' Eve.",
+      "venue_name": "Egyptian Theatre",
+      "address": "328 Main Street, Park City, UT 84060",
+      "lat": 40.6428,
+      "lng": -111.4965,
+      "link": "https://tickets.holdmyticket.com/seats/461065",
+      "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
+      "source": "Egyptian Theatre",
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
     }
   ]
 }

@@ -48,6 +48,7 @@ INPUT_FILES = [
     "public/raw/events-heber.json",
     "public/raw/events-jackson.json",
     "public/raw/events-elkhartlake.json",
+    "public/raw/events-egyptian.json",
 ]
 
 MASTER_FILE = "public/events-all.json"
@@ -63,10 +64,35 @@ def haversine_miles(lat1, lng1, lat2, lng2):
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
 
+# Filler words that appear in aggregator titles but not venue-direct titles.
+# Stripping these helps "Iris DeMent Tickets" and "An Evening with Iris DeMent"
+# collapse to the same dedup key.
+_TITLE_FILLERS = {
+    "tickets", "ticket", "live", "presents", "an", "a", "the",
+    "evening", "with", "feat", "featuring", "vs", "and",
+    "concert", "show", "performance", "performs",
+    "park", "city",  # location words also strip
+}
+
+def _normalize_title(title: str) -> str:
+    """Aggressive normalization: lowercase, strip punctuation + filler words."""
+    import re as _re
+    if not title:
+        return ""
+    t = title.lower()
+    t = _re.sub(r"[^a-z0-9 ]+", " ", t)  # punctuation -> space
+    tokens = [w for w in t.split() if w and w not in _TITLE_FILLERS]
+    return " ".join(tokens)
+
+
 def event_key(e: dict) -> tuple:
-    """Unique key for global dedup: (normalized_title, date, start_time)."""
-    title = (e.get("title") or "").strip().lower()
-    title = " ".join(title.split())  # collapse whitespace
+    """Unique key for global dedup: (normalized_title, date, start_time).
+
+    Title normalization is aggressive — drops filler words ("tickets",
+    "an evening with", "live", etc.) so aggregator titles collapse to the
+    same key as venue-direct titles for the same show.
+    """
+    title = _normalize_title(e.get("title") or "")
     date = (e.get("date") or "")[:10]
     start = (e.get("start_time") or "").strip()
     return (title, date, start)
@@ -77,25 +103,42 @@ def merge_events(records: list[dict]) -> dict:
     if len(records) == 1:
         return records[0]
     
-    # Sort by source priority (lower = better)
+    # Sort by source priority (lower = better).
+    # Default for unknown sources is now Tier 2 (3), not below Tier 4 — a new
+    # source we haven't classified is almost always a venue/organizer worth
+    # trusting more than third-party aggregators.
     SOURCE_PRIORITY = {
-        # Tier 1: verified venue/organizer
-        "Oakley City": 1, "Eccles Center": 1, "Deer Valley Resort": 1,
-        "Park City Mountain": 1, "The Grand Teton Music Festival": 1,
-        # Tier 2: trusted aggregators
+        # Tier 1: verified venue or primary organizer — authoritative for their events
+        "Oakley City": 1, "Eccles Center": 1, "Park City Institute": 1,
+        "Deer Valley Resort": 1, "Park City Mountain": 1,
+        "Deer Valley Music Festival": 1, "Grand Teton Music Festival": 1,
+        "The Grand Teton Music Festival": 1,  # legacy alias
+        "The Cloudveil": 1, "The Osthoff Resort": 1, "Siebkens Resort": 1,
+        "Road America": 1, "National Museum of Wildlife Art": 1,
+        "Center for the Arts Jackson Hole": 1, "Park City Opera": 1,
+        "Park City Song Summit": 1, "Park City Farmers Market": 1,
+        "Mountain Trails Foundation": 1, "Village of Elkhart Lake": 1,
+        "Egyptian Theatre": 1,
+
+        # Tier 2: trusted aggregator, tourism board, or local newspaper
         "The Park Record": 2, "Park City Annual Events": 2,
         "Visit Park City": 2, "Visit Park City (sitemap)": 2,
-        "Mountain Town Music": 2, "Park City Institute": 2,
-        "Heber Valley Tourism": 2, "Jackson Hole Chamber of Commerce": 2,
-        "Center for the Arts Jackson Hole": 2, "Elkhart Lake Tourism": 2,
-        # Tier 3: community calendars
+        "Mountain Town Music": 2, "Heber Valley Tourism": 2,
+        "Jackson Hole Chamber of Commerce": 2, "Elkhart Lake Tourism": 2,
+        "RunSignup": 2, "Salt Lake Running Co": 2,
+        "Park City Gallery Association": 2,
+
+        # Tier 3: community calendar or non-canonical local source
         "KPCW Community Calendar": 3, "Heber Valley Life": 3,
-        # Tier 4: third-party aggregators (never override Tier 1-3 fields)
+
+        # Tier 4: third-party aggregator (never overrides Tier 1-3 fields)
         "Google Events": 4, "Eventbrite": 4, "Bandsintown": 4,
         "EventTicketsCenter": 4,
     }
-    
-    records.sort(key=lambda r: SOURCE_PRIORITY.get(r.get("source", ""), 5))
+
+    DEFAULT_PRIORITY = 3  # unknown source -> assume community calendar tier
+
+    records.sort(key=lambda r: SOURCE_PRIORITY.get(r.get("source", ""), DEFAULT_PRIORITY))
     
     base = dict(records[0])  # highest-priority record wins as base
     

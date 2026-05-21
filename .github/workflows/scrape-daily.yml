@@ -49,6 +49,10 @@ jobs:
           python scraper.py
           echo "::endgroup::"
 
+          echo "::group::Egyptian Theatre scraper"
+          python -u egyptian_scraper.py
+          echo "::endgroup::"
+
       - name: Scrape Heber Valley events
         id: scrape_heber
         continue-on-error: true
