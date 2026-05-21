@@ -68,7 +68,7 @@ def _sev1_issues(reports: list) -> list:
     return out
 
 
-def render_html(audit: dict, repair: dict | None) -> str:
+def render_html(audit: dict, repair: dict | None, llm_health: dict | None = None) -> str:
     """Render the email body as HTML."""
     audit_date = audit.get("audit_date", "today")
     reports = audit.get("reports", [])
@@ -158,6 +158,54 @@ def render_html(audit: dict, repair: dict | None) -> str:
     total_sev1 = sum(_sev_count(r.get("by_severity") or {}, 1) for r in reports)
     total_repaired = sum(r.get("total_fixes", 0) for r in repair_reports)
 
+
+    # Build LLM scraper health section
+    llm_health_html = ""
+    if llm_health:
+        flagged = llm_health.get("flagged") or []
+        checked = len(llm_health.get("results") or [])
+        if flagged:
+            flag_rows = []
+            for f in flagged[:10]:
+                src_name = f.get("source", "?")
+                reason = f.get("reason", "")
+                our_count = f.get("our_count", 0)
+                llm_count = f.get("llm_count")
+                judgment = f.get("judgment", "")
+                source_url = f.get("source_url", "")
+                detail = reason
+                if llm_count is not None:
+                    detail = f"LLM saw {llm_count} events, we have {our_count}. {judgment}"
+                flag_rows.append(
+                    '<tr style="border-bottom:1px solid #fef3c7">'
+                    f'<td style="padding:8px"><strong>{src_name}</strong>'
+                    + (f'<br><a href="{source_url}" style="color:#3b82f6;font-size:12px">{source_url}</a>' if source_url else "")
+                    + '</td>'
+                    f'<td style="padding:8px;font-size:13px;color:#78350f">{detail}</td>'
+                    '</tr>'
+                )
+            more = max(0, len(flagged) - 10)
+            llm_health_html = (
+                '<h2 style="font-size:18px;margin:24px 0 12px">&#9888; Scraper health check (LLM)</h2>'
+                f'<div style="font-size:13px;color:#6b7280;margin-bottom:12px">'
+                f'{len(flagged)} of {checked} sources flagged. Claude fetched each source URL, '
+                f'counted events, and compared against what our scraper produced.</div>'
+                '<table style="width:100%;border-collapse:collapse;font-size:14px;'
+                'background:#fffbeb;border:1px solid #fde68a;border-radius:8px">'
+                '<thead><tr style="background:#fef3c7">'
+                '<th style="padding:8px;text-align:left">Source</th>'
+                '<th style="padding:8px;text-align:left">Reason flagged</th>'
+                '</tr></thead><tbody>' + "".join(flag_rows) + '</tbody></table>'
+            )
+            if more:
+                llm_health_html += f'<div style="font-size:12px;color:#6b7280;margin-top:8px">+ {more} more flagged sources — see scraper_llm_health.json</div>'
+        else:
+            llm_health_html = (
+                '<h2 style="font-size:18px;margin:24px 0 12px">&#10003; Scraper health check (LLM)</h2>'
+                f'<div style="padding:12px;background:#ecfdf5;color:#065f46;border-radius:8px;font-size:13px">'
+                f'All {checked} sources healthy — Claude found no undercount, blocking, or scraper regressions.</div>'
+            )
+
     return f"""<!DOCTYPE html>
 <html>
 <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1f2937;max-width:680px;margin:0 auto;padding:24px">
@@ -199,6 +247,8 @@ def render_html(audit: dict, repair: dict | None) -> str:
     '</tr></thead>'
     '<tbody>' + ''.join(repair_rows) + '</tbody>'
     '</table>') if repair_rows else ''}
+
+  {llm_health_html}
 
   <h2 style="font-size:18px;margin:32px 0 8px">Severity-1 issues needing review</h2>
   <div style="font-size:13px;color:#6b7280;margin-bottom:16px">
@@ -260,9 +310,13 @@ def main():
     total_sev1 = sum(_sev_count(r.get("by_severity") or {}, 1) for r in reports)
     total_events = sum(r.get("total_events", 0) for r in reports)
 
-    subject = f"[yoocal] {audit_date} digest — {total_sev1} sev-1, {total_events} events"
+    llm_health_preview = _load_json("scraper_llm_health.json")
+    flag_count = len((llm_health_preview or {}).get("flagged") or [])
+    flag_tag = f", {flag_count} flagged sources" if flag_count else ""
+    subject = f"[yoocal] {audit_date} digest — {total_sev1} sev-1{flag_tag}, {total_events} events"
 
-    html = render_html(audit, repair)
+    llm_health = _load_json("scraper_llm_health.json")
+    html = render_html(audit, repair, llm_health)
 
     if dry_run:
         # Print to stdout for inspection

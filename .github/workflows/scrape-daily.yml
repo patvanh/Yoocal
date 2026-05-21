@@ -19,6 +19,7 @@ jobs:
       SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
 
     steps:
       - name: Checkout repo
@@ -131,6 +132,14 @@ jobs:
         run: |
           echo "::group::Building master file + radius-filtered city views"
           python build_master_and_views.py
+          echo "::endgroup::"
+
+      - name: LLM scraper health check
+        id: llm_health_check
+        continue-on-error: true
+        run: |
+          echo "::group::LLM scraper health check"
+          python -u scraper_llm_health.py
           echo "::endgroup::"
 
       - name: Send daily digest email
