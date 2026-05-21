@@ -104,56 +104,80 @@ def scrape_visit_park_city():
         from playwright.sync_api import sync_playwright
         import urllib.parse
 
-        print("  Step 1: Capturing API session token...")
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            page = browser.new_page()
+        api_response_data = [None]
+        print("  Step 1: Capturing session and fetching API in same browser context...")
+        with sync_playwright() as pw:
+            browser = pw.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled"],
+            )
+            ctx = browser.new_context(
+                user_agent=HEADERS["User-Agent"],
+                viewport={"width": 1400, "height": 900},
+                locale="en-US",
+                timezone_id="America/Denver",
+            )
+            page = ctx.new_page()
             page.on('request', handle_request)
-            page.set_extra_http_headers({"User-Agent": HEADERS["User-Agent"]})
+            page.set_extra_http_headers({
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Sec-Fetch-Dest": "document",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "none",
+            })
             try:
                 page.goto(calendar_url, wait_until="domcontentloaded", timeout=30000)
             except:
                 pass
-            page.wait_for_timeout(8000)
-            browser.close()
+            page.wait_for_timeout(10000)
+            try:
+                page.evaluate("window.scrollTo(0, 600)")
+                page.wait_for_timeout(3000)
+            except:
+                pass
 
-        if not captured_api_url[0]:
-            print("  Could not capture API URL — falling back to basic scrape")
-            raise Exception("No API URL captured")
+            if not captured_api_url[0]:
+                browser.close()
+                print("  Could not capture API URL — falling back to basic scrape")
+                raise Exception("No API URL captured")
 
-        parsed = urllib.parse.urlparse(captured_api_url[0])
-        params = urllib.parse.parse_qs(parsed.query)
-        json_param = params.get('json', [''])[0]
-        token = params.get('token', [''])[0]
-        api_base = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
+            parsed = urllib.parse.urlparse(captured_api_url[0])
+            params = urllib.parse.parse_qs(parsed.query)
+            json_param = params.get('json', [''])[0]
+            token = params.get('token', [''])[0]
+            api_base = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
 
-        query = json.loads(json_param)
-        query['options']['limit'] = 200
-        if 'fields' in query.get('options', {}):
-            query['options']['fields']['admission'] = 1
-            query['options']['fields']['cost'] = 1
-            query['options']['fields']['price'] = 1
-            query['options']['fields']['free'] = 1
-            query['options']['fields']['description'] = 1
-            query['options']['fields']['contact'] = 1
+            query = json.loads(json_param)
+            query['options']['limit'] = 500
+            # NOTE: adding fields like admission, cost, price, free, description,
+            # contact triggers a 500 from VPC's API. Use only the default fields.
 
-        new_json = json.dumps(query, separators=(',', ':'))
-        full_url = f"{api_base}?json={urllib.parse.quote(new_json)}&token={token}"
+            new_json = json.dumps(query, separators=(',', ':'))
+            full_url = f"{api_base}?json={urllib.parse.quote(new_json)}&token={token}"
 
-        req_headers = dict(HEADERS)
-        req_headers['Referer'] = 'https://www.visitparkcity.com/events/calendar/'
-        req_headers['Accept'] = 'application/json, text/plain, */*'
-        if captured_cookies[0]:
-            req_headers['cookie'] = captured_cookies[0]
+            print("  Step 2: Fetching all events from API (in-browser session)...")
+            try:
+                # CRITICAL: use page.request.get from INSIDE Playwright so the
+                # session token stays valid (VPC invalidates tokens replayed
+                # from outside the browser context).
+                response = page.request.get(full_url, timeout=20000)
+                if response.status == 500:
+                    print("  VPC API returned 500 — retrying once...")
+                    page.wait_for_timeout(2000)
+                    response = page.request.get(full_url, timeout=20000)
+                if response.status != 200:
+                    browser.close()
+                    raise Exception(f"API returned {response.status}")
+                api_response_data[0] = response.json()
+            finally:
+                browser.close()
 
-        print("  Step 2: Fetching all events from API...")
-        r = requests.get(full_url, headers=req_headers, timeout=20)
+        if not api_response_data[0]:
+            raise Exception("No API data captured")
 
-        if r.status_code != 200:
-            raise Exception(f"API returned {r.status_code}")
-
-        docs = r.json().get("docs", {}).get("docs", [])
-        total = r.json().get("docs", {}).get("count", 0)
+        docs = api_response_data[0].get("docs", {}).get("docs", [])
+        total = api_response_data[0].get("docs", {}).get("count", 0)
         print(f"  Got {len(docs)} events (total available: {total})")
 
         today_str = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
@@ -280,28 +304,98 @@ def scrape_visit_park_city():
             url = "https://www.visitparkcity.com/events/"
             r = requests.get(url, headers=HEADERS, timeout=15)
             soup = BeautifulSoup(r.text, "html.parser")
-            for c in (soup.find_all("div", class_=re.compile(r"event", re.I)) or soup.find_all("article")):
+
+            # Find every article that has a date marker
+            today_iso = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
+            seen_links = set()
+
+            for art in soup.find_all("article"):
                 try:
-                    title_el = c.find("h2") or c.find("h3") or c.find("h4")
-                    if not title_el: continue
-                    title = title_el.get_text(strip=True)
-                    if len(title) < 3: continue
-                    link_el = c.find("a", href=True)
+                    # Title from h2/h3/h4
+                    title_el = art.find(["h2", "h3", "h4"])
+                    if not title_el:
+                        continue
+                    title = title_el.get_text(" ", strip=True)
+                    if len(title) < 3:
+                        continue
+
+                    # Detail link
+                    link_el = art.find("a", href=re.compile(r"^/event/"))
+                    if not link_el:
+                        link_el = art.find("a", href=True)
                     link = link_el["href"] if link_el else url
-                    if link.startswith("/"): link = "https://www.visitparkcity.com" + link
-                    events.append({"title": title, "date": "See website", "description": "",
-                                   "location": "Park City, UT", "link": link,
-                                   "source": "Visit Park City", "source_url": url,
-                                   "scraped_at": datetime.now().isoformat()})
-                except: continue
-            print(f"  Fallback found {len(events)} events")
+                    if link.startswith("/"):
+                        link = "https://www.visitparkcity.com" + link
+                    if link in seen_links:
+                        continue
+                    seen_links.add(link)
+
+                    # Date from <li class="info-item date">
+                    date_el = art.find("li", class_=re.compile(r"info-item.*date|date.*info-item"))
+                    if not date_el:
+                        # Try the standalone .info-item.date pattern
+                        date_el = art.find(attrs={"class": re.compile(r"info-item")})
+                        if date_el and "date" not in " ".join(date_el.get("class", [])):
+                            date_el = None
+                    if not date_el:
+                        continue  # no date -> skip; do not write "See website"
+                    date_text = date_el.get_text(" ", strip=True)
+                    # Parse "May 21, 2026 - Sep 13, 2026" or "May 21, 2026"
+                    m = re.search(r"([A-Z][a-z]{2,8})\s+(\d{1,2}),?\s+(\d{4})", date_text)
+                    if not m:
+                        continue
+                    try:
+                        dt = datetime.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)}", "%b %d %Y")
+                    except ValueError:
+                        try:
+                            dt = datetime.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)}", "%B %d %Y")
+                        except ValueError:
+                            continue
+                    date_str = dt.strftime("%Y-%m-%d")
+                    if date_str < today_iso:
+                        continue
+
+                    # End date (multi-day events)
+                    end_match = re.search(r"-\s*([A-Z][a-z]{2,8})\s+(\d{1,2}),?\s+(\d{4})", date_text)
+                    end_date_str = None
+                    if end_match:
+                        try:
+                            end_dt = datetime.strptime(
+                                f"{end_match.group(1)} {end_match.group(2)} {end_match.group(3)}",
+                                "%b %d %Y",
+                            )
+                            end_date_str = end_dt.strftime("%Y-%m-%d")
+                        except ValueError:
+                            pass
+
+                    # Venue from <li class="info-item venue">
+                    venue_el = art.find(attrs={"class": re.compile(r"info-item.*venue|venue.*info-item")})
+                    venue_name = venue_el.get_text(" ", strip=True) if venue_el else ""
+
+                    event = {
+                        "title": title,
+                        "date": date_str,
+                        "description": "",
+                        "location": venue_name or "Park City, UT",
+                        "venue_name": venue_name or None,
+                        "link": link,
+                        "source": "Visit Park City",
+                        "source_url": url,
+                        "scraped_at": datetime.now().isoformat(),
+                    }
+                    if end_date_str and end_date_str != date_str:
+                        event["end_date"] = end_date_str
+                    events.append(event)
+                except Exception:
+                    continue
+            print(f"  Fallback found {len(events)} events with real dates")
         except Exception as e2:
             print(f"  Fallback also failed: {e2}")
 
     # GUARD: if the VPC scrape returned an unusually low count, augment with
     # yesterday's stored VPC events to avoid losing coverage during their
     # server flakes. Normal runs return ~90-100 events; under 80 = weak.
-    VPC_WEAK_THRESHOLD = 80
+    VPC_WEAK_THRESHOLD = 25
     if len(events) < VPC_WEAK_THRESHOLD:
         print(f"  WARN: only {len(events)} VPC events (threshold {VPC_WEAK_THRESHOLD}) — merging with stored data")
         try:
