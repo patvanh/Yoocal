@@ -384,9 +384,24 @@ def scrape_elkhartlake_com():
         from playwright.sync_api import sync_playwright
 
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            page = browser.new_page()
-            page.set_extra_http_headers({"User-Agent": HEADERS["User-Agent"]})
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled"],
+            )
+            ctx = browser.new_context(
+                user_agent=HEADERS["User-Agent"],
+                viewport={"width": 1400, "height": 900},
+                locale="en-US",
+                timezone_id="America/Denver",
+            )
+            page = ctx.new_page()
+            page.set_extra_http_headers({
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Sec-Fetch-Dest": "document",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "none",
+            })
 
             for url in [
                 "https://www.elkhartlake.com/events/",
@@ -466,9 +481,24 @@ def scrape_siebkens():
         from playwright.sync_api import sync_playwright
 
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            page = browser.new_page()
-            page.set_extra_http_headers({"User-Agent": HEADERS["User-Agent"]})
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled"],
+            )
+            ctx = browser.new_context(
+                user_agent=HEADERS["User-Agent"],
+                viewport={"width": 1400, "height": 900},
+                locale="en-US",
+                timezone_id="America/Denver",
+            )
+            page = ctx.new_page()
+            page.set_extra_http_headers({
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Sec-Fetch-Dest": "document",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "none",
+            })
             page.goto("https://www.siebkens.com/events/", wait_until="domcontentloaded", timeout=25000)
             page.wait_for_timeout(4000)
             html = page.content()
@@ -883,9 +913,24 @@ def scrape_osthoff_calendar():
         from playwright.sync_api import sync_playwright
 
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            page = browser.new_page()
-            page.set_extra_http_headers({"User-Agent": HEADERS["User-Agent"]})
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled"],
+            )
+            ctx = browser.new_context(
+                user_agent=HEADERS["User-Agent"],
+                viewport={"width": 1400, "height": 900},
+                locale="en-US",
+                timezone_id="America/Denver",
+            )
+            page = ctx.new_page()
+            page.set_extra_http_headers({
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.9",
+                "Sec-Fetch-Dest": "document",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "none",
+            })
             page.goto("https://osthoff.com/events/", wait_until="networkidle", timeout=25000)
             page.wait_for_timeout(4000)
             html = page.content()
