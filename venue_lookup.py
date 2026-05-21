@@ -104,6 +104,13 @@ def lookup_venue_by_address(address_str):
         # and collapse whitespace so "3925 e. snowbasin rd" matches "3925 e snowbasin rd"
         s = re.sub(r"[.,]", " ", s)
         s = re.sub(r"\s+", " ", s).strip()
+        # Normalize common street suffix abbreviations so "Park Avenue" matches "Park Ave"
+        for full, abbr in [
+            ("avenue", "ave"), ("street", "st"), ("boulevard", "blvd"),
+            ("road", "rd"), ("drive", "dr"), ("lane", "ln"),
+            ("place", "pl"), ("court", "ct"), ("highway", "hwy"),
+        ]:
+            s = re.sub(rf"\b{full}\b", abbr, s)
         return s
 
     addr_lo = _norm(raw_addr)
