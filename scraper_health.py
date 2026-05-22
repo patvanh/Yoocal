@@ -51,7 +51,9 @@ HEALTH_FLOORS = {
     ("park-city", "Park City Institute"): 5,
     ("heber", "Heber Valley Tourism"): 30,
     ("heber", "Heber Valley Life"): 10,
-    ("heber", "KPCW Community Calendar"): 50,
+    # KPCW is a Park City station; its Heber subset is naturally tiny (a
+    # handful of events). No floor here — low Heber KPCW counts are normal,
+    # not a scraper failure.
     ("jackson", "Jackson Hole Chamber of Commerce"): 100,
     ("jackson", "Center for the Arts Jackson Hole"): 30,
     ("jackson", "The Cloudveil"): 20,
