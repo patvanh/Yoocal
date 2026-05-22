@@ -107,6 +107,77 @@ def event_key(e: dict) -> tuple:
     return (title, date)
 
 
+import re as _re_pricing
+
+# Ticket platforms whose presence in a link strongly implies a paid event.
+_TICKET_PLATFORMS = (
+    "holdmyticket", "eventbrite", "showpass", "etix", "seetickets",
+    "axs.com", "ticketmaster", "tickets.", "/tickets", "eventticketscenter",
+)
+# "free" used as a real admission signal, with word boundaries. We require a
+# nearby admission-context word to avoid "freestyle", "freedom", "feel free".
+_FREE_RE = _re_pricing.compile(
+    r"\bfree\b(?!\s*(?:style|dom|s\b))", _re_pricing.I
+)
+_FREE_CONTEXT = (
+    "admission", "free event", "free show", "free concert", "free activity",
+    "free craft", "free live", "is free", "and free", "free and open",
+    "free to attend", "no charge", "no cost", "free entry", "free monthly",
+    "free weekly", "free community",
+)
+_FREE_FALSE = ("freestyle", "freedom", "feel free", "frees ", "gluten-free", "free parking")
+
+# Sources whose events are essentially always free community programming.
+_FREE_SOURCES = {
+    "Park City Farmers Market", "Mountain Trails Foundation",
+}
+
+# Sources that are essentially always ticketed concert/performance series.
+_PAID_SOURCES = {
+    "Deer Valley Music Festival", "Grand Teton Music Festival",
+    "The Grand Teton Music Festival",
+}
+
+
+def _infer_pricing(record: dict) -> dict:
+    """Set is_free / price when a confident signal exists; leave unset otherwise.
+
+    Conservative: only tags when there's a clear signal. Existing values win.
+    """
+    if "is_free" in record or record.get("price"):
+        return record  # already has pricing info — don't override
+
+    link = (record.get("link") or "").lower()
+    text = ((record.get("title") or "") + " " + (record.get("description") or "")).lower()
+    source = record.get("source", "")
+
+    # Paid signal: a real ticketing-platform link.
+    if any(tp in link for tp in _TICKET_PLATFORMS):
+        record["is_free"] = False
+        return record
+
+    # Paid signal: a categorically ticketed source.
+    if source in _PAID_SOURCES:
+        record["is_free"] = False
+        return record
+
+    # Free signal: known-free source, or "free" with admission context and no
+    # false-positive phrase.
+    if source in _FREE_SOURCES:
+        record["is_free"] = True
+        record["price"] = "Free"
+        return record
+
+    if any(fp in text for fp in _FREE_FALSE):
+        return record  # ambiguous — skip
+    if _FREE_RE.search(text) and any(ctx in text for ctx in _FREE_CONTEXT):
+        record["is_free"] = True
+        record["price"] = "Free"
+        return record
+
+    return record
+
+
 def _backfill_venue(record: dict) -> dict:
     """If venue_name is missing or looks like an address, resolve via venues.ts."""
     current_venue = (record.get("venue_name") or "").strip()
@@ -125,7 +196,7 @@ def _backfill_venue(record: dict) -> dict:
 def merge_events(records: list[dict]) -> dict:
     """When multiple records dedupe to the same key, pick the best fields."""
     if len(records) == 1:
-        return _backfill_venue(dict(records[0]))
+        return _infer_pricing(_backfill_venue(dict(records[0])))
     
     # Sort by source priority (lower = better).
     # Default for unknown sources is now Tier 2 (3), not below Tier 4 — a new
@@ -183,7 +254,7 @@ def merge_events(records: list[dict]) -> dict:
         srcs.discard("")
         base["_all_sources"] = sorted(srcs)
 
-    return _backfill_venue(base)
+    return _infer_pricing(_backfill_venue(base))
 
 
 def main():

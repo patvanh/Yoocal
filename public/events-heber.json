@@ -6,7 +6,7 @@
     "lng": -111.4133
   },
   "radius_mi": 10,
-  "generated_at": "2026-05-21T18:56:08.026717-06:00",
+  "generated_at": "2026-05-21T20:21:45.129062-06:00",
   "today": "2026-05-21",
   "event_count": 274,
   "events": [
@@ -180,6 +180,8 @@
       "venue_name": "Inn At Silver Lake",
       "address": "7560 Royal St",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/InD03XiuAUiRxkhxB64bKQ.large.png",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 8.9
     },
     {
@@ -1571,6 +1573,7 @@
       ],
       "start_time": "7:30 PM",
       "image_url": "https://usuo.org/app/uploads/2026/03/DVMF1-Beethovens-Symphony-No.-9.jpg",
+      "is_free": false,
       "_distance_mi": 9.3
     },
     {
@@ -1594,6 +1597,8 @@
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
       "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 8.4
     },
     {
@@ -1617,6 +1622,8 @@
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
       "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 8.4
     },
     {
@@ -1899,6 +1906,7 @@
       "categories": [
         "Wellness"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2406,6 +2414,7 @@
       "categories": [
         "Wellness"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2422,6 +2431,7 @@
       "categories": [
         "Festival"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2439,6 +2449,7 @@
       "categories": [
         "Food & Drink"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2455,6 +2466,7 @@
       "categories": [
         "Education"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2471,6 +2483,7 @@
       "categories": [
         "Food & Drink"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2488,6 +2501,7 @@
       "categories": [
         "Community"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2505,6 +2519,7 @@
       "categories": [
         "Food & Drink"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2521,6 +2536,7 @@
       "categories": [
         "Community"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2538,6 +2554,7 @@
       "categories": [
         "Film"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -3204,6 +3221,8 @@
       "facets": [
         "Paid"
       ],
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -3252,6 +3271,8 @@
       "facets": [
         "Free"
       ],
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -3386,6 +3407,8 @@
       "facets": [
         "Free"
       ],
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -3759,6 +3782,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180701.jpg?decache=21-06-38",
       "date_label": "Last Fri monthly, 6:00 PM - 7:00 PM ",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -4878,6 +4903,8 @@
       "end_time": "10:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187506.jpg?decache=21-06-38",
       "date_label": "7:00 - 10:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {

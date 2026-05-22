@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-05-21T18:56:07.977922-06:00",
+  "generated_at": "2026-05-21T20:21:45.077441-06:00",
   "today": "2026-05-21",
   "event_count": 2668,
   "events": [
@@ -154,7 +154,8 @@
       "price_range": "$10-$149",
       "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/2STRONG_ZERONI_Allen-Stone---Preferred-photo-to-use_652A5BB6-33EA-4C3C-B88B8B43B19D888A_5fcbe1cc-6f5c-403d-9640dfd2ea7cdc58.png",
       "venue_name": "Park City, Utah",
-      "address": "4000 Canyons Resort Dr, Park City, UT, 84098"
+      "address": "4000 Canyons Resort Dr, Park City, UT, 84098",
+      "is_free": false
     },
     {
       "title": "Art Summer Camps 2026",
@@ -196,7 +197,8 @@
       "scraped_at": "2026-05-21T17:41:20.162703",
       "venue_name": "CREATE PC",
       "address": "1500 Kearns Blvd, Unit F110, Park City, UT, 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/kVGMg_ApskO7bNX7bPqoDw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/kVGMg_ApskO7bNX7bPqoDw.large.jpg",
+      "is_free": false
     },
     {
       "title": "Better Than Ezra with Special Guests Vertical Horizon and TONIC",
@@ -216,7 +218,8 @@
       "price_range": "$10-$149",
       "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/BTE-concert-photo_F751E2DA-79C0-41CC-80CF25C3FDC7722C_d902edbc-ffc4-4b4f-846d5a96b47aa87e.jpg",
       "venue_name": "Park City, Utah",
-      "address": "Canyons Village- 4000 Canyons Resort Dr, Park City, UT, 84098"
+      "address": "Canyons Village- 4000 Canyons Resort Dr, Park City, UT, 84098",
+      "is_free": false
     },
     {
       "title": "Boney James",
@@ -237,7 +240,8 @@
       "price_range": "$10-$229",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/VmoKuqHoL02T-Mlgqy5FcA.large.jpg",
       "venue_name": "Canyons Village at Park City",
-      "address": "4000 Canyons Resort Dr, Park City, UT, 84098"
+      "address": "4000 Canyons Resort Dr, Park City, UT, 84098",
+      "is_free": false
     },
     {
       "title": "Candlelight Kundalini",
@@ -301,7 +305,8 @@
       "price_range": "$10-$149",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mD7oEWD-wEqCbrmJGwso1Q.large.png",
       "venue_name": "Canyons Village at Park City",
-      "address": "4000 Canyons Resort Dr, Park City, UT, 84098"
+      "address": "4000 Canyons Resort Dr, Park City, UT, 84098",
+      "is_free": false
     },
     {
       "title": "Family Friendly: Wind Chimes in Clay",
@@ -476,7 +481,9 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/CeX5l9slMEejymVyFy4axg.large.jpg",
       "facets": [
         "Free"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "La Milpa Planting Starts - June 8th",
@@ -497,7 +504,9 @@
       "scraped_at": "2026-05-21T17:41:28.097301",
       "venue_name": "Summit Community Gardens and EATS",
       "address": "4056 Shadow Mountain Dr, Park City, UT, 84098",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/9fp803WSWEWK2di47hVcGA.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/9fp803WSWEWK2di47hVcGA.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Latino Arts Festival",
@@ -578,7 +587,8 @@
       "price_range": "$10-$149",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/E7Dm2w1-mU--oFHOKyahyA.large.png",
       "venue_name": "Canyons Village at Park City",
-      "address": "4000 Canyons Resort Dr, Park City, UT, 84098"
+      "address": "4000 Canyons Resort Dr, Park City, UT, 84098",
+      "is_free": false
     },
     {
       "title": "Mark Chesnutt",
@@ -923,7 +933,8 @@
       "scraped_at": "2026-05-21T17:41:53.210323",
       "venue_name": "Mountain Town Olive Oil building",
       "address": "613 Main Street, Park City, UT, 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/7Rnsp7k1o0yXX-l-lb0ubw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/7Rnsp7k1o0yXX-l-lb0ubw.large.jpg",
+      "is_free": false
     },
     {
       "title": "Recess on Main - Fresh Wines from Coastal Regions - Recess on Main",
@@ -1049,7 +1060,8 @@
       "scraped_at": "2026-05-21T17:41:51.614266",
       "venue_name": "Mountain Town Olive Oil building",
       "address": "613 Main Street, Park City, UT, 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/VYXJXm4teUWsimLpgE8hRQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/VYXJXm4teUWsimLpgE8hRQ.large.jpg",
+      "is_free": false
     },
     {
       "title": "Recess on Main - Wines for Day Drinking (aka: How to drink like a French person)",
@@ -1112,7 +1124,8 @@
       "price_range": "$10-$249",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/_o_b5sBx3kOuMoGFYvMiSA.large.png",
       "venue_name": "Canyons Village at Park City",
-      "address": "Canyons Village- 4000 Canyons Resort Dr, Park City, UT, 84098"
+      "address": "Canyons Village- 4000 Canyons Resort Dr, Park City, UT, 84098",
+      "is_free": false
     },
     {
       "title": "Ridgeline & Flame: Summer Solstice Dinner at Waldorf Astoria",
@@ -1364,7 +1377,8 @@
       "price_range": "$10-$349",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WivyrEaFzkiW5hRMzjyWWg.large.png",
       "venue_name": "Canyons Village at Park City",
-      "address": "Canyons Village- 4000 Canyons Resort Dr, Park City, UT, 84098"
+      "address": "Canyons Village- 4000 Canyons Resort Dr, Park City, UT, 84098",
+      "is_free": false
     },
     {
       "title": "Walk to End Alzheimer's Summit/Wasatch County",
@@ -1449,7 +1463,9 @@
       "address": "900 Round Valley Dr, Park City, UT, 84060",
       "venue_name": "Blair Education Center - Intermountain Park City Hospital",
       "start_time": "11:30 AM",
-      "end_time": "1:00 PM"
+      "end_time": "1:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Wasatch Back Business University",
@@ -1800,7 +1816,9 @@
       "end_time": "7:30 PM",
       "image_url": "http://static1.squarespace.com/static/65fcc8a275aeee2641f28521/6627fe1504651e694d79130b/69befd76e2c87c20278a86f6/1774984316668/IMG_4037.JPG?format=1500w",
       "address": "1312 Sullivan Road\nPark City, UT, 84060\nUnited States",
-      "venue_name": "The Bandstand at City Park"
+      "venue_name": "The Bandstand at City Park",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Opera Around the World: Britain at  Grand Valley Bank Presents / Opera Around The World",
@@ -1821,7 +1839,9 @@
       "end_time": "7:30 PM",
       "image_url": "http://static1.squarespace.com/static/65fcc8a275aeee2641f28521/6627fe1504651e694d79130b/69befbed552d510283e92bea/1778380029445/IMG_3997.JPG?format=1500w",
       "address": "1312 Sullivan Road\nPark City, UT, 84060\nUnited States",
-      "venue_name": "The Bandstand at City Park"
+      "venue_name": "The Bandstand at City Park",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Opera Around the World: France at  Grand Valley Bank Presents / Opera Around The World",
@@ -1842,7 +1862,9 @@
       "end_time": "7:30 PM",
       "image_url": "http://static1.squarespace.com/static/65fcc8a275aeee2641f28521/6627fe1504651e694d79130b/69befcb0c501fc5134da17c4/1774984275808/IMG_4560.JPG?format=1500w",
       "address": "1312 Sullivan Road\nPark City, UT, 84060\nUnited States",
-      "venue_name": "The Bandstand at City Park"
+      "venue_name": "The Bandstand at City Park",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Opera Around the World: Peru at  Grand Valley Bank Presents / Opera Around The World",
@@ -1863,7 +1885,9 @@
       "end_time": "7:30 PM",
       "image_url": "http://static1.squarespace.com/static/65fcc8a275aeee2641f28521/6627fe1504651e694d79130b/69befacde2c87c2027899ed6/1775056944065/IMG_4645.JPG?format=1500w",
       "address": "1312 Sullivan Road\nPark City, UT, 84060\nUnited States",
-      "venue_name": "The Bandstand at City Park"
+      "venue_name": "The Bandstand at City Park",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Opera Around the World: Italy at  Grand Valley Bank Presents / Opera Around The World",
@@ -1884,7 +1908,9 @@
       "end_time": "7:30 PM",
       "image_url": "http://static1.squarespace.com/static/65fcc8a275aeee2641f28521/6627fe1504651e694d79130b/69bef9f0aa76ae26471b4f2e/1774982492863/IMG_4548.JPG?format=1500w",
       "address": "1312 Sullivan Road\nPark City, UT, 84060\nUnited States",
-      "venue_name": "The Bandstand at City Park"
+      "venue_name": "The Bandstand at City Park",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Opera Around the World: America at  Grand Valley Bank Presents / Opera Around The World",
@@ -1905,7 +1931,9 @@
       "end_time": "8:00 PM",
       "image_url": "http://static1.squarespace.com/static/65fcc8a275aeee2641f28521/6627fe1504651e694d79130b/69839eb948cd8123cfebba0e/1774982444607/IMG_4068.JPEG?format=1500w",
       "address": "1312 Sullivan Road\nPark City, UT, 84060\nUnited States",
-      "venue_name": "The Bandstand at City Park"
+      "venue_name": "The Bandstand at City Park",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Opera Around the World: Austria & The Alp at  Grand Valley Bank Presents / Opera Around The World",
@@ -1926,7 +1954,9 @@
       "end_time": "7:30 PM",
       "image_url": "http://static1.squarespace.com/static/65fcc8a275aeee2641f28521/6627fe1504651e694d79130b/69befb4379ce092226ce5146/1774982841891/IMG_4607+%281%29.JPG?format=1500w",
       "address": "1312 Sullivan Road\nPark City, UT, 84060\nUnited States",
-      "venue_name": "The Bandstand at City Park"
+      "venue_name": "The Bandstand at City Park",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Trail Series \u2014 5K",
@@ -1947,7 +1977,9 @@
       "_all_sources": [
         "Mountain Trails Foundation",
         "Salt Lake Running Co"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Trail Series \u2014 10K",
@@ -2005,7 +2037,9 @@
       "lng": -111.491,
       "categories": [
         "Running"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Rescued Hearts Documentary",
@@ -2025,7 +2059,8 @@
       "scraped_at": "2026-05-21T17:41:20.162358",
       "venue_name": "Jim Santy Auditorium",
       "address": "1255 Park Avenue",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/0fOcoBuLZ02Z4RSCEfQvLw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/0fOcoBuLZ02Z4RSCEfQvLw.large.jpg",
+      "is_free": false
     },
     {
       "title": "Maker Thursdays ! / \u00a1Jueves de Creadores!",
@@ -2196,7 +2231,8 @@
         "Egyptian Theatre",
         "Google Events",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Aaron Honigman Duo",
@@ -2390,7 +2426,9 @@
       "scraped_at": "2026-05-21T17:41:20.162792",
       "venue_name": "Snowbird Resort",
       "address": "Highway 210 Little Cottonwood Canyon",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/af6E8aUdtk-DcYUBXwqOHw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/af6E8aUdtk-DcYUBXwqOHw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Wheel Try It",
@@ -2503,7 +2541,8 @@
         "Egyptian Theatre",
         "Google Events",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Preston Creed",
@@ -2649,7 +2688,8 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/4Gm5ZXfYYUy4D5UAVPC-Bw.large.jpg",
       "facets": [
         "Paid"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Crafternoons 2 Go",
@@ -2672,7 +2712,9 @@
       "scraped_at": "2026-05-21T17:41:20.989644",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Birding on the 910 Ranch",
@@ -2700,7 +2742,8 @@
       "_all_sources": [
         "KPCW Community Calendar",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Space Cowboy",
@@ -2812,7 +2855,9 @@
       "scraped_at": "2026-05-21T17:41:21.810157",
       "venue_name": "Snowbird Resort",
       "address": "Highway 210 Little Cottonwood Canyon",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/af6E8aUdtk-DcYUBXwqOHw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/af6E8aUdtk-DcYUBXwqOHw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Interactive Mixology Class",
@@ -2880,7 +2925,8 @@
         "Egyptian Theatre",
         "Google Events",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Swaner Saturday Morning Nature Walks",
@@ -3084,7 +3130,9 @@
       "scraped_at": "2026-05-21T17:41:21.810392",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Space Cowboy",
@@ -3127,7 +3175,9 @@
       "scraped_at": "2026-05-21T17:41:21.810432",
       "venue_name": "Snowbird Resort",
       "address": "Highway 210 Little Cottonwood Canyon",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/af6E8aUdtk-DcYUBXwqOHw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/af6E8aUdtk-DcYUBXwqOHw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Interactive Mixology Class",
@@ -3276,7 +3326,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:22.616848",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Interactive Mixology Class",
@@ -3626,7 +3678,9 @@
       "scraped_at": "2026-05-21T17:41:22.617130",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Horses & Divorces",
@@ -3894,7 +3948,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Saemore & Kieran",
@@ -4194,7 +4249,9 @@
       "scraped_at": "2026-05-21T17:41:24.200575",
       "venue_name": "Main Street",
       "address": "Main Street, Park City, UT 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Grateful for 20 Years!",
@@ -4219,7 +4276,9 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/ZE6Bx2J9NEa6QHyj6mqLuw.large.png",
       "facets": [
         "Paid"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Beat Sessions",
@@ -4262,7 +4321,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Aspen Anonda",
@@ -4388,7 +4448,8 @@
       "scraped_at": "2026-05-21T17:41:24.200748",
       "venue_name": "National Ability Center",
       "address": "1000 Ability Way",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/zyKcxBAJU0CQ0Ty-snMdlw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/zyKcxBAJU0CQ0Ty-snMdlw.large.jpg",
+      "is_free": false
     },
     {
       "title": "Megan Trueblood Solo Show",
@@ -4451,7 +4512,9 @@
       "scraped_at": "2026-05-21T17:41:24.200789",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Graduation Bash at Junction Commons",
@@ -4694,7 +4757,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Swaner Saturday Morning Nature Walks",
@@ -4780,7 +4844,9 @@
       "scraped_at": "2026-05-21T17:41:25.023932",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Megan Trueblood Solo Show",
@@ -5010,7 +5076,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:25.024168",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Megan Trueblood Solo Show",
@@ -5463,7 +5531,9 @@
       "scraped_at": "2026-05-21T17:41:25.746647",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Aubrie Rose",
@@ -5507,7 +5577,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Learn Spanish at the Library!",
@@ -6014,7 +6085,9 @@
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
       "scraped_at": "2026-05-21T17:41:27.305219",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Friday Run Club: 6am & 7am!",
@@ -6118,7 +6191,9 @@
       "scraped_at": "2026-05-21T17:41:27.305314",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Modern Calligraphy for Beginners",
@@ -6263,7 +6338,9 @@
       "scraped_at": "2026-05-21T17:41:27.305440",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Swaner Wetland Climbing Wall",
@@ -6309,7 +6386,9 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
       "facets": [
         "Free"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Crafternoons To-Go Series",
@@ -6332,7 +6411,9 @@
       "scraped_at": "2026-05-21T17:41:27.305552",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Amanda Lynn Jones",
@@ -6437,7 +6518,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:28.097250",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Broken Compass Bluegrass & Kyle Ledson",
@@ -6862,7 +6945,9 @@
       "scraped_at": "2026-05-21T17:41:28.921319",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Horses & Divorces",
@@ -7007,7 +7092,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Girls, On Film: An 80s Themed Ladies Night",
@@ -7193,7 +7279,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Mi beb\u00e9 y yo | Spanish Baby Time",
@@ -7276,7 +7363,9 @@
       "scraped_at": "2026-05-21T17:41:29.720792",
       "venue_name": "Park City Gardens",
       "address": "4459 UT-224",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/1Cfc8t8Hs0K3w9kLhu7NzQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/1Cfc8t8Hs0K3w9kLhu7NzQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Teddy Swims Tickets",
@@ -7442,7 +7531,9 @@
       "scraped_at": "2026-05-21T17:41:29.720918",
       "venue_name": "Solitude Mountain Ski Resort",
       "address": "12000 South Big Cottonwood Canyon Road",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/4MBYKiO_LEetg7DxLp3s3g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/4MBYKiO_LEetg7DxLp3s3g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Crafternoons 2 Go",
@@ -7465,7 +7556,9 @@
       "scraped_at": "2026-05-21T17:41:29.720932",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Dustbowl Revival",
@@ -7488,7 +7581,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Nate Robinson Music",
@@ -7656,7 +7750,9 @@
       "scraped_at": "2026-05-21T17:41:30.530259",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Swaner Wetland Climbing Wall",
@@ -7701,7 +7797,9 @@
       "scraped_at": "2026-05-21T17:41:30.530328",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Flying Ace All-Stars Freestyle Show",
@@ -7741,7 +7839,9 @@
       "scraped_at": "2026-05-21T17:41:30.530353",
       "venue_name": "Solitude Mountain Ski Resort",
       "address": "12000 South Big Cottonwood Canyon Road",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/4MBYKiO_LEetg7DxLp3s3g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/4MBYKiO_LEetg7DxLp3s3g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Latino Arts Festival",
@@ -7803,7 +7903,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:30.530394",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Sunday Run Club!",
@@ -7887,7 +7989,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:31.292205",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "English-Spanish Conversation Club | Club de conversaci\u00f3n espa\u00f1ol-ingl\u00e9s",
@@ -7968,7 +8072,9 @@
       "end_time": "2:00 PM",
       "scraped_at": "2026-05-21T17:41:31.292291",
       "venue_name": "Apr\u00e8s Pendry",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Art Summer Camps 2026",
@@ -8088,7 +8194,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:31.292394",
       "address": "Alta Peruvian Lawn",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/1V9e_cB9FkCMNASkhWeL7w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/1V9e_cB9FkCMNASkhWeL7w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Art Summer Camps 2026",
@@ -8232,7 +8340,9 @@
       "scraped_at": "2026-05-21T17:41:31.292545",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Tibet: The Roof of the World",
@@ -8313,7 +8423,9 @@
       "scraped_at": "2026-05-21T17:41:32.050611",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Art Summer Camps 2026",
@@ -8377,7 +8489,9 @@
       "scraped_at": "2026-05-21T17:41:32.050663",
       "venue_name": "Canyons Village at Park City",
       "address": "4000 Canyons Resort Drive",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/l-VoK23sYEO_eIlHyeCwqg.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/l-VoK23sYEO_eIlHyeCwqg.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "The Grass Roots",
@@ -8400,7 +8514,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Preschool Storytime",
@@ -8546,7 +8661,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Nate Robinson Music",
@@ -8624,7 +8740,9 @@
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
       "scraped_at": "2026-05-21T17:41:32.774951",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Art Summer Camps 2026",
@@ -8728,7 +8846,9 @@
       "scraped_at": "2026-05-21T17:41:32.775024",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "The Grass Roots",
@@ -8751,7 +8871,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Nate Robinson Music",
@@ -8852,7 +8973,9 @@
       "scraped_at": "2026-05-21T17:41:32.775145",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Swaner Wetland Climbing Wall",
@@ -8897,7 +9020,9 @@
       "scraped_at": "2026-05-21T17:41:32.775184",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Flying Ace All-Stars Freestyle Show",
@@ -8996,7 +9121,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:33.535690",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Sunday Run Club!",
@@ -9100,7 +9227,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:33.535782",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park Silly Sunday Market",
@@ -9227,7 +9356,9 @@
       "end_time": "2:00 PM",
       "scraped_at": "2026-05-21T17:41:33.535873",
       "venue_name": "Canyons Village / Apres at the Airstream",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Art Summer Camps 2026",
@@ -9473,7 +9604,9 @@
       "scraped_at": "2026-05-21T17:41:34.264161",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Horses & Divorces",
@@ -9575,7 +9708,9 @@
       "scraped_at": "2026-05-21T17:41:34.264266",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Twilight Ride Series",
@@ -9889,7 +10024,9 @@
       "scraped_at": "2026-05-21T17:41:35.104230",
       "venue_name": "Main Street",
       "address": "Main Street, Park City, UT 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "CREATE PC Local Artist Collective - Summer/Fall Showcase Launch",
@@ -9929,7 +10066,9 @@
       "scraped_at": "2026-05-21T17:41:35.104259",
       "venue_name": "Newpark Town Center",
       "address": "1476 Newpark Blvd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Chris Baron And Two Secrets at  Miner's Park Concert Series",
@@ -9949,7 +10088,9 @@
       "scraped_at": "2026-05-21T17:41:35.104292",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Wasatch Valley Drifters at  Woodenshoe Park Concert Series",
@@ -9967,7 +10108,9 @@
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
       "scraped_at": "2026-05-21T17:41:35.104306",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Friday Run Club: 6am & 7am!",
@@ -10094,7 +10237,9 @@
       "scraped_at": "2026-05-21T17:41:35.849153",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/me9CRqMgKk2ovo7b_6aexQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Nate Robinson Music",
@@ -10175,7 +10320,9 @@
       "scraped_at": "2026-05-21T17:41:35.849229",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Chris Bender at  Miner's Park Concert Series",
@@ -10195,7 +10342,9 @@
       "scraped_at": "2026-05-21T17:41:35.849243",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Utah Olympic Park Olympic & Paralympic Day 2026",
@@ -10235,7 +10384,9 @@
       "end_time": "",
       "scraped_at": "2026-05-21T17:41:35.849263",
       "address": "415 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/BdBedQzOfEGdneDODZuv4w.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/BdBedQzOfEGdneDODZuv4w.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Cactus Cola at  Savor The Summit",
@@ -10255,7 +10406,9 @@
       "end_time": "",
       "scraped_at": "2026-05-21T17:41:35.849272",
       "address": "415 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/nFGp2tRkSkC2fLVY-jNnjA.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/nFGp2tRkSkC2fLVY-jNnjA.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Spencer Paul at  Sites By Sara Stage at Miner's Park",
@@ -10274,7 +10427,9 @@
       "end_time": "",
       "scraped_at": "2026-05-21T17:41:35.849281",
       "address": "415 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/2NbXmbkljUeaX3x7_lZFgw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/2NbXmbkljUeaX3x7_lZFgw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music On The Patio",
@@ -10294,7 +10449,9 @@
       "scraped_at": "2026-05-21T17:41:35.849301",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Swaner Wetland Climbing Wall",
@@ -10359,7 +10516,9 @@
       "scraped_at": "2026-05-21T17:41:35.849351",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Flying Ace All-Stars Freestyle Show",
@@ -10461,7 +10620,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:36.576576",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Will Baxter Band at  Silver Lake Lawn at Deer Valley",
@@ -10481,7 +10642,9 @@
       "scraped_at": "2026-05-21T17:41:36.576587",
       "venue_name": "Inn At Silver Lake",
       "address": "7560 Royal St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/InD03XiuAUiRxkhxB64bKQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/InD03XiuAUiRxkhxB64bKQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Silver King Rocking Company at  Park Silly Sunday Market",
@@ -10502,7 +10665,9 @@
       "end_time": "",
       "scraped_at": "2026-05-21T17:41:36.576598",
       "address": "9th and Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Vgyi9gWPzEyvscEu0x5ebA.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Vgyi9gWPzEyvscEu0x5ebA.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Chris Baron And Two Secrets at  Park Silly Sunday Market",
@@ -10522,7 +10687,9 @@
       "end_time": "",
       "scraped_at": "2026-05-21T17:41:36.576609",
       "address": "9th and Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Vgyi9gWPzEyvscEu0x5ebA.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Vgyi9gWPzEyvscEu0x5ebA.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Sunday Run Club!",
@@ -10606,7 +10773,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:36.576666",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park Silly Sunday Market",
@@ -10969,7 +11138,9 @@
       "scraped_at": "2026-05-21T17:41:37.393379",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Learn Spanish at the Library!",
@@ -11029,7 +11200,9 @@
       "scraped_at": "2026-05-21T17:41:37.393432",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Main Street Walking Tour",
@@ -11136,7 +11309,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Girls, On Film: An 80s Themed Ladies Night",
@@ -11245,7 +11419,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Nate Robinson Music",
@@ -11285,7 +11460,9 @@
       "scraped_at": "2026-05-21T17:41:38.204908",
       "venue_name": "Comanche Trail Park Amphitheater",
       "address": "2143 Comanche Trl",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WnwWpZKGdUukqq3uqk7yoA.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WnwWpZKGdUukqq3uqk7yoA.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Alicia Stockman at  Newpark Concert Series",
@@ -11305,7 +11482,9 @@
       "scraped_at": "2026-05-21T17:41:38.204923",
       "venue_name": "July 3, 2026 6:00 pm - 8:00 pm",
       "address": "1456 Newpark Clvd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/qmUD_xukIESHJ9G6HMk_TQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/qmUD_xukIESHJ9G6HMk_TQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park Avenue Tours",
@@ -11456,7 +11635,9 @@
       "scraped_at": "2026-05-21T17:41:39.017854",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Crafternoons To-Go Series",
@@ -11479,7 +11660,9 @@
       "scraped_at": "2026-05-21T17:41:39.017912",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Flying Ace All-Stars Freestyle Show",
@@ -11518,7 +11701,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:39.017938",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Sunday Run Club!",
@@ -11580,7 +11765,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:39.017980",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Glenwood Cemetery Tours",
@@ -11620,7 +11807,9 @@
       "end_time": "2:00 PM",
       "scraped_at": "2026-05-21T17:41:39.018009",
       "venue_name": "Canyons Village / Apres at the Airstream",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Main Street Walking Tour",
@@ -11772,7 +11961,9 @@
       "scraped_at": "2026-05-21T17:41:39.885691",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Horses & Divorces",
@@ -11814,7 +12005,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Music On The Patio",
@@ -11834,7 +12026,9 @@
       "scraped_at": "2026-05-21T17:41:39.885733",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
@@ -11959,7 +12153,8 @@
       "scraped_at": "2026-05-21T17:41:39.885839",
       "venue_name": "Park City Mountain",
       "address": "1345 Lowell Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/8bxrhQ4X80Wqe0q5lV33Bw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/8bxrhQ4X80Wqe0q5lV33Bw.large.jpg",
+      "is_free": false
     },
     {
       "title": "Glenwood Cemetery Tours",
@@ -12167,7 +12362,9 @@
       "scraped_at": "2026-05-21T17:41:40.657272",
       "venue_name": "Newpark Town Center",
       "address": "1476 Newpark Blvd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Mister Sister Trio at  Woodenshoe Park Concert Series",
@@ -12185,7 +12382,9 @@
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
       "scraped_at": "2026-05-21T17:41:40.657288",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Headshine at  Woodenshoe Park Concert Series",
@@ -12203,7 +12402,9 @@
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
       "scraped_at": "2026-05-21T17:41:40.657303",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Main Street Walking Tour",
@@ -12453,7 +12654,9 @@
       "scraped_at": "2026-05-21T17:41:40.657565",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Jean Pierre Music at  Miner's Park Concert Series",
@@ -12473,7 +12676,9 @@
       "scraped_at": "2026-05-21T17:41:40.657580",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music On The Patio",
@@ -12493,7 +12698,9 @@
       "scraped_at": "2026-05-21T17:41:41.391004",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Crafternoons To-Go Series",
@@ -12516,7 +12723,9 @@
       "scraped_at": "2026-05-21T17:41:41.391049",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Flying Ace All-Stars Freestyle Show",
@@ -12598,7 +12807,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Cat Mountain at  Billy Blanco's Concert Series",
@@ -12617,7 +12827,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:41.391121",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Sunday Run Club!",
@@ -12679,7 +12891,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:41.391186",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park Silly Sunday Market",
@@ -12858,7 +13072,9 @@
       "scraped_at": "2026-05-21T17:41:42.155286",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
@@ -12898,7 +13114,9 @@
       "scraped_at": "2026-05-21T17:41:42.155321",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Learn Spanish at the Library!",
@@ -12940,7 +13158,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Twilight Ride Series",
@@ -13064,7 +13283,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Nate Robinson Music",
@@ -13107,7 +13327,8 @@
         "Egyptian Theatre",
         "Google Events",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Friday Run Club: 6am & 7am!",
@@ -13194,7 +13415,9 @@
       "scraped_at": "2026-05-21T17:41:42.968793",
       "venue_name": "Newpark Town Center",
       "address": "1476 Newpark Blvd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Friday Nights Live",
@@ -13296,7 +13519,9 @@
       "scraped_at": "2026-05-21T17:41:42.968879",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W6JQsvK4N0-LMadNjtUmQw.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Kenneth Peloke: Year of the Horse",
@@ -13338,7 +13563,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Gorgeous Gourds",
@@ -13442,7 +13668,9 @@
       "scraped_at": "2026-05-21T17:41:43.699332",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "at  Silver Lake Lawn at Deer Valley",
@@ -13460,7 +13688,9 @@
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "scraped_at": "2026-05-21T17:41:43.699359",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Karlie McKinnon at  Miner's Park Concert Series",
@@ -13480,7 +13710,9 @@
       "scraped_at": "2026-05-21T17:41:43.699377",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Crafternoons To-Go Series",
@@ -13503,7 +13735,9 @@
       "scraped_at": "2026-05-21T17:41:43.699389",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Flying Ace All-Stars Freestyle Show",
@@ -13668,7 +13902,9 @@
       "scraped_at": "2026-05-21T17:41:43.699565",
       "venue_name": "Park Silly Sunday Market",
       "address": "780  Main St",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Vgyi9gWPzEyvscEu0x5ebA.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Vgyi9gWPzEyvscEu0x5ebA.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Sunday Craft",
@@ -13688,7 +13924,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:43.699584",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Cactus Cola at  Billy Blanco's Concert Series",
@@ -13707,7 +13945,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:43.699599",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park Silly Sunday Market",
@@ -13752,7 +13992,9 @@
       "end_time": "2:00 PM",
       "scraped_at": "2026-05-21T17:41:43.699648",
       "venue_name": "Canyons Village / Apres at the Airstream",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Tuesday Run Club: 6pm!",
@@ -13854,7 +14096,9 @@
       "scraped_at": "2026-05-21T17:41:44.522557",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Horses & Divorces",
@@ -13899,7 +14143,8 @@
       "_all_sources": [
         "Deer Valley Music Festival",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
@@ -14081,7 +14326,9 @@
       "scraped_at": "2026-05-21T17:41:45.351045",
       "venue_name": "Newpark Town Center",
       "address": "1476 Newpark Blvd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Friday Nights Live",
@@ -14121,7 +14368,9 @@
       "scraped_at": "2026-05-21T17:41:45.351077",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Raccoon Rodeo at  Woodenshoe Park Concert Series",
@@ -14139,7 +14388,9 @@
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
       "scraped_at": "2026-05-21T17:41:45.351093",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Live Music at Silver Lake",
@@ -14282,7 +14533,9 @@
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "scraped_at": "2026-05-21T17:41:45.351242",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Kate MacLeod at  Miner's Park Concert Series",
@@ -14302,7 +14555,9 @@
       "scraped_at": "2026-05-21T17:41:45.351257",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "TJ Gurn at  Miner's Park Concert Series",
@@ -14322,7 +14577,9 @@
       "scraped_at": "2026-05-21T17:41:45.351275",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Crafternoons To-Go Series",
@@ -14345,7 +14602,9 @@
       "scraped_at": "2026-05-21T17:41:46.115602",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Overland Cookery Weekend",
@@ -14406,7 +14665,9 @@
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:46.115730",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "at  Silver Lake Lawn at Deer Valley",
@@ -14424,7 +14685,9 @@
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "scraped_at": "2026-05-21T17:41:46.115745",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Sunday Craft",
@@ -14444,7 +14707,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:46.115758",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "TJ Gurn at  Lucky Ones Coffee Presents / Park City Library Patio",
@@ -14464,7 +14729,9 @@
       "scraped_at": "2026-05-21T17:41:46.115778",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "The Drought at  Billy Blanco's Concert Series",
@@ -14483,7 +14750,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:46.115792",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Michelle Moonshine at  Park City Senior Center",
@@ -14502,7 +14771,9 @@
       "end_time": "2:00 PM",
       "scraped_at": "2026-05-21T17:41:46.115824",
       "venue_name": "Canyons Village / Apres at the Airstream",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Tuesday Run Club: 6pm!",
@@ -14604,7 +14875,9 @@
       "scraped_at": "2026-05-21T17:41:46.904494",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Mozart, Prokofiev, & More",
@@ -14624,7 +14897,8 @@
       "start_time": "8:00 PM",
       "image_url": "https://usuo.org/app/uploads/2026/03/STMARY2-Mozart-Prokofiev-More.jpg",
       "venue_name": "St. Mary's Church",
-      "address": "1505 White Pine Canyon Rd"
+      "address": "1505 White Pine Canyon Rd",
+      "is_free": false
     },
     {
       "title": "Learn Spanish at the Library!",
@@ -14808,7 +15082,9 @@
       "scraped_at": "2026-05-21T17:41:46.904753",
       "venue_name": "Main Street",
       "address": "Main Street, Park City, UT 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Friday Run Club: 6am & 7am!",
@@ -14952,7 +15228,9 @@
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
       "scraped_at": "2026-05-21T17:41:47.750571",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Cosmic Possum at  Newpark Concert Series",
@@ -14972,7 +15250,9 @@
       "scraped_at": "2026-05-21T17:41:47.750586",
       "venue_name": "Newpark Town Center",
       "address": "1476 Newpark Blvd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "at  Silver Lake Lawn at Deer Valley",
@@ -14990,7 +15270,9 @@
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "scraped_at": "2026-05-21T17:41:47.750601",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Friday Nights Live",
@@ -15028,7 +15310,9 @@
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
       "scraped_at": "2026-05-21T17:41:47.750645",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Live Music at Silver Lake",
@@ -15121,7 +15405,9 @@
       "scraped_at": "2026-05-21T17:41:48.487944",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Sunday Run Club!",
@@ -15203,7 +15489,9 @@
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "scraped_at": "2026-05-21T17:41:48.488038",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Sunday Craft",
@@ -15223,7 +15511,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:48.488052",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Shannon and the 3 Kings at  Billy Blanco's Concert Series",
@@ -15242,7 +15532,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:48.488069",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Kate Chanson at  Park City Senior Center",
@@ -15261,7 +15553,9 @@
       "end_time": "",
       "scraped_at": "2026-05-21T17:41:48.488100",
       "venue_name": "Canyons Village / Apres at the Airstream",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Tuesday Run Club: 6pm!",
@@ -15343,7 +15637,9 @@
       "scraped_at": "2026-05-21T17:41:48.488160",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Haydn, Mendelssohn, & A Viola Concerto",
@@ -15363,7 +15659,8 @@
       "image_url": "https://usuo.org/app/uploads/2026/03/STMARY3-Haydn-Mendelssohn-A-Viola-Concerto.jpg",
       "venue_name": "St. Mary's Church",
       "address": "1505 White Pine Canyon Rd",
-      "end_time": "11:00 PM"
+      "end_time": "11:00 PM",
+      "is_free": false
     },
     {
       "title": "Learn Spanish at the Library!",
@@ -15524,7 +15821,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "The Secrets of BBQ with Chef Ryan Arensdorf",
@@ -15629,7 +15927,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "2026 Deer Valley Music Festival: Chicago the Musical In Concert",
@@ -15733,7 +16032,9 @@
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "scraped_at": "2026-05-21T17:41:50.074298",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Friday Nights Live",
@@ -15771,7 +16072,9 @@
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
       "scraped_at": "2026-05-21T17:41:50.074343",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Kimball Arts Festival 2026",
@@ -15861,7 +16164,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "2026 Deer Valley Music Festival: Idina Menzel",
@@ -15968,7 +16272,9 @@
       "scraped_at": "2026-05-21T17:41:50.074573",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Kimball Arts Festival 2026",
@@ -16013,7 +16319,9 @@
       "scraped_at": "2026-05-21T17:41:50.074605",
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/fjqfHCacfEu6WFehJjlvEg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Sunday Run Club!",
@@ -16077,7 +16385,9 @@
       "start_time": "11:00 AM",
       "end_time": "1:00 PM",
       "scraped_at": "2026-05-21T17:41:50.805688",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/-2aOtw9JkUW69GGWdVw1qw.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Wasatch Valley Drifters at  Billy Blanco's Concert Series",
@@ -16096,7 +16406,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:50.805705",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Kimball Arts Festival 2026",
@@ -16221,7 +16533,9 @@
       "scraped_at": "2026-05-21T17:41:50.805819",
       "venue_name": "The Cabin Park City",
       "address": "427 Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/W4GLX6F-rUywsV4dNCDrAQ.large.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Beethoven\u2019s Symphony No. 7",
@@ -16245,7 +16559,8 @@
       "_all_sources": [
         "Deer Valley Music Festival",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
@@ -16424,7 +16739,9 @@
       "scraped_at": "2026-05-21T17:41:51.614326",
       "venue_name": "Newpark Town Center",
       "address": "1476 Newpark Blvd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "at  Silver Lake Lawn at Deer Valley",
@@ -16442,7 +16759,9 @@
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "scraped_at": "2026-05-21T17:41:51.614340",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Live Music at Silver Lake",
@@ -16585,7 +16904,9 @@
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "scraped_at": "2026-05-21T17:41:52.360002",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Rick Gerber at  Miner's Park Concert Series",
@@ -16605,7 +16926,9 @@
       "scraped_at": "2026-05-21T17:41:52.360020",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Casey Ryan at  Miner's Park Concert Series",
@@ -16625,7 +16948,9 @@
       "scraped_at": "2026-05-21T17:41:52.360037",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Liam Given at  Miner's Park Concert Series",
@@ -16645,7 +16970,9 @@
       "scraped_at": "2026-05-21T17:41:52.360051",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "\"Little Chefs\" Culinary Series: Cookie Decorating",
@@ -16703,7 +17030,9 @@
       "start_time": "1:00 PM",
       "end_time": "4:00 PM",
       "scraped_at": "2026-05-21T17:41:52.360112",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Mobius Wave at  Billy Blanco's Concert Series",
@@ -16722,7 +17051,9 @@
       "end_time": "8:00 PM",
       "scraped_at": "2026-05-21T17:41:52.360133",
       "address": "8208 Gorgoza Pines Rd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/rO-3IKtEQ0upKekpD1RG6w.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Ryan Walsh at  Park City Senior Center",
@@ -16742,7 +17073,9 @@
       "scraped_at": "2026-05-21T17:41:52.360164",
       "venue_name": "Canyons Village at Park City",
       "address": "4000 Canyons Resort Drive",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
@@ -16871,7 +17204,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "City Council Meeting",
@@ -16961,7 +17295,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Cory Mon",
@@ -17001,7 +17336,9 @@
       "scraped_at": "2026-05-21T17:41:53.210387",
       "venue_name": "Newpark Town Center",
       "address": "1476 Newpark Blvd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Live Music at Silver Lake",
@@ -17071,7 +17408,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Elemental Harmony: Hormones + Seasons Wellness Cohort (Pt 1)",
@@ -17131,7 +17469,9 @@
       "scraped_at": "2026-05-21T17:41:54.158061",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Brock Gleeson at  Miner's Park Concert Series",
@@ -17151,7 +17491,9 @@
       "scraped_at": "2026-05-21T17:41:54.158076",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/UxkMPsvO_kmYpyXbRYx53g.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Uncork and Create",
@@ -17329,7 +17671,9 @@
       "scraped_at": "2026-05-21T17:41:55.010510",
       "venue_name": "Main Street",
       "address": "Main Street, Park City, UT 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "The Proper Way",
@@ -17376,7 +17720,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Barrage \u00e0 Trois at  Miner's Park Concert Series",
@@ -17396,7 +17741,9 @@
       "scraped_at": "2026-05-21T17:41:55.010608",
       "venue_name": "Historic Main Street",
       "address": "Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "at  Newpark Concert Series",
@@ -17416,7 +17763,9 @@
       "scraped_at": "2026-05-21T17:41:55.010623",
       "venue_name": "Newpark Town Center",
       "address": "1476 Newpark Blvd",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/WPP_pvDA60OalPwgBKaHjg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Live Music at Silver Lake",
@@ -17485,7 +17834,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Wine and Cheese Pairing: Gold Creek Farms & Bon Vivant Imports",
@@ -17528,7 +17878,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Cooking with Precision: A Sous Vide Workshop",
@@ -17567,7 +17918,9 @@
       "end_time": "2:00 PM",
       "scraped_at": "2026-05-21T17:41:55.806314",
       "venue_name": "Canyons Village / Apres at the Airstream",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Angie Petty",
@@ -17822,7 +18175,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Main Street Historic Walking Tour",
@@ -17915,7 +18269,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "A.J. Croce",
@@ -17999,7 +18354,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Live Music at Silver Lake",
@@ -18085,7 +18441,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Divorce Options Workshop",
@@ -18299,7 +18656,9 @@
       "end_time": "2:00 PM",
       "scraped_at": "2026-05-21T17:41:59.142588",
       "venue_name": "Canyons Village / Apres at the Airstream",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/27izYx4SCE2QVb4lVWWLaQ.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Angie Petty",
@@ -18383,7 +18742,9 @@
       "scraped_at": "2026-05-21T17:41:59.142658",
       "venue_name": "Main Street",
       "address": "Main Street, Park City, UT 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Red Cross Blood Drive",
@@ -18426,7 +18787,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Art & Music Gallery Stroll",
@@ -18468,7 +18830,8 @@
       "_all_sources": [
         "Egyptian Theatre",
         "The Park Record"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Park Silly Sunday Market",
@@ -18591,7 +18954,9 @@
       "scraped_at": "2026-05-21T17:42:01.395928",
       "venue_name": "Main Street",
       "address": "Main Street, Park City, UT 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/JF7z481R1E-PAkFnhdI3zg.large.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "D\u00eda de los Muertos",
@@ -18631,7 +18996,9 @@
       "end_time": "7:00 PM",
       "scraped_at": "2026-05-21T17:42:01.396000",
       "venue_name": "Canyons Village / Apres at the Airstream",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG"
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/43e2b54b-f6fc-4703-b784-fd634709467e.large.PNG",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Historic Preservation Board Meeting",
@@ -18896,7 +19263,9 @@
       "address": "Main Street, Park City, UT 84060",
       "lat": 40.6461,
       "lng": -111.498,
-      "scraped_at": "2026-05-21T17:42:24.790428"
+      "scraped_at": "2026-05-21T17:42:24.790428",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Miners Day Parade & Mucking and Drilling Competition",
@@ -18977,7 +19346,9 @@
       "lat": 40.6461,
       "lng": -111.498,
       "date": "2026-11-27",
-      "scraped_at": "2026-05-21T17:42:24.790520"
+      "scraped_at": "2026-05-21T17:42:24.790520",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Last Friday Gallery Stroll",
@@ -18997,7 +19368,9 @@
       "lat": 40.6461,
       "lng": -111.498,
       "date": "2026-12-25",
-      "scraped_at": "2026-05-21T17:42:24.790531"
+      "scraped_at": "2026-05-21T17:42:24.790531",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Group Fitness Classes at Park City Athletic & Rec Center",
@@ -27590,7 +27963,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-05-27",
-      "scraped_at": "2026-05-21T17:42:24.792191"
+      "scraped_at": "2026-05-21T17:42:24.792191",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27611,7 +27986,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-06-03",
-      "scraped_at": "2026-05-21T17:42:24.792199"
+      "scraped_at": "2026-05-21T17:42:24.792199",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27632,7 +28009,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-06-10",
-      "scraped_at": "2026-05-21T17:42:24.792205"
+      "scraped_at": "2026-05-21T17:42:24.792205",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27653,7 +28032,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-06-17",
-      "scraped_at": "2026-05-21T17:42:24.792211"
+      "scraped_at": "2026-05-21T17:42:24.792211",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27674,7 +28055,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-06-24",
-      "scraped_at": "2026-05-21T17:42:24.792217"
+      "scraped_at": "2026-05-21T17:42:24.792217",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27695,7 +28078,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-07-01",
-      "scraped_at": "2026-05-21T17:42:24.792223"
+      "scraped_at": "2026-05-21T17:42:24.792223",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27716,7 +28101,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-07-08",
-      "scraped_at": "2026-05-21T17:42:24.792228"
+      "scraped_at": "2026-05-21T17:42:24.792228",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27737,7 +28124,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-07-15",
-      "scraped_at": "2026-05-21T17:42:24.792234"
+      "scraped_at": "2026-05-21T17:42:24.792234",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27758,7 +28147,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-07-22",
-      "scraped_at": "2026-05-21T17:42:24.792240"
+      "scraped_at": "2026-05-21T17:42:24.792240",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27779,7 +28170,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-07-29",
-      "scraped_at": "2026-05-21T17:42:24.792246"
+      "scraped_at": "2026-05-21T17:42:24.792246",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27800,7 +28193,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-08-05",
-      "scraped_at": "2026-05-21T17:42:24.792252"
+      "scraped_at": "2026-05-21T17:42:24.792252",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27821,7 +28216,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-08-12",
-      "scraped_at": "2026-05-21T17:42:24.792260"
+      "scraped_at": "2026-05-21T17:42:24.792260",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27842,7 +28239,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-08-19",
-      "scraped_at": "2026-05-21T17:42:24.792266"
+      "scraped_at": "2026-05-21T17:42:24.792266",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27863,7 +28262,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-08-26",
-      "scraped_at": "2026-05-21T17:42:24.792272"
+      "scraped_at": "2026-05-21T17:42:24.792272",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27884,7 +28285,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-09-02",
-      "scraped_at": "2026-05-21T17:42:24.792278"
+      "scraped_at": "2026-05-21T17:42:24.792278",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27905,7 +28308,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-09-09",
-      "scraped_at": "2026-05-21T17:42:24.792283"
+      "scraped_at": "2026-05-21T17:42:24.792283",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27926,7 +28331,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-09-16",
-      "scraped_at": "2026-05-21T17:42:24.792289"
+      "scraped_at": "2026-05-21T17:42:24.792289",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27947,7 +28354,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-09-23",
-      "scraped_at": "2026-05-21T17:42:24.792295"
+      "scraped_at": "2026-05-21T17:42:24.792295",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27968,7 +28377,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-09-30",
-      "scraped_at": "2026-05-21T17:42:24.792301"
+      "scraped_at": "2026-05-21T17:42:24.792301",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -27989,7 +28400,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-10-07",
-      "scraped_at": "2026-05-21T17:42:24.792307"
+      "scraped_at": "2026-05-21T17:42:24.792307",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -28010,7 +28423,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-10-14",
-      "scraped_at": "2026-05-21T17:42:24.792313"
+      "scraped_at": "2026-05-21T17:42:24.792313",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Farmers Market",
@@ -28031,7 +28446,9 @@
       "lat": 40.6514,
       "lng": -111.5076,
       "date": "2026-10-21",
-      "scraped_at": "2026-05-21T17:42:24.792321"
+      "scraped_at": "2026-05-21T17:42:24.792321",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Live Music at Silver Lake",
@@ -28085,7 +28502,8 @@
         "Music"
       ],
       "end_time": "10:00 PM",
-      "price_range": "$10-$229"
+      "price_range": "$10-$229",
+      "is_free": false
     },
     {
       "title": "80s Weekend with 38 Special",
@@ -28102,7 +28520,8 @@
         "Music"
       ],
       "end_time": "10:00 PM",
-      "price_range": "$10-$149"
+      "price_range": "$10-$149",
+      "is_free": false
     },
     {
       "title": "80s Weekend with Taylor Dayne and Expos\u00e9",
@@ -28119,7 +28538,8 @@
         "Music"
       ],
       "end_time": "10:00 PM",
-      "price_range": "$10-$149"
+      "price_range": "$10-$149",
+      "is_free": false
     },
     {
       "title": "80s Weekend with Sawyer Brown",
@@ -28136,7 +28556,8 @@
         "Music"
       ],
       "end_time": "10:00 PM",
-      "price_range": "$10-$149"
+      "price_range": "$10-$149",
+      "is_free": false
     },
     {
       "title": "Country Weekend - Mark Chesnutt",
@@ -28153,7 +28574,8 @@
         "Music"
       ],
       "end_time": "10:00 PM",
-      "price_range": "$10-$149"
+      "price_range": "$10-$149",
+      "is_free": false
     },
     {
       "title": "Country Weekend - Lonestar",
@@ -28170,7 +28592,8 @@
         "Music"
       ],
       "end_time": "10:00 PM",
-      "price_range": "$10-$149"
+      "price_range": "$10-$149",
+      "is_free": false
     },
     {
       "title": "Country Weekend - Walker Hayes",
@@ -28187,7 +28610,8 @@
         "Music"
       ],
       "end_time": "10:00 PM",
-      "price_range": "$10-$149"
+      "price_range": "$10-$149",
+      "is_free": false
     },
     {
       "title": "MAX",
@@ -28204,7 +28628,8 @@
         "Music"
       ],
       "end_time": "10:00 PM",
-      "price_range": "$10-$149"
+      "price_range": "$10-$149",
+      "is_free": false
     },
     {
       "title": "Volunteer Opportunity:  Ontario Mine Trailhead \u2013 Huntsman Hiking Trail, \u00a0(Seeking 30 Volunteers)",
@@ -28220,7 +28645,9 @@
         "Volunteer"
       ],
       "start_time": "8:30 AM",
-      "end_time": "12:00 PM"
+      "end_time": "12:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Volunteer Opportunity:  Bonanza Parking Lot \u2013 Anchor Trees Hiking Trail (Seeking 30 Volunteers)",
@@ -28236,7 +28663,9 @@
         "Volunteer"
       ],
       "start_time": "5:00 PM",
-      "end_time": "8:00 PM"
+      "end_time": "8:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Volunteer Opportunity:  Bonanza Parking Lot \u2013 Anchor Trees Hiking Trail (Seeking 30 Volunteers)",
@@ -28252,7 +28681,9 @@
         "Volunteer"
       ],
       "start_time": "8:30 AM",
-      "end_time": "12:00 PM"
+      "end_time": "12:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Volunteer Opportunity:  Loose Moose & Silver Queen (Seeking 20-30 Volunteers)",
@@ -28268,7 +28699,9 @@
         "Volunteer"
       ],
       "start_time": "5:00 PM",
-      "end_time": "8:00 PM"
+      "end_time": "8:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Volunteer Opportunity:  Loose Moose & Silver Queen (Seeking 20-30 Volunteers)",
@@ -28284,7 +28717,9 @@
         "Volunteer"
       ],
       "start_time": "5:00 PM",
-      "end_time": "8:00 PM"
+      "end_time": "8:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Volunteer Opportunity:  National Trails Day/Clark Ranch (Seeking 80 Volunteers)",
@@ -28300,7 +28735,9 @@
         "Volunteer"
       ],
       "start_time": "8:30 AM",
-      "end_time": "12:00 PM"
+      "end_time": "12:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Tour des Suds",
@@ -28314,7 +28751,9 @@
       "lng": -111.491,
       "categories": [
         "Cycling"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Half Marathon",
@@ -28328,7 +28767,9 @@
       "lng": -111.491,
       "categories": [
         "Running"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "10K",
@@ -28342,7 +28783,9 @@
       "lng": -111.491,
       "categories": [
         "Running"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Mid Mountain 50K",
@@ -28359,7 +28802,9 @@
         "Outdoor"
       ],
       "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/456569cb-0f3b-4b1c-af59-7a75eb54f585/Elfsight-Calendar-Size-800X500-px-45-.jpg",
-      "end_time": "3:00 PM"
+      "end_time": "3:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Jupiter Peak 25K",
@@ -28376,7 +28821,9 @@
         "Outdoor"
       ],
       "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/d1d4887c-200f-4089-9e22-87ad41cfebe1/Elfsight-Calendar-Size-800X500-px-39-.jpg",
-      "end_time": "2:00 PM"
+      "end_time": "2:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Round Valley Rambler (7k & Half Marathon)",
@@ -28390,7 +28837,9 @@
       "lng": -111.491,
       "categories": [
         "Running"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Beethoven's Ninth",
@@ -28407,7 +28856,8 @@
         "Concert"
       ],
       "start_time": "7:30 PM",
-      "image_url": "https://usuo.org/app/uploads/2026/03/DVMF1-Beethovens-Symphony-No.-9.jpg"
+      "image_url": "https://usuo.org/app/uploads/2026/03/DVMF1-Beethovens-Symphony-No.-9.jpg",
+      "is_free": false
     },
     {
       "title": "American Music in Provo: Presented by The A-Frame Concert Series \u2014 Park City Opera",
@@ -28692,7 +29142,9 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/5AYJyd3D8U-5hiWqu6Tw0g.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)"
+      "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Chef Sarah Glover Weekend",
@@ -28714,7 +29166,9 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/5AYJyd3D8U-5hiWqu6Tw0g.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)"
+      "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Matilda & Gozney Weekend",
@@ -33250,7 +33704,8 @@
         "Environment",
         "Family",
         "Kids"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Treble Makers Spring Concerts - May 23 and",
@@ -33763,7 +34218,9 @@
       "categories": [
         "Library",
         "Music"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music On The Patio - Every Saturday!",
@@ -33780,7 +34237,9 @@
       "categories": [
         "Library",
         "Music"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music On The Patio - Every Saturday!",
@@ -33797,7 +34256,9 @@
       "categories": [
         "Library",
         "Music"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music On The Patio - Every Saturday!",
@@ -33814,7 +34275,9 @@
       "categories": [
         "Library",
         "Music"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music On The Patio - Every Saturday!",
@@ -33831,7 +34294,9 @@
       "categories": [
         "Library",
         "Music"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music On The Patio - Every Saturday!",
@@ -33848,7 +34313,9 @@
       "categories": [
         "Library",
         "Music"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Summit County Stormwater Coalition hosts Trails, Trash & Tunes",
@@ -33901,7 +34368,9 @@
       "categories": [
         "Music",
         "Library"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Park City Community Foundation's Summer Solstice Event",
@@ -33999,7 +34468,8 @@
       "scraped_at": "2026-05-21T17:44:36.646979",
       "categories": [
         "Wellness"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Debra Fotheringham",
@@ -34478,7 +34948,8 @@
       "scraped_at": "2026-05-21T17:45:01.842213",
       "categories": [
         "Wellness"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Trek 50th anniversary celebration | Heber City",
@@ -34493,7 +34964,8 @@
       "scraped_at": "2026-05-21T17:45:01.842229",
       "categories": [
         "Festival"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "LIVE \"SPIRIT CONNECTION\" EVENT WITH SALT LAKE MEDIUM, JO'ANNE SMITH",
@@ -34509,7 +34981,8 @@
       "start_time": "8:30 PM",
       "categories": [
         "Food & Drink"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Crestal Sinus Lifting With Guided Surgery / Heber City, UT",
@@ -34524,7 +34997,8 @@
       "scraped_at": "2026-05-21T17:45:01.842251",
       "categories": [
         "Education"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Sunday Service Drag Brunch",
@@ -34539,7 +35013,8 @@
       "scraped_at": "2026-05-21T17:45:01.842271",
       "categories": [
         "Food & Drink"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Momentous x POC x Park City Bike Demos",
@@ -34555,7 +35030,8 @@
       "start_time": "8:30 PM",
       "categories": [
         "Community"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "LIVE \"SPIRIT CONNECTION\" EVENT WITH SALT LAKE MEDIUM, JO'ANNE SMITH",
@@ -34571,7 +35047,8 @@
       "start_time": "8:30 PM",
       "categories": [
         "Food & Drink"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Paint & Caffeinate",
@@ -34586,7 +35063,8 @@
       "scraped_at": "2026-05-21T17:45:01.842308",
       "categories": [
         "Community"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "\"The Lake\" Screening",
@@ -34602,7 +35080,8 @@
       "start_time": "9:30 PM",
       "categories": [
         "Film"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Runtastic HEBER: HALF MARATHON",
@@ -35238,7 +35717,9 @@
       "venue_name": "Main Street Park Heber City",
       "facets": [
         "Paid"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Midway Fourth of July Celebration",
@@ -35284,7 +35765,9 @@
       "venue_name": "Wasatch County Library",
       "facets": [
         "Free"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Dominick Antonelli @ Cafe Galleria",
@@ -35412,7 +35895,9 @@
       "venue_name": "Midway Town Square",
       "facets": [
         "Free"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Mountain Valley Special Needs Round Up Rodeo",
@@ -35471,7 +35956,8 @@
       ],
       "facets": [
         "Paid"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Oakley PRCA Rodeo",
@@ -35498,7 +35984,8 @@
       ],
       "facets": [
         "Paid"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Oakley PRCA Rodeo",
@@ -35525,7 +36012,8 @@
       ],
       "facets": [
         "Paid"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Oakley PRCA Rodeo",
@@ -35552,7 +36040,8 @@
       ],
       "facets": [
         "Paid"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Xtreme Bulls \u2014 Presented by Grade Tech",
@@ -35611,7 +36100,9 @@
       "_added_by": "event_overrides.py",
       "categories": [
         "Family"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Patriotic Program \u2014 Oakley Red Barn",
@@ -35652,7 +36143,9 @@
         "Family",
         "Festival",
         "Community"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Oakley Rodeo Men's Slack Events",
@@ -36060,7 +36553,9 @@
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180701.jpg?decache=21-06-38",
-      "date_label": "Last Fri monthly, 6:00 PM - 7:00 PM "
+      "date_label": "Last Fri monthly, 6:00 PM - 7:00 PM ",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Vintage Fashion Train @ Heber Valley Railroad",
@@ -36555,7 +37050,9 @@
       "start_time": "11:30 AM",
       "end_time": "1:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=21-06-38",
-      "date_label": "Blair Education Center, 11:30 AM - 1:00 PM"
+      "date_label": "Blair Education Center, 11:30 AM - 1:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Wasatch County Council Monthly Meetings",
@@ -37218,7 +37715,9 @@
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187506.jpg?decache=21-06-38",
-      "date_label": "7:00 - 10:00 PM"
+      "date_label": "7:00 - 10:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Midway Annual July 4th Celebration",
@@ -38586,7 +39085,9 @@
       ],
       "start_time": "11:30 AM",
       "end_time": "12:00 PM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/04/1991052-Bateman-Bright-Day-Atlantic-Puffins-scaled.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/04/1991052-Bateman-Bright-Day-Atlantic-Puffins-scaled.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Cynthia Starks Photography Gallery Grand Opening!",
@@ -38695,7 +39196,9 @@
       "address": "2820 Rungius Road, Jackson, WY, 83001",
       "venue_name": "National Museum of Wildlife Art",
       "start_time": "11:30 AM",
-      "end_time": "12:00 PM"
+      "end_time": "12:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Wildwood Honkytonk",
@@ -38751,7 +39254,9 @@
       "address": "10 E Snow King, Jackson, WY, 83001",
       "venue_name": "Snow King Mountain Resort",
       "start_time": "2:00 PM",
-      "end_time": "8:00 PM"
+      "end_time": "8:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Best of the West Parade",
@@ -38867,7 +39372,9 @@
       "address": "175 E Broadway, Jackson, WY, 83001",
       "venue_name": "Saturday & Sunday at History Jackson Hole",
       "start_time": "10:00 AM",
-      "end_time": "5:00 PM"
+      "end_time": "5:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music Together Classes",
@@ -38905,7 +39412,9 @@
       ],
       "start_time": "4:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://thecloudveil.com/wp-content/uploads/2023/04/Million_Dollar_Music_Fest_Logo.png"
+      "image_url": "https://thecloudveil.com/wp-content/uploads/2023/04/Million_Dollar_Music_Fest_Logo.png",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Million Dollar Music Fest 2026",
@@ -39132,7 +39641,9 @@
       ],
       "start_time": "5:00 PM",
       "end_time": "7:00 PM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/10/Nov_2022-4-scaled.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/10/Nov_2022-4-scaled.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "\"Bison-tennial\" Community Exhibition Opening",
@@ -39261,7 +39772,9 @@
       ],
       "start_time": "11:30 AM",
       "end_time": "12:00 PM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/01/elephant2-scaled.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/01/elephant2-scaled.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Joseph and the Amazing Technicolor Dreamcoat",
@@ -39338,7 +39851,9 @@
       "address": "2820 Rungius Road, Jackson, WY, 83001",
       "venue_name": "National Museum of Wildlife Art",
       "start_time": "11:30 AM",
-      "end_time": "12:00 PM"
+      "end_time": "12:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Your Brain on Art",
@@ -39377,7 +39892,9 @@
       "address": "105 Mercill Ave, Jackson, WY, 83001",
       "venue_name": "Jackson Hole Childrens Museum",
       "start_time": "10:00 AM",
-      "end_time": "2:00 PM"
+      "end_time": "2:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Teton Behavior Therapy's Family Adventure Race",
@@ -39554,7 +40071,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Raptor Discovery: Masters of the Sky",
@@ -40036,7 +40555,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Pet Partners Team Evaluation",
@@ -40314,7 +40835,9 @@
       "end_time": "1:00 PM",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Plein_Air_Fest_2025-34-scaled_8468DDDF-F7C5-452B-AA7D91CEF2A768A0_d4d4e69d-5887-4d27-832636721ffba2d9.jpg",
       "venue_name": "National Museum of Wildlife Art",
-      "address": "2820 Rungius Road, Jackson, WY, 83001"
+      "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Hybrid - Wilderness First Responder - Recertification",
@@ -40464,7 +40987,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Community Foundation of Jackson Hole Open House",
@@ -40942,7 +41467,9 @@
       "image_url": "https://www.jhcenterforthearts.org/wp-content/uploads/2026/05/Event-Image.jpg",
       "address": "240 S Glenwood St, Jackson, WY, 83001",
       "venue_name": "Center for the Arts",
-      "start_time": "4:00 PM"
+      "start_time": "4:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music Series: Tom Georges",
@@ -40976,7 +41503,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Food in the Tetons People's Market",
@@ -41376,7 +41905,8 @@
       "end_time": "10:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
       "venue_name": "Greenspace on the Block",
-      "address": "155 E. Broadway Ave, Jackson, WY, 83001"
+      "address": "155 E. Broadway Ave, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Trivia Night",
@@ -41434,7 +41964,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false
     },
     {
       "title": "Shaggy + Shwayze at Snow King",
@@ -41488,7 +42019,9 @@
       "address": "10 E. Snow King Avenue, Jackson, WY, 83001",
       "venue_name": "Phil Baux Park",
       "start_time": "12:00 PM",
-      "end_time": "1:00 PM"
+      "end_time": "1:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Shaggy",
@@ -41564,7 +42097,8 @@
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
       "venue_name": "Victor City Park",
-      "address": "80 N Main St, Victor, ID, 83455"
+      "address": "80 N Main St, Victor, ID, 83455",
+      "is_free": false
     },
     {
       "title": "Music Series: Tom Georges",
@@ -41598,7 +42132,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Alive @ 5!",
@@ -41794,7 +42330,8 @@
       "end_time": "11:45 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2025/03/sproutmobilesquare.jpg",
       "venue_name": "Mike Yokel Park",
-      "address": "200 Powderhorn Lane, Jackson, WY, 83001"
+      "address": "200 Powderhorn Lane, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Free Family Jam: Heroes All Around Us",
@@ -41891,7 +42428,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/On-the-Road-outside-at-the-Center.jpg",
       "venue_name": "Center for the Arts",
-      "address": "265 S Cache Street, Jackson, WY, 83001"
+      "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Jayne & Al Hilde, Jr. Patriotic Pops",
@@ -41970,7 +42508,8 @@
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false
     },
     {
       "title": "Classical Music Listening Club at Teton County Library",
@@ -41990,7 +42529,8 @@
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
       "venue_name": "Teton County Library",
-      "address": "125 Virginian Ln, Jackson, WY, 83001-1"
+      "address": "125 Virginian Ln, Jackson, WY, 83001-1",
+      "is_free": false
     },
     {
       "title": "On the Road: Brass Under Blues Skies at Murie Ranch",
@@ -42010,7 +42550,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20240701-gtmf-on-the-road-190-scaled.jpg",
       "venue_name": "Murie Ranch",
-      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012"
+      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012",
+      "is_free": false
     },
     {
       "title": "Gateway Series: The King's Singers",
@@ -42030,7 +42571,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/The-Kings-Singers.png",
       "venue_name": "Center for the Arts Theater",
-      "address": "265 S Cache Street, Jackson, WY, 83001"
+      "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Musical Adventures at Teton Village Commons",
@@ -42050,7 +42592,9 @@
       "address": "3395 Cody Ln, Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "10:00 AM",
-      "end_time": "11:00 AM"
+      "end_time": "11:00 AM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Trivia Night",
@@ -42132,7 +42676,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false
     },
     {
       "title": "Musical Adventures with Valley of the Tetons Library",
@@ -42153,7 +42698,8 @@
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
       "venue_name": "Driggs Plaza",
-      "address": "60 South Main Street, Driggs, ID, 83422"
+      "address": "60 South Main Street, Driggs, ID, 83422",
+      "is_free": false
     },
     {
       "title": "Artful Hour with GTMF",
@@ -42173,7 +42719,8 @@
       "end_time": "6:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/artfulhour-gtmf-2-1-scaled.jpg",
       "venue_name": "Center for the Arts Lawn",
-      "address": "265 S Cache Street, Jackson, WY, 83001"
+      "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Teton House Concert: In Harmony",
@@ -42193,7 +42740,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert_-In-Harmony.png",
       "venue_name": "Private Home, Shooting Star",
-      "address": "Jackson, WY"
+      "address": "Jackson, WY",
+      "is_free": false
     },
     {
       "title": "Music Series: Tom Georges",
@@ -42227,7 +42775,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Food in the Tetons People's Market",
@@ -42288,7 +42838,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-Series-July-9.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Yoga on the Trail",
@@ -42423,7 +42974,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-July-10.png"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-July-10.png",
+      "is_free": false
     },
     {
       "title": "Festival Orchestra: Rachmaninoff & Tchaikovsky\u2019s Fifth",
@@ -42443,7 +42995,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Rachmaninoff-Tchaik-5.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Music Series: Tom Georges",
@@ -42518,7 +43071,8 @@
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/Alta-WY-GTMF_July12_OnTheRoad_2025_0261-1.jpg",
       "venue_name": "Teton County Library in Alta",
-      "address": "50 Alta School Rd., Alta, WY, 83414"
+      "address": "50 Alta School Rd., Alta, WY, 83414",
+      "is_free": false
     },
     {
       "title": "Festival Orchestra: Rachmaninoff & Tchaikovsky\u2019s Fifth",
@@ -42538,7 +43092,8 @@
       "end_time": "8:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Rachmaninoff-Tchaik-5.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Music Together Classes",
@@ -42595,7 +43150,8 @@
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false
     },
     {
       "title": "On the Road: Celestial Sounds at Murie Ranch",
@@ -42615,7 +43171,8 @@
       "end_time": "10:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20240701-gtmf-on-the-road-190-scaled.jpg",
       "venue_name": "Murie Ranch",
-      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012"
+      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012",
+      "is_free": false
     },
     {
       "title": "Max McNown",
@@ -42729,7 +43286,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false
     },
     {
       "title": "Teton House Concert: The Harp\u2019s Voice",
@@ -42749,7 +43307,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert-The-Harps-Voice-2.png",
       "venue_name": "Private Home, John Dodge Road",
-      "address": "Jackson, WY"
+      "address": "Jackson, WY",
+      "is_free": false
     },
     {
       "title": "Max McNown + The Jack Wharff Band at Snow King",
@@ -42799,7 +43358,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Food in the Tetons People's Market",
@@ -42879,7 +43440,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-July-16.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Paul Cauthen + Jamestown Revival at Snow King",
@@ -42991,7 +43553,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-July-17.png"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-July-17.png",
+      "is_free": false
     },
     {
       "title": "Teton Music School Strings Camp Performance",
@@ -43008,7 +43571,8 @@
       ],
       "start_time": "2:30 PM",
       "end_time": "3:30 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/F57E7CE3-03FE-4ECE-9A91-C1D30E4FE9F7-scaled-e1775511971404.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/F57E7CE3-03FE-4ECE-9A91-C1D30E4FE9F7-scaled-e1775511971404.jpg",
+      "is_free": false
     },
     {
       "title": "Festival Orchestra: Shostakovich & Mozart\u2019s Clarinet Concerto",
@@ -43028,7 +43592,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/2-2.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Dylan Gossett + Sons of Habit at Snow King",
@@ -43137,7 +43702,8 @@
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2025/08/20250727-gtmf-runnicles-scholarship-284-Enhanced-NR-1.jpg",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Rd, Jackson, WY, 83001"
+      "address": "1910 High School Rd, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Festival Orchestra: Shostakovich & Mozart\u2019s Clarinet Concerto",
@@ -43157,7 +43723,8 @@
       "end_time": "8:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/2-2.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Teton County Fair",
@@ -43234,7 +43801,8 @@
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250727-gtmf-runnicles-scholarship-410-Enhanced-NR-1-scaled.jpg",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Rd, Jackson, WY, 83001"
+      "address": "1910 High School Rd, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Teton County Fair",
@@ -43268,7 +43836,8 @@
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false
     },
     {
       "title": "Classical Music Listening Club at Teton County Library",
@@ -43288,7 +43857,8 @@
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
       "venue_name": "Teton County Library",
-      "address": "125 Virginian Ln, Jackson, WY, 83001"
+      "address": "125 Virginian Ln, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Downtown Sounds: Strings & Arias",
@@ -43309,7 +43879,8 @@
       "end_time": "8:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/DDAConcertJuly37-scaled.jpg",
       "venue_name": "Driggs Plaza",
-      "address": "60 South Main Street, Driggs, ID, 83422"
+      "address": "60 South Main Street, Driggs, ID, 83422",
+      "is_free": false
     },
     {
       "title": "Teton County Fair",
@@ -43422,7 +43993,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false
     },
     {
       "title": "On the Road: Out West at Jackson Hole History Museum",
@@ -43439,7 +44011,8 @@
       ],
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/history-otr-gtmf-3-1-scaled-e1775165708204.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/history-otr-gtmf-3-1-scaled-e1775165708204.jpg",
+      "is_free": false
     },
     {
       "title": "Teton County Fair",
@@ -43509,7 +44082,9 @@
       "address": "175 E Broadway Ave, Jackson, WY, 83001",
       "venue_name": "Jackson Hole History Museum",
       "start_time": "6:00 PM",
-      "end_time": "7:00 PM"
+      "end_time": "7:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music at Hole Food Rescue Sprout Mobile at Mike Yokel Park",
@@ -43529,7 +44104,8 @@
       "end_time": "11:45 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2025/03/sproutmobilesquare.jpg",
       "venue_name": "Mike Yokel Park",
-      "address": "Jackson, WY, 83001"
+      "address": "Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Music at Hole Food Rescue\u2019s Sprout Mobile at Powderhorn Park",
@@ -43549,7 +44125,8 @@
       "end_time": "1:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/IMG_1086-scaled-e1775164903397.jpg",
       "venue_name": "Powderhorn Park",
-      "address": "200 Powderhorn Lane, Jackson, WY, 83001"
+      "address": "200 Powderhorn Lane, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Teton County Fair",
@@ -43616,7 +44193,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Jordan Davis",
@@ -43819,7 +44398,8 @@
       "end_time": "8:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/Teton-Village-Commons-edited-scaled.jpg",
       "venue_name": "Teton Village Commons",
-      "address": "Teton Village, WY, 83025"
+      "address": "Teton Village, WY, 83025",
+      "is_free": false
     },
     {
       "title": "Teton County Fair",
@@ -43927,7 +44507,8 @@
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/IMG_3717-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/IMG_3717-scaled.jpg",
+      "is_free": false
     },
     {
       "title": "Fantasia 2026",
@@ -43947,7 +44528,8 @@
       "end_time": "7:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Fantasia-2026.png",
       "venue_name": "Teton Village Commons",
-      "address": "Teton Village, WY, 83025"
+      "address": "Teton Village, WY, 83025",
+      "is_free": false
     },
     {
       "title": "Teton County Fair",
@@ -43983,7 +44565,9 @@
       "address": "170 N. Glenwood Street, Jackson, WY, 83001",
       "venue_name": "St. John's Episcopal Church",
       "start_time": "1:00 PM",
-      "end_time": "2:00 PM"
+      "end_time": "2:00 PM",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Music Together Classes",
@@ -44057,7 +44641,8 @@
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false
     },
     {
       "title": "Classical Music Listening Club at Teton County Library",
@@ -44077,7 +44662,8 @@
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
       "venue_name": "Teton County Library",
-      "address": "125 Virginian Ln, Jackson, WY, 83001"
+      "address": "125 Virginian Ln, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Community Bluegrass Jam",
@@ -44097,7 +44683,8 @@
       "end_time": "6:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20250717-gtmf-community-jam-289-1-scaled.jpg",
       "venue_name": "Center for the Arts Lawn",
-      "address": "265 S Cache Street, Jackson, WY, 83001"
+      "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Gateway Series: Punch Brothers",
@@ -44117,7 +44704,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/1684-SHOT_03_0039_V1-scaled.jpg",
       "venue_name": "Center for the Arts Theater",
-      "address": "265 S Cache Street, Jackson, WY, 83001"
+      "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Trivia Night",
@@ -44196,7 +44784,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false
     },
     {
       "title": "Musical Adventures with Valley of the Tetons Library",
@@ -44214,7 +44803,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
+      "is_free": false
     },
     {
       "title": "Teton House Concert: Stradivarius Spotlighted",
@@ -44234,7 +44824,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert-Stradivarius-Spotlighted.png",
       "venue_name": "Private Home, Crescent H Road",
-      "address": "Jackson, WY"
+      "address": "Jackson, WY",
+      "is_free": false
     },
     {
       "title": "Fitz & The Tantrums + Thunder Jackson at Snow King",
@@ -44267,7 +44858,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Fitz And The Tantrums",
@@ -44343,7 +44936,8 @@
       ],
       "start_time": "12:00 PM",
       "end_time": "1:00 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2025/03/sproutmobilesquare.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2025/03/sproutmobilesquare.jpg",
+      "is_free": false
     },
     {
       "title": "On the Road: Reeds and Raptors at Teton Raptor Center",
@@ -44363,7 +44957,8 @@
       "end_time": "4:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250719-gtmf-on-the-road-087-Enhanced-NR-1-scaled-e1775166713311.jpg",
       "venue_name": "Teton Raptor Center",
-      "address": "5450 W Hwy 22, Wilson, WY, 83014"
+      "address": "5450 W Hwy 22, Wilson, WY, 83014",
+      "is_free": false
     },
     {
       "title": "Benoliel Chamber Music Series: Fairy Tales, Four Seasons & A World Premiere",
@@ -44383,7 +44978,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-July-30.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Yoga on the Trail",
@@ -44480,7 +45076,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-July-31.png"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-July-31.png",
+      "is_free": false
     },
     {
       "title": "Festival Orchestra: Melodies of Britain",
@@ -44500,7 +45097,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Melodies-of-Britain.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Alabama Shakes + Billy Allen + The Pollies at Snow King",
@@ -44610,7 +45208,8 @@
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/26CA2C16-4E6F-43F0-A143-614E8AA319EF-1-scaled-e1775166894173.jpg",
       "venue_name": "Shepherd of the Mountains Church",
-      "address": "750 Seneca Ln, Jackson, WY, 83001"
+      "address": "750 Seneca Ln, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Festival Orchestra: Melodies of Britain",
@@ -44630,7 +45229,8 @@
       "end_time": "8:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Melodies-of-Britain.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Alabama Shakes + Billy Allen + The Pollies at Snow King",
@@ -44703,7 +45303,8 @@
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false
     },
     {
       "title": "Classical Music Listening Club at Teton County Library",
@@ -44720,7 +45321,8 @@
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
+      "is_free": false
     },
     {
       "title": "On the Road: Up Close and Personal at Murie Ranch",
@@ -44740,7 +45342,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20240701-gtmf-on-the-road-190-scaled.jpg",
       "venue_name": "Murie Ranch",
-      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012"
+      "address": "Moose St, Grand Teton National Park, Moose, WY, 83012",
+      "is_free": false
     },
     {
       "title": "Gateway Series: Give Our Regards to Broadway",
@@ -44760,7 +45363,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Give-Our-Regards-to-Broadway.png",
       "venue_name": "Center for the Arts Theater",
-      "address": "265 S Cache Street, Jackson, WY, 83001"
+      "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Trivia Night",
@@ -44838,7 +45442,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false
     },
     {
       "title": "Musical Adventures with Valley of the Tetons Library",
@@ -44856,7 +45461,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
+      "is_free": false
     },
     {
       "title": "Teton House Concert: Flute in Focus",
@@ -44876,7 +45482,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert-Flute-in-Focus.png",
       "venue_name": "Private Home, Fall Creek Road",
-      "address": "Jackson, WY"
+      "address": "Jackson, WY",
+      "is_free": false
     },
     {
       "title": "Walk-Up Wednesdays",
@@ -44893,7 +45500,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Food in the Tetons People's Market",
@@ -44954,7 +45563,8 @@
       "end_time": "6:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Alive-at-Five2-scaled.jpg",
       "venue_name": "Teton Village Commons",
-      "address": "3395 Cody Lane, Teton Village, WY, 83025"
+      "address": "3395 Cody Lane, Teton Village, WY, 83025",
+      "is_free": false
     },
     {
       "title": "Benoliel Chamber Music Series: From the Heart",
@@ -44974,7 +45584,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-Aug-6.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Parcels + Night Tapes at Snow King",
@@ -45162,7 +45773,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-Aug-7.png"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-Aug-7.png",
+      "is_free": false
     },
     {
       "title": "Festival Orchestra: Beethoven & Korngold",
@@ -45182,7 +45794,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Beethoven-Korngold.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Fables, Feathers & Fur",
@@ -45240,7 +45853,8 @@
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/5E6BEA93-BCF0-44A7-B744-865B62AAD118-scaled.jpg",
       "venue_name": "Pierre's Theatre",
-      "address": "37 N Main St, Victor, ID, 83455"
+      "address": "37 N Main St, Victor, ID, 83455",
+      "is_free": false
     },
     {
       "title": "Festival Orchestra: Beethoven & Korngold",
@@ -45260,7 +45874,8 @@
       "end_time": "8:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Beethoven-Korngold.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY"
+      "address": "1910 High School Road, Jackson, WY",
+      "is_free": false
     },
     {
       "title": "Music Together Classes",
@@ -45298,7 +45913,8 @@
       ],
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false
     },
     {
       "title": "Classical Music Listening Club at Teton County Library",
@@ -45315,7 +45931,8 @@
       ],
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
+      "is_free": false
     },
     {
       "title": "Trivia Night",
@@ -45373,7 +45990,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false
     },
     {
       "title": "MusicLand/JHYO Camp Performance",
@@ -45393,7 +46011,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/4D8D27F1-55E5-400A-BBCB-162D3E94C678-scaled.jpg",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "The Fix \u2013 Barbara McQuade on saving America from the corruption of a mob-style government",
@@ -45433,7 +46052,8 @@
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
       "venue_name": "Driggs Plaza",
-      "address": "60 South Main Street, Driggs, Driggs, ID, 83422"
+      "address": "60 South Main Street, Driggs, Driggs, ID, 83422",
+      "is_free": false
     },
     {
       "title": "Walk-Up Wednesdays",
@@ -45450,7 +46070,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Food in the Tetons People's Market",
@@ -45530,7 +46152,8 @@
       "end_time": "6:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Alive-at-Five2-scaled.jpg",
       "venue_name": "Teton Village Commons",
-      "address": "3395 Cody Lane, Teton Village, WY, 83025"
+      "address": "3395 Cody Lane, Teton Village, WY, 83025",
+      "is_free": false
     },
     {
       "title": "Benoliel Chamber Music Series Finale: Little Miracles",
@@ -45550,7 +46173,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-Aug-13.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Yoga on the Trail",
@@ -45666,7 +46290,8 @@
       ],
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
-      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-Aug-14.png"
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-Aug-14.png",
+      "is_free": false
     },
     {
       "title": "Coombs Ukulele Club Performance",
@@ -45686,7 +46311,8 @@
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/DSC09297-1-scaled.jpg",
       "venue_name": "Jackson Hole High School Auditorium Lobby",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Festival Orchestra Finale: Night at the Opera",
@@ -45706,7 +46332,8 @@
       "end_time": "9:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Night-at-the-Opera.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Fables, Feathers & Fur",
@@ -45781,7 +46408,8 @@
       "end_time": "8:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Night-at-the-Opera.png",
       "venue_name": "Jackson Hole High School Auditorium",
-      "address": "1910 High School Road, Jackson, WY, 83001"
+      "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false
     },
     {
       "title": "Music Together Classes",
@@ -45894,7 +46522,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Food in the Tetons People's Market",
@@ -46232,7 +46862,9 @@
       ],
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
-      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg"
+      "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Slow Food in the Tetons People's Market",
@@ -48906,7 +49538,9 @@
       "scraped_at": "2026-05-21T13:20:37.650654",
       "facets": [
         "Free"
-      ]
+      ],
+      "is_free": true,
+      "price": "Free"
     },
     {
       "title": "Vintage Concours d'Elegance - Sportscars",
@@ -53095,7 +53729,8 @@
       "link": "https://tickets.holdmyticket.com/seats/458386",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/n3hu82s2vfx5x9v8nuyl.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Chris Isaak",
@@ -53109,7 +53744,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462411?tc=website",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/jwfcmkq8yagbyy9vuzac.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Chris Isaak",
@@ -53123,7 +53759,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462414",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/jwfcmkq8yagbyy9vuzac.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Chris Isaak",
@@ -53137,7 +53774,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462415",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/jwfcmkq8yagbyy9vuzac.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Fred Tackett & Scott Sharrard (of Little Feat)",
@@ -53151,7 +53789,8 @@
       "link": "https://tickets.holdmyticket.com/seats/460647?tc=website",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/kqufgcmqm0e1i7bbczhg.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Fred Tackett & Scott Sharrard (of Little Feat)",
@@ -53165,7 +53804,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461161",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/kqufgcmqm0e1i7bbczhg.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Fred Tackett & Scott Sharrard (of Little Feat)",
@@ -53179,7 +53819,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461163",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/kqufgcmqm0e1i7bbczhg.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Fred Tackett & Scott Sharrard (of Little Feat)",
@@ -53193,7 +53834,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461162",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/kqufgcmqm0e1i7bbczhg.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Frozen - The Live Musical",
@@ -53207,7 +53849,8 @@
       "link": "https://tickets.holdmyticket.com/seats/456261",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Frozen - The Live Musical",
@@ -53221,7 +53864,8 @@
       "link": "https://tickets.holdmyticket.com/seats/456262",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zmxu6n9i6qlpwr4clj0u.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Frozen - The Live Musical",
@@ -53238,7 +53882,8 @@
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "_all_sources": [
         "Egyptian Theatre"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Little Shop of Horrors",
@@ -53252,7 +53897,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462829?tc=website",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Little Shop of Horrors",
@@ -53266,7 +53912,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462830",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Little Shop of Horrors",
@@ -53280,7 +53927,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462832",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Little Shop of Horrors",
@@ -53297,7 +53945,8 @@
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "_all_sources": [
         "Egyptian Theatre"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Little Shop of Horrors",
@@ -53311,7 +53960,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462833",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/d13vw0bc696wnkszy8bn.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Mason Jennings",
@@ -53325,7 +53975,8 @@
       "link": "https://tickets.holdmyticket.com/seats/459160?tc=website",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/vrnc69561agpqcp9zk55.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Shrek The Musical Jr.",
@@ -53339,7 +53990,8 @@
       "link": "https://tickets.holdmyticket.com/seats/460787?tc=website",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/b1el401sreswek19cm5y.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Shrek The Musical Jr.",
@@ -53356,7 +54008,8 @@
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "_all_sources": [
         "Egyptian Theatre"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Something Rotten!",
@@ -53370,7 +54023,8 @@
       "link": "https://tickets.holdmyticket.com/seats/454355",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Something Rotten!",
@@ -53384,7 +54038,8 @@
       "link": "https://tickets.holdmyticket.com/seats/454357",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Something Rotten!",
@@ -53401,7 +54056,8 @@
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "_all_sources": [
         "Egyptian Theatre"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Something Rotten!",
@@ -53415,7 +54071,8 @@
       "link": "https://tickets.holdmyticket.com/seats/454358",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/p8kilfgwj08eausjx1h8.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "THE BABYS",
@@ -53429,7 +54086,8 @@
       "link": "https://tickets.holdmyticket.com/seats/459901?tc=website",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/obv0mvfvbtq2lxgqw3kn.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "THE BABYS",
@@ -53443,7 +54101,8 @@
       "link": "https://tickets.holdmyticket.com/seats/459902",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/obv0mvfvbtq2lxgqw3kn.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "THE BABYS",
@@ -53457,7 +54116,8 @@
       "link": "https://tickets.holdmyticket.com/seats/459903",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/obv0mvfvbtq2lxgqw3kn.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "The Drifters",
@@ -53471,7 +54131,8 @@
       "link": "https://tickets.holdmyticket.com/seats/456529",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/a7dx5vxmubq5nr4th292.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "The Drifters",
@@ -53485,7 +54146,8 @@
       "link": "https://tickets.holdmyticket.com/seats/456528",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/a7dx5vxmubq5nr4th292.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "The SteelDrivers",
@@ -53499,7 +54161,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462537?tc=website",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zceewrkfphlhuisamdlw.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "The SteelDrivers",
@@ -53513,7 +54176,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462543",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zceewrkfphlhuisamdlw.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "The SteelDrivers",
@@ -53527,7 +54191,8 @@
       "link": "https://tickets.holdmyticket.com/seats/462546",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/zceewrkfphlhuisamdlw.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "The Sweet",
@@ -53541,7 +54206,8 @@
       "link": "https://tickets.holdmyticket.com/seats/460648?tc=website",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/sxt7gh22j0zz0h0yhnf0.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "The Sweet",
@@ -53555,7 +54221,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461165",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/sxt7gh22j0zz0h0yhnf0.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "The Sweet",
@@ -53569,7 +54236,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461164",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/sxt7gh22j0zz0h0yhnf0.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Thriller - Odyssey Dance Theatre",
@@ -53583,7 +54251,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461061?tc=website",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Thriller - Odyssey Dance Theatre",
@@ -53597,7 +54266,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461063",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Thriller - Odyssey Dance Theatre",
@@ -53611,7 +54281,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461068",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Thriller - Odyssey Dance Theatre",
@@ -53628,7 +54299,8 @@
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "_all_sources": [
         "Egyptian Theatre"
-      ]
+      ],
+      "is_free": false
     },
     {
       "title": "Thriller - Odyssey Dance Theatre",
@@ -53642,7 +54314,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461069",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Thriller - Odyssey Dance Theatre",
@@ -53656,7 +54329,8 @@
       "link": "https://tickets.holdmyticket.com/seats/461064",
       "image_url": "https://files.holdmyticket.com/image/upload/q_68,dn_72,f_auto/v6/uploads/flyers2/3coa1ra0sernebojp67q.jpg",
       "source": "Egyptian Theatre",
-      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows"
+      "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
+      "is_free": false
     },
     {
       "title": "Thriller - Odyssey Dance Theatre",
@@ -53673,7 +54347,8 @@
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "_all_sources": [
         "Egyptian Theatre"
-      ]
+      ],
+      "is_free": false
     }
   ]
 }

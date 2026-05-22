@@ -6,7 +6,7 @@
     "lng": -110.7624
   },
   "radius_mi": 20,
-  "generated_at": "2026-05-21T18:56:08.031775-06:00",
+  "generated_at": "2026-05-21T20:21:45.134079-06:00",
   "today": "2026-05-21",
   "event_count": 518,
   "events": [
@@ -616,6 +616,8 @@
       "start_time": "11:30 AM",
       "end_time": "12:00 PM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/04/1991052-Bateman-Bright-Day-Atlantic-Puffins-scaled.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -731,6 +733,8 @@
       "venue_name": "National Museum of Wildlife Art",
       "start_time": "11:30 AM",
       "end_time": "12:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -790,6 +794,8 @@
       "venue_name": "Snow King Mountain Resort",
       "start_time": "2:00 PM",
       "end_time": "8:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -912,6 +918,8 @@
       "venue_name": "Saturday & Sunday at History Jackson Hole",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -952,6 +960,8 @@
       "start_time": "4:00 PM",
       "end_time": "10:00 PM",
       "image_url": "https://thecloudveil.com/wp-content/uploads/2023/04/Million_Dollar_Music_Fest_Logo.png",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -1191,6 +1201,8 @@
       "start_time": "5:00 PM",
       "end_time": "7:00 PM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/10/Nov_2022-4-scaled.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -1327,6 +1339,8 @@
       "start_time": "11:30 AM",
       "end_time": "12:00 PM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2026/01/elephant2-scaled.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -1408,6 +1422,8 @@
       "venue_name": "National Museum of Wildlife Art",
       "start_time": "11:30 AM",
       "end_time": "12:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -1449,6 +1465,8 @@
       "venue_name": "Jackson Hole Childrens Museum",
       "start_time": "10:00 AM",
       "end_time": "2:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -1635,6 +1653,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -2142,6 +2162,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -2435,6 +2457,8 @@
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/Plein_Air_Fest_2025-34-scaled_8468DDDF-F7C5-452B-AA7D91CEF2A768A0_d4d4e69d-5887-4d27-832636721ffba2d9.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -2593,6 +2617,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -3096,6 +3122,8 @@
       "address": "240 S Glenwood St, Jackson, WY, 83001",
       "venue_name": "Center for the Arts",
       "start_time": "4:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -3132,6 +3160,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -3553,6 +3583,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
       "venue_name": "Greenspace on the Block",
       "address": "155 E. Broadway Ave, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -3614,6 +3645,7 @@
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -3671,6 +3703,8 @@
       "venue_name": "Phil Baux Park",
       "start_time": "12:00 PM",
       "end_time": "1:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -3751,6 +3785,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
       "venue_name": "Victor City Park",
       "address": "80 N Main St, Victor, ID, 83455",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -3787,6 +3822,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -3993,6 +4030,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2025/03/sproutmobilesquare.jpg",
       "venue_name": "Mike Yokel Park",
       "address": "200 Powderhorn Lane, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4095,6 +4133,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/On-the-Road-outside-at-the-Center.jpg",
       "venue_name": "Center for the Arts",
       "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4178,6 +4217,7 @@
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4199,6 +4239,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
       "venue_name": "Teton County Library",
       "address": "125 Virginian Ln, Jackson, WY, 83001-1",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4220,6 +4261,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20240701-gtmf-on-the-road-190-scaled.jpg",
       "venue_name": "Murie Ranch",
       "address": "Moose St, Grand Teton National Park, Moose, WY, 83012",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4241,6 +4283,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/The-Kings-Singers.png",
       "venue_name": "Center for the Arts Theater",
       "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4262,6 +4305,8 @@
       "venue_name": "Teton Village Commons",
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -4348,6 +4393,7 @@
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4370,6 +4416,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
       "venue_name": "Driggs Plaza",
       "address": "60 South Main Street, Driggs, ID, 83422",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4391,6 +4438,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/artfulhour-gtmf-2-1-scaled.jpg",
       "venue_name": "Center for the Arts Lawn",
       "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4412,6 +4460,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert_-In-Harmony.png",
       "venue_name": "Private Home, Shooting Star",
       "address": "Jackson, WY",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4448,6 +4497,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -4512,6 +4563,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-Series-July-9.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4654,6 +4706,7 @@
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-July-10.png",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4675,6 +4728,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Rachmaninoff-Tchaik-5.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4754,6 +4808,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/Alta-WY-GTMF_July12_OnTheRoad_2025_0261-1.jpg",
       "venue_name": "Teton County Library in Alta",
       "address": "50 Alta School Rd., Alta, WY, 83414",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4775,6 +4830,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Rachmaninoff-Tchaik-5.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4835,6 +4891,7 @@
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4856,6 +4913,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20240701-gtmf-on-the-road-190-scaled.jpg",
       "venue_name": "Murie Ranch",
       "address": "Moose St, Grand Teton National Park, Moose, WY, 83012",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4976,6 +5034,7 @@
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4997,6 +5056,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert-The-Harps-Voice-2.png",
       "venue_name": "Private Home, John Dodge Road",
       "address": "Jackson, WY",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5050,6 +5110,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -5134,6 +5196,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-July-16.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5252,6 +5315,7 @@
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-July-17.png",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5270,6 +5334,7 @@
       "start_time": "2:30 PM",
       "end_time": "3:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/F57E7CE3-03FE-4ECE-9A91-C1D30E4FE9F7-scaled-e1775511971404.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5291,6 +5356,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/2-2.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5406,6 +5472,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2025/08/20250727-gtmf-runnicles-scholarship-284-Enhanced-NR-1.jpg",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Rd, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5427,6 +5494,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/2-2.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5508,6 +5576,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250727-gtmf-runnicles-scholarship-410-Enhanced-NR-1-scaled.jpg",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Rd, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5544,6 +5613,7 @@
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5565,6 +5635,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
       "venue_name": "Teton County Library",
       "address": "125 Virginian Ln, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5587,6 +5658,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/DDAConcertJuly37-scaled.jpg",
       "venue_name": "Driggs Plaza",
       "address": "60 South Main Street, Driggs, ID, 83422",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5706,6 +5778,7 @@
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5724,6 +5797,7 @@
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/history-otr-gtmf-3-1-scaled-e1775165708204.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5798,6 +5872,8 @@
       "venue_name": "Jackson Hole History Museum",
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -5819,6 +5895,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2025/03/sproutmobilesquare.jpg",
       "venue_name": "Mike Yokel Park",
       "address": "Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5840,6 +5917,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/IMG_1086-scaled-e1775164903397.jpg",
       "venue_name": "Powderhorn Park",
       "address": "200 Powderhorn Lane, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -5911,6 +5989,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -6124,6 +6204,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/Teton-Village-Commons-edited-scaled.jpg",
       "venue_name": "Teton Village Commons",
       "address": "Teton Village, WY, 83025",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6238,6 +6319,7 @@
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/IMG_3717-scaled.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6259,6 +6341,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Fantasia-2026.png",
       "venue_name": "Teton Village Commons",
       "address": "Teton Village, WY, 83025",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6297,6 +6380,8 @@
       "venue_name": "St. John's Episcopal Church",
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -6375,6 +6460,7 @@
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6396,6 +6482,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
       "venue_name": "Teton County Library",
       "address": "125 Virginian Ln, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6417,6 +6504,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20250717-gtmf-community-jam-289-1-scaled.jpg",
       "venue_name": "Center for the Arts Lawn",
       "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6438,6 +6526,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/1684-SHOT_03_0039_V1-scaled.jpg",
       "venue_name": "Center for the Arts Theater",
       "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6521,6 +6610,7 @@
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6540,6 +6630,7 @@
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6561,6 +6652,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert-Stradivarius-Spotlighted.png",
       "venue_name": "Private Home, Crescent H Road",
       "address": "Jackson, WY",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6596,6 +6688,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -6676,6 +6770,7 @@
       "start_time": "12:00 PM",
       "end_time": "1:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2025/03/sproutmobilesquare.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6697,6 +6792,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250719-gtmf-on-the-road-087-Enhanced-NR-1-scaled-e1775166713311.jpg",
       "venue_name": "Teton Raptor Center",
       "address": "5450 W Hwy 22, Wilson, WY, 83014",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6718,6 +6814,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-July-30.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6820,6 +6917,7 @@
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-July-31.png",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6841,6 +6939,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Melodies-of-Britain.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6957,6 +7056,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/26CA2C16-4E6F-43F0-A143-614E8AA319EF-1-scaled-e1775166894173.jpg",
       "venue_name": "Shepherd of the Mountains Church",
       "address": "750 Seneca Ln, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -6978,6 +7078,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Melodies-of-Britain.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7055,6 +7156,7 @@
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7073,6 +7175,7 @@
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7094,6 +7197,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/20240701-gtmf-on-the-road-190-scaled.jpg",
       "venue_name": "Murie Ranch",
       "address": "Moose St, Grand Teton National Park, Moose, WY, 83012",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7115,6 +7219,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Give-Our-Regards-to-Broadway.png",
       "venue_name": "Center for the Arts Theater",
       "address": "265 S Cache Street, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7197,6 +7302,7 @@
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7216,6 +7322,7 @@
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7237,6 +7344,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert-Flute-in-Focus.png",
       "venue_name": "Private Home, Fall Creek Road",
       "address": "Jackson, WY",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7255,6 +7363,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -7319,6 +7429,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Alive-at-Five2-scaled.jpg",
       "venue_name": "Teton Village Commons",
       "address": "3395 Cody Lane, Teton Village, WY, 83025",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7340,6 +7451,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-Aug-6.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7538,6 +7650,7 @@
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-Aug-7.png",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7559,6 +7672,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Beethoven-Korngold.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7620,6 +7734,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/5E6BEA93-BCF0-44A7-B744-865B62AAD118-scaled.jpg",
       "venue_name": "Pierre's Theatre",
       "address": "37 N Main St, Victor, ID, 83455",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7641,6 +7756,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Beethoven-Korngold.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7681,6 +7797,7 @@
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Musical-Adventures-Monday-scaled.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7699,6 +7816,7 @@
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/20250807-gtmf-alive-at-five-098-scaled-e1775160150605.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7760,6 +7878,7 @@
       "start_time": "10:00 AM",
       "end_time": "11:00 AM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/IMG_4269-1920x1280-1.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7781,6 +7900,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/4D8D27F1-55E5-400A-BBCB-162D3E94C678-scaled.jpg",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7823,6 +7943,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Valley-of-Tetons-Library-scaled.jpg",
       "venue_name": "Driggs Plaza",
       "address": "60 South Main Street, Driggs, Driggs, ID, 83422",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7841,6 +7962,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -7925,6 +8048,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/GTMF-Alive-at-Five2-scaled.jpg",
       "venue_name": "Teton Village Commons",
       "address": "3395 Cody Lane, Teton Village, WY, 83025",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -7946,6 +8070,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Benoliel-Chamber-Music-Aug-13.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -8068,6 +8193,7 @@
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-Aug-14.png",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -8089,6 +8215,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/03/DSC09297-1-scaled.jpg",
       "venue_name": "Jackson Hole High School Auditorium Lobby",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -8110,6 +8237,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Night-at-the-Opera.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -8189,6 +8317,7 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/FO-Night-at-the-Opera.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -8308,6 +8437,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -8664,6 +8795,8 @@
       "start_time": "11:00 AM",
       "end_time": "11:45 AM",
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2025/01/Teton-Literacy-Center-ESL-5.jpg",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {

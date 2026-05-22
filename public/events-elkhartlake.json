@@ -6,7 +6,7 @@
     "lng": -88.0426
   },
   "radius_mi": 15,
-  "generated_at": "2026-05-21T18:56:08.039052-06:00",
+  "generated_at": "2026-05-21T20:21:45.141598-06:00",
   "today": "2026-05-21",
   "event_count": 234,
   "events": [
@@ -1095,6 +1095,8 @@
       "facets": [
         "Free"
       ],
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.2
     },
     {
