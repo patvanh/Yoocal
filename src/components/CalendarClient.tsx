@@ -80,9 +80,9 @@ const V2_CATEGORY_COLORS: Record<string, { bg: string; fg: string }> = {
 }
 
 const V2_FACET_COLORS: Record<string, { bg: string; fg: string }> = {
-  Free:      { bg: '#D1FAE5', fg: '#065F46' },
+  Free:      { bg: '#D1FAE5', fg: '#10b981' },
   '21+':     { bg: '#F1F5F9', fg: '#334155' },
-  Paid:      { bg: '#F1F5F9', fg: '#334155' },
+  Paid:      { bg: '#FEF3C7', fg: '#B45309' },
   'Drop-in': { bg: '#F1F5F9', fg: '#334155' },
 }
 
@@ -246,8 +246,9 @@ function V2EventCard({ event, onClick, featured = false }: { event: V2YocEvent; 
         {(event.venue_name || event.location) && (
           <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: 4, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {event.venue_name || event.location}
-            {event.price && <span style={{ color: '#EF9F27', marginLeft: 8, fontWeight: 600 }}>· {event.price}</span>}
+            {event.price && <span style={{ color: (event.price || '').toLowerCase() === 'free' ? '#10b981' : '#EF9F27', marginLeft: 8, fontWeight: 600 }}>· {event.price}</span>}
             {event.is_free === true && !event.price && <span style={{ color: '#10b981', marginLeft: 8, fontWeight: 600 }}>· Free</span>}
+            {event.is_free === false && <span style={{ color: '#f59e0b', marginLeft: 8, fontWeight: 600 }}>· Paid</span>}
           </div>
         )}
         {event.description && (
@@ -903,7 +904,7 @@ export default function CalendarClient() {
       if (['egyptian theatre','park city institute'].some(v => location.includes(v)||text.includes(v))) cats.push('paid')
       if (event.source === 'Running in the USA') cats.push('sports')
       if (event.is_free === true) cats.push('free')
-      else if (event.is_free === false && event.price && event.price !== '0') cats.push('paid')
+      else if (event.is_free === false) cats.push('paid')
       else if (/\bfree\b/.test(text)) cats.push('free')
       else if (/\$\d|\bticket(s)?\b|\bcost\b|\bfee\b/.test(text)) cats.push('paid')
       return [...new Set(cats)].join(' ') || 'community'
