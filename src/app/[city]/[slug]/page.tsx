@@ -28,7 +28,7 @@ export async function generateStaticParams() {
   const allEvents = getAllEventsWithCity()
   const today = new Date().toISOString().slice(0, 10)
   const horizon = new Date()
-  horizon.setDate(horizon.getDate() + 14)
+  horizon.setDate(horizon.getDate() + 90)  // match sitemap horizon so every listed URL is prebuilt
   const horizonStr = horizon.toISOString().slice(0, 10)
 
   return allEvents

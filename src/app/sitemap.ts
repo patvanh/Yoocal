@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { slugify } from '@/lib/events';
 
 const BASE = 'https://www.yoocal.com';
 
@@ -22,14 +23,6 @@ function loadEvents(filename: string): any[] {
   } catch {
     return [];
   }
-}
-
-function slugify(s: string): string {
-  return (s || '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 80);
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
