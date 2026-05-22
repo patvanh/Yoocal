@@ -314,21 +314,38 @@ function EventsV2Embedded() {
     let result = events
     const today = v2TodayMountain()
     const todayStr = v2DateToStr(today)
-    result = result.filter(e => (e.date || '') >= todayStr)
+
+    // An event "occurs on" a day if that day falls between its start date and
+    // end_date (inclusive). Multi-day events (festivals like Song Summit) should
+    // appear on every day they run, not just the first day.
+    const occursOn = (e: V2YocEvent, dayStr: string): boolean => {
+      const start = e.date || ''
+      const end = e.end_date || start
+      return start <= dayStr && dayStr <= end
+    }
+    const occursInRange = (e: V2YocEvent, rangeStart: string, rangeEnd: string): boolean => {
+      const start = e.date || ''
+      const end = e.end_date || start
+      // Overlap test: event range intersects [rangeStart, rangeEnd]
+      return start <= rangeEnd && end >= rangeStart
+    }
+
+    // Keep events that haven't fully ended yet (end_date >= today).
+    result = result.filter(e => ((e.end_date || e.date) || '') >= todayStr)
     
-    if (dayFilter === 'today') result = result.filter(e => e.date === todayStr)
+    if (dayFilter === 'today') result = result.filter(e => occursOn(e, todayStr))
     else if (dayFilter === 'tomorrow') {
       const tom = new Date(today); tom.setDate(today.getDate() + 1)
       const tomStr = v2DateToStr(tom)
-      result = result.filter(e => e.date === tomStr)
+      result = result.filter(e => occursOn(e, tomStr))
     } else if (dayFilter === 'weekend') {
       const { start, end } = v2WeekendDates()
-      result = result.filter(e => e.date && e.date >= v2DateToStr(start) && e.date <= v2DateToStr(end))
+      result = result.filter(e => occursInRange(e, v2DateToStr(start), v2DateToStr(end)))
     } else if (dayFilter === '7days') {
       const week = new Date(today); week.setDate(today.getDate() + 7)
-      result = result.filter(e => e.date && e.date >= todayStr && e.date <= v2DateToStr(week))
+      result = result.filter(e => occursInRange(e, todayStr, v2DateToStr(week)))
     } else if (dayFilter === 'pickdate') {
-      result = result.filter(e => e.date === pickedDate)
+      result = result.filter(e => occursOn(e, pickedDate))
     }
     
     if (timeFilter !== 'any') {
