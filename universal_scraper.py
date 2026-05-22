@@ -642,11 +642,128 @@ def scrape_source(url: str, source_name: str = "", default_lat: float = None,
 
 
 def scrape_gohebervalley() -> list[dict]:
-    """Heber Valley Tourism via gohebervalley.com (replaces hardcoded KNOWN list)."""
-    return scrape_source(
-        url="https://www.gohebervalley.com/events/",
-        source_name="Heber Valley Tourism",
-        default_lat=40.5069,
-        default_lng=-111.4133,
-        default_city="Heber Valley, UT",
-    )
+    """Heber Valley Tourism via gohebervalley.com.
+
+    The site runs on the earthdiver CMS, which embeds the full event roster
+    as a JSON array in the page (fields: date, sttu/ettu times, label/spot_1
+    title, lat/lon, link, category, img, teaser). The generic HTML extractor
+    only caught ~33 of 1000+ events, so we parse the embedded JSON directly
+    with a brace-balanced extractor.
+    """
+    import json as _json
+    from datetime import datetime as _dt
+
+    URL = "https://www.gohebervalley.com/events/"
+    HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    }
+    try:
+        import requests
+        resp = requests.get(URL, headers=HEADERS, timeout=30)
+        html = resp.text
+    except Exception as e:
+        print(f"  [Heber Valley Tourism] fetch failed: {e}")
+        return []
+
+    # Brace-balanced extraction of each event object.
+    events = []
+    marker = '{"start_time":"'
+    i = 0
+    seen_ids = set()
+    today_iso = _dt.now().strftime("%Y-%m-%d")
+    while True:
+        start = html.find(marker, i)
+        if start == -1:
+            break
+        depth = 0
+        j = start
+        while j < len(html):
+            if html[j] == "{":
+                depth += 1
+            elif html[j] == "}":
+                depth -= 1
+                if depth == 0:
+                    break
+            j += 1
+        obj_str = html[start:j + 1]
+        i = j + 1
+        try:
+            obj = _json.loads(obj_str)
+        except _json.JSONDecodeError:
+            continue
+
+        date_iso = (obj.get("date") or "")[:10]
+        if not date_iso or date_iso < today_iso:
+            continue
+
+        ev_id = obj.get("id")
+        if ev_id in seen_ids:
+            continue
+        seen_ids.add(ev_id)
+
+        title = (obj.get("label") or obj.get("spot_1") or "").strip()
+        if len(title) < 3:
+            continue
+
+        # Times: sttu = start (HH:MM:SS), ettu = end
+        def _fmt_time(t):
+            if not t:
+                return None
+            try:
+                h, m, _ = t.split(":")
+                h = int(h)
+                ampm = "AM" if h < 12 else "PM"
+                h12 = h % 12 or 12
+                return f"{h12}:{m} {ampm}"
+            except Exception:
+                return None
+
+        start_time = _fmt_time(obj.get("sttu"))
+        end_time = _fmt_time(obj.get("ettu"))
+
+        link = obj.get("link") or "/events/"
+        if link.startswith("/"):
+            link = "https://www.gohebervalley.com" + link
+
+        try:
+            lat = float(obj.get("lat")) if obj.get("lat") else 40.5069
+            lon = float(obj.get("lon")) if obj.get("lon") else -111.4133
+        except (ValueError, TypeError):
+            lat, lon = 40.5069, -111.4133
+
+        categories = []
+        for c in (obj.get("cat") or []):
+            if isinstance(c, dict) and c.get("label"):
+                categories.append(c["label"])
+        if not categories and obj.get("category"):
+            categories = [obj["category"]]
+
+        event = {
+            "title": title,
+            "date": date_iso,
+            "description": (obj.get("teaser") or f"{title} in Heber Valley.").strip(),
+            "location": "Heber Valley, UT",
+            "link": link,
+            "source": "Heber Valley Tourism",
+            "source_url": URL,
+            "lat": lat,
+            "lng": lon,
+            "categories": categories or ["Community"],
+            "scraped_at": _dt.now().isoformat(),
+        }
+        if start_time:
+            event["start_time"] = start_time
+        if end_time:
+            event["end_time"] = end_time
+        img = obj.get("img")
+        if img:
+            event["image_url"] = img
+        date_label = obj.get("spot_2")
+        if date_label:
+            event["date_label"] = date_label
+
+        events.append(event)
+
+    print(f"  [Heber Valley Tourism] {len(events)} future events from embedded JSON")
+    return events
