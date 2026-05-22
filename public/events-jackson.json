@@ -6,7 +6,7 @@
     "lng": -110.7624
   },
   "radius_mi": 20,
-  "generated_at": "2026-05-21T20:21:45.134079-06:00",
+  "generated_at": "2026-05-21T20:26:53.121257-06:00",
   "today": "2026-05-21",
   "event_count": 518,
   "events": [
@@ -2940,6 +2940,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2980,6 +2981,8 @@
       "venue_name": "Teton County Library",
       "start_time": "11:00 AM",
       "end_time": "3:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -3562,6 +3565,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -3910,6 +3914,7 @@
       "venue_name": "Center for the Arts Lawn",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -3948,6 +3953,8 @@
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2023/05/YOTT-_Margaux-Lee.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -4375,6 +4382,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -4585,6 +4593,8 @@
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2023/05/YOTT-_Margaux-Lee.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -5235,6 +5245,8 @@
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2023/05/YOTT-_Margaux-Lee-1.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -6092,6 +6104,8 @@
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2023/05/YOTT-_Margaux-Lee.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -6836,6 +6850,8 @@
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2023/05/YOTT-_Margaux-Lee-1.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -7490,6 +7506,8 @@
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2023/05/YOTT-_Margaux-Lee-1.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -8092,6 +8110,8 @@
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2023/05/YOTT-_Margaux-Lee-1.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -8540,6 +8560,8 @@
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2023/05/YOTT-_Margaux-Lee-1.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {
@@ -8861,6 +8883,8 @@
       "image_url": "https://www.wildlifeart.org/wp-content/uploads/2023/05/YOTT-_Margaux-Lee-1.jpg",
       "venue_name": "National Museum of Wildlife Art",
       "address": "2820 Rungius Road, Jackson, WY, 83001",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 1.3
     },
     {

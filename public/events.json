@@ -6,7 +6,7 @@
     "lng": -111.498
   },
   "radius_mi": 10,
-  "generated_at": "2026-05-21T20:21:45.107448-06:00",
+  "generated_at": "2026-05-21T20:26:53.093718-06:00",
   "today": "2026-05-21",
   "event_count": 1717,
   "events": [
@@ -420,6 +420,8 @@
       "scraped_at": "2026-05-21T17:42:24.790438",
       "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/636921415790070000_79BBF1A6-9517-6EA8-BEA1F95C99C1E869_79c298a1-e50f-4818-5a91fc058c18616f.jpg",
       "end_time": "5:00 PM",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -938,6 +940,7 @@
       "venue_name": "Mountain Town Olive Oil building",
       "address": "613 Main Street, Park City, UT, 84060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/pzW3AR7lX0Sl4IufJt2cXA.large.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -960,6 +963,7 @@
       "venue_name": "Mountain Town Olive Oil building",
       "address": "613 Main Street, Park City, UT, 84060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TPEphn1Fl02QvnddqEm8cQ.large.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -1005,6 +1009,7 @@
       "venue_name": "Mountain Town Olive Oil building",
       "address": "613 Main Street, Park City, UT, 84060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/wwE4Bk1IjEmN3AOgfeJ-6A.large.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -1027,6 +1032,7 @@
       "venue_name": "Mountain Town Olive Oil building",
       "address": "613 Main Street, Park City, UT, 84060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/1_PviZx-LE-liKvzl5--7A.large.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -1049,6 +1055,7 @@
       "venue_name": "Mountain Town Olive Oil building",
       "address": "613 Main Street, Park City, UT, 84060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/eoUFwHNR_kmDKTcGwPDZzA.large.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -1138,6 +1145,7 @@
       "venue_name": "Mountain Town Olive Oil building",
       "address": "613 Main Street, Park City, UT, 84060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/m7vduQthy0GFTVGQji4oxQ.large.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -1160,6 +1168,7 @@
       "venue_name": "Mountain Town Olive Oil building",
       "address": "613 Main Street, Park City, UT, 84060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/i_FqnRQQSUO8NtZ-Oa02Aw.large.jpg",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -1203,6 +1212,7 @@
       "venue_name": "Powder at Waldorf Astoria",
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2074,8 +2084,7 @@
         "Mountain Trails Foundation",
         "Salt Lake Running Co"
       ],
-      "is_free": true,
-      "price": "Free",
+      "is_free": false,
       "_distance_mi": 1.7
     },
     {
@@ -2099,6 +2108,7 @@
         "RunSignup",
         "Salt Lake Running Co"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -2122,6 +2132,7 @@
         "RunSignup",
         "Salt Lake Running Co"
       ],
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -3098,6 +3109,7 @@
       "end_time": "7:00 PM",
       "scraped_at": "2026-05-21T17:41:21.810243",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HQKiTLtHeU-Jd1D9KoNgGQ.large.png",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -3203,6 +3215,8 @@
       "venue_name": "Junction Commons Park City Junction Commons Park City   Junction Commons Park City   Junction Commons Park City",
       "address": "6699 N Landmark Dr",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/7Tcji6RFPk28z6nEvjvoaw.large.png",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 6.4
     },
     {
@@ -4159,6 +4173,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 8.4
     },
     {
@@ -4755,6 +4770,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.2
     },
     {
@@ -5135,6 +5151,7 @@
       "venue_name": "Park City Community Church",
       "address": "4501 Highway 224",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/2ebcd243-bf6b-4e14-a770-27e5003669bb.large.png",
+      "is_free": false,
       "_distance_mi": 4.3
     },
     {
@@ -6369,6 +6386,7 @@
       "venue_name": "National Ability Center",
       "address": "1000 Ability Way",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/imAYtreqUUiyrQni8mXgsA.large.jpg",
+      "is_free": false,
       "_distance_mi": 2.7
     },
     {
@@ -6875,6 +6893,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 5.6
     },
     {
@@ -7982,6 +8001,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 2.6
     },
     {
@@ -10255,6 +10275,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 8.4
     },
     {
@@ -10340,6 +10361,8 @@
       "venue_name": "Miners Park",
       "address": "593 Main St",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/r9QHYknelUyGLtD05YEWRA.large.png",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.1
     },
     {
@@ -10877,6 +10900,8 @@
       "venue_name": "Park City Library",
       "address": "1255 Park Ave",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/ijljb2bS3UO5I_oexYQIgg.large.png",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.5
     },
     {
@@ -10969,6 +10994,8 @@
       "venue_name": "Park Silly Sunday Market",
       "address": "780  Main St",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/al8Svx6SLESSmQ2pLvxpCA.large.png",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.1
     },
     {
@@ -11312,6 +11339,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -11445,6 +11473,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -11645,6 +11674,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -11801,6 +11831,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -11939,6 +11970,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -11965,6 +11997,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -12280,6 +12313,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -12328,6 +12362,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -12551,6 +12586,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -12706,6 +12742,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -12861,6 +12898,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -13378,6 +13416,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -13426,6 +13465,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -17709,6 +17749,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -17802,6 +17843,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -17943,6 +17985,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -18103,6 +18146,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -18128,6 +18172,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -18173,6 +18218,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -18198,6 +18244,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -18389,6 +18436,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -18571,6 +18619,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -18634,6 +18683,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -18680,6 +18730,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -18796,6 +18847,7 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "_distance_mi": 0.1
     },
     {
@@ -19932,6 +19984,8 @@
       "lat": 40.6461,
       "lng": -111.498,
       "scraped_at": "2026-05-21T17:42:24.790436",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -19975,6 +20029,8 @@
       "lat": 40.6461,
       "lng": -111.498,
       "scraped_at": "2026-05-21T17:42:24.790439",
+      "is_free": true,
+      "price": "Free",
       "_distance_mi": 0.0
     },
     {
@@ -30117,6 +30173,7 @@
       ],
       "start_time": "6:50 AM",
       "end_time": "9:00 PM",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -30135,6 +30192,7 @@
       ],
       "start_time": "8:00 AM",
       "end_time": "12:00 PM",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -30153,6 +30211,7 @@
       ],
       "start_time": "8:15 AM",
       "end_time": "10:00 AM",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -30171,6 +30230,7 @@
       ],
       "start_time": "6:00 AM",
       "end_time": "7:00 PM",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -30189,6 +30249,7 @@
       ],
       "start_time": "8:00 AM",
       "end_time": "7:00 PM",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -30207,6 +30268,7 @@
       ],
       "start_time": "9:00 AM",
       "end_time": "7:00 PM",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -30224,6 +30286,7 @@
       ],
       "start_time": "9:00 AM",
       "end_time": "1:00 PM",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -30240,6 +30303,7 @@
         "Running"
       ],
       "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/3a77fce5-f318-4d4a-9215-a1169a9224cc/Screenshot-2025-11-26-at-6-15-50-PM-Finn-Melanson.png",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -30256,6 +30320,7 @@
         "Running"
       ],
       "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/16e52d86-7e11-449f-8d3c-8816dcba8b9d/875e320a-01a4-4a3f-bd71-81132f6d91f0-bPuURy.png",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {
@@ -30272,6 +30337,7 @@
         "Running"
       ],
       "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/4608a960-7deb-4734-b907-e6041200ae67/raceBanner-PL8OpC5R-bNSREm-huge.png",
+      "is_free": false,
       "_distance_mi": 0.0
     },
     {

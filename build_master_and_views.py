@@ -123,19 +123,27 @@ _FREE_CONTEXT = (
     "admission", "free event", "free show", "free concert", "free activity",
     "free craft", "free live", "is free", "and free", "free and open",
     "free to attend", "no charge", "no cost", "free entry", "free monthly",
-    "free weekly", "free community",
+    "free weekly", "free community", "free,", "free.", "free!", "free and open",
+    "admission is free", "no admission",
 )
-_FREE_FALSE = ("freestyle", "freedom", "feel free", "frees ", "gluten-free", "free parking")
+_FREE_FALSE = ("freestyle", "freedom", "feel free", "frees ", "gluten-free", "free parking", "traffic-free", "smoke-free", "car-free", "hands-free")
+
+# A dollar amount in the text ("$5 per person", "Cost is $48", "Pricing: $25")
+# is a strong paid signal.
+_PRICE_RE = _re_pricing.compile(r"\$\s?\d{1,4}(?:\.\d{2})?\b")
 
 # Sources whose events are essentially always free community programming.
 _FREE_SOURCES = {
     "Park City Farmers Market", "Mountain Trails Foundation",
 }
 
-# Sources that are essentially always ticketed concert/performance series.
+# Sources that are essentially always ticketed/paid (concerts, races, motorsports).
 _PAID_SOURCES = {
     "Deer Valley Music Festival", "Grand Teton Music Festival",
     "The Grand Teton Music Festival",
+    "Road America",          # motorsports — paid admission/tickets
+    "RunSignup",             # race registration — entry fee
+    "Salt Lake Running Co",  # race registration — entry fee
 }
 
 
@@ -158,6 +166,13 @@ def _infer_pricing(record: dict) -> dict:
 
     # Paid signal: a categorically ticketed source.
     if source in _PAID_SOURCES:
+        record["is_free"] = False
+        return record
+
+    # Paid signal: an explicit dollar amount in the text (e.g. "$5 per person",
+    # "Cost is $48"). A "$0" or "$0.00" is actually free, so guard against that.
+    price_m = _PRICE_RE.search(text)
+    if price_m and price_m.group(0).replace("$", "").replace(" ", "") not in ("0", "0.00"):
         record["is_free"] = False
         return record
 
