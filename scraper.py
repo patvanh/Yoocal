@@ -1491,8 +1491,9 @@ def scrape_kpcw_and_cache_heber():
         try:
             # Apply canonical category classification before writing.
             from event_classifier import classify_events as _classify_events
-            events = _classify_events(events)
+            heber_events = _classify_events(heber_events)
 
+            cache["events"] = heber_events
             with open("kpcw_heber_cache.json", "w") as f:
                 json.dump(cache, f, indent=2)
             print(f"  Cached {len(heber_events)} Heber events from KPCW for heber_scraper to merge")
@@ -1792,11 +1793,12 @@ def main():
     all_events += scrape_google_events()
     all_events += scrape_utah_com()
     all_events += scrape_arts_council()
-    # KPCW dropped from PC — Tockify calendar duplicates events as multi-day
-    # promotional billboards (e.g. "Pools Grand Opening: June 6" appears on
-    # 5+ days leading up to the event). Heber events from KPCW are still
-    # cached via the call below for heber_scraper.py to pick up.
-    _ = scrape_kpcw_and_cache_heber()  # side effect only: caches Heber events to disk
+    # KPCW covers both Park City and Heber. Tockify repeats some announcements
+    # as multi-day promotional billboards; kpcw_scraper._collapse_billboards now
+    # collapses those to a single card while preserving genuine weekly recurring
+    # events (e.g. "Yoga on the Patio - Every Thursday"). PC events flow into the
+    # calendar; Heber events are cached for heber_scraper.py to pick up.
+    all_events += scrape_kpcw_and_cache_heber()
     all_events += scrape_deer_valley_wrapper()
     all_events += scrape_park_city_institute_wrapper()
     all_events += scrape_park_city_trails_wrapper()

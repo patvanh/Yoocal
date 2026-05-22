@@ -47,6 +47,102 @@ HEBER_KEYWORDS = [
 ]
 
 
+import re as _re_kpcw
+
+# Promotional billboard detection: KPCW's Tockify feed repeats a single
+# event/announcement across many days as a countdown "billboard". We collapse
+# those to a single card while preserving genuinely recurring events.
+_PROMO_PHRASES = [
+    "register now", "registration open", "applications open", "apply now",
+    "grand opening", "now available", "sign up", "sign-up", "tickets now",
+    "save the date", "coming soon", "on sale now", "tryouts", "open now",
+]
+# "Every Monday", "Every Thursday", etc. mark legitimately recurring events.
+_RECURRING_RE = _re_kpcw.compile(r"\bevery\s+(mon|tue|wed|thu|fri|sat|sun)", _re_kpcw.I)
+# A date span in the title ("June 12-14", "May 23 and 24") marks a billboard.
+_DATE_IN_TITLE_RE = _re_kpcw.compile(
+    r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}",
+    _re_kpcw.I,
+)
+
+
+_MONTHS_KPCW = {
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+    "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12,
+}
+
+
+def _date_from_title(title, fallback_iso):
+    """If the title contains an explicit month+day, return that as YYYY-MM-DD.
+
+    Uses the year from fallback_iso (the billboard's shown date) and rolls to
+    the next year only if the resulting date would be more than ~1 month in the
+    past relative to the fallback. Returns fallback_iso when no date is found.
+    """
+    m = _re_kpcw.search(
+        r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{1,2})",
+        title, _re_kpcw.I,
+    )
+    if not m:
+        return fallback_iso
+    mon = _MONTHS_KPCW.get(m.group(1).lower()[:3])
+    day = int(m.group(2))
+    if not mon or not (1 <= day <= 31):
+        return fallback_iso
+    try:
+        fb_year = int(fallback_iso[:4])
+        candidate = f"{fb_year:04d}-{mon:02d}-{day:02d}"
+    except (ValueError, TypeError):
+        return fallback_iso
+    # Only override if the parsed date is on/after the shown date — i.e. the
+    # title is announcing a future event. Never move an event earlier.
+    if candidate >= fallback_iso:
+        return candidate
+    # Parsed date is earlier in the same year; the event likely refers to next
+    # year only if the gap is large. Keep fallback to stay conservative.
+    return fallback_iso
+
+
+def _collapse_billboards(events):
+    """Collapse promotional multi-day billboards to a single (earliest) card.
+
+    Recurring events whose titles say "Every <weekday>" are preserved in full.
+    """
+    by_title = {}
+    for e in events:
+        by_title.setdefault(e.get("title", "").strip(), []).append(e)
+
+    out = []
+    for title, group in by_title.items():
+        if len(group) == 1:
+            out.append(group[0])
+            continue
+
+        title_lo = title.lower()
+        is_recurring = bool(_RECURRING_RE.search(title_lo))
+        is_promo = (
+            any(phrase in title_lo for phrase in _PROMO_PHRASES)
+            or bool(_DATE_IN_TITLE_RE.search(title))
+        )
+
+        if is_recurring and not is_promo:
+            # Genuine weekly event — keep all occurrences.
+            out.extend(group)
+        else:
+            # Billboard or ambiguous multi-date repeat — keep earliest only.
+            group.sort(key=lambda e: e.get("date", ""))
+            kept = group[0]
+            # If the title names an explicit date (e.g. "June 6th"), use that
+            # as the real event date instead of the first-billboarded date.
+            corrected = _date_from_title(kept.get("title", ""), kept.get("date", ""))
+            if corrected != kept.get("date"):
+                kept = dict(kept)
+                kept["date"] = corrected
+            out.append(kept)
+
+    return out
+
+
 def scrape_kpcw_calendar():
     """Scrape KPCW's Tockify calendar. Returns (pc_events, heber_events)."""
     print("Scraping KPCW Community Calendar (Tockify API)...")
@@ -85,6 +181,11 @@ def scrape_kpcw_calendar():
         target_seen.add(key)
         target_list.append(parsed)
 
+    pc_before = len(pc_events)
+    pc_events = _collapse_billboards(pc_events)
+    heber_events = _collapse_billboards(heber_events)
+    if pc_before != len(pc_events):
+        print(f"  Collapsed {pc_before - len(pc_events)} PC promotional billboards")
     print(f"  Sorted: {len(pc_events)} Park City + {len(heber_events)} Heber Valley")
     if dropped_past:
         print(f"  (Dropped {dropped_past} past-dated events)")
