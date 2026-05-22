@@ -34,6 +34,28 @@ interface V2YocEvent {
 type V2DayFilter = 'all' | 'today' | 'tomorrow' | 'weekend' | '7days' | 'pickdate'
 type V2TimeFilter = 'any' | 'morning' | 'afternoon' | 'evening' | 'latenight'
 
+// City center coordinates — fallback origin for the radius filter when the
+// user has not shared their GPS location.
+const CITY_CENTERS: Record<string, { lat: number; lng: number }> = {
+  parkcity: { lat: 40.6461, lng: -111.4980 },
+  heber: { lat: 40.5069, lng: -111.4133 },
+  jackson: { lat: 43.4799, lng: -110.7624 },
+  elkhartlake: { lat: 43.8336, lng: -87.9717 },
+}
+
+// Haversine distance in miles between two lat/lng points.
+function v2DistanceMiles(lat1: number, lng1: number, lat2: number, lng2: number): number {
+  const toRad = (d: number) => (d * Math.PI) / 180
+  const R = 3958.8 // Earth radius in miles
+  const dLat = toRad(lat2 - lat1)
+  const dLng = toRad(lng2 - lng1)
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+    Math.sin(dLng / 2) * Math.sin(dLng / 2)
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+}
+
 const V2_ALL_CATEGORIES = [
   'Music', 'Food & Drink', 'Outdoor', 'Family', 'Arts', 'Theater', 'Film',
   'Sports', 'Kids', 'Wellness', 'Education', 'Festival', 'Government', 'Community',
@@ -261,18 +283,20 @@ function EventsV2Embedded() {
   const [locationMode, setLocationMode] = useState<'city' | 'mylocation' | 'zip'>('city')
   const [zipCode, setZipCode] = useState<string>('')
   const [userCoords, setUserCoords] = useState<{ lat: number; lng: number } | null>(null)
+  const [cityKey, setCityKey] = useState<string>('parkcity')
   
   useEffect(() => {
     // Detect city from URL
     const params = new URLSearchParams(window.location.search)
-    const cityKey = params.get('city') || 'parkcity'
+    const cityKeyLocal = params.get('city') || 'parkcity'
+    setCityKey(cityKeyLocal)
     const fileMap: Record<string, string> = {
       parkcity: '/events.json',
       heber: '/events-heber.json',
       jackson: '/events-jackson.json',
       elkhartlake: '/events-elkhartlake.json',
     }
-    const file = fileMap[cityKey] || '/events.json'
+    const file = fileMap[cityKeyLocal] || '/events.json'
     setLoading(true)
     fetch(file)
       .then(r => r.json())
@@ -333,6 +357,19 @@ function EventsV2Embedded() {
         return text.includes(q)
       })
     }
+
+    // Radius filter: keep events within `radius` miles of the origin.
+    // Origin is the user's GPS location if shared, else the city center.
+    const origin = userCoords || CITY_CENTERS[cityKey] || CITY_CENTERS.parkcity
+    if (origin) {
+      result = result.filter(e => {
+        // Events without coordinates are always kept (we can't measure them,
+        // and dropping them would silently hide valid events).
+        if (typeof e.lat !== 'number' || typeof e.lng !== 'number') return true
+        const dist = v2DistanceMiles(origin.lat, origin.lng, e.lat, e.lng)
+        return dist <= radius
+      })
+    }
     
     result.sort((a, b) => {
       if (a.date !== b.date) return (a.date || '').localeCompare(b.date || '')
@@ -341,7 +378,7 @@ function EventsV2Embedded() {
       return ta - tb
     })
     return result
-  }, [events, dayFilter, timeFilter, activeCategory, searchQuery, pickedDate])
+  }, [events, dayFilter, timeFilter, activeCategory, searchQuery, pickedDate, radius, userCoords, cityKey])
   
   // Featured events: prefer manually flagged, else top events with rich tagging
   const featuredEvents = useMemo(() => {
@@ -484,7 +521,7 @@ function EventsV2Embedded() {
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600 }}>Radius:</span>
           <input
             type="range"
-            min={5} max={50} step={5}
+            min={1} max={50} step={1}
             value={radius}
             onChange={(e) => setRadius(Number(e.target.value))}
             style={{ flex: 1, accentColor: '#7F77DD', minWidth: 100 }}
