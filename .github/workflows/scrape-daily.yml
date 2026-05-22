@@ -3,7 +3,7 @@ name: Daily event scrape
 on:
   schedule:
     # 10:00 UTC = 4 AM Mountain (DST) / 3 AM Mountain (standard)
-    - cron: "0 10 * * *"
+    - cron: "37 9 * * *"
   workflow_dispatch: {}
 
 permissions:
