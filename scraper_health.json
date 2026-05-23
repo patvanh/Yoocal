@@ -1,55 +1,55 @@
 {
-  "checked_at": "2026-05-22T11:50:44.324476-06:00",
-  "today": "2026-05-22",
+  "checked_at": "2026-05-23T06:40:13.170402-06:00",
+  "today": "2026-05-23",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 801,
-        "baseline": 798.5,
+        "actual": 796,
+        "baseline": 799.3,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=801, baseline=798"
+        "message": "actual=796, baseline=799"
       },
       {
         "source": "Park City Annual Events",
-        "actual": 444,
-        "baseline": 447,
+        "actual": 442,
+        "baseline": 446,
         "floor": 200,
         "severity": "OK",
-        "message": "actual=444, baseline=447"
+        "message": "actual=442, baseline=446"
       },
       {
         "source": "Mountain Town Music",
         "actual": 163,
-        "baseline": 164,
+        "baseline": 163.7,
         "floor": 50,
         "severity": "OK",
         "message": "actual=163, baseline=164"
       },
       {
         "source": "Deer Valley Resort",
-        "actual": 60,
+        "actual": 62,
         "baseline": 60,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=60, baseline=60"
+        "message": "actual=62, baseline=60"
       },
       {
         "source": "Visit Park City (sitemap)",
         "actual": 41,
-        "baseline": 36,
+        "baseline": 37.7,
         "floor": 40,
         "severity": "OK",
-        "message": "actual=41, baseline=36"
+        "message": "actual=41, baseline=38"
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 37,
-        "baseline": null,
+        "actual": 39,
+        "baseline": 37,
         "floor": null,
         "severity": "OK",
-        "message": "actual=37 (no baseline yet)"
+        "message": "actual=39, baseline=37"
       },
       {
         "source": "Park City Farmers Market",
@@ -62,18 +62,18 @@
       {
         "source": "Visit Park City",
         "actual": 20,
-        "baseline": 19,
+        "baseline": 19.5,
         "floor": 15,
         "severity": "OK",
-        "message": "actual=20, baseline=19"
+        "message": "actual=20, baseline=20"
       },
       {
         "source": "Park City Institute",
         "actual": 15,
-        "baseline": 14.5,
+        "baseline": 14.7,
         "floor": 5,
         "severity": "OK",
-        "message": "actual=15, baseline=14"
+        "message": "actual=15, baseline=15"
       },
       {
         "source": "Mountain Trails Foundation",
@@ -135,11 +135,11 @@
     "elkhart-lake": [
       {
         "source": "Elkhart Lake Tourism",
-        "actual": 215,
-        "baseline": 215.5,
+        "actual": 214,
+        "baseline": 215.3,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=215, baseline=216"
+        "message": "actual=214, baseline=215"
       },
       {
         "source": "The Osthoff Resort",
@@ -177,27 +177,27 @@
     "heber": [
       {
         "source": "Heber Valley Tourism",
-        "actual": 121,
-        "baseline": 18,
+        "actual": 119,
+        "baseline": 121,
         "floor": 30,
-        "severity": "ELEVATED",
-        "message": "actual=121, baseline=18 (672% of normal)"
+        "severity": "OK",
+        "message": "actual=119, baseline=121"
       },
       {
         "source": "Google Events",
-        "actual": 43,
-        "baseline": 37,
+        "actual": 42,
+        "baseline": 39,
         "floor": null,
         "severity": "OK",
-        "message": "actual=43, baseline=37"
+        "message": "actual=42, baseline=39"
       },
       {
         "source": "Heber Valley Life",
-        "actual": 19,
-        "baseline": 26.5,
+        "actual": 17,
+        "baseline": 24,
         "floor": 10,
         "severity": "OK",
-        "message": "actual=19, baseline=26"
+        "message": "actual=17, baseline=24"
       },
       {
         "source": "Oakley City",
@@ -225,34 +225,34 @@
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 3,
-        "baseline": 12.5,
-        "floor": 50,
-        "severity": "CRITICAL",
-        "message": "actual=3, floor=50 (below catastrophic threshold)"
+        "actual": 4,
+        "baseline": 3,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=4, baseline=3"
       },
       {
         "source": "Salt Lake Running Co",
         "actual": 2,
-        "baseline": 4,
+        "baseline": 3.3,
         "floor": null,
         "severity": "DEGRADED",
-        "message": "actual=2, baseline=4 (50% of normal)"
+        "message": "actual=2, baseline=3 (60% of normal)"
       }
     ],
     "jackson": [
       {
         "source": "Jackson Hole Chamber of Commerce",
-        "actual": 218,
-        "baseline": 234.5,
+        "actual": 212,
+        "baseline": 229,
         "floor": 100,
         "severity": "OK",
-        "message": "actual=218, baseline=234"
+        "message": "actual=212, baseline=229"
       },
       {
         "source": "Center for the Arts Jackson Hole",
         "actual": 111,
-        "baseline": 112,
+        "baseline": 111.7,
         "floor": 30,
         "severity": "OK",
         "message": "actual=111, baseline=112"
@@ -267,28 +267,21 @@
       },
       {
         "source": "The Cloudveil",
-        "actual": 54,
-        "baseline": 54.5,
+        "actual": 53,
+        "baseline": 54.3,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=54, baseline=54"
+        "message": "actual=53, baseline=54"
       },
       {
         "source": "National Museum of Wildlife Art",
-        "actual": 54,
-        "baseline": 7,
+        "actual": 52,
+        "baseline": 54,
         "floor": null,
-        "severity": "ELEVATED",
-        "message": "actual=54, baseline=7 (771% of normal)"
+        "severity": "OK",
+        "message": "actual=52, baseline=54"
       }
     ]
   },
-  "critical_alerts": [
-    {
-      "city": "heber",
-      "source": "KPCW Community Calendar",
-      "severity": "CRITICAL",
-      "message": "actual=3, floor=50 (below catastrophic threshold)"
-    }
-  ]
+  "critical_alerts": []
 }

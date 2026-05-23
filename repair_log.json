@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-22T17:48:47.191352",
-  "audit_date": "2026-05-22",
+  "generated_at": "2026-05-23T12:38:29.264305",
+  "audit_date": "2026-05-23",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1642,
+      "before_count": 1634,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -20,22 +20,21 @@
           "examples": [
             {
               "title": "Old Town walking tour",
-              "had_span": 82
+              "had_span": 81
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
-              "had_span": 58
+              "had_span": 57
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 5,
+          "fixed": 6,
           "examples": [
             {
               "title": "Masala Weekend",
-              "original_span": "2026-05-22 to 2026-05-24",
+              "original_span": "2026-05-23 to 2026-05-24",
               "split_into": [
-                "2026-05-22",
                 "2026-05-23",
                 "2026-05-24"
               ]
@@ -110,7 +109,7 @@
           ]
         },
         "classification": {
-          "fixed": 366,
+          "fixed": 355,
           "examples": [
             {
               "title": "A Spirited Paint Party with Artist Briar West",
@@ -134,28 +133,28 @@
               ]
             },
             {
-              "title": "Live Free (Kick Butt) & Thrive Tribe",
+              "title": "Progressive Art Experience",
               "before": [],
               "after": [
                 "Community"
               ]
             },
             {
-              "title": "Progressive Art Experience",
+              "title": "Stein's Famous Sunday Brunch",
               "before": [],
               "after": [
-                "Community"
+                "Food & Drink"
               ]
             }
           ]
         }
       },
-      "after_count": 1647,
-      "total_fixes": 393
+      "after_count": 1639,
+      "total_fixes": 383
     },
     {
       "city": "elkhart-lake",
-      "before_count": 249,
+      "before_count": 248,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -214,12 +213,12 @@
           "examples": []
         }
       },
-      "after_count": 256,
+      "after_count": 255,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 220,
+      "before_count": 216,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -330,12 +329,12 @@
           ]
         }
       },
-      "after_count": 220,
+      "after_count": 216,
       "total_fixes": 18
     },
     {
       "city": "jackson",
-      "before_count": 512,
+      "before_count": 503,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -345,24 +344,24 @@
           "fixed": 7,
           "examples": [
             {
+              "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
+              "had_span": 120
+            },
+            {
               "title": "Music Classes",
-              "had_span": 1685
+              "had_span": 1684
             },
             {
               "title": "Visual Arts Classes",
-              "had_span": 1685
+              "had_span": 1684
             },
             {
               "title": "Writing Classes and Workshops",
-              "had_span": 1685
+              "had_span": 1684
             },
             {
               "title": "Dance and Movement Classes",
-              "had_span": 1685
-            },
-            {
-              "title": "Youth Art Programming",
-              "had_span": 1350
+              "had_span": 1684
             }
           ]
         },
@@ -381,14 +380,8 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 3,
+          "fixed": 2,
           "examples": [
-            {
-              "title": "Old West Days - Jackson Hole Rodeo",
-              "start_time": "8:00 PM",
-              "new_end_time": "10:00 PM",
-              "duration_hours": 2
-            },
             {
               "title": "Little Wings Story Time",
               "start_time": "11:00 AM",
@@ -404,8 +397,35 @@
           ]
         },
         "classification": {
-          "fixed": 195,
+          "fixed": 192,
           "examples": [
+            {
+              "title": "Jackson Hole Rodeo",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Music",
+                "Food & Drink",
+                "Sports",
+                "Kids",
+                "Family",
+                "Festival"
+              ]
+            },
+            {
+              "title": "16th Annual Jackson Hole Crawfish Boil",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Music",
+                "Food & Drink",
+                "Festival"
+              ]
+            },
             {
               "title": "Al Hubbard: When Turtles Talk",
               "before": [
@@ -417,54 +437,30 @@
               ]
             },
             {
-              "title": "Cynthia Starks Photography Gallery Grand Opening!",
+              "title": "Best of the West Parade",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Arts"
+                "Family"
               ]
             },
             {
-              "title": "Jackson Hole Restaurant Week",
+              "title": "Hybrid - Wilderness First Responder - Recertification",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Festival"
-              ]
-            },
-            {
-              "title": "Million Dollar Music Fest Kick-Off Show",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Festival"
-              ]
-            },
-            {
-              "title": "Old West Days - Jackson Hole Rodeo",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Food & Drink",
-                "Sports",
-                "Kids",
-                "Family",
-                "Festival"
+                "Education"
               ]
             }
           ]
         }
       },
-      "after_count": 514,
-      "total_fixes": 206
+      "after_count": 505,
+      "total_fixes": 202
     }
   ]
 }
