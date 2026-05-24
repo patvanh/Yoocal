@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-23T12:38:29.264305",
-  "audit_date": "2026-05-23",
+  "generated_at": "2026-05-24T15:16:45.896308",
+  "audit_date": "2026-05-24",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1634,
+      "before_count": 1615,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -20,7 +20,7 @@
           "examples": [
             {
               "title": "Old Town walking tour",
-              "had_span": 81
+              "had_span": 80
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
@@ -29,16 +29,8 @@
           ]
         },
         "multi_day_splits": {
-          "fixed": 6,
+          "fixed": 5,
           "examples": [
-            {
-              "title": "Masala Weekend",
-              "original_span": "2026-05-23 to 2026-05-24",
-              "split_into": [
-                "2026-05-23",
-                "2026-05-24"
-              ]
-            },
             {
               "title": "Chef Sarah Glover Weekend",
               "original_span": "2026-07-11 to 2026-07-12",
@@ -69,6 +61,14 @@
               "split_into": [
                 "2026-08-08",
                 "2026-08-09"
+              ]
+            },
+            {
+              "title": "Preview Weekend",
+              "original_span": "2026-06-13 to 2026-06-14",
+              "split_into": [
+                "2026-06-13",
+                "2026-06-14"
               ]
             }
           ]
@@ -109,15 +109,8 @@
           ]
         },
         "classification": {
-          "fixed": 355,
+          "fixed": 349,
           "examples": [
-            {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
             {
               "title": "Group Fitness Classes",
               "before": [],
@@ -145,16 +138,27 @@
               "after": [
                 "Food & Drink"
               ]
+            },
+            {
+              "title": "Sunday Craft",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Kids",
+                "Family"
+              ]
             }
           ]
         }
       },
-      "after_count": 1639,
-      "total_fixes": 383
+      "after_count": 1619,
+      "total_fixes": 376
     },
     {
       "city": "elkhart-lake",
-      "before_count": 248,
+      "before_count": 244,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -213,12 +217,12 @@
           "examples": []
         }
       },
-      "after_count": 255,
+      "after_count": 251,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 216,
+      "before_count": 212,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -233,7 +237,7 @@
           "examples": []
         },
         "missing_end_times": {
-          "fixed": 5,
+          "fixed": 6,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -242,9 +246,9 @@
               "duration_hours": 1
             },
             {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
+              "title": "Comedy Magic Show - Anthony the Magic",
+              "start_time": "3:30 PM",
+              "new_end_time": "5:30 PM",
               "duration_hours": 2
             },
             {
@@ -260,10 +264,10 @@
               "duration_hours": 2
             },
             {
-              "title": "Yoga in the Park",
-              "start_time": "10:45 AM",
-              "new_end_time": "11:45 AM",
-              "duration_hours": 1
+              "title": "Oakley Rodeo",
+              "start_time": "11:30 PM",
+              "new_end_time": "1:30 AM",
+              "duration_hours": 2
             }
           ]
         },
@@ -329,12 +333,12 @@
           ]
         }
       },
-      "after_count": 216,
-      "total_fixes": 18
+      "after_count": 212,
+      "total_fixes": 19
     },
     {
       "city": "jackson",
-      "before_count": 503,
+      "before_count": 495,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -345,23 +349,23 @@
           "examples": [
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 120
+              "had_span": 119
             },
             {
               "title": "Music Classes",
-              "had_span": 1684
+              "had_span": 1683
             },
             {
               "title": "Visual Arts Classes",
-              "had_span": 1684
+              "had_span": 1683
             },
             {
               "title": "Writing Classes and Workshops",
-              "had_span": 1684
+              "had_span": 1683
             },
             {
               "title": "Dance and Movement Classes",
-              "had_span": 1684
+              "had_span": 1683
             }
           ]
         },
@@ -397,32 +401,16 @@
           ]
         },
         "classification": {
-          "fixed": 192,
+          "fixed": 186,
           "examples": [
             {
-              "title": "Jackson Hole Rodeo",
+              "title": "Million Dollar Music Fest",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
                 "Music",
-                "Food & Drink",
-                "Sports",
-                "Kids",
-                "Family",
-                "Festival"
-              ]
-            },
-            {
-              "title": "16th Annual Jackson Hole Crawfish Boil",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Music",
-                "Food & Drink",
                 "Festival"
               ]
             },
@@ -437,17 +425,7 @@
               ]
             },
             {
-              "title": "Best of the West Parade",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Family"
-              ]
-            },
-            {
-              "title": "Hybrid - Wilderness First Responder - Recertification",
+              "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
               "before": [
                 "Community"
               ],
@@ -455,12 +433,33 @@
                 "Community",
                 "Education"
               ]
+            },
+            {
+              "title": "Million Dollar Music Fest 2026",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Festival"
+              ]
+            },
+            {
+              "title": "Raptor Adaptations: Masters of Survival",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Kids",
+                "Education"
+              ]
             }
           ]
         }
       },
-      "after_count": 505,
-      "total_fixes": 202
+      "after_count": 497,
+      "total_fixes": 196
     }
   ]
 }

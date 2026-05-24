@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T12:40:12.881779",
+  "generated_at": "2026-05-24T15:18:31.474180",
   "uncertain": [
     {
       "city": "park-city",
@@ -10,7 +10,7 @@
         "confidence": "low",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The source text is truncated and provides insufficient information about whether this is a registration period spanning multiple days or specific registration dates, though the description suggests it may be a registration window rather than event instances."
+        "reasoning": "The description mentions registration dates (April 1st and 3rd) but the May 24-June 1 date range likely represents when the summer programs themselves run, suggesting a continuous period rather than separate instances, though the source text is incomplete."
       },
       "applied": false,
       "note": "confidence=low, not applying"
@@ -24,7 +24,7 @@
         "confidence": "low",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The two-day date range suggests a continuous multi-day event, but the source text provides insufficient detail to determine with certainty whether it's a continuous event or separate instances."
+        "reasoning": "The source text provides minimal information beyond the title and date range, but the two consecutive dates (May 28-29) and lack of repeated instance language suggests a single multi-day event rather than separate occurrences."
       },
       "applied": false,
       "note": "confidence=low, not applying"
@@ -38,10 +38,23 @@
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which are typically continuous multi-day events where attendees can come any day during the festival period rather than separate recurring instances."
+        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which are typically continuous multi-day events where attendees can come any day during the festival period."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
+    },
+    {
+      "city": "park-city",
+      "title": "Flying Ace All-Stars Freestyle Show",
+      "type": "title_venue_only",
+      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-52/",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source text describes a choreographed freestyle show featuring 'Olympians and National Team skiers and snowboarders' but does not identify any specific named artist, band, or individual performer - 'Flying Ace All-Stars' appears to be the name of the show itself, not a specific performing act."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
     },
     {
       "city": "park-city",
@@ -54,23 +67,10 @@
         "explicit_dates": [
           "2026-07-03"
         ],
-        "reasoning": "The description states the event is held on a specific date (July 03, 2026) while the page text mentions the show runs 'every weekend beginning June 12', suggesting multiple separate weekly performances rather than one continuous event."
+        "reasoning": "The description states the event is held on a specific date (July 03, 2026) while the page text indicates it runs 'every weekend beginning June 12', suggesting multiple separate weekend shows rather than one continuous event, though only one date is explicitly provided in the listing."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
-    },
-    {
-      "city": "park-city",
-      "title": "Flying Ace All-Stars Freestyle Show",
-      "type": "title_venue_only",
-      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-54/",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source text describes the Flying Ace All-Stars Freestyle Show as a performance by 'Olympians and National Team skiers and snowboarders' without identifying any specific named artist, band, or individual performer."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
     },
     {
       "city": "park-city",
@@ -81,10 +81,24 @@
         "confidence": "medium",
         "kind": "split",
         "explicit_dates": [],
-        "reasoning": "The description mentions 'every weekend beginning June 12' suggesting recurring separate shows, though the specific date July 10, 2026 indicates a single instance on that particular date."
+        "reasoning": "The description says 'every weekend beginning June 12' suggesting recurring shows rather than one continuous event, though the provided date of July 10, 2026 appears to be a single instance and other specific dates are not listed in the source text."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
+    },
+    {
+      "city": "park-city",
+      "title": "Friday Run Club: 6am & 7am!",
+      "type": "multi_day_span",
+      "link": "https://www.instagram.com/rndvrun",
+      "resolution": {
+        "confidence": "high",
+        "kind": "split",
+        "explicit_dates": [],
+        "reasoning": "The title 'Friday Run Club' and description 'Friday Morning Run Club' indicate this is a recurring weekly event that happens only on Fridays, not a continuous multi-day event, though no specific dates are listed in the source."
+      },
+      "applied": false,
+      "note": "split kind but no valid dates"
     },
     {
       "city": "park-city",
@@ -95,7 +109,7 @@
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "This is a single performance by the Alicia Stockman Band at the Park City Arts Festival on August 8, 2026 at 1:00 PM MDT at the Kimball Stage, not multiple separate instances."
+        "reasoning": "This is a single performance by the Alicia Stockman Band at the Park City Arts Festival on August 8, 2026 at 1:00 PM MDT on the Kimball Stage, not multiple separate instances."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
@@ -108,7 +122,7 @@
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source text only contains the event title 'Art on the Trails' and a status notification placeholder, with no information about specific artists or performers."
+        "reasoning": "The source text only contains the event title 'Art on the Trails' and a status notification placeholder, with no information about a specific artist, band, or performer."
       },
       "applied": false,
       "note": "confidence=low, not applying"
@@ -121,7 +135,7 @@
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source text only contains the market name and a status notification placeholder, with no information about any specific artist or performer."
+        "reasoning": "The source text only contains the event name 'Park Silly Sunday Market' and a status notification placeholder, with no specific artist, band, or performer information provided."
       },
       "applied": false,
       "note": "confidence=low, not applying"
