@@ -183,7 +183,7 @@ export default function AboutElkhartLakePage() {
             See what&apos;s happening <em>this weekend.</em>
           </h2>
           <p>Live events, races, music, and more — all in one place.</p>
-          <a href="/?city=elkhartlake" className="cta-btn">
+          <a href="/elkhart-lake" className="cta-btn">
             Browse Elkhart Lake events →
           </a>
         </div>

@@ -103,10 +103,10 @@ export default function PageShell({ children, cityKey = 'parkcity' }: PageShellP
               ['Partner with us', 'mailto:hello@yoocal.com'],
             ]} />
             <FooterCol title="Cities" links={[
-              ['Park City, UT', '/?city=parkcity'],
-              ['Heber Valley, UT', '/?city=heber'],
-              ['Elkhart Lake, WI', '/?city=elkhartlake'],
-              ['Jackson Hole, WY', '/?city=jackson'],
+              ['Park City, UT', '/park-city'],
+              ['Heber Valley, UT', '/heber'],
+              ['Elkhart Lake, WI', '/elkhart-lake'],
+              ['Jackson Hole, WY', '/jackson-hole'],
               ['Aspen, CO (soon)', '#signup'],
             ]} />
           </div>

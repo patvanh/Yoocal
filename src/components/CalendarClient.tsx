@@ -1762,10 +1762,10 @@ export default function CalendarClient() {
         {/* City chips */}
         <div className="location-bar" id="location-city-chips">
           <span className="loc-label">Browse by city</span>
-          <a href="/?city=parkcity" className="loc-chip" data-city="parkcity">📍 Park City, UT</a>
-          <a href="/?city=elkhartlake" className="loc-chip" data-city="elkhartlake">📍 Elkhart Lake, WI</a>
-          <a href="/?city=heber" className="loc-chip" data-city="heber">📍 Heber Valley, UT</a>
-          <a href="/?city=jackson" className="loc-chip" data-city="jackson">📍 Jackson Hole, WY</a>
+          <a href="/park-city" className="loc-chip" data-city="parkcity">📍 Park City, UT</a>
+          <a href="/elkhart-lake" className="loc-chip" data-city="elkhartlake">📍 Elkhart Lake, WI</a>
+          <a href="/heber" className="loc-chip" data-city="heber">📍 Heber Valley, UT</a>
+          <a href="/jackson-hole" className="loc-chip" data-city="jackson">📍 Jackson Hole, WY</a>
           <a href="#signup" className="loc-chip" style={{opacity:0.5}}>+ Aspen, CO — coming soon</a>
         </div>
       </div>
@@ -1832,7 +1832,7 @@ export default function CalendarClient() {
           <div className="footer-links">
             <div className="footer-col"><h4>Product</h4><a href="#events">Browse events</a><a href="#signup">Newsletter</a></div>
             <div className="footer-col"><h4>Business</h4><a href="#business">List your event</a><a href="mailto:hello@yoocal.com">Advertise</a><a href="mailto:hello@yoocal.com">Partner with us</a></div>
-            <div className="footer-col"><h4>Cities</h4><a href="/?city=parkcity">Park City, UT</a><a href="/?city=heber">Heber Valley, UT</a><a href="/?city=elkhartlake">Elkhart Lake, WI</a><a href="/?city=jackson">Jackson Hole, WY</a><a href="#signup">Aspen, CO (soon)</a></div>
+            <div className="footer-col"><h4>Cities</h4><a href="/park-city">Park City, UT</a><a href="/heber">Heber Valley, UT</a><a href="/elkhart-lake">Elkhart Lake, WI</a><a href="/jackson-hole">Jackson Hole, WY</a><a href="#signup">Aspen, CO (soon)</a></div>
           </div>
         </div>
         <div className="footer-bottom"><span>© 2026 Yoocal. All rights reserved.</span><span>hello@yoocal.com</span></div>

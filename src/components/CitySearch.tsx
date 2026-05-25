@@ -36,9 +36,17 @@ export default function CitySearch({ placeholder, variant = "compact" }: Props) 
     return () => document.removeEventListener("mousedown", handler)
   }, [])
 
+  // Map city keys to clean URL slugs so we navigate directly (no ?city= redirect hop).
+  const CITY_SLUG: Record<string, string> = {
+    parkcity: "park-city",
+    elkhartlake: "elkhart-lake",
+    heber: "heber",
+    jackson: "jackson-hole",
+  }
+
   function pickCity(key: string) {
     try { window.localStorage.setItem("yoocal.lastCity", key) } catch {}
-    router.push(`/?city=${key}`)
+    router.push(`/${CITY_SLUG[key] || ""}`)
   }
 
   function chooseOption(opt: SearchOption) {

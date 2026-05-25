@@ -88,7 +88,7 @@ export default function AboutYoocalPage() {
             calendar.
           </p>
           <div className="cities-grid">
-            <a href="/?city=parkcity" className="city-card">
+            <a href="/park-city" className="city-card">
               <div className="city-emoji">⛷️</div>
               <div className="city-info">
                 <h3>Park City, Utah</h3>
@@ -99,7 +99,7 @@ export default function AboutYoocalPage() {
               </div>
               <span className="city-badge live">Live</span>
             </a>
-            <a href="/?city=jackson" className="city-card">
+            <a href="/jackson-hole" className="city-card">
               <div className="city-emoji">🦌</div>
               <div className="city-info">
                 <h3>Jackson Hole, Wyoming</h3>
@@ -110,7 +110,7 @@ export default function AboutYoocalPage() {
               </div>
               <span className="city-badge live">Live</span>
             </a>
-            <a href="/?city=heber" className="city-card">
+            <a href="/heber" className="city-card">
               <div className="city-emoji">🏞️</div>
               <div className="city-info">
                 <h3>Heber Valley, Utah</h3>
@@ -121,7 +121,7 @@ export default function AboutYoocalPage() {
               </div>
               <span className="city-badge live">Live</span>
             </a>
-            <a href="/?city=elkhartlake" className="city-card">
+            <a href="/elkhart-lake" className="city-card">
               <div className="city-emoji">🏁</div>
               <div className="city-info">
                 <h3>Elkhart Lake, Wisconsin</h3>
@@ -188,16 +188,16 @@ export default function AboutYoocalPage() {
           </h2>
           <p>Pick your city and start exploring — it&apos;s free, always.</p>
           <div className="cta-actions">
-            <a href="/?city=parkcity" className="cta-btn">
+            <a href="/park-city" className="cta-btn">
               Park City →
             </a>
-            <a href="/?city=jackson" className="cta-btn secondary">
+            <a href="/jackson-hole" className="cta-btn secondary">
               Jackson Hole →
             </a>
-            <a href="/?city=heber" className="cta-btn secondary">
+            <a href="/heber" className="cta-btn secondary">
               Heber Valley →
             </a>
-            <a href="/?city=elkhartlake" className="cta-btn secondary">
+            <a href="/elkhart-lake" className="cta-btn secondary">
               Elkhart Lake →
             </a>
           </div>

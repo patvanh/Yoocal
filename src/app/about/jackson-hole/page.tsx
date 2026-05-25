@@ -87,7 +87,7 @@ export default function AboutJacksonHolePage() {
             Yoocal aggregates every Jackson Hole event — orchestras,
             rodeos, festivals, concerts, races, and more — updated daily.
           </p>
-          <a href="/?city=jackson" className="cta-btn">
+          <a href="/jackson-hole" className="cta-btn">
             Browse the calendar →
           </a>
         </div>

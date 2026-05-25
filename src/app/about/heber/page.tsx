@@ -200,7 +200,7 @@ export default function AboutHeberPage() {
             train rides, festivals, races, classes, and more — updated
             daily.
           </p>
-          <a href="/?city=heber" className="cta-btn">
+          <a href="/heber" className="cta-btn">
             Browse the calendar →
           </a>
         </div>

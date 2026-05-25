@@ -287,7 +287,7 @@ export default function AboutParkCityPage() {
             Yoocal aggregates every Park City event — concerts, races,
             festivals, classes, and more — updated daily.
           </p>
-          <a href="/?city=parkcity" className="cta-btn">
+          <a href="/park-city" className="cta-btn">
             Browse the calendar →
           </a>
         </div>

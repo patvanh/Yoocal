@@ -93,7 +93,7 @@ export default function HomeBrand() {
     } catch {
       // ignore
     }
-    router.push(`/?city=${key}`)
+    router.push(`/${({parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole"} as Record<string,string>)[key] || ""}`)
   }
 
   // Strip ", UT" or ", Wyoming" and similar suffixes for cleaner matching
