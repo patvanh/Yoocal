@@ -230,9 +230,23 @@ export function getAllEventsWithCity(): Array<YoocalEvent & { cityKey: CityKey; 
   return result
 }
 
+// Loosen a slug for tolerant matching: collapse repeated dashes and remove
+// dashes so old apostrophe-format slugs (e.g. "people-s-market") match the
+// current format ("peoples-market"). This keeps previously-indexed URLs alive
+// after slugify changes, avoiding 404s.
+function looseSlug(s: string): string {
+  return s.replace(/-+/g, '-').replace(/-/g, '')
+}
+
 export function findEvent(cityKey: CityKey, slug: string): YoocalEvent | null {
   const events = getEventsForCity(cityKey)
-  return events.find(e => eventSlug(e) === slug) || null
+  // 1. Exact match (fast path, current format).
+  const exact = events.find(e => eventSlug(e) === slug)
+  if (exact) return exact
+  // 2. Tolerant match — handles legacy slug formats (apostrophe handling, etc.)
+  //    so old indexed URLs still resolve instead of 404ing.
+  const loose = looseSlug(slug)
+  return events.find(e => looseSlug(eventSlug(e)) === loose) || null
 }
 
 export function formatDate(dateStr: string): string {
