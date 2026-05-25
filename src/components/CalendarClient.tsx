@@ -535,6 +535,10 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             style={{ flex: 1, accentColor: '#7F77DD', minWidth: 100 }}
           />
           <span style={{ fontSize: 13, color: '#fff', fontWeight: 600, minWidth: 50, textAlign: 'right' }}>{radius} mi</span>
+          <span style={{
+            fontSize: 13, fontWeight: 700, color: '#fff', whiteSpace: 'nowrap',
+            background: '#534AB7', padding: '5px 12px', borderRadius: 999, marginLeft: 4,
+          }}>{filteredEvents.length} event{filteredEvents.length !== 1 ? 's' : ''}</span>
         </div>
       </div>
       
@@ -1735,7 +1739,7 @@ export default function CalendarClient() {
           <a href="/about" id="nav-about">About</a>
           <a href="/this-weekend" id="nav-weekend" style={{display:'none'}}>This Weekend</a>
           <a href="/venues" id="nav-venues" style={{display:'none'}}>Venues</a>
-          <a href="#business">For businesses</a>
+          <a href="/for-businesses">For businesses</a>
           <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" rel="noopener noreferrer" className="nav-cta">Get notified</a>
         </div>
       </nav>

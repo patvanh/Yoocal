@@ -23,7 +23,7 @@ export default function CityLanding({ citySlug, cityKey }: { citySlug: string; c
         <a href="/" className="nav-logo"><div className="nav-dot" /> yoocal</a>
         <div className="nav-links">
           <a href="/about">About</a>
-          <a href="#business">For businesses</a>
+          <a href="/for-businesses">For businesses</a>
           <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" rel="noopener noreferrer" className="nav-cta">Get notified</a>
         </div>
       </nav>
