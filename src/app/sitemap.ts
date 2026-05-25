@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/about/jackson-hole`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/this-weekend`, changeFrequency: 'daily', priority: 0.8 },
     { url: `${BASE}/venues`, changeFrequency: 'weekly', priority: 0.6 },
+    { url: `${BASE}/for-businesses`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/submit`, changeFrequency: 'monthly', priority: 0.5 },
   ];
 
