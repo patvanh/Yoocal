@@ -398,29 +398,34 @@ function EventsV2Embedded() {
     return result
   }, [events, dayFilter, timeFilter, activeCategory, searchQuery, pickedDate, radius, userCoords, cityKey])
   
-  // Featured events: prefer manually flagged, else top events with rich tagging
+  // Featured events: things happening TODAY only. Manual flags first, then
+  // today's best events ranked by tag richness. Empty if nothing today.
   const featuredEvents = useMemo(() => {
     const today = v2TodayMountain()
     const todayStr = v2DateToStr(today)
-    const next7 = new Date(today); next7.setDate(today.getDate() + 7)
-    const next7Str = v2DateToStr(next7)
-    
-    // Tier 1: manual flag (featured: true)
-    const manual = events.filter((e: any) => e.featured === true && (e.date || '') >= todayStr)
-    
-    if (manual.length >= 3) {
-      return manual.slice(0, 5)
+    const MAX = 5
+
+    // Active today = today falls within the event's date..end_date range, so a
+    // multi-day festival running today counts even if it started earlier.
+    const activeToday = (e: any) => {
+      const start = (e.date || '').slice(0, 10)
+      const end = (e.end_date || start).slice(0, 10)
+      return start <= todayStr && todayStr <= end
     }
-    
-    // Tier 2: auto-pick — upcoming events with rich tagging (3+ categories OR has hook)
-    const auto = events
-      .filter(e => (e.date || '') >= todayStr && (e.date || '') <= next7Str)
-      .filter(e => (e.categories?.length || 0) >= 3 || !!e.hook)
-      .filter(e => !manual.includes(e))
-      .sort((a, b) => (a.date || '').localeCompare(b.date || ''))
-      .slice(0, 5 - manual.length)
-    
-    return [...manual, ...auto]
+    const richness = (e: any) => (e.categories?.length || 0) + (e.hook ? 2 : 0)
+
+    const todayEvents = events.filter(activeToday)
+
+    // Manual flags happening today lead.
+    const manual = todayEvents.filter((e: any) => e.featured === true)
+    if (manual.length >= MAX) return manual.slice(0, MAX)
+
+    // Then today's richest events (rank by richness, then start time).
+    const rest = todayEvents
+      .filter((e: any) => e.featured !== true)
+      .sort((a, b) => richness(b) - richness(a) || (a.start_time || '').localeCompare(b.start_time || ''))
+
+    return [...manual, ...rest].slice(0, MAX)
   }, [events])
   
   const todayDow = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][v2TodayMountain().getDay()]
@@ -653,7 +658,7 @@ function EventsV2Embedded() {
               textTransform: 'uppercase',
             }}>★ Featured</div>
             <span style={{ fontSize: 12, color: 'rgba(154,52,18,0.85)', fontWeight: 600 }}>
-              {featuredEvents.length} hand-picked
+              Happening today
             </span>
           </div>
           <div style={{
