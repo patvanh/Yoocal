@@ -76,12 +76,15 @@ _TITLE_FILLERS = {
 }
 
 def _normalize_title(title: str) -> str:
-    """Aggressive normalization: lowercase, strip punctuation + filler words."""
+    """Aggressive normalization: strip HTML, lowercase, drop punctuation + filler words."""
     import re as _re
+    import html as _html
     if not title:
         return ""
-    t = title.lower()
-    t = _re.sub(r"[^a-z0-9 ]+", " ", t)  # punctuation -> space
+    t = _html.unescape(title)               # &amp; -> &, &#39; -> '
+    t = _re.sub(r"<[^>]+>", " ", t)         # strip HTML tags (<em>, </em>, <strong>...)
+    t = t.lower()
+    t = _re.sub(r"[^a-z0-9 ]+", " ", t)     # punctuation -> space
     tokens = [w for w in t.split() if w and w not in _TITLE_FILLERS]
     return " ".join(tokens)
 
@@ -276,10 +279,25 @@ def _backfill_venue(record: dict) -> dict:
     return record
 
 
+def _clean_display_text(s: str) -> str:
+    """Strip HTML tags + unescape entities for user-facing text (title/description)."""
+    import re as _re, html as _html
+    if not s:
+        return s
+    s = _html.unescape(s)
+    s = _re.sub(r"<[^>]+>", "", s)          # remove tags entirely (no space, tighter)
+    s = _re.sub(r"\s+", " ", s).strip()    # collapse whitespace left behind
+    return s
+
+
 def merge_events(records: list[dict]) -> dict:
     """When multiple records dedupe to the same key, pick the best fields."""
     if len(records) == 1:
-        return _sanitize_span(_infer_pricing(_backfill_venue(dict(records[0]))))
+        _r = _sanitize_span(_infer_pricing(_backfill_venue(dict(records[0]))))
+        _r["title"] = _clean_display_text(_r.get("title", ""))
+        if _r.get("description"):
+            _r["description"] = _clean_display_text(_r["description"])
+        return _r
     
     # Sort by source priority (lower = better).
     # Default for unknown sources is now Tier 2 (3), not below Tier 4 — a new
@@ -337,7 +355,11 @@ def merge_events(records: list[dict]) -> dict:
         srcs.discard("")
         base["_all_sources"] = sorted(srcs)
 
-    return _sanitize_span(_infer_pricing(_backfill_venue(base)))
+    base = _sanitize_span(_infer_pricing(_backfill_venue(base)))
+    base["title"] = _clean_display_text(base.get("title", ""))
+    if base.get("description"):
+        base["description"] = _clean_display_text(base["description"])
+    return base
 
 
 def main():
