@@ -147,6 +147,74 @@ _PAID_SOURCES = {
 }
 
 
+import datetime as _dt_span
+
+# Try to recover an explicit end day from a title like "July 16-18, 2026" or
+# "May 29 - June 2". Returns an ISO date string or None.
+_TITLE_RANGE_RE = _re_pricing.compile(
+    r"([A-Z][a-z]+)\s+(\d{1,2})\s*[-–]\s*(?:([A-Z][a-z]+)\s+)?(\d{1,2})",
+)
+_MONTHS_SPAN = {m: i for i, m in enumerate(
+    ["january","february","march","april","may","june","july","august",
+     "september","october","november","december"], start=1)}
+
+
+def _recover_end_from_title(title: str, start_iso: str):
+    m = _TITLE_RANGE_RE.search(title or "")
+    if not m:
+        return None
+    mon1, d1, mon2, d2 = m.group(1), m.group(2), m.group(3), m.group(4)
+    end_mon = (mon2 or mon1).lower()
+    if end_mon not in _MONTHS_SPAN:
+        return None
+    try:
+        year = int(start_iso[:4])
+        end = _dt_span.date(year, _MONTHS_SPAN[end_mon], int(d2))
+        start = _dt_span.date.fromisoformat(start_iso[:10])
+        # If recovered end is before start, it likely rolled into next year.
+        if end < start:
+            end = _dt_span.date(year + 1, _MONTHS_SPAN[end_mon], int(d2))
+        # Only accept if it's a sane multi-day span (<= 31 days).
+        if 0 <= (end - start).days <= 31:
+            return end.isoformat()
+    except (ValueError, TypeError):
+        return None
+    return None
+
+
+# Maximum plausible span (days) for a single discrete event card. Beyond this,
+# an end_date is almost certainly a parse error or a recurring/ongoing program
+# mis-captured as one event. We try to recover from the title, else drop it.
+_MAX_EVENT_SPAN_DAYS = 31
+
+
+def _sanitize_span(record: dict) -> dict:
+    start = (record.get("date") or "")[:10]
+    end = (record.get("end_date") or "")[:10]
+    if not start or not end or end == start:
+        return record
+    try:
+        d1 = _dt_span.date.fromisoformat(start)
+        d2 = _dt_span.date.fromisoformat(end)
+    except ValueError:
+        return record
+    span = (d2 - d1).days
+    if span < 0:
+        # end before start — bogus, drop end_date
+        record["end_date"] = None
+        return record
+    if span <= _MAX_EVENT_SPAN_DAYS:
+        return record  # plausible multi-day event, keep
+    # Implausible span: try to recover the true end from the title.
+    recovered = _recover_end_from_title(record.get("title", ""), start)
+    if recovered:
+        record["end_date"] = recovered
+    else:
+        # Can't recover — treat as single-day so it doesn't smear across months.
+        record["end_date"] = None
+    return record
+
+
 def _infer_pricing(record: dict) -> dict:
     """Set is_free / price when a confident signal exists; leave unset otherwise.
 
@@ -211,7 +279,7 @@ def _backfill_venue(record: dict) -> dict:
 def merge_events(records: list[dict]) -> dict:
     """When multiple records dedupe to the same key, pick the best fields."""
     if len(records) == 1:
-        return _infer_pricing(_backfill_venue(dict(records[0])))
+        return _sanitize_span(_infer_pricing(_backfill_venue(dict(records[0]))))
     
     # Sort by source priority (lower = better).
     # Default for unknown sources is now Tier 2 (3), not below Tier 4 — a new
@@ -269,7 +337,7 @@ def merge_events(records: list[dict]) -> dict:
         srcs.discard("")
         base["_all_sources"] = sorted(srcs)
 
-    return _infer_pricing(_backfill_venue(base))
+    return _sanitize_span(_infer_pricing(_backfill_venue(base)))
 
 
 def main():
