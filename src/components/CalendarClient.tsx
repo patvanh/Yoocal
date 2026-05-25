@@ -272,7 +272,7 @@ function V2EventCard({ event, onClick, featured = false }: { event: V2YocEvent; 
   )
 }
 
-function EventsV2Embedded() {
+export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {}) {
   const [events, setEvents] = useState<V2YocEvent[]>([])
   const [loading, setLoading] = useState(true)
   const [dayFilter, setDayFilter] = useState<V2DayFilter>('today')
@@ -291,7 +291,7 @@ function EventsV2Embedded() {
   useEffect(() => {
     // Detect city from URL
     const params = new URLSearchParams(window.location.search)
-    const cityKeyLocal = params.get('city') || 'parkcity'
+    const cityKeyLocal = cityKeyProp || params.get('city') || 'parkcity'
     setCityKey(cityKeyLocal)
     const fileMap: Record<string, string> = {
       parkcity: '/events.json',
@@ -311,7 +311,7 @@ function EventsV2Embedded() {
         console.error('V2: failed to load events', e)
         setLoading(false)
       })
-  }, [])
+  }, [cityKeyProp])
   
   const filteredEvents = useMemo(() => {
     let result = events

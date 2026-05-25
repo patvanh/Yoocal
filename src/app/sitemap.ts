@@ -31,10 +31,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, changeFrequency: 'daily', priority: 1.0 },
-    { url: `${BASE}/?city=parkcity`, changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE}/?city=elkhartlake`, changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE}/?city=heber`, changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE}/?city=jackson`, changeFrequency: 'daily', priority: 0.9 },
+    { url: `${BASE}/park-city`, changeFrequency: 'daily', priority: 0.95 },
+    { url: `${BASE}/elkhart-lake`, changeFrequency: 'daily', priority: 0.95 },
+    { url: `${BASE}/heber`, changeFrequency: 'daily', priority: 0.95 },
+    { url: `${BASE}/jackson-hole`, changeFrequency: 'daily', priority: 0.95 },
     { url: `${BASE}/about`, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${BASE}/about/park-city`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/about/elkhart-lake`, changeFrequency: 'weekly', priority: 0.7 },
