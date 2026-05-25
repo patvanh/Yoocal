@@ -171,17 +171,19 @@ def audit_event(e: dict, today_iso: str) -> list[dict]:
             if span_days == 2 and is_late_night:
                 pass  # Not actually multi-day — single late-night event
             elif 1 < span_days <= 14:
+                # Multi-day events (festivals, multi-night runs, exhibitions) are
+                # a supported feature — they render on every day they run. This is
+                # informational (severity 3), not a defect needing a split.
                 issues.append({
-                    "severity": 1,
+                    "severity": 3,
                     "type": "multi_day_span",
                     "message": (
                         f"Event spans {span_days} days ({date_val} to {end_date}). "
-                        f"Likely needs splitting into per-day records."
+                        f"Supported as a multi-day event; flagged only for review."
                     ),
                     "suggested_fix": (
-                        f"Verify at source URL whether this is one continuous event "
-                        f"or {span_days} separate events. If separate, split into "
-                        f"individual records."
+                        f"No action needed unless this should be {span_days} separate "
+                        f"events — if so, split into individual records."
                     ),
                 })
             elif span_days > 14:
