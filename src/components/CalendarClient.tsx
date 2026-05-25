@@ -1,6 +1,8 @@
 'use client'
 
+import CitySearch from "@/components/CitySearch"
 import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import EventModal, { type EventModalData } from './EventModal'
 
 // ===== V2 EVENTS WIDGET =====
@@ -495,8 +497,8 @@ function EventsV2Embedded() {
         background: 'rgba(255,255,255,0.04)',
         border: '1px solid rgba(255,255,255,0.10)',
         borderRadius: 16, padding: '14px 18px', marginBottom: 12,
-        backdropFilter: 'blur(8px)',
         display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap',
+        position: 'relative', zIndex: 30,
       }}>
         <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600, minWidth: 56 }}>Where:</span>
         <button
@@ -520,26 +522,9 @@ function EventsV2Embedded() {
           }}
         >📍 Use my location</button>
         <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>or</span>
-        <input
-          type="text"
-          value={zipCode}
-          onChange={(e) => {
-            setZipCode(e.target.value)
-            // Accept zip (5 digits) or city name (3+ chars)
-            const v = e.target.value.trim()
-            if (/^\d{5}$/.test(v) || v.length >= 3) setLocationMode('zip')
-          }}
-          placeholder="City or zip"
-          style={{
-            padding: '6px 14px', fontSize: 13, borderRadius: 999,
-            background: 'rgba(255,255,255,0.06)',
-            color: '#fff',
-            border: '1px solid rgba(255,255,255,0.18)',
-            width: 160, fontFamily: "'DM Sans', sans-serif",
-            outline: 'none',
-          }}
-          className="v2-search-input"
-        />
+        <div style={{ width: 220 }}>
+          <CitySearch placeholder="City or ZIP — switch town" variant="compact" />
+        </div>
         <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', gap: 12 }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600 }}>Radius:</span>
           <input
@@ -722,6 +707,16 @@ declare global {
 }
 
 export default function CalendarClient() {
+  const searchParams = useSearchParams()
+  const cityDisplayName = (() => {
+    const k = searchParams.get('city') || 'parkcity'
+    const names: Record<string, string> = {
+      parkcity: 'Park City', heber: 'Heber Valley',
+      jackson: 'Jackson Hole', elkhartlake: 'Elkhart Lake',
+    }
+    return names[k] || 'Local'
+  })()
+
   // Scroll reveal observer — runs even in V2 mode so reveal sections become visible.
   useEffect(() => {
     const reveals = document.querySelectorAll('.reveal')
@@ -1747,30 +1742,6 @@ export default function CalendarClient() {
 
       {/* HERO */}
       <div className="hero-wrapper">
-        <section className="hero">
-          <div className="hero-bg" />
-          <h1>Your local,<br /><em>everywhere.</em></h1>
-          <p>One place for everything happening near you — for locals and visitors alike. Updated daily from every source that matters.</p>
-          <div style={{display:'flex',flexDirection:'column',alignItems:'center',gap:'12px',animation:'fadeUp 0.6s 0.3s ease both',width:'100%',maxWidth:'480px'}}>
-            <button id="hero-locate-btn" onClick={() => window.heroUseMyLocation?.()} style={{display:'inline-flex',alignItems:'center',gap:'10px',background:'var(--purple)',color:'white',border:'none',padding:'14px 32px',borderRadius:'100px',fontSize:'15px',fontWeight:600,cursor:'pointer',transition:'background 0.2s',whiteSpace:'nowrap'}}>
-              📍 Use my location
-            </button>
-            <div style={{display:'flex',alignItems:'center',gap:'10px',width:'100%'}}>
-              <div style={{flex:1,height:'1px',background:'rgba(255,255,255,0.4)'}} />
-              <span style={{fontSize:'13px',color:'rgba(255,255,255,0.85)',whiteSpace:'nowrap'}}>or search by city, town, or zip</span>
-              <div style={{flex:1,height:'1px',background:'rgba(255,255,255,0.4)'}} />
-            </div>
-            <div style={{position:'relative',width:'100%'}}>
-              <input id="hero-location-input" type="text" placeholder="e.g. Park City, UT or 84060"
-                style={{width:'100%',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.2)',color:'white',padding:'13px 20px',borderRadius:'100px',fontSize:'14px',outline:'none',fontFamily:"'DM Sans',sans-serif",transition:'border-color 0.2s'}}
-              />
-            </div>
-          </div>
-          <div className="hero-stats" style={{marginTop:'48px'}}>
-            <div className="hero-stat"><span className="num" id="hero-event-count">1,451</span><span className="label">Events this week</span></div>
-            <div className="hero-stat"><span className="num">Free</span><span className="label">Always, for everyone</span></div>
-          </div>
-        </section>
 
         {/* Confirmed location band */}
         <div className="location-bar" id="location-confirmed-band" style={{display:'none',justifyContent:'space-between'}}>
@@ -1787,57 +1758,24 @@ export default function CalendarClient() {
         {/* City chips */}
         <div className="location-bar" id="location-city-chips">
           <span className="loc-label">Browse by city</span>
-          <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('parkcity', e.currentTarget as HTMLElement) }} data-city="parkcity">📍 Park City, UT</a>
-          <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('elkhartlake', e.currentTarget as HTMLElement) }} data-city="elkhartlake">📍 Elkhart Lake, WI</a>
-          <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('heber', e.currentTarget as HTMLElement) }} data-city="heber">📍 Heber Valley, UT</a>
-          <a href="#" className="loc-chip" onClick={(e) => { e.preventDefault(); window.switchCity?.('jackson', e.currentTarget as HTMLElement) }} data-city="jackson">📍 Jackson Hole, WY</a>
+          <a href="/?city=parkcity" className="loc-chip" data-city="parkcity">📍 Park City, UT</a>
+          <a href="/?city=elkhartlake" className="loc-chip" data-city="elkhartlake">📍 Elkhart Lake, WI</a>
+          <a href="/?city=heber" className="loc-chip" data-city="heber">📍 Heber Valley, UT</a>
+          <a href="/?city=jackson" className="loc-chip" data-city="jackson">📍 Jackson Hole, WY</a>
           <a href="#signup" className="loc-chip" style={{opacity:0.5}}>+ Aspen, CO — coming soon</a>
         </div>
       </div>
 
-      {/* HOW IT WORKS */}
-      <section className="section" id="how" style={{padding:'60px 80px'}}>
-        <div style={{display:'flex',alignItems:'center',gap:'80px',maxWidth:'1100px',margin:'0 auto'}}>
-          <div style={{flex:1}}>
-            <div className="section-label">How it works</div>
-            <h2>Stop checking <em>seven</em> different sites.</h2>
-            <p style={{marginTop:'16px'}}>We automatically gather events from every local source — newspapers, Facebook groups, venue websites, chamber listings — and put them all in one clean calendar.</p>
-          </div>
-          <div style={{flex:1,display:'flex',flexDirection:'column',gap:'16px'}}>
-            <div className="step reveal" style={{margin:0}}>
-              <div className="step-icon">🔍</div>
-              <h3>We scrape daily</h3>
-              <p>Our engine checks local newspapers, Eventbrite, chamber websites, and venue pages every single day.</p>
-            </div>
-            <div className="step reveal" style={{margin:0}}>
-              <div className="step-icon">📬</div>
-              <h3>We email your weekend</h3>
-              <p>Subscribe to get &quot;This Weekend&quot; in your inbox every Thursday — curated, local, and free.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CALENDAR (V2 — chips + cards in React state) */}
       <section className="calendar-section" id="events" style={{textAlign:'center'}}>
         <h2 style={{fontSize:'clamp(48px, 7vw, 80px)',lineHeight:1.05}}>What&apos;s happening <em>now</em></h2>
-        <p style={{marginBottom:'40px',marginTop:'12px',fontSize:'18px',color:'rgba(255,255,255,0.7)'}}>Park City — updated daily</p>
+        <p style={{marginBottom:'40px',marginTop:'12px',fontSize:'18px',color:'rgba(255,255,255,0.7)'}}>{cityDisplayName} — updated daily</p>
         <div style={{maxWidth:1100,margin:'0 auto',padding:'0 16px',textAlign:'left'}}>
           <EventsV2Embedded />
         </div>
       </section>
 
-      {/* DATA SOURCES */}
-      <section className="sources-section reveal" id="sources">
-        <div className="section-label">Data sources</div>
-        <h2>Every source, <em>in one place</em></h2>
-        <p style={{fontSize:'17px',color:'var(--muted)',maxWidth:'480px',lineHeight:1.7,fontWeight:300,marginBottom:0}}>We pull from everywhere locals and visitors actually post events.</p>
-        <div className="sources-grid" style={{marginTop:'48px'}}>
-          {[['📰','The Park Record','Local newspaper events listings'],['🏛','PC Chamber','Chamber of Commerce calendar'],['👥','Facebook Groups','Local community group posts'],['🎟','Eventbrite','Ticketed events & registrations'],['🗺','Visit Park City','Official tourism events calendar'],['🏔','Venue Websites','Resorts, bars, galleries & more']].map(([icon,name,desc]) => (
-            <div key={name} className="source-card reveal"><div className="source-icon">{icon}</div><h4>{name}</h4><p>{desc}</p></div>
-          ))}
-        </div>
-      </section>
 
       {/* EMAIL SIGNUP */}
       <section className="signup-section" id="signup">
@@ -1888,7 +1826,7 @@ export default function CalendarClient() {
             <div className="footer-tagline">Your local, everywhere.</div>
           </div>
           <div className="footer-links">
-            <div className="footer-col"><h4>Product</h4><a href="#events">Browse events</a><a href="#how">How it works</a><a href="#signup">Newsletter</a></div>
+            <div className="footer-col"><h4>Product</h4><a href="#events">Browse events</a><a href="#signup">Newsletter</a></div>
             <div className="footer-col"><h4>Business</h4><a href="#business">List your event</a><a href="mailto:hello@yoocal.com">Advertise</a><a href="mailto:hello@yoocal.com">Partner with us</a></div>
             <div className="footer-col"><h4>Cities</h4><a href="/?city=parkcity">Park City, UT</a><a href="/?city=heber">Heber Valley, UT</a><a href="/?city=elkhartlake">Elkhart Lake, WI</a><a href="/?city=jackson">Jackson Hole, WY</a><a href="#signup">Aspen, CO (soon)</a></div>
           </div>

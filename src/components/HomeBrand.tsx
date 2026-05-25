@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import SiteNav from "@/components/SiteNav"
 import SiteFooter from "@/components/SiteFooter"
+import { buildCityOptions } from "@/lib/citySearch"
 
 type City = {
   key: string
@@ -140,7 +141,7 @@ export default function HomeBrand() {
     return opts
   }
 
-  const options = buildOptions(query)
+  const options = buildCityOptions(query)
   // Keep activeIdx in bounds when options change
   useEffect(() => {
     if (activeIdx >= options.length) setActiveIdx(0)

@@ -89,15 +89,16 @@
   /* HERO */
   .hero-wrapper {
     position: relative;
-    background: #1a1830;
+    background: transparent;
+    padding-top: 64px; /* clear the fixed nav */
   }
 
   .hero-wrapper::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('/hero.jpg') center center / cover no-repeat;
-    opacity: 0.55;
+    background: none; /* hero photo removed for calendar-first city pages */
+    opacity: 0;
     z-index: 0;
   }
 
