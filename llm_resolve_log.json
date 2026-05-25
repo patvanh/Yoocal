@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T15:18:31.473685",
+  "generated_at": "2026-05-25T17:49:51.057805",
   "attempted": 30,
   "applied": 17,
   "log": [
@@ -12,7 +12,7 @@
         "confidence": "low",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The description mentions registration dates (April 1st and 3rd) but the May 24-June 1 date range likely represents when the summer programs themselves run, suggesting a continuous period rather than separate instances, though the source text is incomplete."
+        "reasoning": "The source text is truncated and doesn't provide clear information about whether this is registration occurring on multiple specific dates or a continuous registration period, though the date range suggests a continuous registration window."
       },
       "applied": false,
       "note": "confidence=low, not applying"
@@ -26,7 +26,7 @@
         "confidence": "low",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The source text provides minimal information beyond the title and date range, but the two consecutive dates (May 28-29) and lack of repeated instance language suggests a single multi-day event rather than separate occurrences."
+        "reasoning": "The source text provides only a title and date range without any details about scheduling, but the two consecutive days (May 28-29, 2026) and lack of repeated instance indicators suggest a single continuous multi-day event rather than separate occurrences."
       },
       "applied": false,
       "note": "confidence=low, not applying"
@@ -40,7 +40,7 @@
         "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which are typically continuous multi-day events where attendees can come any day during the festival period."
+        "reasoning": "The Kimball Arts Festival is described as a top-ranked art festival, which typically run continuously over multiple days rather than as separate instances."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
@@ -53,7 +53,7 @@
       "resolution": {
         "confidence": "high",
         "new_title": "The Proper Way at Silver Lake",
-        "reasoning": "The source text explicitly lists 'The Proper Way' as the performer for Friday, June 26, 2026, which matches the event date."
+        "reasoning": "The source page clearly lists 'The Proper Way' as the performer for Friday, June 26, 2026, which matches the event date."
       },
       "applied": true,
       "note": "title: 'Live Music at Silver Lake' \u2192 'The Proper Way at Silver Lake'"
@@ -69,7 +69,7 @@
         "explicit_dates": [
           "2026-06-26"
         ],
-        "reasoning": "The event listing shows 'The Proper Way' performs only on Friday, June 26, while different artists (Michelle Moonshine Trio and Will Baxter Trio) perform on the other days of the weekend, making this a single instance within a larger multi-day event series."
+        "reasoning": "The page shows a weekend-long series with different artists each day (The Proper Way on Friday, Michelle Moonshine Trio on Saturday, Will Baxter Trio on Sunday), so 'The Proper Way at Silver Lake' is a single performance occurring only on Friday, June 26."
       },
       "applied": true,
       "note": "split into 1 per-day records: ['2026-06-26']"
@@ -80,12 +80,12 @@
       "type": "title_venue_only",
       "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-52/",
       "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source text describes a choreographed freestyle show featuring 'Olympians and National Team skiers and snowboarders' but does not identify any specific named artist, band, or individual performer - 'Flying Ace All-Stars' appears to be the name of the show itself, not a specific performing act."
+        "confidence": "high",
+        "new_title": "Flying Ace All-Stars Freestyle Show",
+        "reasoning": "The source text clearly indicates that 'Flying Ace All-Stars' is the name of the performing group (described as 'Olympians and National Team skiers and snowboarders'), not just a show description, making this the actual artist/performer name in the title."
       },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "applied": true,
+      "note": "title: 'Flying Ace All-Stars Freestyle Show' \u2192 'Flying Ace All-Stars Freestyle Show'"
     },
     {
       "city": "park-city",
@@ -98,7 +98,7 @@
         "explicit_dates": [
           "2026-07-03"
         ],
-        "reasoning": "The description states the event is held on a specific date (July 03, 2026) while the page text indicates it runs 'every weekend beginning June 12', suggesting multiple separate weekend shows rather than one continuous event, though only one date is explicitly provided in the listing."
+        "reasoning": "The description states the event is held on a specific date (July 03, 2026), but the source text says shows occur 'every weekend beginning June 12', suggesting multiple separate weekend performances rather than one continuous event."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
@@ -111,7 +111,7 @@
       "resolution": {
         "confidence": "high",
         "new_title": "Flying Ace All-Stars Freestyle Show",
-        "reasoning": "The source text confirms that 'Flying Ace All-Stars' is the actual name of the performing group (described as 'Olympians and National Team skiers and snowboarders'), not just a venue, and 'Freestyle Show' describes the type of performance they deliver."
+        "reasoning": "The 'Flying Ace All-Stars' is the actual name of the performing group (Olympians and National Team skiers and snowboarders), not just a venue, so the title already correctly identifies the performers."
       },
       "applied": true,
       "note": "title: 'Flying Ace All-Stars Freestyle Show' \u2192 'Flying Ace All-Stars Freestyle Show'"
@@ -125,7 +125,7 @@
         "confidence": "medium",
         "kind": "split",
         "explicit_dates": [],
-        "reasoning": "The description says 'every weekend beginning June 12' suggesting recurring shows rather than one continuous event, though the provided date of July 10, 2026 appears to be a single instance and other specific dates are not listed in the source text."
+        "reasoning": "The description says 'every weekend beginning June 12' but the event listing shows a single date of July 10, 2026, suggesting this is one specific instance of a recurring weekend show rather than a continuous multi-day event."
       },
       "applied": false,
       "note": "confidence=medium, not applying"
@@ -151,20 +151,15 @@
       "link": "https://deervalleymusicfestival.org/event/id/39280/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Utah Symphony with Time for Three: Stravinsky's Firebird Suite",
-        "reasoning": "The source text clearly identifies Utah Symphony as the performing orchestra with conductor Markus Poschner and guest artists Time for Three (string trio) performing works by Kevin Puts and Stravinsky.",
-        "artists": [
-          "Utah Symphony",
-          "Time for Three",
-          "Markus Poschner"
-        ]
+        "new_title": "Utah Symphony with Time for Three - Stravinsky's Firebird Suite & String Trio",
+        "reasoning": "The source text clearly identifies the performing artists as the Utah Symphony conducted by Markus Poschner, with featured guest artists Time for Three (a GRAMMY-winning string trio)."
       },
       "applied": true,
-      "note": "title: 'Stravinsky\\'s Firebird Suite & String Trio \"Time for Three\"' \u2192 \"Utah Symphony with Time for Three: Stravinsky's Firebird Suite\""
+      "note": "title: 'Stravinsky\\'s Firebird Suite & String Trio \"Time for Three\"' \u2192 \"Utah Symphony with Time for Three - Stravinsky's Firebird Suite & String Trio\""
     },
     {
       "city": "park-city",
-      "title": "Utah Symphony with Time for Three: Stravinsky's Fi",
+      "title": "Utah Symphony with Time for Three - Stravinsky's F",
       "type": "multi_day_span",
       "link": "https://deervalleymusicfestival.org/event/id/39280/",
       "resolution": {
@@ -173,7 +168,7 @@
         "explicit_dates": [
           "2026-07-25"
         ],
-        "reasoning": "The page shows a single showtime 'Saturday, July 25, 2026 7:30 PM' for this specific concert performance, which is one discrete event in a summer festival series."
+        "reasoning": "The page shows a single showtime 'Saturday, July 25, 2026 7:30 PM' for this specific concert performance, which is one discrete event in a larger festival series."
       },
       "applied": true,
       "note": "split into 1 per-day records: ['2026-07-25']"
@@ -189,7 +184,7 @@
         "explicit_dates": [
           "2026-07-26"
         ],
-        "reasoning": "This is a single class session scheduled for July 26, 2026 from 3:30 PM to 5:00 PM with specific start and end times, not a multi-day continuous event."
+        "reasoning": "This is a single class session on July 26, 2026 from 3:30 PM to 5:00 PM, not a multi-day event."
       },
       "applied": true,
       "note": "split into 1 per-day records: ['2026-07-26']"
@@ -201,54 +196,54 @@
       "link": "https://nowplayingutah.com/event/2026-deer-valley-music-festival-chris-botti/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Chris Botti with Utah Symphony",
-        "reasoning": "The source page clearly identifies Chris Botti as the GRAMMY Award-winning trumpeter performing with the Utah Symphony at this Deer Valley Music Festival event."
+        "new_title": "2026 Deer Valley Music Festival: Chris Botti",
+        "reasoning": "The event title already contains the artist name 'Chris Botti' along with the festival and venue information."
       },
       "applied": true,
-      "note": "title: '2026 Deer Valley Music Festival: Chris Botti' \u2192 'Chris Botti with Utah Symphony'"
+      "note": "title: '2026 Deer Valley Music Festival: Chris Botti' \u2192 '2026 Deer Valley Music Festival: Chris Botti'"
     },
     {
       "city": "park-city",
-      "title": "Chris Botti with Utah Symphony",
+      "title": "2026 Deer Valley Music Festival: Chris Botti",
       "type": "multi_day_span",
       "link": "https://nowplayingutah.com/event/2026-deer-valley-music-festival-chris-botti/",
       "resolution": {
         "confidence": "high",
-        "kind": "split",
-        "explicit_dates": [
-          "2026-08-01"
-        ],
-        "reasoning": "The event shows only a single performance date and time (Saturday, August 1, 2026 at 7:30pm) with no indication of multiple days or continuous festival attendance."
-      },
-      "applied": true,
-      "note": "split into 1 per-day records: ['2026-08-01']"
-    },
-    {
-      "city": "park-city",
-      "title": "Alicia Stockman Band",
-      "type": "title_venue_only",
-      "link": "https://www.bandsintown.com/e/108056978?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Alicia Stockman Band at Park City Arts Festival",
-        "reasoning": "The source page clearly identifies 'Alicia Stockman Band' as the performer at Park City Arts Festival, with extensive details about Alicia Stockman as a Utah-based folk-Americana singer-songwriter."
-      },
-      "applied": true,
-      "note": "title: 'Alicia Stockman Band' \u2192 'Alicia Stockman Band at Park City Arts Festival'"
-    },
-    {
-      "city": "park-city",
-      "title": "Alicia Stockman Band at Park City Arts Festival",
-      "type": "multi_day_span",
-      "link": "https://www.bandsintown.com/e/108056978?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "resolution": {
-        "confidence": "high",
         "kind": "continuous",
         "explicit_dates": [],
-        "reasoning": "This is a single performance by the Alicia Stockman Band at the Park City Arts Festival on August 8, 2026 at 1:00 PM MDT on the Kimball Stage, not multiple separate instances."
+        "reasoning": "This is a single concert performance by Chris Botti with the Utah Symphony at the Deer Valley Music Festival on one specific date, not a multi-day or recurring event."
       },
       "applied": false,
       "note": "confirmed continuous, no change"
+    },
+    {
+      "city": "park-city",
+      "title": "2026 Deer Valley Music Festival: Idina Menzel",
+      "type": "title_venue_only",
+      "link": "https://nowplayingutah.com/event/2026-deer-valley-music-festival-idina-menzel/",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Idina Menzel at Deer Valley Snow Park Outdoor Amphitheater",
+        "reasoning": "The event title already contains the artist name 'Idina Menzel' along with the venue and festival information."
+      },
+      "applied": true,
+      "note": "title: '2026 Deer Valley Music Festival: Idina Menzel' \u2192 'Idina Menzel at Deer Valley Snow Park Outdoor Amphitheater'"
+    },
+    {
+      "city": "park-city",
+      "title": "Idina Menzel at Deer Valley Snow Park Outdoor Amph",
+      "type": "multi_day_span",
+      "link": "https://nowplayingutah.com/event/2026-deer-valley-music-festival-idina-menzel/",
+      "resolution": {
+        "confidence": "high",
+        "kind": "split",
+        "explicit_dates": [
+          "2026-08-08"
+        ],
+        "reasoning": "The description explicitly states 'one-night-only performance', indicating this is a single occurrence on August 8, 2026, not a multi-day continuous event."
+      },
+      "applied": true,
+      "note": "split into 1 per-day records: ['2026-08-08']"
     },
     {
       "city": "park-city",
@@ -258,7 +253,7 @@
       "resolution": {
         "confidence": "high",
         "new_title": "Vertical Horizon - Concerts on the Slopes",
-        "reasoning": "The page header clearly identifies 'Vertical Horizon' as the artist performing at Park City Institute on Aug 15, 2026, and the description confirms they are supporting Better Than Ezra at this concert."
+        "reasoning": "The page title explicitly states 'Vertical Horizon Park City Tickets' and the concert details confirm Vertical Horizon is performing at Park City Institute on Aug 15, 2026, supporting Better Than Ezra."
       },
       "applied": true,
       "note": "title: 'Concerts on the Slopes' \u2192 'Vertical Horizon - Concerts on the Slopes'"
@@ -287,7 +282,7 @@
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source text only contains the event title 'Art on the Trails' and a status notification placeholder, with no information about a specific artist, band, or performer."
+        "reasoning": "The source text only contains the event title 'Art on the Trails' and a status notifier placeholder, with no information about specific artists or performers."
       },
       "applied": false,
       "note": "confidence=low, not applying"
@@ -303,7 +298,7 @@
         "explicit_dates": [
           "2026-08-22"
         ],
-        "reasoning": "The description specifies a single date (August 22, 2026) with specific hours (2-6 pm), indicating this is a one-time event occurrence rather than a multi-day continuous event."
+        "reasoning": "The description specifies a single date (August 22, 2026) with specific hours (2-6 pm), indicating this is a one-time event occurrence rather than a continuous multi-day event."
       },
       "applied": true,
       "note": "split into 1 per-day records: ['2026-08-22']"
@@ -316,7 +311,7 @@
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source text only contains the event name 'Park Silly Sunday Market' and a status notification placeholder, with no specific artist, band, or performer information provided."
+        "reasoning": "The source text only contains the market name and a status placeholder, with no information about any specific artist or performer."
       },
       "applied": false,
       "note": "confidence=low, not applying"
@@ -342,7 +337,7 @@
           "2026-09-20",
           "2026-09-27"
         ],
-        "reasoning": "The event explicitly lists specific Sunday dates throughout the summer (not every Sunday), indicating separate market instances rather than one continuous event."
+        "reasoning": "The event explicitly lists specific Sunday dates throughout the summer rather than running continuously, making it a recurring weekly market on select days."
       },
       "applied": true,
       "note": "split into 11 per-day records: ['2026-06-07', '2026-06-14', '2026-06-21', '2026-06-28', '2026-07-12', '2026-07-19', '2026-08-30', '2026-09-06', '2026-09-13', '2026-09-20', '2026-09-27']"
@@ -355,7 +350,7 @@
       "resolution": {
         "confidence": "high",
         "new_title": "A.J. Croce Presents CROCE PLAYS CROCE at Egyptian Theatre",
-        "reasoning": "The event title already contains the artist name 'A.J. Croce' and the show name 'CROCE PLAYS CROCE', which is clearly identified throughout the source page as the performing artist."
+        "reasoning": "The source page clearly identifies A.J. Croce as the performing artist with multiple references throughout the text, and the event title already includes both the artist name and the show name 'CROCE PLAYS CROCE'."
       },
       "applied": true,
       "note": "title: 'A.J. Croce Presents CROCE PLAYS CROCE' \u2192 'A.J. Croce Presents CROCE PLAYS CROCE at Egyptian Theatre'"
@@ -371,7 +366,7 @@
         "explicit_dates": [
           "2026-09-10"
         ],
-        "reasoning": "The source page shows a single concert event on Sep 10, 2026 at 7:00 PM MDT at Egyptian Theatre with a specific showtime, indicating a one-time performance rather than a multi-day festival."
+        "reasoning": "The source clearly shows a single concert performance on Sep 10, 2026 at 7:00 PM MDT at the Egyptian Theatre, with no indication of multiple dates or a multi-day event."
       },
       "applied": true,
       "note": "split into 1 per-day records: ['2026-09-10']"
@@ -396,7 +391,7 @@
       "resolution": {
         "confidence": "high",
         "new_title": "Mason Jennings at Egyptian Theatre",
-        "reasoning": "The source page clearly identifies Mason Jennings as the artist performing at the Egyptian Theatre on Sep 24, 2026, with his name appearing in the page title, heading, and a biography section."
+        "reasoning": "The source page clearly identifies Mason Jennings as the performing artist, with his name prominently displayed at the top of the page and a biography section describing him as a Minnesota-based pop-folk singer-songwriter."
       },
       "applied": true,
       "note": "title: 'Mason Jennings' \u2192 'Mason Jennings at Egyptian Theatre'"
@@ -408,14 +403,12 @@
       "link": "https://www.bandsintown.com/e/108027466?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
       "resolution": {
         "confidence": "high",
-        "kind": "split",
-        "explicit_dates": [
-          "2026-09-24"
-        ],
-        "reasoning": "The source shows a single concert performance on Sep 24, 2026 at 7:00 PM MDT at the Egyptian Theatre, not a multi-day event."
+        "kind": "continuous",
+        "explicit_dates": [],
+        "reasoning": "The page shows a single concert event for Mason Jennings on Sep 24, 2026 at 7:00 PM MDT with one venue, one time, and one 'Get Tickets' link, indicating this is a single performance, not multiple dates."
       },
-      "applied": true,
-      "note": "split into 1 per-day records: ['2026-09-24']"
+      "applied": false,
+      "note": "confirmed continuous, no change"
     },
     {
       "city": "park-city",

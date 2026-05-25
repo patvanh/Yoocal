@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-24T15:16:45.896308",
-  "audit_date": "2026-05-24",
+  "generated_at": "2026-05-25T17:48:07.801644",
+  "audit_date": "2026-05-25",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1615,
+      "before_count": 1614,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -16,11 +16,15 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 2,
+          "fixed": 3,
           "examples": [
             {
+              "title": "(Re)sounding: Art Exhibition",
+              "had_span": 112
+            },
+            {
               "title": "Old Town walking tour",
-              "had_span": 80
+              "had_span": 79
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
@@ -112,6 +116,13 @@
           "fixed": 349,
           "examples": [
             {
+              "title": "Fascia Rolling Class",
+              "before": [],
+              "after": [
+                "Wellness"
+              ]
+            },
+            {
               "title": "Group Fitness Classes",
               "before": [],
               "after": [
@@ -126,39 +137,31 @@
               ]
             },
             {
-              "title": "Progressive Art Experience",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Stein's Famous Sunday Brunch",
-              "before": [],
-              "after": [
-                "Food & Drink"
-              ]
-            },
-            {
-              "title": "Sunday Craft",
+              "title": "Memorial Day \"Murph\"",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Kids",
-                "Family"
+                "Sports"
+              ]
+            },
+            {
+              "title": "Progressive Art Experience",
+              "before": [],
+              "after": [
+                "Community"
               ]
             }
           ]
         }
       },
-      "after_count": 1619,
-      "total_fixes": 376
+      "after_count": 1618,
+      "total_fixes": 377
     },
     {
       "city": "elkhart-lake",
-      "before_count": 244,
+      "before_count": 243,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -217,12 +220,12 @@
           "examples": []
         }
       },
-      "after_count": 251,
+      "after_count": 250,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 212,
+      "before_count": 214,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -237,7 +240,7 @@
           "examples": []
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 2,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -246,28 +249,10 @@
               "duration_hours": 1
             },
             {
-              "title": "Comedy Magic Show - Anthony the Magic",
-              "start_time": "3:30 PM",
-              "new_end_time": "5:30 PM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
-              "duration_hours": 2
+              "title": "Yoga in the Park",
+              "start_time": "10:45 AM",
+              "new_end_time": "11:45 AM",
+              "duration_hours": 1
             }
           ]
         },
@@ -333,12 +318,12 @@
           ]
         }
       },
-      "after_count": 212,
-      "total_fixes": 19
+      "after_count": 214,
+      "total_fixes": 15
     },
     {
       "city": "jackson",
-      "before_count": 495,
+      "before_count": 496,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -349,23 +334,23 @@
           "examples": [
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 119
+              "had_span": 118
             },
             {
               "title": "Music Classes",
-              "had_span": 1683
+              "had_span": 1682
             },
             {
               "title": "Visual Arts Classes",
-              "had_span": 1683
+              "had_span": 1682
             },
             {
               "title": "Writing Classes and Workshops",
-              "had_span": 1683
+              "had_span": 1682
             },
             {
               "title": "Dance and Movement Classes",
-              "had_span": 1683
+              "had_span": 1682
             }
           ]
         },
@@ -401,19 +386,8 @@
           ]
         },
         "classification": {
-          "fixed": 186,
+          "fixed": 184,
           "examples": [
-            {
-              "title": "Million Dollar Music Fest",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Music",
-                "Festival"
-              ]
-            },
             {
               "title": "Al Hubbard: When Turtles Talk",
               "before": [
@@ -435,17 +409,29 @@
               ]
             },
             {
-              "title": "Million Dollar Music Fest 2026",
+              "title": "Raptor Adaptations: Masters of Survival",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Festival"
+                "Kids",
+                "Education"
               ]
             },
             {
-              "title": "Raptor Adaptations: Masters of Survival",
+              "title": "Raptor Discovery: Masters of the Sky",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Kids",
+                "Education"
+              ]
+            },
+            {
+              "title": "Raptor Journeys: Migration Exploration",
               "before": [
                 "Community"
               ],
@@ -458,8 +444,8 @@
           ]
         }
       },
-      "after_count": 497,
-      "total_fixes": 196
+      "after_count": 498,
+      "total_fixes": 194
     }
   ]
 }
