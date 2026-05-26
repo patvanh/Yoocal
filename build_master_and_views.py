@@ -54,6 +54,20 @@ INPUT_FILES = [
 
 MASTER_FILE = "public/events-all.json"
 
+# Always-on businesses/amenities that masquerade as daily events — they recur
+# near-daily across months and are drop-in services, not dated happenings, so
+# they flood the calendar. Removed early (before dedup/views/link-health).
+# Matched by case-insensitive title substring; keep patterns TIGHT so they can
+# never catch a real event. Add new amenities here as you spot them.
+EXCLUDED_TITLE_PATTERNS = [
+    "plunj",                               # PLUNJ — cold plunge drop-in
+    "group fitness classes at park city",  # daily rec-center drop-in
+]
+
+def _is_excluded_amenity(e):
+    t = (e.get("title") or "").lower()
+    return any(p in t for p in EXCLUDED_TITLE_PATTERNS)
+
 
 def haversine_miles(lat1, lng1, lat2, lng2):
     """Distance between two points in miles."""
@@ -463,6 +477,13 @@ def main():
     all_events = [e for e in all_events if not _is_junk_title(e.get("title"))]
     if _before_junk != len(all_events):
         print(f"Dropped {_before_junk - len(all_events)} junk-title non-events")
+
+    # Drop always-on businesses/amenities masquerading as daily events (PLUNJ,
+    # rec-center drop-in classes) — they flood the calendar. See EXCLUDED list.
+    _before_excl = len(all_events)
+    all_events = [e for e in all_events if not _is_excluded_amenity(e)]
+    if _before_excl != len(all_events):
+        print(f"Dropped {_before_excl - len(all_events)} always-on amenity events")
 
     print(f"\nTotal records (before dedup): {len(all_events)}")
     
