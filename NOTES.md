@@ -138,3 +138,17 @@ Growth (/go tracking, monetization) AFTER data is complete.
      the June 1 view they look like misplaced old events. They ARE correctly on
      June 1 (span includes it). Decide UX: show "Through Jun 1" / "Ongoing" /
      the span, instead of the bare start date. Needs design judgment — do fresh.
+
+## Update 6: Multi-day badge + featured display FIXED (afc7d5b) — all cities
+- Root cause of "June 1 shows May 25 events" / "featured shows wrong date":
+  V2EventCard always badged event.date (the start). Multi-day events (e.g.
+  Center for the Arts exhibitions May 25->Jun 1) badged "May 25" on every day
+  in their run, looking like misplaced past events — worst in the featured strip.
+- FIX (all cities — one shared CalendarClient/V2EventCard): added viewedDay prop.
+  Single-day modes (today/tomorrow/pickdate): multi-day events badge the VIEWED
+  day + a "thru [end]" line. Single-day events + range modes (weekend/7days/all)
+  badge their own date. Featured label now "Happening [day]" not always "today".
+- Verified: badge logic tested across single/multi-day x viewed/range BEFORE
+  ship (not just compile); confirmed live on PC, Heber, Jackson, Elkhart.
+- Display logic is shared across all 4 cities — per-city differences are DATA
+  only. So display fixes are inherently all-cities.
