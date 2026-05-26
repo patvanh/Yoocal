@@ -246,3 +246,23 @@ Growth (/go tracking, monetization) AFTER data is complete.
   free-vs-paid, time-of-day. Multi-select (checkable), combinable.
 - Frontend work in CalendarClient — design the filter state + UI, wire to the
   existing filteredEvents logic. Test like the badge work (real data, live view).
+
+## Update 12: #2 + #3 resolved (Creekside removed; "series" investigated)
+- #2 Creekside church services: REMOVED. Dead venue domain, no alternate site,
+  weekly standing services = amenity noise. Added EXCLUDED_VENUE_PATTERNS
+  (venue-match, since title "Church Service" too generic). Cleared link-health's
+  only manual-review item. (commit fcaaa54)
+- #3 "multi-date series (Triple Trail Challenge)": the NOTES example was STALE —
+  no Triple Trail Challenge in current data. Investigated all "Series" events:
+  -- Concert "series" (Miner's Park, Newpark, Billy Blanco's) = correctly
+     SEPARATE distinct shows (diff artist/night). No fix; not duplicates.
+  -- Repeating series (Twilight Ride 9x, Tom Georges 18x) = fine recurring
+     events, one-per-date, read OK after amenity cleanup. No fix.
+  -- REAL bug found: Crafternoons dup'd (5 dates) — same library event from 2
+     feeds, titles "2 Go" vs "To-Go Series", (title,date) key missed it.
+- FIX: added "series" to _TITLE_FILLERS + normalize "2 go"/"2go"->"to go".
+  Blast-radius tested across 4 cities: ONLY 5 Crafternoons pairs merge, nothing
+  else (concert series stayed 17 distinct). Crafternoons 17->12.
+- LESSON (again): NOTES item pointed at a stale example; careful look found the
+  premise gone but surfaced a real adjacent bug. Verify the problem still exists
+  before building for it.
