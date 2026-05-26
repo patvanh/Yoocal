@@ -625,6 +625,31 @@ def scrape_hebervalleylife_sitemap():
         return []
 
 
+def scrape_townlift():
+    """Scrape townlift.com (Wasatch Back news outlet) via WordPress Tribe API.
+
+    Discovered via discover_sources_v3.py. Regional paper — covers Heber,
+    Midway, Kamas, Park City. Tribe API gives clean structured event data.
+    """
+    try:
+        from wp_tribe_events_scraper import scrape_wp_tribe_events
+    except ImportError:
+        print("[townlift] wp_tribe_events_scraper not available")
+        return []
+    try:
+        return scrape_wp_tribe_events(
+            base_url="https://www.townlift.com",
+            source_name="TownLift",
+            default_lat=40.6461,
+            default_lng=-111.4980,
+            default_city="Heber City, UT",
+            default_categories=["Community"],
+        )
+    except Exception as ex:
+        print(f"[townlift] failed: {ex}")
+        return []
+
+
 def main():
     print("=" * 55)
     print("  Yoocal Heber Valley Scraper")
@@ -656,6 +681,7 @@ def main():
     all_events += scrape_runsignup()
     all_events += scrape_slrc_heber_wrapper()
     all_events += scrape_hebervalleylife_sitemap()
+    all_events += scrape_townlift()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)

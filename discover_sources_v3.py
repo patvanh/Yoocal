@@ -636,6 +636,16 @@ QUERY_TEMPLATES = [
     '"{city}" festivals',
     '"{city}" community calendar',
     '"{city}" arts and culture events',
+    # Local media — papers and stations often aggregate the whole valley,
+    # including events in smaller neighboring towns within the radius.
+    '"{city}" newspaper events calendar',
+    '"{city}" local news community calendar',
+    '"{city}" radio station events',
+    '"{city}" public library events calendar',
+    # Venue-direct + civic sources
+    '"{city}" live music tonight',
+    '"{city}" brewery OR taproom events',
+    '"{city}" city government calendar',
 ]
 
 

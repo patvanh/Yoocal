@@ -280,13 +280,18 @@ def _backfill_venue(record: dict) -> dict:
 
 
 def _clean_display_text(s: str) -> str:
-    """Strip HTML tags + unescape entities for user-facing text (title/description)."""
+    """Strip HTML tags + unescape HTML and URL/percent encoding for user-facing text."""
     import re as _re, html as _html
+    from urllib.parse import unquote as _unquote
     if not s:
         return s
-    s = _html.unescape(s)
-    s = _re.sub(r"<[^>]+>", "", s)          # remove tags entirely (no space, tighter)
-    s = _re.sub(r"\s+", " ", s).strip()    # collapse whitespace left behind
+    # Decode percent-encoding (%26 -> &, %20 -> space) only if it looks encoded,
+    # to avoid mangling legitimate % signs (e.g. "20% off").
+    if _re.search(r"%[0-9A-Fa-f]{2}", s):
+        s = _unquote(s)
+    s = _html.unescape(s)                   # &amp; -> &, &#39; -> '
+    s = _re.sub(r"<[^>]+>", "", s)          # remove HTML tags
+    s = _re.sub(r"\s+", " ", s).strip()    # collapse whitespace
     return s
 
 
