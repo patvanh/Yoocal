@@ -75,6 +75,22 @@ _TITLE_FILLERS = {
     "park", "city",  # location words also strip
 }
 
+_JUNK_TITLES = {
+    # Scraped UI/navigation labels that aren't events (common from WordPress
+    # Events Calendar / MEC month-view widgets). Exact-match after lowering.
+    "views navigation", "event views navigation", "navigation",
+    "skip to content", "skip to main content", "read more", "load more",
+    "view all events", "see all events", "calendar of events",
+    "events search and views navigation", "list", "month", "day", "today",
+    "previous events", "next events", "previous day", "next day",
+}
+
+
+def _is_junk_title(title: str) -> bool:
+    t = (title or "").strip().lower()
+    return t in _JUNK_TITLES
+
+
 def _normalize_title(title: str) -> str:
     """Aggressive normalization: strip HTML, lowercase, drop punctuation + filler words."""
     import re as _re
@@ -442,6 +458,12 @@ def main():
         except FileNotFoundError:
             print(f"  SKIP: {path} not found")
     
+    # Drop scraped UI/navigation labels that aren't real events.
+    _before_junk = len(all_events)
+    all_events = [e for e in all_events if not _is_junk_title(e.get("title"))]
+    if _before_junk != len(all_events):
+        print(f"Dropped {_before_junk - len(all_events)} junk-title non-events")
+
     print(f"\nTotal records (before dedup): {len(all_events)}")
     
     # Step 2: Global dedup
