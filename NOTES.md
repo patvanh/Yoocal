@@ -179,3 +179,27 @@ Growth (/go tracking, monetization) AFTER data is complete.
   `link`, flag non-200s — run periodically across all cities. Catches dead links
   automatically instead of one-click-at-a-time. Higher value as we add more
   hand-curated resort-town events.
+
+## Update 9: link_health_check.py built (audit tool) — pipeline integration deferred
+- New tool link_health_check.py: collects all unique event links across cities,
+  checks each (HEAD->GET, threaded), classifies OK/redirect/dead/error. Run plain
+  = report + write link_health_fixes.json; --apply writes fixes to city files.
+- First run found: 1612 unique links. 91 redirects (mostly %2b->%2B encoding-case
+  + http->https, all WORK), 25 genuinely dead (404), ~20 false-positive 403s
+  (library + bandsintown — they BLOCK bots but work in browsers; do NOT "fix"),
+  1 PLUNJ connection error (transient), 2 trailing-space/%20 links (strip fixes).
+- KEY: a one-time --apply changed 213 events, but that's because ONE dead URL
+  (visitparkcity.com/event/group-fitness-classes) is on 190 recurring-event
+  instances. NOT a bug — it's the recurring-flooding problem (Group Fitness 193x)
+  showing up as a shared dead link. The link fix + recurring-flood collapse are
+  RELATED — collapsing the flood would fix the link on 1 card instead of 190.
+- DECISION: did NOT apply the production fix (gets overwritten by build anyway)
+  and did NOT wire into pipeline yet. Reverted the 213 edits.
+- TODO — Option 3 (build properly, fresh): make link-health a POST-BUILD step in
+  build_master_and_views.py so fixes auto-reapply each rebuild. MUST include:
+  (1) a cache (only re-check links not verified in last ~7 days — don't crawl
+  1600 links every build); (2) treat ONLY 404/410 as dead (NOT 403/timeout —
+  those are false positives, confirmed); (3) only fall back to a verified-200 URL;
+  (4) redirects -> final target is safe. Test thoroughly BEFORE wiring — a buggy
+  auto-fixer in the pipeline silently degrades links on every build.
+- creeksideparkcity.com domain is fully DOWN (8 events) — needs manual source fix.
