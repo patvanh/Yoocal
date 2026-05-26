@@ -52,6 +52,8 @@ INPUT_FILES = [
     "public/raw/events-egyptian.json",
 ]
 
+from category_normalizer import filter_categories_for
+
 MASTER_FILE = "public/events-all.json"
 
 # Always-on businesses/amenities that masquerade as daily events — they recur
@@ -519,6 +521,13 @@ def main():
     
     # Step 3: Filter past events
     future = [e for e in deduped if (e.get("date") or "")[:10] >= today_iso]
+
+    # Stamp clean, user-facing filter buckets onto every event (Music, Arts &
+    # Theater, Running & Races, etc.) — maps the 50+ messy source categories
+    # into ~12 buckets + title enrichment (e.g. footraces). Frontend filters
+    # on this field. See category_normalizer.py.
+    for _e in future:
+        _e["filter_categories"] = filter_categories_for(_e)
     print(f"Future events: {len(future)}")
     
     # Step 4: Write master file
