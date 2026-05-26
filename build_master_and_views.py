@@ -98,6 +98,7 @@ _TITLE_FILLERS = {
     "tickets", "ticket", "live", "presents", "an", "a", "the",
     "evening", "with", "feat", "featuring", "vs", "and",
     "concert", "show", "performance", "performs",
+    "series",  # "...Concert Series" / "...To-Go Series" suffix noise
     "park", "city",  # location words also strip
 }
 
@@ -127,6 +128,9 @@ def _normalize_title(title: str) -> str:
     t = _re.sub(r"<[^>]+>", " ", t)         # strip HTML tags (<em>, </em>, <strong>...)
     t = t.lower()
     t = _re.sub(r"[^a-z0-9 ]+", " ", t)     # punctuation -> space
+    # Collapse common phrasing variants from multi-feed dupes: "2 go"/"2go" is
+    # the same as "to go" (e.g. "Crafternoons 2 Go" vs "Crafternoons To-Go").
+    t = _re.sub(r"\b2 ?go\b", "to go", t)
     tokens = [w for w in t.split() if w and w not in _TITLE_FILLERS]
     return " ".join(tokens)
 
