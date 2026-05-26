@@ -57,6 +57,55 @@ DEFAULT_HEADERS = {
 # Public API
 # --------------------------------------------------------------
 
+def _human_to_iso_datetime(s):
+    """Convert a human datetime like 'Jul 16, 2026 08:30 PM' to ISO
+    '2026-07-16T20:30', or '' if unparseable."""
+    if not s:
+        return ""
+    s = s.strip()
+    if re.match(r"\d{4}-\d{2}-\d{2}", s):
+        return s
+    fmts = [
+        "%b %d, %Y %I:%M %p", "%B %d, %Y %I:%M %p",
+        "%b %d, %Y %I:%M%p", "%B %d, %Y %I:%M%p",
+        "%b %d, %Y", "%B %d, %Y",
+        "%m/%d/%Y %I:%M %p", "%m/%d/%Y",
+    ]
+    for fmt in fmts:
+        try:
+            return datetime.strptime(s, fmt).strftime("%Y-%m-%dT%H:%M")
+        except ValueError:
+            continue
+    return ""
+
+
+def _fallback_event_from_html(html_text, url):
+    """No Event JSON-LD -> synthesize a raw Event dict from a datetime attr
+    (date) + page title/H1 (name) so _parse_event can handle it. Or None."""
+    if not html_text:
+        return None
+    iso = ""
+    for raw_dt in re.findall(r'datetime=["\']([^"\']+)["\']', html_text):
+        iso = _human_to_iso_datetime(raw_dt)
+        if iso:
+            break
+    if not iso:
+        return None
+    title = ""
+    mh1 = re.search(r"<h1[^>]*>(.*?)</h1>", html_text, re.DOTALL | re.IGNORECASE)
+    if mh1:
+        title = re.sub(r"<[^>]+>", "", mh1.group(1))
+    if not title or len(title.strip()) < 3:
+        mt = re.search(r"<title[^>]*>(.*?)</title>", html_text, re.DOTALL | re.IGNORECASE)
+        if mt:
+            title = mt.group(1)
+    title = html.unescape(title or "").strip()
+    title = re.split(r"\s+[|\u2013-]\s+", title)[0].strip()
+    if not title or len(title) < 3:
+        return None
+    return {"@type": "Event", "name": title, "startDate": iso}
+
+
 def scrape_schema_org_events(
     url,
     source_name=None,
@@ -93,8 +142,12 @@ def scrape_schema_org_events(
 
     raw_events = _extract_schema_events(html_text)
     if not raw_events:
-        print(f"  [{source_name}] no Schema.org Event JSON-LD found")
-        return []
+        fb = _fallback_event_from_html(html_text, url)
+        if fb:
+            raw_events = [fb]
+        else:
+            print(f"  [{source_name}] no Schema.org Event JSON-LD or datetime attr")
+            return []
 
     today_iso = datetime.now().strftime("%Y-%m-%d")
     out = []
