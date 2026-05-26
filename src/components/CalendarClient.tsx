@@ -420,21 +420,31 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   // Featured events: things happening TODAY only. Manual flags first, then
   // today's best events ranked by tag richness. Empty if nothing today.
   const featuredEvents = useMemo(() => {
-    const today = v2TodayMountain()
-    const todayStr = v2DateToStr(today)
     const MAX = 5
 
-    // Active today = today falls within the event's date..end_date range, so a
-    // multi-day festival running today counts even if it started earlier.
-    const activeToday = (e: any) => {
+    // Featured follows the SELECTED day (the day shown in the header), not a
+    // hardcoded "today" — otherwise navigating to June 1 still featured today's
+    // events (and could surface a past event). Derive the viewed day from the
+    // same day-filter state the main list uses.
+    const dayStr = (() => {
+      if (dayFilter === 'pickdate') return pickedDate
+      const t = v2TodayMountain()
+      if (dayFilter === 'tomorrow') t.setDate(t.getDate() + 1)
+      // weekend / 7days / all / today all anchor on today for the featured pick
+      return v2DateToStr(t)
+    })()
+
+    // Active on the selected day = day falls within event's date..end_date,
+    // so a multi-day festival spanning that day counts.
+    const activeOnDay = (e: any) => {
       const start = (e.date || '').slice(0, 10)
       const end = (e.end_date || start).slice(0, 10)
-      return start <= todayStr && todayStr <= end
+      return start <= dayStr && dayStr <= end
     }
     const richness = (e: any) => (e.categories?.length || 0) + (e.hook ? 2 : 0)
     const QUALITY_BAR = 2  // multiple categories, or a hook — a genuine standout
 
-    const todayEvents = events.filter(activeToday)
+    const todayEvents = events.filter(activeOnDay)
 
     // Manually-flagged events always feature (however many there are).
     const manual = todayEvents.filter((e: any) => e.featured === true)
@@ -451,7 +461,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     // single best event of the day.
     if (standouts.length === 0 && ranked.length > 0) return ranked.slice(0, 1)
     return standouts
-  }, [events])
+  }, [events, dayFilter, pickedDate])
   
   const todayDow = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][v2TodayMountain().getDay()]
   
