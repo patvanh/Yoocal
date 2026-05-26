@@ -205,10 +205,21 @@ function V2CategoryPill({ name, role = 'category' }: { name: string; role?: 'cat
   )
 }
 
-function V2EventCard({ event, onClick, featured = false }: { event: V2YocEvent; onClick: () => void; featured?: boolean }) {
-  const date = v2ParseEventDate(event.date)
+function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V2YocEvent; onClick: () => void; featured?: boolean; viewedDay?: string }) {
+  // Multi-day events: if we're viewing a specific day inside the event's span,
+  // badge THAT day (not the event's start), so a May 26-30 event shown on the
+  // May 29 view reads "May 29", not a confusing "May 26". In range views
+  // (no viewedDay passed) we badge the event's own start date.
+  const startStr = (event.date || '').slice(0, 10)
+  const endStr = (event.end_date || startStr).slice(0, 10)
+  const isMultiDay = !!endStr && endStr > startStr
+  const badgeStr = (viewedDay && startStr <= viewedDay && viewedDay <= endStr) ? viewedDay : startStr
+  const date = v2ParseEventDate(badgeStr)
+  const endDate = isMultiDay ? v2ParseEventDate(endStr) : null
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
   const dayOfWeek = date ? ['SUN','MON','TUE','WED','THU','FRI','SAT'][date.getDay()] : '?'
-  const monthDay = date ? `${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][date.getMonth()]} ${date.getDate()}` : ''
+  const monthDay = date ? `${MON[date.getMonth()]} ${date.getDate()}` : ''
+  const thru = endDate ? `thru ${MON[endDate.getMonth()]} ${endDate.getDate()}` : ''
   const time = v2FormatTimeDisplay(event.start_time)
   return (
     <button
@@ -245,6 +256,9 @@ function V2EventCard({ event, onClick, featured = false }: { event: V2YocEvent; 
       }}>
         <span style={{ fontSize: 14, fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>{monthDay}</span>
         <span style={{ fontSize: 10, color: '#AFA9EC', fontWeight: 600, letterSpacing: 0.5, lineHeight: 1 }}>{dayOfWeek}</span>
+        {thru && (
+          <span style={{ fontSize: 9, color: 'rgba(175,169,236,0.85)', fontWeight: 600, lineHeight: 1, marginTop: 1 }}>{thru}</span>
+        )}
         {event.start_time && (
           <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 500, lineHeight: 1, marginTop: 2 }}>
             {time.hour}{time.period.toLowerCase()}
@@ -463,6 +477,18 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     return standouts
   }, [events, dayFilter, pickedDate])
   
+  // Single day the user is viewing — only meaningful in single-day modes
+  // (today/tomorrow/pickdate). In range modes (weekend/7days/all) we return ''
+  // so cards badge each event's own date.
+  const viewedDayStr = useMemo(() => {
+    if (dayFilter === 'pickdate') return pickedDate
+    if (dayFilter === 'today') return v2DateToStr(v2TodayMountain())
+    if (dayFilter === 'tomorrow') {
+      const t = v2TodayMountain(); t.setDate(t.getDate() + 1); return v2DateToStr(t)
+    }
+    return ''  // range modes: no single viewed day
+  }, [dayFilter, pickedDate])
+
   const todayDow = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][v2TodayMountain().getDay()]
   
   // Date range label that updates with the day filter
@@ -680,7 +706,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
               textTransform: 'uppercase',
             }}>★ Featured</div>
             <span style={{ fontSize: 12, color: 'rgba(154,52,18,0.85)', fontWeight: 600 }}>
-              Happening today
+              {viewedDayStr === v2DateToStr(v2TodayMountain()) ? 'Happening today' : `Happening ${dateRangeLabel}`}
             </span>
           </div>
           <div style={{
@@ -689,7 +715,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             gap: 8,
           }}>
             {featuredEvents.map((ev, i) => (
-              <V2EventCard key={`featured-${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} featured />
+              <V2EventCard key={`featured-${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} featured viewedDay={viewedDayStr} />
             ))}
           </div>
         </div>
@@ -708,7 +734,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           gap: 8,
         }}>
           {filteredEvents.map((ev, i) => (
-            <V2EventCard key={`${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} />
+            <V2EventCard key={`${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} viewedDay={viewedDayStr} />
           ))}
         </div>
       )}
