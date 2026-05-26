@@ -88,16 +88,33 @@ const V2_FACET_COLORS: Record<string, { bg: string; fg: string }> = {
   'Drop-in': { bg: '#F1F5F9', fg: '#334155' },
 }
 
-const V2_MOUNTAIN_OFFSET = -6
+
+function v2TodayMountainStr(): string {
+  // DST-aware Mountain calendar date as YYYY-MM-DD. en-CA formats as ISO.
+  // Replaces manual offset math, which (a) hardcoded -6 and broke in MST
+  // (Nov-Mar), and (b) round-tripped through toISOString() and shifted the
+  // date a day in the evening when UTC had already crossed midnight.
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Denver',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+  }).format(new Date())
+}
 
 function v2TodayMountain(): Date {
-  const now = new Date()
-  const utc = now.getTime() + now.getTimezoneOffset() * 60000
-  return new Date(utc + V2_MOUNTAIN_OFFSET * 3600000)
+  // Local-midnight Date of the current Mountain calendar day, so .getDate()/
+  // .setDate() arithmetic and v2DateToStr() all operate consistently in local
+  // fields (no UTC round-trip).
+  const [y, m, d] = v2TodayMountainStr().split('-').map(Number)
+  return new Date(y, m - 1, d)
 }
 
 function v2DateToStr(d: Date): string {
-  return d.toISOString().slice(0, 10)
+  // Read LOCAL fields to match how v2TodayMountain() builds the Date. Using
+  // toISOString() here would re-convert to UTC and reintroduce the off-by-one.
+  const y = d.getFullYear()
+  const m = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${y}-${m}-${day}`
 }
 
 function v2ParseEventDate(s: string | undefined): Date | null {

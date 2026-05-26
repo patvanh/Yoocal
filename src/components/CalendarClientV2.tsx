@@ -110,16 +110,27 @@ type TimeFilter = 'any' | 'morning' | 'afternoon' | 'evening' | 'latenight'
 // Utilities
 // ============================================================
 
-const MOUNTAIN_OFFSET = -6
+function todayMountainStr(): string {
+  // DST-aware Mountain calendar date (YYYY-MM-DD via en-CA). Replaces manual
+  // offset math that hardcoded -6 (wrong in MST, Nov-Mar) and round-tripped
+  // through toISOString(), shifting the date a day in the evening once UTC
+  // had crossed midnight.
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Denver',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+  }).format(new Date())
+}
 
 function todayMountain(): Date {
-  const now = new Date()
-  const utc = now.getTime() + now.getTimezoneOffset() * 60000
-  return new Date(utc + MOUNTAIN_OFFSET * 3600000)
+  const [y, m, d] = todayMountainStr().split('-').map(Number)
+  return new Date(y, m - 1, d)
 }
 
 function dateToStr(d: Date): string {
-  return d.toISOString().slice(0, 10)
+  const y = d.getFullYear()
+  const m = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${y}-${m}-${day}`
 }
 
 function parseEventDate(s: string | undefined): Date | null {
