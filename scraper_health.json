@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-25T11:49:51.420745-06:00",
+  "checked_at": "2026-05-25T19:50:10.285093-06:00",
   "today": "2026-05-25",
   "cities": {
     "park-city": [
@@ -177,43 +177,35 @@
     "heber": [
       {
         "source": "Heber Valley Tourism",
-        "actual": 117,
+        "actual": 121,
         "baseline": 119,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=117, baseline=119"
+        "message": "actual=121, baseline=119"
       },
       {
         "source": "Google Events",
-        "actual": 43,
+        "actual": 47,
         "baseline": 39.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=43, baseline=40"
+        "message": "actual=47, baseline=40"
       },
       {
         "source": "Heber Valley Life",
-        "actual": 17,
+        "actual": 18,
         "baseline": 21.2,
         "floor": 10,
         "severity": "OK",
-        "message": "actual=17, baseline=21"
+        "message": "actual=18, baseline=21"
       },
       {
-        "source": "Oakley City",
-        "actual": 13,
-        "baseline": 13,
+        "source": "TownLift",
+        "actual": 14,
+        "baseline": null,
         "floor": null,
         "severity": "OK",
-        "message": "actual=13, baseline=13"
-      },
-      {
-        "source": "Eventbrite",
-        "actual": 9,
-        "baseline": 10,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=9, baseline=10"
+        "message": "actual=14 (no baseline yet)"
       },
       {
         "source": "RunSignup",
