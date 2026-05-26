@@ -45,3 +45,9 @@ discover_sources.py.bak
 pending_sources_v3.json
 audit_digest_preview.html
 .scrape_cache/
+
+# link-health build artifacts (regenerated each build)
+link_health_cache.json
+link_health_log.json
+link_health.json
+link_health_fixes.json

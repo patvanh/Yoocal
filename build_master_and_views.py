@@ -542,7 +542,15 @@ def main():
         }
         json.dump(out, open(cfg["out_file"], "w"), indent=2)
         print(f"{city:<15} {len(in_radius):>10} {has_geo:>10}")
-    
+
+    # Post-build: repair dead event links (cached, 7-day TTL). Dead 404/410 only;
+    # 403s and redirects are left alone. See link_health.py.
+    try:
+        from link_health import check_and_fix_links
+        check_and_fix_links([c["out_file"] for c in CITIES.values()])
+    except Exception as ex:
+        print(f"[link-health] skipped ({ex})")
+
     print(f"\nDone!")
 
 
