@@ -105,3 +105,22 @@ Growth (/go tracking, monetization) AFTER data is complete.
   Do NOT rewire as-is.
 - KEPT (sound, tested): v3 datetime-attr discovery (4c750cf), schema_org
   datetime ingestion (a792b83), full-list richness sampling (256f7cf).
+
+## Update 4: Cowboy Bar WIRED CORRECTLY (df96bf5) — supersedes Update 3
+- The revert in Update 3 was correct at the time (the /events/ sitemap pages
+  have stale dates + polluted titles), but we then found the RIGHT source: the
+  /music listing page embeds all events as a JSON array with correct dates and
+  clean titles. Owner's screenshot of the live calendar is what corrected the
+  earlier wrong conclusion that the dates were "fabricated" — they were real.
+- New module busites_music_scraper.py reads that embedded JSON (title + start +
+  image + html-description per record). Wired as BUSITES_SOURCES in
+  jackson_scraper.py. 68 future live-music events, verified IN PRODUCTION:
+  Rhett Haney May 25-30 correct, 0 title pollution, 0 out-of-range dates.
+- The /music embedded-JSON pattern is a 'busites' CMS thing — busites_music_
+  scraper is REUSABLE for other venues on that CMS (look for the S3 path
+  busites_www and a /music or similar listing page).
+- KEY LESSON (reinforced): the sitemap pointed at the WRONG representation of
+  the events. When a source looks broken, check whether the site has a cleaner
+  listing/calendar page before abandoning it. Also: owner domain knowledge
+  ("live music every day") + a screenshot beat the scraped data and caught a
+  wrong conclusion.
