@@ -64,9 +64,21 @@ EXCLUDED_TITLE_PATTERNS = [
     "group fitness classes at park city",  # daily rec-center drop-in
 ]
 
+# Some amenities are better matched by VENUE than title (e.g. recurring church
+# services where the title is generic "Church Service"). Case-insensitive
+# substring on venue_name.
+EXCLUDED_VENUE_PATTERNS = [
+    "creekside christian fellowship",      # weekly church services (dead site)
+]
+
 def _is_excluded_amenity(e):
     t = (e.get("title") or "").lower()
-    return any(p in t for p in EXCLUDED_TITLE_PATTERNS)
+    if any(p in t for p in EXCLUDED_TITLE_PATTERNS):
+        return True
+    v = (e.get("venue_name") or "").lower()
+    if any(p in v for p in EXCLUDED_VENUE_PATTERNS):
+        return True
+    return False
 
 
 def haversine_miles(lat1, lng1, lat2, lng2):
