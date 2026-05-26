@@ -238,3 +238,11 @@ Growth (/go tracking, monetization) AFTER data is complete.
   single-day views) is a possible polish — ASSESS LIVE FIRST: removing the 2
   big amenities may have made the all-view acceptable without it. Don't build
   unless the live view still feels cluttered (avoid over-engineering).
+
+## TODO (added): Filter UI — multi-select dropdowns
+- Want proper filtering on the calendar: dropdown boxes where users can select
+  MULTIPLE options (e.g. categories: Music + Arts + Family at once), not just the
+  current single day-filter. Likely filters: category/tag, maybe venue, maybe
+  free-vs-paid, time-of-day. Multi-select (checkable), combinable.
+- Frontend work in CalendarClient — design the filter state + UI, wire to the
+  existing filteredEvents logic. Test like the badge work (real data, live view).
