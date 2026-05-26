@@ -72,6 +72,45 @@ EVENT_URL_PATTERNS = [
 # RICHNESS VALIDATOR
 # --------------------------------------------------------------
 
+def _parse_human_date(s):
+    """Parse common non-ISO date strings into YYYY-MM-DD, or '' if unparseable.
+    Handles formats like 'Mar 11, 2026 08:30 PM', '2026-03-11', 'March 11, 2026'.
+    No external deps — tries a list of strptime formats."""
+    from datetime import datetime as _dt2
+    if not s:
+        return ""
+    s = s.strip()
+    # Already ISO?
+    m = re.match(r"(\d{4}-\d{2}-\d{2})", s)
+    if m:
+        return m.group(1)
+    fmts = [
+        "%b %d, %Y %I:%M %p", "%B %d, %Y %I:%M %p",
+        "%b %d, %Y", "%B %d, %Y",
+        "%m/%d/%Y", "%m/%d/%y",
+        "%a, %d %b %Y %H:%M:%S",          # RFC-822-ish
+        "%Y-%m-%dT%H:%M:%S",
+    ]
+    for fmt in fmts:
+        try:
+            return _dt2.strptime(s, fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    return ""
+
+
+def _extract_datetime_attrs(text):
+    """Pull date strings from datetime='...' attributes (common when a site has
+    no JSON-LD but renders human-readable dates in <time datetime> or similar)."""
+    raw = re.findall(r'datetime=["\']([^"\']+)["\']', text)
+    out = []
+    for r in raw:
+        iso = _parse_human_date(r)
+        if iso:
+            out.append(iso)
+    return out
+
+
 def _validate_richness(sample_urls, max_samples=3, timeout=12):
     """
     Fetch a few sample event detail pages and confirm they actually
@@ -114,7 +153,19 @@ def _validate_richness(sample_urls, max_samples=3, timeout=12):
                 pass
 
         if not event_obj:
-            issues.append(f"no Event JSON-LD: {url[:80]}")
+            # Fallback: no JSON-LD, but the page may carry human-readable dates
+            # in datetime="..." attributes (e.g. "Mar 11, 2026 08:30 PM").
+            dts = _extract_datetime_attrs(text)
+            future_dts = [d for d in dts if d >= today_iso]
+            if dts:
+                parsed += 1
+                # Score 1 for having a parseable date; +1 if it's future.
+                quality_total += 1
+                if future_dts:
+                    future_count += 1
+                issues.append(f"dated via datetime-attr fallback: {url[:60]}")
+                continue
+            issues.append(f"no Event JSON-LD or datetime attr: {url[:60]}")
             continue
 
         parsed += 1
