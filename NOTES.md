@@ -166,3 +166,16 @@ Growth (/go tracking, monetization) AFTER data is complete.
   that came out of looking.
 - Verified counts vs real data before ship: Elkhart 2evt->1, 7evt->3, 0evt->0;
   Park City 16evt->5, 26evt->5.
+
+## Update 8: Fixed dead Road America links + link-rot risk noted
+- The hardcoded Road America 2026 season (elkhart_scraper.py) used guessed
+  /events/<slug> URLs — ALL 9 were 404. Road America's real event pages are at
+  the site root (e.g. /motoamerica-superbikes-vintage-motofest), not /events/.
+  Remapped 6 to verified-200 real pages, 3 (no confident match) to /events index.
+  Fixed scraper source + current production data. Slugs change per season —
+  re-verify annually.
+- GENERAL RISK: hand-entered/hardcoded event links rot silently (these 404'd,
+  only found by clicking). TODO: build a link-health check — curl every event's
+  `link`, flag non-200s — run periodically across all cities. Catches dead links
+  automatically instead of one-click-at-a-time. Higher value as we add more
+  hand-curated resort-town events.
