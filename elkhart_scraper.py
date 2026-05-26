@@ -65,7 +65,7 @@ def scrape_road_america():
             "date": "2026-05-15", "end_date": "2026-05-17",
             "start_time": "7:00 AM", "end_time": "5:00 PM",
             "description": "Classic racecars celebrate motorsport's rich heritage. Features '50s–'70s sports cars, Formula 5000, Formula Ford, Lotus, Alfa Romeo, Jaguar, Porsche, and Corvette. Season opener at Road America.",
-            "link": "https://www.roadamerica.com/events/spring-vintage-weekend",
+            "link": "https://www.roadamerica.com/spring-vintage-weekend-svra",
             "featured": True
         },
         {
@@ -73,7 +73,7 @@ def scrape_road_america():
             "date": "2026-05-29", "end_date": "2026-05-31",
             "start_time": "8:00 AM",
             "description": "MotoAmerica Superbike races return to Road America with thrilling motorcycle competition and a family-friendly Vintage Motorcycle festival.",
-            "link": "https://www.roadamerica.com/events/motoamerica",
+            "link": "https://www.roadamerica.com/motoamerica-superbikes-vintage-motofest",
             "featured": True
         },
         {
@@ -81,7 +81,7 @@ def scrape_road_america():
             "date": "2026-06-05", "end_date": "2026-06-07",
             "start_time": "8:00 AM",
             "description": "The 71st running of the June Sprints. Road America's longest-running event features grassroots SCCA road racing across multiple classes.",
-            "link": "https://www.roadamerica.com/events/june-sprints",
+            "link": "https://www.roadamerica.com/weathertech-chicago-region-scca-june-sprints",
             "featured": True
         },
         {
@@ -89,7 +89,7 @@ def scrape_road_america():
             "date": "2026-06-18", "end_date": "2026-06-21",
             "start_time": "8:00 AM",
             "description": "IndyCar's premier open-wheel series returns to Road America with an international lineup of drivers on one of the world's most majestic road courses.",
-            "link": "https://www.roadamerica.com/events/indycar-grand-prix",
+            "link": "https://www.roadamerica.com/events",
             "featured": True
         },
         {
@@ -105,7 +105,7 @@ def scrape_road_america():
             "date": "2026-07-16", "end_date": "2026-07-19",
             "start_time": "8:00 AM",
             "description": "One of the largest vintage racing events in the US. Features 400+ vintage and historic racecars, Dan Gurney Racing Eagles reunion, and a 60th anniversary Trans Am tribute.",
-            "link": "https://www.roadamerica.com/events/vintage-weekend",
+            "link": "https://www.roadamerica.com/weathertech-vintage-weekend-brian-redman",
             "featured": True
         },
         {
@@ -113,7 +113,7 @@ def scrape_road_america():
             "date": "2026-07-30", "end_date": "2026-08-02",
             "start_time": "8:00 AM",
             "description": "A six-hour endurance event featuring IMSA's elite sportscars from nearly 20 manufacturers including Mercedes, Ferrari, Chevrolet, and Aston Martin.",
-            "link": "https://www.roadamerica.com/events/imsa",
+            "link": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
             "featured": True
         },
         {
@@ -121,7 +121,7 @@ def scrape_road_america():
             "date": "2026-08-28", "end_date": "2026-08-30",
             "start_time": "8:00 AM",
             "description": "All-sportscar weekend at Road America featuring GT World Challenge America racing.",
-            "link": "https://www.roadamerica.com/events/gt-world-challenge",
+            "link": "https://www.roadamerica.com/events",
             "featured": True
         },
         {
@@ -129,7 +129,7 @@ def scrape_road_america():
             "date": "2026-09-18", "end_date": "2026-09-20",
             "start_time": "8:00 AM",
             "description": "300+ meticulously restored vintage and historic race cars spanning 11 racing classes. A three-day journey through automotive history.",
-            "link": "https://www.roadamerica.com/events/vscda",
+            "link": "https://www.roadamerica.com/art-wheels-vintage-weekend-vscda",
             "featured": True
         },
         {
@@ -137,7 +137,7 @@ def scrape_road_america():
             "date": "2026-10-01", "end_date": "2026-10-04",
             "start_time": "8:00 AM",
             "description": "The pinnacle of US amateur road racing. Top SCCA racers from across the country compete for national championships at Road America.",
-            "link": "https://www.roadamerica.com/events/scca-runoffs",
+            "link": "https://www.roadamerica.com/events",
             "featured": True
         },
         # Track Days (recurring)
