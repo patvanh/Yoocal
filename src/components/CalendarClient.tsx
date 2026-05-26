@@ -434,8 +434,6 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   // Featured events: things happening TODAY only. Manual flags first, then
   // today's best events ranked by tag richness. Empty if nothing today.
   const featuredEvents = useMemo(() => {
-    const MAX = 5
-
     // Featured follows the SELECTED day (the day shown in the header), not a
     // hardcoded "today" — otherwise navigating to June 1 still featured today's
     // events (and could surface a past event). Derive the viewed day from the
@@ -460,21 +458,28 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
 
     const todayEvents = events.filter(activeOnDay)
 
-    // Manually-flagged events always feature (however many there are).
-    const manual = todayEvents.filter((e: any) => e.featured === true)
-    if (manual.length > 0) return manual.slice(0, MAX)
+    // Cap scales with how busy the day is: a quiet day shouldn't fill the strip,
+    // a packed day can show more. This is a MAXIMUM — we still only show genuine
+    // standouts up to it (never pad with filler).
+    const n = todayEvents.length
+    const MAX = n >= 11 ? 5 : n >= 5 ? 3 : 1
 
-    // No manual flags: feature only genuine standouts (don't pad to MAX).
+    // Manually-flagged events always lead (still capped by the tier).
+    const manual = todayEvents.filter((e: any) => e.featured === true)
+    if (manual.length >= MAX) return manual.slice(0, MAX)
+
+    // Fill remaining slots with the day's genuine standouts (don't pad to MAX).
     const ranked = todayEvents
       .filter((e: any) => e.featured !== true)
       .sort((a, b) => richness(b) - richness(a) || (a.start_time || '').localeCompare(b.start_time || ''))
+    const standouts = ranked.filter((e: any) => richness(e) >= QUALITY_BAR)
 
-    const standouts = ranked.filter((e: any) => richness(e) >= QUALITY_BAR).slice(0, MAX)
+    const combined = [...manual, ...standouts].slice(0, MAX)
 
     // Never show an empty strip when the day has events: fall back to the
     // single best event of the day.
-    if (standouts.length === 0 && ranked.length > 0) return ranked.slice(0, 1)
-    return standouts
+    if (combined.length === 0 && ranked.length > 0) return ranked.slice(0, 1)
+    return combined
   }, [events, dayFilter, pickedDate])
   
   // Single day the user is viewing — only meaningful in single-day modes
