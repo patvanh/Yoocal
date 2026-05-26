@@ -124,3 +124,17 @@ Growth (/go tracking, monetization) AFTER data is complete.
   listing/calendar page before abandoning it. Also: owner domain knowledge
   ("live music every day") + a screenshot beat the scraped data and caught a
   wrong conclusion.
+
+## Update 5: Featured follows selected day (fixed) + 2 display TODOs
+- FIXED: featured memo was hardcoded to "today" — on the June 1 view it showed
+  a past May 26 event labeled "Happening today." Now derives the viewed day
+  from dayFilter/pickedDate and filters featured to it. Verified via build.
+- TODO (display polish, NOT data bugs — data is correct):
+  1. "Happening today" FEATURED badge text is hardcoded in the render; should
+     reflect the selected day (e.g. "Featured" or "Happening Jun 1") instead of
+     always "today". Search CalendarClient.tsx for the badge label.
+  2. Multi-day events (e.g. Center for the Arts exhibitions running May 25 ->
+     Jun 1) show their START-DATE badge ("May 25") on every day in range, so on
+     the June 1 view they look like misplaced old events. They ARE correctly on
+     June 1 (span includes it). Decide UX: show "Through Jun 1" / "Ongoing" /
+     the span, instead of the bare start date. Needs design judgment — do fresh.
