@@ -27,6 +27,12 @@ CANONICAL_CATEGORIES = [
 ]
 
 
+_PRESET_BUCKETS = {b.lower(): b for b in [
+    "Running & Races", "Nightlife", "Education & Talks", "Arts & Theater",
+    "Family & Kids",
+]}
+
+
 LEGACY_MAP = {
     "art": "Arts", "arts": "Arts",
     "music": "Music",
@@ -379,6 +385,12 @@ def classify_event(event: dict) -> dict:
             canonical_from_legacy.append(mapped)
         elif raw in CANONICAL_CATEGORIES:
             canonical_from_legacy.append(raw)
+        elif key in _PRESET_BUCKETS:
+            # Honor clean filter-bucket names set by confident API sources
+            # (e.g. RunSignup tags races "Running & Races"). Pass through so
+            # the downstream normalizer keeps them instead of dropping to
+            # Community. See category_normalizer bucket list.
+            canonical_from_legacy.append(_PRESET_BUCKETS[key])
 
     rule_cats = _classify_with_rules(text, CLASSIFIER_RULES)
 

@@ -116,21 +116,19 @@ BUSITES_SOURCES = [
 ]
 
 
-# 'busites' CMS venue pages — events embedded as JSON on a listing page.
-# We read the listing (correct dates + clean titles), NOT the per-event
-# detail pages (which have stale dates and date-polluted titles).
-BUSITES_SOURCES = [
+# RunSignup race-registration API (no auth). API geo-filters by zip+radius, so
+# events are already city-scoped — reusable for any city (just change zipcode).
+RUNSIGNUP_SOURCES = [
     {
-        "url": "https://www.milliondollarcowboybar.com/music",
-        "source_name": "Million Dollar Cowboy Bar",
+        "zipcode": "83001",
+        "radius": 30,
+        "source_name": "RunSignup Jackson",
         "default_lat": JACKSON_LAT,
         "default_lng": JACKSON_LNG,
         "default_city": "Jackson, WY",
-        "default_categories": ["Music", "Nightlife"],
-        "venue_name": "Million Dollar Cowboy Bar",
-        "venue_addr": "25 N Cache St, Jackson, WY 83001",
     },
 ]
+
 
 
 SOURCE_PRIORITY = {
@@ -311,10 +309,11 @@ def main():
             print(f"  ERROR scraping {cfg['source_name']}: {ex}")
             continue
 
-    for cfg in BUSITES_SOURCES:
-        print(f"\n--- {cfg['source_name']} (busites) ---")
+    for cfg in RUNSIGNUP_SOURCES:
+        print(f"\n--- {cfg['source_name']} (runsignup) ---")
         try:
-            events = scrape_busites_music(**cfg)
+            from runsignup_scraper import scrape_runsignup_races
+            events = scrape_runsignup_races(**cfg)
             all_events.extend(events)
         except Exception as ex:
             print(f"  ERROR scraping {cfg['source_name']}: {ex}")

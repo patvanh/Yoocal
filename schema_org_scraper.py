@@ -280,6 +280,15 @@ def _find_events_in_block(block):
             for g in graph:
                 if isinstance(g, dict) and _is_event_type(g.get("@type")):
                     found.append(g)
+        # ItemList of events (race aggregators, listing pages): events are
+        # nested under itemListElement[].item as Event/SportsEvent objects.
+        if item.get("@type") == "ItemList":
+            for li in item.get("itemListElement", []):
+                if not isinstance(li, dict):
+                    continue
+                inner = li.get("item")
+                if isinstance(inner, dict) and _is_event_type(inner.get("@type")):
+                    found.append(inner)
         if _is_event_type(item.get("@type")):
             found.append(item)
 

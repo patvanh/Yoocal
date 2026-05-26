@@ -67,11 +67,24 @@ def _title_is_footrace(title):
     return False
 
 
+_VALID_BUCKETS_LOWER = {b.lower(): b for b in [
+    "Music", "Arts & Theater", "Food & Drink", "Outdoors", "Running & Races",
+    "Sports", "Family & Kids", "Festivals", "Wellness", "Nightlife",
+    "Education & Talks", "Community",
+]}
+
+
 def filter_categories_for(event):
     """Return sorted list of clean buckets for an event."""
     buckets = set()
     for c in (event.get("categories") or []):
-        b = _SOURCE_TO_BUCKET.get((c or "").strip().lower())
+        cl = (c or "").strip().lower()
+        # Honor categories already given as a clean bucket name (e.g. API
+        # sources like RunSignup that tag events "Running & Races" directly).
+        if cl in _VALID_BUCKETS_LOWER:
+            buckets.add(_VALID_BUCKETS_LOWER[cl])
+            continue
+        b = _SOURCE_TO_BUCKET.get(cl)
         if b:
             buckets.add(b)
     # title enrichment: footraces
