@@ -70,10 +70,14 @@ VENUE_PREFIX_PATTERNS = [
 
 
 CITY_FILES = {
-    "park-city": "public/raw/events.json",
-    "elkhart-lake": "public/raw/events-elkhartlake.json",
-    "heber": "public/raw/events-heber.json",
-    "jackson": "public/raw/events-jackson.json",
+    # Audit the DEDUPED PRODUCTION files (what users actually see), not raw
+    # scraper inputs. Raw files contain pre-dedup duplicates and pre-repair
+    # date spans that the build pipeline fixes downstream — auditing them
+    # produced false "severity-1" alerts for issues users never encounter.
+    "park-city": "public/events.json",
+    "elkhart-lake": "public/events-elkhartlake.json",
+    "heber": "public/events-heber.json",
+    "jackson": "public/events-jackson.json",
 }
 
 
@@ -135,7 +139,7 @@ def audit_event(e: dict, today_iso: str) -> list[dict]:
     for p in VENUE_PREFIX_PATTERNS:
         if re.search(p, title_lower):
             issues.append({
-                "severity": 1,
+                "severity": 3,
                 "type": "title_venue_only",
                 "message": f"Title is just a venue prefix ({title!r})",
                 "suggested_fix": "Replace generic 'Live Music at X' with the actual band/act name",
