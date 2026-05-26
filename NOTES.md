@@ -326,3 +326,39 @@ Growth (/go tracking, monetization) AFTER data is complete.
      failed — may be under-rating good sources. Worth revisiting.
 - jhnewsandguide.com: has scrapeable sitemap (~6) — NOT JS-only as previously
   thought. Re-evaluate.
+
+## Update 16: Generic Firecrawl+LLM extractor BUILT (the scalable backbone)
+- NEW firecrawl_extractor.py — extract_events_from_url(url, source_name, ...):
+  Firecrawl /scrape -> clean markdown (handles JS/anti-bot/403s) -> Anthropic API
+  (claude-haiku-4-5-20251001) extracts events as strict JSON -> sanity filter
+  (date must parse + be future; title >=3 chars) -> yoocal events. Strips nav
+  chrome before sending to LLM + 40k char cap (CRITICAL: without chrome-strip,
+  nav menus ate the budget and we got 1 race instead of 15 — verify extraction
+  COUNT, not just "looks clean").
+- Wired into jackson_scraper.py as FIRECRAWL_SOURCES (config list + loop, like
+  RUNSIGNUP/SITEMAP). New stubborn source = ONE config line, no custom scraper.
+- First source: runningintheusa (was 403-blocked to plain requests). Got 15
+  races ALL distances, incl. ones RunSignup/chamber missed: Old Bill's Fun Run,
+  John Wayne Grit Series, Cirque Series, Tin Cup, Lyndsey Kunz Memorial.
+- DROPPED RunSignup for Jackson (RUNSIGNUP_SOURCES=[]): Firecrawl extractor more
+  complete (15 vs 4) + avoids cross-source dups (dedup did NOT merge fuzzy
+  cross-source title variants — "Teton Mountain Runs" Jul11-12 vs Jul12, "JH
+  Marathon, Hole Half..." vs "Jackson Hole Marathon"). runsignup_scraper.py KEPT
+  for reuse/other cities. One source = no dup problem.
+- RESULT: Jackson Running & Races 1 -> 17 events (session start: "1 marathon,
+  1 5k"). Multi-day same-name races (Grand Teton Half Jun5+6, Targhee Jul4+5,
+  Teton Mtn Runs Jul11+12) KEPT SEPARATE intentionally — they're different
+  distances/races per day; merging would hide events.
+- COST NOTE: daily GitHub Actions workflow now makes Firecrawl + Anthropic calls
+  per FIRECRAWL_SOURCES entry. Both keys already in Actions secrets. Minor cost,
+  scales with # of firecrawl sources. Use sparingly — only for sites the free
+  structured paths (sitemap/RSS/API) can't handle.
+- STRATEGY (three tiers, confirmed): 1) free structured (chamber sitemap,
+  RunSignup API) first; 2) Firecrawl+LLM fallback for blocked/JS/messy; 3) custom
+  code last resort. Scales to any city by config.
+- NEXT CANDIDATES for FIRECRAWL_SOURCES (the spreadsheet gaps): chamber special
+  pages (Old West Days, Fall Arts, 4th of July), grandtarghee.com (Targhee Fest/
+  Bluegrass), jhrodeo.com (rodeo), jacksonhole.com (resort events). Each = 1 line.
+- FUTURE: use Firecrawl as v3 discovery's FALLBACK PROBE tier (for domains the
+  cheap structural probes fail) so v3 stops having dead ends. Cost: ~1 Firecrawl
+  call per probed domain — gate it to only sites cheap probes can't validate.
