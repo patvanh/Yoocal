@@ -118,14 +118,23 @@ BUSITES_SOURCES = [
 
 # RunSignup race-registration API (no auth). API geo-filters by zip+radius, so
 # events are already city-scoped — reusable for any city (just change zipcode).
-RUNSIGNUP_SOURCES = [
+RUNSIGNUP_SOURCES = []  # Disabled for Jackson: Firecrawl extractor (RunningInTheUSA)
+# is more complete (15 races vs 4, incl. Old Bill's, John Wayne, Cirque) and
+# avoids cross-source duplicates. runsignup_scraper.py kept for reuse/other cities.
+
+
+# Firecrawl-backed generic extractor sources: blocked/JS/messy sites that plain
+# scraping + sitemaps can't handle. Firecrawl fetches clean markdown, then the
+# Anthropic API extracts structured events. New stubborn source = one line here.
+# (Free structured sources stay on their own scrapers; this is the fallback.)
+FIRECRAWL_SOURCES = [
     {
-        "zipcode": "83001",
-        "radius": 30,
-        "source_name": "RunSignup Jackson",
+        "url": "https://www.runningintheusa.com/race/list/within-25-miles-of-jackson%20hole-wy/upcoming",
+        "source_name": "RunningInTheUSA Jackson",
         "default_lat": JACKSON_LAT,
         "default_lng": JACKSON_LNG,
         "default_city": "Jackson, WY",
+        "default_categories": ["Running & Races"],
     },
 ]
 
@@ -314,6 +323,16 @@ def main():
         try:
             from runsignup_scraper import scrape_runsignup_races
             events = scrape_runsignup_races(**cfg)
+            all_events.extend(events)
+        except Exception as ex:
+            print(f"  ERROR scraping {cfg['source_name']}: {ex}")
+            continue
+
+    for cfg in FIRECRAWL_SOURCES:
+        print(f"\n--- {cfg['source_name']} (firecrawl) ---")
+        try:
+            from firecrawl_extractor import extract_events_from_url
+            events = extract_events_from_url(**cfg)
             all_events.extend(events)
         except Exception as ex:
             print(f"  ERROR scraping {cfg['source_name']}: {ex}")
