@@ -680,25 +680,46 @@ def probe_playwright(domain, timeout_seconds=15):
 # QUERY TEMPLATES
 # --------------------------------------------------------------
 
+# Town-AGNOSTIC query set. Organized to mirror the ~12 category buckets in
+# category_normalizer.py so discovery looks for ALL kinds of events in ANY town
+# — not just general calendars + arts/music (the old gap that left sports,
+# running, outdoor recreation, food, theater, family, etc. undiscovered).
 QUERY_TEMPLATES = [
-    '"{city}" chamber of commerce events',
-    '"{city}" events calendar',
-    '"{city}" upcoming events',
-    '"{city}" things to do this weekend',
-    '"{city}" concerts',
-    '"{city}" festivals',
-    '"{city}" community calendar',
-    '"{city}" arts and culture events',
-    # Local media — papers and stations often aggregate the whole valley,
-    # including events in smaller neighboring towns within the radius.
-    '"{city}" newspaper events calendar',
-    '"{city}" local news community calendar',
-    '"{city}" radio station events',
-    '"{city}" public library events calendar',
-    # Venue-direct + civic sources
-    '"{city}" live music tonight',
-    '"{city}" brewery OR taproom events',
-    '"{city}" city government calendar',
+    # NATURAL phrasing — NO quotes, NO "OR" operators. Tested: quoted exact-match
+    # ("{city}" 5k OR marathon) suppresses real event sites; natural phrasing
+    # (city running races marathon) surfaces them. Applies to ALL categories.
+    # Town-agnostic, mirrors the ~12 category buckets in category_normalizer.py.
+    "{city} events calendar",
+    "{city} chamber of commerce events",
+    "{city} upcoming events things to do",
+    "{city} community calendar",
+    "{city} newspaper events calendar",
+    "{city} local news events",
+    "{city} public library events",
+    "{city} city government calendar",
+    "{city} parks and recreation events",
+    "{city} concerts live music",
+    "{city} brewery taproom events",
+    "{city} arts and culture events",
+    "{city} theater playhouse performances",
+    "{city} art gallery museum events",
+    "{city} festivals",
+    "{city} farmers market",
+    "{city} street fair craft fair",
+    "{city} running races marathon 5k 10k",
+    "{city} trail races",
+    "{city} running club",
+    "{city} sports events schedule",
+    "{city} recreation center events",
+    "{city} outdoor recreation events",
+    "{city} hiking trail events",
+    "{city} cycling bike races",
+    "{city} ski resort mountain events",
+    "{city} food and wine events",
+    "{city} restaurant week food festival",
+    "{city} family friendly events",
+    "{city} kids activities",
+    "{city} yoga wellness events",
 ]
 
 
@@ -717,6 +738,10 @@ BLACKLIST_DOMAINS = {
     # Nonprofits / orgs whose sitemaps surface in city searches but
     # aren't local-event aggregators (they're org-internal calendars)
     "encircletogether.org",
+    # Economic symposium / finance noise (Jackson Hole Fed symposium ranks high)
+    "atlantafed.org", "kansascityfed.org", "federalreserve.gov",
+    # Data brokers / AI junk
+    "zoominfo.com", "mindtrip.ai", "10best.usatoday.com",
     # Real-estate / professional service blogs that happen to mention events
     "homesbymeriann.com",
 }
@@ -773,7 +798,7 @@ def search_for_candidates(city, max_per_query=10):
 # ORCHESTRATOR
 # --------------------------------------------------------------
 
-def discover(city, max_domains=20):
+def discover(city, max_domains=None):
     print(f"\n{'='*60}\nDiscovery v3 — {city}\n{'='*60}\n")
 
     print("Step 1: Google search for candidate URLs...")
@@ -893,6 +918,6 @@ def discover(city, max_domains=20):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Discover event-calendar sources for a town.")
     parser.add_argument("--city", required=True, help='City name, e.g. "Jackson Hole Wyoming"')
-    parser.add_argument("--max-domains", type=int, default=20, help="Max unique domains to probe (default 20)")
+    parser.add_argument("--max-domains", type=int, default=None, help="Max unique domains to probe (default: all)")
     args = parser.parse_args()
     discover(args.city, max_domains=args.max_domains)
