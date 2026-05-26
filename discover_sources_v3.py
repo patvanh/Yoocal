@@ -124,7 +124,15 @@ def _validate_richness(sample_urls, max_samples=3, timeout=12):
     from datetime import datetime as _dt
 
     today_iso = _dt.utcnow().strftime("%Y-%m-%d")
-    samples = sample_urls[:max_samples]
+    # Sample SPREAD across the list (front + middle + end), not just the head.
+    # Sitemaps are often ordered with past events first, so a head-only sample
+    # reports 0 future events even when the source has upcoming ones deeper in.
+    def _spread(urls, n):
+        if len(urls) <= n:
+            return list(urls)
+        step = len(urls) / float(n)
+        return [urls[int(i * step)] for i in range(n)]
+    samples = _spread(sample_urls, max_samples)
     parsed = 0
     future_count = 0
     quality_total = 0
@@ -264,27 +272,21 @@ def probe_sitemap(domain):
             matching = [u for u in all_urls if re.search(pat, u)]
             if len(matching) >= 5:  # threshold: 5+ event URLs = real
                 if best is None or len(matching) > best["count"]:
-                    # Sample across the matching URLs: take from the END (newest)
-                    # plus middle, plus a couple from the start. Sitemaps are
-                    # typically chronological; newest = most likely to be future.
-                    n = len(matching)
-                    if n <= 6:
-                        sample = matching
-                    else:
-                        sample = [
-                            matching[-1], matching[-2], matching[-3],  # newest 3
-                            matching[n // 2],                          # middle
-                            matching[0], matching[1],                  # oldest 2
-                        ]
+                    # Keep ALL matching URLs; _validate_richness spreads its
+                    # sample evenly across them. Do NOT pre-pick by position —
+                    # sitemap ordering is unreliable (future events aren't always
+                    # at the chronological end), which caused real daily-event
+                    # sources to be scored 0.
                     best = {
                         "pattern": pat,
-                        "count": n,
-                        "sample_urls": sample,
+                        "count": len(matching),
+                        "sample_urls": matching[:3],   # small slice for display
+                        "all_urls": matching,          # full list for richness
                     }
 
         if best:
             # Validate richness: do these URLs actually contain populated events?
-            richness = _validate_richness(best["sample_urls"], max_samples=3)
+            richness = _validate_richness(best["all_urls"], max_samples=8)
             return {
                 "found": True,
                 "sitemap_url": url,
