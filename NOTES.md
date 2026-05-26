@@ -266,3 +266,32 @@ Growth (/go tracking, monetization) AFTER data is complete.
 - LESSON (again): NOTES item pointed at a stale example; careful look found the
   premise gone but surfaced a real adjacent bug. Verify the problem still exists
   before building for it.
+
+## Update 13: Category normalization + Jackson coverage investigation
+- CATEGORIES (shipped, 4564b30): category_normalizer.py maps 53 messy source
+  cats -> ~12 clean buckets, stamped as filter_categories (list) on every event
+  in build. Title-enrichment for footraces: Running & Races now 73 vs 12 source-
+  tagged. Frontend multi-select filter UI = next step, consumes this field.
+  KNOWN GAP: enrichment is running-only; "Music Series: Tom Georges" lands in
+  Community not Music (source-tagged Community, title not enriched). Add music/
+  other title-enrichment later.
+
+- JACKSON COVERAGE INVESTIGATION (what was real vs not):
+  -- "Missing events" (Joseph/Technicolor Dreamcoat) = STALE DATA, not a bug.
+     Fresh scrape + rebuild pulled it in. Chamber scraper works (sitemap has 230
+     /event/ URLs, scraper gets them, 0 failed).
+  -- Daily scrape automation (.github/workflows/scrape-daily.yml) IS running &
+     committing daily (yoocal-bot, confirmed 5/15-5/25). Not broken.
+  -- REAL finding = BREADTH GAP. Jackson has only 6 sources, all single-venue or
+     chamber. Running coverage is genuinely thin (1 marathon, 1 5k/10k for a
+     summer resort town). Dedicated sites NOT sourced: jacksonholemarathon.com,
+     tetonmountainruns.com, runningintheusa.com, Jackson Hole Mountain Resort
+     (JHMR), John Wayne events. Also jhnewsandguide.com (JS-rendered, known).
+  -- This breadth/discovery gap = THE core problem, and it's the SAME problem as
+     the Sun Valley rollout (how to comprehensively source a town). Next big
+     focus. Hand-adding sources works but doesn't scale; improving discovery
+     (v3 engine) is the real lever.
+
+- WORKFLOW DESIGN NOTE: every scraper step is continue-on-error, and the build
+  only fails if PC+Heber+Elkhart ALL fail — Jackson failing alone is silent.
+  Consider tightening: alert if any city's event count drops sharply.
