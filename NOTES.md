@@ -71,3 +71,19 @@ Growth (/go tracking, monetization) AFTER data is complete.
 - scraper_baselines.json + scraper_health.json ARE committed (rolling state).
 - Rotate the SerpApi + Anthropic keys leaked in old chat history.
 - Repo: github.com/patvanh/Yoocal. HEAD after tonight: a005bb1 (8 commits).
+
+## Update 2: datetime-attr ingestion COMPLETE (a792b83)
+- schema_org_scraper.py now ingests events from datetime="..." attrs when a
+  page has no Event JSON-LD (_human_to_iso_datetime + _fallback_event_from_html).
+  Synthesizes a raw Event (name from H1/title branding-stripped, startDate from
+  datetime attr) and runs it through the normal _parse_event path. Tested:
+  U-Foria @ Cowboy Bar -> clean event w/ date+time. JSON-LD path unchanged.
+- CAPABILITY is now end-to-end (discovery in 4c750cf + ingestion here). To wire
+  a datetime-attr source, just add it to a city scraper's source list like any
+  sitemap source — it works now, no new code needed.
+- NOT YET WIRED: Million Dollar Cowboy Bar into Jackson. Low priority — its
+  sitemap is mostly past events, sparse future. Add a config entry to
+  jackson_scraper.py + rebuild whenever you want those few Jackson shows.
+- Supported human date formats in the fallback: "Mon DD, YYYY HH:MM AM/PM" and
+  variants. If a future source uses a different format, add it to the fmts list
+  in both _human_to_iso_datetime (schema_org_scraper) and _parse_human_date (v3).
