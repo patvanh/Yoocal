@@ -432,19 +432,25 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       return start <= todayStr && todayStr <= end
     }
     const richness = (e: any) => (e.categories?.length || 0) + (e.hook ? 2 : 0)
+    const QUALITY_BAR = 2  // multiple categories, or a hook — a genuine standout
 
     const todayEvents = events.filter(activeToday)
 
-    // Manual flags happening today lead.
+    // Manually-flagged events always feature (however many there are).
     const manual = todayEvents.filter((e: any) => e.featured === true)
-    if (manual.length >= MAX) return manual.slice(0, MAX)
+    if (manual.length > 0) return manual.slice(0, MAX)
 
-    // Then today's richest events (rank by richness, then start time).
-    const rest = todayEvents
+    // No manual flags: feature only genuine standouts (don't pad to MAX).
+    const ranked = todayEvents
       .filter((e: any) => e.featured !== true)
       .sort((a, b) => richness(b) - richness(a) || (a.start_time || '').localeCompare(b.start_time || ''))
 
-    return [...manual, ...rest].slice(0, MAX)
+    const standouts = ranked.filter((e: any) => richness(e) >= QUALITY_BAR).slice(0, MAX)
+
+    // Never show an empty strip when the day has events: fall back to the
+    // single best event of the day.
+    if (standouts.length === 0 && ranked.length > 0) return ranked.slice(0, 1)
+    return standouts
   }, [events])
   
   const todayDow = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][v2TodayMountain().getDay()]
