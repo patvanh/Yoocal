@@ -295,3 +295,34 @@ Growth (/go tracking, monetization) AFTER data is complete.
 - WORKFLOW DESIGN NOTE: every scraper step is continue-on-error, and the build
   only fails if PC+Heber+Elkhart ALL fail — Jackson failing alone is silent.
   Consider tightening: alert if any city's event count drops sharply.
+
+## Update 14: Discovery v3 FIXED (root cause = query phrasing) + wiring triage
+- ROOT CAUSE of "v3 misses obvious sources": queries used quoted exact-match +
+  OR ('"{city}" 5k OR marathon') which SUPPRESSED real event sites in Google
+  ranking. Switched to NATURAL phrasing ('{city} running races marathon 5k').
+  Tested decisively: quoted form missed jacksonholemarathon/tetonmountainruns/
+  runningintheusa; natural form surfaces all of them. (commit 2de934d)
+- Also: 15->31 templates covering ALL category buckets; removed max_domains=20
+  cap; blacklisted Fed-symposium + data-broker noise. 91 domains found, 42
+  "actionable."
+- KEY LESSON: discovery's estimated_future_events is RAW/statewide-blind. High
+  counts from regional aggregators mislead. travelwyoming.com showed ~330 but
+  TESTED: only ~9 Jackson-area per 120 URLs, several already-have dupes (GTMF,
+  Wildlife Art). NOT worth wiring (scrape 580 statewide pages for ~couple dozen
+  net new). Locally-scoped domains beat big aggregators.
+- WIRING TRIAGE (verify each before wiring — counts lie):
+  -- Already have: jacksonholechamber, gtmf, milliondollarcowboybar.
+  -- SKIP: travelwyoming (statewide, mostly out-of-radius/dupes), findarace.com
+     (2897 NATIONAL races — would need geo-filter to Jackson).
+  -- PROMISING local (verify like travelwyoming, then wire): jhlandtrust.org
+     (~48, land-trust outdoor events), dishingjh.com (~7, food, wp_tribe),
+     skinnyskis.com (43 sitemap event URLs, local ski/trail shop), mtntrails.net
+     (32 sitemap event URLs, local trails). buckrail.com (~60 RSS) +
+     localnews8.com (~50 RSS) = local news feeds, verify relevance.
+  -- RACE SITES with NO sitemap (need custom scraper): jacksonholemarathon.com,
+     tetonmountainruns.com, jhhalf.com. Custom/JS or RunSignup-backed.
+  -- VALIDATOR NOTE: richness validator marked real sitemap sources as
+     'low-no-samples' (skinnyskis 43 urls, mtntrails 32) when sample-fetch
+     failed — may be under-rating good sources. Worth revisiting.
+- jhnewsandguide.com: has scrapeable sitemap (~6) — NOT JS-only as previously
+  thought. Re-evaluate.
