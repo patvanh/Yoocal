@@ -152,3 +152,17 @@ Growth (/go tracking, monetization) AFTER data is complete.
   ship (not just compile); confirmed live on PC, Heber, Jackson, Elkhart.
 - Display logic is shared across all 4 cities — per-city differences are DATA
   only. So display fixes are inherently all-cities.
+
+## Update 7: Featured tiered cap (868eca8)
+- Featured count now scales with the day's active event count:
+  <5 events -> max 1 featured; 5-10 -> max 3; 11+ -> max 5. (Was flat MAX=5.)
+- It's a MAXIMUM, not a target — only genuine standouts (richness >=2) fill up
+  to the cap; no padding with filler. Empty days correctly show 0.
+- Also fixed: manual featured flags now LEAD but standouts fill remaining slots
+  (previously a manual flag replaced standouts entirely).
+- Elkhart "empty featured" investigation conclusion: NOT a bug — empty days are
+  genuinely 0-event days (small town, shoulder season). Every day WITH events
+  has events clearing the quality bar. The tiered cap was the real improvement
+  that came out of looking.
+- Verified counts vs real data before ship: Elkhart 2evt->1, 7evt->3, 0evt->0;
+  Park City 16evt->5, 26evt->5.
