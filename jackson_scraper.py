@@ -30,6 +30,8 @@ from jhiff_scraper import scrape_jhiff
 try:
     from wp_tribe_events_scraper import scrape_wp_tribe_events
     from sitemap_event_scraper import scrape_sitemap_events
+    from busites_music_scraper import scrape_busites_music
+    from busites_music_scraper import scrape_busites_music
 except ImportError as e:
     print(f"ERROR: scraper module not found: {e}")
     sys.exit(1)
@@ -95,6 +97,40 @@ SITEMAP_SOURCES = [
 # Used when the source lists all events on a single page rather than having
 # per-event detail URLs in a sitemap.
 SINGLE_PAGE_SOURCES = []
+
+
+# 'busites' CMS venue pages — events embedded as JSON on a listing page.
+# We read the listing (correct dates + clean titles), NOT the per-event
+# detail pages (which have stale dates and date-polluted titles).
+BUSITES_SOURCES = [
+    {
+        "url": "https://www.milliondollarcowboybar.com/music",
+        "source_name": "Million Dollar Cowboy Bar",
+        "default_lat": JACKSON_LAT,
+        "default_lng": JACKSON_LNG,
+        "default_city": "Jackson, WY",
+        "default_categories": ["Music", "Nightlife"],
+        "venue_name": "Million Dollar Cowboy Bar",
+        "venue_addr": "25 N Cache St, Jackson, WY 83001",
+    },
+]
+
+
+# 'busites' CMS venue pages — events embedded as JSON on a listing page.
+# We read the listing (correct dates + clean titles), NOT the per-event
+# detail pages (which have stale dates and date-polluted titles).
+BUSITES_SOURCES = [
+    {
+        "url": "https://www.milliondollarcowboybar.com/music",
+        "source_name": "Million Dollar Cowboy Bar",
+        "default_lat": JACKSON_LAT,
+        "default_lng": JACKSON_LNG,
+        "default_city": "Jackson, WY",
+        "default_categories": ["Music", "Nightlife"],
+        "venue_name": "Million Dollar Cowboy Bar",
+        "venue_addr": "25 N Cache St, Jackson, WY 83001",
+    },
+]
 
 
 SOURCE_PRIORITY = {
@@ -261,6 +297,24 @@ def main():
                 timeout=20,
                 **cfg,
             )
+            all_events.extend(events)
+        except Exception as ex:
+            print(f"  ERROR scraping {cfg['source_name']}: {ex}")
+            continue
+
+    for cfg in BUSITES_SOURCES:
+        print(f"\n--- {cfg['source_name']} (busites) ---")
+        try:
+            events = scrape_busites_music(**cfg)
+            all_events.extend(events)
+        except Exception as ex:
+            print(f"  ERROR scraping {cfg['source_name']}: {ex}")
+            continue
+
+    for cfg in BUSITES_SOURCES:
+        print(f"\n--- {cfg['source_name']} (busites) ---")
+        try:
+            events = scrape_busites_music(**cfg)
             all_events.extend(events)
         except Exception as ex:
             print(f"  ERROR scraping {cfg['source_name']}: {ex}")
