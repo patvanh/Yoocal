@@ -87,3 +87,21 @@ Growth (/go tracking, monetization) AFTER data is complete.
 - Supported human date formats in the fallback: "Mon DD, YYYY HH:MM AM/PM" and
   variants. If a future source uses a different format, add it to the fmts list
   in both _human_to_iso_datetime (schema_org_scraper) and _parse_human_date (v3).
+
+## Update 3: Cowboy Bar wiring REVERTED (date-integrity issue)
+- Wired then UNWIRED milliondollarcowboybar.com. Per-URL scrape looked perfect
+  (72 clean events in isolation), but PRODUCTION spot-check found events on
+  dates absent from their source pages — e.g. "Rhett Haney" pages have datetime
+  attrs of Mar 23/24/25 2026 (past, correctly scraped as empty), yet production
+  showed Rhett Haney on May 25-30 2026 with polluted titles ("Rhett Haney June
+  19, 2025"). Bad dates come from the scrape+_expand_event_dates+dedup
+  interaction, NOT single pages. Root cause not fully traced.
+- LESSON: per-URL/isolation tests passed; the bug only appeared in final
+  production data. ALWAYS spot-check production output, not just components.
+- Cowboy Bar TODO if revisited: (1) trace why production assigns dates not on
+  the page (likely a sibling event with malformed end_date triggering range
+  expansion + title collision in dedup); (2) strip trailing dates from <title>
+  in _fallback_event_from_html; (3) re-validate IN PRODUCTION before shipping.
+  Do NOT rewire as-is.
+- KEPT (sound, tested): v3 datetime-attr discovery (4c750cf), schema_org
+  datetime ingestion (a792b83), full-list richness sampling (256f7cf).
