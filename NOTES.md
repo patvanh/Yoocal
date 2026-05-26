@@ -217,3 +217,24 @@ Growth (/go tracking, monetization) AFTER data is complete.
 - Cache/log gitignored; changes recorded in link_health_log.json.
 - NOTE: ~191 of 219 fixes are ONE link (Group Fitness) flooded across 191
   recurring instances. Recurring-flooding fix (NEXT) collapses that to ~1.
+
+## Update 11: Recurring-flooding — amenity removal (the big fix)
+- DIAGNOSIS: the "flood" was one-per-day events stacking in RANGE/all views.
+  In single-day views each shows once (correct). Raw had them pre-expanded into
+  N dated records (e.g. Group Fitness recurrence=weekly_multiple expanded to 189
+  daily records); production stripped the recurrence field so they looked like
+  189 independent events.
+- TWO categories: (a) always-on BUSINESSES/amenities masquerading as daily
+  events (PLUNJ cold plunge 220x, Group Fitness rec-center drop-in 189x) —
+  REMOVED; (b) genuine recurring EVENTS (farmers market, yoga, run clubs,
+  Fascia) — KEPT.
+- FIX: EXCLUDED_TITLE_PATTERNS list in build_master_and_views.py, filtered early
+  (before dedup/views/link-health). Tight substring match, extensible. Removed
+  409 events (PLUNJ 220 + Group Fitness 189). Park City 1558->1149.
+- Confirmed link/flood tangle: link-health fixes dropped 219->30 once Group
+  Fitness's 191-event dead-link cluster was removed.
+- PENDING: genuine recurring events (12-23x each) still stack in all/upcoming
+  view. Range-view collapse (one labeled entry in range views, keep per-day in
+  single-day views) is a possible polish — ASSESS LIVE FIRST: removing the 2
+  big amenities may have made the all-view acceptable without it. Don't build
+  unless the live view still feels cluttered (avoid over-engineering).
