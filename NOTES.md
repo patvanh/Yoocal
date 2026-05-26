@@ -203,3 +203,17 @@ Growth (/go tracking, monetization) AFTER data is complete.
   (4) redirects -> final target is safe. Test thoroughly BEFORE wiring — a buggy
   auto-fixer in the pipeline silently degrades links on every build.
 - creeksideparkcity.com domain is fully DOWN (8 events) — needs manual source fix.
+
+## Update 10: Option 3 DONE — link-health is now an always-on post-build step
+- link_health.py + wired into build_master_and_views.py (before "Done!").
+- Runs every build, repairs dead links automatically. 7-day cache -> most builds
+  re-check ~0 links (confirmed: 2nd build "1561 cached | 0 to check").
+- Fixes ONLY 404/410 -> verified-200 fallback. Guards (tested): 403 treated OK
+  (library/bandsintown bot-block but work in browsers, 0 wrongly changed);
+  timeouts + redirects left alone (no churn).
+- Durable: fresh build re-scraped raw (still had old dead Road America URLs) and
+  link-health re-fixed 8 automatically — catches links that come back dead.
+- creeksideparkcity.com (dead domain, 8 events) flagged manual each run.
+- Cache/log gitignored; changes recorded in link_health_log.json.
+- NOTE: ~191 of 219 fixes are ONE link (Group Fitness) flooded across 191
+  recurring instances. Recurring-flooding fix (NEXT) collapses that to ~1.
