@@ -367,6 +367,65 @@ def merge_events(records: list[dict]) -> dict:
     return base
 
 
+def _prefix_merge(events: list[dict]) -> list[dict]:
+    """Second-pass dedup for suffix-variant dupes the (title,date) key misses.
+
+    Merges when one normalized title is a strict STRING-PREFIX of another on the
+    same date. String-prefix (not token-subset) is deliberate: it only fires when
+    one title is literally the start of the other, so descriptive fluff suffixes
+    collapse but events that diverge mid-string stay separate.
+
+    MERGES:  "the babys" ⊂ "the babys residency ut"
+             "downtown night" ⊂ "downtown night a taste of elkhart lake"
+             "latino arts festival" ⊂ "latino arts festival june 12 14 2026"
+    KEEPS:   "high uinta half marathon 5k" vs "...half marathon" (diverge at 5k)
+             "runtastic heber 5k" vs "runtastic heber half marathon"
+    (Same-name races at different distances stay as separate cards so no
+    distance is hidden inside a merged title.)
+    """
+    from collections import defaultdict
+    import re as _re
+    by_date = defaultdict(list)
+    for e in events:
+        by_date[(e.get("date") or "")[:10]].append(e)
+
+    out = []
+    absorbed = 0
+    for _date, group in by_date.items():
+        norms = [_normalize_title(e.get("title") or "") for e in group]
+        dropped = [False] * len(group)
+        for i in range(len(group)):
+            if dropped[i] or not norms[i]:
+                continue
+            for j in range(len(group)):
+                if i == j or dropped[j] or not norms[j]:
+                    continue
+                a, b = norms[i], norms[j]
+                # Don't merge across race-distance variants — keep each distance
+                # as its own card (e.g. "Round Valley Rambler 7K" must NOT absorb
+                # into "Round Valley Rambler 7K Half Marathon"). The suffix that
+                # distinguishes a from b is what matters.
+                # Block merge only when the TERSER title (b) is itself race-like:
+                # then the longer one is just another distance and must stay a
+                # separate card ("Round Valley Rambler 7K" vs "...7K Half Marathon").
+                # A festival whose name has no race word (e.g. "Red White and Blue
+                # Festival") still absorbs a race sub-event suffix -> merge.
+                _race_re = r"\b(\d+\s*k|\d+\s*mile|half marathon|marathon)\b"
+                _b_is_race = _re.search(_race_re, b)
+                # b is a strict string-prefix of a, and b is not itself a race
+                # listing -> b is the terser duplicate, merge it in.
+                if a != b and a.startswith(b + " ") and not _b_is_race:
+                    group[i] = merge_events([group[i], group[j]])
+                    norms[i] = _normalize_title(group[i].get("title") or "")
+                    dropped[j] = True
+                    absorbed += 1
+        out.extend(e for k, e in enumerate(group) if not dropped[k])
+
+    if absorbed:
+        print(f"  [prefix-merge] absorbed {absorbed} suffix-variant duplicates")
+    return out
+
+
 def main():
     today_iso = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
     print(f"Building master + city views — {today_iso}")
@@ -394,6 +453,10 @@ def main():
     deduped = [merge_events(group) for group in by_key.values()]
     print(f"Deduped records: {len(deduped)}")
     print(f"Duplicates merged: {len(all_events) - len(deduped)}")
+
+    # Second pass: merge suffix-variant dupes the (title,date) key missed.
+    deduped = _prefix_merge(deduped)
+    print(f"After prefix-merge: {len(deduped)}")
     
     # Step 3: Filter past events
     future = [e for e in deduped if (e.get("date") or "")[:10] >= today_iso]
