@@ -424,3 +424,34 @@ Growth (/go tracking, monetization) AFTER data is complete.
   test harness; (c) unify the two taxonomies (classifier CANONICAL_CATEGORIES vs
   normalizer buckets) that keep causing multi-layer ripple. 58% of Jackson still
   buckets Community — main limiter on the future filter UI.
+
+## Update 18: Per-city coverage audit (research vs our data)
+Method: web-researched each town's real event scene, compared to current sources.
+KEY FINDING: coverage is BETTER than expected — aggregators (Park Record, Heber
+Valley Tourism, Elkhart Lake Tourism) carry most events. Few real gaps. (Same
+lesson as Jackson spreadsheet: much that "looks missing" is under an aggregator.)
+
+- PARK CITY (1136 events, very well covered): Has Park Record (679), Mountain
+  Town Music, Egyptian, Deer Valley (62), Visit PC, Farmers Mkt, KPCW, PC
+  Institute. Research confirms Deer Valley/Egyptian/Farmers/Institute all present.
+  CANDIDATE GAP: Park City Mountain Resort / Canyons Village concerts (not a
+  distinct source — verify not inside Park Record). Kimball Arts Fest, Miner's
+  Day (verify). LOW priority.
+- HEBER (259): Has Heber Valley Tourism (106=gohebervalley), Deer Valley, Google
+  Events, Heber Valley Life, RunSignup. CANDIDATE GAPS: Ideal Playhouse (theater
+  — Arts&Theater only 17, real playhouse exists), Wasatch Trail Run Series
+  (Running only 13). Soldier Hollow/Wasatch Back Art Fest/Railroad likely already
+  in the two aggregators — verify. MEDIUM priority.
+- ELKHART LAKE (227, well covered): Elkhart Lake Tourism (190=elkhartlake.com) is
+  TOP source and already carries Lake Deck Music, Farmers Mkt, Jazz on the Vine,
+  Sunset Cruises. Road America (13), Osthoff, Siebkens present. Verdict: little/
+  nothing missing. LOW priority.
+- JACKSON: overhauled this session (3 Firecrawl sources, 17 races, Targhee/JHMR).
+  Well covered.
+
+SHORT real candidate list to verify->maybe wire:
+  1. Park City Mountain Resort events (Canyons concerts)
+  2. Heber: Ideal Playhouse (theater)
+  3. Heber: Wasatch Trail Run Series
+BIGGER lever than new sources = CATEGORY FIX (Community still top bucket in 3/4
+cities). Coverage is solid; categorization is the real limiter.
