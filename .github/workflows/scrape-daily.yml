@@ -214,9 +214,25 @@ jobs:
           TODAY=$(TZ='America/Denver' date '+%Y-%m-%d')
           git commit -m "chore(data): daily scrape ${TODAY}" \
                      -m "Automated nightly scrape via GitHub Actions."
-          # Pull-rebase so manual pushes during the run don't cause race
-          git pull --rebase origin main || true
-          git push
+          # Rebase onto latest main, but the freshly-scraped data files are
+          # authoritative — auto-resolve any data-file conflict in favor of THIS
+          # run's data (-X theirs during rebase = incoming/our-replayed commit).
+          # Retry a few times in case manual pushes land during the run.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase -X theirs origin/main; then
+              if git push; then
+                echo "Pushed on attempt ${attempt}"
+                exit 0
+              fi
+            else
+              echo "Rebase failed on attempt ${attempt}, aborting rebase"
+              git rebase --abort || true
+            fi
+            sleep 5
+          done
+          echo "::error::Could not push after 3 attempts — manual intervention needed"
+          exit 1
 
       - name: No changes to commit
         if: steps.changes.outputs.has_changes == 'false'
