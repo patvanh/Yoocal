@@ -1,7 +1,8 @@
 'use client'
 
 import CitySearch from "@/components/CitySearch"
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useSearchParams } from 'next/navigation'
 import EventModal, { type EventModalData } from './EventModal'
 
@@ -27,10 +28,90 @@ interface V2YocEvent {
   source?: string
   image_url?: string
   categories?: string[]
+  filter_categories?: string[]
   facets?: string[]
   hook?: string
   is_free?: boolean | null
   price?: string
+}
+
+// Search match: case-insensitive substring across title, description, venue,
+// location, address, source, AND every category-ish field (categories,
+// filter_categories, facets). Including filter_categories matters because that's
+// where the clean user-facing buckets live ("Running & Races", "Outdoors"...) —
+// without it, typing "running" misses everything tagged via the bucket pipeline.
+function matchesQuery(e: V2YocEvent, qLower: string): boolean {
+  if (!qLower) return true
+  const text = [
+    e.title, e.description, e.venue_name, e.location, e.address, e.source,
+    ...(e.categories || []), ...(e.filter_categories || []), ...(e.facets || [])
+  ].filter(Boolean).join(' ').toLowerCase()
+  return text.includes(qLower)
+}
+
+function isFreeEvent(e: V2YocEvent): boolean {
+  if (e.is_free === true) return true
+  if (e.is_free === false) return false
+  const text = `${e.title || ''} ${e.description || ''} ${e.price || ''}`.toLowerCase()
+  return /\bfree\b/.test(text) || /\$0\b/.test(text) || /\bno charge\b/.test(text) || /\bno cost\b/.test(text)
+}
+
+type ChipId = 'weekend' | 'today' | 'free' | 'pickdate' | 'tomorrow' | 'next7' | 'music' | 'outdoors' | 'food' | 'family' | 'arts' | 'sports' | 'kids' | 'wellness' | 'education' | 'festivals'
+
+function chipPassesEvent(chip: ChipId, e: V2YocEvent, todayStr: string, pickedDate: string): boolean {
+  if (chip === 'free') return isFreeEvent(e)
+  const eStart = (e.date || '').slice(0, 10)
+  const eEnd = ((e.end_date || e.date) || '').slice(0, 10)
+  if (!eStart) return false
+  const onDay = (day: string) => eStart <= day && day <= (eEnd || eStart)
+  if (chip === 'today') return onDay(todayStr)
+  if (chip === 'pickdate') return onDay(pickedDate)
+  if (chip === 'weekend') {
+    const [y, m, d] = todayStr.split('-').map(Number)
+    const t = new Date(y, m - 1, d)
+    const dow = t.getDay()
+    const daysToSat = (6 - dow + 7) % 7
+    const sat = new Date(t); sat.setDate(t.getDate() + daysToSat)
+    const sun = new Date(sat); sun.setDate(sat.getDate() + 1)
+    const fmt = (x: Date) => `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,'0')}-${String(x.getDate()).padStart(2,'0')}`
+    return onDay(fmt(sat)) || onDay(fmt(sun))
+  }
+  if (chip === 'tomorrow') {
+    const [y, m, d] = todayStr.split('-').map(Number)
+    const t = new Date(y, m - 1, d); t.setDate(t.getDate() + 1)
+    const fmt = (x: Date) => `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,'0')}-${String(x.getDate()).padStart(2,'0')}`
+    return onDay(fmt(t))
+  }
+  if (chip === 'next7') {
+    const [y, m, d] = todayStr.split('-').map(Number)
+    const end = new Date(y, m - 1, d); end.setDate(end.getDate() + 7)
+    const endStr = `${end.getFullYear()}-${String(end.getMonth()+1).padStart(2,'0')}-${String(end.getDate()).padStart(2,'0')}`
+    // Event overlaps the [today, today+7] window.
+    return eStart <= endStr && (eEnd || eStart) >= todayStr
+  }
+  // Vibe chips: match against filter_categories (clean buckets), categories
+  // (classifier output), AND title/description text via matchesQuery as fallback.
+  const VIBE_TERMS: Record<string, string[]> = {
+    music: ['music', 'concert', 'band', 'live music', 'symphony', 'opera', 'jazz', 'bluegrass'],
+    outdoors: ['outdoors', 'outdoor', 'hike', 'hiking', 'trail', 'bike', 'mountain bike', 'paddle', 'kayak', 'climb', 'fish'],
+    food: ['food & drink', 'food', 'wine', 'beer', 'brew', 'culinary', 'farmers market', 'taste'],
+    family: ['family & kids', 'family', 'kids', 'children', 'kid-friendly'],
+    arts: ['arts & theater', 'art', 'gallery', 'theater', 'theatre', 'museum', 'exhibit'],
+    sports: ['sports', 'race', 'tournament', 'championship', 'game', 'match', 'rodeo'],
+    kids: ['family & kids', 'kids', 'children', 'kid', 'toddler', 'storytime'],
+    wellness: ['wellness', 'yoga', 'meditation', 'mindfulness', 'fitness', 'pilates'],
+    education: ['education & talks', 'education', 'class', 'workshop', 'lecture', 'talk', 'workshop'],
+    festivals: ['festivals', 'festival'],
+  }
+  const terms = VIBE_TERMS[chip]
+  if (terms) {
+    const haystack = [
+      e.title, e.description, e.venue_name, e.location, e.source,
+      ...(e.categories || []), ...(e.filter_categories || []), ...(e.facets || [])
+    ].filter(Boolean).join(' ').toLowerCase()
+    return terms.some(t => haystack.includes(t))
+  }
+  return true
 }
 
 type V2DayFilter = 'all' | 'today' | 'tomorrow' | 'weekend' | '7days' | 'pickdate'
@@ -311,8 +392,98 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   const [activeCategory, setActiveCategory] = useState<string>('all')
   const [showAllCategories, setShowAllCategories] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-  const [pickedDate, setPickedDate] = useState<string>(v2DateToStr(v2TodayMountain()))
   const [selectedEvent, setSelectedEvent] = useState<EventModalData | null>(null)
+  const [showResultsView, setShowResultsView] = useState(false)
+  const [activeChips, setActiveChips] = useState<Set<ChipId>>(new Set())
+  const [chipPickedDate, setChipPickedDate] = useState<string>('')
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [showMoreFilters, setShowMoreFilters] = useState(false)
+  // When chips are mutually exclusive (one date filter at a time). Vibe chips
+  // stack. Pick-a-date is a When chip too.
+  const WHEN_CHIPS: ReadonlyArray<ChipId> = ['weekend', 'today', 'tomorrow', 'next7', 'pickdate']
+  const toggleChip = (id: ChipId) => {
+    setDropdownOpen(true)
+    setActiveChips(prev => {
+      const next = new Set(prev)
+      if (next.has(id)) {
+        next.delete(id)
+      } else {
+        // If this is a When chip, clear any other When chip first.
+        if (WHEN_CHIPS.includes(id)) {
+          for (const w of WHEN_CHIPS) next.delete(w)
+        }
+        next.add(id)
+      }
+      return next
+    })
+    // Tapping a non-pickdate When chip should also clear the picked date value.
+    if (WHEN_CHIPS.includes(id) && id !== 'pickdate') setChipPickedDate('')
+  }
+  const searchInputRef = useRef<HTMLInputElement | null>(null)
+  const pickDateInputRef = useRef<HTMLInputElement | null>(null)
+  const suppressOutsideRef = useRef<number>(0)
+  const [searchRect, setSearchRect] = useState<{top:number;left:number;width:number} | null>(null)
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
+  useEffect(() => {
+    if (!dropdownOpen) { setSearchRect(null); return }
+    const update = () => {
+      const r = searchInputRef.current?.getBoundingClientRect()
+      if (!r) return
+      // Never let the dropdown render above the site header (60px) — when the
+      // user scrolls so the input goes off-screen, the dropdown clamps to just
+      // below the header instead of overlapping it.
+      setSearchRect({ top: r.bottom + 6, left: r.left, width: r.width })
+    }
+    update()
+    window.addEventListener('resize', update)
+    window.addEventListener('scroll', update, true)
+    return () => {
+      window.removeEventListener('resize', update)
+      window.removeEventListener('scroll', update, true)
+    }
+  }, [dropdownOpen])
+
+  const dropdownRef = useRef<HTMLDivElement | null>(null)
+  useEffect(() => {
+    if (!dropdownOpen) return
+    const onMouseDown = (ev: MouseEvent) => {
+      const t = ev.target as Node | null
+      if (searchInputRef.current && t && searchInputRef.current.contains(t)) return
+      if (dropdownRef.current && t && dropdownRef.current.contains(t)) return
+      // Don't close while the event modal is open (user is interacting with it).
+      if (selectedEvent) return
+      // Native date picker lives outside our DOM; suppress outside-close
+      // briefly after Pick-a-date opens, so picker interactions don't reset.
+      if (Date.now() < suppressOutsideRef.current) return
+      // Click outside = full reset: close dropdown AND clear all search state.
+      setDropdownOpen(false)
+      setSearchQuery('')
+      setActiveChips(new Set())
+      setChipPickedDate('')
+      setShowMoreFilters(false)
+    }
+    document.addEventListener('mousedown', onMouseDown)
+    const onKey = (ev: KeyboardEvent) => {
+      if (ev.key === 'Escape') {
+        if (selectedEvent) return
+        setDropdownOpen(false)
+        setSearchQuery('')
+        setActiveChips(new Set())
+        setChipPickedDate('')
+        setShowMoreFilters(false)
+        suppressOutsideRef.current = 0
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.removeEventListener('mousedown', onMouseDown)
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [dropdownOpen, selectedEvent])
+
+
+  const [pickedDate, setPickedDate] = useState<string>(v2DateToStr(v2TodayMountain()))
   const [radius, setRadius] = useState<number>(10)
   const [locationMode, setLocationMode] = useState<'city' | 'mylocation' | 'zip'>('city')
   const [zipCode, setZipCode] = useState<string>('')
@@ -398,16 +569,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       result = result.filter(e => (e.categories || []).includes(activeCategory))
     }
     
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase()
-      result = result.filter(e => {
-        const text = [
-          e.title, e.description, e.venue_name, e.location, e.address,
-          e.source, ...(e.categories || []), ...(e.facets || [])
-        ].filter(Boolean).join(' ').toLowerCase()
-        return text.includes(q)
-      })
-    }
+
 
     // Radius filter: keep events within `radius` miles of the origin.
     // Origin is the user's GPS location if shared, else the city center.
@@ -429,7 +591,23 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       return ta - tb
     })
     return result
-  }, [events, dayFilter, timeFilter, activeCategory, searchQuery, pickedDate, radius, userCoords, cityKey])
+  }, [events, dayFilter, timeFilter, activeCategory, pickedDate, radius, userCoords, cityKey])
+
+  const allUpcomingMatches = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase()
+    const todayStr = v2DateToStr(v2TodayMountain())
+    if (!q && activeChips.size === 0) return []
+    return events
+      .filter(e => ((e.end_date || e.date) || '') >= todayStr)
+      .filter(e => matchesQuery(e, q))
+      .filter(e => {
+        for (const chip of activeChips) {
+          if (!chipPassesEvent(chip, e, todayStr, chipPickedDate)) return false
+        }
+        return true
+      })
+      .sort((a, b) => (a.date || '').localeCompare(b.date || ''))
+  }, [events, searchQuery, activeChips, chipPickedDate])
   
   // Featured events: things happening TODAY only. Manual flags first, then
   // today's best events ranked by tag richness. Empty if nothing today.
@@ -613,20 +791,230 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         borderRadius: 16, padding: 18, marginBottom: 18,
         backdropFilter: 'blur(8px)',
       }}>
-        <input
-          type="text"
-          placeholder="Search bands, venues, or what to do..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          style={{
-            width: '100%', padding: '11px 16px', fontSize: 14,
-            border: '1px solid rgba(255,255,255,0.18)', borderRadius: 10,
-            color: '#fff', marginBottom: 16, boxSizing: 'border-box',
-            background: 'rgba(255,255,255,0.06)',
-            outline: 'none',
-          }}
-          className="v2-search-input"
-        />
+        <div style={{ position: 'relative', marginBottom: 16 }}>
+          <input
+            ref={searchInputRef}
+            type="text"
+            placeholder="Search bands, venues, or what to do..."
+            value={searchQuery}
+            onChange={(e) => { setSearchQuery(e.target.value); setDropdownOpen(true) }}
+            onFocus={() => setDropdownOpen(true)}
+            style={{
+              width: '100%', padding: '11px 16px', fontSize: 14,
+              border: '1px solid rgba(255,255,255,0.18)', borderRadius: 10,
+              color: '#fff', boxSizing: 'border-box',
+              background: 'rgba(255,255,255,0.06)',
+              outline: 'none',
+            }}
+            className="v2-search-input"
+          />
+          {mounted && searchRect && dropdownOpen && createPortal((
+            <div ref={dropdownRef} style={{
+              position: 'fixed', top: searchRect.top, left: searchRect.left, width: searchRect.width,
+              background: '#221a3a', border: '1px solid rgba(255,255,255,0.12)',
+              borderRadius: 12, zIndex: 50, overflow: 'hidden',
+              boxShadow: '0 12px 40px rgba(0,0,0,0.4)',
+            }}>
+              {/* Quick filter chips */}
+              <div style={{
+                padding: '10px 14px', borderBottom: '1px solid rgba(255,255,255,0.06)',
+                background: 'rgba(127,119,221,0.05)',
+                display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center',
+              }}>
+                {([
+                  {id: 'weekend' as ChipId, label: 'This weekend'},
+                  {id: 'today' as ChipId, label: 'Today'},
+                  {id: 'tomorrow' as ChipId, label: 'Tomorrow'},
+                ]).map(c => {
+                  const active = activeChips.has(c.id)
+                  return (
+                    <button key={c.id} type="button" onClick={() => toggleChip(c.id)}
+                      style={{
+                        background: active ? '#534AB7' : 'rgba(255,255,255,0.08)',
+                        color: active ? '#fff' : 'rgba(255,255,255,0.78)',
+                        border: active ? '1px solid transparent' : '1px solid rgba(255,255,255,0.12)',
+                        borderRadius: 999, padding: '4px 11px', fontSize: 11,
+                        fontWeight: active ? 500 : 400, cursor: 'pointer',
+                        fontFamily: 'inherit',
+                      }}>{c.label}</button>
+                  )
+                })}
+                <button type="button"
+                  onClick={() => {
+                    const inp = pickDateInputRef.current
+                    if (!inp) return
+                    // Suppress outside-close for 30 seconds while user
+                    // navigates the native picker (months, year, day).
+                    suppressOutsideRef.current = Date.now() + 60000
+                    if (typeof inp.showPicker === 'function') {
+                      try { inp.showPicker() } catch { inp.focus(); inp.click() }
+                    } else {
+                      inp.focus(); inp.click()
+                    }
+                  }}
+                  style={{
+                    background: activeChips.has('pickdate') ? '#534AB7' : 'rgba(255,255,255,0.08)',
+                    color: activeChips.has('pickdate') ? '#fff' : 'rgba(255,255,255,0.78)',
+                    border: activeChips.has('pickdate') ? '1px solid transparent' : '1px solid rgba(255,255,255,0.12)',
+                    borderRadius: 999, padding: '4px 11px', fontSize: 11,
+                    cursor: 'pointer', fontFamily: 'inherit',
+                  }}>
+                  {chipPickedDate && activeChips.has('pickdate') ? chipPickedDate : 'Pick a date'}
+                </button>
+                <input
+                  ref={pickDateInputRef}
+                  type="date"
+                  value={chipPickedDate}
+                  onChange={(e) => {
+                    const v = e.target.value
+                    setChipPickedDate(v)
+                    setActiveChips(prev => {
+                      const next = new Set(prev)
+                      // Picking a date is a When choice — clear other When chips.
+                      for (const w of ['weekend','today','tomorrow','next7'] as ChipId[]) next.delete(w)
+                      if (v) next.add('pickdate'); else next.delete('pickdate')
+                      return next
+                    })
+                    suppressOutsideRef.current = 0
+                  }}
+                  style={{ position: 'absolute', opacity: 0, width: 0, height: 0, padding: 0, border: 0, pointerEvents: 'none' }}
+                />
+                {(activeChips.size > 0 || searchQuery.trim()) && (
+                  <button type="button"
+                    onClick={() => {
+                      setSearchQuery('')
+                      setActiveChips(new Set())
+                      setChipPickedDate('')
+                      setShowMoreFilters(false)
+                      setDropdownOpen(false)
+                    }}
+                    style={{
+                      background: 'rgba(255,255,255,0.04)',
+                      color: 'rgba(255,255,255,0.6)',
+                      border: '1px solid rgba(255,255,255,0.10)',
+                      borderRadius: 999, padding: '4px 11px', fontSize: 11,
+                      cursor: 'pointer', fontFamily: 'inherit',
+                    }}>Clear filters</button>
+                )}
+                <button type="button"
+                  onClick={() => setShowMoreFilters(v => !v)}
+                  style={{
+                    background: 'transparent',
+                    color: '#AFA9EC',
+                    border: '1px dashed rgba(127,119,221,0.4)',
+                    borderRadius: 999, padding: '4px 11px', fontSize: 11,
+                    cursor: 'pointer', fontFamily: 'inherit',
+                  }}>{showMoreFilters ? '− Less filters' : '+ More filters'}</button>
+              </div>
+              {showMoreFilters && (
+                <div style={{
+                  padding: '10px 14px', borderBottom: '1px solid rgba(255,255,255,0.06)',
+                  background: 'rgba(127,119,221,0.03)',
+                }}>
+                  <div style={{
+                    fontSize: 10, color: 'rgba(255,255,255,0.5)', fontWeight: 600,
+                    letterSpacing: 0.5, textTransform: 'uppercase', marginBottom: 6,
+                  }}>More when</div>
+                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 10 }}>
+                    {([
+                      {id: 'next7' as ChipId, label: 'Next 7 days'},
+                    ]).map(c => {
+                      const active = activeChips.has(c.id)
+                      return (
+                        <button key={c.id} type="button" onClick={() => toggleChip(c.id)}
+                          style={{
+                            background: active ? '#534AB7' : 'rgba(255,255,255,0.08)',
+                            color: active ? '#fff' : 'rgba(255,255,255,0.78)',
+                            border: active ? '1px solid transparent' : '1px solid rgba(255,255,255,0.12)',
+                            borderRadius: 999, padding: '4px 11px', fontSize: 11,
+                            fontWeight: active ? 500 : 400, cursor: 'pointer',
+                            fontFamily: 'inherit',
+                          }}>{c.label}</button>
+                      )
+                    })}
+                  </div>
+                  <div style={{
+                    fontSize: 10, color: 'rgba(255,255,255,0.5)', fontWeight: 600,
+                    letterSpacing: 0.5, textTransform: 'uppercase', marginBottom: 6,
+                  }}>Vibe</div>
+                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                    {([
+                      {id: 'music' as ChipId, label: 'Music'},
+                      {id: 'outdoors' as ChipId, label: 'Outdoors'},
+                      {id: 'food' as ChipId, label: 'Food & Drink'},
+                      {id: 'family' as ChipId, label: 'Family'},
+                      {id: 'arts' as ChipId, label: 'Arts'},
+                      {id: 'sports' as ChipId, label: 'Sports'},
+                      {id: 'kids' as ChipId, label: 'Kids'},
+                      {id: 'wellness' as ChipId, label: 'Wellness'},
+                      {id: 'education' as ChipId, label: 'Education'},
+                      {id: 'festivals' as ChipId, label: 'Festivals'},
+                    ]).map(c => {
+                      const active = activeChips.has(c.id)
+                      return (
+                        <button key={c.id} type="button" onClick={() => toggleChip(c.id)}
+                          style={{
+                            background: active ? '#534AB7' : 'rgba(255,255,255,0.08)',
+                            color: active ? '#fff' : 'rgba(255,255,255,0.78)',
+                            border: active ? '1px solid transparent' : '1px solid rgba(255,255,255,0.12)',
+                            borderRadius: 999, padding: '4px 11px', fontSize: 11,
+                            fontWeight: active ? 500 : 400, cursor: 'pointer',
+                            fontFamily: 'inherit',
+                          }}>{c.label}</button>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+              {allUpcomingMatches.slice(0, 5).map((ev, i) => {
+                const d = v2ParseEventDate((ev.date || '').slice(0, 10))
+                const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+                const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+                const datePill = d ? `${DOW[d.getDay()]} ${MON[d.getMonth()]} ${d.getDate()}` : ''
+                return (
+                  <div
+                    key={`sr-${i}`}
+                    onClick={() => { handleEventClick(ev) }}
+                    style={{
+                      padding: '12px 16px',
+                      borderBottom: '1px solid rgba(255,255,255,0.06)',
+                      display: 'flex', alignItems: 'center', gap: 12,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <div style={{
+                      background: '#534AB7', color: '#fff',
+                      borderRadius: 8, padding: '4px 8px',
+                      fontSize: 11, fontWeight: 500, minWidth: 64, textAlign: 'center',
+                      flexShrink: 0,
+                    }}>{datePill}</div>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{
+                        color: '#fff', fontSize: 14, fontWeight: 500,
+                        whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
+                      }}>{ev.title}</div>
+                      <div style={{
+                        color: 'rgba(255,255,255,0.55)', fontSize: 12,
+                        whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
+                      }}>{ev.venue_name || ev.location || ev.source || ''}</div>
+                    </div>
+                  </div>
+                )
+              })}
+              {allUpcomingMatches.length > 5 && (
+                <div
+                  onClick={() => setShowResultsView(true)}
+                  style={{
+                    padding: '12px 16px', textAlign: 'center',
+                    color: '#AFA9EC', fontSize: 12, cursor: 'pointer',
+                    background: 'rgba(127,119,221,0.05)', fontWeight: 500,
+                  }}
+                >See all {allUpcomingMatches.length} results &rarr;</div>
+              )}
+            </div>
+          ), document.body)}
+          
+        </div>
         <div style={{ display: 'flex', gap: 6, marginBottom: 12, overflowX: 'auto', alignItems: 'center' }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', minWidth: 56, fontWeight: 600 }}>When:</span>
           <V2Chip active={dayFilter === 'all'} onClick={() => setDayFilter('all')}>All upcoming</V2Chip>
