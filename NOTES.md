@@ -362,3 +362,65 @@ Growth (/go tracking, monetization) AFTER data is complete.
 - FUTURE: use Firecrawl as v3 discovery's FALLBACK PROBE tier (for domains the
   cheap structural probes fail) so v3 stops having dead ends. Cost: ~1 Firecrawl
   call per probed domain — gate it to only sites cheap probes can't validate.
+
+## Update 17: More Firecrawl sources (Jackson) + category-enrichment attempt REVERTED
+- Added 2 more FIRECRAWL_SOURCES to Jackson (committed): grandtarghee.com/events
+  (13 events: Targhee Fest, Bluegrass, Pierre's Hole, bike races) + jacksonhole.com
+  /events (JHMR: Bike Park, JH Downhill, Food&Wine, People's Market — 7 net after
+  dedup). Widened Jackson radius 20->25mi to include Alta/Targhee (23.4mi), Driggs
+  (24.2mi), Victor (19.4mi). Jackson now ~574 events, 3 Firecrawl sources.
+- PATTERN learned: Firecrawl extractor works great on EVENT-LISTING pages
+  (runningintheusa, grandtarghee, jacksonhole.com all clean). FAILS (returns 0,
+  correctly) on MARKETING/LANDING pages with no concrete dates (jhrodeo.com =
+  recurrence rule "Wed/Sat Memorial-Labor Day" no dates; chamber /old-west-days/
+  = prose description). Those need a recurring-event model, not extraction. Test
+  candidate URLs: listing page = good, marketing page = skip.
+- Chamber "special page" gaps were ILLUSORY: Fall Arts, QuickDraw, art fairs,
+  Palates already in chamber /event/ sitemap (earlier fuzzy cross-check just
+  mis-matched titles). Chamber coverage is solid. Old West Days = past (May15-25).
+- CATEGORY ENRICHMENT ATTEMPT — REVERTED (not committed). Tried adding cycling/
+  MTB->Sports+Outdoor, food/wine/brew->Food&Drink, tightening Festival rules.
+  GOOD shifts (Outdoors 0->14, Sports 1->26, Food 2->82) BUT entangled with
+  pre-existing over-match: Festivals exploded 2->127, Music ->278. ROOT CAUSE:
+  greedy rules + the killer case "Grand Teton Music FESTIVAL" — an org/series
+  NAME containing a category word ("music festival") makes title rules mis-fire
+  (GTMF's 77 concerts -> Festivals). Reverted event_classifier.py to keep safe
+  committed state. Events stay live, just some in Community (suboptimal not wrong).
+- CATEGORY QUALITY = real next task, but needs a DEDICATED pass, NOT reactive
+  keyword-patching (3 iterations tonight kept surfacing new breakage). Needs:
+  (a) handle "org/series name contains category word" (GTMF, "X Music Festival"
+  series) so series concerts -> Music not Festivals; (b) all-category before/after
+  test harness; (c) unify the two taxonomies (classifier CANONICAL_CATEGORIES vs
+  normalizer buckets) that keep causing multi-layer ripple. 58% of Jackson still
+  buckets Community — main limiter on the future filter UI.
+
+## Update 17: More Firecrawl sources (Jackson) + category-enrichment attempt REVERTED
+- Added 2 more FIRECRAWL_SOURCES to Jackson (committed): grandtarghee.com/events
+  (13 events: Targhee Fest, Bluegrass, Pierre's Hole, bike races) + jacksonhole.com
+  /events (JHMR: Bike Park, JH Downhill, Food&Wine, People's Market — 7 net after
+  dedup). Widened Jackson radius 20->25mi to include Alta/Targhee (23.4mi), Driggs
+  (24.2mi), Victor (19.4mi). Jackson now ~574 events, 3 Firecrawl sources.
+- PATTERN learned: Firecrawl extractor works great on EVENT-LISTING pages
+  (runningintheusa, grandtarghee, jacksonhole.com all clean). FAILS (returns 0,
+  correctly) on MARKETING/LANDING pages with no concrete dates (jhrodeo.com =
+  recurrence rule "Wed/Sat Memorial-Labor Day" no dates; chamber /old-west-days/
+  = prose description). Those need a recurring-event model, not extraction. Test
+  candidate URLs: listing page = good, marketing page = skip.
+- Chamber "special page" gaps were ILLUSORY: Fall Arts, QuickDraw, art fairs,
+  Palates already in chamber /event/ sitemap (earlier fuzzy cross-check just
+  mis-matched titles). Chamber coverage is solid. Old West Days = past (May15-25).
+- CATEGORY ENRICHMENT ATTEMPT — REVERTED (not committed). Tried adding cycling/
+  MTB->Sports+Outdoor, food/wine/brew->Food&Drink, tightening Festival rules.
+  GOOD shifts (Outdoors 0->14, Sports 1->26, Food 2->82) BUT entangled with
+  pre-existing over-match: Festivals exploded 2->127, Music ->278. ROOT CAUSE:
+  greedy rules + the killer case "Grand Teton Music FESTIVAL" — an org/series
+  NAME containing a category word ("music festival") makes title rules mis-fire
+  (GTMF's 77 concerts -> Festivals). Reverted event_classifier.py to keep safe
+  committed state. Events stay live, just some in Community (suboptimal not wrong).
+- CATEGORY QUALITY = real next task, but needs a DEDICATED pass, NOT reactive
+  keyword-patching (3 iterations tonight kept surfacing new breakage). Needs:
+  (a) handle "org/series name contains category word" (GTMF, "X Music Festival"
+  series) so series concerts -> Music not Festivals; (b) all-category before/after
+  test harness; (c) unify the two taxonomies (classifier CANONICAL_CATEGORIES vs
+  normalizer buckets) that keep causing multi-layer ripple. 58% of Jackson still
+  buckets Community — main limiter on the future filter UI.
