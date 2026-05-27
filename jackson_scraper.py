@@ -144,6 +144,14 @@ FIRECRAWL_SOURCES = [
         "default_city": "Alta, WY",
         "default_categories": [],
     },
+    {
+        "url": "https://www.jacksonhole.com/events",
+        "source_name": "Jackson Hole Mountain Resort",
+        "default_lat": JACKSON_LAT,
+        "default_lng": JACKSON_LNG,
+        "default_city": "Jackson, WY",
+        "default_categories": [],
+    },
 ]
 
 
