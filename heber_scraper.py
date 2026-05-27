@@ -625,11 +625,50 @@ def scrape_hebervalleylife_sitemap():
         return []
 
 
+# City coordinates for TownLift events. TownLift covers BOTH Park City and
+# Heber Valley, so we can't pick one default — instead we detect per event.
+_PC_COORDS = (40.6461, -111.4980)
+_HB_COORDS = (40.5069, -111.4133)
+
+# Lowercase keyword sets. Order matters in conflict resolution (PC wins ties
+# because TownLift is a Park City publication and ambiguous events lean PC).
+_PC_SIGNALS = [
+    "park city", "deer valley", "kimball", "egyptian", "pcmr", "main street pc",
+    "canyons village", "snyderville", "prospector", "newpark", "sundance",
+]
+_HB_SIGNALS = [
+    "heber", "midway", "soldier hollow", "wasatch back", "kamas",
+    "jordanelle", "deer creek reservoir", "francis", "oakley",
+    "homestead", "wasatch county",
+]
+
+def _detect_townlift_city(title: str, description: str, venue_text: str = ""):
+    """Return ('parkcity', lat, lng, label) | ('heber', lat, lng, label) | None.
+
+    `label` is the human-readable city string for the location field.
+    """
+    haystack = " ".join([title or "", description or "", venue_text or ""]).lower()
+    pc_hit = any(s in haystack for s in _PC_SIGNALS)
+    hb_hit = any(s in haystack for s in _HB_SIGNALS)
+    if pc_hit and not hb_hit:
+        return ("parkcity", _PC_COORDS[0], _PC_COORDS[1], "Park City, UT")
+    if hb_hit and not pc_hit:
+        return ("heber", _HB_COORDS[0], _HB_COORDS[1], "Heber City, UT")
+    if pc_hit and hb_hit:
+        # Both signals present (e.g. an event "in Park City" mentions Heber
+        # in passing). PC wins on conflict — TownLift is PC-based and ambiguous
+        # events more often skew PC than the reverse.
+        return ("parkcity", _PC_COORDS[0], _PC_COORDS[1], "Park City, UT")
+    return None
+
+
 def scrape_townlift():
     """Scrape townlift.com (Wasatch Back news outlet) via WordPress Tribe API.
 
     Discovered via discover_sources_v3.py. Regional paper — covers Heber,
-    Midway, Kamas, Park City. Tribe API gives clean structured event data.
+    Midway, Kamas, Park City. TownLift's API doesn't always include venue
+    data, so per-event city detection from the title/description text is the
+    only honest signal we have.
     """
     try:
         from wp_tribe_events_scraper import scrape_wp_tribe_events
@@ -637,17 +676,68 @@ def scrape_townlift():
         print("[townlift] wp_tribe_events_scraper not available")
         return []
     try:
-        return scrape_wp_tribe_events(
+        # Pass NO default city/coords — TownLift covers both cities. We assign
+        # them per event below based on text signals.
+        events = scrape_wp_tribe_events(
             base_url="https://www.townlift.com",
             source_name="TownLift",
-            default_lat=40.6461,
-            default_lng=-111.4980,
-            default_city="Heber City, UT",
+            default_lat=None,
+            default_lng=None,
+            default_city=None,
             default_categories=["Community"],
         )
     except Exception as ex:
         print(f"[townlift] failed: {ex}")
         return []
+
+    # LLM-based per-event address extraction: fetch each event page, extract
+    # venue + street + city + zip with Claude, geocode via Nominatim. Cached
+    # per URL so re-scrapes only do new events.
+    try:
+        from townlift_address_enricher import enrich_townlift_events
+        events = enrich_townlift_events(events)
+    except ImportError:
+        print("  [townlift] enricher not available, skipping LLM extraction")
+    except Exception as ex:
+        print(f"  [townlift] enricher error (continuing with keyword fallback): {ex}")
+
+    # Keyword/zip fallback for any events the enricher couldn't resolve.
+    pc_count = hb_count = unknown = 0
+    for e in events:
+        # If wp_tribe already parsed a real venue, trust it — don't override.
+        # Heuristic: venue is "real" if location isn't None/empty/"Location TBD".
+        loc = (e.get("location") or "").strip()
+        has_real_venue = loc and loc != "Location TBD"
+
+        if has_real_venue:
+            # Still infer coords from text if missing (radius filter needs them).
+            if e.get("lat") is None or e.get("lng") is None:
+                detected = _detect_townlift_city(e.get("title", ""), e.get("description", ""), loc)
+                if detected:
+                    _, lat, lng, _ = detected
+                    e["lat"] = lat
+                    e["lng"] = lng
+            continue
+
+        # No real venue → detect city from text.
+        detected = _detect_townlift_city(e.get("title", ""), e.get("description", ""))
+        if detected is None:
+            unknown += 1
+            # Leave location empty; event will lack coords too. Master build will
+            # keep it (no-coord events pass radius filter), so it may appear in
+            # multiple cities — acceptable for the few unknowns.
+            continue
+        city_key, lat, lng, label = detected
+        e["lat"] = lat
+        e["lng"] = lng
+        e["location"] = label
+        if city_key == "parkcity":
+            pc_count += 1
+        else:
+            hb_count += 1
+
+    print(f"  [townlift] city detection: {pc_count} Park City, {hb_count} Heber, {unknown} unknown")
+    return events
 
 
 def main():

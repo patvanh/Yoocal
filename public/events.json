@@ -6,7 +6,7 @@
     "lng": -111.498
   },
   "radius_mi": 10,
-  "generated_at": "2026-05-27T08:29:50.572607-06:00",
+  "generated_at": "2026-05-27T15:21:04.162595-06:00",
   "today": "2026-05-27",
   "event_count": 1218,
   "events": [
@@ -1014,10 +1014,10 @@
         "Kids",
         "Education"
       ],
-      "scraped_at": "2026-05-27T14:04:43.934684",
+      "scraped_at": "2026-05-27T14:33:47.533570",
       "start_time": "10:30 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=27-02-46",
       "date_label": "Wed, 10:30 - 11:00 AM",
       "filter_categories": [
         "Education & Talks",
@@ -1038,10 +1038,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.934801",
+      "scraped_at": "2026-05-27T14:33:47.533783",
       "start_time": "11:00 AM",
       "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-02-46",
       "date_label": "Daily, Mon - Sat, 11:00 AM",
       "filter_categories": [
         "Community"
@@ -1336,7 +1336,6 @@
       ],
       "_all_sources": [
         "Egyptian Theatre",
-        "Google Events",
         "The Park Record"
       ],
       "is_free": false,
@@ -1836,10 +1835,6 @@
       "scraped_at": "2026-05-27T14:02:14.305972",
       "address": "625 Main Street",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/7sdV6VbaSU2qcWBE7meDZQ.large.png",
-      "_all_sources": [
-        "Google Events",
-        "The Park Record"
-      ],
       "venue_name": "The Downstairs",
       "filter_categories": [
         "Community",
@@ -1862,19 +1857,16 @@
       "source_url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "categories": [
         "Community",
-        "Music",
         "Theater"
       ],
       "_all_sources": [
         "Egyptian Theatre",
-        "Google Events",
         "The Park Record"
       ],
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
-        "Community",
-        "Music"
+        "Community"
       ],
       "_distance_mi": 0.2
     },
@@ -2036,10 +2028,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.935605",
+      "scraped_at": "2026-05-27T14:33:47.535275",
       "start_time": "1:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749910.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749910.jpg?decache=27-02-46",
       "date_label": "Fri & Sat, 10:00 AM - 5:00 PM",
       "filter_categories": [
         "Community"
@@ -2059,10 +2051,10 @@
       "categories": [
         "Music"
       ],
-      "scraped_at": "2026-05-27T14:04:43.936127",
+      "scraped_at": "2026-05-27T14:33:47.536420",
       "start_time": "5:30 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=27-02-46",
       "date_label": "May - Oct (weather permitting), dates & times vary",
       "filter_categories": [
         "Music"
@@ -2073,12 +2065,12 @@
       "title": "Knights of Columbus Blood Drive",
       "date": "2026-05-29",
       "description": "On Friday May 29th the Knights of Columbus will be hosting a blood drive at St. Mary\u2019s Catholic Church Gymnasium located at 1505 White Pine Canyon Road. This event will be from 12:00 PM to 6:00 PM. Please visit RedCrossBood.org and enter :KnightsPC to schedule an appointment. Thank you.",
-      "location": "Heber City, UT",
+      "location": "St. Mary's Catholic Church Gymnasium, 1505 White Pine Canyon Road",
       "link": "https://townlift.com/event/knights-of-columbus-blood-drive/",
       "source": "TownLift",
       "source_url": "https://www.townlift.com",
-      "lat": 40.6461,
-      "lng": -111.498,
+      "lat": 40.6832873,
+      "lng": -111.5372311,
       "categories": [
         "Community"
       ],
@@ -2088,7 +2080,7 @@
       "filter_categories": [
         "Community"
       ],
-      "_distance_mi": 0.0
+      "_distance_mi": 3.3
     },
     {
       "title": "Candlelight Kundalini",
@@ -2151,9 +2143,8 @@
       "lat": 40.65337467,
       "lng": -111.50318667,
       "categories": [
-        "Community",
-        "Outdoor",
-        "Wellness"
+        "Wellness",
+        "Community"
       ],
       "start_time": "9:30 AM",
       "end_time": "10:45 AM",
@@ -2161,13 +2152,8 @@
       "venue_name": "City Park",
       "address": "Ste 105, Park City, UT, 94060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/nG_Ugghlo0ydCElQbOExXA.large.png",
-      "_all_sources": [
-        "Eventbrite",
-        "The Park Record"
-      ],
       "filter_categories": [
         "Community",
-        "Outdoors",
         "Wellness"
       ],
       "_distance_mi": 0.6
@@ -2775,8 +2761,14 @@
       "lat": 40.6880445,
       "lng": -111.4692093,
       "categories": [
+        "Community",
         "Community-Outreach",
         "Education"
+      ],
+      "image_url": "https://townlift.com/wp-content/uploads/2026/05/IMG_5552-scaled.jpg",
+      "_all_sources": [
+        "KPCW Community Calendar",
+        "TownLift"
       ],
       "filter_categories": [
         "Community",
@@ -3229,7 +3221,7 @@
       "date": "2026-06-03",
       "description": "Victory at Summit Apartments \\(Elk Meadows\\) 2627 Kilby Rd, Park City, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-victory-at-summit-apartments-elk-meadows-2-2024-08-14/2026-06-03/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.742755,
@@ -3342,10 +3334,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.938089",
+      "scraped_at": "2026-05-27T14:33:47.540624",
       "start_time": "11:30 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-02-46",
       "date_label": "Blair Education Center, 11:30 AM - 1:00 PM",
       "is_free": true,
       "price": "Free",
@@ -3710,10 +3702,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.938917",
+      "scraped_at": "2026-05-27T14:33:47.542331",
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187140.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187140.jpg?decache=27-02-46",
       "date_label": "Dates & times vary",
       "filter_categories": [
         "Community"
@@ -4283,8 +4275,7 @@
       "lat": 40.699478,
       "lng": -111.530788,
       "categories": [
-        "Arts",
-        "Community"
+        "Arts"
       ],
       "start_time": "10:00 AM",
       "end_time": "",
@@ -4292,13 +4283,8 @@
       "venue_name": "Willow Creek Park",
       "address": "4460 Split Rail Lane",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/7c0a58f3-e47f-46e1-9f80-b5814b24f2f7.large.png",
-      "_all_sources": [
-        "Google Events",
-        "The Park Record"
-      ],
       "filter_categories": [
-        "Arts & Theater",
-        "Community"
+        "Arts & Theater"
       ],
       "_distance_mi": 4.1
     },
@@ -4313,10 +4299,13 @@
       "lat": 40.721658,
       "lng": -111.537721,
       "categories": [
-        "Outdoor",
+        "Community",
         "Community-Outreach",
         "Environment",
-        "Music"
+        "Food & Drink",
+        "Kids",
+        "Music",
+        "Outdoor"
       ],
       "start_time": "12:00 PM",
       "end_time": "3:30 PM",
@@ -4324,8 +4313,14 @@
       "venue_name": "Newpark Amphitheater",
       "address": "1258 Center Dr",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/0tqzSmRplUyGpeVNdkd0Aw.large.jpg",
+      "_all_sources": [
+        "The Park Record",
+        "TownLift"
+      ],
       "filter_categories": [
         "Community",
+        "Family & Kids",
+        "Food & Drink",
         "Music",
         "Outdoors"
       ],
@@ -4739,10 +4734,10 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-05-27T14:04:43.940176",
+      "scraped_at": "2026-05-27T14:33:47.544822",
       "start_time": "10:00 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741863.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741863.jpg?decache=27-02-46",
       "date_label": "Every Sat, Jun thru Oct, 10:00 AM - 1:00 PM",
       "filter_categories": [
         "Food & Drink"
@@ -5800,10 +5795,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.942399",
+      "scraped_at": "2026-05-27T14:33:47.548533",
       "start_time": "6:30 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=27-02-46",
       "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
       "filter_categories": [
         "Community"
@@ -6106,10 +6101,10 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-05-27T14:04:43.942997",
+      "scraped_at": "2026-05-27T14:33:47.549504",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740838.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740838.jpg?decache=27-02-46",
       "date_label": "Jun 11 & Jul 8, 6:00 PM",
       "facets": [
         "21+"
@@ -6123,12 +6118,12 @@
       "title": "Free Mountain Bike Event at Park City Bike and Demos",
       "date": "2026-06-11",
       "description": "Join us for a community mountain bike ride through the trails of Park City. We\u2019ll kick things off with a 90-minute group ride departing from Park City Bike & Demos. After the ride, stick around for pizza, drinks, and a raffle featuring prizes from Momentous, POC, and Park City Bike & Demo. Raffle prizes include: Two $200 Momentous nutrition packages POC Kortal helmet POC Devour sunglasses Park City Bike & Demos shop gear This event is free and open to all riders. Spots are limited, so be sure to reserve yours on Eventbrite.",
-      "location": "Heber City, UT",
+      "location": "Park City Bike & Demos, Park City, UT",
       "link": "https://townlift.com/event/free-mountain-bike-event-at-park-city-bike-and-demos/",
       "source": "TownLift",
       "source_url": "https://www.townlift.com",
-      "lat": 40.6461,
-      "lng": -111.498,
+      "lat": 40.6460921,
+      "lng": -111.4979963,
       "categories": [
         "Community",
         "Sports"
@@ -6609,10 +6604,10 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-05-27T14:04:43.943707",
+      "scraped_at": "2026-05-27T14:33:47.550905",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2728024.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2728024.jpg?decache=27-02-46",
       "date_label": "2nd Fri monthly, 6:00 - 8:00 PM",
       "filter_categories": [
         "Food & Drink"
@@ -6918,10 +6913,7 @@
       "lng": -111.5537575632,
       "categories": [
         "Arts",
-        "Community",
-        "Festival",
         "Food & Drink",
-        "Music",
         "Outdoor"
       ],
       "start_time": "10:00 AM",
@@ -6930,16 +6922,9 @@
       "venue_name": "Canyons Village at Park City",
       "address": "4000 Canyons Resort Drive",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/3UjjYDN8XEa_zWJIRLmPwQ.large.jpg",
-      "_all_sources": [
-        "The Park Record",
-        "TownLift"
-      ],
       "filter_categories": [
         "Arts & Theater",
-        "Community",
-        "Festivals",
         "Food & Drink",
-        "Music",
         "Outdoors"
       ],
       "_distance_mi": 3.9
@@ -7386,10 +7371,7 @@
       "lng": -111.5537575632,
       "categories": [
         "Arts",
-        "Community",
-        "Festival",
         "Food & Drink",
-        "Music",
         "Outdoor"
       ],
       "start_time": "10:00 AM",
@@ -7398,16 +7380,9 @@
       "venue_name": "Canyons Village at Park City",
       "address": "4000 Canyons Resort Drive",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/3UjjYDN8XEa_zWJIRLmPwQ.large.jpg",
-      "_all_sources": [
-        "The Park Record",
-        "TownLift"
-      ],
       "filter_categories": [
         "Arts & Theater",
-        "Community",
-        "Festivals",
         "Food & Drink",
-        "Music",
         "Outdoors"
       ],
       "_distance_mi": 3.9
@@ -7809,7 +7784,7 @@
       "date": "2026-06-17",
       "description": "Coalville Location TBD Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Christian Center of Park City, Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-coalville-location-tbd-2/2026-06-17/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.6570733,
@@ -8774,10 +8749,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.947726",
+      "scraped_at": "2026-05-27T14:33:47.557361",
       "start_time": "7:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727664.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727664.jpg?decache=27-02-46",
       "date_label": "7:00 AM start time",
       "filter_categories": [
         "Community"
@@ -9697,7 +9672,7 @@
       "date": "2026-06-24",
       "description": "Kamas \\(location TBD\\) Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Christian Center of Park City, Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-kamas-location-tbd-2/2026-06-24/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.6570733,
@@ -9790,10 +9765,10 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-05-27T14:04:43.949424",
+      "scraped_at": "2026-05-27T14:33:47.560400",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186450.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186450.jpg?decache=27-02-46",
       "date_label": "7:00 - 8:30 PM",
       "filter_categories": [
         "Food & Drink"
@@ -10303,10 +10278,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.950079",
+      "scraped_at": "2026-05-27T14:33:47.561512",
       "start_time": "10:30 AM",
       "end_time": "11:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748645.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748645.jpg?decache=27-02-46",
       "date_label": "4th Fri monthly, 10:30 -11:30 AM",
       "filter_categories": [
         "Community"
@@ -10326,10 +10301,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.950372",
+      "scraped_at": "2026-05-27T14:33:47.561959",
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748646.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748646.jpg?decache=27-02-46",
       "date_label": "4th Fri monthly, 1:00 - 2:00 PM",
       "filter_categories": [
         "Community"
@@ -11563,10 +11538,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-05-27T14:04:43.954253",
+      "scraped_at": "2026-05-27T14:33:47.568411",
       "start_time": "6:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741890.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741890.jpg?decache=27-02-47",
       "date_label": "6:00 - 11:00 AM",
       "filter_categories": [
         "Festivals"
@@ -11892,6 +11867,30 @@
         "Community"
       ],
       "_distance_mi": 5.6
+    },
+    {
+      "title": "American Indian Services Native Market Days",
+      "date": "2026-07-10",
+      "description": "Native Market Days | July 10\u201311, 2026 Canyons Village | Park City, Utah Native Market Days is a signature cultural experience hosted by American Indian Services, celebrating Native art, culture, fashion, dance, storytelling, and community. Held at Canyons Village in Park City, this event brings together Native artists, performers, designers, families, community members, and visitors in a vibrant setting that honors creativity, connection, and cultural expression. This two-day event will feature a Native Market, hoop dance performances, an art competition and judging experience, community ga...",
+      "location": "Canyons Village, 4000 Canyons Resort Dr, Park City",
+      "link": "https://townlift.com/event/american-indian-services-native-market-days/",
+      "source": "TownLift",
+      "source_url": "https://www.townlift.com",
+      "lat": 40.6878728,
+      "lng": -111.5472726,
+      "categories": [
+        "Arts",
+        "Community"
+      ],
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "end_date": "2026-07-12",
+      "image_url": "https://townlift.com/wp-content/uploads/2026/05/NMD26-Flyer-8x10-5-11-26-V3-scaled.png",
+      "filter_categories": [
+        "Arts & Theater",
+        "Community"
+      ],
+      "_distance_mi": 3.9
     },
     {
       "title": "Frozen - The Live Musical",
@@ -12811,7 +12810,6 @@
       "lat": 40.6461,
       "lng": -111.498,
       "categories": [
-        "Community",
         "Music"
       ],
       "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/1080x1080-38-Special-Ad-v2-8-2-_7BBADCBC-8116-499F-95020F554998A372_7428dacf-60a3-43ba-a063144de22a945a.png",
@@ -12819,12 +12817,7 @@
       "venue_name": "Park City, Utah",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "_all_sources": [
-        "Google Events",
-        "Visit Park City (sitemap)"
-      ],
       "filter_categories": [
-        "Community",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -13110,29 +13103,6 @@
         "Music"
       ],
       "_distance_mi": 3.5
-    },
-    {
-      "title": "Wasatch Back Art Festival \u2013 Heber",
-      "date": "2026-07-24",
-      "description": "The Wasatch Back Art Festival is a growing community art event held in Utah\u2019s scenic Heber Valley, showcasing a wide range of original work from local artists and makers. The festival brings together painters, photographers, sculptors, and craftspeople for a vibrant outdoor experience celebrating creativity and craftsmanship. Visitors can explore artist booths, meet creators, and enjoy a relaxed, family-friendly atmosphere that highlights the unique culture and artistic talent of the Wasatch Back region. Heber Main Street Park (250 S. Main Street) July 24th 12pm \u2013 6pm July 25th 10am \u2013 6pn J...",
-      "location": "Heber City, UT",
-      "link": "https://townlift.com/event/wasatch-back-art-festival-heber/",
-      "source": "TownLift",
-      "source_url": "https://www.townlift.com",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Arts",
-        "Family",
-        "Festival"
-      ],
-      "image_url": "https://townlift.com/wp-content/uploads/2026/04/IMG_4126.jpg",
-      "filter_categories": [
-        "Arts & Theater",
-        "Family & Kids",
-        "Festivals"
-      ],
-      "_distance_mi": 0.0
     },
     {
       "title": "Shrek The Musical Jr.",
@@ -14385,20 +14355,14 @@
       "lat": 40.6374,
       "lng": -111.4783,
       "categories": [
-        "Concert",
-        "Festival",
         "Music",
+        "Concert",
         "Outdoor"
       ],
       "image_url": "https://usuo.org/app/uploads/2026/03/DVMF4-Chris-Botti.jpg",
       "venue_name": "Deer Valley Ski Resort Main Base",
       "address": "2250 Deer Valley Dr S",
-      "_all_sources": [
-        "Deer Valley Resort",
-        "Google Events"
-      ],
       "filter_categories": [
-        "Festivals",
         "Music",
         "Outdoors"
       ],
@@ -15855,12 +15819,12 @@
       "title": "Dominick Antonelli at Cafe Galleria",
       "date": "2026-08-08",
       "description": "Dominick Antonelli is on his first national tour and he will be wrapping up his last official tour date in Midway, UT at Cafe Galleria on Saturday August 8th. He will be playing an evening of original music from 530-830pm. Please come out for an evening of story telling, great food and beverages, original music and to celebrate Dominick\u2019s final stop on his first national tour. We look forward to seeing you!",
-      "location": "Heber City, UT",
+      "location": "Cafe Galleria, Midway, UT",
       "link": "https://townlift.com/event/dominick-antonelli-at-cafe-galleria/",
       "source": "TownLift",
       "source_url": "https://www.townlift.com",
-      "lat": 40.6461,
-      "lng": -111.498,
+      "lat": 40.5125438,
+      "lng": -111.4748846,
       "categories": [
         "Food & Drink",
         "Music"
@@ -15872,7 +15836,7 @@
         "Food & Drink",
         "Music"
       ],
-      "_distance_mi": 0.0
+      "_distance_mi": 9.3
     },
     {
       "title": "Recess on Main - Wine Bingo with Italian Wines",
@@ -15913,8 +15877,8 @@
       "lat": 40.6707,
       "lng": -111.5559,
       "categories": [
-        "Community",
-        "Music"
+        "Music",
+        "Community"
       ],
       "end_time": "10:00 PM",
       "price_range": "$10-$349",
@@ -15922,10 +15886,6 @@
       "venue_name": "Canyons Village at Park City",
       "address": "Canyons Village- 4000 Canyons Resort Dr, Park City, UT, 84098",
       "is_free": false,
-      "_all_sources": [
-        "Google Events",
-        "Park City Institute"
-      ],
       "filter_categories": [
         "Community",
         "Music"
@@ -18249,7 +18209,6 @@
       "lat": 40.683759,
       "lng": -111.5560622,
       "categories": [
-        "Community",
         "Music"
       ],
       "start_time": "6:00 PM",
@@ -18258,12 +18217,7 @@
       "venue_name": "Pendry Park City",
       "address": "2417 W High Mountain Rd",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/8b9297bb-1495-407a-bd87-aa6e31c72f4f.large.png",
-      "_all_sources": [
-        "Eventbrite",
-        "The Park Record"
-      ],
       "filter_categories": [
-        "Community",
         "Music"
       ],
       "_distance_mi": 4.0
@@ -18731,7 +18685,7 @@
       "date": "2026-07-08",
       "description": "Holiday Village Apartments 2200 Monitor Dr, Park City, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-holiday-village-apartments-3-2024-09-18/2026-07-08/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.6657952,
@@ -19024,7 +18978,7 @@
       "date": "2026-07-15",
       "description": "Iron Horse Apartments 1662 Lower Iron Horse Loop Rd \\#1, Park City, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-aspen-village-apartments-2-2024-07-31/2026-07-15/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.64606,
@@ -19294,7 +19248,7 @@
       "date": "2026-07-22",
       "description": "Aspen Village Apartments 1847 Kearns Blvd, Park City, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-aspen-village-apartments-2/2026-07-22/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.66481,
@@ -19560,7 +19514,7 @@
       "date": "2026-07-29",
       "description": "Todd Hollow Apartments 12774 N Deer Mountain Blvd, Hideout, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Hideout, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-todd-hollow-apartments-3/2026-07-29/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.664334,
@@ -19643,7 +19597,7 @@
       "title": "The Business Table",
       "date": "2026-07-29",
       "description": "The Business Table is a monthly gathering hosted by Team Cheever Plumbing & HVAC intended to spark meaningful relationships among business owners in the Wasatch Back. This event is invite only. Please apply at the link below, and join us for great conversation and food at a local Park City restaurant! Sign up for our next event here!",
-      "location": "Heber City, UT",
+      "location": "Park City, UT",
       "link": "https://townlift.com/event/the-business-table/",
       "source": "TownLift",
       "source_url": "https://www.townlift.com",
@@ -19822,7 +19776,7 @@
       "date": "2026-08-05",
       "description": "Victory at Summit Apartments \\(Elk Meadows\\) 2627 Kilby Rd, Park City, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-victory-at-summit-apartments-elk-meadows-2-2024-08-14/2026-08-05/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.742755,
@@ -20186,7 +20140,7 @@
       "date": "2026-08-12",
       "description": "Coalville Location TBD Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Christian Center of Park City, Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-coalville-location-tbd-2/2026-08-12/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.6570733,
@@ -20340,7 +20294,7 @@
       "date": "2026-08-19",
       "description": "Kamas \\(location TBD\\) Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Christian Center of Park City, Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-kamas-location-tbd-2/2026-08-19/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.6570733,
@@ -20475,7 +20429,7 @@
       "date": "2026-08-26",
       "description": "Holiday Village Apartments 2200 Monitor Dr, Park City, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-holiday-village-apartments-3-2024-09-18/2026-08-26/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.6657952,
@@ -20637,10 +20591,10 @@
         "Community",
         "Education"
       ],
-      "scraped_at": "2026-05-27T14:04:43.996912",
+      "scraped_at": "2026-05-27T14:33:47.617584",
       "start_time": "11:30 PM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-02-47",
       "date_label": "Blair Education Center, 11:30 AM - 1:00 PM",
       "address": "900 Round Valley Dr, Park City, UT, 84060",
       "venue_name": "Blair Education Center - Intermountain Park City Hospital",
@@ -23632,10 +23586,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.952651",
+      "scraped_at": "2026-05-27T14:33:47.565899",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750806.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750806.jpg?decache=27-02-47",
       "date_label": "Jun 30 - Jul 4",
       "filter_categories": [
         "Community"
@@ -24631,6 +24585,36 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Eric Heideman",
+      "date": "2026-09-13",
+      "description": "Eric Heideman is a 27-year-old blues musician living in Austin, Texas, from Salt Lake City, Utah. Heideman was personally requested to open shows for ZZ Top at Eccles Theatre and Walter Trout and Mike Zito at The State Room. He was a featured performer at the Utah Blues Fest in 2022, 2023, & 2024. He was a featured performer at SXSW 2025 and the 2025 Durango Blues Train. He recorded his latest album, \u201cThird Degree Gravity\u201d with Grammy Nominated Victor Wainwright and International Blues Challenge winner JW-Jones.",
+      "location": "Park Silly Sunday Market, 9th and Main Street, Park City",
+      "link": "https://mountaintownmusic.org/show/muddpuddle-18/",
+      "source": "Mountain Town Music",
+      "source_url": "https://mountaintownmusic.org/",
+      "lat": 40.6461,
+      "lng": -111.498,
+      "categories": [
+        "Music",
+        "Food & Drink",
+        "Outdoor"
+      ],
+      "is_free": true,
+      "price": "Free",
+      "start_time": "12:30 PM",
+      "end_time": "2:15 PM",
+      "address": "9th and Main Street, Park City",
+      "venue_name": "Park Silly Sunday Market",
+      "scraped_at": "2026-05-27T14:01:09.931328",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/AxJMnwgl3EmZiwqX-SaKPQ.large.png",
+      "filter_categories": [
+        "Food & Drink",
+        "Music",
+        "Outdoors"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Gorgeous Gourds",
       "date": "2026-09-13",
       "description": "Psychedelic Funk band Gorgeous Gourds combine smooth harmonies, deep tasty grooves, and original songwriting. The Gorgeous Gourd's just released album \\(2/22/22\\) \"Peace and Love\" reminds us why we go see and hear live music. The band has evolved to a rock solid synergistic group of accomplished musicians. Their powerful singing and songwriting is evident on their new CD, with 14 worthy cuts combining an eclectic combination of psychedelic funk, folk, tasty jam grooves, smooth harmonies and soulful ballads. Fred, Lucas, and Sarah all share the artful original songwriting. Iconic KRCL DJ Jo...",
@@ -24707,40 +24691,6 @@
         "Outdoors"
       ],
       "_distance_mi": 1.7
-    },
-    {
-      "title": "Eric Heideman",
-      "date": "2026-09-13",
-      "description": "Eric Heideman is a 27-year-old blues musician living in Austin, Texas, from Salt Lake City, Utah. Heideman was personally requested to open shows for ZZ Top at Eccles Theatre and Walter Trout and Mike Zito at The State Room. He was a featured performer at the Utah Blues Fest in 2022, 2023, & 2024. He was a featured performer at SXSW 2025 and the 2025 Durango Blues Train. He recorded his latest album, \u201cThird Degree Gravity\u201d with Grammy Nominated Victor Wainwright and International Blues Challenge winner JW-Jones.",
-      "location": "Park Silly Sunday Market, 9th and Main Street, Park City",
-      "link": "https://mountaintownmusic.org/show/muddpuddle-18/",
-      "source": "Mountain Town Music",
-      "source_url": "https://mountaintownmusic.org/",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Food & Drink",
-        "Music",
-        "Outdoor"
-      ],
-      "is_free": true,
-      "price": "Free",
-      "start_time": "12:30 PM",
-      "end_time": "2:15 PM",
-      "address": "9th and Main Street, Park City",
-      "venue_name": "Park Silly Sunday Market",
-      "scraped_at": "2026-05-27T14:01:09.931328",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/AxJMnwgl3EmZiwqX-SaKPQ.large.png",
-      "_all_sources": [
-        "Google Events",
-        "Mountain Town Music"
-      ],
-      "filter_categories": [
-        "Food & Drink",
-        "Music",
-        "Outdoors"
-      ],
-      "_distance_mi": 0.0
     },
     {
       "title": "Mitch Raymon Trio",
@@ -24921,10 +24871,10 @@
         "Festival",
         "Sports"
       ],
-      "scraped_at": "2026-05-27T14:04:43.976702",
+      "scraped_at": "2026-05-27T14:33:47.598833",
       "start_time": "8:00 AM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=27-02-47",
       "date_label": "Sep 4-5, 8:00 AM - 8:00 PM",
       "address": "200 W Main Street Midway, Utah 84049",
       "venue_name": "Midway Town Square",
@@ -25930,7 +25880,7 @@
       "date": "2026-09-16",
       "description": "Aspen Village Apartments 1847 Kearns Blvd, Park City, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-aspen-village-apartments-2/2026-09-16/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.66481,
@@ -25990,10 +25940,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.980170",
+      "scraped_at": "2026-05-27T14:33:47.602389",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=27-02-47",
       "date_label": "Sep 16 - 19",
       "filter_categories": [
         "Community"
@@ -26115,7 +26065,7 @@
       "date": "2026-09-02",
       "description": "Iron Horse Apartments 1662 Lower Iron Horse Loop Rd \\#1, Park City, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Park City, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-aspen-village-apartments-2-2024-07-31/2026-09-02/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.64606,
@@ -26196,10 +26146,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.976373",
+      "scraped_at": "2026-05-27T14:33:47.598482",
       "start_time": "11:30 PM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-02-47",
       "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
       "filter_categories": [
         "Community"
@@ -28166,7 +28116,6 @@
       ],
       "_all_sources": [
         "Egyptian Theatre",
-        "Google Events",
         "The Park Record"
       ],
       "is_free": false,
@@ -28255,6 +28204,26 @@
       "_distance_mi": 5.6
     },
     {
+      "title": "Twisted Fork",
+      "date": "2026-05-30",
+      "description": "The Twisted Fork Trail Festival features 3 races: 68K, 30K, and 15K race distances over some of our favorite trails in Park City, Utah. Each of these courses is hilly and challenging, but also fast and runnable, and will take you through beautiful wooded terrain, epic views, and a little slice of local history. Greater Park City offers lots of fun and activities for family and friends who are not racing, along with tons of options for lodging, food, and drink. This is a great excuse to take a break from the daily grind of life and enjoy a challenging day of running in the Wasatch Mountains....",
+      "location": "Park City, UT",
+      "link": "https://www.massifrunning.com/twisted-fork-spring-classic",
+      "source": "Salt Lake Running Co",
+      "source_url": "https://slrc.com/event-calendar/",
+      "lat": 40.6461,
+      "lng": -111.498,
+      "categories": [
+        "Running"
+      ],
+      "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/3a77fce5-f318-4d4a-9215-a1169a9224cc/Screenshot-2025-11-26-at-6-15-50-PM-Finn-Melanson.png",
+      "is_free": false,
+      "filter_categories": [
+        "Running & Races"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Disc Golf Tournament @ Wasatch Wunder Course",
       "date": "2026-05-30",
       "description": "Disc Golf Tournament @ Wasatch Wunder Course in Heber Valley.",
@@ -28268,44 +28237,16 @@
         "Sports",
         "Education"
       ],
-      "scraped_at": "2026-05-27T14:04:43.936502",
+      "scraped_at": "2026-05-27T14:33:47.537129",
       "start_time": "9:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2755717.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2755717.jpg?decache=27-02-46",
       "date_label": "May 30 - 31, Sep 26 - 27",
       "filter_categories": [
         "Education & Talks",
         "Sports"
       ],
       "_distance_mi": 7.6
-    },
-    {
-      "title": "Twisted Fork",
-      "date": "2026-05-30",
-      "description": "The Twisted Fork Trail Festival features 3 races: 68K, 30K, and 15K race distances over some of our favorite trails in Park City, Utah. Each of these courses is hilly and challenging, but also fast and runnable, and will take you through beautiful wooded terrain, epic views, and a little slice of local history. Greater Park City offers lots of fun and activities for family and friends who are not racing, along with tons of options for lodging, food, and drink. This is a great excuse to take a break from the daily grind of life and enjoy a challenging day of running in the Wasatch Mountains....",
-      "location": "Park City, UT",
-      "link": "https://www.massifrunning.com/twisted-fork-spring-classic",
-      "source": "Salt Lake Running Co",
-      "source_url": "https://slrc.com/event-calendar/",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Festival",
-        "Outdoor",
-        "Running"
-      ],
-      "image_url": "https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/3a77fce5-f318-4d4a-9215-a1169a9224cc/Screenshot-2025-11-26-at-6-15-50-PM-Finn-Melanson.png",
-      "is_free": false,
-      "_all_sources": [
-        "Google Events",
-        "Salt Lake Running Co"
-      ],
-      "filter_categories": [
-        "Festivals",
-        "Outdoors",
-        "Running & Races"
-      ],
-      "_distance_mi": 0.0
     },
     {
       "title": "Tuesday Night Legal Bar/Assistance | Cl\u00ednica legal de los martes",
@@ -28594,10 +28535,10 @@
       "categories": [
         "Government"
       ],
-      "scraped_at": "2026-05-27T14:04:43.937716",
+      "scraped_at": "2026-05-27T14:33:47.539732",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750550.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750550.jpg?decache=27-02-46",
       "date_label": "1st & 3rd Tue monthly, 6:00 PM",
       "filter_categories": [
         "Community"
@@ -30581,7 +30522,7 @@
       "date": "2026-09-30",
       "description": "Todd Hollow Apartments 12774 N Deer Mountain Blvd, Hideout, UT Our mobile food pantries are first-come, first-served, while supplies last. Please follow us on Facebook and Instagram for specific locations and updates!",
       "location": "Hideout, UT",
-      "link": "https://ccofpc.org/events",
+      "link": "https://ccofpc.org/event/mobile-food-pantry-todd-hollow-apartments-3/2026-09-30/",
       "source": "The Park Record",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.664334,
@@ -30980,10 +30921,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.991601",
+      "scraped_at": "2026-05-27T14:33:47.612945",
       "start_time": "11:30 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-02-47",
       "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
       "filter_categories": [
         "Community"
@@ -31116,10 +31057,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-27T14:04:43.994552",
+      "scraped_at": "2026-05-27T14:33:47.615529",
       "start_time": "5:30 PM",
       "end_time": "9:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132170.jpg?decache=27-08-43",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132170.jpg?decache=27-02-47",
       "date_label": "Black Rock Mountain Resort 5:30 - 9:30 PM",
       "filter_categories": [
         "Community"

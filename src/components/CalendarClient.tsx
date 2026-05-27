@@ -427,13 +427,15 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   useEffect(() => { setMounted(true) }, [])
   useEffect(() => {
     if (!dropdownOpen) { setSearchRect(null); return }
+    let rafId = 0
     const update = () => {
-      const r = searchInputRef.current?.getBoundingClientRect()
-      if (!r) return
-      // Never let the dropdown render above the site header (60px) — when the
-      // user scrolls so the input goes off-screen, the dropdown clamps to just
-      // below the header instead of overlapping it.
-      setSearchRect({ top: r.bottom + 6, left: r.left, width: r.width })
+      if (rafId) return
+      rafId = requestAnimationFrame(() => {
+        rafId = 0
+        const r = searchInputRef.current?.getBoundingClientRect()
+        if (!r) return
+        setSearchRect({ top: r.bottom + 6, left: r.left, width: r.width })
+      })
     }
     update()
     window.addEventListener('resize', update)
@@ -810,7 +812,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           />
           {mounted && searchRect && dropdownOpen && createPortal((
             <div ref={dropdownRef} style={{
-              position: 'fixed', top: searchRect.top, left: searchRect.left, width: searchRect.width,
+              position: 'fixed', top: 0, left: 0, width: searchRect.width, transform: `translate3d(${searchRect.left}px, ${searchRect.top}px, 0)`, willChange: 'transform',
               background: '#221a3a', border: '1px solid rgba(255,255,255,0.12)',
               borderRadius: 12, zIndex: 50, overflow: 'hidden',
               boxShadow: '0 12px 40px rgba(0,0,0,0.4)',
