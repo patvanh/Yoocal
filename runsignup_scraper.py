@@ -88,6 +88,14 @@ def scrape_runsignup_races(zipcode, radius=30, source_name="RunSignup",
     return events
 
 
+def scrape_runsignup_heber():
+    """Heber Valley races via RunSignup (zip 84032, 20mi to include Midway/Kamas)."""
+    return scrape_runsignup_races(
+        "84032", radius=12, source_name="RunSignup",
+        default_lat=40.5069, default_lng=-111.4133, default_city="Heber City, UT",
+    )
+
+
 if __name__ == "__main__":
     evs = scrape_runsignup_races("83001", radius=30, source_name="RunSignup Jackson",
                                  default_lat=43.4799, default_lng=-110.7624,
