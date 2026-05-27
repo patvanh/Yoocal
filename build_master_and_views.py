@@ -34,7 +34,7 @@ CITIES = {
         "out_file": "public/events-heber.json",
     },
     "jackson": {
-        "lat": 43.4799, "lng": -110.7624, "radius_mi": 20,
+        "lat": 43.4799, "lng": -110.7624, "radius_mi": 25,
         "out_file": "public/events-jackson.json",
     },
     "elkhart-lake": {

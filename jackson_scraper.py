@@ -136,6 +136,14 @@ FIRECRAWL_SOURCES = [
         "default_city": "Jackson, WY",
         "default_categories": ["Running & Races"],
     },
+    {
+        "url": "https://www.grandtarghee.com/events/",
+        "source_name": "Grand Targhee Resort",
+        "default_lat": 43.7871,
+        "default_lng": -110.9596,
+        "default_city": "Alta, WY",
+        "default_categories": [],
+    },
 ]
 
 
