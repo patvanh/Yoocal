@@ -1,20 +1,12 @@
 {
-  "generated_at": "2026-05-27T14:29:49.332354",
+  "generated_at": "2026-05-28T19:21:29.008210",
   "attempted": 1,
-  "applied": 1,
+  "applied": 0,
   "log": [
     {
       "city": "jackson",
-      "title": "Teton House Concert: In Harmony",
       "type": "title_truncated",
-      "link": "https://gtmf.org/events/in-harmony",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Teton House Concert: In Harmony",
-        "reasoning": "The title 'Teton House Concert: In Harmony' appears complete in the source text and is not truncated, as it accurately represents the first concert in the series featuring Tanner and Caroline Durham Jorden demonstrating their musical synchronicity."
-      },
-      "applied": true,
-      "note": "title: 'Teton House Concert: In Harmony' \u2192 'Teton House Concert: In Harmony'"
+      "skipped": "no event_index"
     }
   ]
 }

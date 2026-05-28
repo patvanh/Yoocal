@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-27T14:29:43.259412",
-  "audit_date": "2026-05-27",
+  "generated_at": "2026-05-28T19:21:28.623724",
+  "audit_date": "2026-05-28",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1659,
+      "before_count": 1757,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -19,12 +19,12 @@
           "fixed": 2,
           "examples": [
             {
-              "title": "Old Town walking tour",
-              "had_span": 77
-            },
-            {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
+            },
+            {
+              "title": "Old Town walking tour",
+              "had_span": 76
             }
           ]
         },
@@ -109,13 +109,13 @@
           ]
         },
         "classification": {
-          "fixed": 346,
+          "fixed": 337,
           "examples": [
             {
-              "title": "Fascia Rolling Class",
+              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [],
               "after": [
-                "Wellness"
+                "Community"
               ]
             },
             {
@@ -133,28 +133,31 @@
               ]
             },
             {
+              "title": "Park City Marketing Club Workshop: What's Your Story, with Paul Hochman from Humongous Media",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
               "title": "Progressive Art Experience",
               "before": [],
               "after": [
                 "Community"
               ]
-            },
-            {
-              "title": "Rise + Release: Block",
-              "before": [],
-              "after": [
-                "Wellness"
-              ]
             }
           ]
         }
       },
-      "after_count": 1663,
-      "total_fixes": 373
+      "after_count": 1761,
+      "total_fixes": 364
     },
     {
       "city": "elkhart-lake",
-      "before_count": 250,
+      "before_count": 248,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -213,12 +216,12 @@
           "examples": []
         }
       },
-      "after_count": 257,
+      "after_count": 255,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 226,
+      "before_count": 229,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -229,7 +232,7 @@
           "examples": []
         },
         "multi_day_splits": {
-          "fixed": 1,
+          "fixed": 2,
           "examples": [
             {
               "title": "Latino Arts Festival",
@@ -238,6 +241,14 @@
                 "2026-06-12",
                 "2026-06-13",
                 "2026-06-14"
+              ]
+            },
+            {
+              "title": "American Indian Services Native Market Days",
+              "original_span": "2026-07-10 to 2026-07-12",
+              "split_into": [
+                "2026-07-10",
+                "2026-07-11"
               ]
             }
           ]
@@ -339,12 +350,12 @@
           ]
         }
       },
-      "after_count": 228,
-      "total_fixes": 20
+      "after_count": 232,
+      "total_fixes": 21
     },
     {
       "city": "jackson",
-      "before_count": 584,
+      "before_count": 599,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -355,23 +366,23 @@
           "examples": [
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 116
+              "had_span": 115
             },
             {
               "title": "Music Classes",
-              "had_span": 1680
+              "had_span": 1679
             },
             {
               "title": "Visual Arts Classes",
-              "had_span": 1680
+              "had_span": 1679
             },
             {
               "title": "Writing Classes and Workshops",
-              "had_span": 1680
+              "had_span": 1679
             },
             {
               "title": "Dance and Movement Classes",
-              "had_span": 1680
+              "had_span": 1679
             }
           ]
         },
@@ -407,10 +418,31 @@
           ]
         },
         "classification": {
-          "fixed": 181,
+          "fixed": 195,
           "examples": [
             {
+              "title": "30th Year of Moose Hockey Celebration",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Sports",
+                "Festival"
+              ]
+            },
+            {
               "title": "Al Hubbard: When Turtles Talk",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Arts"
+              ]
+            },
+            {
+              "title": "\"Bison-tennial\" Community Exhibition Opening",
               "before": [
                 "Community"
               ],
@@ -439,34 +471,12 @@
                 "Kids",
                 "Education"
               ]
-            },
-            {
-              "title": "Raptor Discovery: Masters of the Sky",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Kids",
-                "Education"
-              ]
-            },
-            {
-              "title": "Raptor Journeys: Migration Exploration",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Kids",
-                "Education"
-              ]
             }
           ]
         }
       },
-      "after_count": 586,
-      "total_fixes": 191
+      "after_count": 601,
+      "total_fixes": 205
     }
   ]
 }
