@@ -142,6 +142,18 @@ def _normalize_title(title: str) -> str:
         tokens = tokens[1:]
     while tokens and tokens[-1] in _DAYS:
         tokens = tokens[:-1]
+    # Strip a trailing standalone year ("...Rodeo 2026") so cross-source
+    # dupes match. Don't strip when the previous token is a month name or
+    # an ordinal suffix — that indicates a date phrase ("may 28 2026" or
+    # "june 14 2026") that must stay intact for context.
+    _MONTHS = {"january","february","march","april","may","june","july",
+               "august","september","october","november","december",
+               "jan","feb","mar","apr","jun","jul","aug","sep","sept","oct","nov","dec"}
+    _DATE_CTX = _MONTHS | {"th","st","nd","rd"} | {str(d) for d in range(1, 32)}
+    if (tokens and len(tokens) >= 2
+            and _re.fullmatch(r"20\d\d", tokens[-1])
+            and tokens[-2] not in _DATE_CTX):
+        tokens = tokens[:-1]
     return " ".join(tokens)
 
 
@@ -528,6 +540,40 @@ def _clean_display_text(s: str) -> str:
     return s
 
 
+# Module-level source priority. Used by merge_events when dedup groups
+# disagree on a field — the lower-priority source's value loses. Default
+# for unknown sources is Tier 2
+# equivalent — a source we haven't classified is usually a venue/organizer
+# worth trusting more than a third-party aggregator.
+SOURCE_PRIORITY = {
+    # Tier 1: verified venue or primary organizer
+    "Oakley City": 1, "Eccles Center": 1, "Park City Institute": 1,
+    "Deer Valley Resort": 1, "Park City Mountain": 1,
+    "Deer Valley Music Festival": 1, "Grand Teton Music Festival": 1,
+    "The Grand Teton Music Festival": 1,
+    "The Cloudveil": 1, "The Osthoff Resort": 1, "Siebkens Resort": 1,
+    "Road America": 1, "National Museum of Wildlife Art": 1,
+    "Center for the Arts Jackson Hole": 1, "Park City Opera": 1,
+    "Park City Song Summit": 1, "Park City Farmers Market": 1,
+    "Mountain Trails Foundation": 1, "Village of Elkhart Lake": 1,
+    "Egyptian Theatre": 1,
+    # Tier 2: trusted aggregator / tourism board / local newspaper
+    "The Park Record": 2, "Park City Annual Events": 2,
+    "Visit Park City": 2, "Visit Park City (sitemap)": 2,
+    "Mountain Town Music": 2, "Heber Valley Tourism": 2,
+    "Jackson Hole Chamber of Commerce": 2, "Elkhart Lake Tourism": 2,
+    "RunSignup": 2, "Salt Lake Running Co": 2,
+    "Park City Gallery Association": 2,
+    # Tier 3: community calendar / non-canonical local source
+    "KPCW Community Calendar": 3, "Heber Valley Life": 3,
+    # Tier 4: third-party aggregator (never overrides Tier 1-3 fields)
+    "Google Events": 4, "Eventbrite": 4, "Bandsintown": 4,
+    "EventTicketsCenter": 4,
+}
+
+DEFAULT_PRIORITY = 3  # unknown source -> assume community calendar tier
+
+
 def merge_events(records: list[dict]) -> dict:
     """When multiple records dedupe to the same key, pick the best fields."""
     if len(records) == 1:
@@ -537,41 +583,7 @@ def merge_events(records: list[dict]) -> dict:
             _r["description"] = _clean_display_text(_r["description"])
         return _r
     
-    # Sort by source priority (lower = better).
-    # Default for unknown sources is now Tier 2 (3), not below Tier 4 — a new
-    # source we haven't classified is almost always a venue/organizer worth
-    # trusting more than third-party aggregators.
-    SOURCE_PRIORITY = {
-        # Tier 1: verified venue or primary organizer — authoritative for their events
-        "Oakley City": 1, "Eccles Center": 1, "Park City Institute": 1,
-        "Deer Valley Resort": 1, "Park City Mountain": 1,
-        "Deer Valley Music Festival": 1, "Grand Teton Music Festival": 1,
-        "The Grand Teton Music Festival": 1,  # legacy alias
-        "The Cloudveil": 1, "The Osthoff Resort": 1, "Siebkens Resort": 1,
-        "Road America": 1, "National Museum of Wildlife Art": 1,
-        "Center for the Arts Jackson Hole": 1, "Park City Opera": 1,
-        "Park City Song Summit": 1, "Park City Farmers Market": 1,
-        "Mountain Trails Foundation": 1, "Village of Elkhart Lake": 1,
-        "Egyptian Theatre": 1,
-
-        # Tier 2: trusted aggregator, tourism board, or local newspaper
-        "The Park Record": 2, "Park City Annual Events": 2,
-        "Visit Park City": 2, "Visit Park City (sitemap)": 2,
-        "Mountain Town Music": 2, "Heber Valley Tourism": 2,
-        "Jackson Hole Chamber of Commerce": 2, "Elkhart Lake Tourism": 2,
-        "RunSignup": 2, "Salt Lake Running Co": 2,
-        "Park City Gallery Association": 2,
-
-        # Tier 3: community calendar or non-canonical local source
-        "KPCW Community Calendar": 3, "Heber Valley Life": 3,
-
-        # Tier 4: third-party aggregator (never overrides Tier 1-3 fields)
-        "Google Events": 4, "Eventbrite": 4, "Bandsintown": 4,
-        "EventTicketsCenter": 4,
-    }
-
-    DEFAULT_PRIORITY = 3  # unknown source -> assume community calendar tier
-
+    # Sort by source priority (lower = better). Constants are module-level.
     records.sort(key=lambda r: SOURCE_PRIORITY.get(r.get("source", ""), DEFAULT_PRIORITY))
     
     base = dict(records[0])  # highest-priority record wins as base
