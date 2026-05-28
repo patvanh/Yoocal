@@ -103,6 +103,45 @@ def _date_from_title(title, fallback_iso):
     return fallback_iso
 
 
+def _date_from_text(text, fallback_iso, today_iso):
+    """Scan free text (description) for an explicit date like
+    'Sunday, May 31, 2026' or 'Monday, June 8'. Returns YYYY-MM-DD if a single
+    confident future date is found, else fallback_iso.
+
+    Conservative: only overrides when the API date is unreliable (equals today)
+    and the text names exactly one clear date. Prefers a date >= today.
+    """
+    if not text:
+        return fallback_iso
+    # Match "Month DD, YYYY" or "Month DD" (optionally preceded by a weekday).
+    pat = _re_kpcw.compile(
+        r"(?:(?:mon|tue|wed|thu|fri|sat|sun)[a-z]*,?\s+)?"
+        r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+"
+        r"(\d{1,2})(?:st|nd|rd|th)?(?:,?\s+(\d{4}))?",
+        _re_kpcw.I,
+    )
+    found = []
+    for m in pat.finditer(text):
+        mon = _MONTHS_KPCW.get(m.group(1).lower()[:3])
+        if not mon:
+            continue
+        day = int(m.group(2))
+        if not (1 <= day <= 31):
+            continue
+        year = int(m.group(3)) if m.group(3) else int(fallback_iso[:4])
+        cand = f"{year:04d}-{mon:02d}-{day:02d}"
+        found.append(cand)
+    if not found:
+        return fallback_iso
+    # Prefer future dates (on/after today). De-dupe.
+    future = sorted(set(d for d in found if d >= today_iso))
+    if len(future) == 1:
+        return future[0]
+    # If multiple distinct future dates, it's ambiguous (e.g. "tickets May 20,
+    # event June 8") — don't guess. Keep fallback.
+    return fallback_iso
+
+
 def _collapse_billboards(events):
     """Collapse promotional multi-day billboards to a single (earliest) card.
 
@@ -277,6 +316,25 @@ def _parse_event(raw):
         # Description (Tockify often truncates with ellipsis; keep up to 300 chars)
         description = (content.get("description") or {}).get("text") or ""
         description = re.sub(r"<[^>]+>", "", description).strip()[:300]
+
+        # Date sanity: Tockify often returns "billboard" events — the same
+        # announcement repeated across many days leading up to the event, where
+        # the API start timestamp is just the day the card appears, not the
+        # real event date. The real date lives in the title or description
+        # ("Park City Pride ... on Sunday, May 31, 2026"). Recover it.
+        # Conservative: only override on a single clear future date, and only
+        # forward (never move an event earlier).
+        _today_iso = datetime.now().strftime("%Y-%m-%d")
+        _corrected = _date_from_title(title, date_iso)
+        if _corrected == date_iso:
+            _corrected = _date_from_text(description, date_iso, _today_iso)
+        if _corrected != date_iso and _corrected > date_iso:
+            date_iso = _corrected
+            # The API start_time belonged to the wrong (billboard) date; drop
+            # it rather than show a misleading time on the real date.
+            start_time = None
+            end_date_iso = None
+            end_time = None
 
         # Location: prefer the human-readable "place" + address
         place = content.get("place") or ""

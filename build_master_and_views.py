@@ -322,6 +322,126 @@ def _sanitize_span(record: dict) -> dict:
     return record
 
 
+# Known single-venue sources where the source name == the venue, with a
+# fixed real address. When a record from one of these sources lacks an
+# address, we stamp the canonical one. Verified against official sources
+# (Yelp / Google / venue websites).
+_SINGLE_VENUE_ADDRESSES = {
+    "The Osthoff Resort": {
+        "venue_name": "The Osthoff Resort",
+        "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+    },
+    "Grand Targhee Resort": {
+        "venue_name": "Grand Targhee Resort",
+        "address": "3300 E Ski Hill Road, Alta, WY 83414",
+    },
+    "Jackson Hole Mountain Resort": {
+        "venue_name": "Jackson Hole Mountain Resort",
+        "address": "3395 Cody Lane, Teton Village, WY 83025",
+    },
+    "National Museum of Wildlife Art": {
+        "venue_name": "National Museum of Wildlife Art",
+        "address": "2820 Rungius Road, Jackson, WY 83001",
+    },
+}
+
+# Title-prefix-keyed venue lookup. When the event TITLE indicates a
+# known race/series, stamp the canonical venue + address even if the source
+# scraper didn't include them. Universal across all sources.
+_TITLE_VENUE_LOOKUP = (
+    # (substring to match in title.lower(), venue_name, address)
+    ("park city trail series", "Quinn's Junction Trailhead",
+     "425 Gillmor Way, Park City, UT 84060"),
+)
+
+
+_VENUE_NAME_ADDRESSES = {
+    "Road America": "N7390 US-12, Elkhart Lake, WI 53020",
+    "Siebkens Resort": "284 S Lake Street, Elkhart Lake, WI 53020",
+    "The Osthoff Resort": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+    "Osthoff Lake Deck": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+    "Vintage Elkhart Lake": "100 East Rhine Street, Elkhart Lake, WI 53020",
+    "Throttlestop": "20 Victory Lane, Elkhart Lake, WI 53020",
+    "The Tiki Bar at Elkhart Lake Beach Resort": "276 Victorian Village Drive, Elkhart Lake, WI 53020",
+    "Lake Street Cafe": "Lake Street, Elkhart Lake, WI 53020",
+    "Swaner Preserve and EcoCenter": "1258 Center Drive, Park City, UT 84098",
+    "Swaner Preserve & EcoCenter": "1258 Center Drive, Park City, UT 84098",
+    "Park City Library": "1255 Park Avenue, Park City, UT 84060",
+    "Walk Festival Hall": "3330 Cody Lane, Teton Village, WY 83025",
+    "Snow King Mountain": "402 E Snow King Avenue, Jackson, WY 83001",
+}
+
+
+def _apply_single_venue_lookup(record: dict) -> dict:
+    """Fill address from known-venue lookup tables. Source-keyed first, then
+    venue_name-keyed. Never overwrites existing fields."""
+    src = record.get("source") or ""
+    if src in _SINGLE_VENUE_ADDRESSES:
+        info = _SINGLE_VENUE_ADDRESSES[src]
+        if not record.get("address"):
+            record["address"] = info["address"]
+        if not record.get("venue_name"):
+            record["venue_name"] = info["venue_name"]
+    if not record.get("address"):
+        venue = (record.get("venue_name") or "").strip()
+        if venue and venue in _VENUE_NAME_ADDRESSES:
+            record["address"] = _VENUE_NAME_ADDRESSES[venue]
+    # Title-keyed lookup: catches recurring races scraped by multiple
+    # sources where the source-specific scrapers don't all share venue logic
+    # (e.g. Trail Series 5K via MTF gets Quinn's Junction, but 10K/Half via
+    # Salt Lake Running Co does not — this universalizes it).
+    if not record.get("address"):
+        title_lo = (record.get("title") or "").lower()
+        for needle, venue, address in _TITLE_VENUE_LOOKUP:
+            if needle in title_lo:
+                if not record.get("venue_name"):
+                    record["venue_name"] = venue
+                record["address"] = address
+                break
+    return record
+
+
+def _derive_address(record: dict) -> dict:
+    """Populate the structured `address` field from `location` when possible.
+
+    Many scrapers put the full street address in `location` only (e.g.
+    "The Cloudveil, 112 Center ST, Jackson, WY" or "101 Osthoff Avenue,
+    Elkhart Lake, WI"). For schema.org SEO and a consistent data model, we
+    want the structured `address` field populated too. Conservative: only
+    fills when location looks like it contains a real street (has a digit
+    followed by a street word, or matches an obvious street pattern). Never
+    overwrites an existing address.
+    """
+    if record.get("address"):
+        return record  # already has structured address
+    loc = (record.get("location") or "").strip()
+    if not loc:
+        return record
+    # Strip the venue_name prefix if it's at the front of location.
+    venue = (record.get("venue_name") or "").strip()
+    candidate = loc
+    if venue and candidate.lower().startswith(venue.lower()):
+        candidate = candidate[len(venue):].lstrip(",").strip()
+    # If after stripping the venue we have a comma-separated string,
+    # candidate looks like "123 Street, City, ST 12345". Confirm it has
+    # something that looks like a street number or a PO/route designator.
+    has_street_signal = bool(_re_addr_street.search(candidate))
+    if has_street_signal and "," in candidate:
+        record["address"] = candidate
+    return record
+
+
+_re_addr_street = _re_pricing.compile(
+    # A digit followed by a word, OR a route/PO style identifier (US-12, N7390),
+    # OR explicit street words preceded by a number.
+    r"\b(?:\d+\s+[A-Za-z]|[NSEW]\d{2,5}\b|\bUS-\d+|\bP\.?O\.? Box\b|"
+    r"\bRoute\s+\d+|\bRd\b|\bSt\b|\bSt\.|\bStreet\b|\bAvenue\b|"
+    r"\bAve\b|\bAve\.|\bBoulevard\b|\bBlvd\b|\bDrive\b|\bDr\b|\bDr\.|"
+    r"\bLane\b|\bLn\b|\bWay\b|\bParkway\b|\bPkwy\b|\bCircle\b|\bCt\b)",
+    _re_pricing.I,
+)
+
+
 def _infer_pricing(record: dict) -> dict:
     """Set is_free / price when a confident signal exists; leave unset otherwise.
 
@@ -348,6 +468,15 @@ def _infer_pricing(record: dict) -> dict:
     # "Cost is $48"). A "$0" or "$0.00" is actually free, so guard against that.
     price_m = _PRICE_RE.search(text)
     if price_m and price_m.group(0).replace("$", "").replace(" ", "") not in ("0", "0.00"):
+        record["is_free"] = False
+        return record
+
+    # Race-distance guard: titles like "5K", "10K", "Half Marathon", or
+    # "Marathon" imply a paid race registration, even when the source (e.g.
+    # Mountain Trails Foundation) is otherwise mostly free. Don't auto-tag
+    # these as free.
+    title_lo = (record.get("title") or "").lower()
+    if _re_pricing.search(r"\b(5\s?k|10\s?k|half\s+marathon|marathon|trail\s+series)\b", title_lo):
         record["is_free"] = False
         return record
 
@@ -402,7 +531,7 @@ def _clean_display_text(s: str) -> str:
 def merge_events(records: list[dict]) -> dict:
     """When multiple records dedupe to the same key, pick the best fields."""
     if len(records) == 1:
-        _r = _sanitize_span(_infer_pricing(_backfill_venue(dict(records[0]))))
+        _r = _sanitize_span(_infer_pricing(_derive_address(_apply_single_venue_lookup(_backfill_venue(dict(records[0]))))))
         _r["title"] = _clean_display_text(_r.get("title", ""))
         if _r.get("description"):
             _r["description"] = _clean_display_text(_r["description"])
@@ -464,7 +593,7 @@ def merge_events(records: list[dict]) -> dict:
         srcs.discard("")
         base["_all_sources"] = sorted(srcs)
 
-    base = _sanitize_span(_infer_pricing(_backfill_venue(base)))
+    base = _sanitize_span(_infer_pricing(_derive_address(_apply_single_venue_lookup(_backfill_venue(base)))))
     base["title"] = _clean_display_text(base.get("title", ""))
     if base.get("description"):
         base["description"] = _clean_display_text(base["description"])

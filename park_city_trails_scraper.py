@@ -177,7 +177,12 @@ def _parse_event(raw):
         # Try to derive a more specific venue from the title
         location = "Park City Trails, Park City, UT"
         title_lower = title.lower()
-        if "round valley" in title_lower:
+        # Park City Trail Series races start/finish at Quinn's Junction
+        # Trailhead (Round Valley) per pctrailseries.com.
+        _is_trail_series = "trail series" in title_lower
+        if _is_trail_series:
+            location = "Quinn's Junction Trailhead - Round Valley, 425 Gillmor Way, Park City, UT 84060"
+        elif "round valley" in title_lower:
             location = "Round Valley, Park City, UT"
         elif "deer valley" in title_lower or "silver lake" in title_lower or "mid mountain" in title_lower:
             location = "Mid Mountain Trail / Deer Valley, Park City, UT"
@@ -220,6 +225,14 @@ def _parse_event(raw):
             event["end_time"] = end_time
         if end_date_iso and end_date_iso != date_iso:
             event["end_date"] = end_date_iso
+
+        # Override default MTF coords with Quinn's Junction Trailhead for
+        # Park City Trail Series races (40.6815, -111.4718).
+        if _is_trail_series:
+            event["lat"] = 40.6815
+            event["lng"] = -111.4718
+            event["venue_name"] = "Quinn's Junction Trailhead"
+            event["address"] = "425 Gillmor Way, Park City, UT 84060"
 
         return event
 

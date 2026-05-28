@@ -1773,11 +1773,27 @@ export default function CalendarClient() {
       if (dateStr) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📅</span>${dateStr}</div>`)
       const startTime = card.dataset.startTime||'', endTime = card.dataset.endTime||''
       if (startTime) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">🕐</span>${endTime?startTime+' – '+endTime:startTime}</div>`)
-      // Prefer structured venue_name + address when available (cleaner display)
+      // Prefer structured venue_name + address when available (cleaner display).
+      // If address field is empty, fall back to deriving it from `location`
+      // (many sources put the full street address in `location` instead of
+      // splitting it into a separate `address` field — see Elkhart sources
+      // and ~24% of Jackson events). We strip the venue_name prefix from
+      // location to avoid showing the venue twice.
+      let displayAddress = address
+      if (!displayAddress && location && venueName) {
+        // location often reads "Venue Name, 123 Street, City, ST 12345" —
+        // strip the venue prefix (case-insensitive, allow trailing comma+space).
+        const vEsc = venueName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        const stripped = location.replace(new RegExp('^' + vEsc + '\\s*,?\\s*', 'i'), '').trim()
+        if (stripped && stripped !== location) displayAddress = stripped
+      } else if (!displayAddress && location && !venueName) {
+        // No venue_name at all — location IS the address-like field
+        displayAddress = location
+      }
       if (venueName) {
         meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📍</span>${venueName}</div>`)
-        if (address) {
-          meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.55);margin-left:26px">${address}</div>`)
+        if (displayAddress) {
+          meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.55);margin-left:26px">${displayAddress}</div>`)
         }
       } else if (location) {
         meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📍</span>${location}</div>`)

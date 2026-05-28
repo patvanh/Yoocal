@@ -364,6 +364,23 @@ def scrape_slrc_heber_wrapper():
         return []
 
 
+def scrape_dainty_pear_wrapper():
+    """Midway boutique class calendar via Shopify products JSON.
+
+    Source: thedaintypearco.com/collections/classes. Returns ~3-15 classes/year
+    (cookie decorating, oil painting, mahjong, etc.) at 152 W 100 N Midway.
+    """
+    try:
+        from dainty_pear_scraper import scrape_dainty_pear
+    except ImportError:
+        return []
+    try:
+        return scrape_dainty_pear()
+    except Exception as ex:
+        print(f"  Dainty Pear scraper failed: {ex}")
+        return []
+
+
 def scrape_runsignup():
     """Heber Valley races via RunSignup public API.
 
@@ -779,6 +796,7 @@ def main():
     all_events += scrape_eventbrite()
     all_events += scrape_runsignup()
     all_events += scrape_slrc_heber_wrapper()
+    all_events += scrape_dainty_pear_wrapper()
     all_events += scrape_hebervalleylife_sitemap()
     all_events += scrape_townlift()
 
