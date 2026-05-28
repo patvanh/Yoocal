@@ -6,37 +6,10 @@
     "lng": -111.4133
   },
   "radius_mi": 10,
-  "generated_at": "2026-05-27T20:45:04.193428-06:00",
+  "generated_at": "2026-05-27T22:39:42.676773-06:00",
   "today": "2026-05-27",
-  "event_count": 688,
+  "event_count": 690,
   "events": [
-    {
-      "title": "Stein's Famous Sunday Brunch",
-      "date": "2026-05-27",
-      "description": "",
-      "location": "Glitretind Restaurant at Stein Eriksen Lodge",
-      "link": "https://www.visitparkcity.com/event/steins-famous-sunday-brunch/26896/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-05-27T13:59:35.710827",
-      "lat": 40.6216041,
-      "lng": -111.4900505,
-      "venue_name": "Glitretind Restaurant at Stein Eriksen Lodge",
-      "recurrence": "weekly",
-      "recurrence_day": "Sunday",
-      "recurrence_days": "",
-      "start_time": "11:00 AM",
-      "end_time": "2:30 PM",
-      "categories": [
-        "Food & Drink"
-      ],
-      "filter_categories": [
-        "Food & Drink"
-      ],
-      "_distance_mi": 8.9
-    },
     {
       "title": "Reading with Therapy Dogs - Every Wednesday in May",
       "date": "2026-05-27",
@@ -738,6 +711,30 @@
       "_distance_mi": 0.2
     },
     {
+      "title": "Stein's Famous Sunday Brunch",
+      "date": "2026-05-31",
+      "description": "",
+      "location": "Glitretind Restaurant at Stein Eriksen Lodge",
+      "link": "https://www.visitparkcity.com/event/steins-famous-sunday-brunch/26896/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "is_free": null,
+      "price": "",
+      "scraped_at": "2026-05-27T21:05:12.546513",
+      "lat": 40.6216041,
+      "lng": -111.4900505,
+      "venue_name": "Glitretind Restaurant at Stein Eriksen Lodge",
+      "recurrence": "weekly",
+      "recurrence_day": "Sunday",
+      "recurrence_days": "",
+      "start_time": "11:00 AM",
+      "end_time": "2:30 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 8.9
+    },
+    {
       "title": "Live Music @ Caf\u00e9 Galleria",
       "date": "2026-05-31",
       "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
@@ -895,6 +892,131 @@
         "Community"
       ],
       "_distance_mi": 0.7
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-06-02",
+      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.526638,
+      "lng": -111.462471,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107068",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
+      "date_label": "Daily, Mon - Sat, 11:00 AM",
+      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Heber City Council Monthly Meetings",
+      "date": "2026-06-02",
+      "description": "Heber City Council Monthly Meetings in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-council-meetings",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5085852,
+      "lng": -111.4141319,
+      "categories": [
+        "Government"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.112925",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741948.jpg?decache=27-04-36",
+      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
+      "recurrence_text": "1st and 3rd Tuesdays of each month",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.1
+    },
+    {
+      "title": "In Stitches Gathering @ Wasatch County Library",
+      "date": "2026-06-02",
+      "description": "In Stitches Gathering @ Wasatch County Library in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wasatch-county-library-in-stitches",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.113100",
+      "start_time": "6:00 PM",
+      "end_time": "7:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3184887.jpg?decache=27-04-36",
+      "date_label": "1st Tue monthly, 6:00 - 7:00 PM",
+      "recurrence_text": "1st Tuesday monthly, 6:00 - 7:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Midway City Council Monthly Meetings",
+      "date": "2026-06-02",
+      "description": "Midway City Council Monthly Meetings in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/midway-city-council-meetings",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5123105,
+      "lng": -111.4756877,
+      "categories": [
+        "Government"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.113290",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750550.jpg?decache=27-04-36",
+      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
+      "recurrence_text": "1st and 3rd Tuesdays of each month at 6:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 3.3
+    },
+    {
+      "title": "Cornhole @ Wallsburg Town Hall",
+      "date": "2026-06-02",
+      "description": "Cornhole @ Wallsburg Town Hall in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wallsburg-cornhole-night",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.113458",
+      "start_time": "7:00 PM",
+      "end_time": "9:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=27-04-36",
+      "date_label": "Tue, 7:00 - 9:00 PM",
+      "end_date": null,
+      "recurrence_text": "Every Tuesday, 7:00-9:00 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
     },
     {
       "title": "Wednesday Morning Storytime @ Folklore Bookshop",
@@ -2381,7 +2503,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:18.986451",
+      "scraped_at": "2026-05-27T21:08:06.170743",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -2801,7 +2923,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "10:00 AM",
       "end_time": "6:00 PM",
-      "end_date": "2026-06-13",
+      "end_date": null,
       "lat": 40.6285,
       "lng": -111.482,
       "categories": [
@@ -2809,7 +2931,6 @@
         "Sports and Recreation",
         "Mountain Biking"
       ],
-      "_repaired_from": "multi_day_split (was 2026-06-13 to 2026-06-14)",
       "filter_categories": [
         "Outdoors",
         "Sports"
@@ -3024,7 +3145,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "10:00 AM",
       "end_time": "6:00 PM",
-      "end_date": "2026-06-14",
+      "end_date": null,
       "lat": 40.6285,
       "lng": -111.482,
       "categories": [
@@ -3032,7 +3153,6 @@
         "Sports and Recreation",
         "Mountain Biking"
       ],
-      "_repaired_from": "multi_day_split (was 2026-06-13 to 2026-06-14)",
       "filter_categories": [
         "Outdoors",
         "Sports"
@@ -3877,7 +3997,7 @@
       ],
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "scraped_at": "2026-05-27T14:02:21.842107",
+      "scraped_at": "2026-05-27T21:08:09.730375",
       "venue_name": "Montage Deer Valley",
       "address": "9100 Marsac Ave, Park City, UT, 84060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/wHVj1XsYFEGZyWjnUxTZGw.large.png",
@@ -4322,7 +4442,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:22.988095",
+      "scraped_at": "2026-05-27T21:08:11.690782",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -5653,7 +5773,7 @@
       ],
       "start_time": "",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:24.700874",
+      "scraped_at": "2026-05-27T21:08:14.555376",
       "venue_name": "Inn At Silver Lake",
       "address": "7560 Royal St",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/InD03XiuAUiRxkhxB64bKQ.large.png",
@@ -6200,7 +6320,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:25.884607",
+      "scraped_at": "2026-05-27T21:08:16.019669",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -7721,7 +7841,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:27.626254",
+      "scraped_at": "2026-05-27T21:08:17.451049",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -7847,7 +7967,7 @@
       ],
       "start_time": "1:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:27.626320",
+      "scraped_at": "2026-05-27T21:08:18.101561",
       "venue_name": "Silver Lake Lodge",
       "address": "7600 Royal Street",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/j0c8EWEO_EmxC1jEbgkZgA.large.png",
@@ -8142,7 +8262,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "11:30 AM",
       "end_time": "4:00 PM",
-      "end_date": "2026-07-11",
+      "end_date": null,
       "lat": 40.6155,
       "lng": -111.4858,
       "categories": [
@@ -8152,7 +8272,6 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/5AYJyd3D8U-5hiWqu6Tw0g.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)",
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -8461,6 +8580,34 @@
       "_distance_mi": 8.4
     },
     {
+      "title": "Chef Sarah Glover Weekend",
+      "date": "2026-07-12",
+      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 11 and 12, Chef Sarah Glover brings her signature, land-driven approach to the flame, preparing locally sourced game, fresh-baked breads, and seasonal ingredients over open fire. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella filled with fresh seafood and local meats to Chef Sam Phelan's plank salmon, slow-cooked over the fire. Pair each bite with craft pours from Utah breweries and live music. Admission is free with...",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-chef-sarah-glover-071126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "11:30 AM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/5AYJyd3D8U-5hiWqu6Tw0g.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
       "title": "Sushi & Sake Tasting",
       "date": "2026-07-12",
       "description": "Creative Academy Class \u2014 Roll up your sleeves and dive into the art of sushi making! Learn the history behind this beloved cuisine while creating three delicious rolls: California Roll, Executive Roll, and Spicy Tuna Roll, all perfectly paired with sake tastings. This 21+ class is the perfect blend",
@@ -8484,35 +8631,6 @@
         "Food & Drink"
       ],
       "_distance_mi": 9.6
-    },
-    {
-      "title": "Chef Sarah Glover Weekend",
-      "date": "2026-07-12",
-      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 11 and 12, Chef Sarah Glover brings her signature, land-driven approach to the flame, preparing locally sourced game, fresh-baked breads, and seasonal ingredients over open fire. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella filled with fresh seafood and local meats to Chef Sam Phelan's plank salmon, slow-cooked over the fire. Pair each bite with craft pours from Utah breweries and live music. Admission is free with...",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-chef-sarah-glover-071126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "11:30 AM",
-      "end_time": "4:00 PM",
-      "end_date": "2026-07-12",
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/5AYJyd3D8U-5hiWqu6Tw0g.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)",
-      "is_free": true,
-      "price": "Free",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 8.4
     },
     {
       "title": "Live Music @ Caf\u00e9 Galleria",
@@ -9061,7 +9179,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:29.371777",
+      "scraped_at": "2026-05-27T21:08:20.219224",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/8Bf-EwPucUeXexZJiTkvhw.large.png",
@@ -9320,7 +9438,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:29.957411",
+      "scraped_at": "2026-05-27T21:08:20.943612",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/8Bf-EwPucUeXexZJiTkvhw.large.png",
@@ -9357,6 +9475,32 @@
       "_distance_mi": 9.6
     },
     {
+      "title": "Matilda & Gozney Weekend",
+      "date": "2026-07-18",
+      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 18 and 19, Gozney and Matilda come together to serve up an unforgettable pizza experience. Gozney's professional-grade ovens, engineered to hit blazing temperatures over 900\u00b0F with their signature rolling flame, set the stage for Matilda's wood-fired Neapolitan pizzas, crafted with the same passion that's made them a local favorite among both travelers and regulars. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella fille...",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-matilda-and-gozney-071826",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "11:30 AM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/GYl1V7xrMUayzhEReBTjmQ.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
       "title": "Live Music at Silver Lake",
       "date": "2026-07-18",
       "description": "Food Trucks, Music & Scenic Adventures \u2014 Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock,",
@@ -9377,33 +9521,6 @@
       "filter_categories": [
         "Food & Drink",
         "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Matilda & Gozney Weekend",
-      "date": "2026-07-18",
-      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 18 and 19, Gozney and Matilda come together to serve up an unforgettable pizza experience. Gozney's professional-grade ovens, engineered to hit blazing temperatures over 900\u00b0F with their signature rolling flame, set the stage for Matilda's wood-fired Neapolitan pizzas, crafted with the same passion that's made them a local favorite among both travelers and regulars. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella fille...",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-matilda-and-gozney-071826",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "11:30 AM",
-      "end_time": "4:00 PM",
-      "end_date": "2026-07-18",
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/GYl1V7xrMUayzhEReBTjmQ.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-18 to 2026-07-19)",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
       ],
       "_distance_mi": 8.4
     },
@@ -9607,6 +9724,32 @@
       "_distance_mi": 8.4
     },
     {
+      "title": "Matilda & Gozney Weekend",
+      "date": "2026-07-19",
+      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 18 and 19, Gozney and Matilda come together to serve up an unforgettable pizza experience. Gozney's professional-grade ovens, engineered to hit blazing temperatures over 900\u00b0F with their signature rolling flame, set the stage for Matilda's wood-fired Neapolitan pizzas, crafted with the same passion that's made them a local favorite among both travelers and regulars. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella fille...",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-matilda-and-gozney-071826",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "11:30 AM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/GYl1V7xrMUayzhEReBTjmQ.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
       "title": "Sip, Stir, and Discover: A Gin & Cocktail Experience with Alpi ne Distilling",
       "date": "2026-07-19",
       "description": "Step into the world of craft spirits with Sara Sergent, owner and Master Botanical Distiller at Alpine Distilling in Park City, UT. In this interactive class, you'll explore Alpine's premium, locally made gin and liqueurs while learning the art of cocktail creation. From understanding the botanical that define Alpine's award-winning spirits to mixing your own signature cocktail, this 21\\+ hands-on experience will inspire your inner mixologist.",
@@ -9676,33 +9819,6 @@
       "filter_categories": [
         "Food & Drink",
         "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Matilda & Gozney Weekend",
-      "date": "2026-07-19",
-      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 18 and 19, Gozney and Matilda come together to serve up an unforgettable pizza experience. Gozney's professional-grade ovens, engineered to hit blazing temperatures over 900\u00b0F with their signature rolling flame, set the stage for Matilda's wood-fired Neapolitan pizzas, crafted with the same passion that's made them a local favorite among both travelers and regulars. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella fille...",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-matilda-and-gozney-071826",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "11:30 AM",
-      "end_time": "4:00 PM",
-      "end_date": "2026-07-19",
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/GYl1V7xrMUayzhEReBTjmQ.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-18 to 2026-07-19)",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
       ],
       "_distance_mi": 8.4
     },
@@ -9872,7 +9988,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:30.525247",
+      "scraped_at": "2026-05-27T21:08:21.605620",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -10811,7 +10927,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:31.710797",
+      "scraped_at": "2026-05-27T21:08:23.054491",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -10837,7 +10953,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:31.710829",
+      "scraped_at": "2026-05-27T21:08:23.054563",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/9361e5ac-d208-4303-a54f-cf9888f14f8a.large.png",
@@ -11894,7 +12010,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:32.874674",
+      "scraped_at": "2026-05-27T21:08:24.395805",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/BKMTJqc9hkmAP-9w8RqU2g.large.png",
@@ -12276,7 +12392,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:33.474806",
+      "scraped_at": "2026-05-27T21:08:25.084476",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/f9Ux9FT0H0WPlLcfgpr1Og.large.png",
@@ -12297,7 +12413,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "11:30 AM",
       "end_time": "4:00 PM",
-      "end_date": "2026-08-01",
+      "end_date": null,
       "lat": 40.6155,
       "lng": -111.4858,
       "categories": [
@@ -12307,12 +12423,32 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-08-01 to 2026-08-02)",
       "filter_categories": [
         "Community",
         "Food & Drink"
       ],
       "_distance_mi": 8.4
+    },
+    {
+      "title": "Reception & Five-Course Dinner",
+      "date": "2026-08-01",
+      "description": "The Taste of Luxury Series featuring Stag's Leap \u2014 Deer Valley\u2019s Taste of Luxury Series continues with a celebration honoring the 50th anniversary of the 1976 Judgment of Paris, the landmark tasting that forever changed the global perception of California wine and established Napa Valley as a world-",
+      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/taste-of-luxury-stags-leap",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "6:30 PM",
+      "end_time": "8:30 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Food and Beverage",
+        "Sponsored Events"
+      ],
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 9.6
     },
     {
       "title": "Meet the Cows - Dairy Farm Tour",
@@ -12583,6 +12719,32 @@
       "_distance_mi": 8.4
     },
     {
+      "title": "Chef Ryan Arensdorf Weekend",
+      "date": "2026-08-02",
+      "description": "Experience Fire & Flavor Festival, where live-fire cooking meets alpine views. On August 1 and 2, Chef Ryan Arensdorf of KC Que takes the lead with Kansas City-style BBQ, featuring slow smoked meats, classic sides, and sweet cornbread. Set on Silver Lake Lawn, this weekend brings bold, fire-driven flavor to a relaxed mountain setting, where guests can gather and refuel between activities. Chef Peter Menteer prepares paella in an 8-foot pan with local meats and fresh seafood, alongside Chef Sam Phelan's plank salmon cooked over open fire pits. Local Utah breweries and live entertainment at ...",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-ryan-arensdorf-080126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "11:30 AM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
       "title": "\"Little Chefs\" Culinary Series: Pizza",
       "date": "2026-08-02",
       "description": "Get ready to toss, top, and taste! In this fun, hands-on c lass, kids will learn how to toss pizza dough like a pro and create their own delicious masterpiece. Each young chef will take home a Deer Valley logo apron and chef hat. Perfect for budding young chefs who love to get creative in the kitchen!",
@@ -12606,33 +12768,6 @@
         "Food & Drink"
       ],
       "_distance_mi": 9.6
-    },
-    {
-      "title": "Chef Ryan Arensdorf Weekend",
-      "date": "2026-08-02",
-      "description": "Experience Fire & Flavor Festival, where live-fire cooking meets alpine views. On August 1 and 2, Chef Ryan Arensdorf of KC Que takes the lead with Kansas City-style BBQ, featuring slow smoked meats, classic sides, and sweet cornbread. Set on Silver Lake Lawn, this weekend brings bold, fire-driven flavor to a relaxed mountain setting, where guests can gather and refuel between activities. Chef Peter Menteer prepares paella in an 8-foot pan with local meats and fresh seafood, alongside Chef Sam Phelan's plank salmon cooked over open fire pits. Local Utah breweries and live entertainment at ...",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-ryan-arensdorf-080126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "11:30 AM",
-      "end_time": "4:00 PM",
-      "end_date": "2026-08-02",
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-08-01 to 2026-08-02)",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 8.4
     },
     {
       "title": "Live Music @ Caf\u00e9 Galleria",
@@ -13235,8 +13370,8 @@
         "Outdoor"
       ],
       "start_time": "7:30 PM",
-      "end_time": "10:30 PM",
-      "scraped_at": "2026-05-27T14:02:34.654565",
+      "end_time": "",
+      "scraped_at": "2026-05-27T21:08:26.502081",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/avfrxl_cukyA2j8N_cOQHg.large.png",
@@ -13268,6 +13403,29 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Reception, Dinner & Concert",
+      "date": "2026-08-07",
+      "description": "The Taste of Luxury Series featuring Chef Ryan Arensdorf \u2014 Indulge in an unforgettable evening of Kansas City-style BBQ as Chef Ryan Arensdorf returns to Deer Valley for the fourth annual Taste of Luxury: Smoked Series on August 7, 2026. Set against the stunning backdrop of Silver Lake Lawn, guests",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/taste-of-luxury-chef-ryan-arensdorf",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "4:30 PM",
+      "end_time": "9:30 PM",
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Sponsored Events",
+        "Music"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -13469,7 +13627,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:35.239016",
+      "scraped_at": "2026-05-27T21:08:27.248804",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/b1q65zBBG0WlxctMNFc5Jw.large.png",
@@ -13490,7 +13648,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "11:30 AM",
       "end_time": "4:00 PM",
-      "end_date": "2026-08-08",
+      "end_date": null,
       "lat": 40.6155,
       "lng": -111.4858,
       "categories": [
@@ -13500,7 +13658,6 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-08-08 to 2026-08-09)",
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -13820,7 +13977,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "11:30 AM",
       "end_time": "4:00 PM",
-      "end_date": "2026-08-09",
+      "end_date": null,
       "lat": 40.6155,
       "lng": -111.4858,
       "categories": [
@@ -13830,7 +13987,6 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-08-08 to 2026-08-09)",
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -13914,6 +14070,410 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Monday Night Train @ Heber Valley Railroad",
+      "date": "2026-08-10",
+      "description": "Monday Night Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/monday-night-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022517,
+      "lng": -111.424503,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.112587",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728189.jpg?decache=27-04-36",
+      "date_label": "Weekly, Mon nights @ 7:00 PM",
+      "end_date": null,
+      "recurrence_text": "Weekly, Monday nights at 7:00 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.7
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-08-11",
+      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.526638,
+      "lng": -111.462471,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107068",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
+      "date_label": "Daily, Mon - Sat, 11:00 AM",
+      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Cornhole @ Wallsburg Town Hall",
+      "date": "2026-08-11",
+      "description": "Cornhole @ Wallsburg Town Hall in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wallsburg-cornhole-night",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.113458",
+      "start_time": "7:00 PM",
+      "end_time": "9:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=27-04-36",
+      "date_label": "Tue, 7:00 - 9:00 PM",
+      "end_date": null,
+      "recurrence_text": "Every Tuesday, 7:00-9:00 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Country Swing & Line Dancing @ The Sycamore Building",
+      "date": "2026-08-11",
+      "description": "Country Swing & Line Dancing @ The Sycamore Building in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/swing-dance-at-sycamore",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.506961,
+      "lng": -111.4133863,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.121446",
+      "start_time": "8:00 PM",
+      "end_time": "11:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3176611.jpg?decache=27-04-36",
+      "date_label": "Every 2nd and 4th Tue, 8:00 PM - 11:00PM",
+      "recurrence_text": "Every 2nd and 4th Tuesday of the month",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Heber Valley Chamber Golf Tournament",
+      "date": "2026-08-11",
+      "description": "Heber Valley Chamber Golf Tournament in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-valley-chamber-golf-tournament",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4819576,
+      "lng": -111.5007583,
+      "categories": [
+        "Sports"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.159806",
+      "start_time": "8:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728272.jpg?decache=27-04-36",
+      "date_label": "Soldier Hollow Gold Course, 8:00 AM Shotgun",
+      "filter_categories": [
+        "Sports"
+      ],
+      "_distance_mi": 4.9
+    },
+    {
+      "title": "Twilight Ride Series",
+      "date": "2026-08-12",
+      "description": "Experience the magic of the mountain at dusk this summer with our Twilight Ride Series! Join us every Wednesday, from June 24 to August 19, weather and conditions permitting, for lift-served mountain biking from 4 to 8 p.m. Take the Silver Lake Express, Homestake Express, or Sterling Express chairlifts and explore the trails in the evening glow.",
+      "location": "On Mountain, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/twilight-ride-series-081226",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "4:00 PM",
+      "end_time": "8:00 PM",
+      "lat": 40.6285,
+      "lng": -111.482,
+      "categories": [
+        "Mountain Biking",
+        "Community"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
+      "venue_name": "Snow Park Lodge",
+      "address": "2250 Deer Valley Dr S",
+      "filter_categories": [
+        "Community",
+        "Outdoors"
+      ],
+      "_distance_mi": 9.1
+    },
+    {
+      "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+      "date": "2026-08-12",
+      "description": "Wednesday Morning Storytime @ Folklore Bookshop in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/folklore-bookshop-morning-storytime",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5130188,
+      "lng": -111.4766298,
+      "categories": [
+        "Kids",
+        "Education"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.106854",
+      "start_time": "10:30 AM",
+      "end_time": "11:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=27-04-36",
+      "date_label": "Wed, 10:30 - 11:00 AM",
+      "recurrence_text": "Every Wednesday at 10:30 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Education & Talks",
+        "Family & Kids"
+      ],
+      "_distance_mi": 3.4
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-08-12",
+      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.526638,
+      "lng": -111.462471,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107068",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
+      "date_label": "Daily, Mon - Sat, 11:00 AM",
+      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Heber Midday Wednesday Ride @ Southfield Park",
+      "date": "2026-08-12",
+      "description": "Heber Midday Wednesday Ride @ Southfield Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-midday-ride",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107261",
+      "start_time": "12:00 PM",
+      "end_time": "1:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187352.jpg?decache=27-04-36",
+      "date_label": "Wed, 12:00 - 1:30 PM",
+      "recurrence_text": "Every Wednesday at 12:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Open Art Studio Night @ Alchemy Art Studio",
+      "date": "2026-08-12",
+      "description": "Open Art Studio Night @ Alchemy Art Studio in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/alchemy-art-open-studio",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107621",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=27-04-36",
+      "date_label": "Wed, 6:00 - 8:00 PM",
+      "recurrence_text": "Every Wednesday, 6:00-8:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Midway Music on the Square",
+      "date": "2026-08-12",
+      "description": "Midway Music on the Square in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/midway-music-on-the-square",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5133349,
+      "lng": -111.4743764,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.122226",
+      "start_time": "6:30 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=27-04-36",
+      "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
+      "end_date": null,
+      "recurrence_text": "Every Wednesday from June 10 to August 12, 6:30-8:00 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 3.2
+    },
+    {
+      "title": "Donuts with the Director",
+      "date": "2026-08-12",
+      "description": "Donuts with the Director in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/donuts-with-the-director",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5138203,
+      "lng": -111.4135167,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.160090",
+      "start_time": "8:30 AM",
+      "end_time": "9:30 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=27-04-36",
+      "date_label": "Heber Valley Visitor Center, 8:30 - 9:30 AM",
+      "recurrence_text": "Every other month on the second Wednesday at 8:30 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.5
+    },
+    {
+      "title": "Famous Film Music",
+      "date": "2026-08-13",
+      "description": "From the back of a dragon high in the sky to galaxies far, far away, the Utah Symphony brings unforgettable film scores to life under the open stars at the Deer Valley\u00ae Music Festival. With music from Pirates of the Caribbean, Mission: Impossible, How to Train Your Dragon, Disney classics like Beauty and the Beast, and more, these melodies bring back memories of the moments you first heard them\u2014reimagined live in a night of adventure, heart, and emotion.",
+      "location": "Snow Park Outdoor Amphitheater, 2250 Deer Valley Dr S #501, Park City, UT 84060, USA",
+      "link": "https://www.deervalley.com/things-to-do/events/deer-valley-music-festival-famous-film-music-081326",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "6:00 PM",
+      "end_time": "10:30 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Music",
+        "Concert",
+        "Outdoor"
+      ],
+      "image_url": "https://usuo.org/app/uploads/2026/04/DVMF7-Famous-Film-Music.jpg",
+      "venue_name": "Deer Valley Ski Resort Main Base",
+      "address": "2250 Deer Valley Dr S",
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "_distance_mi": 9.6
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-08-13",
+      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.526638,
+      "lng": -111.462471,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107068",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
+      "date_label": "Daily, Mon - Sat, 11:00 AM",
+      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
+      "date": "2026-08-13",
+      "description": "Free Yoga for Ages 55+ @ Wasatch County Library in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/yoga-free-gentle-community-yoga-practice-ages-55",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4927462,
+      "lng": -111.3613658,
+      "categories": [
+        "Wellness"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.108180",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748467.jpg?decache=27-04-36",
+      "date_label": "Weekly, Thu mornings",
+      "recurrence_text": "Weekly Thursday mornings, 9:00-10:00 AM, from May 28, 2026 through December 31, 2026",
+      "facets": [
+        "Free"
+      ],
+      "end_date": null,
+      "filter_categories": [
+        "Wellness"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Heber Market on Main",
+      "date": "2026-08-13",
+      "description": "Heber Market on Main in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-market-on-main",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.504355,
+      "lng": -111.413598,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.115555",
+      "start_time": "5:00 PM",
+      "end_time": "9:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=27-04-36",
+      "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
+      "end_date": null,
+      "recurrence_text": "Weekly, Thursday nights, June 4 - August 20",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.2
     },
     {
       "title": "Trombone Shorty & Orleans Avenue and St. Paul & The Broken Bones",
@@ -14234,7 +14794,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:36.405763",
+      "scraped_at": "2026-05-27T21:08:28.607804",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Jkg4gW3H1U2BkahK5M4N_Q.large.png",
@@ -14494,6 +15054,566 @@
     },
     {
       "title": "Live Music at Silver Lake",
+      "date": "2026-08-16",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-081426",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "\"Little Chefs\" Culinary Series: Cookie Decorating",
+      "date": "2026-08-16",
+      "description": "In this hands-on class, kids will learn how to decorate cookies with colorful frosting, sprinkles, and fun techniques. Each young baker will take home a Deer Valley logo apron and chef hat to show off their new skills, along with their cookie creations. Perfect for little chefs who love to get creative \\(and a little messy\\) in the kitchen!",
+      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-chefs-cookie-decorating",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Za4d-qNgF0yJKXhpNtGi9g.large.png",
+      "venue_name": "Deer Valley Plaza Building",
+      "address": "1375 Deer Valley Dr S",
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 9.6
+    },
+    {
+      "title": "Guided Historical Hike",
+      "date": "2026-08-16",
+      "description": "Step into Park City's past on a guided hike through Deer Valley's scenic terrain, where fresh mountain air meets stories of the area's rich mining history. This three- to four-hour hike covers moderate terrain, typically under six miles, as guests hike around Empire. Meet at the Mid-Mountain Trailhead on Marsac Ave, above the Montage, for an 8:30 a.m. departure.",
+      "location": "On Mountain, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/guided-historical-hike-081626",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "8:30 AM",
+      "end_time": "12:30 PM",
+      "lat": 40.6285,
+      "lng": -111.482,
+      "categories": [
+        "Hiking",
+        "Outdoor"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/vOjzxbkya0KTZPyFQXH3MQ.large.png",
+      "venue_name": "Snow Park Lodge",
+      "address": "2250 Deer Valley Dr S",
+      "filter_categories": [
+        "Outdoors"
+      ],
+      "_distance_mi": 9.1
+    },
+    {
+      "title": "Live Music @ Caf\u00e9 Galleria",
+      "date": "2026-08-16",
+      "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/live-music-at-cafe-galleria",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.512205,
+      "lng": -111.474441,
+      "categories": [
+        "Music"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.109724",
+      "start_time": "5:30 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=27-04-36",
+      "date_label": "May - Oct (weather permitting), dates & times vary",
+      "end_date": null,
+      "recurrence_text": "Most days of the week, May-October (weather permitting), primarily Fridays at 5:30 PM, Saturdays at 5:30 PM, and Sundays at 10:30 AM",
+      "filter_categories": [
+        "Music"
+      ],
+      "_distance_mi": 3.2
+    },
+    {
+      "title": "Soulful Music Sundays @ Heber City Park",
+      "date": "2026-08-16",
+      "description": "Soulful Music Sundays @ Heber City Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/soulful-sundays-at-heber-city-park",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.112241",
+      "start_time": "7:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=27-04-36",
+      "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
+      "end_date": null,
+      "recurrence_text": "Every Sunday from June through August",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Free Yoga on the Lawn @ Heber City Park",
+      "date": "2026-08-16",
+      "description": "Free Yoga on the Lawn @ Heber City Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-yoga-on-the-lawn",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Wellness"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.120094",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=27-04-36",
+      "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
+      "end_date": null,
+      "recurrence_text": "Every Sunday from June through early September, 9:00-10:00 AM",
+      "facets": [
+        "Free"
+      ],
+      "filter_categories": [
+        "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Monday Night Train @ Heber Valley Railroad",
+      "date": "2026-08-17",
+      "description": "Monday Night Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/monday-night-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022517,
+      "lng": -111.424503,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.112587",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728189.jpg?decache=27-04-36",
+      "date_label": "Weekly, Mon nights @ 7:00 PM",
+      "end_date": null,
+      "recurrence_text": "Weekly, Monday nights at 7:00 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.7
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-08-18",
+      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.526638,
+      "lng": -111.462471,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107068",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
+      "date_label": "Daily, Mon - Sat, 11:00 AM",
+      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Heber City Council Monthly Meetings",
+      "date": "2026-08-18",
+      "description": "Heber City Council Monthly Meetings in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-council-meetings",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5085852,
+      "lng": -111.4141319,
+      "categories": [
+        "Government"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.112925",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741948.jpg?decache=27-04-36",
+      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
+      "recurrence_text": "1st and 3rd Tuesdays of each month",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.1
+    },
+    {
+      "title": "Midway City Council Monthly Meetings",
+      "date": "2026-08-18",
+      "description": "Midway City Council Monthly Meetings in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/midway-city-council-meetings",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5123105,
+      "lng": -111.4756877,
+      "categories": [
+        "Government"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.113290",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750550.jpg?decache=27-04-36",
+      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
+      "recurrence_text": "1st and 3rd Tuesdays of each month at 6:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 3.3
+    },
+    {
+      "title": "Cornhole @ Wallsburg Town Hall",
+      "date": "2026-08-18",
+      "description": "Cornhole @ Wallsburg Town Hall in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wallsburg-cornhole-night",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.113458",
+      "start_time": "7:00 PM",
+      "end_time": "9:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=27-04-36",
+      "date_label": "Tue, 7:00 - 9:00 PM",
+      "end_date": null,
+      "recurrence_text": "Every Tuesday, 7:00-9:00 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Heber's No Reading Book Club",
+      "date": "2026-08-18",
+      "description": "Heber's No Reading Book Club in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-no-reading-book-club",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.121110",
+      "start_time": "6:30 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186384.jpg?decache=27-04-36",
+      "date_label": "1st & 3rd Tue, 6:30 - 8:00 PM",
+      "recurrence_text": "Every 1st and 3rd Tuesday, 6:30-8:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Twilight Ride Series",
+      "date": "2026-08-19",
+      "description": "Experience the magic of the mountain at dusk this summer with our Twilight Ride Series! Join us every Wednesday, from June 24 to August 19, weather and conditions permitting, for lift-served mountain biking from 4 to 8 p.m. Take the Silver Lake Express, Homestake Express, or Sterling Express chairlifts and explore the trails in the evening glow.",
+      "location": "On Mountain, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/twilight-ride-series-081926",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "4:00 PM",
+      "end_time": "8:00 PM",
+      "lat": 40.6285,
+      "lng": -111.482,
+      "categories": [
+        "Mountain Biking",
+        "Community"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
+      "venue_name": "Snow Park Lodge",
+      "address": "2250 Deer Valley Dr S",
+      "filter_categories": [
+        "Community",
+        "Outdoors"
+      ],
+      "_distance_mi": 9.1
+    },
+    {
+      "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+      "date": "2026-08-19",
+      "description": "Wednesday Morning Storytime @ Folklore Bookshop in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/folklore-bookshop-morning-storytime",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5130188,
+      "lng": -111.4766298,
+      "categories": [
+        "Kids",
+        "Education"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.106854",
+      "start_time": "10:30 AM",
+      "end_time": "11:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=27-04-36",
+      "date_label": "Wed, 10:30 - 11:00 AM",
+      "recurrence_text": "Every Wednesday at 10:30 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Education & Talks",
+        "Family & Kids"
+      ],
+      "_distance_mi": 3.4
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-08-19",
+      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.526638,
+      "lng": -111.462471,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107068",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
+      "date_label": "Daily, Mon - Sat, 11:00 AM",
+      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Heber Midday Wednesday Ride @ Southfield Park",
+      "date": "2026-08-19",
+      "description": "Heber Midday Wednesday Ride @ Southfield Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-midday-ride",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107261",
+      "start_time": "12:00 PM",
+      "end_time": "1:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187352.jpg?decache=27-04-36",
+      "date_label": "Wed, 12:00 - 1:30 PM",
+      "recurrence_text": "Every Wednesday at 12:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Open Art Studio Night @ Alchemy Art Studio",
+      "date": "2026-08-19",
+      "description": "Open Art Studio Night @ Alchemy Art Studio in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/alchemy-art-open-studio",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107621",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=27-04-36",
+      "date_label": "Wed, 6:00 - 8:00 PM",
+      "recurrence_text": "Every Wednesday, 6:00-8:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Wasatch County Council Monthly Meetings",
+      "date": "2026-08-19",
+      "description": "Wasatch County Council Monthly Meetings in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wasatch-county-council-meetings",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5080939,
+      "lng": -111.4138681,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.114498",
+      "start_time": "4:00 PM",
+      "end_time": "6:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750551.jpg?decache=27-04-36",
+      "date_label": "1st & 3rd Wed monthly, 4:00 PM",
+      "recurrence_text": "First and third Wednesdays of each month",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.1
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-08-20",
+      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.526638,
+      "lng": -111.462471,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107068",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
+      "date_label": "Daily, Mon - Sat, 11:00 AM",
+      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
+      "date": "2026-08-20",
+      "description": "Free Yoga for Ages 55+ @ Wasatch County Library in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/yoga-free-gentle-community-yoga-practice-ages-55",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4927462,
+      "lng": -111.3613658,
+      "categories": [
+        "Wellness"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.108180",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748467.jpg?decache=27-04-36",
+      "date_label": "Weekly, Thu mornings",
+      "recurrence_text": "Weekly Thursday mornings, 9:00-10:00 AM, from May 28, 2026 through December 31, 2026",
+      "facets": [
+        "Free"
+      ],
+      "end_date": null,
+      "filter_categories": [
+        "Wellness"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Heber Market on Main",
+      "date": "2026-08-20",
+      "description": "Heber Market on Main in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-market-on-main",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.504355,
+      "lng": -111.413598,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.115555",
+      "start_time": "5:00 PM",
+      "end_time": "9:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=27-04-36",
+      "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
+      "end_date": null,
+      "recurrence_text": "Weekly, Thursday nights, June 4 - August 20",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.2
+    },
+    {
+      "title": "Tween Book Club @ Folklore Bookshop",
+      "date": "2026-08-20",
+      "description": "Tween Book Club @ Folklore Bookshop in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/folklore-bookshop-tween-book-club",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.129341",
+      "start_time": "6:30 PM",
+      "end_time": "7:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3154262.jpg?decache=27-04-36",
+      "date_label": "6:30 - 7:30 PM",
+      "recurrence_text": "Third Thursday of the month",
+      "end_date": null,
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music at Silver Lake",
       "date": "2026-08-21",
       "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
       "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
@@ -14643,6 +15763,438 @@
         "Music"
       ],
       "_distance_mi": 0.2
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-08-22",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "\"Little Artists\" Series: Design Your Own Canvas Tote",
+      "date": "2026-08-22",
+      "description": "Creative Academy Class \u2014 Carry your style wherever you go. Design and decorate your own tote bag using fabric markers, patches, and creative techniques. You\u2019ll leave with a one-of-a-kind piece that\u2019s both practical and personal. Enjoy a refreshing lemonade bar as you craft and create. Reserve Now Vi",
+      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-artists-design-your-own-canvas-tote",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Food and Beverage",
+        "Arts"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/M6VIi7QFB0uSJPEYXmG0XQ.large.png",
+      "venue_name": "Deer Valley Plaza Building",
+      "address": "1375 Deer Valley Dr S",
+      "filter_categories": [
+        "Arts & Theater",
+        "Food & Drink"
+      ],
+      "_distance_mi": 9.6
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-08-22",
+      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.526638,
+      "lng": -111.462471,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107068",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
+      "date_label": "Daily, Mon - Sat, 11:00 AM",
+      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 2.9
+    },
+    {
+      "title": "Midway Art Gallery Open House",
+      "date": "2026-08-22",
+      "description": "Midway Art Gallery Open House in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/midway-art-gallery-open-house",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5123009,
+      "lng": -111.4749619,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.108538",
+      "start_time": "1:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749910.jpg?decache=27-04-36",
+      "date_label": "Fri & Sat, 10:00 AM - 5:00 PM",
+      "recurrence_text": "Every Friday and Saturday, 10:00 AM - 5:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 3.3
+    },
+    {
+      "title": "Ritual Chocolate Public Tour and Mini Tasting",
+      "date": "2026-08-22",
+      "description": "Ritual Chocolate Public Tour and Mini Tasting in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/ritual-chocolate-tour-and-tasting",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.470847,
+      "lng": -111.449884,
+      "categories": [
+        "Food & Drink"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.108914",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3120729.jpg?decache=27-04-36",
+      "date_label": "Fri @ 11 AM, Sat @ 1 PM",
+      "recurrence_text": "Every Friday at 11 AM and Saturday at 1 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.1
+    },
+    {
+      "title": "Live Music @ Caf\u00e9 Galleria",
+      "date": "2026-08-22",
+      "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/live-music-at-cafe-galleria",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.512205,
+      "lng": -111.474441,
+      "categories": [
+        "Music"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.109724",
+      "start_time": "5:30 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=27-04-36",
+      "date_label": "May - Oct (weather permitting), dates & times vary",
+      "end_date": null,
+      "recurrence_text": "Most days of the week, May-October (weather permitting), primarily Fridays at 5:30 PM, Saturdays at 5:30 PM, and Sundays at 10:30 AM",
+      "filter_categories": [
+        "Music"
+      ],
+      "_distance_mi": 3.2
+    },
+    {
+      "title": "Commemorative Air Force Museum Tours",
+      "date": "2026-08-22",
+      "description": "Commemorative Air Force Museum Tours in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/air-force-museum",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Arts"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.110669",
+      "start_time": "10:00 AM",
+      "end_time": "4:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725246.jpg?decache=27-04-36",
+      "date_label": "Sat, 10:00 AM - 4:00 PM ",
+      "recurrence_text": "Every Saturday, 10:00 AM - 4:00 PM, from May 30 through September 5, 2026",
+      "end_date": null,
+      "filter_categories": [
+        "Arts & Theater"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
+      "date": "2026-08-22",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.503369,
+      "lng": -111.4136475,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.111646",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=27-04-36",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "end_date": null,
+      "recurrence_text": "Every Saturday from May through September, 7:00-8:30 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.2
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-08-23",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Uncork and Create",
+      "date": "2026-08-23",
+      "description": "Creative Academy Class \u2014 Unwind with a glass of wine and explore the art of glass design in this relaxed, hands-on class led by local Park City artist Emily Miquelon. Create your own unique piece in a welcoming, inspiring setting. This is a 21+ class. Reserve Now View Classes",
+      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-uncork-and-create",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/bVPMnUFnMU2diAObjF9D3w.large.png",
+      "venue_name": "Deer Valley Plaza Building",
+      "address": "1375 Deer Valley Dr S",
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 9.6
+    },
+    {
+      "title": "Live Music @ Caf\u00e9 Galleria",
+      "date": "2026-08-23",
+      "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/live-music-at-cafe-galleria",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.512205,
+      "lng": -111.474441,
+      "categories": [
+        "Music"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.109724",
+      "start_time": "5:30 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=27-04-36",
+      "date_label": "May - Oct (weather permitting), dates & times vary",
+      "end_date": null,
+      "recurrence_text": "Most days of the week, May-October (weather permitting), primarily Fridays at 5:30 PM, Saturdays at 5:30 PM, and Sundays at 10:30 AM",
+      "filter_categories": [
+        "Music"
+      ],
+      "_distance_mi": 3.2
+    },
+    {
+      "title": "Soulful Music Sundays @ Heber City Park",
+      "date": "2026-08-23",
+      "description": "Soulful Music Sundays @ Heber City Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/soulful-sundays-at-heber-city-park",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.112241",
+      "start_time": "7:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=27-04-36",
+      "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
+      "end_date": null,
+      "recurrence_text": "Every Sunday from June through August",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Free Yoga on the Lawn @ Heber City Park",
+      "date": "2026-08-23",
+      "description": "Free Yoga on the Lawn @ Heber City Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-yoga-on-the-lawn",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Wellness"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.120094",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=27-04-36",
+      "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
+      "end_date": null,
+      "recurrence_text": "Every Sunday from June through early September, 9:00-10:00 AM",
+      "facets": [
+        "Free"
+      ],
+      "filter_categories": [
+        "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Monday Night Train @ Heber Valley Railroad",
+      "date": "2026-08-24",
+      "description": "Monday Night Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/monday-night-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022517,
+      "lng": -111.424503,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.112587",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728189.jpg?decache=27-04-36",
+      "date_label": "Weekly, Mon nights @ 7:00 PM",
+      "end_date": null,
+      "recurrence_text": "Weekly, Monday nights at 7:00 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.7
+    },
+    {
+      "title": "Cornhole @ Wallsburg Town Hall",
+      "date": "2026-08-25",
+      "description": "Cornhole @ Wallsburg Town Hall in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wallsburg-cornhole-night",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.113458",
+      "start_time": "7:00 PM",
+      "end_time": "9:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=27-04-36",
+      "date_label": "Tue, 7:00 - 9:00 PM",
+      "end_date": null,
+      "recurrence_text": "Every Tuesday, 7:00-9:00 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Country Swing & Line Dancing @ The Sycamore Building",
+      "date": "2026-08-25",
+      "description": "Country Swing & Line Dancing @ The Sycamore Building in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/swing-dance-at-sycamore",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.506961,
+      "lng": -111.4133863,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.121446",
+      "start_time": "8:00 PM",
+      "end_time": "11:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3176611.jpg?decache=27-04-36",
+      "date_label": "Every 2nd and 4th Tue, 8:00 PM - 11:00PM",
+      "recurrence_text": "Every 2nd and 4th Tuesday of the month",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Open Art Studio Night @ Alchemy Art Studio",
+      "date": "2026-08-26",
+      "description": "Open Art Studio Night @ Alchemy Art Studio in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/alchemy-art-open-studio",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.107621",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=27-04-36",
+      "date_label": "Wed, 6:00 - 8:00 PM",
+      "recurrence_text": "Every Wednesday, 6:00-8:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
     },
     {
       "title": "Live Music at Silver Lake",
@@ -14971,6 +16523,215 @@
     },
     {
       "title": "Live Music at Silver Lake",
+      "date": "2026-08-30",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082826",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Cooking with Precision: A Sous Vide Workshop",
+      "date": "2026-08-30",
+      "description": "Discover the art of precision cooking in this hands-on sous vide workshop. Learn to prepare meats, seafood, and vegetables to perfect doneness with consistent, restaurant-quality results. We'll cover seasoning, sealing, temperature control, safety, and finishing techniques so you can confidently bring this modern method into your own kitchen.",
+      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-sous-vide-workshop",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/ISc72ygVMkmMcwpb1cDwGw.large.png",
+      "venue_name": "Deer Valley Plaza Building",
+      "address": "1375 Deer Valley Dr S",
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 9.6
+    },
+    {
+      "title": "Wasatch Boomerfest Music Festival",
+      "date": "2026-08-30",
+      "description": "Wasatch Boomerfest Music Festival in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wasatch-boomerfest",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.384913,
+      "lng": -111.40169,
+      "categories": [
+        "Festival"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.165498",
+      "start_time": "10:00 AM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=27-04-36",
+      "date_label": "Aug 28 - 30",
+      "end_date": null,
+      "filter_categories": [
+        "Festivals"
+      ],
+      "_distance_mi": 8.5
+    },
+    {
+      "title": "Angie Petty",
+      "date": "2026-09-01",
+      "description": "Hidden Ace",
+      "location": "Hidden Ace, Park City, UT",
+      "link": "https://www.bandsintown.com/e/108206326?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "lat": 40.6206231,
+      "lng": -111.4419276,
+      "categories": [
+        "Community"
+      ],
+      "start_time": "8:00 PM",
+      "end_time": "",
+      "scraped_at": "2026-05-27T21:08:32.384317",
+      "venue_name": "Hidden Ace",
+      "address": "1702 Glencoe Mountain Wy",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 8.0
+    },
+    {
+      "title": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools",
+      "date": "2026-09-02",
+      "description": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/sept-business-university",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.545359,
+      "lng": -111.413593,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.168093",
+      "start_time": "11:30 PM",
+      "end_time": "1:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-04-36",
+      "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 2.7
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-04",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-090426",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Midway Swiss Days Festival",
+      "date": "2026-09-04",
+      "description": "Midway Swiss Days Festival in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/swiss-days-festival-event",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.512205,
+      "lng": -111.474441,
+      "categories": [
+        "Community",
+        "Family",
+        "Festival",
+        "Sports"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.168437",
+      "start_time": "8:00 AM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=27-04-36",
+      "date_label": "Sep 4-5, 8:00 AM - 8:00 PM",
+      "end_date": null,
+      "address": "200 W Main Street Midway, Utah 84049",
+      "venue_name": "Midway Town Square",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism"
+      ],
+      "filter_categories": [
+        "Community",
+        "Family & Kids",
+        "Festivals",
+        "Sports"
+      ],
+      "_distance_mi": 3.2
+    },
+    {
+      "title": "Hobo Train @ Heber Valley Railroad",
+      "date": "2026-09-04",
+      "description": "Hobo Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/hobo-days-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022051,
+      "lng": -111.4245238,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.168792",
+      "start_time": "7:00 PM",
+      "end_time": "9:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178906.jpg?decache=27-04-36",
+      "date_label": "7:00 - 9:30 PM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.7
+    },
+    {
+      "title": "Live Music at Silver Lake",
       "date": "2026-09-05",
       "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
       "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
@@ -15019,6 +16780,201 @@
         "Festivals"
       ],
       "_distance_mi": 3.2
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-06",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-090426",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Angie Petty",
+      "date": "2026-09-10",
+      "description": "Hidden Ace",
+      "location": "Hidden Ace, Park City, UT",
+      "link": "https://www.bandsintown.com/e/108206329?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "lat": 40.6206231,
+      "lng": -111.4419276,
+      "categories": [
+        "Community"
+      ],
+      "start_time": "8:00 PM",
+      "end_time": "",
+      "scraped_at": "2026-05-27T21:08:33.856005",
+      "venue_name": "Hidden Ace",
+      "address": "1702 Glencoe Mountain Wy",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 8.0
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-11",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Utah Barrel Race",
+      "date": "2026-09-11",
+      "description": "Utah Barrel Race in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/ubra-futurity-race",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4886915,
+      "lng": -111.4335895,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.170612",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=27-04-36",
+      "date_label": "Apr 17 - 19, Sep 11 - 13",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 1.6
+    },
+    {
+      "title": "MAMELE MOUNTAINS",
+      "date": "2026-09-11",
+      "end_date": null,
+      "location": "Midway, UT",
+      "venue_name": "Midway",
+      "link": "https://runsignup.com/Race/UT/Midway/MAMELEMOUNTAINS",
+      "source": "RunSignup",
+      "source_url": "https://runsignup.com/Rest/races",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "city": "Heber City, UT",
+      "categories": [
+        "Running & Races"
+      ],
+      "is_free": false,
+      "filter_categories": [
+        "Running & Races"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-12",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Utah Barrel Race",
+      "date": "2026-09-12",
+      "description": "Utah Barrel Race in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/ubra-futurity-race",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4886915,
+      "lng": -111.4335895,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-27T16:36:37.170612",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=27-04-36",
+      "date_label": "Apr 17 - 19, Sep 11 - 13",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 1.6
+    },
+    {
+      "title": "MAMELE MOUNTAINS",
+      "date": "2026-09-12",
+      "end_date": null,
+      "location": "Midway, UT",
+      "venue_name": "Midway",
+      "link": "https://runsignup.com/Race/UT/Midway/MAMELEMOUNTAINS",
+      "source": "RunSignup",
+      "source_url": "https://runsignup.com/Rest/races",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "city": "Heber City, UT",
+      "categories": [
+        "Running & Races"
+      ],
+      "is_free": false,
+      "filter_categories": [
+        "Running & Races"
+      ],
+      "_distance_mi": 0.0
     },
     {
       "title": "Live Music at Silver Lake",
@@ -15096,722 +17052,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Twilight Ride Series",
-      "date": "2026-08-12",
-      "description": "Experience the magic of the mountain at dusk this summer with our Twilight Ride Series! Join us every Wednesday, from June 24 to August 19, weather and conditions permitting, for lift-served mountain biking from 4 to 8 p.m. Take the Silver Lake Express, Homestake Express, or Sterling Express chairlifts and explore the trails in the evening glow.",
-      "location": "On Mountain, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/twilight-ride-series-081226",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "4:00 PM",
-      "end_time": "8:00 PM",
-      "lat": 40.6285,
-      "lng": -111.482,
-      "categories": [
-        "Mountain Biking",
-        "Community"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
-      "venue_name": "Snow Park Lodge",
-      "address": "2250 Deer Valley Dr S",
-      "filter_categories": [
-        "Community",
-        "Outdoors"
-      ],
-      "_distance_mi": 9.1
-    },
-    {
-      "title": "Wednesday Morning Storytime @ Folklore Bookshop",
-      "date": "2026-08-12",
-      "description": "Wednesday Morning Storytime @ Folklore Bookshop in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/folklore-bookshop-morning-storytime",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5130188,
-      "lng": -111.4766298,
-      "categories": [
-        "Kids",
-        "Education"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.106854",
-      "start_time": "10:30 AM",
-      "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=27-04-36",
-      "date_label": "Wed, 10:30 - 11:00 AM",
-      "recurrence_text": "Every Wednesday at 10:30 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Education & Talks",
-        "Family & Kids"
-      ],
-      "_distance_mi": 3.4
-    },
-    {
-      "title": "Meet the Cows - Dairy Farm Tour",
-      "date": "2026-08-12",
-      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/dairy-farm-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.526638,
-      "lng": -111.462471,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107068",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
-      "date_label": "Daily, Mon - Sat, 11:00 AM",
-      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Heber Midday Wednesday Ride @ Southfield Park",
-      "date": "2026-08-12",
-      "description": "Heber Midday Wednesday Ride @ Southfield Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-midday-ride",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107261",
-      "start_time": "12:00 PM",
-      "end_time": "1:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187352.jpg?decache=27-04-36",
-      "date_label": "Wed, 12:00 - 1:30 PM",
-      "recurrence_text": "Every Wednesday at 12:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Open Art Studio Night @ Alchemy Art Studio",
-      "date": "2026-08-12",
-      "description": "Open Art Studio Night @ Alchemy Art Studio in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/alchemy-art-open-studio",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107621",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=27-04-36",
-      "date_label": "Wed, 6:00 - 8:00 PM",
-      "recurrence_text": "Every Wednesday, 6:00-8:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Midway Music on the Square",
-      "date": "2026-08-12",
-      "description": "Midway Music on the Square in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/midway-music-on-the-square",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5133349,
-      "lng": -111.4743764,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.122226",
-      "start_time": "6:30 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=27-04-36",
-      "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
-      "end_date": null,
-      "recurrence_text": "Every Wednesday from June 10 to August 12, 6:30-8:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 3.2
-    },
-    {
-      "title": "Donuts with the Director",
-      "date": "2026-08-12",
-      "description": "Donuts with the Director in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/donuts-with-the-director",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5138203,
-      "lng": -111.4135167,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.160090",
-      "start_time": "8:30 AM",
-      "end_time": "9:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=27-04-36",
-      "date_label": "Heber Valley Visitor Center, 8:30 - 9:30 AM",
-      "recurrence_text": "Every other month on the second Wednesday at 8:30 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.5
-    },
-    {
-      "title": "Twilight Ride Series",
-      "date": "2026-08-19",
-      "description": "Experience the magic of the mountain at dusk this summer with our Twilight Ride Series! Join us every Wednesday, from June 24 to August 19, weather and conditions permitting, for lift-served mountain biking from 4 to 8 p.m. Take the Silver Lake Express, Homestake Express, or Sterling Express chairlifts and explore the trails in the evening glow.",
-      "location": "On Mountain, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/twilight-ride-series-081926",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "4:00 PM",
-      "end_time": "8:00 PM",
-      "lat": 40.6285,
-      "lng": -111.482,
-      "categories": [
-        "Mountain Biking",
-        "Community"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
-      "venue_name": "Snow Park Lodge",
-      "address": "2250 Deer Valley Dr S",
-      "filter_categories": [
-        "Community",
-        "Outdoors"
-      ],
-      "_distance_mi": 9.1
-    },
-    {
-      "title": "Wednesday Morning Storytime @ Folklore Bookshop",
-      "date": "2026-08-19",
-      "description": "Wednesday Morning Storytime @ Folklore Bookshop in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/folklore-bookshop-morning-storytime",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5130188,
-      "lng": -111.4766298,
-      "categories": [
-        "Kids",
-        "Education"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.106854",
-      "start_time": "10:30 AM",
-      "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=27-04-36",
-      "date_label": "Wed, 10:30 - 11:00 AM",
-      "recurrence_text": "Every Wednesday at 10:30 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Education & Talks",
-        "Family & Kids"
-      ],
-      "_distance_mi": 3.4
-    },
-    {
-      "title": "Meet the Cows - Dairy Farm Tour",
-      "date": "2026-08-19",
-      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/dairy-farm-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.526638,
-      "lng": -111.462471,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107068",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
-      "date_label": "Daily, Mon - Sat, 11:00 AM",
-      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Heber Midday Wednesday Ride @ Southfield Park",
-      "date": "2026-08-19",
-      "description": "Heber Midday Wednesday Ride @ Southfield Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-midday-ride",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107261",
-      "start_time": "12:00 PM",
-      "end_time": "1:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187352.jpg?decache=27-04-36",
-      "date_label": "Wed, 12:00 - 1:30 PM",
-      "recurrence_text": "Every Wednesday at 12:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Open Art Studio Night @ Alchemy Art Studio",
-      "date": "2026-08-19",
-      "description": "Open Art Studio Night @ Alchemy Art Studio in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/alchemy-art-open-studio",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107621",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=27-04-36",
-      "date_label": "Wed, 6:00 - 8:00 PM",
-      "recurrence_text": "Every Wednesday, 6:00-8:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Wasatch County Council Monthly Meetings",
-      "date": "2026-08-19",
-      "description": "Wasatch County Council Monthly Meetings in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wasatch-county-council-meetings",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5080939,
-      "lng": -111.4138681,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.114498",
-      "start_time": "4:00 PM",
-      "end_time": "6:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750551.jpg?decache=27-04-36",
-      "date_label": "1st & 3rd Wed monthly, 4:00 PM",
-      "recurrence_text": "First and third Wednesdays of each month",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.1
-    },
-    {
-      "title": "Open Art Studio Night @ Alchemy Art Studio",
-      "date": "2026-08-26",
-      "description": "Open Art Studio Night @ Alchemy Art Studio in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/alchemy-art-open-studio",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107621",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=27-04-36",
-      "date_label": "Wed, 6:00 - 8:00 PM",
-      "recurrence_text": "Every Wednesday, 6:00-8:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-08-16",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-081426",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "\"Little Chefs\" Culinary Series: Cookie Decorating",
-      "date": "2026-08-16",
-      "description": "In this hands-on class, kids will learn how to decorate cookies with colorful frosting, sprinkles, and fun techniques. Each young baker will take home a Deer Valley logo apron and chef hat to show off their new skills, along with their cookie creations. Perfect for little chefs who love to get creative \\(and a little messy\\) in the kitchen!",
-      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-chefs-cookie-decorating",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "3:30 PM",
-      "end_time": "5:00 PM",
-      "lat": 40.6374,
-      "lng": -111.4783,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Za4d-qNgF0yJKXhpNtGi9g.large.png",
-      "venue_name": "Deer Valley Plaza Building",
-      "address": "1375 Deer Valley Dr S",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 9.6
-    },
-    {
-      "title": "Guided Historical Hike",
-      "date": "2026-08-16",
-      "description": "Step into Park City's past on a guided hike through Deer Valley's scenic terrain, where fresh mountain air meets stories of the area's rich mining history. This three- to four-hour hike covers moderate terrain, typically under six miles, as guests hike around Empire. Meet at the Mid-Mountain Trailhead on Marsac Ave, above the Montage, for an 8:30 a.m. departure.",
-      "location": "On Mountain, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/guided-historical-hike-081626",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "8:30 AM",
-      "end_time": "12:30 PM",
-      "lat": 40.6285,
-      "lng": -111.482,
-      "categories": [
-        "Hiking",
-        "Outdoor"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/vOjzxbkya0KTZPyFQXH3MQ.large.png",
-      "venue_name": "Snow Park Lodge",
-      "address": "2250 Deer Valley Dr S",
-      "filter_categories": [
-        "Outdoors"
-      ],
-      "_distance_mi": 9.1
-    },
-    {
-      "title": "Live Music @ Caf\u00e9 Galleria",
-      "date": "2026-08-16",
-      "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/live-music-at-cafe-galleria",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.512205,
-      "lng": -111.474441,
-      "categories": [
-        "Music"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.109724",
-      "start_time": "5:30 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=27-04-36",
-      "date_label": "May - Oct (weather permitting), dates & times vary",
-      "end_date": null,
-      "recurrence_text": "Most days of the week, May-October (weather permitting), primarily Fridays at 5:30 PM, Saturdays at 5:30 PM, and Sundays at 10:30 AM",
-      "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 3.2
-    },
-    {
-      "title": "Soulful Music Sundays @ Heber City Park",
-      "date": "2026-08-16",
-      "description": "Soulful Music Sundays @ Heber City Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/soulful-sundays-at-heber-city-park",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.112241",
-      "start_time": "7:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=27-04-36",
-      "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
-      "end_date": null,
-      "recurrence_text": "Every Sunday from June through August",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Free Yoga on the Lawn @ Heber City Park",
-      "date": "2026-08-16",
-      "description": "Free Yoga on the Lawn @ Heber City Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-yoga-on-the-lawn",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Wellness"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.120094",
-      "start_time": "9:00 AM",
-      "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=27-04-36",
-      "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
-      "end_date": null,
-      "recurrence_text": "Every Sunday from June through early September, 9:00-10:00 AM",
-      "facets": [
-        "Free"
-      ],
-      "filter_categories": [
-        "Wellness"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-08-23",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Uncork and Create",
-      "date": "2026-08-23",
-      "description": "Creative Academy Class \u2014 Unwind with a glass of wine and explore the art of glass design in this relaxed, hands-on class led by local Park City artist Emily Miquelon. Create your own unique piece in a welcoming, inspiring setting. This is a 21+ class. Reserve Now View Classes",
-      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-uncork-and-create",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "3:30 PM",
-      "end_time": "5:00 PM",
-      "lat": 40.6374,
-      "lng": -111.4783,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/bVPMnUFnMU2diAObjF9D3w.large.png",
-      "venue_name": "Deer Valley Plaza Building",
-      "address": "1375 Deer Valley Dr S",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 9.6
-    },
-    {
-      "title": "Live Music @ Caf\u00e9 Galleria",
-      "date": "2026-08-23",
-      "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/live-music-at-cafe-galleria",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.512205,
-      "lng": -111.474441,
-      "categories": [
-        "Music"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.109724",
-      "start_time": "5:30 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=27-04-36",
-      "date_label": "May - Oct (weather permitting), dates & times vary",
-      "end_date": null,
-      "recurrence_text": "Most days of the week, May-October (weather permitting), primarily Fridays at 5:30 PM, Saturdays at 5:30 PM, and Sundays at 10:30 AM",
-      "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 3.2
-    },
-    {
-      "title": "Soulful Music Sundays @ Heber City Park",
-      "date": "2026-08-23",
-      "description": "Soulful Music Sundays @ Heber City Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/soulful-sundays-at-heber-city-park",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.112241",
-      "start_time": "7:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=27-04-36",
-      "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
-      "end_date": null,
-      "recurrence_text": "Every Sunday from June through August",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Free Yoga on the Lawn @ Heber City Park",
-      "date": "2026-08-23",
-      "description": "Free Yoga on the Lawn @ Heber City Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-yoga-on-the-lawn",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Wellness"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.120094",
-      "start_time": "9:00 AM",
-      "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=27-04-36",
-      "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
-      "end_date": null,
-      "recurrence_text": "Every Sunday from June through early September, 9:00-10:00 AM",
-      "facets": [
-        "Free"
-      ],
-      "filter_categories": [
-        "Wellness"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-08-30",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082826",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Cooking with Precision: A Sous Vide Workshop",
-      "date": "2026-08-30",
-      "description": "Discover the art of precision cooking in this hands-on sous vide workshop. Learn to prepare meats, seafood, and vegetables to perfect doneness with consistent, restaurant-quality results. We'll cover seasoning, sealing, temperature control, safety, and finishing techniques so you can confidently bring this modern method into your own kitchen.",
-      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-sous-vide-workshop",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "3:30 PM",
-      "end_time": "5:00 PM",
-      "lat": 40.6374,
-      "lng": -111.4783,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/ISc72ygVMkmMcwpb1cDwGw.large.png",
-      "venue_name": "Deer Valley Plaza Building",
-      "address": "1375 Deer Valley Dr S",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 9.6
-    },
-    {
-      "title": "Wasatch Boomerfest Music Festival",
-      "date": "2026-08-30",
-      "description": "Wasatch Boomerfest Music Festival in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wasatch-boomerfest",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.384913,
-      "lng": -111.40169,
-      "categories": [
-        "Festival"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.165498",
-      "start_time": "10:00 AM",
-      "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=27-04-36",
-      "date_label": "Aug 28 - 30",
-      "end_date": null,
-      "filter_categories": [
-        "Festivals"
-      ],
-      "_distance_mi": 8.5
-    },
-    {
       "title": "Wasatch EuroFest Car Show",
       "date": "2026-09-26",
       "description": "Wasatch EuroFest Car Show in Heber Valley.",
@@ -15866,208 +17106,6 @@
         "Sports"
       ],
       "_distance_mi": 4.7
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-08-22",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "\"Little Artists\" Series: Design Your Own Canvas Tote",
-      "date": "2026-08-22",
-      "description": "Creative Academy Class \u2014 Carry your style wherever you go. Design and decorate your own tote bag using fabric markers, patches, and creative techniques. You\u2019ll leave with a one-of-a-kind piece that\u2019s both practical and personal. Enjoy a refreshing lemonade bar as you craft and create. Reserve Now Vi",
-      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-artists-design-your-own-canvas-tote",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "3:30 PM",
-      "end_time": "5:00 PM",
-      "lat": 40.6374,
-      "lng": -111.4783,
-      "categories": [
-        "Food and Beverage",
-        "Arts"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/M6VIi7QFB0uSJPEYXmG0XQ.large.png",
-      "venue_name": "Deer Valley Plaza Building",
-      "address": "1375 Deer Valley Dr S",
-      "filter_categories": [
-        "Arts & Theater",
-        "Food & Drink"
-      ],
-      "_distance_mi": 9.6
-    },
-    {
-      "title": "Meet the Cows - Dairy Farm Tour",
-      "date": "2026-08-22",
-      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/dairy-farm-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.526638,
-      "lng": -111.462471,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107068",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
-      "date_label": "Daily, Mon - Sat, 11:00 AM",
-      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Midway Art Gallery Open House",
-      "date": "2026-08-22",
-      "description": "Midway Art Gallery Open House in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/midway-art-gallery-open-house",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5123009,
-      "lng": -111.4749619,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.108538",
-      "start_time": "1:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749910.jpg?decache=27-04-36",
-      "date_label": "Fri & Sat, 10:00 AM - 5:00 PM",
-      "recurrence_text": "Every Friday and Saturday, 10:00 AM - 5:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 3.3
-    },
-    {
-      "title": "Ritual Chocolate Public Tour and Mini Tasting",
-      "date": "2026-08-22",
-      "description": "Ritual Chocolate Public Tour and Mini Tasting in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/ritual-chocolate-tour-and-tasting",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.470847,
-      "lng": -111.449884,
-      "categories": [
-        "Food & Drink"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.108914",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3120729.jpg?decache=27-04-36",
-      "date_label": "Fri @ 11 AM, Sat @ 1 PM",
-      "recurrence_text": "Every Friday at 11 AM and Saturday at 1 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Food & Drink"
-      ],
-      "_distance_mi": 3.1
-    },
-    {
-      "title": "Live Music @ Caf\u00e9 Galleria",
-      "date": "2026-08-22",
-      "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/live-music-at-cafe-galleria",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.512205,
-      "lng": -111.474441,
-      "categories": [
-        "Music"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.109724",
-      "start_time": "5:30 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=27-04-36",
-      "date_label": "May - Oct (weather permitting), dates & times vary",
-      "end_date": null,
-      "recurrence_text": "Most days of the week, May-October (weather permitting), primarily Fridays at 5:30 PM, Saturdays at 5:30 PM, and Sundays at 10:30 AM",
-      "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 3.2
-    },
-    {
-      "title": "Commemorative Air Force Museum Tours",
-      "date": "2026-08-22",
-      "description": "Commemorative Air Force Museum Tours in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/air-force-museum",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Arts"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.110669",
-      "start_time": "10:00 AM",
-      "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725246.jpg?decache=27-04-36",
-      "date_label": "Sat, 10:00 AM - 4:00 PM ",
-      "recurrence_text": "Every Saturday, 10:00 AM - 4:00 PM, from May 30 through September 5, 2026",
-      "end_date": null,
-      "filter_categories": [
-        "Arts & Theater"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
-      "date": "2026-08-22",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.503369,
-      "lng": -111.4136475,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.111646",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=27-04-36",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "end_date": null,
-      "recurrence_text": "Every Saturday from May through September, 7:00-8:30 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.2
     },
     {
       "title": "Live Music at Silver Lake",
@@ -16196,119 +17234,6 @@
       "_distance_mi": 1.6
     },
     {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-04",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-090426",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Midway Swiss Days Festival",
-      "date": "2026-09-04",
-      "description": "Midway Swiss Days Festival in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/swiss-days-festival-event",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.512205,
-      "lng": -111.474441,
-      "categories": [
-        "Community",
-        "Family",
-        "Festival",
-        "Sports"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.168437",
-      "start_time": "8:00 AM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=27-04-36",
-      "date_label": "Sep 4-5, 8:00 AM - 8:00 PM",
-      "end_date": null,
-      "address": "200 W Main Street Midway, Utah 84049",
-      "venue_name": "Midway Town Square",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
-        "Festivals",
-        "Sports"
-      ],
-      "_distance_mi": 3.2
-    },
-    {
-      "title": "Hobo Train @ Heber Valley Railroad",
-      "date": "2026-09-04",
-      "description": "Hobo Train @ Heber Valley Railroad in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/hobo-days-train",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5022051,
-      "lng": -111.4245238,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.168792",
-      "start_time": "7:00 PM",
-      "end_time": "9:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178906.jpg?decache=27-04-36",
-      "date_label": "7:00 - 9:30 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.7
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-06",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-090426",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
       "title": "Plein Air Rendezvous",
       "date": "2026-09-16",
       "description": "Plein Air Rendezvous in Heber Valley.",
@@ -16331,380 +17256,6 @@
         "Community"
       ],
       "_distance_mi": 3.3
-    },
-    {
-      "title": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools",
-      "date": "2026-09-02",
-      "description": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/sept-business-university",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.545359,
-      "lng": -111.413593,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.168093",
-      "start_time": "11:30 PM",
-      "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=27-04-36",
-      "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.7
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-12",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Utah Barrel Race",
-      "date": "2026-09-12",
-      "description": "Utah Barrel Race in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/ubra-futurity-race",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.4886915,
-      "lng": -111.4335895,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.170612",
-      "start_time": "10:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=27-04-36",
-      "date_label": "Apr 17 - 19, Sep 11 - 13",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 1.6
-    },
-    {
-      "title": "MAMELE MOUNTAINS",
-      "date": "2026-09-12",
-      "end_date": null,
-      "location": "Midway, UT",
-      "venue_name": "Midway",
-      "link": "https://runsignup.com/Race/UT/Midway/MAMELEMOUNTAINS",
-      "source": "RunSignup",
-      "source_url": "https://runsignup.com/Rest/races",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "city": "Heber City, UT",
-      "categories": [
-        "Running & Races"
-      ],
-      "is_free": false,
-      "filter_categories": [
-        "Running & Races"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Famous Film Music",
-      "date": "2026-08-13",
-      "description": "From the back of a dragon high in the sky to galaxies far, far away, the Utah Symphony brings unforgettable film scores to life under the open stars at the Deer Valley\u00ae Music Festival. With music from Pirates of the Caribbean, Mission: Impossible, How to Train Your Dragon, Disney classics like Beauty and the Beast, and more, these melodies bring back memories of the moments you first heard them\u2014reimagined live in a night of adventure, heart, and emotion.",
-      "location": "Snow Park Outdoor Amphitheater, 2250 Deer Valley Dr S #501, Park City, UT 84060, USA",
-      "link": "https://www.deervalley.com/things-to-do/events/deer-valley-music-festival-famous-film-music-081326",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "6:00 PM",
-      "end_time": "10:30 PM",
-      "lat": 40.6374,
-      "lng": -111.4783,
-      "categories": [
-        "Music",
-        "Concert",
-        "Outdoor"
-      ],
-      "image_url": "https://usuo.org/app/uploads/2026/04/DVMF7-Famous-Film-Music.jpg",
-      "venue_name": "Deer Valley Ski Resort Main Base",
-      "address": "2250 Deer Valley Dr S",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "_distance_mi": 9.6
-    },
-    {
-      "title": "Meet the Cows - Dairy Farm Tour",
-      "date": "2026-08-13",
-      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/dairy-farm-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.526638,
-      "lng": -111.462471,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107068",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
-      "date_label": "Daily, Mon - Sat, 11:00 AM",
-      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
-      "date": "2026-08-13",
-      "description": "Free Yoga for Ages 55+ @ Wasatch County Library in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/yoga-free-gentle-community-yoga-practice-ages-55",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.4927462,
-      "lng": -111.3613658,
-      "categories": [
-        "Wellness"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.108180",
-      "start_time": "9:00 AM",
-      "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748467.jpg?decache=27-04-36",
-      "date_label": "Weekly, Thu mornings",
-      "recurrence_text": "Weekly Thursday mornings, 9:00-10:00 AM, from May 28, 2026 through December 31, 2026",
-      "facets": [
-        "Free"
-      ],
-      "end_date": null,
-      "filter_categories": [
-        "Wellness"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Heber Market on Main",
-      "date": "2026-08-13",
-      "description": "Heber Market on Main in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-market-on-main",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.504355,
-      "lng": -111.413598,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.115555",
-      "start_time": "5:00 PM",
-      "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=27-04-36",
-      "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
-      "end_date": null,
-      "recurrence_text": "Weekly, Thursday nights, June 4 - August 20",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-11",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Utah Barrel Race",
-      "date": "2026-09-11",
-      "description": "Utah Barrel Race in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/ubra-futurity-race",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.4886915,
-      "lng": -111.4335895,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.170612",
-      "start_time": "10:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=27-04-36",
-      "date_label": "Apr 17 - 19, Sep 11 - 13",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 1.6
-    },
-    {
-      "title": "MAMELE MOUNTAINS",
-      "date": "2026-09-11",
-      "end_date": null,
-      "location": "Midway, UT",
-      "venue_name": "Midway",
-      "link": "https://runsignup.com/Race/UT/Midway/MAMELEMOUNTAINS",
-      "source": "RunSignup",
-      "source_url": "https://runsignup.com/Rest/races",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "city": "Heber City, UT",
-      "categories": [
-        "Running & Races"
-      ],
-      "is_free": false,
-      "filter_categories": [
-        "Running & Races"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Meet the Cows - Dairy Farm Tour",
-      "date": "2026-08-20",
-      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/dairy-farm-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.526638,
-      "lng": -111.462471,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107068",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
-      "date_label": "Daily, Mon - Sat, 11:00 AM",
-      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
-      "date": "2026-08-20",
-      "description": "Free Yoga for Ages 55+ @ Wasatch County Library in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/yoga-free-gentle-community-yoga-practice-ages-55",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.4927462,
-      "lng": -111.3613658,
-      "categories": [
-        "Wellness"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.108180",
-      "start_time": "9:00 AM",
-      "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748467.jpg?decache=27-04-36",
-      "date_label": "Weekly, Thu mornings",
-      "recurrence_text": "Weekly Thursday mornings, 9:00-10:00 AM, from May 28, 2026 through December 31, 2026",
-      "facets": [
-        "Free"
-      ],
-      "end_date": null,
-      "filter_categories": [
-        "Wellness"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Heber Market on Main",
-      "date": "2026-08-20",
-      "description": "Heber Market on Main in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-market-on-main",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.504355,
-      "lng": -111.413598,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.115555",
-      "start_time": "5:00 PM",
-      "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=27-04-36",
-      "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
-      "end_date": null,
-      "recurrence_text": "Weekly, Thursday nights, June 4 - August 20",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Tween Book Club @ Folklore Bookshop",
-      "date": "2026-08-20",
-      "description": "Tween Book Club @ Folklore Bookshop in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/folklore-bookshop-tween-book-club",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Education"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.129341",
-      "start_time": "6:30 PM",
-      "end_time": "7:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3154262.jpg?decache=27-04-36",
-      "date_label": "6:30 - 7:30 PM",
-      "recurrence_text": "Third Thursday of the month",
-      "end_date": null,
-      "filter_categories": [
-        "Education & Talks"
-      ],
-      "_distance_mi": 0.0
     },
     {
       "title": "Live Music at Silver Lake",
@@ -16758,526 +17309,6 @@
       "_distance_mi": 3.3
     },
     {
-      "title": "Monday Night Train @ Heber Valley Railroad",
-      "date": "2026-08-10",
-      "description": "Monday Night Train @ Heber Valley Railroad in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/monday-night-train",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5022517,
-      "lng": -111.424503,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.112587",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728189.jpg?decache=27-04-36",
-      "date_label": "Weekly, Mon nights @ 7:00 PM",
-      "end_date": null,
-      "recurrence_text": "Weekly, Monday nights at 7:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.7
-    },
-    {
-      "title": "Monday Night Train @ Heber Valley Railroad",
-      "date": "2026-08-24",
-      "description": "Monday Night Train @ Heber Valley Railroad in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/monday-night-train",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5022517,
-      "lng": -111.424503,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.112587",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728189.jpg?decache=27-04-36",
-      "date_label": "Weekly, Mon nights @ 7:00 PM",
-      "end_date": null,
-      "recurrence_text": "Weekly, Monday nights at 7:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.7
-    },
-    {
-      "title": "Monday Night Train @ Heber Valley Railroad",
-      "date": "2026-08-17",
-      "description": "Monday Night Train @ Heber Valley Railroad in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/monday-night-train",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5022517,
-      "lng": -111.424503,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.112587",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728189.jpg?decache=27-04-36",
-      "date_label": "Weekly, Mon nights @ 7:00 PM",
-      "end_date": null,
-      "recurrence_text": "Weekly, Monday nights at 7:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.7
-    },
-    {
-      "title": "Meet the Cows - Dairy Farm Tour",
-      "date": "2026-06-02",
-      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/dairy-farm-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.526638,
-      "lng": -111.462471,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107068",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
-      "date_label": "Daily, Mon - Sat, 11:00 AM",
-      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Heber City Council Monthly Meetings",
-      "date": "2026-06-02",
-      "description": "Heber City Council Monthly Meetings in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-council-meetings",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5085852,
-      "lng": -111.4141319,
-      "categories": [
-        "Government"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.112925",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741948.jpg?decache=27-04-36",
-      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
-      "recurrence_text": "1st and 3rd Tuesdays of each month",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.1
-    },
-    {
-      "title": "In Stitches Gathering @ Wasatch County Library",
-      "date": "2026-06-02",
-      "description": "In Stitches Gathering @ Wasatch County Library in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wasatch-county-library-in-stitches",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.113100",
-      "start_time": "6:00 PM",
-      "end_time": "7:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3184887.jpg?decache=27-04-36",
-      "date_label": "1st Tue monthly, 6:00 - 7:00 PM",
-      "recurrence_text": "1st Tuesday monthly, 6:00 - 7:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Midway City Council Monthly Meetings",
-      "date": "2026-06-02",
-      "description": "Midway City Council Monthly Meetings in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/midway-city-council-meetings",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5123105,
-      "lng": -111.4756877,
-      "categories": [
-        "Government"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.113290",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750550.jpg?decache=27-04-36",
-      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
-      "recurrence_text": "1st and 3rd Tuesdays of each month at 6:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 3.3
-    },
-    {
-      "title": "Cornhole @ Wallsburg Town Hall",
-      "date": "2026-06-02",
-      "description": "Cornhole @ Wallsburg Town Hall in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wallsburg-cornhole-night",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.113458",
-      "start_time": "7:00 PM",
-      "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=27-04-36",
-      "date_label": "Tue, 7:00 - 9:00 PM",
-      "end_date": null,
-      "recurrence_text": "Every Tuesday, 7:00-9:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Meet the Cows - Dairy Farm Tour",
-      "date": "2026-08-11",
-      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/dairy-farm-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.526638,
-      "lng": -111.462471,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107068",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
-      "date_label": "Daily, Mon - Sat, 11:00 AM",
-      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Cornhole @ Wallsburg Town Hall",
-      "date": "2026-08-11",
-      "description": "Cornhole @ Wallsburg Town Hall in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wallsburg-cornhole-night",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.113458",
-      "start_time": "7:00 PM",
-      "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=27-04-36",
-      "date_label": "Tue, 7:00 - 9:00 PM",
-      "end_date": null,
-      "recurrence_text": "Every Tuesday, 7:00-9:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Country Swing & Line Dancing @ The Sycamore Building",
-      "date": "2026-08-11",
-      "description": "Country Swing & Line Dancing @ The Sycamore Building in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/swing-dance-at-sycamore",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.506961,
-      "lng": -111.4133863,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.121446",
-      "start_time": "8:00 PM",
-      "end_time": "11:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3176611.jpg?decache=27-04-36",
-      "date_label": "Every 2nd and 4th Tue, 8:00 PM - 11:00PM",
-      "recurrence_text": "Every 2nd and 4th Tuesday of the month",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Heber Valley Chamber Golf Tournament",
-      "date": "2026-08-11",
-      "description": "Heber Valley Chamber Golf Tournament in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-valley-chamber-golf-tournament",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.4819576,
-      "lng": -111.5007583,
-      "categories": [
-        "Sports"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.159806",
-      "start_time": "8:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728272.jpg?decache=27-04-36",
-      "date_label": "Soldier Hollow Gold Course, 8:00 AM Shotgun",
-      "filter_categories": [
-        "Sports"
-      ],
-      "_distance_mi": 4.9
-    },
-    {
-      "title": "Meet the Cows - Dairy Farm Tour",
-      "date": "2026-08-18",
-      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/dairy-farm-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.526638,
-      "lng": -111.462471,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.107068",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=27-04-36",
-      "date_label": "Daily, Mon - Sat, 11:00 AM",
-      "recurrence_text": "Daily, Mon - Sat, 11:00 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.9
-    },
-    {
-      "title": "Heber City Council Monthly Meetings",
-      "date": "2026-08-18",
-      "description": "Heber City Council Monthly Meetings in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-council-meetings",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5085852,
-      "lng": -111.4141319,
-      "categories": [
-        "Government"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.112925",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741948.jpg?decache=27-04-36",
-      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
-      "recurrence_text": "1st and 3rd Tuesdays of each month",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.1
-    },
-    {
-      "title": "Midway City Council Monthly Meetings",
-      "date": "2026-08-18",
-      "description": "Midway City Council Monthly Meetings in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/midway-city-council-meetings",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5123105,
-      "lng": -111.4756877,
-      "categories": [
-        "Government"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.113290",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750550.jpg?decache=27-04-36",
-      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
-      "recurrence_text": "1st and 3rd Tuesdays of each month at 6:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 3.3
-    },
-    {
-      "title": "Cornhole @ Wallsburg Town Hall",
-      "date": "2026-08-18",
-      "description": "Cornhole @ Wallsburg Town Hall in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wallsburg-cornhole-night",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.113458",
-      "start_time": "7:00 PM",
-      "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=27-04-36",
-      "date_label": "Tue, 7:00 - 9:00 PM",
-      "end_date": null,
-      "recurrence_text": "Every Tuesday, 7:00-9:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Heber's No Reading Book Club",
-      "date": "2026-08-18",
-      "description": "Heber's No Reading Book Club in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-no-reading-book-club",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Education"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.121110",
-      "start_time": "6:30 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186384.jpg?decache=27-04-36",
-      "date_label": "1st & 3rd Tue, 6:30 - 8:00 PM",
-      "recurrence_text": "Every 1st and 3rd Tuesday, 6:30-8:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Education & Talks"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Cornhole @ Wallsburg Town Hall",
-      "date": "2026-08-25",
-      "description": "Cornhole @ Wallsburg Town Hall in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wallsburg-cornhole-night",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.113458",
-      "start_time": "7:00 PM",
-      "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=27-04-36",
-      "date_label": "Tue, 7:00 - 9:00 PM",
-      "end_date": null,
-      "recurrence_text": "Every Tuesday, 7:00-9:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Country Swing & Line Dancing @ The Sycamore Building",
-      "date": "2026-08-25",
-      "description": "Country Swing & Line Dancing @ The Sycamore Building in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/swing-dance-at-sycamore",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.506961,
-      "lng": -111.4133863,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-27T16:36:37.121446",
-      "start_time": "8:00 PM",
-      "end_time": "11:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3176611.jpg?decache=27-04-36",
-      "date_label": "Every 2nd and 4th Tue, 8:00 PM - 11:00PM",
-      "recurrence_text": "Every 2nd and 4th Tuesday of the month",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Angie Petty",
-      "date": "2026-09-01",
-      "description": "Hidden Ace",
-      "location": "Hidden Ace, Park City, UT",
-      "link": "https://www.bandsintown.com/e/108206326?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6206231,
-      "lng": -111.4419276,
-      "categories": [
-        "Community"
-      ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-27T14:02:39.317886",
-      "venue_name": "Hidden Ace",
-      "address": "1702 Glencoe Mountain Wy",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 8.0
-    },
-    {
-      "title": "Angie Petty",
-      "date": "2026-09-10",
-      "description": "Hidden Ace",
-      "location": "Hidden Ace, Park City, UT",
-      "link": "https://www.bandsintown.com/e/108206329?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6206231,
-      "lng": -111.4419276,
-      "categories": [
-        "Community"
-      ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-27T14:02:40.513576",
-      "venue_name": "Hidden Ace",
-      "address": "1702 Glencoe Mountain Wy",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 8.0
-    },
-    {
       "title": "Plein Air Rendezvous",
       "date": "2026-09-17",
       "description": "Plein Air Rendezvous in Heber Valley.",
@@ -17316,7 +17347,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:41.714376",
+      "scraped_at": "2026-05-27T21:08:35.303922",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -17340,7 +17371,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-27T14:02:41.714407",
+      "scraped_at": "2026-05-27T21:08:35.303975",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",

@@ -87,6 +87,24 @@ def scrape_visit_park_city():
         if 'monthly' in s: return 'monthly', days
         return None, []
 
+    # Day-name -> Python weekday() index (Mon=0 .. Sun=6)
+    _DOW_INDEX = {'Monday':0,'Tuesday':1,'Wednesday':2,'Thursday':3,'Friday':4,'Saturday':5,'Sunday':6}
+
+    def next_occurrence_on_or_after(ref_date, rec_days):
+        """Given a reference date (datetime.date) and a list of day names,
+        return the next date on/after ref_date that falls on one of those days.
+        If rec_days is empty, returns ref_date unchanged (caller handles daily)."""
+        if not rec_days:
+            return ref_date
+        targets = {_DOW_INDEX[d] for d in rec_days if d in _DOW_INDEX}
+        if not targets:
+            return ref_date
+        for offset in range(0, 7):
+            cand = ref_date + timedelta(days=offset)
+            if cand.weekday() in targets:
+                return cand
+        return ref_date
+
     today = datetime.now()
     start_str = today.strftime("%Y-%m-%d")
     end_str = (today + timedelta(days=200)).strftime("%Y-%m-%d")
@@ -210,10 +228,26 @@ def scrape_visit_park_city():
                 if end_time and not start_time:
                     end_time = ""
 
-                if start_date and start_date < today_str:
-                    start_date = today_str
-
                 recurrence, rec_days = parse_recurrence(doc.get("recurrence", ""))
+
+                # Fix stale recurring dates: the API returns the date a
+                # recurrence STARTED (often months/years ago). Blindly clamping
+                # to today stamps every recurring event on today regardless of
+                # its real day (e.g. 'Friday Nights Live' showing on a Wednesday).
+                # Instead, compute the next real occurrence.
+                if start_date and start_date < today_str:
+                    if recurrence in ("weekly", "weekly_multiple") and rec_days:
+                        # Find next date matching the recurrence day(s).
+                        ref = datetime.now(MOUNTAIN).date()
+                        nxt = next_occurrence_on_or_after(ref, rec_days)
+                        start_date = nxt.strftime("%Y-%m-%d")
+                    elif recurrence == "daily":
+                        start_date = today_str
+                    else:
+                        # Non-recurring event with a past date, OR monthly with
+                        # no parseable day — we can't trust it lands today. Drop
+                        # it rather than show a wrong date.
+                        continue
                 location = doc.get("location") or "Park City, UT"
                 url_path = doc.get("url") or ""
                 link = f"https://www.visitparkcity.com{url_path}" if url_path and not url_path.startswith("http") else (url_path or "https://www.visitparkcity.com/events/")
