@@ -547,6 +547,27 @@ def main():
             print(f"  SKIP: {path} not found")
     
     # Drop scraped UI/navigation labels that aren't real events.
+    # Strip trailing recurrence descriptors ("- Every Saturday!", etc.) from
+    # ALL event titles, regardless of source. Once an event is a specific dated
+    # occurrence, the "Every <Day>" suffix is redundant and often contradictory
+    # (a Wednesday instance inheriting "- Every Saturday!" from a series name).
+    # Done here at build time so stale cached titles get cleaned too, not just
+    # freshly-scraped ones.
+    import re as _re_title
+    _EVERY_SUFFIX = _re_title.compile(
+        r"\s*[-–—|:]?\s*every\s+(monday|tuesday|wednesday|thursday|friday|saturday|sunday)s?\s*!*\s*$",
+        _re_title.IGNORECASE
+    )
+    _title_cleaned = 0
+    for _e in all_events:
+        _t = _e.get("title") or ""
+        _nt = _EVERY_SUFFIX.sub("", _t).strip()
+        if _nt and _nt != _t:
+            _e["title"] = _nt
+            _title_cleaned += 1
+    if _title_cleaned:
+        print(f"  Cleaned {_title_cleaned} '- Every <Day>' title suffixes")
+
     all_events = _fan_out_recurring(all_events)
 
     _before_junk = len(all_events)

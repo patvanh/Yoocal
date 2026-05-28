@@ -123,6 +123,14 @@ def _normalize_event(cs: dict) -> dict | None:
     CitySpark API\'s distance filter is permissive — we hard-filter here).
     """
     name = (cs.get("Name") or "").strip()
+    # Strip trailing recurrence descriptors ("- Every Saturday!", "Every
+    # Wednesday", etc.). CitySpark applies the series umbrella name to every
+    # instance, so a Wednesday instance can inherit "- Every Saturday!" which
+    # contradicts its actual date. The date is correct; the suffix is noise.
+    name = re.sub(
+        r"\s*[-–—|:]?\s*every\s+(monday|tuesday|wednesday|thursday|friday|saturday|sunday)s?\s*!*\s*$",
+        "", name, flags=re.IGNORECASE
+    ).strip()
     date_start = cs.get("DateStart") or ""
     if not name or not date_start:
         return None
