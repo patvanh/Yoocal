@@ -762,10 +762,19 @@ def main():
             print(f"Warning: could not load {kpcw_cache_path}: {ex}")
 
     browser_scraped = scrape_gohebervalley_live()
-    if browser_scraped:
-        all_events += browser_scraped
-    else:
-        all_events += scrape_known_events()
+    hv_events = browser_scraped if browser_scraped else scrape_known_events()
+
+    # Enrich Heber Valley Tourism events with full date ranges + recurrence by
+    # visiting each detail page (the listings only show start dates).
+    try:
+        from heber_valley_enricher import enrich_heber_valley_events
+        hv_events = enrich_heber_valley_events(hv_events)
+    except ImportError:
+        print("  [hv-enrich] enricher not available, skipping detail-page enrichment")
+    except Exception as ex:
+        print(f"  [hv-enrich] enricher error (continuing without enrichment): {ex}")
+
+    all_events += hv_events
     all_events += scrape_google_events()
     all_events += scrape_eventbrite()
     all_events += scrape_runsignup()

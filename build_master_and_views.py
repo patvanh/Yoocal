@@ -158,6 +158,54 @@ def event_key(e: dict) -> tuple:
     return (title, date)
 
 
+def _fan_out_recurring(events):
+    """Expand multi-day and recurring events into one record per occurrence date.
+
+    Two sources of "occurs on multiple days" data:
+    1. occurrence_dates: explicit list (set by enrichers for 'every Saturday' patterns).
+    2. end_date > date: continuous date range (e.g. 'July 23 through August 1').
+    Each fanned-out copy becomes a single-day event. Dedup key is (title, date)
+    so siblings don't collapse.
+    """
+    from datetime import datetime, timedelta
+    result = []
+    fanned = 0
+    for e in events:
+        occ = e.get("occurrence_dates") or []
+        end_date = e.get("end_date")
+        start_date = (e.get("date") or "")[:10]
+        if occ:
+            for d in occ:
+                copy = dict(e)
+                copy["date"] = d
+                copy["end_date"] = None
+                copy.pop("occurrence_dates", None)
+                result.append(copy)
+            fanned += 1
+        elif end_date and start_date and end_date > start_date:
+            try:
+                start = datetime.strptime(start_date, "%Y-%m-%d").date()
+                end = datetime.strptime(end_date, "%Y-%m-%d").date()
+                if (end - start).days > 60:
+                    result.append(e)
+                    continue
+                d = start
+                while d <= end:
+                    copy = dict(e)
+                    copy["date"] = d.isoformat()
+                    copy["end_date"] = None
+                    result.append(copy)
+                    d += timedelta(days=1)
+                fanned += 1
+            except (ValueError, TypeError):
+                result.append(e)
+        else:
+            result.append(e)
+    if fanned:
+        print(f"  Fanned out {fanned} multi-day/recurring events ({len(events)} -> {len(result)})")
+    return result
+
+
 import re as _re_pricing
 
 # Ticket platforms whose presence in a link strongly implies a paid event.
@@ -491,6 +539,8 @@ def main():
             print(f"  SKIP: {path} not found")
     
     # Drop scraped UI/navigation labels that aren't real events.
+    all_events = _fan_out_recurring(all_events)
+
     _before_junk = len(all_events)
     all_events = [e for e in all_events if not _is_junk_title(e.get("title"))]
     if _before_junk != len(all_events):
