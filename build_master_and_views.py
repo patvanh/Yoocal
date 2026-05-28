@@ -102,6 +102,7 @@ _TITLE_FILLERS = {
     "concert", "show", "performance", "performs",
     "series",  # "...Concert Series" / "...To-Go Series" suffix noise
     "park", "city",  # location words also strip
+    "at",  # collapses "@ Venue" (punct stripped to space) with "at Venue"
 }
 
 _JUNK_TITLES = {
@@ -134,6 +135,13 @@ def _normalize_title(title: str) -> str:
     # the same as "to go" (e.g. "Crafternoons 2 Go" vs "Crafternoons To-Go").
     t = _re.sub(r"\b2 ?go\b", "to go", t)
     tokens = [w for w in t.split() if w and w not in _TITLE_FILLERS]
+    # Strip a day-of-week word at the very start or end of the title — recurring
+    # events shouldn't be keyed by their day name.
+    _DAYS = {"monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"}
+    while tokens and tokens[0] in _DAYS:
+        tokens = tokens[1:]
+    while tokens and tokens[-1] in _DAYS:
+        tokens = tokens[:-1]
     return " ".join(tokens)
 
 

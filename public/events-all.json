@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "generated_at": "2026-05-27T20:38:10.368316-06:00",
+  "generated_at": "2026-05-27T20:45:04.131101-06:00",
   "today": "2026-05-27",
-  "event_count": 3056,
+  "event_count": 3054,
   "events": [
     {
       "title": "(Re)sounding: Art Exhibition",
@@ -10266,6 +10266,7 @@
       "lat": 40.5122355,
       "lng": -111.4765875,
       "categories": [
+        "Community",
         "Food & Drink"
       ],
       "scraped_at": "2026-05-27T16:36:37.118255",
@@ -10275,7 +10276,14 @@
       "date_label": "Every Sat, Jun thru Oct, 10:00 AM - 1:00 PM",
       "end_date": null,
       "recurrence_text": "Every Saturday from June through October, 10:00 AM - 1:00 PM",
+      "address": "200 W Main Street Midway, Utah 84049",
+      "venue_name": "Midway Town Square",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism"
+      ],
       "filter_categories": [
+        "Community",
         "Food & Drink"
       ]
     },
@@ -10367,30 +10375,6 @@
       "end_date": null,
       "filter_categories": [
         "Community"
-      ]
-    },
-    {
-      "title": "Midway Farmers Market",
-      "date": "2026-06-06",
-      "description": "The market is held every Saturday from 10:00 am to 1:00 pm at the Midway Town Square from June through October. Fresh local produce and local artisans are onsite selling goods at the farmer's market in Midway. See you there!",
-      "location": "Midway Town Square, 200 W Main Street Midway, Utah 84049",
-      "link": "https://hebervalleylife.com/events/midway-farmers-market-2025/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/midway-farmers-market-2025/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "start_time": "4:00 AM",
-      "end_time": "7:00 AM",
-      "image_url": "https://i0.wp.com/hebervalleylife.com/wp-content/uploads/2022/06/midwaymarket.webp?fit=1920%2C1080&#038;ssl=1",
-      "address": "200 W Main Street Midway, Utah 84049",
-      "venue_name": "Midway Town Square",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
       ]
     },
     {
@@ -57519,34 +57503,21 @@
       "lat": 40.5066,
       "lng": -111.4133,
       "categories": [
-        "Community"
+        "Community",
+        "Food & Drink",
+        "Music"
       ],
       "start_time": "11:30 AM",
       "end_time": "2:30 PM",
       "address": "101 West Main Street",
       "venue_name": "Cafe Galleria",
-      "filter_categories": [
-        "Community"
-      ]
-    },
-    {
-      "title": "Dominick Antonelli at Cafe Galleria",
-      "date": "2026-08-08",
-      "description": "Dominick Antonelli is on his first national tour and he will be wrapping up his last official tour date in Midway, UT at Cafe Galleria on Saturday August 8th. He will be playing an evening of original music from 530-830pm. Please come out for an evening of story telling, great food and beverages, original music and to celebrate Dominick\u2019s final stop on his first national tour. We look forward to seeing you!",
-      "location": "Cafe Galleria, Midway, UT",
-      "link": "https://townlift.com/event/dominick-antonelli-at-cafe-galleria/",
-      "source": "TownLift",
-      "source_url": "https://www.townlift.com",
-      "lat": 40.5125438,
-      "lng": -111.4748846,
-      "categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "start_time": "5:30 PM",
-      "end_time": "8:30 PM",
       "image_url": "https://townlift.com/wp-content/uploads/2026/04/IMG_3679-scaled.jpeg",
+      "_all_sources": [
+        "Heber Valley Life",
+        "TownLift"
+      ],
       "filter_categories": [
+        "Community",
         "Food & Drink",
         "Music"
       ]

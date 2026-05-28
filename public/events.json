@@ -6,9 +6,9 @@
     "lng": -111.498
   },
   "radius_mi": 10,
-  "generated_at": "2026-05-27T20:38:10.410704-06:00",
+  "generated_at": "2026-05-27T20:45:04.171583-06:00",
   "today": "2026-05-27",
-  "event_count": 1508,
+  "event_count": 1507,
   "events": [
     {
       "title": "(Re)sounding: Art Exhibition",
@@ -5867,6 +5867,7 @@
       "lat": 40.5122355,
       "lng": -111.4765875,
       "categories": [
+        "Community",
         "Food & Drink"
       ],
       "scraped_at": "2026-05-27T16:36:37.118255",
@@ -5876,7 +5877,14 @@
       "date_label": "Every Sat, Jun thru Oct, 10:00 AM - 1:00 PM",
       "end_date": null,
       "recurrence_text": "Every Saturday from June through October, 10:00 AM - 1:00 PM",
+      "address": "200 W Main Street Midway, Utah 84049",
+      "venue_name": "Midway Town Square",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism"
+      ],
       "filter_categories": [
+        "Community",
         "Food & Drink"
       ],
       "_distance_mi": 9.3
@@ -29684,29 +29692,6 @@
       "recurrence_text": "Every Saturday from June through October, 10:00 AM - 1:00 PM",
       "filter_categories": [
         "Food & Drink"
-      ],
-      "_distance_mi": 9.3
-    },
-    {
-      "title": "Dominick Antonelli at Cafe Galleria",
-      "date": "2026-08-08",
-      "description": "Dominick Antonelli is on his first national tour and he will be wrapping up his last official tour date in Midway, UT at Cafe Galleria on Saturday August 8th. He will be playing an evening of original music from 530-830pm. Please come out for an evening of story telling, great food and beverages, original music and to celebrate Dominick\u2019s final stop on his first national tour. We look forward to seeing you!",
-      "location": "Cafe Galleria, Midway, UT",
-      "link": "https://townlift.com/event/dominick-antonelli-at-cafe-galleria/",
-      "source": "TownLift",
-      "source_url": "https://www.townlift.com",
-      "lat": 40.5125438,
-      "lng": -111.4748846,
-      "categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "start_time": "5:30 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://townlift.com/wp-content/uploads/2026/04/IMG_3679-scaled.jpeg",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
       ],
       "_distance_mi": 9.3
     },
