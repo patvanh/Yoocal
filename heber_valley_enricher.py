@@ -99,13 +99,17 @@ def _extract_dates_via_llm(title, start_date_hint, article_text):
         f"for this event's dates.\n\n"
         f"(A listing card hinted start_date={start_date_hint or 'unknown'}, but this is NOT "
         "reliable — the article often shows different/wider dates. Trust the article over the hint.)\n\n"
-        "Extract the FULL date pattern from the article. Return ONLY JSON:\n"
+        "Extract the date pattern AND the venue/location from the article. Return ONLY JSON:\n"
         '{\n'
         '  "start_date": "YYYY-MM-DD" or null,\n'
         '  "end_date": "YYYY-MM-DD" or null (only if event spans >1 day),\n'
         '  "is_recurring": true or false,\n'
         '  "recurrence_text": "human description" or null,\n'
-        '  "occurrence_dates": ["YYYY-MM-DD", ...] or null (all dates, up to 90 days from today)\n'
+        '  "occurrence_dates": ["YYYY-MM-DD", ...] or null (all dates, up to 90 days from today),\n'
+        '  "venue_name": "the venue/place name (e.g. Wasatch County Outdoor Arena)" or null,\n'
+        '  "street_address": "street address only (e.g. 415 South Southfield Road)" or null,\n'
+        '  "city": "city name (e.g. Heber City)" or null,\n'
+        '  "zip_code": "5-digit zip" or null\n'
         '}\n\n'
         "Rules:\n"
         "- The article overrides any hint. If the article says 'July 23 through August 1' "
@@ -115,7 +119,9 @@ def _extract_dates_via_llm(title, start_date_hint, article_text):
         "from today through 90 days out.\n"
         "- If single one-day event, leave end_date/is_recurring/occurrence_dates null/false.\n"
         "- Year is 2026 unless the article explicitly says otherwise.\n"
-        "- Look carefully for date ranges like 'DATES:', 'When:', 'July X through August Y'.\n\n"
+        "- Look carefully for date ranges like 'DATES:', 'When:', 'July X through August Y'.\n"
+        "- For venue/address: look for 'Location', 'Address', 'Venue' labels. Extract the\n"
+        "  real place name and street address if present. Leave null if not stated.\n\n"
         f"Event title: {title}\n\n"
         f"Article text:\n{article_text}\n\n"
         "JSON only:"
@@ -168,6 +174,26 @@ def enrich_heber_valley_events(events):
             if cached.get("end_date"): e["end_date"] = cached["end_date"]
             if cached.get("recurrence_text"): e["recurrence_text"] = cached["recurrence_text"]
             if cached.get("occurrence_dates"): e["occurrence_dates"] = cached["occurrence_dates"]
+            _vn = (cached.get("venue_name") or "").strip()
+            _st = (cached.get("street_address") or "").strip()
+            _ci = (cached.get("city") or "").strip()
+            _zp = (cached.get("zip_code") or "").strip()
+            if _vn and not e.get("venue_name"):
+                e["venue_name"] = _vn
+            if _st and not e.get("address"):
+                _ap = [_st]
+                if _ci: _ap.append(_ci)
+                _ap.append("UT")
+                if _zp: _ap.append(_zp)
+                e["address"] = ", ".join(_ap)
+            _cl = (e.get("location") or "").strip().lower()
+            if (_vn or _st) and _cl in ("", "heber valley, ut", "heber city, ut"):
+                _lp = []
+                if _vn: _lp.append(_vn)
+                if _st: _lp.append(_st)
+                if _ci: _lp.append(f"{_ci}, UT")
+                if _lp:
+                    e["location"] = ", ".join(_lp)
             continue
 
         text = _fetch_page_text(url)
@@ -199,6 +225,32 @@ def enrich_heber_valley_events(events):
         if result.get("occurrence_dates"):
             e["occurrence_dates"] = result["occurrence_dates"]
             changed = True
+        # Venue + address: fill if the event lacks them (don't overwrite good data).
+        vn = (result.get("venue_name") or "").strip()
+        st = (result.get("street_address") or "").strip()
+        ci = (result.get("city") or "").strip()
+        zp = (result.get("zip_code") or "").strip()
+        if vn and not e.get("venue_name"):
+            e["venue_name"] = vn
+            changed = True
+        if st and not e.get("address"):
+            addr_parts = [st]
+            if ci: addr_parts.append(ci)
+            addr_parts.append("UT")
+            if zp: addr_parts.append(zp)
+            e["address"] = ", ".join(addr_parts)
+            changed = True
+        # Build a rich location label from venue + city if current is generic.
+        cur_loc = (e.get("location") or "").strip().lower()
+        if (vn or st) and cur_loc in ("", "heber valley, ut", "heber city, ut"):
+            loc_parts = []
+            if vn: loc_parts.append(vn)
+            if st: loc_parts.append(st)
+            if ci: loc_parts.append(f"{ci}, UT")
+            elif not vn and not st: loc_parts.append("Heber City, UT")
+            if loc_parts:
+                e["location"] = ", ".join(loc_parts)
+                changed = True
         if changed:
             enriched += 1
         else:
@@ -210,6 +262,10 @@ def enrich_heber_valley_events(events):
             "end_date": result.get("end_date"),
             "recurrence_text": result.get("recurrence_text"),
             "occurrence_dates": result.get("occurrence_dates"),
+            "venue_name": result.get("venue_name"),
+            "street_address": result.get("street_address"),
+            "city": result.get("city"),
+            "zip_code": result.get("zip_code"),
         }
 
     _save_cache(cache)
