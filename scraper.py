@@ -1159,6 +1159,46 @@ SOURCE_PRIORITY = {
 }
 
 
+# _ATTRIBUTION_PRIORITY controls which record's `source` and `link` win when
+# duplicates are merged. Separate from SOURCE_PRIORITY (which controls
+# data-richness ordering) because the two questions are different:
+#   - Whose data fields are richest? -> SOURCE_PRIORITY + richness score
+#   - Whose attribution / link should the user see? -> _ATTRIBUTION_PRIORITY
+# Venue-direct sources win attribution (canonical link). Aggregators lose.
+_ATTRIBUTION_PRIORITY = {
+    # Tier 0: venue-direct (events on their own calendar)
+    "Deer Valley Resort": 0,
+    "Deer Valley Music Festival": 0,
+    "Park City Opera": 0,
+    "Park City Institute": 0,
+    "Mountain Town Music": 0,
+    "Mountain Trails Foundation": 0,
+    "Park City Song Summit": 0,
+    "Park City Gallery Association": 0,
+    "Park Silly Sunday Market": 0,
+    "Park City Farmers Market": 0,
+    "Egyptian Theatre": 0,
+    "The Dainty Pear Co.": 0,
+    # Tier 1: official tourism authority
+    "Visit Park City": 1,
+    "Park City Annual Events": 1,
+    # Sitemap is a fallback parse path; live API is more authoritative.
+    "Visit Park City (sitemap)": 2,
+    "Heber Valley Tourism": 1,
+    # Tier 2: local newspaper aggregator
+    "The Park Record": 2,
+    "TownLift": 2,
+    # Tier 3: community calendar
+    "KPCW Community Calendar": 3,
+    # Tier 4: race aggregators
+    "RunSignup": 4,
+    "Salt Lake Running Co": 4,
+    "Running in the USA": 4,
+    # Tier 5: search aggregators (worst attribution)
+    "Google Events": 5,
+}
+
+
 def _pc_richness_score(e):
     """Lower score = better record. Used to order dedup groups so the
     richest record wins as the merge base."""
@@ -1257,6 +1297,28 @@ def _pc_merge_records(records: list) -> dict:
             facets.add(f)
     if facets:
         merged["facets"] = sorted(facets)
+
+    # ATTRIBUTION OVERRIDE: pick `source` and `link` from the venue-direct or
+    # tourism-authority record (per _ATTRIBUTION_PRIORITY) regardless of which
+    # record won as data-richness base. Users get a canonical link to the
+    # authoritative listing, not an aggregator article. Data fields stay
+    # whatever was richest above.
+    attribution_winner = min(
+        records,
+        key=lambda r: _ATTRIBUTION_PRIORITY.get(r.get("source", ""), 99),
+    )
+    if attribution_winner.get("source"):
+        merged["source"] = attribution_winner["source"]
+    if attribution_winner.get("link"):
+        merged["link"] = attribution_winner["link"]
+    # Track all source contributors so we can verify dedup made the right merge.
+    contributors = set()
+    for r in records:
+        s = r.get("source")
+        if s:
+            contributors.add(s)
+    if len(contributors) > 1:
+        merged["_all_sources"] = sorted(contributors)
 
     return merged
 

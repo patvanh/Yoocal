@@ -6,9 +6,9 @@
     "lng": -111.4133
   },
   "radius_mi": 10,
-  "generated_at": "2026-05-28T13:28:43.248079-06:00",
+  "generated_at": "2026-05-28T15:32:18.985311-06:00",
   "today": "2026-05-28",
-  "event_count": 289,
+  "event_count": 292,
   "events": [
     {
       "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
@@ -73,6 +73,10 @@
       "categories": [
         "Community"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Ideal Playhouse, 113 N Main St, Heber City, UT",
       "filter_categories": [
         "Community"
       ],
@@ -96,10 +100,41 @@
       "facets": [
         "Paid"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Egyptian Theatre, 328 Main St, Park City, UT",
       "filter_categories": [
         "Arts & Theater"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Learn American Mahjong with Mahjong Hive",
+      "date": "2026-05-28",
+      "description": "Join us for a relaxed, beginner-friendly evening where we\u2019ll demystify the beautiful game of Mahjong. Come for good company, easy learning, and great snacks. This class is for: Total Beginners: Never touched a tile? Perfect. We love starting from scratch. Social Seekers: Great for friends looking for a new \"game night\" staple or individuals looking to meet new people. Strategy Lovers: If you en...",
+      "location": "The Dainty Pear Co., 152 W 100 N, Midway, UT 84049",
+      "venue_name": "The Dainty Pear Co.",
+      "address": "152 W 100 N, Midway, UT 84049",
+      "link": "https://thedaintypearco.com/products/may-28th-learn-mahjong-with-mahjong-hive",
+      "source": "The Dainty Pear Co.",
+      "source_url": "https://thedaintypearco.com/collections/classes",
+      "lat": 40.5118,
+      "lng": -111.4744,
+      "is_free": false,
+      "categories": [
+        "Community",
+        "Wellness"
+      ],
+      "scraped_at": "2026-05-28T12:29:48.405235",
+      "start_time": "6:45 PM",
+      "price": "$80.00",
+      "sold_out": true,
+      "filter_categories": [
+        "Community",
+        "Wellness"
+      ],
+      "_distance_mi": 3.2
     },
     {
       "title": "Albion SC Utah TRYOUTS - May 18-30, 2026",
@@ -121,26 +156,6 @@
       "filter_categories": [
         "Family & Kids",
         "Sports"
-      ],
-      "_distance_mi": 1.0
-    },
-    {
-      "title": "Applications Open for the Wasatch County Library Board",
-      "date": "2026-05-29",
-      "description": "Wasatch County Library is seeking community members to serve on the Library Board. Applications for board vacancies are open now through June 12, 2026. Library",
-      "location": "Wasatch County Library, 465 East 1200 South, Heber City, UT 84032, USA",
-      "link": "https://library.wasatchcounty.gov/about",
-      "source": "KPCW Community Calendar",
-      "source_url": "https://www.kpcw.org/kpcw-community-calendar",
-      "start_time": "9:00 AM",
-      "end_time": "12:00 PM",
-      "lat": 40.49376729999999,
-      "lng": -111.4056241,
-      "categories": [
-        "Education"
-      ],
-      "filter_categories": [
-        "Education & Talks"
       ],
       "_distance_mi": 1.0
     },
@@ -321,6 +336,10 @@
         "Music",
         "Theater"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Egyptian Theatre, 328 Main St, Park City, UT",
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
@@ -423,6 +442,10 @@
       "categories": [
         "Theater"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Avon Theater, 94 S Main St, Heber City, UT",
       "filter_categories": [
         "Arts & Theater"
       ],
@@ -446,6 +469,7 @@
       "facets": [
         "Paid"
       ],
+      "address": "Egyptian Theatre, 328 Main St, Park City, UT",
       "filter_categories": [
         "Arts & Theater"
       ],
@@ -468,6 +492,7 @@
       "facets": [
         "Paid"
       ],
+      "address": "The Hog Wallow Pub, 3200 E Big Cottonwood Canyon Rd, Cottonwood Heights, UT",
       "filter_categories": [
         "Community"
       ],
@@ -488,6 +513,10 @@
       "categories": [
         "Music"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Prime Steak House and Piano Bar, 804 Main St, Park City, UT",
       "filter_categories": [
         "Music"
       ],
@@ -511,6 +540,10 @@
       "facets": [
         "Paid"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Egyptian Theatre, 328 Main St, Park City, UT",
       "filter_categories": [
         "Arts & Theater"
       ],
@@ -526,7 +559,7 @@
       "source_url": "https://www.visitparkcity.com/events/",
       "is_free": null,
       "price": "",
-      "scraped_at": "2026-05-28T18:46:34.606772",
+      "scraped_at": "2026-05-28T15:08:08.173396",
       "lat": 40.6216041,
       "lng": -111.4900505,
       "venue_name": "Glitretind Restaurant at Stein Eriksen Lodge",
@@ -535,11 +568,8 @@
       "recurrence_days": "",
       "start_time": "11:00 AM",
       "end_time": "2:30 PM",
-      "categories": [
-        "Food & Drink"
-      ],
       "filter_categories": [
-        "Food & Drink"
+        "Community"
       ],
       "_distance_mi": 8.9
     },
@@ -580,6 +610,10 @@
       "categories": [
         "Wellness"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Black Rock Mountain Resort, 909 W Peace Tree Trail., Heber City, UT",
       "is_free": false,
       "filter_categories": [
         "Wellness"
@@ -603,29 +637,9 @@
       "facets": [
         "Paid"
       ],
+      "address": "Caf\u00e9 Galleria - Midway, Utah, 101 W Main St, Midway, UT",
       "filter_categories": [
         "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Feel Good Spring Wellness Fair",
-      "date": "2026-05-31",
-      "description": "Spring Wellness Fair with Park City Wellness Mafia - discover local experts in gut health, hormones, fitness, IV therapy, skincare & more!",
-      "location": "Black Rock Mountain Resort, 909 W Peace Tree Trail., Heber City, UT",
-      "link": "https://www.eventbrite.com/e/feel-good-spring-wellness-fair-tickets-1988511058104",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:28:58.370309",
-      "categories": [
-        "Wellness"
-      ],
-      "address": "Black Rock Mountain Resort, 909 W Peace Tree Trail., Heber City, UT",
-      "is_free": false,
-      "filter_categories": [
-        "Wellness"
       ],
       "_distance_mi": 0.0
     },
@@ -790,6 +804,10 @@
       "categories": [
         "Theater"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Avon Theater, 94 S Main St, Heber City, UT",
       "filter_categories": [
         "Arts & Theater"
       ],
@@ -1031,28 +1049,8 @@
       "facets": [
         "Paid"
       ],
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Debra Fotheringham",
-      "date": "2026-06-04",
-      "description": "Find tickets for Debra Fotheringham at Heber Valley Market in Heber City on 6/4/2026 at 6:30 PM",
-      "location": "Heber Valley Market, Heber City, UT",
-      "link": "https://open.spotify.com/concert/2gnqtnwuVPo1Kde1UBxPIZ",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:28:58.370270",
-      "start_time": "10:30 PM",
-      "categories": [
-        "Community"
-      ],
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Google Events"
       ],
       "filter_categories": [
         "Community"
@@ -1171,24 +1169,8 @@
       "categories": [
         "Community"
       ],
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Masters of the Universe - starts June 5",
-      "date": "2026-06-05",
-      "description": "In MASTERS OF THE UNIVERSE, Director Travis Knight brings the legendary franchise back to the big screen in this epic live-action adventure.",
-      "location": "Ideal Playhouse, 113 N Main St, Heber City, UT",
-      "link": "https://www.hebervalleyentertainment.com/events/masters-of-the-universe-starts-june-5-2026-06-05-18-00",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:28:58.370344",
-      "categories": [
-        "Community"
+      "_all_sources": [
+        "Google Events"
       ],
       "address": "Ideal Playhouse, 113 N Main St, Heber City, UT",
       "filter_categories": [
@@ -1260,12 +1242,11 @@
       "lat": 40.637532,
       "lng": -111.478353,
       "categories": [
-        "Community",
-        "Family"
+        "Community"
       ],
       "start_time": "10:00 AM",
       "end_time": "2:00 PM",
-      "scraped_at": "2026-05-28T18:49:51.585569",
+      "scraped_at": "2026-05-28T15:10:58.966534",
       "venue_name": "Deer Valley Ponds Gazebo",
       "address": "2250 Deer Valley Drive South-Parking Lot",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/4783e779-69bd-44a4-9b58-68e9fec0a650.large.png",
@@ -1274,8 +1255,7 @@
         "The Park Record"
       ],
       "filter_categories": [
-        "Community",
-        "Family & Kids"
+        "Community"
       ],
       "_distance_mi": 9.7
     },
@@ -1416,6 +1396,10 @@
       "categories": [
         "Theater"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Avon Theater, 94 S Main St, Heber City, UT",
       "filter_categories": [
         "Arts & Theater"
       ],
@@ -1435,6 +1419,10 @@
       "categories": [
         "Community"
       ],
+      "_all_sources": [
+        "Eventbrite"
+      ],
+      "address": "Park City Desserts & Coffee, 401 Main St, Park City, UT",
       "is_free": false,
       "filter_categories": [
         "Community"
@@ -1551,7 +1539,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:49:53.402703",
+      "scraped_at": "2026-05-28T15:11:01.047414",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -1646,6 +1634,10 @@
       "categories": [
         "Wellness"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Zermatt Utah Resort & Spa, 784 W Resort Dr, Midway, UT",
       "filter_categories": [
         "Wellness"
       ],
@@ -1665,6 +1657,10 @@
       "categories": [
         "Wellness"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Zermatt Utah Resort & Spa, 784 W Resort Dr, Midway, UT",
       "filter_categories": [
         "Wellness"
       ],
@@ -1688,6 +1684,10 @@
       "facets": [
         "21+"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Midway Mercantile Restaurant, 99 E Main St, Midway, UT",
       "filter_categories": [
         "Food & Drink"
       ],
@@ -1708,11 +1708,60 @@
       "categories": [
         "Community"
       ],
+      "_all_sources": [
+        "Eventbrite"
+      ],
+      "address": "Park City Bike & Demo, 1500 Kearns Blvd, Park City, UT",
       "is_free": false,
       "filter_categories": [
         "Community"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Oil Painting with Holli Yoho",
+      "date": "2026-06-11",
+      "description": "Paint your own lemon still life oil painting with step by step help. Ages 16 and up. Whether you\u2019ve never picked up a paint brush, it\u2019s been awhile, or you\u2019re still getting comfortable painting this class is for you! All materials are supplied and you\u2019ll go home with a 5x7 oil painting. Come fall in love with oil painting! Only 15 spots Available! *Due to material costs and teacher preparation,...",
+      "location": "The Dainty Pear Co., 152 W 100 N, Midway, UT 84049",
+      "venue_name": "The Dainty Pear Co.",
+      "address": "152 W 100 N, Midway, UT 84049",
+      "link": "https://thedaintypearco.com/products/june-11th-oil-painting-with-holli-yoho",
+      "source": "The Dainty Pear Co.",
+      "source_url": "https://thedaintypearco.com/collections/classes",
+      "lat": 40.5118,
+      "lng": -111.4744,
+      "is_free": false,
+      "categories": [
+        "Community",
+        "Arts"
+      ],
+      "scraped_at": "2026-05-28T12:29:48.405453",
+      "start_time": "7:30 PM",
+      "price": "$115.00",
+      "filter_categories": [
+        "Arts & Theater",
+        "Community"
+      ],
+      "_distance_mi": 3.2
+    },
+    {
+      "title": "Applications Open for the Wasatch County Library Board",
+      "date": "2026-06-12",
+      "description": "Wasatch County Library is seeking community members to serve on the Library Board. Applications for board vacancies are open now through June 12, 2026. Library",
+      "location": "Wasatch County Library, 465 East 1200 South, Heber City, UT 84032, USA",
+      "link": "https://library.wasatchcounty.gov/about",
+      "source": "KPCW Community Calendar",
+      "source_url": "https://www.kpcw.org/kpcw-community-calendar",
+      "lat": 40.49376729999999,
+      "lng": -111.4056241,
+      "categories": [
+        "Education"
+      ],
+      "address": "Wasatch County Library, 465 East 1200 South, Heber City, UT 84032, USA",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 1.0
     },
     {
       "title": "Midway Art Walk",
@@ -1793,7 +1842,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "10:00 AM",
       "end_time": "6:00 PM",
-      "end_date": "2026-06-13",
+      "end_date": null,
       "lat": 40.6285,
       "lng": -111.482,
       "categories": [
@@ -1801,7 +1850,6 @@
         "Sports and Recreation",
         "Mountain Biking"
       ],
-      "_repaired_from": "multi_day_split (was 2026-06-13 to 2026-06-14)",
       "filter_categories": [
         "Outdoors",
         "Sports"
@@ -1845,24 +1893,8 @@
       "categories": [
         "Kids"
       ],
-      "filter_categories": [
-        "Family & Kids"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Raptors at the Wasatch County Library",
-      "date": "2026-06-13",
-      "description": "Ever wonder what makes a raptor different than other birds? Come by the Wasatch County Library and find out! Meet our live raptor ambassadors and ask our educators all your burning raptor...",
-      "location": "Wasatch County Library, 465 E 1200 S, Heber City, UT",
-      "link": "https://hawkwatch.org/event/raptors-at-the-wasatch-county-library/",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:25.219430",
-      "categories": [
-        "Kids"
+      "_all_sources": [
+        "Google Events"
       ],
       "address": "Wasatch County Library, 465 E 1200 S, Heber City, UT",
       "filter_categories": [
@@ -1880,7 +1912,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "10:00 AM",
       "end_time": "6:00 PM",
-      "end_date": "2026-06-14",
+      "end_date": null,
       "lat": 40.6285,
       "lng": -111.482,
       "categories": [
@@ -1888,7 +1920,6 @@
         "Sports and Recreation",
         "Mountain Biking"
       ],
-      "_repaired_from": "multi_day_split (was 2026-06-13 to 2026-06-14)",
       "filter_categories": [
         "Outdoors",
         "Sports"
@@ -2024,6 +2055,9 @@
       "categories": [
         "Community"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
       "filter_categories": [
         "Community"
       ],
@@ -2059,8 +2093,8 @@
       "date": "2026-06-20",
       "description": "Join us for Habitat for Humanity of Summit & Wasatch Counties 2026 Overall Ball!",
       "location": "Montage Deer Valley, 9100 Marsac Ave, Park City, UT, 84060",
-      "link": "https://tockify.com/pcscart/detail/2372/1782000000000",
-      "source": "The Park Record",
+      "link": "https://www.visitparkcity.com/event/habitat-for-humanitys-overall-ball!/29054/",
+      "source": "Visit Park City",
       "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.616042,
       "lng": -111.51181,
@@ -2069,10 +2103,15 @@
       ],
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "scraped_at": "2026-05-28T18:49:56.266646",
+      "scraped_at": "2026-05-28T15:11:04.520515",
       "venue_name": "Montage Deer Valley",
       "address": "9100 Marsac Ave, Park City, UT, 84060",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/wHVj1XsYFEGZyWjnUxTZGw.large.png",
+      "_all_sources": [
+        "The Park Record",
+        "Visit Park City",
+        "Visit Park City (sitemap)"
+      ],
       "filter_categories": [
         "Community"
       ],
@@ -2159,24 +2198,8 @@
       "categories": [
         "Community"
       ],
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Warrior Revival Summer Fun",
-      "date": "2026-06-20",
-      "description": "Voted one of America's Favorite Triathlons by Triathlete Magazine! From its inception in 1998, the Jordanelle Triathlon is Utah's longest running triathlons! Come join us and see why it...",
-      "location": "Jordanelle State Park, 515 UT-319, Heber City, UT",
-      "link": "https://cityspark.com/events",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:28:58.370333",
-      "categories": [
-        "Community"
+      "_all_sources": [
+        "Google Events"
       ],
       "address": "Jordanelle State Park, 515 UT-319, Heber City, UT",
       "filter_categories": [
@@ -2232,6 +2255,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/vOjzxbkya0KTZPyFQXH3MQ.large.png",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Outdoors"
       ],
@@ -2251,6 +2278,10 @@
       "categories": [
         "Food & Drink"
       ],
+      "_all_sources": [
+        "Eventbrite"
+      ],
+      "address": "The Cabin, 427 Main St Unit 1, Park City, UT",
       "is_free": false,
       "filter_categories": [
         "Food & Drink"
@@ -2272,7 +2303,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:49:57.413250",
+      "scraped_at": "2026-05-28T15:11:05.939039",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -2324,6 +2355,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Outdoors"
@@ -2391,6 +2426,10 @@
       "categories": [
         "Food & Drink"
       ],
+      "_all_sources": [
+        "Eventbrite"
+      ],
+      "address": "Best Western Plus Heber Valley Hotel, 1227 US-40, Heber City, UT",
       "is_free": false,
       "filter_categories": [
         "Food & Drink"
@@ -2442,6 +2481,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -2651,6 +2694,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -2769,6 +2816,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -2790,7 +2841,7 @@
       ],
       "start_time": "",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:49:59.152820",
+      "scraped_at": "2026-05-28T15:11:08.001062",
       "venue_name": "Inn At Silver Lake",
       "address": "7560 Royal St",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/InD03XiuAUiRxkhxB64bKQ.large.png",
@@ -2866,6 +2917,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Outdoors"
@@ -2885,43 +2940,16 @@
       "scraped_at": "2026-05-28T18:52:31.183928",
       "start_time": "11:30 PM",
       "categories": [
-        "Food & Drink",
-        "Sports",
-        "Kids",
+        "Community",
         "Family",
         "Festival",
-        "Community"
-      ],
-      "end_time": "1:30 AM",
-      "is_free": false,
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
-        "Festivals",
         "Food & Drink",
+        "Kids",
         "Sports"
       ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Oakley Rodeo",
-      "date": "2026-07-01",
-      "description": "Oakley Rodeo is coming to Oakley Rodeo in Oakley, UT for an unforgettable event",
-      "location": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
-      "link": "https://www.eventticketscenter.com/oakley-rodeo-oakley-07-01-2026/7467443/t",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:18.077063",
-      "start_time": "11:30 PM",
-      "categories": [
-        "Food & Drink",
-        "Sports",
-        "Kids",
-        "Family",
-        "Festival",
-        "Community"
+      "end_time": "1:30 AM",
+      "_all_sources": [
+        "Google Events"
       ],
       "address": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
       "is_free": false,
@@ -2949,7 +2977,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:00.322142",
+      "scraped_at": "2026-05-28T15:11:09.430221",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -2971,43 +2999,16 @@
       "scraped_at": "2026-05-28T18:52:31.183986",
       "start_time": "11:30 PM",
       "categories": [
-        "Food & Drink",
-        "Sports",
-        "Kids",
+        "Community",
         "Family",
         "Festival",
-        "Community"
-      ],
-      "end_time": "1:30 AM",
-      "is_free": false,
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
-        "Festivals",
         "Food & Drink",
+        "Kids",
         "Sports"
       ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Oakley Rodeo",
-      "date": "2026-07-02",
-      "description": "Oakley Rodeo is coming to Oakley Rodeo in Oakley, UT for an unforgettable event",
-      "location": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
-      "link": "https://www.eventticketscenter.com/oakley-rodeo-oakley-07-02-2026/7467445/t",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:18.077132",
-      "start_time": "11:30 PM",
-      "categories": [
-        "Food & Drink",
-        "Sports",
-        "Kids",
-        "Family",
-        "Festival",
-        "Community"
+      "end_time": "1:30 AM",
+      "_all_sources": [
+        "Google Events"
       ],
       "address": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
       "is_free": false,
@@ -3041,6 +3042,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -3088,43 +3093,16 @@
       "scraped_at": "2026-05-28T18:52:31.183978",
       "start_time": "11:30 PM",
       "categories": [
-        "Food & Drink",
-        "Sports",
-        "Kids",
+        "Community",
         "Family",
         "Festival",
-        "Community"
-      ],
-      "end_time": "1:30 AM",
-      "is_free": false,
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
-        "Festivals",
         "Food & Drink",
+        "Kids",
         "Sports"
       ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Oakley Rodeo",
-      "date": "2026-07-03",
-      "description": "Oakley Rodeo is coming to Oakley Rodeo in Oakley, UT for an unforgettable event",
-      "location": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
-      "link": "https://www.eventticketscenter.com/oakley-rodeo-oakley-07-03-2026/7467446/t",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:18.077120",
-      "start_time": "11:30 PM",
-      "categories": [
-        "Food & Drink",
-        "Sports",
-        "Kids",
-        "Family",
-        "Festival",
-        "Community"
+      "end_time": "1:30 AM",
+      "_all_sources": [
+        "Google Events"
       ],
       "address": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
       "is_free": false,
@@ -3184,6 +3162,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -3320,6 +3302,10 @@
         "Family",
         "Festival"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Midway Town Hall, 75 100 W, Midway, UT",
       "filter_categories": [
         "Family & Kids",
         "Festivals"
@@ -3339,14 +3325,18 @@
       "scraped_at": "2026-05-28T18:52:31.183939",
       "start_time": "11:30 PM",
       "categories": [
-        "Food & Drink",
-        "Sports",
-        "Kids",
+        "Community",
         "Family",
         "Festival",
-        "Community"
+        "Food & Drink",
+        "Kids",
+        "Sports"
       ],
       "end_time": "1:30 AM",
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -3489,6 +3479,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -3508,13 +3502,17 @@
       "scraped_at": "2026-05-28T18:52:31.183969",
       "start_time": "11:30 PM",
       "categories": [
-        "Food & Drink",
-        "Sports",
-        "Kids",
+        "Community",
         "Family",
         "Festival",
-        "Community"
+        "Food & Drink",
+        "Kids",
+        "Sports"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Oakley Recreation Complex, 4300 N S R 32, Kamas, UT",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -3545,6 +3543,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Outdoors"
@@ -3568,27 +3570,8 @@
       "facets": [
         "Paid"
       ],
-      "filter_categories": [
-        "Arts & Theater"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "The Little Mermaid",
-      "date": "2026-07-08",
-      "description": "Ticket listings for The Little Mermaid at High Valley Arts Outdoor Theater in Midway, Utah on 08/07/2026",
-      "location": "High Valley Arts Outdoor Theater, 40 508678 #111.464453, Midway, UT",
-      "link": "https://www.viagogo.com/in/Theater-Tickets/Dance-Ballet/The-Little-Mermaid-Ballet/The-Little-Mermaid-Tickets/E-160937654",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:16.252267",
-      "categories": [
-        "Theater"
-      ],
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Google Events"
       ],
       "filter_categories": [
         "Arts & Theater"
@@ -3610,7 +3593,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:02.056835",
+      "scraped_at": "2026-05-28T15:11:11.593861",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -3657,7 +3640,7 @@
       ],
       "start_time": "1:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:02.056905",
+      "scraped_at": "2026-05-28T15:11:11.593965",
       "venue_name": "Silver Lake Lodge",
       "address": "7600 Royal Street",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/j0c8EWEO_EmxC1jEbgkZgA.large.png",
@@ -3687,6 +3670,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -3714,6 +3701,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -3737,6 +3728,10 @@
         "Community"
       ],
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/nWhzqpobsUWAawW3Dlqqgg.large.png",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -3753,7 +3748,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "11:30 AM",
       "end_time": "4:00 PM",
-      "end_date": "2026-07-11",
+      "end_date": null,
       "lat": 40.6155,
       "lng": -111.4858,
       "categories": [
@@ -3763,7 +3758,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/5AYJyd3D8U-5hiWqu6Tw0g.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -3790,6 +3788,7 @@
       "end_time": "10:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180730.jpg?decache=28-12-59",
       "date_label": "Sat, 6:00 AM start time",
+      "is_free": false,
       "filter_categories": [
         "Running & Races",
         "Sports"
@@ -3833,6 +3832,9 @@
       "categories": [
         "Theater"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
       "filter_categories": [
         "Arts & Theater"
       ],
@@ -3859,9 +3861,45 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Chef Sarah Glover Weekend",
+      "date": "2026-07-12",
+      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 11 and 12, Chef Sarah Glover brings her signature, land-driven approach to the flame, preparing locally sourced game, fresh-baked breads, and seasonal ingredients over open fire. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella filled with fresh seafood and local meats to Chef Sam Phelan's plank salmon, slow-cooked over the fire. Pair each bite with craft pours from Utah breweries and live music. Admission is free with...",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-chef-sarah-glover-071126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "11:30 AM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/5AYJyd3D8U-5hiWqu6Tw0g.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
       ],
       "_distance_mi": 8.4
     },
@@ -3884,40 +3922,15 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/eTQ-10fxqk62F6Xfz3dVkA.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
       ],
       "_distance_mi": 9.6
-    },
-    {
-      "title": "Chef Sarah Glover Weekend",
-      "date": "2026-07-12",
-      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 11 and 12, Chef Sarah Glover brings her signature, land-driven approach to the flame, preparing locally sourced game, fresh-baked breads, and seasonal ingredients over open fire. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella filled with fresh seafood and local meats to Chef Sam Phelan's plank salmon, slow-cooked over the fire. Pair each bite with craft pours from Utah breweries and live music. Admission is free with...",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-chef-sarah-glover-071126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "11:30 AM",
-      "end_time": "4:00 PM",
-      "end_date": "2026-07-12",
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/5AYJyd3D8U-5hiWqu6Tw0g.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-11 to 2026-07-12)",
-      "is_free": true,
-      "price": "Free",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 8.4
     },
     {
       "title": "Twilight Ride Series",
@@ -3939,6 +3952,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Outdoors"
@@ -3986,28 +4003,8 @@
       "facets": [
         "Paid"
       ],
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Lissa Dee",
-      "date": "2026-07-16",
-      "description": "Find tickets for Lissa Dee at High Star Ranch in Kamas on 7/16/2026 at 6:30 PM",
-      "location": "The Willows High Star Ranch, 218 Buck Rail Dr, Kamas, UT",
-      "link": "https://open.spotify.com/concert/7uwuGQw6jhP3EQTZCcfGNn",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:18.077018",
-      "start_time": "10:30 PM",
-      "categories": [
-        "Community"
-      ],
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Google Events"
       ],
       "address": "The Willows High Star Ranch, 218 Buck Rail Dr, Kamas, UT",
       "filter_categories": [
@@ -4032,7 +4029,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:04.354507",
+      "scraped_at": "2026-05-28T15:11:14.356331",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/8Bf-EwPucUeXexZJiTkvhw.large.png",
@@ -4064,6 +4061,11 @@
       "image_url": "https://usuo.org/app/uploads/2026/03/DVMF1-Beethovens-Symphony-No.-9.jpg",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Music Festival",
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Music"
@@ -4134,6 +4136,9 @@
       "facets": [
         "Paid"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
       "filter_categories": [
         "Arts & Theater"
       ],
@@ -4162,7 +4167,8 @@
       "address": "2250 Deer Valley Dr S",
       "_all_sources": [
         "Deer Valley Music Festival",
-        "Deer Valley Resort"
+        "Deer Valley Resort",
+        "The Park Record"
       ],
       "filter_categories": [
         "Community",
@@ -4187,7 +4193,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:04.354755",
+      "scraped_at": "2026-05-28T15:11:14.356690",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/8Bf-EwPucUeXexZJiTkvhw.large.png",
@@ -4217,11 +4223,45 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HNBcZONnk061SxvPXGjSRg.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
       ],
       "_distance_mi": 9.6
+    },
+    {
+      "title": "Matilda & Gozney Weekend",
+      "date": "2026-07-18",
+      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 18 and 19, Gozney and Matilda come together to serve up an unforgettable pizza experience. Gozney's professional-grade ovens, engineered to hit blazing temperatures over 900\u00b0F with their signature rolling flame, set the stage for Matilda's wood-fired Neapolitan pizzas, crafted with the same passion that's made them a local favorite among both travelers and regulars. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella fille...",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-matilda-and-gozney-071826",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "11:30 AM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/GYl1V7xrMUayzhEReBTjmQ.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 8.4
     },
     {
       "title": "Live Music at Silver Lake",
@@ -4249,7 +4289,7 @@
     },
     {
       "title": "Matilda & Gozney Weekend",
-      "date": "2026-07-18",
+      "date": "2026-07-19",
       "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 18 and 19, Gozney and Matilda come together to serve up an unforgettable pizza experience. Gozney's professional-grade ovens, engineered to hit blazing temperatures over 900\u00b0F with their signature rolling flame, set the stage for Matilda's wood-fired Neapolitan pizzas, crafted with the same passion that's made them a local favorite among both travelers and regulars. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella fille...",
       "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
       "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-matilda-and-gozney-071826",
@@ -4257,7 +4297,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "11:30 AM",
       "end_time": "4:00 PM",
-      "end_date": "2026-07-18",
+      "end_date": null,
       "lat": 40.6155,
       "lng": -111.4858,
       "categories": [
@@ -4267,7 +4307,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/GYl1V7xrMUayzhEReBTjmQ.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-18 to 2026-07-19)",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -4293,6 +4336,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/0lfQyUmsGU2woeUrS7tdyQ.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -4318,6 +4365,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/vOjzxbkya0KTZPyFQXH3MQ.large.png",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Outdoors"
       ],
@@ -4348,33 +4399,6 @@
       "_distance_mi": 8.4
     },
     {
-      "title": "Matilda & Gozney Weekend",
-      "date": "2026-07-19",
-      "description": "Experience the flavors of the mountains at Silver Lake, where open-fire cooking meets alpine views. On July 18 and 19, Gozney and Matilda come together to serve up an unforgettable pizza experience. Gozney's professional-grade ovens, engineered to hit blazing temperatures over 900\u00b0F with their signature rolling flame, set the stage for Matilda's wood-fired Neapolitan pizzas, crafted with the same passion that's made them a local favorite among both travelers and regulars. Throughout the lawn, discover standout culinary moments, from Chef Peter Menteer's showstopping eight-foot paella fille...",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-matilda-and-gozney-071826",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "11:30 AM",
-      "end_time": "4:00 PM",
-      "end_date": "2026-07-19",
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/GYl1V7xrMUayzhEReBTjmQ.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-07-18 to 2026-07-19)",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
       "title": "Angie Petty",
       "date": "2026-07-21",
       "description": "Hidden Ace",
@@ -4389,7 +4413,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:05.612002",
+      "scraped_at": "2026-05-28T15:11:15.722301",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -4418,6 +4442,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Outdoors"
@@ -4461,6 +4489,10 @@
       "categories": [
         "Sports"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Wasatch County Event Complex, Southfield Park, 415 S Fld Rd, Heber City, UT",
       "filter_categories": [
         "Sports"
       ],
@@ -4484,48 +4516,8 @@
       "facets": [
         "Paid"
       ],
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Demolition Derby",
-      "date": "2026-07-23",
-      "description": "The Wasatch County Demolition Derby is back July 23rd, 24th, and 25th at the Wasatch County Event Complex in Heber City, Utah. Join us for an action packed, adrenaline-filled good time!",
-      "location": "Wasatch County Event Complex, Southfield Park, 415 S Fld Rd, Heber City, UT",
-      "link": "https://www.ksl.com/events/details/577949?date=2026-07-23",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:25.219418",
-      "categories": [
-        "Sports"
-      ],
-      "address": "Wasatch County Event Complex, Southfield Park, 415 S Fld Rd, Heber City, UT",
-      "filter_categories": [
-        "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "The Last Light",
-      "date": "2026-07-23",
-      "description": "Find tickets for The Last Light at Heber Valley Market in Heber City on 7/23/2026 at 6:30 PM",
-      "location": "Heber Valley Market, Heber City, UT",
-      "link": "https://open.spotify.com/concert/3HfoWLz8U7G6QtdQy0KjNF",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:26.684746",
-      "start_time": "10:30 PM",
-      "categories": [
-        "Community"
-      ],
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Google Events"
       ],
       "filter_categories": [
         "Community"
@@ -4587,6 +4579,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -4634,6 +4630,7 @@
       "end_time": "9:00 AM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750856.jpg?decache=28-12-59",
       "date_label": "7:00 - 9:00 AM ",
+      "is_free": false,
       "filter_categories": [
         "Community",
         "Running & Races"
@@ -4681,7 +4678,6 @@
         "Festival"
       ],
       "image_url": "https://townlift.com/wp-content/uploads/2026/04/IMG_4126.jpg",
-      "address": "Heber Main Street Park, 250 S. Main Street, Heber, Utah",
       "filter_categories": [
         "Arts & Theater",
         "Family & Kids",
@@ -4710,6 +4706,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -4734,12 +4734,13 @@
         "Outdoor"
       ],
       "image_url": "https://usuo.org/app/uploads/2026/03/DVMF2-Stravinskys-Firebird-Suite.png",
-      "address": "2250 Deer Valley Dr S",
-      "venue_name": "Deer Valley Ski Resort Main Base",
       "_all_sources": [
+        "Deer Valley Music Festival",
         "Deer Valley Resort",
         "The Park Record"
       ],
+      "address": "2250 Deer Valley Dr S",
+      "venue_name": "Deer Valley Ski Resort Main Base",
       "filter_categories": [
         "Music",
         "Outdoors"
@@ -4766,6 +4767,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/t7GyI4WBH0m_CNq7ZT1DSA.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -4787,7 +4792,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:06.240759",
+      "scraped_at": "2026-05-28T15:11:16.477980",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -4813,7 +4818,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:06.240798",
+      "scraped_at": "2026-05-28T15:11:16.478046",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/9361e5ac-d208-4303-a54f-cf9888f14f8a.large.png",
@@ -4843,6 +4848,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/wkv47nOs1UmuhfFiB0uh6A.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -4895,6 +4904,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -4921,6 +4934,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/t7GyI4WBH0m_CNq7ZT1DSA.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -4946,6 +4963,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/DXOdh7g_HUGdAZXSjMj7Iw.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Arts & Theater",
         "Food & Drink"
@@ -4963,18 +4984,22 @@
       "lat": 40.5017197,
       "lng": -111.4313885,
       "categories": [
-        "Music",
-        "Food & Drink",
-        "Kids",
+        "Community",
         "Family",
         "Festival",
-        "Community"
+        "Food & Drink",
+        "Kids",
+        "Music"
       ],
       "scraped_at": "2026-05-28T18:52:00.318622",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=28-12-59",
       "date_label": "July 27 - August 1, event times vary",
+      "_all_sources": [
+        "Google Events",
+        "Heber Valley Tourism"
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -5004,6 +5029,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Outdoors"
@@ -5022,13 +5051,17 @@
       "lng": -111.4133,
       "scraped_at": "2026-05-28T18:52:31.477984",
       "categories": [
-        "Food & Drink",
-        "Sports",
-        "Kids",
+        "Community",
         "Family",
         "Festival",
-        "Community"
+        "Food & Drink",
+        "Kids",
+        "Sports"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Wasatch County Event Complex, Southfield Park, 415 S Fld Rd, Heber City, UT",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -5082,9 +5115,13 @@
       "lng": -111.4133,
       "scraped_at": "2026-05-28T18:52:32.100696",
       "categories": [
-        "Kids",
-        "Festival"
+        "Festival",
+        "Kids"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Deer Valley Snow Park Outdoor Amphitheater, 2250 Deer Valley Dr S #501, Park City, UT",
       "filter_categories": [
         "Family & Kids",
         "Festivals"
@@ -5108,7 +5145,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:07.979549",
+      "scraped_at": "2026-05-28T15:11:18.576318",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/BKMTJqc9hkmAP-9w8RqU2g.large.png",
@@ -5139,6 +5176,11 @@
       "image_url": "https://usuo.org/app/uploads/2026/03/DVMF3-Lyle-Lovett.jpg",
       "venue_name": "Deer Valley Ski Resort Main Base",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Music Festival",
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Music",
         "Outdoors"
@@ -5164,6 +5206,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/o4mh81BCQkKYWwSC_JVxdA.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -5191,6 +5237,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -5247,6 +5297,10 @@
       "facets": [
         "Paid"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Deer Valley Resort, 2250 Deer Valley Dr S, Park City, UT",
       "filter_categories": [
         "Festivals"
       ],
@@ -5264,9 +5318,13 @@
       "lng": -111.4133,
       "scraped_at": "2026-05-28T18:52:32.100716",
       "categories": [
-        "Music",
-        "Festival"
+        "Festival",
+        "Music"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Deer Valley Snow Park Outdoor Amphitheater, 2250 Deer Valley Dr S #501, Park City, UT",
       "filter_categories": [
         "Festivals",
         "Music"
@@ -5294,6 +5352,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -5322,8 +5384,10 @@
       "venue_name": "Deer Valley Ski Resort Main Base",
       "address": "2250 Deer Valley Dr S",
       "_all_sources": [
+        "Deer Valley Music Festival",
         "Deer Valley Resort",
-        "Google Events"
+        "Google Events",
+        "The Park Record"
       ],
       "filter_categories": [
         "Festivals",
@@ -5349,7 +5413,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:08.573722",
+      "scraped_at": "2026-05-28T15:11:19.259977",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/f9Ux9FT0H0WPlLcfgpr1Og.large.png",
@@ -5359,6 +5423,36 @@
         "Outdoors"
       ],
       "_distance_mi": 9.7
+    },
+    {
+      "title": "Chef Ryan Arensdorf Weekend",
+      "date": "2026-08-01",
+      "description": "Experience Fire & Flavor Festival, where live-fire cooking meets alpine views. On August 1 and 2, Chef Ryan Arensdorf of KC Que takes the lead with Kansas City-style BBQ, featuring slow smoked meats, classic sides, and sweet cornbread. Set on Silver Lake Lawn, this weekend brings bold, fire-driven flavor to a relaxed mountain setting, where guests can gather and refuel between activities. Chef Peter Menteer prepares paella in an 8-foot pan with local meats and fresh seafood, alongside Chef Sam Phelan's plank salmon cooked over open fire pits. Local Utah breweries and live entertainment at ...",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-ryan-arensdorf-080126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "11:30 AM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 8.4
     },
     {
       "title": "Reception & Five-Course Dinner",
@@ -5382,33 +5476,6 @@
       "_distance_mi": 9.6
     },
     {
-      "title": "Chef Ryan Arensdorf Weekend",
-      "date": "2026-08-01",
-      "description": "Experience Fire & Flavor Festival, where live-fire cooking meets alpine views. On August 1 and 2, Chef Ryan Arensdorf of KC Que takes the lead with Kansas City-style BBQ, featuring slow smoked meats, classic sides, and sweet cornbread. Set on Silver Lake Lawn, this weekend brings bold, fire-driven flavor to a relaxed mountain setting, where guests can gather and refuel between activities. Chef Peter Menteer prepares paella in an 8-foot pan with local meats and fresh seafood, alongside Chef Sam Phelan's plank salmon cooked over open fire pits. Local Utah breweries and live entertainment at ...",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-ryan-arensdorf-080126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "11:30 AM",
-      "end_time": "4:00 PM",
-      "end_date": "2026-08-01",
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-08-01 to 2026-08-02)",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
       "title": "Wasatch County Fair Days",
       "date": "2026-08-01",
       "description": "Wasatch Count Fair Days Demolition Derby & Mountain Valley Stampede One of the best PRCA rodeos in the state! The Mountain Valley Stampede Rodeo is great family fun with the best stock from Powder...",
@@ -5420,14 +5487,18 @@
       "lng": -111.4133,
       "scraped_at": "2026-05-28T18:52:30.191501",
       "categories": [
-        "Music",
-        "Food & Drink",
-        "Sports",
-        "Kids",
+        "Community",
         "Family",
         "Festival",
-        "Community"
+        "Food & Drink",
+        "Kids",
+        "Music",
+        "Sports"
       ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Wasatch County Fair, 590 S 600 W, Heber City, UT",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -5459,9 +5530,43 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Chef Ryan Arensdorf Weekend",
+      "date": "2026-08-02",
+      "description": "Experience Fire & Flavor Festival, where live-fire cooking meets alpine views. On August 1 and 2, Chef Ryan Arensdorf of KC Que takes the lead with Kansas City-style BBQ, featuring slow smoked meats, classic sides, and sweet cornbread. Set on Silver Lake Lawn, this weekend brings bold, fire-driven flavor to a relaxed mountain setting, where guests can gather and refuel between activities. Chef Peter Menteer prepares paella in an 8-foot pan with local meats and fresh seafood, alongside Chef Sam Phelan's plank salmon cooked over open fire pits. Local Utah breweries and live entertainment at ...",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-ryan-arensdorf-080126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "11:30 AM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
       ],
       "_distance_mi": 8.4
     },
@@ -5484,38 +5589,15 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/iQJkPT9VI0-y19Dhh4Fs6Q.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
       ],
       "_distance_mi": 9.6
-    },
-    {
-      "title": "Chef Ryan Arensdorf Weekend",
-      "date": "2026-08-02",
-      "description": "Experience Fire & Flavor Festival, where live-fire cooking meets alpine views. On August 1 and 2, Chef Ryan Arensdorf of KC Que takes the lead with Kansas City-style BBQ, featuring slow smoked meats, classic sides, and sweet cornbread. Set on Silver Lake Lawn, this weekend brings bold, fire-driven flavor to a relaxed mountain setting, where guests can gather and refuel between activities. Chef Peter Menteer prepares paella in an 8-foot pan with local meats and fresh seafood, alongside Chef Sam Phelan's plank salmon cooked over open fire pits. Local Utah breweries and live entertainment at ...",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/fire-and-flavor-festival-ryan-arensdorf-080126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "11:30 AM",
-      "end_time": "4:00 PM",
-      "end_date": "2026-08-02",
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-08-01 to 2026-08-02)",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 8.4
     },
     {
       "title": "Twilight Ride Series",
@@ -5537,6 +5619,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
       "venue_name": "Snow Park Lodge",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Outdoors"
@@ -5562,6 +5648,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/o4mh81BCQkKYWwSC_JVxdA.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -5586,28 +5676,8 @@
       "facets": [
         "Paid"
       ],
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "The Selfless Lovers",
-      "date": "2026-08-06",
-      "description": "Find tickets for The Selfless Lovers at Heber Valley Market in Heber City on 8/6/2026 at 6:30 PM",
-      "location": "Heber Valley Market, Heber City, UT",
-      "link": "https://open.spotify.com/concert/63zpILJyBDFDZQdlM2f6bz",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:26.684678",
-      "start_time": "10:30 PM",
-      "categories": [
-        "Community"
-      ],
-      "facets": [
-        "Paid"
+      "_all_sources": [
+        "Google Events"
       ],
       "filter_categories": [
         "Community"
@@ -5634,6 +5704,11 @@
       "image_url": "https://usuo.org/app/uploads/2026/04/DVMF5-Chicago-in-Concert-1.jpg",
       "venue_name": "Deer Valley Ski Resort Main Base",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Music Festival",
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Music",
         "Outdoors"
@@ -5656,8 +5731,8 @@
         "Outdoor"
       ],
       "start_time": "7:30 PM",
-      "end_time": "10:30 PM",
-      "scraped_at": "2026-05-28T18:50:09.716766",
+      "end_time": "",
+      "scraped_at": "2026-05-28T15:11:20.650220",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/avfrxl_cukyA2j8N_cOQHg.large.png",
@@ -5689,6 +5764,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -5739,6 +5818,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -5765,6 +5848,11 @@
       "image_url": "https://usuo.org/app/uploads/2026/03/DVMF6-Idina-Menzel.jpg",
       "venue_name": "Deer Valley Ski Resort Main Base",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Music Festival",
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Music",
         "Outdoors"
@@ -5788,7 +5876,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:10.277138",
+      "scraped_at": "2026-05-28T15:11:21.314960",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/b1q65zBBG0WlxctMNFc5Jw.large.png",
@@ -5809,7 +5897,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "11:30 AM",
       "end_time": "4:00 PM",
-      "end_date": "2026-08-08",
+      "end_date": null,
       "lat": 40.6155,
       "lng": -111.4858,
       "categories": [
@@ -5819,7 +5907,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-08-08 to 2026-08-09)",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -5844,6 +5935,7 @@
       "end_time": "11:00 AM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3161632.jpg?decache=28-12-59",
       "date_label": "6:00 AM - 11:00 AM",
+      "is_free": false,
       "filter_categories": [
         "Running & Races",
         "Sports"
@@ -5923,6 +6015,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -5939,7 +6035,7 @@
       "source_url": "https://www.deervalley.com/things-to-do/events",
       "start_time": "11:30 AM",
       "end_time": "4:00 PM",
-      "end_date": "2026-08-09",
+      "end_date": null,
       "lat": 40.6155,
       "lng": -111.4858,
       "categories": [
@@ -5949,12 +6045,122 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/HHIQ6usQT0m9hrIzqgVeMw.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
-      "_repaired_from": "multi_day_split (was 2026-08-08 to 2026-08-09)",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
       ],
       "_distance_mi": 8.4
+    },
+    {
+      "title": "Heber Valley Chamber Golf Tournament",
+      "date": "2026-08-11",
+      "description": "Heber Valley Chamber Golf Tournament in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-valley-chamber-golf-tournament",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4819576,
+      "lng": -111.5007583,
+      "categories": [
+        "Sports"
+      ],
+      "scraped_at": "2026-05-28T18:52:00.324145",
+      "start_time": "8:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728272.jpg?decache=28-12-59",
+      "date_label": "Soldier Hollow Gold Course, 8:00 AM Shotgun",
+      "end_time": "9:00 AM",
+      "filter_categories": [
+        "Sports"
+      ],
+      "_distance_mi": 4.9
+    },
+    {
+      "title": "Twilight Ride Series",
+      "date": "2026-08-12",
+      "description": "Experience the magic of the mountain at dusk this summer with our Twilight Ride Series! Join us every Wednesday, from June 24 to August 19, weather and conditions permitting, for lift-served mountain biking from 4 to 8 p.m. Take the Silver Lake Express, Homestake Express, or Sterling Express chairlifts and explore the trails in the evening glow.",
+      "location": "On Mountain, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/twilight-ride-series-081226",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "4:00 PM",
+      "end_time": "8:00 PM",
+      "lat": 40.6285,
+      "lng": -111.482,
+      "categories": [
+        "Mountain Biking",
+        "Community"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
+      "venue_name": "Snow Park Lodge",
+      "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Community",
+        "Outdoors"
+      ],
+      "_distance_mi": 9.1
+    },
+    {
+      "title": "Donuts with the Director",
+      "date": "2026-08-12",
+      "description": "Donuts with the Director in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/donuts-with-the-director",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5138203,
+      "lng": -111.4135167,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-28T18:52:00.324457",
+      "start_time": "8:30 AM",
+      "end_time": "9:30 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=28-12-59",
+      "date_label": "Heber Valley Visitor Center, 8:30 - 9:30 AM",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.5
+    },
+    {
+      "title": "Famous Film Music",
+      "date": "2026-08-13",
+      "description": "From the back of a dragon high in the sky to galaxies far, far away, the Utah Symphony brings unforgettable film scores to life under the open stars at the Deer Valley\u00ae Music Festival. With music from Pirates of the Caribbean, Mission: Impossible, How to Train Your Dragon, Disney classics like Beauty and the Beast, and more, these melodies bring back memories of the moments you first heard them\u2014reimagined live in a night of adventure, heart, and emotion.",
+      "location": "Snow Park Outdoor Amphitheater, 2250 Deer Valley Dr S #501, Park City, UT 84060, USA",
+      "link": "https://www.deervalley.com/things-to-do/events/deer-valley-music-festival-famous-film-music-081326",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "6:00 PM",
+      "end_time": "10:30 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Music",
+        "Concert",
+        "Outdoor"
+      ],
+      "image_url": "https://usuo.org/app/uploads/2026/04/DVMF7-Famous-Film-Music.jpg",
+      "venue_name": "Deer Valley Ski Resort Main Base",
+      "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Music Festival",
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "_distance_mi": 9.6
     },
     {
       "title": "Trombone Shorty & Orleans Avenue and St. Paul & The Broken Bones",
@@ -5973,6 +6179,10 @@
         "Community"
       ],
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jZ9dfi5g6kqbmkwyrGFfmw.large.png",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Music"
@@ -6000,6 +6210,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -6050,6 +6264,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -6076,6 +6294,11 @@
       "image_url": "https://usuo.org/app/uploads/2026/03/DVMF7-The-Music-of-Celine-Dion-1.jpg",
       "venue_name": "Deer Valley Ski Resort Main Base",
       "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Music Festival",
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Music",
         "Outdoors"
@@ -6099,7 +6322,7 @@
       ],
       "start_time": "7:30 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:11.499699",
+      "scraped_at": "2026-05-28T15:11:22.705930",
       "venue_name": "Deer Valley Snow Park Outdoor Amphitheater",
       "address": "2250 Deer Valley Drive South",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Jkg4gW3H1U2BkahK5M4N_Q.large.png",
@@ -6129,6 +6352,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/0lfQyUmsGU2woeUrS7tdyQ.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -6160,6 +6387,150 @@
     },
     {
       "title": "Live Music at Silver Lake",
+      "date": "2026-08-16",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-081426",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "\"Little Chefs\" Culinary Series: Cookie Decorating",
+      "date": "2026-08-16",
+      "description": "In this hands-on class, kids will learn how to decorate cookies with colorful frosting, sprinkles, and fun techniques. Each young baker will take home a Deer Valley logo apron and chef hat to show off their new skills, along with their cookie creations. Perfect for little chefs who love to get creative \\(and a little messy\\) in the kitchen!",
+      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-chefs-cookie-decorating",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Za4d-qNgF0yJKXhpNtGi9g.large.png",
+      "venue_name": "Deer Valley Plaza Building",
+      "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 9.6
+    },
+    {
+      "title": "Guided Historical Hike",
+      "date": "2026-08-16",
+      "description": "Step into Park City's past on a guided hike through Deer Valley's scenic terrain, where fresh mountain air meets stories of the area's rich mining history. This three- to four-hour hike covers moderate terrain, typically under six miles, as guests hike around Empire. Meet at the Mid-Mountain Trailhead on Marsac Ave, above the Montage, for an 8:30 a.m. departure.",
+      "location": "On Mountain, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/guided-historical-hike-081626",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "8:30 AM",
+      "end_time": "12:30 PM",
+      "lat": 40.6285,
+      "lng": -111.482,
+      "categories": [
+        "Hiking",
+        "Outdoor"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/vOjzxbkya0KTZPyFQXH3MQ.large.png",
+      "venue_name": "Snow Park Lodge",
+      "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Outdoors"
+      ],
+      "_distance_mi": 9.1
+    },
+    {
+      "title": "Twilight Ride Series",
+      "date": "2026-08-19",
+      "description": "Experience the magic of the mountain at dusk this summer with our Twilight Ride Series! Join us every Wednesday, from June 24 to August 19, weather and conditions permitting, for lift-served mountain biking from 4 to 8 p.m. Take the Silver Lake Express, Homestake Express, or Sterling Express chairlifts and explore the trails in the evening glow.",
+      "location": "On Mountain, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/twilight-ride-series-081926",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "4:00 PM",
+      "end_time": "8:00 PM",
+      "lat": 40.6285,
+      "lng": -111.482,
+      "categories": [
+        "Mountain Biking",
+        "Community"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
+      "venue_name": "Snow Park Lodge",
+      "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Community",
+        "Outdoors"
+      ],
+      "_distance_mi": 9.1
+    },
+    {
+      "title": "Alicia Stockman",
+      "date": "2026-08-20",
+      "description": "Find tickets for Alicia Stockman at Heber Market on Main in Heber City on 8/20/2026 at 6:30 PM",
+      "location": "Heber Valley Market, Heber City, UT",
+      "link": "https://open.spotify.com/concert/2VsqVxcM2eKJEAhdLzJJJV",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "scraped_at": "2026-05-28T18:52:31.786108",
+      "start_time": "10:30 PM",
+      "categories": [
+        "Community"
+      ],
+      "facets": [
+        "Paid"
+      ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music at Silver Lake",
       "date": "2026-08-21",
       "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
       "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
@@ -6179,11 +6550,135 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
       ],
       "_distance_mi": 8.4
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-08-22",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "\"Little Artists\" Series: Design Your Own Canvas Tote",
+      "date": "2026-08-22",
+      "description": "Creative Academy Class \u2014 Carry your style wherever you go. Design and decorate your own tote bag using fabric markers, patches, and creative techniques. You\u2019ll leave with a one-of-a-kind piece that\u2019s both practical and personal. Enjoy a refreshing lemonade bar as you craft and create. Reserve Now Vi",
+      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-artists-design-your-own-canvas-tote",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Food and Beverage",
+        "Arts"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/M6VIi7QFB0uSJPEYXmG0XQ.large.png",
+      "venue_name": "Deer Valley Plaza Building",
+      "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Arts & Theater",
+        "Food & Drink"
+      ],
+      "_distance_mi": 9.6
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-08-23",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Uncork and Create",
+      "date": "2026-08-23",
+      "description": "Creative Academy Class \u2014 Unwind with a glass of wine and explore the art of glass design in this relaxed, hands-on class led by local Park City artist Emily Miquelon. Create your own unique piece in a welcoming, inspiring setting. This is a 21+ class. Reserve Now View Classes",
+      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-uncork-and-create",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "lat": 40.6374,
+      "lng": -111.4783,
+      "categories": [
+        "Food and Beverage",
+        "Community"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/bVPMnUFnMU2diAObjF9D3w.large.png",
+      "venue_name": "Deer Valley Plaza Building",
+      "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "_distance_mi": 9.6
     },
     {
       "title": "Live Music at Silver Lake",
@@ -6206,6 +6701,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -6302,6 +6801,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -6327,6 +6830,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/H3Tw2Kr2r0GNOPqWK-fa8w.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -6357,568 +6864,6 @@
     },
     {
       "title": "Live Music at Silver Lake",
-      "date": "2026-09-05",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-090426",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-19",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091826",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Mountain Bike World Series @ Soldier Hollow",
-      "date": "2026-09-19",
-      "description": "Mountain Bike World Series @ Soldier Hollow in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/soho-whoop-uci-world-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-28T18:52:00.338778",
-      "start_time": "8:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=28-12-59",
-      "date_label": "Sep 19 - 20",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Whoop UCI Mountain Bike World Cup at Soldier Hollow",
-      "date": "2026-09-19",
-      "description": "The UCI Mountain Bike World Cup \u2013 XCO/XCC 2026 is set to take place at Soldier Hollow, Midway, Utah from 19 Sep 2026 to 20 Sep 2026. This prestigious event will bring together the world's best...",
-      "location": "Soldier Hollow Nordic Center, 2002 Olympic Dr, Midway, UT",
-      "link": "https://mtbdata.com/comp/uci-mountain-bike-world-cup-xcoxcc-19-sep-20-sep-2026-soldier-hollow-midway-utah",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T18:52:30.875238",
-      "categories": [
-        "Sports"
-      ],
-      "filter_categories": [
-        "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "The Park City Bridal Expo",
-      "date": "2026-09-19",
-      "description": "Get ready for the ultimate wedding inspiration at The Park City Bridal Expo - it's where your Mountain West dream wedding begins! Join us September 19, 2026 for The Park City Bridal Expo at the...",
-      "location": "Sheraton Park City, 1895 Sidewinder Dr, Park City, UT",
-      "link": "https://www.eventbrite.com/e/the-park-city-bridal-expo-tickets-1987850916603",
-      "source": "Eventbrite",
-      "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T18:52:32.517487",
-      "categories": [
-        "Community"
-      ],
-      "is_free": false,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Twilight Ride Series",
-      "date": "2026-08-12",
-      "description": "Experience the magic of the mountain at dusk this summer with our Twilight Ride Series! Join us every Wednesday, from June 24 to August 19, weather and conditions permitting, for lift-served mountain biking from 4 to 8 p.m. Take the Silver Lake Express, Homestake Express, or Sterling Express chairlifts and explore the trails in the evening glow.",
-      "location": "On Mountain, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/twilight-ride-series-081226",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "4:00 PM",
-      "end_time": "8:00 PM",
-      "lat": 40.6285,
-      "lng": -111.482,
-      "categories": [
-        "Mountain Biking",
-        "Community"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
-      "venue_name": "Snow Park Lodge",
-      "address": "2250 Deer Valley Dr S",
-      "filter_categories": [
-        "Community",
-        "Outdoors"
-      ],
-      "_distance_mi": 9.1
-    },
-    {
-      "title": "Donuts with the Director",
-      "date": "2026-08-12",
-      "description": "Donuts with the Director in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/donuts-with-the-director",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5138203,
-      "lng": -111.4135167,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-28T18:52:00.324457",
-      "start_time": "8:30 AM",
-      "end_time": "9:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=28-12-59",
-      "date_label": "Heber Valley Visitor Center, 8:30 - 9:30 AM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.5
-    },
-    {
-      "title": "Twilight Ride Series",
-      "date": "2026-08-19",
-      "description": "Experience the magic of the mountain at dusk this summer with our Twilight Ride Series! Join us every Wednesday, from June 24 to August 19, weather and conditions permitting, for lift-served mountain biking from 4 to 8 p.m. Take the Silver Lake Express, Homestake Express, or Sterling Express chairlifts and explore the trails in the evening glow.",
-      "location": "On Mountain, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/twilight-ride-series-081926",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "4:00 PM",
-      "end_time": "8:00 PM",
-      "lat": 40.6285,
-      "lng": -111.482,
-      "categories": [
-        "Mountain Biking",
-        "Community"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/TGsLYkC20kOVOmGxK8y5zA.large.png",
-      "venue_name": "Snow Park Lodge",
-      "address": "2250 Deer Valley Dr S",
-      "filter_categories": [
-        "Community",
-        "Outdoors"
-      ],
-      "_distance_mi": 9.1
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-08-16",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-081426",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "\"Little Chefs\" Culinary Series: Cookie Decorating",
-      "date": "2026-08-16",
-      "description": "In this hands-on class, kids will learn how to decorate cookies with colorful frosting, sprinkles, and fun techniques. Each young baker will take home a Deer Valley logo apron and chef hat to show off their new skills, along with their cookie creations. Perfect for little chefs who love to get creative \\(and a little messy\\) in the kitchen!",
-      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-chefs-cookie-decorating",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "3:30 PM",
-      "end_time": "5:00 PM",
-      "lat": 40.6374,
-      "lng": -111.4783,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/Za4d-qNgF0yJKXhpNtGi9g.large.png",
-      "venue_name": "Deer Valley Plaza Building",
-      "address": "1375 Deer Valley Dr S",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 9.6
-    },
-    {
-      "title": "Guided Historical Hike",
-      "date": "2026-08-16",
-      "description": "Step into Park City's past on a guided hike through Deer Valley's scenic terrain, where fresh mountain air meets stories of the area's rich mining history. This three- to four-hour hike covers moderate terrain, typically under six miles, as guests hike around Empire. Meet at the Mid-Mountain Trailhead on Marsac Ave, above the Montage, for an 8:30 a.m. departure.",
-      "location": "On Mountain, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/guided-historical-hike-081626",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "8:30 AM",
-      "end_time": "12:30 PM",
-      "lat": 40.6285,
-      "lng": -111.482,
-      "categories": [
-        "Hiking",
-        "Outdoor"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/vOjzxbkya0KTZPyFQXH3MQ.large.png",
-      "venue_name": "Snow Park Lodge",
-      "address": "2250 Deer Valley Dr S",
-      "filter_categories": [
-        "Outdoors"
-      ],
-      "_distance_mi": 9.1
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-08-23",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Uncork and Create",
-      "date": "2026-08-23",
-      "description": "Creative Academy Class \u2014 Unwind with a glass of wine and explore the art of glass design in this relaxed, hands-on class led by local Park City artist Emily Miquelon. Create your own unique piece in a welcoming, inspiring setting. This is a 21+ class. Reserve Now View Classes",
-      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-uncork-and-create",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "3:30 PM",
-      "end_time": "5:00 PM",
-      "lat": 40.6374,
-      "lng": -111.4783,
-      "categories": [
-        "Food and Beverage",
-        "Community"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/bVPMnUFnMU2diAObjF9D3w.large.png",
-      "venue_name": "Deer Valley Plaza Building",
-      "address": "1375 Deer Valley Dr S",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "_distance_mi": 9.6
-    },
-    {
-      "title": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools",
-      "date": "2026-09-02",
-      "description": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/sept-business-university",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.545359,
-      "lng": -111.413593,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-28T18:52:00.333085",
-      "start_time": "11:30 PM",
-      "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=28-12-59",
-      "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 2.7
-    },
-    {
-      "title": "Famous Film Music",
-      "date": "2026-08-13",
-      "description": "From the back of a dragon high in the sky to galaxies far, far away, the Utah Symphony brings unforgettable film scores to life under the open stars at the Deer Valley\u00ae Music Festival. With music from Pirates of the Caribbean, Mission: Impossible, How to Train Your Dragon, Disney classics like Beauty and the Beast, and more, these melodies bring back memories of the moments you first heard them\u2014reimagined live in a night of adventure, heart, and emotion.",
-      "location": "Snow Park Outdoor Amphitheater, 2250 Deer Valley Dr S #501, Park City, UT 84060, USA",
-      "link": "https://www.deervalley.com/things-to-do/events/deer-valley-music-festival-famous-film-music-081326",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "6:00 PM",
-      "end_time": "10:30 PM",
-      "lat": 40.6374,
-      "lng": -111.4783,
-      "categories": [
-        "Music",
-        "Concert",
-        "Outdoor"
-      ],
-      "image_url": "https://usuo.org/app/uploads/2026/04/DVMF7-Famous-Film-Music.jpg",
-      "venue_name": "Deer Valley Ski Resort Main Base",
-      "address": "2250 Deer Valley Dr S",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "_distance_mi": 9.6
-    },
-    {
-      "title": "Angie Petty",
-      "date": "2026-09-10",
-      "description": "Hidden Ace",
-      "location": "Hidden Ace, Park City, UT",
-      "link": "https://www.bandsintown.com/e/108206329?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6206231,
-      "lng": -111.4419276,
-      "categories": [
-        "Community"
-      ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-28T18:50:15.596954",
-      "venue_name": "Hidden Ace",
-      "address": "1702 Glencoe Mountain Wy",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 8.0
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-12",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "MAMELE MOUNTAINS",
-      "date": "2026-09-12",
-      "end_date": null,
-      "location": "Midway, UT",
-      "venue_name": "Midway",
-      "link": "https://runsignup.com/Race/UT/Midway/MAMELEMOUNTAINS",
-      "source": "RunSignup",
-      "source_url": "https://runsignup.com/Rest/races",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "city": "Heber City, UT",
-      "categories": [
-        "Running & Races"
-      ],
-      "is_free": false,
-      "filter_categories": [
-        "Running & Races"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-11",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Utah Barrel Race",
-      "date": "2026-09-11",
-      "description": "Utah Barrel Race in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/ubra-futurity-race",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.4886915,
-      "lng": -111.4335895,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-28T18:52:00.335810",
-      "start_time": "10:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=28-12-59",
-      "date_label": "Apr 17 - 19, Sep 11 - 13",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 1.6
-    },
-    {
-      "title": "MAMELE MOUNTAINS",
-      "date": "2026-09-11",
-      "end_date": null,
-      "location": "Midway, UT",
-      "venue_name": "Midway",
-      "link": "https://runsignup.com/Race/UT/Midway/MAMELEMOUNTAINS",
-      "source": "RunSignup",
-      "source_url": "https://runsignup.com/Rest/races",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "city": "Heber City, UT",
-      "categories": [
-        "Running & Races"
-      ],
-      "is_free": false,
-      "filter_categories": [
-        "Running & Races"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-06",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-090426",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Angie Petty",
-      "date": "2026-09-01",
-      "description": "Hidden Ace",
-      "location": "Hidden Ace, Park City, UT",
-      "link": "https://www.bandsintown.com/e/108206326?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6206231,
-      "lng": -111.4419276,
-      "categories": [
-        "Community"
-      ],
-      "start_time": "8:00 PM",
-      "end_time": "",
-      "scraped_at": "2026-05-28T18:50:14.412852",
-      "venue_name": "Hidden Ace",
-      "address": "1702 Glencoe Mountain Wy",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 8.0
-    },
-    {
-      "title": "Live Music at Silver Lake",
       "date": "2026-08-30",
       "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
       "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
@@ -6938,6 +6883,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -6963,6 +6912,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/ISc72ygVMkmMcwpb1cDwGw.large.png",
       "venue_name": "Deer Valley Plaza Building",
       "address": "1375 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Food & Drink"
@@ -6970,266 +6923,51 @@
       "_distance_mi": 9.6
     },
     {
-      "title": "Alicia Stockman",
-      "date": "2026-08-20",
-      "description": "Find tickets for Alicia Stockman at Heber Market on Main in Heber City on 8/20/2026 at 6:30 PM",
-      "location": "Heber Valley Market, Heber City, UT",
-      "link": "https://open.spotify.com/concert/2VsqVxcM2eKJEAhdLzJJJV",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T18:52:31.786108",
-      "start_time": "10:30 PM",
+      "title": "Angie Petty",
+      "date": "2026-09-01",
+      "description": "Hidden Ace",
+      "location": "Hidden Ace, Park City, UT",
+      "link": "https://www.bandsintown.com/e/108206326?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "lat": 40.6206231,
+      "lng": -111.4419276,
       "categories": [
         "Community"
       ],
-      "facets": [
-        "Paid"
-      ],
+      "start_time": "8:00 PM",
+      "end_time": "",
+      "scraped_at": "2026-05-28T15:11:26.409020",
+      "venue_name": "Hidden Ace",
+      "address": "1702 Glencoe Mountain Wy",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
       "filter_categories": [
         "Community"
       ],
-      "_distance_mi": 0.0
+      "_distance_mi": 8.0
     },
     {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-08-22",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-082126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "\"Little Artists\" Series: Design Your Own Canvas Tote",
-      "date": "2026-08-22",
-      "description": "Creative Academy Class \u2014 Carry your style wherever you go. Design and decorate your own tote bag using fabric markers, patches, and creative techniques. You\u2019ll leave with a one-of-a-kind piece that\u2019s both practical and personal. Enjoy a refreshing lemonade bar as you craft and create. Reserve Now Vi",
-      "location": "Snow Park Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/creative-academy-little-artists-design-your-own-canvas-tote",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "3:30 PM",
-      "end_time": "5:00 PM",
-      "lat": 40.6374,
-      "lng": -111.4783,
-      "categories": [
-        "Food and Beverage",
-        "Arts"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/M6VIi7QFB0uSJPEYXmG0XQ.large.png",
-      "venue_name": "Deer Valley Plaza Building",
-      "address": "1375 Deer Valley Dr S",
-      "filter_categories": [
-        "Arts & Theater",
-        "Food & Drink"
-      ],
-      "_distance_mi": 9.6
-    },
-    {
-      "title": "Heber Valley Chamber Golf Tournament",
-      "date": "2026-08-11",
-      "description": "Heber Valley Chamber Golf Tournament in Heber Valley.",
+      "title": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools",
+      "date": "2026-09-02",
+      "description": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools in Heber Valley.",
       "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-valley-chamber-golf-tournament",
+      "link": "https://www.gohebervalley.com/sept-business-university",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.4819576,
-      "lng": -111.5007583,
-      "categories": [
-        "Sports"
-      ],
-      "scraped_at": "2026-05-28T18:52:00.324145",
-      "start_time": "8:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728272.jpg?decache=28-12-59",
-      "date_label": "Soldier Hollow Gold Course, 8:00 AM Shotgun",
-      "end_time": "9:00 AM",
-      "filter_categories": [
-        "Sports"
-      ],
-      "_distance_mi": 4.9
-    },
-    {
-      "title": "Wasatch Half Marathon & 10K",
-      "date": "2026-09-26",
-      "description": "Wasatch Half Marathon & 10K in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wasatch-half-marathon",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.48045159999999,
-      "lng": -111.4953585,
-      "categories": [
-        "Education",
-        "Outdoor",
-        "Sports"
-      ],
-      "scraped_at": "2026-05-28T18:52:00.341030",
-      "start_time": "8:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180475.jpg?decache=28-12-59",
-      "date_label": "Race starts at 8:00 AM",
-      "_all_sources": [
-        "Heber Valley Tourism",
-        "Salt Lake Running Co"
-      ],
-      "is_free": false,
-      "filter_categories": [
-        "Education & Talks",
-        "Outdoors",
-        "Running & Races",
-        "Sports"
-      ],
-      "_distance_mi": 4.7
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-13",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Utah Barrel Race",
-      "date": "2026-09-13",
-      "description": "Utah Barrel Race in Heber Valley.",
-      "location": "Wasatch County Event Complex, 415 Southfield Road, Heber City, UT",
-      "link": "https://www.gohebervalley.com/ubra-futurity-race",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.4886915,
-      "lng": -111.4335895,
+      "lat": 40.545359,
+      "lng": -111.413593,
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-05-28T12:28:56.628848",
-      "start_time": "10:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=28-12-56",
-      "date_label": "Apr 17 - 19, Sep 11 - 13",
-      "end_date": null,
-      "venue_name": "Wasatch County Event Complex",
-      "address": "415 Southfield Road, Heber City, UT, 84032",
+      "scraped_at": "2026-05-28T18:52:00.333085",
+      "start_time": "11:30 PM",
+      "end_time": "1:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=28-12-59",
+      "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
       "filter_categories": [
         "Community"
       ],
-      "_distance_mi": 1.6
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-20",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091826",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
-    },
-    {
-      "title": "Guided Historical Hike",
-      "date": "2026-09-20",
-      "description": "Step into Park City's past on a guided hike through Deer Valley's scenic terrain, where fresh mountain air meets stories of the area's rich mining history. This three- to four-hour hike covers moderate terrain, typically under six miles, as guests hike around Empire. Meet at the Mid-Mountain Trailhead on Marsac Ave, above the Montage, for an 8:30 a.m. departure.",
-      "location": "On Mountain, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/guided-historical-hike-092026",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "8:30 AM",
-      "end_time": "12:30 PM",
-      "lat": 40.6285,
-      "lng": -111.482,
-      "categories": [
-        "Hiking",
-        "Outdoor"
-      ],
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/vOjzxbkya0KTZPyFQXH3MQ.large.png",
-      "venue_name": "Snow Park Lodge",
-      "address": "2250 Deer Valley Dr S",
-      "filter_categories": [
-        "Outdoors"
-      ],
-      "_distance_mi": 9.1
-    },
-    {
-      "title": "Live Music at Silver Lake",
-      "date": "2026-09-13",
-      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
-      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
-      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
-      "source": "Deer Valley Resort",
-      "source_url": "https://www.deervalley.com/things-to-do/events",
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "end_date": null,
-      "lat": 40.6155,
-      "lng": -111.4858,
-      "categories": [
-        "Food and Beverage",
-        "Music"
-      ],
-      "recurrence_label": "Weekly",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
-      "venue_name": "Silver Lake",
-      "address": "7600 Royal St",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 8.4
+      "_distance_mi": 2.7
     },
     {
       "title": "Live Music at Silver Lake",
@@ -7252,6 +6990,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -7317,6 +7059,443 @@
       "_distance_mi": 0.7
     },
     {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-05",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-090426",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-06",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-090426",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Angie Petty",
+      "date": "2026-09-10",
+      "description": "Hidden Ace",
+      "location": "Hidden Ace, Park City, UT",
+      "link": "https://www.bandsintown.com/e/108206329?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "lat": 40.6206231,
+      "lng": -111.4419276,
+      "categories": [
+        "Community"
+      ],
+      "start_time": "8:00 PM",
+      "end_time": "",
+      "scraped_at": "2026-05-28T15:11:27.800500",
+      "venue_name": "Hidden Ace",
+      "address": "1702 Glencoe Mountain Wy",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 8.0
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-11",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Utah Barrel Race",
+      "date": "2026-09-11",
+      "description": "Utah Barrel Race in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/ubra-futurity-race",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4886915,
+      "lng": -111.4335895,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-28T18:52:00.335810",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=28-12-59",
+      "date_label": "Apr 17 - 19, Sep 11 - 13",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 1.6
+    },
+    {
+      "title": "MAMELE MOUNTAINS",
+      "date": "2026-09-11",
+      "end_date": null,
+      "location": "Midway, UT",
+      "venue_name": "Midway",
+      "link": "https://runsignup.com/Race/UT/Midway/MAMELEMOUNTAINS",
+      "source": "RunSignup",
+      "source_url": "https://runsignup.com/Rest/races",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "city": "Heber City, UT",
+      "categories": [
+        "Running & Races"
+      ],
+      "is_free": false,
+      "filter_categories": [
+        "Running & Races"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-12",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "MAMELE MOUNTAINS",
+      "date": "2026-09-12",
+      "end_date": null,
+      "location": "Midway, UT",
+      "venue_name": "Midway",
+      "link": "https://runsignup.com/Race/UT/Midway/MAMELEMOUNTAINS",
+      "source": "RunSignup",
+      "source_url": "https://runsignup.com/Rest/races",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "city": "Heber City, UT",
+      "categories": [
+        "Running & Races"
+      ],
+      "is_free": false,
+      "filter_categories": [
+        "Running & Races"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-19",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091826",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Mountain Bike World Series @ Soldier Hollow",
+      "date": "2026-09-19",
+      "description": "Mountain Bike World Series @ Soldier Hollow in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/soho-whoop-uci-world-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-28T18:52:00.338778",
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=28-12-59",
+      "date_label": "Sep 19 - 20",
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Whoop UCI Mountain Bike World Cup at Soldier Hollow",
+      "date": "2026-09-19",
+      "description": "The UCI Mountain Bike World Cup \u2013 XCO/XCC 2026 is set to take place at Soldier Hollow, Midway, Utah from 19 Sep 2026 to 20 Sep 2026. This prestigious event will bring together the world's best...",
+      "location": "Soldier Hollow Nordic Center, 2002 Olympic Dr, Midway, UT",
+      "link": "https://mtbdata.com/comp/uci-mountain-bike-world-cup-xcoxcc-19-sep-20-sep-2026-soldier-hollow-midway-utah",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "scraped_at": "2026-05-28T18:52:30.875238",
+      "categories": [
+        "Sports"
+      ],
+      "_all_sources": [
+        "Google Events"
+      ],
+      "address": "Soldier Hollow Nordic Center, 2002 Olympic Dr, Midway, UT",
+      "filter_categories": [
+        "Sports"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "The Park City Bridal Expo",
+      "date": "2026-09-19",
+      "description": "Get ready for the ultimate wedding inspiration at The Park City Bridal Expo - it's where your Mountain West dream wedding begins! Join us September 19, 2026 for The Park City Bridal Expo at the...",
+      "location": "Sheraton Park City, 1895 Sidewinder Dr, Park City, UT",
+      "link": "https://www.eventbrite.com/e/the-park-city-bridal-expo-tickets-1987850916603",
+      "source": "Eventbrite",
+      "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "scraped_at": "2026-05-28T18:52:32.517487",
+      "categories": [
+        "Community"
+      ],
+      "_all_sources": [
+        "Eventbrite"
+      ],
+      "address": "Sheraton Park City, 1895 Sidewinder Dr, Park City, UT",
+      "is_free": false,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Wasatch Half Marathon & 10K",
+      "date": "2026-09-26",
+      "description": "Wasatch Half Marathon & 10K in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wasatch-half-marathon",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.48045159999999,
+      "lng": -111.4953585,
+      "categories": [
+        "Education",
+        "Outdoor",
+        "Sports"
+      ],
+      "scraped_at": "2026-05-28T18:52:00.341030",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180475.jpg?decache=28-12-59",
+      "date_label": "Race starts at 8:00 AM",
+      "_all_sources": [
+        "Heber Valley Tourism",
+        "Salt Lake Running Co"
+      ],
+      "is_free": false,
+      "filter_categories": [
+        "Education & Talks",
+        "Outdoors",
+        "Running & Races",
+        "Sports"
+      ],
+      "_distance_mi": 4.7
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-20",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091826",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
+      "title": "Guided Historical Hike",
+      "date": "2026-09-20",
+      "description": "Step into Park City's past on a guided hike through Deer Valley's scenic terrain, where fresh mountain air meets stories of the area's rich mining history. This three- to four-hour hike covers moderate terrain, typically under six miles, as guests hike around Empire. Meet at the Mid-Mountain Trailhead on Marsac Ave, above the Montage, for an 8:30 a.m. departure.",
+      "location": "On Mountain, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/guided-historical-hike-092026",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "8:30 AM",
+      "end_time": "12:30 PM",
+      "lat": 40.6285,
+      "lng": -111.482,
+      "categories": [
+        "Hiking",
+        "Outdoor"
+      ],
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/vOjzxbkya0KTZPyFQXH3MQ.large.png",
+      "venue_name": "Snow Park Lodge",
+      "address": "2250 Deer Valley Dr S",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Outdoors"
+      ],
+      "_distance_mi": 9.1
+    },
+    {
+      "title": "Live Music at Silver Lake",
+      "date": "2026-09-13",
+      "description": "Join us Friday through Sunday on Silver Lake Lawn for live music, local food trucks, and relaxed mountain afternoons. Settle into a lounge chair, enjoy a cold drink, and take in alpine views while a rotating lineup of artists fills the air with acoustic rock, country, blues, and more. With hiking trails just steps away, it's an easy, all-day experience for everyone.",
+      "location": "Silver Lake Base Area, Deer Valley, Park City, UT",
+      "link": "https://www.deervalley.com/things-to-do/events/live-music-at-silver-lake-091126",
+      "source": "Deer Valley Resort",
+      "source_url": "https://www.deervalley.com/things-to-do/events",
+      "start_time": "1:00 PM",
+      "end_time": "4:00 PM",
+      "end_date": null,
+      "lat": 40.6155,
+      "lng": -111.4858,
+      "categories": [
+        "Food and Beverage",
+        "Music"
+      ],
+      "recurrence_label": "Weekly",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
+      "venue_name": "Silver Lake",
+      "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "_distance_mi": 8.4
+    },
+    {
       "title": "Plein Air Rendezvous",
       "date": "2026-09-16",
       "description": "Plein Air Rendezvous in Heber Valley.",
@@ -7360,6 +7539,10 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/jRTfXdhISUa_mOXaxk3_-Q.large.png",
       "venue_name": "Silver Lake",
       "address": "7600 Royal St",
+      "_all_sources": [
+        "Deer Valley Resort",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music"
@@ -7381,7 +7564,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:16.834130",
+      "scraped_at": "2026-05-28T15:11:29.229436",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -7405,7 +7588,7 @@
       ],
       "start_time": "8:00 PM",
       "end_time": "",
-      "scraped_at": "2026-05-28T18:50:16.834164",
+      "scraped_at": "2026-05-28T15:11:29.229498",
       "venue_name": "Hidden Ace",
       "address": "1702 Glencoe Mountain Wy",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/mPh_GZcBpUG6uokAM57nlA.large.png",
@@ -7452,6 +7635,10 @@
       "categories": [
         "Food & Drink"
       ],
+      "_all_sources": [
+        "Eventbrite"
+      ],
+      "address": "Best Western Plus Heber Valley Hotel, 1227 US-40, Heber City, UT",
       "is_free": false,
       "filter_categories": [
         "Food & Drink"
@@ -7519,26 +7706,8 @@
       "categories": [
         "Food & Drink"
       ],
-      "is_free": false,
-      "filter_categories": [
-        "Food & Drink"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "LIVE \"SPIRIT CONNECTION\" EVENT WITH SALT LAKE...",
-      "date": "2026-12-15",
-      "description": "Spirit messages delivered by Salt Lake Medium, Jo\u2019Anne Smith",
-      "location": "Best Western Plus Heber Valley Hotel, 1227 US-40, Heber City, UT",
-      "link": "https://www.eventbrite.com/e/live-spirit-connection-event-with-salt-lake-medium-joanne-smith-tickets-1980354191697",
-      "source": "Eventbrite",
-      "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-05-28T12:29:47.063677",
-      "start_time": "8:30 PM",
-      "categories": [
-        "Food & Drink"
+      "_all_sources": [
+        "Eventbrite"
       ],
       "address": "Best Western Plus Heber Valley Hotel, 1227 US-40, Heber City, UT",
       "is_free": false,
