@@ -671,6 +671,75 @@ def _prefix_merge(events: list[dict]) -> list[dict]:
     return out
 
 
+# Low-trust aggregators whose records should be suppressed when a higher-quality
+# source already lists the same event. Google Events in particular has been
+# observed mis-tagging dates (e.g. Mountain Valley Stampede Rodeo on Jul 29
+# when the real run is Jul 30-Aug 1 per Heber Valley Tourism).
+_LOW_TRUST_AGGREGATORS = {"Google Events", "Eventbrite", "Bandsintown", "EventTicketsCenter"}
+
+
+def _suppress_aggregator_dupes(events: list, window_days: int = 7) -> list:
+    """Drop low-trust aggregator records that duplicate higher-quality sources.
+
+    For each record from a _LOW_TRUST_AGGREGATORS source, check whether ANY
+    other record with the same normalized title exists from a non-aggregator
+    source within +/-window_days. If so, drop the aggregator record (its data
+    is less reliable; better to show only the canonical source).
+
+    Conservative: only operates on records FROM aggregator sources. Records
+    between high-quality sources (Park Record, VPC, MTM, etc.) are completely
+    untouched. Aggregator records with NO higher-quality counterpart are kept
+    (Google Events sometimes has events nobody else covers).
+    """
+    from datetime import datetime as _dt, timedelta as _td
+    from collections import defaultdict as _dd
+
+    # Index ALL non-aggregator records by normalized title -> set of dates
+    high_trust_by_title = _dd(list)
+    for e in events:
+        src = e.get("source") or ""
+        if src in _LOW_TRUST_AGGREGATORS:
+            continue
+        nt = _normalize_title(e.get("title") or "")
+        d = e.get("date")
+        if nt and d:
+            try:
+                high_trust_by_title[nt].append(_dt.fromisoformat(d))
+            except ValueError:
+                continue
+
+    dropped_count = 0
+    out = []
+    pad = _td(days=window_days)
+    for e in events:
+        src = e.get("source") or ""
+        if src not in _LOW_TRUST_AGGREGATORS:
+            out.append(e)
+            continue
+        # Check if a high-trust source has this title near this date
+        nt = _normalize_title(e.get("title") or "")
+        d = e.get("date")
+        if not nt or not d:
+            out.append(e)
+            continue
+        try:
+            event_date = _dt.fromisoformat(d)
+        except ValueError:
+            out.append(e)
+            continue
+        candidates = high_trust_by_title.get(nt, [])
+        has_overlap = any(abs((c - event_date).days) <= window_days for c in candidates)
+        if has_overlap:
+            dropped_count += 1
+            continue  # suppress this aggregator record
+        out.append(e)
+
+    if dropped_count:
+        print(f"  [aggregator-suppress] dropped {dropped_count} low-trust dupes")
+    return out
+
+
+
 def main():
     today_iso = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
     print(f"Building master + city views — {today_iso}")
@@ -738,6 +807,12 @@ def main():
     # Second pass: merge suffix-variant dupes the (title,date) key missed.
     deduped = _prefix_merge(deduped)
     print(f"After prefix-merge: {len(deduped)}")
+    
+    # Third pass: drop low-trust aggregator records (Google Events, Eventbrite)
+    # that duplicate higher-quality sources. Conservative — only suppresses
+    # within +/-7 days of a same-title match from a non-aggregator source.
+    deduped = _suppress_aggregator_dupes(deduped)
+    print(f"After aggregator-suppress: {len(deduped)}")
     
     # Step 3: Filter past events
     future = [e for e in deduped if (e.get("date") or "")[:10] >= today_iso]
