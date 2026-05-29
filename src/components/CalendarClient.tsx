@@ -448,6 +448,10 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
 
 export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {}) {
   const [events, setEvents] = useState<V2YocEvent[]>([])
+  // Events from cities OTHER than the current one. Used by cross-city search
+  // (Model C): current city's events surface first, fallback to nearest from
+  // other cities when local results are sparse.
+  const [otherCityEvents, setOtherCityEvents] = useState<V2YocEvent[]>([])
   const [loading, setLoading] = useState(true)
   const [dayFilter, setDayFilter] = useState<V2DayFilter>('today')
   const [timeFilter, setTimeFilter] = useState<V2TimeFilter>('any')
@@ -579,10 +583,30 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     }
     const file = fileMap[cityKeyLocal] || '/events.json'
     setLoading(true)
-    fetch(file)
-      .then(r => r.json())
-      .then(d => {
-        setEvents((d.events || d) as V2YocEvent[])
+    // Cross-city loading: fetch the current city's file + all other cities' files
+    // in parallel. Other-city events power Model C "show nearby events" when
+    // local matches are sparse.
+    const otherFiles = Object.entries(fileMap)
+      .filter(([k]) => k !== cityKeyLocal)
+      .map(([k, f]) => ({ key: k, file: f }))
+    const mainFetch = fetch(file).then(r => r.json())
+    const otherFetches = otherFiles.map(({ key, file: f }) =>
+      fetch(f).then(r => r.json()).then(d => ({ key, events: (d.events || d) as V2YocEvent[] })).catch(() => ({ key, events: [] as V2YocEvent[] }))
+    )
+    Promise.all([mainFetch, ...otherFetches])
+      .then((results) => {
+        const mainData = results[0] as { events?: V2YocEvent[] } | V2YocEvent[]
+        const otherResults = results.slice(1) as Array<{ key: string; events: V2YocEvent[] }>
+        setEvents(((mainData as { events?: V2YocEvent[] }).events || mainData) as V2YocEvent[])
+        // Tag each other-city event with its source city key for later UI display.
+        const others: V2YocEvent[] = []
+        for (const { key, events: cityEvents } of otherResults) {
+          for (const ev of cityEvents) {
+            others.push({ ...ev, _sourceCity: key } as V2YocEvent)
+          }
+        }
+        setOtherCityEvents(others)
+        console.log('[cross-city] current:', cityKeyLocal, '| current events:', ((mainData as { events?: V2YocEvent[] }).events || mainData as V2YocEvent[]).length, '| other-city events:', others.length, '| breakdown:', otherResults.map(r => `${r.key}=${r.events.length}`).join(', '))
         setLoading(false)
       })
       .catch(e => {
