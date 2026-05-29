@@ -188,11 +188,60 @@ def _fan_out_recurring(events):
     so siblings don't collapse.
     """
     from datetime import datetime, timedelta
+    import re as _rec_re
     result = []
     fanned = 0
     _WEEKDAY_IDX = {"Monday": 0, "Tuesday": 1, "Wednesday": 2, "Thursday": 3,
                     "Friday": 4, "Saturday": 5, "Sunday": 6}
+    _MONTH_IDX = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+                  "jul": 7, "aug": 8, "sep": 9, "sept": 9, "oct": 10,
+                  "nov": 11, "dec": 12, "january": 1, "february": 2, "march": 3,
+                  "april": 4, "june": 6, "july": 7, "august": 8, "september": 9,
+                  "october": 10, "november": 11, "december": 12}
+    _DATE_PAIR_RE = _rec_re.compile(
+        r"\b(jan|feb|mar|apr|may|jun|jul|aug|sept?|oct|nov|dec)[a-z]*\s+(\d{1,2})\b",
+        _rec_re.IGNORECASE,
+    )
     for e in events:
+        # If recurrence_text contains an explicit list of dates ("May 29, June
+        # 12, July 10, August 14, September 18"), parse them deterministically
+        # and use them instead of any LLM-generated occurrence_dates. LLMs
+        # truncate enumerated lists (Princess Pirate Train listed 5 dates but
+        # the LLM only populated 4). Only fires when the regex finds MORE dates
+        # than the LLM did, and at least 3 — avoids triggering on short text.
+        rec_text = e.get("recurrence_text") or ""
+        if rec_text:
+            existing_occ = e.get("occurrence_dates") or []
+            matches = _DATE_PAIR_RE.findall(rec_text)
+            if len(matches) >= 3 and len(matches) > len(existing_occ):
+                try:
+                    base_year = int((e.get("date") or "")[:4])
+                except (ValueError, TypeError):
+                    base_year = None
+                if base_year:
+                    parsed = []
+                    last_month = 0
+                    year = base_year
+                    for month_str, day_str in matches:
+                        m = _MONTH_IDX.get(month_str.lower())
+                        if not m:
+                            continue
+                        d = int(day_str)
+                        # If we see a month going backwards, roll year forward
+                        # (handles Dec 31 -> Jan 1 of next year cases).
+                        if last_month and m < last_month:
+                            year += 1
+                        last_month = m
+                        try:
+                            iso = datetime(year, m, d).date().isoformat()
+                            parsed.append(iso)
+                        except ValueError:
+                            continue
+                    # Dedupe while preserving order
+                    seen = set()
+                    parsed_unique = [d for d in parsed if not (d in seen or seen.add(d))]
+                    if len(parsed_unique) > len(existing_occ):
+                        e["occurrence_dates"] = parsed_unique
         # If a record has structured weekly recurrence fields, compute its
         # occurrence_dates deterministically and override any LLM-generated
         # list. LLMs sometimes truncate (e.g. stopping at Aug 22 for a
@@ -937,16 +986,38 @@ def main():
         for e in future:
             lat = e.get("lat")
             lng = e.get("lng")
-            # Source-based geo fallback for events missing coords
+
+            # Sanity check: if lat/lng exists but is wildly wrong (more than
+            # 100mi from EVERY city center), the source data is corrupted.
+            # Treat as missing so the source-based fallback kicks in.
+            # Catches HVT data-entry bugs where the API returns Pennsylvania
+            # coords (39.76, -76.69) for a Heber-area event.
+            if lat is not None and lng is not None:
+                try:
+                    flat, flng = float(lat), float(lng)
+                    min_dist = min(
+                        haversine_miles(c["lat"], c["lng"], flat, flng)
+                        for c in CITIES.values()
+                    )
+                    if min_dist > 100:
+                        lat, lng = None, None  # discard corrupted coords
+                except (ValueError, TypeError):
+                    lat, lng = None, None
+
+            # Source-based geo fallback for events missing or discarded coords.
+            # Also uses address text to recover events whose source is generic
+            # (e.g. "Heber Valley Life") but whose address clearly indicates a
+            # known city.
             if lat is None or lng is None:
                 source = (e.get("source") or "").lower()
-                if "elkhart" in source or "osthoff" in source or "road america" in source or "siebkens" in source:
+                addr = (e.get("address") or "").lower() + " " + (e.get("location") or "").lower()
+                if "elkhart" in source or "osthoff" in source or "road america" in source or "siebkens" in source or "elkhart lake" in addr:
                     lat, lng = 43.8330, -88.0426  # Elkhart Lake center
-                elif "heber" in source or "wasatch" in source or "midway" in source:
+                elif "heber" in source or "wasatch" in source or "midway" in source or "heber city" in addr or "midway, ut" in addr:
                     lat, lng = 40.5069, -111.4133  # Heber center
-                elif "jackson" in source or "teton" in source or "cloudveil" in source:
+                elif "jackson" in source or "teton" in source or "cloudveil" in source or "jackson, wy" in addr or "wilson, wy" in addr:
                     lat, lng = 43.4799, -110.7624  # Jackson center
-                elif "park city" in source or "park record" in source or "mountain town" in source or "deer valley" in source:
+                elif "park city" in source or "park record" in source or "mountain town" in source or "deer valley" in source or "park city, ut" in addr:
                     lat, lng = 40.6461, -111.4980  # PC center
                 else:
                     continue
