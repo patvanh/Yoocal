@@ -68,6 +68,19 @@ const SEARCH_SYNONYMS: Record<string, string[]> = {
   free: ['no charge', 'no cost', 'complimentary'],
 }
 
+// Word-boundary regex cache so we don't recompile on every event.
+const _wordRegexCache = new Map<string, RegExp>()
+function _wordRegex(w: string): RegExp {
+  let r = _wordRegexCache.get(w)
+  if (!r) {
+    // Escape regex special chars, then wrap in word boundaries.
+    const esc = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    r = new RegExp(`\\b${esc}\\b`)
+    _wordRegexCache.set(w, r)
+  }
+  return r
+}
+
 function matchesQuery(e: V2YocEvent, qLower: string): boolean {
   if (!qLower) return true
   const text = [
@@ -81,11 +94,19 @@ function matchesQuery(e: V2YocEvent, qLower: string): boolean {
   const tokens = qLower.split(/\s+/).filter(Boolean)
   if (tokens.length === 0) return true
   // Each token matches if it appears literally OR if any of its synonyms
-  // does. Concert -> music events, kids -> family events, etc.
+  // does. Synonym lookup is prefix-aware: typing "concer" still matches
+  // "concert" synonyms because "concert".startsWith("concer"). Synonym text
+  // matched with word boundaries to avoid "rock" hitting "rocky mountain".
   return tokens.every(tok => {
     if (text.includes(tok)) return true
-    const syns = SEARCH_SYNONYMS[tok]
-    if (syns && syns.some(s => text.includes(s))) return true
+    // Find all synonym keys that start with the user's token. Typing
+    // "conc" lights up the concert synonyms; typing the full "concert"
+    // also lights them up because "concert".startsWith("concert").
+    for (const key of Object.keys(SEARCH_SYNONYMS)) {
+      if (!key.startsWith(tok)) continue
+      const syns = SEARCH_SYNONYMS[key]
+      if (syns.some(s => _wordRegex(s).test(text))) return true
+    }
     return false
   })
 }
