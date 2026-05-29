@@ -99,42 +99,97 @@ def _parse_hvt_date_label(event, label):
     s_lo = s.lower()
     if "vary" in s_lo or "various" in s_lo:
         return
+
+    # PASS 1: weekday-prefix recurrence ("Sat, May - Sep" / "Weekly, Thu mornings")
     m_weekday = _hvt_re.match(
         r"^(?:weekly,?\s+)?(mon|tue|wed|thu|fri|sat|sun)[a-z]*",
         s_lo,
     )
-    if not m_weekday:
-        return
-    day_name = _HVT_WEEKDAY[m_weekday.group(1)]
-    end_date_iso = None
-    m_range = _hvt_re.search(
-        r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*"
+    if m_weekday:
+        day_name = _HVT_WEEKDAY[m_weekday.group(1)]
+        end_date_iso = None
+        m_range = _hvt_re.search(
+            r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*"
+            r"\s*[-\u2013\u2014]\s*"
+            r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b",
+            s_lo,
+        )
+        if m_range:
+            end_month = _HVT_MONTH_NUM[m_range.group(2)]
+            try:
+                base_date = _hvt_dt.fromisoformat(event.get("date", ""))
+                year = base_date.year
+                if end_month < base_date.month:
+                    year += 1
+                if end_month == 12:
+                    last_day = 31
+                else:
+                    from datetime import timedelta as _td
+                    first_next = _hvt_dt(year, end_month + 1, 1)
+                    last_day = (first_next - _td(days=1)).day
+                end_date_iso = f"{year:04d}-{end_month:02d}-{last_day:02d}"
+            except (ValueError, TypeError):
+                pass
+        if not event.get("recurrence"):
+            event["recurrence"] = "weekly"
+        if not event.get("recurrence_day"):
+            event["recurrence_day"] = day_name
+        if end_date_iso and not event.get("end_date"):
+            event["end_date"] = end_date_iso
+
+    # PASS 2: bare date range ("Jul 30 - Aug 1", "Jun 26 - 28")
+    # Only fires if end_date not already set. Independent of weekday match.
+    if not event.get("end_date"):
+        _try_parse_hvt_date_range(event, s_lo)
+
+
+def _try_parse_hvt_date_range(event, s_lo):
+    """Extract a bare date range from a lowercased date_label string,
+    setting event['end_date']. Patterns supported:
+      "jul 30 - aug 1"   -> Jul 30 to Aug 1 (months on both sides)
+      "jun 26 - 28"      -> Jun 26 to Jun 28 (single month)
+    Skips if no match, if event has no parseable date, if end <= start,
+    or if range exceeds 60 days."""
+    # Pattern 1: month on both sides
+    m = _hvt_re.search(
+        r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+(\d{1,2})"
         r"\s*[-\u2013\u2014]\s*"
-        r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b",
+        r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+(\d{1,2})\b",
         s_lo,
     )
-    if m_range:
-        end_month = _HVT_MONTH_NUM[m_range.group(2)]
-        try:
-            base_date = _hvt_dt.fromisoformat(event.get("date", ""))
-            year = base_date.year
-            if end_month < base_date.month:
-                year += 1
-            if end_month == 12:
-                last_day = 31
-            else:
-                from datetime import timedelta as _td
-                first_next = _hvt_dt(year, end_month + 1, 1)
-                last_day = (first_next - _td(days=1)).day
-            end_date_iso = f"{year:04d}-{end_month:02d}-{last_day:02d}"
-        except (ValueError, TypeError):
-            pass
-    if not event.get("recurrence"):
-        event["recurrence"] = "weekly"
-    if not event.get("recurrence_day"):
-        event["recurrence_day"] = day_name
-    if end_date_iso and not event.get("end_date"):
-        event["end_date"] = end_date_iso
+    if m:
+        end_month_name = m.group(3)
+        end_day = int(m.group(4))
+    else:
+        # Pattern 2: single month, two days
+        m = _hvt_re.search(
+            r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+(\d{1,2})"
+            r"\s*[-\u2013\u2014]\s*(\d{1,2})\b",
+            s_lo,
+        )
+        if not m:
+            return
+        end_month_name = m.group(1)
+        end_day = int(m.group(3))
+    end_month = _HVT_MONTH_NUM.get(end_month_name)
+    if not end_month:
+        return
+    try:
+        base_date = _hvt_dt.fromisoformat(event.get("date", ""))
+    except (ValueError, TypeError):
+        return
+    year = base_date.year
+    if end_month < base_date.month:
+        year += 1
+    try:
+        end_dt = _hvt_dt(year, end_month, end_day)
+    except ValueError:
+        return
+    if end_dt <= base_date:
+        return
+    if (end_dt - base_date).days > 60:
+        return
+    event["end_date"] = end_dt.strftime("%Y-%m-%d")
 
 
 def _cache_path(url: str) -> Path:
