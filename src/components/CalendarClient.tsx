@@ -46,7 +46,13 @@ function matchesQuery(e: V2YocEvent, qLower: string): boolean {
     e.title, e.description, e.venue_name, e.location, e.address, e.source,
     ...(e.categories || []), ...(e.filter_categories || []), ...(e.facets || [])
   ].filter(Boolean).join(' ').toLowerCase()
-  return text.includes(qLower)
+  // Tokenize the query and require ALL tokens to appear somewhere in the
+  // searchable text. Lets "running 5k" match titles like "Park City Trail
+  // Series 5K" (contains both "running"-related categories and "5k") even
+  // when the literal phrase "running 5k" never appears verbatim.
+  const tokens = qLower.split(/\s+/).filter(Boolean)
+  if (tokens.length === 0) return true
+  return tokens.every(tok => text.includes(tok))
 }
 
 function isFreeEvent(e: V2YocEvent): boolean {
