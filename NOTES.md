@@ -455,3 +455,155 @@ SHORT real candidate list to verify->maybe wire:
   3. Heber: Wasatch Trail Run Series
 BIGGER lever than new sources = CATEGORY FIX (Community still top bucket in 3/4
 cities). Coverage is solid; categorization is the real limiter.
+
+## Update 19: Day 10 — backend dedup hardening, search overhaul, cross-city
+Long session (8am to mid-afternoon). 18 commits. Site materially better at the
+end across recurring-event coverage, dedup, SEO, search semantics, and a new
+cross-city browsing mode.
+
+### Commits in order
+1. `70bf9a5` HVT date_label parser (weekly recurrence from "Sat May-Sep")
+2. `d627ea5` Tokenized search ("running 5k" matches "Trail Series 5K")
+3. `60d09d2` HVT bare date-range parser ("Jul 30 - Aug 1" -> 3 records)
+4. `861a3bf` Deterministic occurrence_dates from weekly recurrence fields
+5. `342a3d8` SEO: cross-city redirect + slugify year-strip (267 404 fix)
+6. `40f38b2` Recover corrupted coords + truncated date lists
+7. `7c07700` Address-derived coordinates (address > corrupted lat/lng)
+8. `a6bdc3c` See all N results overlay (grouped rows + expand + modal)
+9. `46e09d9` Align dropdown count with overlay count
+10. `ebfbe28` Venue+time dedup + tier-aware aggregator suppression
+11. `fc6c94b` Search synonym matching (concert -> music/band/live)
+12. `13875ae` Search prefix-key + word-boundary
+13. `48d0379` Per-event schema image
+14. `a3ef834` Add missing optional fields to YoocalEvent type
+15. `ef778a9` Cross-city Piece 1: fetch all cities in parallel
+16. `82ba95c` Cross-city Pieces 2 + 2.5: search + city filter pills
+17. `a761cda` Cross-city Piece 4: pills on rows + plural search
+18. `387a616` Cross-city Piece 3: distance-based ranking in All cities
+
+### New architectural patterns (worth keeping)
+
+**Dedup pipeline is now 4-stage.** Was 1-stage (title+date). Today added:
+1. prefix-merge (existing, suffix-variant collapse)
+2. aggregator-suppress (existing, low-trust title-match drop)
+3. **venue+time-dedup (new)** — same (normalized_venue, date, start_time) =
+   same event under different titles. Catches the Keller Williams case (5
+   records, 5 different titles, all at Egyptian Theatre May 29 8pm).
+4. **venue+date-aggregator-suppress (new)** — when any tier-1/2/3 source
+   has an event at a venue+date, drop every tier-4 (Google Events,
+   Bandsintown, etc.) record at the same venue+date. Catches corrupted-time
+   aggregator dupes that survive #3. Tier-aware via SOURCE_PRIORITY.
+
+Future-me when adding the 5th: copy the pattern of _venue_time_dedup.
+Universal-by-default means it lives in build_master_and_views.py and applies
+to all 4 cities automatically.
+
+**Address-as-ground-truth coordinates.** HVT API was returning Pennsylvania
+lat/lng (39.76, -76.69) for Heber events — radius filter silently dropped
+them. Google Events was returning Heber's exact center coords (40.5069,
+-111.4133) for Salt Lake events — radius filter incorrectly included them.
+Both bugs solved by: parse city name from address/location text, look up its
+canonical coords in a _KNOWN_CITIES table (27 entries spanning Heber Valley,
+Park City, Salt Lake metro, Jackson area, Elkhart area), override the
+source-provided lat/lng. The address string is ground truth; coords are
+derived. Also write the corrected lat/lng to e_copy so map pins show the
+right location, not just the filter pass.
+
+**Cross-city Model C (current city first, expand to others).** All 4 city
+JSONs fetched in parallel on every page load; current city = primary, others
+tagged with `_sourceCity` for attribution. Dropdown stays local-only (quick
+peek). Overlay shows city filter pills (Heber Valley · Park City · Jackson
+Hole · Elkhart Lake · All cities). Default = current city. When user taps
+"All cities," sort is distance-first (closer cities lead), date second.
+Every event row has a city pill so attribution is visible.
+
+The right user mental model for the sort: distance always wins. Tier
+(search prefix-match) only matters within a single city — never overrides
+distance. Earlier I had it the other way around and "Concerts on the Slopes"
+(PC) appeared first on every city's All cities view because its title
+prefix-matched "concert" globally. Broken. Distance-first is correct.
+
+### Hard-won lessons (write these down so I stop repeating them)
+
+**Heredoc backslash trap (bit 4-5 times today).** Bash heredoc + python
+script that writes TypeScript regex = backslashes mangled at every layer.
+Solution: `cat > file << 'PYEOF'` with single-quoted EOF preserves
+backslashes verbatim. Or write Python with raw strings r"..." and avoid
+double-escape gymnastics entirely. When the verifier says "True" but the
+behavior is broken, suspect backslash mangling first.
+
+**Anchor-mismatch when patching iteratively.** When a multi-step python
+script swaps text in one file, the SECOND step's anchor is against the
+post-step-1 text, not the original. If I copy the anchor from an old grep,
+it won't match anymore. Solution: always grep current text BEFORE writing
+the next python anchor. Don't write anchors blind.
+
+**TS errors at verify time are blockers, not warnings.** Today I shipped
+commit `48d0379` after the verifier reported "TS errors: error TS2339:
+Property 'image_url' does not exist on type 'YoocalEvent'." I read past it
+because I was tracking "did the patch land?" (True) and missed that the
+build would fail. Vercel built it, failed, then succeeded on the next
+commit that added the field. Real lapse — TS errors at verify time mean
+STOP, fix the type, then commit. Always.
+
+**Don't ship 150-line single-shot patches.** Earlier in the session I built
+the "See all" overlay in one big patch (state + memo + JSX + click handlers
++ grouping + smart sort). Browser testing revealed five separate bugs at
+once — couldn't isolate which piece was broken. Eventually found the
+real bug (outside-click handler clearing search state on portal open) but
+wasted 30+ minutes. Cross-city was built in 5 testable pieces, each
+verified in browser before moving on. Took ~2 hours total but every piece
+shipped clean. Pieces > shotgun.
+
+**Trust deterministic over LLM (the pattern fired 3 times today).** LLM
+enrichers populate occurrence_dates from text, but truncate. Today's fixes
+all said "if we can compute it from structured fields, do that, override
+the LLM": (a) weekly recurrence + end_date -> compute occurrence dates;
+(b) recurrence_text with explicit date enumeration -> regex-extract dates;
+(c) date_label with weekday + month range -> parse weekday + month bounds.
+Each one moved from "LLM says 13 dates" to "code computes 17 dates" or
+similar. When data is deterministic, don't trust the LLM.
+
+**Outside-click handlers + portal-rendered overlays.** Portal renders
+outside the dropdown's DOM tree, so an outside-click handler treats the
+overlay click as outside-click and wipes search state. Took 30+ minutes
+to find. Anytime I add a portal-rendered overlay over UI that has an
+outside-click handler, the handler needs a guard: `if (overlayOpen) return`.
+
+**File data realities outpace TypeScript type definitions.** YoocalEvent
+and V2YocEvent interfaces were missing many runtime fields (image_url,
+venue_name, _sourceCity, recurrence_text, occurrence_dates, ...). Each
+new piece of work hits a fresh TS2339 because the type lags reality. Fixed
+both interfaces in one pass each, but the underlying issue is real: when
+the build script writes new fields, also update the TS interface as part
+of the same change.
+
+### Updated TODO (carried forward)
+- [ ] Schema image quality refinement — strip `?width=500` from earthdiver
+      URLs so Google Event rich-result cards get >=720px images
+- [ ] Sanity audit of remaining 668 Heber events
+- [ ] Mixed weekly+range patterns in HVT parser ("Weekly, Thu nights, Jun
+      4 - Aug 20")
+- [ ] VPC CI scrape flakiness (daily bot 13 vs local 100+)
+- [ ] Grand Targhee scraper degradation (13 -> 1)
+- [ ] Jackson classifier bug (jackson_scraper.py ~387 writes wrong var)
+- [ ] Per-source event ID dedup overhaul — multi-day infrastructure; use
+      stable source IDs as primary identity, similarity matching as
+      separate explicit layer. Eliminates the "new dup pattern emerged"
+      churn we keep hitting.
+- [ ] Cross-source title-variance dedup beyond what venue-time catches
+- [ ] Sun Valley + Ketchum rollout
+- [ ] DELETE OLD API KEYS at provider dashboards
+- [ ] Recategorize "Community" bucket (still 58% of Jackson)
+- [ ] Health check threshold consolidation (sum related source labels)
+- [ ] Verify 267 404s drop in Search Console over coming weeks
+- [ ] Re-trigger Search Console "validate fix" once enough crawl time
+
+### What lives where (quick reference for future-me)
+- Backend universal fixes -> `build_master_and_views.py`
+- Frontend universal fixes -> `src/components/CalendarClient.tsx`
+  (mounted by every city page via CityLanding)
+- Event detail pages + JSON-LD schema -> `src/app/[city]/[slug]/page.tsx`
+- Per-event slug + cross-city redirect -> `src/lib/events.ts`
+- City centers + radius config + SOURCE_PRIORITY -> top of
+  `build_master_and_views.py`
