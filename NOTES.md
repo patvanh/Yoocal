@@ -579,8 +579,10 @@ the build script writes new fields, also update the TS interface as part
 of the same change.
 
 ### Updated TODO (carried forward)
-- [ ] Schema image quality refinement — strip `?width=500` from earthdiver
-      URLs so Google Event rich-result cards get >=720px images
+- [x] Schema image quality: earthdiver cdn-cgi width 500->1200 (342c12a).
+      Source-capped: 93/107 distinct originals clear 720px; ~13 small ones
+      (incl. 550px asset on ~189 events) stay sub-720, CF won't upscale.
+      Scoped to earthdiver; image_url is schema-only (no card/pin use).
 - [ ] Sanity audit of remaining 668 Heber events
 - [ ] Mixed weekly+range patterns in HVT parser ("Weekly, Thu nights, Jun
       4 - Aug 20")
@@ -597,6 +599,16 @@ of the same change.
 - [ ] Recategorize "Community" bucket (still 58% of Jackson)
 - [ ] Health check threshold consolidation (sum related source labels)
 - [ ] Verify 267 404s drop in Search Console over coming weeks
+- GSC "Duplicate, Google chose different canonical" (2 URLs, crawled 26 May):
+  BENIGN, no fix. Stale -s apostrophe slugs (billy-blanco-s, miner-s) from old
+  slugify, still in Google's index. Current slugify DROPS the apostrophe
+  (billy-blancos); sitemap + internal links + page canonical all emit the
+  dropped form consistently (verified live + local sitemap.xml). Google
+  correctly collapsed the 2 stale variants to the current slug. Scope = 2,
+  flat, not trending -- ages out on re-crawl. Do NOT "fix" by re-adding -s:
+  that inverts the problem and orphans ~27 live concert-series URLs. Briefly
+  tried canonical-from-eventSlug() in [city]/[slug]/page.tsx -- reverted as a
+  no-op (exact-match URLs already have slug === eventSlug).
 - [ ] Re-trigger Search Console "validate fix" once enough crawl time
 
 ### What lives where (quick reference for future-me)
