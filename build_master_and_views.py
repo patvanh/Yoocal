@@ -680,6 +680,20 @@ def _clean_display_text(s: str) -> str:
     return s
 
 
+def _normalize_image_url(url: str) -> str:
+    """Bump earthdiver Cloudflare image-transform width so schema images clear
+    Google's 720px rich-result minimum. CF clamps to the asset's native width,
+    so this never upscales: small originals stay small, larger ones get bigger.
+    Scoped to the earthdiver cdn-cgi path on purpose (width= is a path option
+    there in our data, not a generic query param)."""
+    import re as _re
+    if not url:
+        return url
+    if "earthdiver.com/cdn-cgi/image/" not in url:
+        return url
+    return _re.sub(r"width=\d+", "width=1200", url, count=1)
+
+
 # Module-level source priority. Used by merge_events when dedup groups
 # disagree on a field — the lower-priority source's value loses. Default
 # for unknown sources is Tier 2
@@ -721,6 +735,8 @@ def merge_events(records: list[dict]) -> dict:
         _r["title"] = _clean_display_text(_r.get("title", ""))
         if _r.get("description"):
             _r["description"] = _clean_display_text(_r["description"])
+        if _r.get("image_url"):
+            _r["image_url"] = _normalize_image_url(_r["image_url"])
         return _r
     
     # Sort by source priority (lower = better). Constants are module-level.
@@ -749,6 +765,8 @@ def merge_events(records: list[dict]) -> dict:
     base["title"] = _clean_display_text(base.get("title", ""))
     if base.get("description"):
         base["description"] = _clean_display_text(base["description"])
+    if base.get("image_url"):
+        base["image_url"] = _normalize_image_url(base["image_url"])
     return base
 
 
