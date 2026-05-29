@@ -588,15 +588,18 @@ of the same change.
       4 - Aug 20")
 - [ ] VPC CI scrape flakiness (daily bot 13 vs local 100+)
 - [ ] Grand Targhee scraper degradation (13 -> 1)
-- [ ] Jackson classifier bug (jackson_scraper.py ~387 writes wrong var)
+- [x] Jackson classifier bug (~387 stale loop var) — DONE d8e0e09; effect on next scrape
 - [ ] Per-source event ID dedup overhaul — multi-day infrastructure; use
       stable source IDs as primary identity, similarity matching as
       separate explicit layer. Eliminates the "new dup pattern emerged"
       churn we keep hitting.
 - [ ] Cross-source title-variance dedup beyond what venue-time catches
 - [ ] Sun Valley + Ketchum rollout
-- [ ] DELETE OLD API KEYS at provider dashboards
-- [ ] Recategorize "Community" bucket (still 58% of Jackson)
+- [x] API keys rotated (owner, Day 11)
+- [~] Category quality: Festivals bucket dropped, CFA source-tag leak fixed,
+      music-festival/photograph/disco rules added (Day 11). REMAINING: Community
+      ~50-57% is UNDER-mapping (events with no bucket-worthy tag), a separate
+      task from the over-matching now fixed.
 - [ ] Health check threshold consolidation (sum related source labels)
 - [ ] Verify 267 404s drop in Search Console over coming weeks
 - GSC "Duplicate, Google chose different canonical" (2 URLs, crawled 26 May):
