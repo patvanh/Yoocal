@@ -375,15 +375,17 @@ def main():
     # Write out
     out_path = Path(__file__).parent / "public" / "raw" / "events-jackson.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
+    # Apply canonical category classification before writing.
+    # (classify the deduped list, not the stale last-source loop var.)
+    from event_classifier import classify_events as _classify_events
+    deduped = _classify_events(deduped)
+
     payload = {
         "updated_at": datetime.now().isoformat(),
         "scraped_at": datetime.now().isoformat(),
         "total": len(deduped),
         "events": deduped,
     }
-    # Apply canonical category classification before writing.
-    from event_classifier import classify_events as _classify_events
-    events = _classify_events(events)
 
     with open(out_path, "w") as f:
         json.dump(payload, f, indent=2)
