@@ -190,7 +190,39 @@ def _fan_out_recurring(events):
     from datetime import datetime, timedelta
     result = []
     fanned = 0
+    _WEEKDAY_IDX = {"Monday": 0, "Tuesday": 1, "Wednesday": 2, "Thursday": 3,
+                    "Friday": 4, "Saturday": 5, "Sunday": 6}
     for e in events:
+        # If a record has structured weekly recurrence fields, compute its
+        # occurrence_dates deterministically and override any LLM-generated
+        # list. LLMs sometimes truncate (e.g. stopping at Aug 22 for a
+        # May 30 - Sep 19 series); deterministic computation captures every
+        # matching weekday in range.
+        rec = (e.get("recurrence") or "")
+        if rec in ("weekly", "weekly_multiple") and e.get("end_date"):
+            day_str = e.get("recurrence_day") or e.get("recurrence_days") or ""
+            target_indices = set()
+            for d in day_str.replace("|", ",").split(","):
+                idx = _WEEKDAY_IDX.get(d.strip())
+                if idx is not None:
+                    target_indices.add(idx)
+            if target_indices:
+                try:
+                    sd = datetime.strptime((e.get("date") or "")[:10], "%Y-%m-%d").date()
+                    ed = datetime.strptime(e["end_date"][:10], "%Y-%m-%d").date()
+                    cap_end = datetime.now().date() + timedelta(days=365)
+                    if ed > cap_end:
+                        ed = cap_end
+                    computed = []
+                    d = sd
+                    while d <= ed and len(computed) < 60:
+                        if d.weekday() in target_indices:
+                            computed.append(d.isoformat())
+                        d += timedelta(days=1)
+                    if computed:
+                        e["occurrence_dates"] = computed
+                except (ValueError, TypeError):
+                    pass
         occ = e.get("occurrence_dates") or []
         end_date = e.get("end_date")
         start_date = (e.get("date") or "")[:10]

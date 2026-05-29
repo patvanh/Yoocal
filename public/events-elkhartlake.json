@@ -6,9 +6,9 @@
     "lng": -88.0426
   },
   "radius_mi": 15,
-  "generated_at": "2026-05-28T20:35:42.725508-06:00",
+  "generated_at": "2026-05-28T22:17:31.791847-06:00",
   "today": "2026-05-28",
-  "event_count": 255,
+  "event_count": 302,
   "events": [
     {
       "title": "The Tiki Bar Live Music by Jesse Voelker",
@@ -191,6 +191,32 @@
         "Festivals",
         "Outdoors",
         "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-05-30",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
       ],
       "_distance_mi": 3.6
     },
@@ -460,6 +486,34 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-06-01",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-06-01",
       "start_time": "6:00 PM",
@@ -493,6 +547,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-06-03",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Summer Concert: Lilie",
@@ -789,6 +871,32 @@
       "_distance_mi": 3.6
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-06-06",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Farmers & Artisans Market",
       "date": "2026-06-06",
       "start_time": "8:00 AM",
@@ -929,6 +1037,34 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-06-08",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-06-08",
       "start_time": "6:00 PM",
@@ -962,6 +1098,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-06-10",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Live Music by Chasing Tales",
@@ -1083,6 +1247,32 @@
         "Outdoors"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-06-13",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Cars & Coffee at The Throttlestop",
@@ -1278,6 +1468,34 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-06-15",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-06-15",
       "start_time": "6:00 PM",
@@ -1311,6 +1529,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-06-17",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Live Music by 7000apart",
@@ -1671,6 +1917,32 @@
       "_distance_mi": 3.6
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-06-20",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Siebkens Live Music by The Donna Woodall Group",
       "date": "2026-06-20",
       "start_time": "7:00 PM",
@@ -1919,6 +2191,34 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-06-22",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-06-22",
       "start_time": "6:00 PM",
@@ -1952,6 +2252,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-06-24",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Summer Concert: Ryan Scheidemeyer & Friends",
@@ -2156,6 +2484,32 @@
       "is_free": false,
       "filter_categories": [
         "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-06-27",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
       ],
       "_distance_mi": 3.6
     },
@@ -2384,6 +2738,34 @@
       "_distance_mi": 3.6
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-06-29",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-06-29",
       "start_time": "6:00 PM",
@@ -2417,6 +2799,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-07-01",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Live Music by The Chili Dogs",
@@ -2622,6 +3032,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-07-04",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Farmers & Artisans Market",
       "date": "2026-07-04",
       "start_time": "8:00 AM",
@@ -2780,6 +3216,34 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-07-06",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-07-06",
       "start_time": "6:00 PM",
@@ -2813,6 +3277,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-07-08",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Live Music by Trapper Schoepp",
@@ -2955,6 +3447,32 @@
         "Outdoors"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-07-11",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Midwest Acoustic Music Festival",
@@ -3146,6 +3664,34 @@
       "_distance_mi": 0.2
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-07-13",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-07-13",
       "start_time": "6:00 PM",
@@ -3179,6 +3725,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-07-15",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Live Music by Erin Krebs & Paul Sucherman",
@@ -3498,6 +4072,32 @@
       "_distance_mi": 3.6
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-07-18",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Vintage Concours d'Elegance - Sportscars",
       "date": "2026-07-18",
       "location": "Downtown Elkhart Lake, WI",
@@ -3709,6 +4309,34 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-07-20",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-07-20",
       "start_time": "6:00 PM",
@@ -3742,6 +4370,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-07-22",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Live Music by Katalysst",
@@ -3861,6 +4517,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-07-25",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Farmers & Artisans Market",
       "date": "2026-07-25",
       "start_time": "8:00 AM",
@@ -3968,6 +4650,34 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-07-27",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-07-27",
       "start_time": "6:00 PM",
@@ -4001,6 +4711,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-07-29",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Summer Concert: Valley Fox",
@@ -4384,6 +5122,32 @@
       "_distance_mi": 3.6
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-08-01",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Siebkens Live Music by Deep Pockets",
       "date": "2026-08-01",
       "start_time": "7:00 PM",
@@ -4525,6 +5289,34 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-08-03",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-08-03",
       "start_time": "6:00 PM",
@@ -4558,6 +5350,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-08-05",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Live Music by Mike Brumm with Trust & Follow",
@@ -4675,6 +5495,34 @@
         "Outdoors"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-08-12",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Live Music by Bob & Connor McManus",
@@ -4888,6 +5736,32 @@
       "_distance_mi": 0.2
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-08-08",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Cars & Coffee at The Throttlestop",
       "date": "2026-08-08",
       "start_time": "8:00 AM",
@@ -5046,6 +5920,34 @@
         "Outdoors"
       ],
       "_distance_mi": 0.2
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-08-10",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Downtown Night Live Music: Sister Winchester",
@@ -5228,6 +6130,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-08-15",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Farmers & Artisans Market",
       "date": "2026-08-15",
       "start_time": "8:00 AM",
@@ -5336,6 +6264,34 @@
       "_distance_mi": 0.2
     },
     {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-08-17",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "4 Miles of Fitness",
       "date": "2026-08-17",
       "start_time": "6:00 PM",
@@ -5369,6 +6325,34 @@
         "Wellness"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-08-19",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482589",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Sports",
+        "Outdoor"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Siebkens Live Music by Pat McCurdy",
@@ -5458,6 +6442,32 @@
         "Outdoors"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-08-22",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Farmers & Artisans Market",
@@ -5946,6 +6956,32 @@
       "_distance_mi": 3.6
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-08-29",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Siebkens Live Music by Joseph Huber",
       "date": "2026-08-29",
       "start_time": "7:00 PM",
@@ -6281,6 +7317,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-09-05",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Farmers & Artisans Market",
       "date": "2026-09-05",
       "start_time": "8:00 AM",
@@ -6424,6 +7486,32 @@
       "_distance_mi": 0.2
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-09-12",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Cars & Coffee at The Throttlestop",
       "date": "2026-09-12",
       "start_time": "8:00 AM",
@@ -6527,6 +7615,32 @@
       "filter_categories": [
         "Community",
         "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-09-19",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
       ],
       "_distance_mi": 3.6
     },
@@ -6648,6 +7762,84 @@
         "Running & Races"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-10-10",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-10-31",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-09-26",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
     },
     {
       "title": "Farmers & Artisans Market",
@@ -7218,6 +8410,66 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Old World Christmas Market",
+      "date": "2026-12-08",
+      "end_date": null,
+      "location": "The Osthoff Resort, Elkhart Lake, WI",
+      "venue_name": "The Osthoff Resort",
+      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
+      "categories": [
+        "Family",
+        "Festival",
+        "Food & Drink",
+        "Wellness"
+      ],
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/",
+      "lat": 43.8347,
+      "lng": -88.0398,
+      "scraped_at": "2026-05-28T19:15:38.484056",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism"
+      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Family & Kids",
+        "Festivals",
+        "Food & Drink",
+        "Wellness"
+      ],
+      "_distance_mi": 0.2
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-10-24",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "SCCA National Championship Runoffs",
       "date": "2026-10-02",
       "description": "The pinnacle of US amateur road racing. Top SCCA racers from across the country compete for national championships at Road America.",
@@ -7247,6 +8499,32 @@
       "filter_categories": [
         "Festivals",
         "Sports"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-10-17",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
       ],
       "_distance_mi": 3.6
     },
@@ -7318,6 +8596,32 @@
       "_distance_mi": 3.6
     },
     {
+      "title": "Elkhart Lake Farmers & Artisans Market",
+      "date": "2026-10-03",
+      "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.7969,
+      "lng": -87.9897,
+      "scraped_at": "2026-05-28T19:15:38.482591",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "end_date": null,
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "categories": [
+        "Food & Drink"
+      ],
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Food & Drink"
+      ],
+      "_distance_mi": 3.6
+    },
+    {
       "title": "Farmers & Artisans Market",
       "date": "2026-10-03",
       "start_time": "8:00 AM",
@@ -7344,40 +8648,6 @@
     {
       "title": "Old World Christmas Market",
       "date": "2026-12-07",
-      "end_date": null,
-      "location": "The Osthoff Resort, Elkhart Lake, WI",
-      "venue_name": "The Osthoff Resort",
-      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
-      "categories": [
-        "Family",
-        "Festival",
-        "Food & Drink",
-        "Wellness"
-      ],
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/",
-      "lat": 43.8347,
-      "lng": -88.0398,
-      "scraped_at": "2026-05-28T19:15:38.484056",
-      "start_time": "10:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "_all_sources": [
-        "Elkhart Lake Tourism"
-      ],
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Family & Kids",
-        "Festivals",
-        "Food & Drink",
-        "Wellness"
-      ],
-      "_distance_mi": 0.2
-    },
-    {
-      "title": "Old World Christmas Market",
-      "date": "2026-12-08",
       "end_date": null,
       "location": "The Osthoff Resort, Elkhart Lake, WI",
       "venue_name": "The Osthoff Resort",
