@@ -664,6 +664,23 @@ of the same change.
 - [ ] VERIFY AFTER NEXT SCRAPE: run `classify_audit.py jackson` against the
       regenerated raw to confirm the var fix lands clean categories in prod.
 
+## Update 21: CFA source-tag leak fixed (cbfce92)
+
+- DONE (was Update 20's top banked TODO): Center for the Arts blanket-tags
+  ~97% of events "Arts". Added SOURCE_BLANKET_IGNORE in event_classifier.py:
+  per-source set of blanket tags (arts/community/theater) that get skipped so
+  text rules decide; specific tags (Film, Met Opera) still pass. Extensible --
+  add other over-tagging sources to the map.
+- Paired text rules so masked events still classify: photograph(y/er)->Arts,
+  silent disco + vinyl->Music.
+- Verified 20/20 bucket assertions. Jackson Arts&Theater 230->139; other
+  cities unchanged (CFA Jackson-only).
+- ACCEPTED RESIDUALS: Little Feat (bare band name, no text signal -> Community);
+  Fran Lebowitz (Chamber-sourced Theater tag, not CFA -> Arts&Theater). One-offs.
+- NOTE: ignore-map is a pragmatic patch. Ideal long-term = text rules good
+  enough to not lean on noisy source tags. Community still ~50-57% (under-
+  mapping) untouched -- separate task.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
