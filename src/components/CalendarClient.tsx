@@ -40,6 +40,34 @@ interface V2YocEvent {
 // filter_categories, facets). Including filter_categories matters because that's
 // where the clean user-facing buckets live ("Running & Races", "Outdoors"...) —
 // without it, typing "running" misses everything tagged via the bucket pipeline.
+// Synonym table for search. When a user searches a key, the search also
+// matches events containing any synonym. Keeps existing behavior (exact word
+// still wins) AND broadens results so "concert" finds music events even when
+// the literal word "concert" isn't in the data.
+//
+// Conservative: only obvious "same concept, different word" cases. Expand as
+// real user misses surface.
+const SEARCH_SYNONYMS: Record<string, string[]> = {
+  concert: ['music', 'band', 'live', 'perform', 'jazz', 'rock', 'country', 'bluegrass', 'reggae', 'blues', 'acoustic', 'folk', 'indie', 'singer', 'sing'],
+  music: ['concert', 'band', 'live', 'perform', 'jazz'],
+  race: ['run', 'marathon', '5k', '10k', 'triathlon', 'relay', 'cycling'],
+  running: ['run', 'race', 'marathon', '5k', '10k', 'jog'],
+  show: ['performance', 'theatre', 'theater', 'exhibit', 'play'],
+  theater: ['theatre', 'show', 'performance', 'play'],
+  theatre: ['theater', 'show', 'performance', 'play'],
+  kids: ['family', 'child', 'children', 'youth', 'baby', 'parent', 'school', 'storytime'],
+  family: ['kids', 'child', 'children', 'youth'],
+  food: ['drink', 'wine', 'beer', 'dine', 'eat', 'taste', 'market', 'brewery', 'cocktail'],
+  hike: ['hiking', 'trail', 'outdoor', 'nature'],
+  hiking: ['hike', 'trail', 'outdoor', 'nature'],
+  bike: ['biking', 'cycling', 'mountain bike', 'mtb', 'trail'],
+  biking: ['bike', 'cycling', 'mtb'],
+  art: ['gallery', 'exhibit', 'paint', 'sculpt', 'craft'],
+  arts: ['art', 'gallery', 'exhibit', 'theater', 'theatre', 'dance'],
+  yoga: ['wellness', 'mindful', 'meditation', 'pilates'],
+  free: ['no charge', 'no cost', 'complimentary'],
+}
+
 function matchesQuery(e: V2YocEvent, qLower: string): boolean {
   if (!qLower) return true
   const text = [
@@ -52,7 +80,14 @@ function matchesQuery(e: V2YocEvent, qLower: string): boolean {
   // when the literal phrase "running 5k" never appears verbatim.
   const tokens = qLower.split(/\s+/).filter(Boolean)
   if (tokens.length === 0) return true
-  return tokens.every(tok => text.includes(tok))
+  // Each token matches if it appears literally OR if any of its synonyms
+  // does. Concert -> music events, kids -> family events, etc.
+  return tokens.every(tok => {
+    if (text.includes(tok)) return true
+    const syns = SEARCH_SYNONYMS[tok]
+    if (syns && syns.some(s => text.includes(s))) return true
+    return false
+  })
 }
 
 function isFreeEvent(e: V2YocEvent): boolean {
