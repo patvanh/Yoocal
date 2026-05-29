@@ -611,6 +611,59 @@ of the same change.
   no-op (exact-match URLs already have slug === eventSlug).
 - [ ] Re-trigger Search Console "validate fix" once enough crawl time
 
+## Update 20: Day 11 — image fix, GSC ruled benign, category cleanup, Jackson var
+
+### Shipped
+- `342c12a` earthdiver schema image width 500->1200 (clear Google 720px bar).
+  Source-capped; ~13 small originals stay sub-720 (CF won't upscale). LIVE.
+- `1a3bef2` Category cleanup, verified 17/17 at the BUCKET layer:
+  - Music rule: added "music festival" + "acoustic music" so named music
+    festivals + concerts-at-festivals classify as Music (were Festival-only).
+  - Theater rule: dropped bare \btheat(re|er)\b -- it matched the venue
+    phrase "The Center Theater" in descriptions, mislabeling graduations/
+    talks/concerts. Kept explicit signals (musical theatre, broadway,
+    shakespeare, comedy show, cabaret, dreamcoat, auditions).
+  - Festival rule: dropped bare \bcelebration\b (matched anniversaries/
+    graduations/hockey).
+  - category_normalizer: REMOVED the "Festivals" user-facing bucket. Festival
+    events surface under real buckets (Music/Arts & Theater/Food); true multi-
+    day festivals fall to Community (accepted). Kills the GTMF-concert noise.
+- `d8e0e09` Jackson classifier var fix: main() classified the stale loop var
+  "events" (last source only) and discarded it; payload built from unclassified
+  "deduped". Now classifies "deduped" before payload, matching Heber/Elkhart
+  (which were already correct -- they classify the save_events param).
+  EFFECT APPEARS ON NEXT JACKSON SCRAPE; current raw is still buggy-run output.
+
+### New tool (use it for all future category work)
+- `classify_audit.py` -- reusable, read-only:
+  - `python3 classify_audit.py [city]`      audit: per-bucket counts + sample titles
+  - `python3 classify_audit.py trace <Cat> [city]`  shows which rule fired + on what text
+  - `check()`        known-answer assertions at the CATEGORY layer
+  - `check_buckets()` known-answer assertions at the BUCKET layer (what users see)
+  - LESSON: assert at the BUCKET layer (filter_categories), not the category
+    layer. categories -> buckets is lossy (Theater+Arts+Film -> "Arts & Theater";
+    Festival -> nothing now). I initially asserted one layer too low and it hid
+    the source-tag leak. Bucket layer is the one that matters.
+
+### TOP banked TODO (the real next task -- root of today's residuals)
+- [ ] Per-source category tag-trust. "Center for the Arts Jackson Hole" blanket-
+      tags EVERY event it lists "Arts" (and others "Theater"/"Festival") at the
+      SOURCE. classify_event honors source cats via LEGACY_MAP passthrough, so a
+      graduation/Big Thief concert/birding festival all land in "Arts & Theater".
+      Fix: don't honor a venue's blanket category tag -- require a text signal,
+      or per-source trust rules. This is the 3rd face of the same venue leak
+      (text-rule = fixed today; source-tag = still open). Affects all cities
+      with over-tagging sources.
+
+### Other findings (not bugs, verify later)
+- Community still ~49-60% in PC/Heber/Jackson. UNCHANGED by today -- that's
+  UNDER-mapping (events with no bucket-worthy tag -> default Community), a
+  DIFFERENT problem than the over-matching we fixed. Don't conflate.
+- Elkhart Community = 4.3% (vs ~55% elsewhere). Outlier -- verify it's genuine
+  good categorization vs a quirk.
+- [ ] VERIFY AFTER NEXT SCRAPE: run `classify_audit.py jackson` against the
+      regenerated raw to confirm the var fix lands clean categories in prod.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
