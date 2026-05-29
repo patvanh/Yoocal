@@ -879,6 +879,133 @@ def _suppress_aggregator_dupes(events: list, window_days: int = 7) -> list:
     return out
 
 
+def _normalize_venue(venue: str) -> str:
+    """Normalize a venue string for cross-source matching. Strips address
+    suffix (anything after the first comma), lowercases, collapses whitespace,
+    and folds 'theatre/theater' variants."""
+    if not venue:
+        return ""
+    v = venue.split(",")[0].strip().lower()
+    v = " ".join(v.split())  # collapse whitespace
+    v = v.replace("theater", "theatre")  # canonical spelling
+    return v
+
+
+def _normalize_time(t: str) -> str:
+    """Normalize a time string to 'HH:MM' 24h for matching. Returns empty
+    if unparseable."""
+    if not t:
+        return ""
+    import re as _re
+    m = _re.match(r"^\s*(\d{1,2}):?(\d{2})?\s*(AM|PM)?\s*$", str(t), _re.IGNORECASE)
+    if not m:
+        return ""
+    h = int(m.group(1))
+    mn = int(m.group(2) or 0)
+    ampm = (m.group(3) or "").upper()
+    if ampm == "PM" and h != 12:
+        h += 12
+    elif ampm == "AM" and h == 12:
+        h = 0
+    if h > 23 or mn > 59:
+        return ""
+    return f"{h:02d}:{mn:02d}"
+
+
+def _venue_time_dedup(events: list) -> list:
+    """Collapse records sharing the same (normalized_venue, date, start_time).
+
+    These are almost certainly the same real-world event under different
+    titles -- e.g. 'Keller & The Keels' / 'Keller Williams & The Keels' /
+    'Egyptian Theater - Keller & The Keels' all at Egyptian Theatre, May 29,
+    8 PM. Different sources phrase event titles differently; venue + date +
+    time is a reliable identity signal.
+
+    Safety:
+    - Requires all three keys present and parseable. Missing any -> record
+      passes through unchanged. No collapse can fire on incomplete data.
+    - Recurring events stay distinct because dates differ.
+    - Same-venue same-day different-time events stay distinct (e.g. 6pm
+      trivia + 8pm concert at one bar).
+
+    Winner selection: highest SOURCE_PRIORITY (lowest priority number).
+    Ties broken by description length (longer = more info).
+    """
+    from collections import defaultdict as _dd
+    groups = _dd(list)
+    untouchable = []
+    for e in events:
+        v = _normalize_venue(e.get("venue_name") or e.get("location") or "")
+        d = (e.get("date") or "")[:10]
+        t = _normalize_time(e.get("start_time") or "")
+        if not v or not d or not t:
+            untouchable.append(e)
+            continue
+        groups[(v, d, t)].append(e)
+
+    out = list(untouchable)
+    dropped = 0
+    for key, members in groups.items():
+        if len(members) == 1:
+            out.append(members[0])
+            continue
+        # Pick winner: best (lowest) source priority, then longest description
+        members.sort(key=lambda r: (
+            SOURCE_PRIORITY.get(r.get("source", ""), DEFAULT_PRIORITY),
+            -len(r.get("description") or ""),
+        ))
+        out.append(members[0])
+        dropped += len(members) - 1
+
+    if dropped:
+        print(f"  [venue-time-dedup] collapsed {dropped} same-venue same-time records")
+    return out
+
+
+def _venue_date_aggregator_suppress(events: list) -> list:
+    """When a tier-1 or tier-2 source has ANY event at a venue on a date, drop
+    every aggregator (tier-4) record at the same venue+date. Aggregators
+    (Google Events, Bandsintown) frequently report the same event under
+    different titles, times, or with missing fields -- the canonical source
+    has the truth.
+
+    Stronger than _suppress_aggregator_dupes which requires title match;
+    this only needs venue+date overlap. Safe because tier-4 sources are by
+    definition low-trust, and the venue/date check is a strong signal of
+    same-event."""
+    from collections import defaultdict as _dd
+    # Index high-trust venue+date pairs
+    high_trust_keys = set()
+    for e in events:
+        src = e.get("source") or ""
+        prio = SOURCE_PRIORITY.get(src, DEFAULT_PRIORITY)
+        if prio >= 4:  # skip aggregators
+            continue
+        v = _normalize_venue(e.get("venue_name") or e.get("location") or "")
+        d = (e.get("date") or "")[:10]
+        if v and d:
+            high_trust_keys.add((v, d))
+
+    dropped = 0
+    out = []
+    for e in events:
+        src = e.get("source") or ""
+        prio = SOURCE_PRIORITY.get(src, DEFAULT_PRIORITY)
+        if prio < 4:
+            out.append(e)
+            continue
+        v = _normalize_venue(e.get("venue_name") or e.get("location") or "")
+        d = (e.get("date") or "")[:10]
+        if v and d and (v, d) in high_trust_keys:
+            dropped += 1
+            continue  # suppress: a real source has this venue+date
+        out.append(e)
+
+    if dropped:
+        print(f"  [venue-date-suppress] dropped {dropped} aggregator records covered by canonical sources")
+    return out
+
+
 
 def main():
     today_iso = datetime.now(MOUNTAIN).strftime("%Y-%m-%d")
@@ -952,6 +1079,8 @@ def main():
     # that duplicate higher-quality sources. Conservative — only suppresses
     # within +/-7 days of a same-title match from a non-aggregator source.
     deduped = _suppress_aggregator_dupes(deduped)
+    deduped = _venue_time_dedup(deduped)
+    deduped = _venue_date_aggregator_suppress(deduped)
     print(f"After aggregator-suppress: {len(deduped)}")
     
     # Step 3: Filter past events
