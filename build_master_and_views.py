@@ -219,6 +219,65 @@ def _fan_out_recurring(events):
                 fanned += 1
             except (ValueError, TypeError):
                 result.append(e)
+        elif (e.get("recurrence") or "").startswith("monthly_nth_") and (
+            e.get("recurrence_day") or e.get("recurrence_days")
+        ):
+            # Monthly Nth weekday recurrence (e.g. "3rd Thursday of every month").
+            # Expand to 12 occurrences over the next ~13 months, skipping any
+            # occurrence before the event's own start_date.
+            try:
+                rec_type = e.get("recurrence") or ""
+                ord_part = rec_type[len("monthly_nth_"):]
+                # Ordinal can be a digit ("1"-"5") or "last"
+                if ord_part == "last":
+                    ordinal = "last"
+                else:
+                    ordinal = int(ord_part)
+                day_str = e.get("recurrence_day") or (e.get("recurrence_days") or "").split(",")[0].strip()
+                _DAY_IDX = {"Monday": 0, "Tuesday": 1, "Wednesday": 2, "Thursday": 3,
+                            "Friday": 4, "Saturday": 5, "Sunday": 6}
+                target_weekday = _DAY_IDX.get(day_str)
+                if target_weekday is None:
+                    result.append(e)
+                    continue
+                start = datetime.strptime(start_date, "%Y-%m-%d").date()
+                # Walk forward 13 months
+                emitted = 0
+                year, month = start.year, start.month
+                for _ in range(13):
+                    # Find the nth (or last) target_weekday in this (year, month)
+                    if ordinal == "last":
+                        # Start from last day of month, walk backward
+                        if month == 12:
+                            next_first = datetime(year + 1, 1, 1).date()
+                        else:
+                            next_first = datetime(year, month + 1, 1).date()
+                        d = next_first - timedelta(days=1)
+                        while d.weekday() != target_weekday:
+                            d -= timedelta(days=1)
+                    else:
+                        # First of month, find first occurrence of target_weekday, add (ordinal-1) weeks
+                        first = datetime(year, month, 1).date()
+                        offset = (target_weekday - first.weekday()) % 7
+                        d = first + timedelta(days=offset + 7 * (ordinal - 1))
+                        # Sanity: d should still be in (year, month)
+                        if d.month != month:
+                            # No Nth weekday in this month (e.g. "5th Friday" in a short month)
+                            year, month = (year, month + 1) if month < 12 else (year + 1, 1)
+                            continue
+                    if d >= start:
+                        copy = dict(e)
+                        copy["date"] = d.isoformat()
+                        copy["end_date"] = None
+                        result.append(copy)
+                        emitted += 1
+                    year, month = (year, month + 1) if month < 12 else (year + 1, 1)
+                if emitted:
+                    fanned += 1
+                else:
+                    result.append(e)
+            except (ValueError, TypeError, KeyError):
+                result.append(e)
         else:
             result.append(e)
     if fanned:

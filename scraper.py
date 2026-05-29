@@ -79,12 +79,37 @@ def scrape_visit_park_city():
         return f"{m.group(1)}-{m.group(2)}-{m.group(3)}" if m else None
 
     def parse_recurrence(rec_str):
+        """Parse VPC API recurrence string into (type, day_names).
+
+        Critical: 'monthly' must be checked BEFORE 'weekly' because strings
+        like "monthly on the 3rd Thursday" contain a weekday name but are
+        monthly events, not weekly. Returns:
+          - ('daily', [])
+          - ('monthly_nth', [day]) when an ordinal is present (1st-4th, last)
+            and a weekday name is present
+          - ('monthly', days) for generic monthly
+          - ('weekly', [day]) / ('weekly_multiple', [days])
+          - (None, []) when nothing recognized
+        For 'monthly_nth' the ordinal is embedded in the type string as
+        e.g. 'monthly_nth_3' for 3rd, 'monthly_nth_last' for last.
+        """
         if not rec_str: return None, []
         s = rec_str.lower()
         days = [d.capitalize() for d in ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'] if d in s]
         if 'daily' in s: return 'daily', []
+        # Check 'monthly' BEFORE the days-based weekly branch.
+        if 'monthly' in s:
+            import re as _re
+            # Map word/numeric ordinals to integers (or 'last')
+            _ORD = {'first': 1, '1st': 1, 'second': 2, '2nd': 2,
+                    'third': 3, '3rd': 3, 'fourth': 4, '4th': 4,
+                    'fifth': 5, '5th': 5, 'last': 'last'}
+            m = _re.search(r'\b(first|second|third|fourth|fifth|last|1st|2nd|3rd|4th|5th)\b', s)
+            if m and days:
+                ord_key = _ORD[m.group(1)]
+                return f'monthly_nth_{ord_key}', days
+            return 'monthly', days
         if days: return ('weekly' if len(days) == 1 else 'weekly_multiple'), days
-        if 'monthly' in s: return 'monthly', days
         return None, []
 
     # Day-name -> Python weekday() index (Mon=0 .. Sun=6)
@@ -243,6 +268,42 @@ def scrape_visit_park_city():
                         start_date = nxt.strftime("%Y-%m-%d")
                     elif recurrence == "daily":
                         start_date = today_str
+                    elif recurrence and recurrence.startswith("monthly_nth_") and rec_days:
+                        # Find next Nth weekday occurrence on or after today.
+                        # The build-time fan-out will then expand to ~12 months.
+                        ref = datetime.now(MOUNTAIN).date()
+                        ord_part = recurrence[len("monthly_nth_"):]
+                        ordinal = "last" if ord_part == "last" else int(ord_part)
+                        _DI = {"Monday":0,"Tuesday":1,"Wednesday":2,"Thursday":3,"Friday":4,"Saturday":5,"Sunday":6}
+                        target_wday = _DI.get(rec_days[0])
+                        if target_wday is None:
+                            continue
+                        from datetime import timedelta as _td
+                        year, month = ref.year, ref.month
+                        nxt = None
+                        for _ in range(13):
+                            if ordinal == "last":
+                                if month == 12:
+                                    first_next = datetime(year+1, 1, 1).date()
+                                else:
+                                    first_next = datetime(year, month+1, 1).date()
+                                d = first_next - _td(days=1)
+                                while d.weekday() != target_wday:
+                                    d -= _td(days=1)
+                            else:
+                                first = datetime(year, month, 1).date()
+                                offset = (target_wday - first.weekday()) % 7
+                                d = first + _td(days=offset + 7*(ordinal-1))
+                                if d.month != month:
+                                    year, month = (year, month+1) if month < 12 else (year+1, 1)
+                                    continue
+                            if d >= ref:
+                                nxt = d
+                                break
+                            year, month = (year, month+1) if month < 12 else (year+1, 1)
+                        if nxt is None:
+                            continue
+                        start_date = nxt.strftime("%Y-%m-%d")
                     else:
                         # Non-recurring event with a past date, OR monthly with
                         # no parseable day — we can't trust it lands today. Drop
