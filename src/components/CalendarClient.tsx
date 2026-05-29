@@ -33,6 +33,21 @@ interface V2YocEvent {
   hook?: string
   is_free?: boolean | null
   price?: string
+  // Cross-city search tag: set on events from cities OTHER than the current
+  // one (Model C). Used to filter by city pill and display city attribution.
+  _sourceCity?: string
+  // Fields populated by build_master_and_views.py / scrapers that the
+  // interface didn't previously declare. Same class as the image_url fix
+  // earlier today — TS strictness fires when code reads these.
+  recurrence?: string
+  recurrence_day?: string
+  recurrence_days?: string
+  recurrence_text?: string
+  occurrence_dates?: string[]
+  date_label?: string
+  source_url?: string
+  scraped_at?: string
+  _distance_mi?: number
 }
 
 // Search match: case-insensitive substring across title, description, venue,
@@ -452,6 +467,11 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   // (Model C): current city's events surface first, fallback to nearest from
   // other cities when local results are sparse.
   const [otherCityEvents, setOtherCityEvents] = useState<V2YocEvent[]>([])
+  // City filter for cross-city search. Defaults to the current city so the
+  // overlay isn't overwhelming on open; user can tap "All" or another city
+  // pill to expand.
+  type CityFilterValue = 'current' | 'all' | 'parkcity' | 'heber' | 'jackson' | 'elkhartlake'
+  const [cityFilter, setCityFilter] = useState<CityFilterValue>('current')
   const [loading, setLoading] = useState(true)
   const [dayFilter, setDayFilter] = useState<V2DayFilter>('today')
   const [timeFilter, setTimeFilter] = useState<V2TimeFilter>('any')
@@ -697,7 +717,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     const q = searchQuery.trim().toLowerCase()
     const todayStr = v2DateToStr(v2TodayMountain())
     if (!q && activeChips.size === 0) return []
-    return events
+    const filterAndSort = (list: V2YocEvent[]) => list
       .filter(e => ((e.end_date || e.date) || '') >= todayStr)
       .filter(e => matchesQuery(e, q))
       .filter(e => {
@@ -707,7 +727,22 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         return true
       })
       .sort((a, b) => (a.date || '').localeCompare(b.date || ''))
-  }, [events, searchQuery, activeChips, chipPickedDate])
+    // Cross-city search: current city's matches surface first (most relevant
+    // to the user who picked this city), then other-city matches appended.
+    // Piece 3 will add distance-based sorting within the other-city tier;
+    // for now they appear in chronological order, segregated from local.
+    const local = filterAndSort(events)
+    const other = filterAndSort(otherCityEvents)
+    // Apply city filter: 'current' (default) shows only local results — same
+    // experience users had before cross-city. 'all' returns local first then
+    // other-city. Specific city pill returns only that city's results.
+    const cityKeyLocal = cityKeyProp || 'parkcity'
+    if (cityFilter === 'current') return local
+    if (cityFilter === 'all') return [...local, ...other]
+    // Specific city: filter from the appropriate pool
+    if (cityFilter === cityKeyLocal) return local
+    return other.filter(e => (e._sourceCity || '') === cityFilter)
+  }, [events, otherCityEvents, searchQuery, activeChips, chipPickedDate, cityFilter, cityKeyProp])
 
   // Group results by normalized title for the "See all" overlay. Each row
   // shows one card per unique event identity, with all future occurrences
@@ -1327,6 +1362,45 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}
               >×</button>
+            </div>
+            {/* City filter pills — Model C cross-city UX. Default to current
+                city, user can expand to all or pick a specific city. */}
+            <div style={{
+              display: 'flex', flexWrap: 'wrap', gap: 6,
+              marginBottom: 14, paddingBottom: 12,
+              borderBottom: '1px solid rgba(255,255,255,0.06)',
+            }}>
+              {([
+                { id: 'current' as CityFilterValue, label: ({parkcity:'Park City',heber:'Heber Valley',jackson:'Jackson Hole',elkhartlake:'Elkhart Lake'} as Record<string,string>)[(cityKeyProp || 'parkcity')] || 'Local' },
+                { id: 'parkcity' as CityFilterValue, label: 'Park City' },
+                { id: 'heber' as CityFilterValue, label: 'Heber Valley' },
+                { id: 'jackson' as CityFilterValue, label: 'Jackson Hole' },
+                { id: 'elkhartlake' as CityFilterValue, label: 'Elkhart Lake' },
+                { id: 'all' as CityFilterValue, label: 'All cities' },
+              ]).filter(p => {
+                // Don't show the current-city pill twice: when on Heber, hide
+                // the 'Heber Valley' pill since 'current' already covers it.
+                const currentMap: Record<string, CityFilterValue> = {parkcity:'parkcity',heber:'heber',jackson:'jackson',elkhartlake:'elkhartlake'}
+                const ck = currentMap[cityKeyProp || 'parkcity']
+                return !(p.id === ck && p.id !== 'current')
+              }).map(p => {
+                const active = cityFilter === p.id
+                return (
+                  <button
+                    key={p.id}
+                    type="button"
+                    onClick={() => setCityFilter(p.id)}
+                    style={{
+                      background: active ? '#534AB7' : 'rgba(255,255,255,0.08)',
+                      color: active ? '#fff' : 'rgba(255,255,255,0.78)',
+                      border: active ? '1px solid transparent' : '1px solid rgba(255,255,255,0.12)',
+                      borderRadius: 999, padding: '4px 11px', fontSize: 11,
+                      fontWeight: active ? 500 : 400, cursor: 'pointer',
+                      fontFamily: 'inherit',
+                    }}
+                  >{p.label}</button>
+                )
+              })}
             </div>
             {groupedResults.length === 0 ? (
               <div style={{
