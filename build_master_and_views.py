@@ -987,11 +987,63 @@ def main():
             lat = e.get("lat")
             lng = e.get("lng")
 
+            # ADDRESS-DERIVED COORDS: when the event's address mentions a known
+            # city, use that city's center as the authoritative location. Handles
+            # two failure modes:
+            # (1) Bad coords + good address (Princess Pirate Train: PA coords,
+            #     Heber City address) -> address wins, event lands in Heber view.
+            # (2) Good-looking coords + address says elsewhere (Caltucky: Heber
+            #     center coords falsified by Google Events, but address clearly
+            #     says Cottonwood Heights) -> address wins, event excluded from
+            #     Heber view as it should be.
+            # The address string is the ground truth — coords are derived data.
+            _KNOWN_CITIES = {
+                # Wasatch / Heber Valley area
+                "heber city, ut": (40.5069, -111.4133),
+                "heber valley, ut": (40.5069, -111.4133),
+                "midway, ut": (40.5119, -111.4744),
+                "midway city, ut": (40.5119, -111.4744),
+                "charleston, ut": (40.4730, -111.4661),
+                "wallsburg, ut": (40.3919, -111.4286),
+                "kamas, ut": (40.6438, -111.2811),
+                # Summit / Park City area
+                "park city, ut": (40.6461, -111.4980),
+                # Salt Lake area (excluded from Heber/PC views)
+                "cottonwood heights, ut": (40.6195, -111.8104),
+                "sandy, ut": (40.5649, -111.8389),
+                "salt lake city, ut": (40.7608, -111.8910),
+                "millcreek, ut": (40.6869, -111.8754),
+                "south jordan, ut": (40.5621, -111.9297),
+                "west jordan, ut": (40.6097, -111.9391),
+                "west valley city, ut": (40.6916, -112.0010),
+                "draper, ut": (40.5247, -111.8638),
+                "provo, ut": (40.2338, -111.6585),
+                "orem, ut": (40.2969, -111.6946),
+                "lehi, ut": (40.3916, -111.8508),
+                "american fork, ut": (40.3769, -111.7958),
+                # Utah ski/resort outliers
+                "sundance, ut": (40.3925, -111.5810),
+                # Jackson area
+                "jackson, wy": (43.4799, -110.7624),
+                "wilson, wy": (43.5005, -110.8748),
+                "teton village, wy": (43.5875, -110.8275),
+                # Elkhart Lake area
+                "elkhart lake, wi": (43.8330, -88.0426),
+                "plymouth, wi": (43.7491, -87.9728),
+                "sheboygan, wi": (43.7508, -87.7145),
+            }
+            _addr_text = ((e.get("location") or "") + " " + (e.get("address") or "")).lower()
+            addr_match = None
+            for city_key, city_coords in _KNOWN_CITIES.items():
+                if city_key in _addr_text:
+                    addr_match = city_coords
+                    break
+            if addr_match:
+                lat, lng = addr_match
+
             # Sanity check: if lat/lng exists but is wildly wrong (more than
             # 100mi from EVERY city center), the source data is corrupted.
             # Treat as missing so the source-based fallback kicks in.
-            # Catches HVT data-entry bugs where the API returns Pennsylvania
-            # coords (39.76, -76.69) for a Heber-area event.
             if lat is not None and lng is not None:
                 try:
                     flat, flng = float(lat), float(lng)
@@ -1000,7 +1052,7 @@ def main():
                         for c in CITIES.values()
                     )
                     if min_dist > 100:
-                        lat, lng = None, None  # discard corrupted coords
+                        lat, lng = None, None
                 except (ValueError, TypeError):
                     lat, lng = None, None
 
@@ -1027,9 +1079,15 @@ def main():
             except (ValueError, TypeError):
                 continue
             if dist <= cfg["radius_mi"]:
-                # Add a distance hint for frontend
+                # Add a distance hint for frontend. Also persist the corrected
+                # lat/lng we computed (from address lookup, source fallback, or
+                # the trusted original) so map pins use the right coordinates
+                # rather than the source-corrupted ones we kept around for the
+                # original record.
                 e_copy = dict(e)
                 e_copy["_distance_mi"] = round(dist, 1)
+                e_copy["lat"] = float(lat)
+                e_copy["lng"] = float(lng)
                 in_radius.append(e_copy)
         
         # Write per-city view
