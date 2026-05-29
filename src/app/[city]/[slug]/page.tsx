@@ -1,9 +1,10 @@
-import { notFound } from 'next/navigation'
+import { notFound, redirect, permanentRedirect } from 'next/navigation'
 import type { Metadata } from 'next'
 import EventMap from '@/components/EventMap'
 import {
   CITY_CONFIG,
   findEvent,
+  findEventAnywhere,
   getAllEventsWithCity,
   cityKeyFromSlug,
   eventSlug,
@@ -136,8 +137,17 @@ export default async function EventPage({ params }: Props) {
   const cityKey = cityKeyFromSlug(citySlug)
   if (!cityKey) notFound()
 
-  const event = findEvent(cityKey, slug)
-  if (!event) notFound()
+  let event = findEvent(cityKey, slug)
+  if (!event) {
+    // Event not in this city — search all cities. If found, permanently
+    // redirect to the canonical URL. Recovers from URLs Google indexed under
+    // the wrong city path (legacy slug bug, no longer producing new bad URLs).
+    const cross = findEventAnywhere(slug)
+    if (cross) {
+      permanentRedirect(`/${cross.citySlug}/${slug}`)
+    }
+    notFound()
+  }
 
   const city = CITY_CONFIG[cityKey]
   const related = getRelatedEvents(cityKey, event)

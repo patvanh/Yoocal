@@ -150,6 +150,10 @@ export const CITY_CONFIG: Record<CityKey, {
 export function slugify(text: string): string {
   return text
     .toLowerCase()
+    // Strip trailing 4-digit year (will be re-appended via eventSlug with full date).
+    // Prevents URLs like "event-name-2026-2026-05-16" where the title already
+    // contained the year.
+    .replace(/\s+\d{4}\s*$/, '')
     .replace(/[^\w\s-]/g, '')
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
@@ -247,6 +251,18 @@ export function findEvent(cityKey: CityKey, slug: string): YoocalEvent | null {
   //    so old indexed URLs still resolve instead of 404ing.
   const loose = looseSlug(slug)
   return events.find(e => looseSlug(eventSlug(e)) === loose) || null
+}
+
+// findEventAnywhere: search every city for a slug. Returns the event AND
+// the cityKey/citySlug where it actually lives. Used to recover from URLs
+// at the wrong city path (e.g. Google indexed a Heber event under
+// /park-city/...). Returns null only if truly nowhere.
+export function findEventAnywhere(slug: string): { event: YoocalEvent; cityKey: CityKey; citySlug: string } | null {
+  for (const [cityKey, config] of Object.entries(CITY_CONFIG) as [CityKey, typeof CITY_CONFIG[CityKey]][]) {
+    const found = findEvent(cityKey, slug)
+    if (found) return { event: found, cityKey, citySlug: config.slug }
+  }
+  return null
 }
 
 export function formatDate(dateStr: string): string {
