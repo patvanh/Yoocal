@@ -21,6 +21,16 @@ export interface YoocalEvent {
   lat?: number
   lng?: number
   featured?: boolean
+  image_url?: string
+  venue_name?: string
+  address?: string
+  categories?: string[]
+  filter_categories?: string[]
+  facets?: string[]
+  occurrence_dates?: string[]
+  recurrence_text?: string
+  date_label?: string
+  _distance_mi?: number
 }
 
 export interface EventsFile {
