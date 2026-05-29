@@ -749,7 +749,26 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     // other-city. Specific city pill returns only that city's results.
     const cityKeyLocal = cityKeyProp || 'parkcity'
     if (cityFilter === 'current') return local
-    if (cityFilter === 'all') return [...local, ...other]
+    if (cityFilter === 'all') {
+      // Sort by distance from the current city's center, then by date.
+      // Current-city events get distance 0 so they always appear first;
+      // other cities sort by how close they are to where the user is browsing.
+      const originCenter = CITY_CENTERS[cityKeyLocal] || CITY_CENTERS.parkcity
+      const cityDistance = (cityKey: string): number => {
+        if (!cityKey || cityKey === cityKeyLocal) return 0
+        const c = CITY_CENTERS[cityKey]
+        if (!c || !originCenter) return Infinity
+        return v2DistanceMiles(originCenter.lat, originCenter.lng, c.lat, c.lng)
+      }
+      const combined = [...local, ...other]
+      combined.sort((a, b) => {
+        const ad = cityDistance(a._sourceCity || cityKeyLocal)
+        const bd = cityDistance(b._sourceCity || cityKeyLocal)
+        if (ad !== bd) return ad - bd
+        return (a.date || '').localeCompare(b.date || '')
+      })
+      return combined
+    }
     // Specific city: filter from the appropriate pool
     if (cityFilter === cityKeyLocal) return local
     return other.filter(e => (e._sourceCity || '') === cityFilter)
@@ -790,15 +809,38 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     for (const g of arr) {
       g.occurrences.sort((a, b) => (a.date || '').localeCompare(b.date || ''))
     }
-    // Sort groups: tier first, then by next occurrence date
+    // Sort groups: tier first, then (when "All cities" is active) by
+    // distance from the current city, then by next occurrence date.
+    // Tier wins so prefix-match groups lead regardless of city; within a tier
+    // closer cities come before farther ones; within a city date ascends.
+    const cityKeyLocal = cityKeyProp || 'parkcity'
+    const originCenter = CITY_CENTERS[cityKeyLocal] || CITY_CENTERS.parkcity
+    const groupCityDist = (g: { occurrences: V2YocEvent[] }): number => {
+      const sc = g.occurrences[0]?._sourceCity || cityKeyLocal
+      if (sc === cityKeyLocal) return 0
+      const c = CITY_CENTERS[sc]
+      if (!c || !originCenter) return Infinity
+      return v2DistanceMiles(originCenter.lat, originCenter.lng, c.lat, c.lng)
+    }
     arr.sort((a, b) => {
+      // When "All cities" is active, distance wins. Current city's events
+      // always lead, then closest city, then next-closest. Prefix-match
+      // tier only acts as a tiebreaker WITHIN a city. This matches user
+      // mental model: "show me what's local first, then expand outward."
+      if (cityFilter === 'all') {
+        const adist = groupCityDist(a)
+        const bdist = groupCityDist(b)
+        if (adist !== bdist) return adist - bdist
+      }
+      // Within the same city (or non-'all' filters), tier matters: events
+      // whose titles match the query prefix lead.
       if (a.tier !== b.tier) return a.tier - b.tier
       const ad = a.occurrences[0]?.date || ''
       const bd = b.occurrences[0]?.date || ''
       return ad.localeCompare(bd)
     })
     return arr
-  }, [allUpcomingMatches, searchQuery])
+  }, [allUpcomingMatches, searchQuery, cityFilter, cityKeyProp])
   
   // Featured events: things happening TODAY only. Manual flags first, then
   // today's best events ranked by tag richness. Empty if nothing today.
