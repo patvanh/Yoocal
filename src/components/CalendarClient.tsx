@@ -1074,7 +1074,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                     color: '#AFA9EC', fontSize: 12, cursor: 'pointer',
                     background: 'rgba(127,119,221,0.05)', fontWeight: 500,
                   }}
-                >See all {allUpcomingMatches.length} results &rarr;</div>
+                >See all {groupedResults.length} {groupedResults.length === 1 ? "event" : "events"} &rarr;</div>
               )}
             </div>
           ), document.body)}
