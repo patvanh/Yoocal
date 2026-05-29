@@ -65,6 +65,78 @@ class FetchResult:
         return len(text_blocks) < 3
 
 
+
+
+# ----------------------------------------------------------------------------
+# Heber Valley Tourism date_label parser
+# ----------------------------------------------------------------------------
+# gohebervalley.com's calendar embeds recurrence hints as date_label strings:
+#   "Sat, May - Sep, 7:00 - 8:30 PM"     -> weekly Saturday, May through Sep
+#   "Weekly, Thu mornings"               -> weekly Thursday
+#   "Sun, Jun - Aug, 7:00 - 8:00 PM"     -> weekly Sunday, Jun through Aug
+#   "Sat, 10:00 AM - 4:00 PM"            -> weekly Saturday
+# When we can confidently extract a weekday and (optionally) a month range,
+# stamp recurrence + recurrence_day + end_date so the build-time fan-out
+# can expand the event into one record per occurrence.
+import re as _hvt_re
+from datetime import datetime as _hvt_dt
+
+_HVT_WEEKDAY = {
+    "mon": "Monday", "tue": "Tuesday", "wed": "Wednesday", "thu": "Thursday",
+    "fri": "Friday", "sat": "Saturday", "sun": "Sunday",
+}
+_HVT_MONTH_NUM = {
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
+    "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12,
+}
+
+
+def _parse_hvt_date_label(event, label):
+    """Mutate event in place with recurrence/end_date hints extracted from
+    a Heber Valley Tourism date_label string. Conservative: only fires for
+    clear patterns. Leaves the event unchanged on ambiguous strings."""
+    s = label.strip()
+    s_lo = s.lower()
+    if "vary" in s_lo or "various" in s_lo:
+        return
+    m_weekday = _hvt_re.match(
+        r"^(?:weekly,?\s+)?(mon|tue|wed|thu|fri|sat|sun)[a-z]*",
+        s_lo,
+    )
+    if not m_weekday:
+        return
+    day_name = _HVT_WEEKDAY[m_weekday.group(1)]
+    end_date_iso = None
+    m_range = _hvt_re.search(
+        r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*"
+        r"\s*[-\u2013\u2014]\s*"
+        r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b",
+        s_lo,
+    )
+    if m_range:
+        end_month = _HVT_MONTH_NUM[m_range.group(2)]
+        try:
+            base_date = _hvt_dt.fromisoformat(event.get("date", ""))
+            year = base_date.year
+            if end_month < base_date.month:
+                year += 1
+            if end_month == 12:
+                last_day = 31
+            else:
+                from datetime import timedelta as _td
+                first_next = _hvt_dt(year, end_month + 1, 1)
+                last_day = (first_next - _td(days=1)).day
+            end_date_iso = f"{year:04d}-{end_month:02d}-{last_day:02d}"
+        except (ValueError, TypeError):
+            pass
+    if not event.get("recurrence"):
+        event["recurrence"] = "weekly"
+    if not event.get("recurrence_day"):
+        event["recurrence_day"] = day_name
+    if end_date_iso and not event.get("end_date"):
+        event["end_date"] = end_date_iso
+
+
 def _cache_path(url: str) -> Path:
     h = hashlib.sha256(url.encode()).hexdigest()[:16]
     return CACHE_DIR / f"{h}.json"
@@ -762,6 +834,7 @@ def scrape_gohebervalley() -> list[dict]:
         date_label = obj.get("spot_2")
         if date_label:
             event["date_label"] = date_label
+            _parse_hvt_date_label(event, date_label)
 
         events.append(event)
 
