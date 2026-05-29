@@ -222,7 +222,9 @@ export default async function EventPage({ params }: Props) {
     isAccessibleForFree: event.is_free === true,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    image: "https://www.yoocal.com/og-image.png",
+    // Per-event image for Google rich results. Falls back to a branded
+    // default when the event has none. 84% of events have a real image_url.
+    image: event.image_url || "https://www.yoocal.com/og-image.png",
   }
 
   return (
