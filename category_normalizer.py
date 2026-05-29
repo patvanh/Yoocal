@@ -24,7 +24,6 @@ BUCKET_FROM_SOURCE = {
     "Running & Races": {"running"},
     "Sports": {"sports", "sports/recreation", "sports and recreation", "soccer"},
     "Wellness": {"wellness", "mindfulness", "yoga"},
-    "Festivals": {"festival", "market/festival"},
     "Education & Talks": {"education", "library", "historical"},
     "Nightlife": {"nightlife"},
     "Community": {"community", "other community events", "government", "volunteer",
@@ -69,7 +68,7 @@ def _title_is_footrace(title):
 
 _VALID_BUCKETS_LOWER = {b.lower(): b for b in [
     "Music", "Arts & Theater", "Food & Drink", "Outdoors", "Running & Races",
-    "Sports", "Family & Kids", "Festivals", "Wellness", "Nightlife",
+    "Sports", "Family & Kids", "Wellness", "Nightlife",
     "Education & Talks", "Community",
 ]}
 
@@ -97,7 +96,7 @@ def filter_categories_for(event):
 
 # All user-facing buckets, in display order
 ALL_BUCKETS = ["Music", "Arts & Theater", "Food & Drink", "Outdoors",
-               "Running & Races", "Sports", "Family & Kids", "Festivals",
+               "Running & Races", "Sports", "Family & Kids",
                "Wellness", "Nightlife", "Education & Talks", "Community"]
 
 

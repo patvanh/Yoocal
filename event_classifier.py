@@ -87,6 +87,7 @@ CLASSIFIER_RULES: list[tuple[str, list[str]]] = [
         r"\bmunicipal\b", r"\bcouncil meeting\b", r"\bcommission meeting\b",
     ]),
     ("Music", [
+        r"\bmusic festival\b", r"\bacoustic music\b",
         r"\bcounty fair\b",
         r"\blive music\b", r"\bconcert\b", r"\bband\b(?!\s*camp)",
         r"\bperformance at\b", r"\bguitar performance\b",
@@ -105,7 +106,7 @@ CLASSIFIER_RULES: list[tuple[str, list[str]]] = [
         r"\btribute (band|to)\b", r"\bopen mic\b",
     ]),
     ("Theater", [
-        r"\btheat(re|er)\b", r"\bmusical theatre?\b",
+        r"\bmusical theatre?\b",
         r"\bbroadway (musical|show|tour|production|hit|cast|revival|classic|favorite)\b", r"\bshakespeare\b",
         r"\bcomedy (show|night|tour)\b", r"\bstand-?up comedy\b",
         r"\bcabaret\b",
@@ -287,7 +288,7 @@ CLASSIFIER_RULES: list[tuple[str, list[str]]] = [
     ]),
     ("Festival", [
         r"\bcounty fair\b", r"\bwasatch county fair\b",
-        r"\bminer\'?s? day\b", r"\bcelebration\b",
+        r"\bminer\'?s? day\b",
         r"\brodeo\b",
         r"\bvintage concours\b",
         r"\bfestival\b", r"\bfest\b(?!\s*\d)",
