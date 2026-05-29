@@ -112,13 +112,24 @@ function matchesQuery(e: V2YocEvent, qLower: string): boolean {
   // does. Synonym lookup is prefix-aware: typing "concer" still matches
   // "concert" synonyms because "concert".startsWith("concer"). Synonym text
   // matched with word boundaries to avoid "rock" hitting "rocky mountain".
+  // Strip a trailing 's' for stem-style comparison. "runs" -> "run",
+  // "concerts" -> "concert", "races" -> "race". Naive but covers the
+  // English plural case which is what users actually type.
+  const _stem = (s: string) => s.endsWith('s') && s.length > 2 ? s.slice(0, -1) : s
   return tokens.every(tok => {
     if (text.includes(tok)) return true
-    // Find all synonym keys that start with the user's token. Typing
-    // "conc" lights up the concert synonyms; typing the full "concert"
-    // also lights them up because "concert".startsWith("concert").
+    const tokStem = _stem(tok)
+    // Find all synonym keys that match the user's token via prefix or stem.
+    // "conc" -> "concert" key (prefix). "concerts" -> "concert" (stem).
+    // "runs" -> "running" (both stem to a shared prefix "run").
     for (const key of Object.keys(SEARCH_SYNONYMS)) {
-      if (!key.startsWith(tok)) continue
+      const keyStem = _stem(key)
+      if (
+        !key.startsWith(tok) &&
+        !tok.startsWith(key) &&
+        !keyStem.startsWith(tokStem) &&
+        !tokStem.startsWith(keyStem)
+      ) continue
       const syns = SEARCH_SYNONYMS[key]
       if (syns.some(s => _wordRegex(s).test(text))) return true
     }
@@ -1458,9 +1469,26 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                           <div style={{
                             color: 'rgba(255,255,255,0.55)', fontSize: 12,
                             whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
+                            display: 'flex', alignItems: 'center', gap: 6,
                           }}>
-                            {nextEv.venue_name || nextEv.location || nextEv.source || ''}
-                            {hasMore ? ` · ${group.occurrences.length} dates` : ''}
+                            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                              {nextEv.venue_name || nextEv.location || nextEv.source || ''}
+                              {hasMore ? ` · ${group.occurrences.length} dates` : ''}
+                            </span>
+                            {(() => {
+                              const cityKey = nextEv._sourceCity || cityKeyProp || ''
+                              const cityName = ({parkcity:'Park City',heber:'Heber Valley',jackson:'Jackson Hole',elkhartlake:'Elkhart Lake'} as Record<string,string>)[cityKey]
+                              if (!cityName) return null
+                              return (
+                                <span style={{
+                                  background: 'rgba(127,119,221,0.18)',
+                                  color: '#AFA9EC',
+                                  borderRadius: 999, padding: '1px 8px',
+                                  fontSize: 10, fontWeight: 500,
+                                  flexShrink: 0, whiteSpace: 'nowrap',
+                                }}>{cityName}</span>
+                              )
+                            })()}
                           </div>
                         </div>
                         {hasMore && (
