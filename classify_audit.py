@@ -148,6 +148,10 @@ REAL_CASES = [
     ("jackson", "Fran Lebowitz", [], []),
     ("jackson", "Birding Festival", [], []),  # CFA "Arts" source tag (residual)
     ("jackson", "Big Thief", ["Music"], []),  # keeps Music; CFA "Arts" residual
+    # --- text-rule gaps surfaced by CFA analysis (close before shipping B) ---
+    ("jackson", "Ephraim Heller", ["Arts"], []),        # photographer -> Arts
+    ("jackson", "Silent Disco", ["Music"], []),         # silent disco -> Music
+    ("jackson", "Vinyl & Style", ["Music"], []),        # vinyl -> Music
     ("jackson", "Rhett Haney", ["Music"], []),
     ("jackson", "Moose Hockey Celebration", [], ["Festival"]),
     ("jackson", "Summer Solstice Celebration", [], ["Festival"]),

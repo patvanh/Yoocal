@@ -33,6 +33,18 @@ _PRESET_BUCKETS = {b.lower(): b for b in [
 ]}
 
 
+# Per-source category distrust. Some sources blanket-tag every event with a
+# generic category that means "this happened at our venue", not "this is that
+# kind of event" (e.g. Center for the Arts tags ~97% of its events "Arts",
+# incl. graduations, talks, concerts). We IGNORE those blanket tags for the
+# named source and let text rules classify instead. SPECIFIC tags from the
+# same source (Film, Metropolitan Opera in HD, ...) still pass through.
+# This is a pragmatic patch; the ideal is good-enough text rules. See NOTES.
+SOURCE_BLANKET_IGNORE = {
+    "center for the arts jackson hole": {"arts", "community", "theater"},
+}
+
+
 LEGACY_MAP = {
     "art": "Arts", "arts": "Arts",
     "music": "Music",
@@ -104,6 +116,7 @@ CLASSIFIER_RULES: list[tuple[str, list[str]]] = [
         r"\bacoustic (set|show|night)\b",
         r"\brecital\b",
         r"\btribute (band|to)\b", r"\bopen mic\b",
+        r"\bsilent disco\b", r"\bvinyl\b",
     ]),
     ("Theater", [
         r"\bmusical theatre?\b",
@@ -129,6 +142,7 @@ CLASSIFIER_RULES: list[tuple[str, list[str]]] = [
         r"\bwood burning\b", r"\bwoodworking\b",
         r"\bstitch\b(?=.{0,30}(constellation|sampler|class|workshop))",
         r"\bphotography gallery\b",
+        r"\bphotograph(y|er|ers|ing)?\b",
         r"\bnew works\b", r"\bart installation\b",
         r"\bdecorate.{0,15}(photocard|ornament|tile|pot|mug)\b",
         r"\bopen studio\b",
@@ -373,12 +387,15 @@ def classify_event(event: dict) -> dict:
     text = _build_text_blob(event)
 
     legacy_cats = event.get("categories") or []
+    _ignore = SOURCE_BLANKET_IGNORE.get(str(event.get("source") or "").strip().lower(), set())
     canonical_from_legacy = []
     facets_from_legacy = []
     for raw in legacy_cats:
         if not raw:
             continue
         key = str(raw).strip().lower()
+        if key in _ignore:
+            continue  # blanket venue tag -> let text rules decide
         mapped = LEGACY_MAP.get(key)
         if mapped == "Free":
             facets_from_legacy.append("Free")
