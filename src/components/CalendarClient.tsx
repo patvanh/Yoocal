@@ -400,6 +400,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedEvent, setSelectedEvent] = useState<EventModalData | null>(null)
   const [showResultsView, setShowResultsView] = useState(false)
+  const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set())
   const [activeChips, setActiveChips] = useState<Set<ChipId>>(new Set())
   const [chipPickedDate, setChipPickedDate] = useState<string>('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -464,6 +465,11 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       // Native date picker lives outside our DOM; suppress outside-close
       // briefly after Pick-a-date opens, so picker interactions don't reset.
       if (Date.now() < suppressOutsideRef.current) return
+      // When the "See all" overlay is open, that portal is our UI rendered
+      // outside the dropdown's DOM tree. Don't treat its clicks as "outside"
+      // -- otherwise opening the overlay immediately wipes the search query
+      // we used to populate it.
+      if (showResultsView) return
       // Click outside = full reset: close dropdown AND clear all search state.
       setDropdownOpen(false)
       setSearchQuery('')
@@ -475,6 +481,12 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     const onKey = (ev: KeyboardEvent) => {
       if (ev.key === 'Escape') {
         if (selectedEvent) return
+        // Escape closes the overlay (if open) but preserves search state so
+        // the user can re-open the dropdown without retyping.
+        if (showResultsView) {
+          setShowResultsView(false)
+          return
+        }
         setDropdownOpen(false)
         setSearchQuery('')
         setActiveChips(new Set())
@@ -488,7 +500,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       document.removeEventListener('mousedown', onMouseDown)
       document.removeEventListener('keydown', onKey)
     }
-  }, [dropdownOpen, selectedEvent])
+  }, [dropdownOpen, selectedEvent, showResultsView])
 
 
   const [pickedDate, setPickedDate] = useState<string>(v2DateToStr(v2TodayMountain()))
@@ -616,6 +628,51 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       })
       .sort((a, b) => (a.date || '').localeCompare(b.date || ''))
   }, [events, searchQuery, activeChips, chipPickedDate])
+
+  // Group results by normalized title for the "See all" overlay. Each row
+  // shows one card per unique event identity, with all future occurrences
+  // accessible by expanding. Smart sort within the result list:
+  // 1) title starts with query (e.g. "park city trail series" -> all races)
+  // 2) title contains all query tokens
+  // 3) match was elsewhere (description / venue / category)
+  // Chronological by next occurrence within each tier.
+  const groupedResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase()
+    const tokens = q.split(/\s+/).filter(Boolean)
+    const groups = new Map<string, { key: string; occurrences: V2YocEvent[]; tier: number }>()
+    const normalizeTitle = (t: string) => (t || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+    for (const ev of allUpcomingMatches) {
+      const key = normalizeTitle(ev.title) || 'untitled'
+      const existing = groups.get(key)
+      if (existing) {
+        existing.occurrences.push(ev)
+      } else {
+        // Determine tier for sort
+        const titleLower = (ev.title || '').toLowerCase()
+        let tier = 2
+        if (tokens.length > 0) {
+          if (titleLower.startsWith(q)) tier = 0
+          else if (tokens.every(t => titleLower.includes(t))) tier = 1
+        } else {
+          tier = 1  // no query, all entries equal
+        }
+        groups.set(key, { key, occurrences: [ev], tier })
+      }
+    }
+    const arr = Array.from(groups.values())
+    // Sort each group's occurrences chronologically
+    for (const g of arr) {
+      g.occurrences.sort((a, b) => (a.date || '').localeCompare(b.date || ''))
+    }
+    // Sort groups: tier first, then by next occurrence date
+    arr.sort((a, b) => {
+      if (a.tier !== b.tier) return a.tier - b.tier
+      const ad = a.occurrences[0]?.date || ''
+      const bd = b.occurrences[0]?.date || ''
+      return ad.localeCompare(bd)
+    })
+    return arr
+  }, [allUpcomingMatches, searchQuery])
   
   // Featured events: things happening TODAY only. Manual flags first, then
   // today's best events ranked by tag richness. Empty if nothing today.
@@ -1139,6 +1196,168 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           ))}
         </div>
       )}
+      {mounted && showResultsView && createPortal((
+        <div
+          onClick={() => setShowResultsView(false)}
+          style={{
+            position: 'fixed', inset: 0, zIndex: 9999,
+            background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(8px)',
+            display: 'flex', flexDirection: 'column',
+            overflowY: 'auto',
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: 720, margin: '24px auto', width: 'calc(100% - 32px)',
+              background: '#1B1638', borderRadius: 16,
+              border: '1px solid rgba(255,255,255,0.08)',
+              padding: '16px 16px 24px',
+              boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
+            }}
+          >
+            <div style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              marginBottom: 16, paddingBottom: 12,
+              borderBottom: '1px solid rgba(255,255,255,0.08)',
+            }}>
+              <div>
+                <button
+                  type="button"
+                  onClick={() => setShowResultsView(false)}
+                  style={{
+                    background: 'transparent', border: 'none', color: '#AFA9EC',
+                    cursor: 'pointer', fontSize: 13, fontFamily: 'inherit',
+                    padding: 0, marginBottom: 4,
+                  }}
+                >&larr; Back to calendar</button>
+                <div style={{ color: '#fff', fontSize: 18, fontWeight: 600 }}>
+                  {groupedResults.length} {groupedResults.length === 1 ? 'event' : 'events'}
+                  {searchQuery.trim() ? ` matching "${searchQuery.trim()}"` : ''}
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowResultsView(false)}
+                aria-label="Close"
+                style={{
+                  background: 'rgba(255,255,255,0.08)', border: 'none',
+                  color: '#fff', borderRadius: 8, width: 32, height: 32,
+                  cursor: 'pointer', fontSize: 18, fontFamily: 'inherit',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}
+              >×</button>
+            </div>
+            {groupedResults.length === 0 ? (
+              <div style={{
+                color: 'rgba(255,255,255,0.55)', textAlign: 'center',
+                padding: '40px 16px', fontSize: 14,
+              }}>
+                No events match. Try a different search or clear filters.
+              </div>
+            ) : (
+              <div>
+                {groupedResults.map((group, gi) => {
+                  const isExpanded = expandedGroups.has(group.key)
+                  const nextEv = group.occurrences[0]
+                  const d = v2ParseEventDate((nextEv.date || '').slice(0, 10))
+                  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+                  const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+                  const datePill = d ? `${DOW[d.getDay()]} ${MON[d.getMonth()]} ${d.getDate()}` : ''
+                  const hasMore = group.occurrences.length > 1
+                  return (
+                    <div key={`grp-${gi}`} style={{
+                      borderBottom: '1px solid rgba(255,255,255,0.06)',
+                    }}>
+                      <div
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          if (group.occurrences.length === 1) {
+                            handleEventClick(group.occurrences[0])
+                            // Keep overlay open: modal renders on top, closing
+                            // modal returns to overlay with state preserved.
+                          } else {
+                            setExpandedGroups(prev => {
+                              const next = new Set(prev)
+                              if (next.has(group.key)) next.delete(group.key)
+                              else next.add(group.key)
+                              return next
+                            })
+                          }
+                        }}
+                        style={{
+                          padding: '12px 4px', display: 'flex',
+                          alignItems: 'center', gap: 12, cursor: 'pointer',
+                        }}
+                      >
+                        <div style={{
+                          background: '#534AB7', color: '#fff',
+                          borderRadius: 8, padding: '4px 8px',
+                          fontSize: 11, fontWeight: 500, minWidth: 64,
+                          textAlign: 'center', flexShrink: 0,
+                        }}>{datePill}</div>
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{
+                            color: '#fff', fontSize: 14, fontWeight: 500,
+                            whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
+                          }}>{nextEv.title}</div>
+                          <div style={{
+                            color: 'rgba(255,255,255,0.55)', fontSize: 12,
+                            whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
+                          }}>
+                            {nextEv.venue_name || nextEv.location || nextEv.source || ''}
+                            {hasMore ? ` · ${group.occurrences.length} dates` : ''}
+                          </div>
+                        </div>
+                        {hasMore && (
+                          <div style={{
+                            color: '#AFA9EC', fontSize: 18,
+                            transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)',
+                            transition: 'transform 120ms ease',
+                            flexShrink: 0, paddingRight: 4,
+                          }}>›</div>
+                        )}
+                      </div>
+                      {isExpanded && hasMore && (
+                        <div style={{
+                          paddingLeft: 76, paddingBottom: 8,
+                          display: 'flex', flexDirection: 'column', gap: 6,
+                        }}>
+                          {group.occurrences.map((occ, oi) => {
+                            const od = v2ParseEventDate((occ.date || '').slice(0, 10))
+                            const odLabel = od
+                              ? `${DOW[od.getDay()]}, ${MON[od.getMonth()]} ${od.getDate()}`
+                              : (occ.date || '')
+                            return (
+                              <div
+                                key={`occ-${oi}`}
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  handleEventClick(occ)
+                                  // Keep overlay open so the modal can close
+                                  // back to the expanded-date list.
+                                }}
+                                style={{
+                                  color: 'rgba(255,255,255,0.75)', fontSize: 13,
+                                  padding: '6px 8px', borderRadius: 6,
+                                  cursor: 'pointer',
+                                  background: 'rgba(255,255,255,0.04)',
+                                }}
+                              >
+                                {odLabel}{occ.start_time ? ` · ${occ.start_time}` : ''}
+                              </div>
+                            )
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </div>
+        </div>
+      ), document.body)}
       <EventModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />
     </div>
   )
