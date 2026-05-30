@@ -255,6 +255,18 @@ def scrape_visit_park_city():
 
                 recurrence, rec_days = parse_recurrence(doc.get("recurrence", ""))
 
+                # Fallback: API gave no recurrence string, but the TITLE declares
+                # one ("... - Every Thursday"). VPC has summer patio/class series
+                # (Yoga, Music, ESL) formatted this way. Treat as weekly so the
+                # build engine fans them out (180-day horizon when open-ended).
+                if not recurrence:
+                    _dm = re.search(
+                        r"every\s+(monday|tuesday|wednesday|thursday|friday|saturday|sunday)",
+                        title, re.IGNORECASE)
+                    if _dm:
+                        recurrence = "weekly"
+                        rec_days = [_dm.group(1).capitalize()]
+
                 # Fix stale recurring dates: the API returns the date a
                 # recurrence STARTED (often months/years ago). Blindly clamping
                 # to today stamps every recurring event on today regardless of
