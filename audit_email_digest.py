@@ -1,117 +1,238 @@
-"""Daily audit digest email via Resend.
+"""yoocal quality digest — daily health email.
 
-Reads audit_issues.json + repair_log.json (produced by event_quality_audit.py
-and event_auto_repair.py respectively). Sends an HTML email digest to the
-admin summarizing:
-  - What was auto-repaired
-  - What severity-1 issues remain
-  - Direct GitHub links to inspect each problem record
-
-Designed to run as the final step in the daily GitHub Actions workflow,
-after audit + repair have written their JSON outputs.
-
-Environment variables:
-  RESEND_API_KEY   required
-  YOOCAL_DIGEST_TO email recipient (default: patrick@vanhornpc.com)
-
-Usage:
-  python audit_email_digest.py            # send digest
-  python audit_email_digest.py --dry-run  # print HTML to stdout, do not send
+Rewritten to be owner-friendly: leads with a plain-English health verdict,
+shows per-city event counts with normal/abnormal flags, a 5-day per-city
+trend, source-level anomalies (sharp jumps/drops), and only then the items
+that need manual attention. Reads daily history from scraper_baselines.json.
 """
-from __future__ import annotations
-
 import json
 import os
 import sys
-from collections import Counter
-from datetime import datetime
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import requests
 
+REPO_URL = os.environ.get("REPO_URL", "https://github.com/patvanh/Yoocal")
+RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
+DIGEST_FROM = os.environ.get("DIGEST_FROM", "yoocal <digest@yoocal.com>")
+DIGEST_TO = os.environ.get("DIGEST_TO", "patrick@yoocal.com")
+MAX_ISSUES_PER_CITY = 10
+ANOMALY_PCT = 0.50  # flag a source if today is >50% above/below recent average
 
-RESEND_API_KEY = os.environ.get("RESEND_API_KEY")
-DIGEST_TO = os.environ.get("YOOCAL_DIGEST_TO", "patrick@vanhornpc.com")
-DIGEST_FROM = "yoocal quality <quality@yoocal.com>"
-REPO_URL = "https://github.com/patvanh/Yoocal"
-
-# Max severity-1 issues to include in the email body. Beyond this we
-# show a count and link to the JSON file.
-MAX_ISSUES_PER_CITY = 8
+CITY_LABEL = {
+    "park-city": "Park City", "parkcity": "Park City",
+    "heber": "Heber Valley", "elkhart-lake": "Elkhart Lake",
+    "elkhartlake": "Elkhart Lake", "jackson": "Jackson Hole",
+}
 
 
-def _load_json(path: str) -> dict | None:
+def _load_json(path):
+    p = Path(path)
+    if not p.exists():
+        return None
     try:
-        return json.load(open(path))
-    except (FileNotFoundError, json.JSONDecodeError):
+        return json.loads(p.read_text())
+    except Exception:
         return None
 
 
-def _sev_count(by_severity: dict, level: int) -> int:
-    """Get a severity count from the by_severity dict, handling int or str keys."""
+def _sev_count(by_severity, level):
     return by_severity.get(level, by_severity.get(str(level), 0))
 
 
-def _sev1_issues(reports: list) -> list:
-    """Pull severity-1 issues from all city reports, deduped by event_index."""
-    out = []
-    seen = set()
-    for r in reports:
-        for i in r.get("issues", []):
-            if i.get("severity") != 1:
-                continue
-            key = (r["city"], i.get("event_index"), i.get("type"))
-            if key in seen:
-                continue
-            seen.add(key)
-            out.append(i)
+# ── history helpers (read scraper_baselines.json['history']) ──────────
+
+def _city_daily_totals(history):
+    """{city: {date: total_events_that_day}} summing all sources."""
+    out = {}
+    for city, sources in (history or {}).items():
+        per_date = defaultdict(int)
+        for _src, entries in sources.items():
+            for e in entries:
+                d = e.get("date")
+                if d:
+                    per_date[d] += int(e.get("count", 0))
+        out[city] = dict(per_date)
     return out
 
 
-def render_html(audit: dict, repair: dict | None, llm_health: dict | None = None) -> str:
-    """Render the email body as HTML."""
+def _recent_dates(city_totals, n=5):
+    """The most recent n dates that appear across any city."""
+    all_dates = set()
+    for per_date in city_totals.values():
+        all_dates.update(per_date.keys())
+    return sorted(all_dates)[-n:]
+
+
+def _source_anomalies(history):
+    """For each source, compare its latest count to the average of prior
+    days. Flag if the latest deviates more than ANOMALY_PCT. Returns list of
+    dicts sorted by biggest swing first."""
+    flagged = []
+    for city, sources in (history or {}).items():
+        for src, entries in sources.items():
+            pts = [e for e in entries if e.get("date")]
+            if len(pts) < 3:  # need some history to judge "normal"
+                continue
+            pts = sorted(pts, key=lambda e: e["date"])
+            latest = pts[-1]
+            prior = pts[:-1]
+            avg = sum(p.get("count", 0) for p in prior) / max(1, len(prior))
+            cur = latest.get("count", 0)
+            if avg <= 0:
+                continue
+            change = (cur - avg) / avg
+            if abs(change) >= ANOMALY_PCT:
+                flagged.append({
+                    "city": city, "source": src,
+                    "current": cur, "avg": round(avg, 1),
+                    "change": change, "date": latest.get("date"),
+                })
+    flagged.sort(key=lambda f: abs(f["change"]), reverse=True)
+    return flagged
+
+
+def render_html(audit, repair, llm_health=None, baselines=None):
     audit_date = audit.get("audit_date", "today")
     reports = audit.get("reports", [])
-    repair_reports = (repair or {}).get("reports", [])
+    history = (baselines or {}).get("history") or {}
 
-    # ─── Header summary ─────────────────────────────────────
-    rows = []
+    city_totals = _city_daily_totals(history)
+    dates = _recent_dates(city_totals, 5)
+    anomalies = _source_anomalies(history)
+    total_sev1 = sum(_sev_count(r.get("by_severity") or {}, 1) for r in reports)
+    total_events = sum(r.get("total_events", 0) for r in reports)
+
+    # ── 1. plain-English verdict ──────────────────────────
+    problems = []
+    if anomalies:
+        problems.append(f"{len(anomalies)} source(s) with unusual counts")
+    if total_sev1:
+        problems.append(f"{total_sev1} event(s) needing manual review")
+    llm_flagged = (llm_health or {}).get("flagged") or []
+    if llm_flagged:
+        problems.append(f"{len(llm_flagged)} source(s) flagged by health check")
+
+    if problems:
+        verdict_color, verdict_bg = "#92400e", "#fffbeb"
+        verdict_icon = "&#9888;"
+        verdict_text = "A few things to look at: " + "; ".join(problems) + "."
+    else:
+        verdict_color, verdict_bg = "#065f46", "#ecfdf5"
+        verdict_icon = "&#10003;"
+        verdict_text = "Everything looks normal across all cities today."
+
+    verdict_html = (
+        f'<div style="background:{verdict_bg};color:{verdict_color};padding:16px 18px;'
+        f'border-radius:10px;margin-bottom:28px;font-size:16px;font-weight:500">'
+        f'{verdict_icon} {verdict_text}</div>'
+    )
+
+    # ── 2. per-city totals today, with normal/abnormal flag ───
+    city_rows = []
     for r in reports:
-        sev = r.get("by_severity") or {}
-        rows.append(
-            f"<tr>"
-            f"<td>{r['city']}</td>"
-            f"<td style='text-align:right'>{r['total_events']}</td>"
-            f"<td style='text-align:right'>{_sev_count(sev, 1)}</td>"
-            f"<td style='text-align:right'>{_sev_count(sev, 2)}</td>"
-            f"<td style='text-align:right'>{_sev_count(sev, 3)}</td>"
-            f"<td style='text-align:right'><strong>{r['total_issues']}</strong></td>"
-            f"</tr>"
+        city = r["city"]
+        ckey = city.lower().replace(" ", "-")
+        label = CITY_LABEL.get(city, CITY_LABEL.get(ckey, city))
+        today_n = r.get("total_events", 0)
+        # recent average for this city from history
+        per_date = city_totals.get(city) or city_totals.get(ckey) or {}
+        prior_vals = [v for d, v in sorted(per_date.items())][:-1]
+        avg = sum(prior_vals) / len(prior_vals) if prior_vals else 0
+        if avg > 0:
+            chg = (today_n - avg) / avg
+            if chg >= ANOMALY_PCT:
+                flag = f'<span style="color:#92400e">&#9650; high (avg ~{round(avg)})</span>'
+            elif chg <= -ANOMALY_PCT:
+                flag = f'<span style="color:#b91c1c">&#9660; low (avg ~{round(avg)})</span>'
+            else:
+                flag = f'<span style="color:#6b7280">normal (avg ~{round(avg)})</span>'
+        else:
+            flag = '<span style="color:#9ca3af">—</span>'
+        city_rows.append(
+            f'<tr style="border-bottom:1px solid #f0f0f0">'
+            f'<td style="padding:10px 8px">{label}</td>'
+            f'<td style="padding:10px 8px;text-align:right;font-weight:600">{today_n}</td>'
+            f'<td style="padding:10px 8px;text-align:right;font-size:13px">{flag}</td>'
+            f'</tr>'
+        )
+    city_table = (
+        '<h2 style="font-size:18px;margin:0 0 12px">Events by city today</h2>'
+        '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:28px">'
+        '<thead><tr style="background:#f3f4f6">'
+        '<th style="padding:8px;text-align:left">City</th>'
+        '<th style="padding:8px;text-align:right">Events today</th>'
+        '<th style="padding:8px;text-align:right">vs. recent</th>'
+        '</tr></thead><tbody>' + ''.join(city_rows) + '</tbody></table>'
+    )
+
+    # ── 3. last-5-days per-city trend ─────────────────────
+    trend_head = ''.join(f'<th style="padding:8px;text-align:right">{d[5:]}</th>' for d in dates)
+    trend_rows = []
+    for r in reports:
+        city = r["city"]
+        ckey = city.lower().replace(" ", "-")
+        label = CITY_LABEL.get(city, CITY_LABEL.get(ckey, city))
+        per_date = city_totals.get(city) or city_totals.get(ckey) or {}
+        cells = ''.join(
+            f'<td style="padding:8px;text-align:right">{per_date.get(d, "—")}</td>'
+            for d in dates
+        )
+        trend_rows.append(
+            f'<tr style="border-bottom:1px solid #f0f0f0">'
+            f'<td style="padding:8px">{label}</td>{cells}</tr>'
+        )
+    trend_table = (
+        '<h2 style="font-size:18px;margin:0 0 6px">Last few days (total events)</h2>'
+        '<div style="font-size:13px;color:#6b7280;margin-bottom:12px">'
+        'Daily event count per city. Gaps mean the scrape did not run that day.</div>'
+        '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:28px">'
+        f'<thead><tr style="background:#f3f4f6"><th style="padding:8px;text-align:left">City</th>{trend_head}</tr></thead>'
+        '<tbody>' + ''.join(trend_rows) + '</tbody></table>'
+    )
+
+    # ── 4. source anomalies ───────────────────────────────
+    if anomalies:
+        anom_rows = []
+        for a in anomalies[:15]:
+            label = CITY_LABEL.get(a["city"], a["city"])
+            pct = round(a["change"] * 100)
+            arrow = "&#9650;" if a["change"] > 0 else "&#9660;"
+            color = "#92400e" if a["change"] > 0 else "#b91c1c"
+            anom_rows.append(
+                f'<tr style="border-bottom:1px solid #f0f0f0">'
+                f'<td style="padding:8px">{a["source"]}<div style="font-size:12px;color:#9ca3af">{label}</div></td>'
+                f'<td style="padding:8px;text-align:right;font-weight:600">{a["current"]}</td>'
+                f'<td style="padding:8px;text-align:right;color:#6b7280">~{a["avg"]}</td>'
+                f'<td style="padding:8px;text-align:right;color:{color};font-weight:600">{arrow} {pct:+d}%</td>'
+                f'</tr>'
+            )
+        anomaly_html = (
+            '<h2 style="font-size:18px;margin:0 0 6px">Sources with unusual counts</h2>'
+            '<div style="font-size:13px;color:#6b7280;margin-bottom:12px">'
+            f'Counts that moved more than {round(ANOMALY_PCT*100)}% from their recent average. '
+            'A jump can be a new batch of events (good) or a duplicate; a drop can mean a source broke.</div>'
+            '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:28px">'
+            '<thead><tr style="background:#f3f4f6">'
+            '<th style="padding:8px;text-align:left">Source</th>'
+            '<th style="padding:8px;text-align:right">Now</th>'
+            '<th style="padding:8px;text-align:right">Usual</th>'
+            '<th style="padding:8px;text-align:right">Change</th>'
+            '</tr></thead><tbody>' + ''.join(anom_rows) + '</tbody></table>'
+        )
+    else:
+        anomaly_html = (
+            '<h2 style="font-size:18px;margin:0 0 12px">Sources with unusual counts</h2>'
+            '<div style="padding:14px;background:#ecfdf5;color:#065f46;border-radius:8px;margin-bottom:28px">'
+            'None — every source is within its normal range.</div>'
         )
 
-    repair_rows = []
-    if repair_reports:
-        for r in repair_reports:
-            passes = r.get("passes") or {}
-            fixes_by_type = ", ".join(
-                f"{p}={result.get('fixed', 0)}"
-                for p, result in passes.items()
-                if result.get("fixed", 0) > 0
-            )
-            repair_rows.append(
-                f"<tr>"
-                f"<td>{r['city']}</td>"
-                f"<td style='text-align:right'>{r.get('before_count', '—')}</td>"
-                f"<td style='text-align:right'>{r.get('after_count', '—')}</td>"
-                f"<td style='text-align:right'><strong>{r.get('total_fixes', 0)}</strong></td>"
-                f"<td style='font-size:13px;color:#666'>{fixes_by_type or '—'}</td>"
-                f"</tr>"
-            )
-
-    # ─── Sev-1 issues per city ──────────────────────────────
+    # ── 5. needs your attention (sev-1 + health flags) ────
     issue_blocks = []
     for r in reports:
         city = r["city"]
+        label = CITY_LABEL.get(city, city)
         sev1 = [i for i in r.get("issues", []) if i.get("severity") == 1]
         if not sev1:
             continue
@@ -120,170 +241,95 @@ def render_html(audit: dict, repair: dict | None, llm_health: dict | None = None
         for i in sev1[:MAX_ISSUES_PER_CITY]:
             link = i.get("event_link") or ""
             link_html = (
-                f'<a href="{link}" style="color:#3b82f6;text-decoration:none">source ↗</a>'
+                f'<a href="{link}" style="color:#3b82f6;text-decoration:none">view &#8599;</a>'
                 if link else ""
             )
             rows_html.append(
                 f"<tr style='border-bottom:1px solid #eee'>"
-                f"<td style='padding:6px 10px;font-family:monospace;font-size:12px;color:#dc2626'>{i.get('type', '?')}</td>"
                 f"<td style='padding:6px 10px'>"
-                f"  <div><strong>{(i.get('event_title') or '')[:80]}</strong></div>"
-                f"  <div style='font-size:12px;color:#666;margin-top:2px'>{i.get('message', '')[:160]}</div>"
+                f"<div><strong>{(i.get('event_title') or '(no title)')[:80]}</strong></div>"
+                f"<div style='font-size:12px;color:#666;margin-top:2px'>{i.get('message', '')[:160]}</div>"
                 f"</td>"
                 f"<td style='padding:6px 10px;font-size:13px'>{link_html}</td>"
                 f"</tr>"
             )
         remaining = max(0, len(sev1) - MAX_ISSUES_PER_CITY)
-        more_note = ""
-        if remaining:
-            more_note = (
-                f"<div style='margin-top:8px;font-size:13px;color:#666'>"
-                f"+ {remaining} more — see full list in "
-                f"<a href='{REPO_URL}/blob/main/audit_issues.json' style='color:#3b82f6'>audit_issues.json</a>"
-                f"</div>"
-            )
-        type_summary = ", ".join(f"{n} {t}" for t, n in by_type.most_common())
+        more_note = (
+            f"<div style='margin-top:8px;font-size:13px;color:#666'>+ {remaining} more</div>"
+            if remaining else ""
+        )
+        type_summary = ", ".join(f"{n} {t.replace('_', ' ')}" for t, n in by_type.most_common())
         issue_blocks.append(
-            f"<h3 style='margin:24px 0 8px;font-size:18px'>{city} "
-            f"<span style='font-size:14px;font-weight:normal;color:#666'>"
-            f"— {len(sev1)} severity-1 issues</span></h3>"
+            f"<h3 style='margin:20px 0 8px;font-size:16px'>{label} "
+            f"<span style='font-size:13px;font-weight:normal;color:#666'>— {len(sev1)} to review</span></h3>"
             f"<div style='font-size:13px;color:#666;margin-bottom:8px'>{type_summary}</div>"
-            f"<table style='width:100%;border-collapse:collapse;border:1px solid #eee'>"
-            f"{''.join(rows_html)}"
-            f"</table>"
+            f"<table style='width:100%;border-collapse:collapse;border:1px solid #eee'>{''.join(rows_html)}</table>"
             f"{more_note}"
         )
 
-    # ─── Email shell ────────────────────────────────────────
-    total_sev1 = sum(_sev_count(r.get("by_severity") or {}, 1) for r in reports)
+    # health-check flagged sources folded into attention section
+    health_block = ""
+    if llm_flagged:
+        fr = []
+        for f in llm_flagged[:10]:
+            fr.append(
+                f"<tr style='border-bottom:1px solid #eee'>"
+                f"<td style='padding:6px 10px'><strong>{f.get('source','?')}</strong>"
+                f"<div style='font-size:12px;color:#666'>{(f.get('reason') or f.get('note') or '')[:160]}</div></td></tr>"
+            )
+        health_block = (
+            "<h3 style='margin:20px 0 8px;font-size:16px'>Health check flagged these sources</h3>"
+            "<div style='font-size:13px;color:#666;margin-bottom:8px'>Claude compared each source's site to what we scraped.</div>"
+            f"<table style='width:100%;border-collapse:collapse;border:1px solid #eee'>{''.join(fr)}</table>"
+        )
+
+    if issue_blocks or health_block:
+        attention = (
+            '<h2 style="font-size:18px;margin:0 0 6px">Needs your attention</h2>'
+            '<div style="font-size:13px;color:#6b7280;margin-bottom:8px">'
+            'Things auto-repair could not fix on its own — may need manual entry or a look.</div>'
+            + ''.join(issue_blocks) + health_block
+        )
+    else:
+        attention = (
+            '<h2 style="font-size:18px;margin:0 0 12px">Needs your attention</h2>'
+            '<div style="padding:16px;background:#ecfdf5;color:#065f46;border-radius:8px">'
+            'Nothing needs manual review today. Clean across all cities.</div>'
+        )
+
+    # ── 6. tiny technical footer (auto-repair counts) ─────
+    repair_reports = (repair or {}).get("reports", [])
     total_repaired = sum(r.get("total_fixes", 0) for r in repair_reports)
-
-
-    # Build LLM scraper health section
-    llm_health_html = ""
-    if llm_health:
-        flagged = llm_health.get("flagged") or []
-        checked = len(llm_health.get("results") or [])
-        if flagged:
-            flag_rows = []
-            for f in flagged[:10]:
-                src_name = f.get("source", "?")
-                reason = f.get("reason", "")
-                our_count = f.get("our_count", 0)
-                llm_count = f.get("llm_count")
-                judgment = f.get("judgment", "")
-                source_url = f.get("source_url", "")
-                detail = reason
-                if llm_count is not None:
-                    detail = f"LLM saw {llm_count} events, we have {our_count}. {judgment}"
-                flag_rows.append(
-                    '<tr style="border-bottom:1px solid #fef3c7">'
-                    f'<td style="padding:8px"><strong>{src_name}</strong>'
-                    + (f'<br><a href="{source_url}" style="color:#3b82f6;font-size:12px">{source_url}</a>' if source_url else "")
-                    + '</td>'
-                    f'<td style="padding:8px;font-size:13px;color:#78350f">{detail}</td>'
-                    '</tr>'
-                )
-            more = max(0, len(flagged) - 10)
-            llm_health_html = (
-                '<h2 style="font-size:18px;margin:24px 0 12px">&#9888; Scraper health check (LLM)</h2>'
-                f'<div style="font-size:13px;color:#6b7280;margin-bottom:12px">'
-                f'{len(flagged)} of {checked} sources flagged. Claude fetched each source URL, '
-                f'counted events, and compared against what our scraper produced.</div>'
-                '<table style="width:100%;border-collapse:collapse;font-size:14px;'
-                'background:#fffbeb;border:1px solid #fde68a;border-radius:8px">'
-                '<thead><tr style="background:#fef3c7">'
-                '<th style="padding:8px;text-align:left">Source</th>'
-                '<th style="padding:8px;text-align:left">Reason flagged</th>'
-                '</tr></thead><tbody>' + "".join(flag_rows) + '</tbody></table>'
-            )
-            if more:
-                llm_health_html += f'<div style="font-size:12px;color:#6b7280;margin-top:8px">+ {more} more flagged sources — see scraper_llm_health.json</div>'
-        else:
-            llm_health_html = (
-                '<h2 style="font-size:18px;margin:24px 0 12px">&#10003; Scraper health check (LLM)</h2>'
-                f'<div style="padding:12px;background:#ecfdf5;color:#065f46;border-radius:8px;font-size:13px">'
-                f'All {checked} sources healthy — Claude found no undercount, blocking, or scraper regressions.</div>'
-            )
+    footer_detail = (
+        f'<div style="margin-top:36px;padding-top:14px;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af">'
+        f'{total_repaired} minor issues auto-repaired this run. '
+        f'<a href="{REPO_URL}/actions" style="color:#9ca3af">View run</a></div>'
+    )
 
     return f"""<!DOCTYPE html>
 <html>
 <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1f2937;max-width:680px;margin:0 auto;padding:24px">
-
-  <h1 style="font-size:24px;margin:0 0 4px">yoocal quality digest</h1>
+  <h1 style="font-size:24px;margin:0 0 4px">yoocal daily health</h1>
   <div style="color:#6b7280;font-size:14px;margin-bottom:24px">{audit_date}</div>
-
-  <div style="background:#f9fafb;padding:16px;border-radius:8px;margin-bottom:24px">
-    <div style="font-size:14px;color:#374151">
-      <strong>{total_repaired}</strong> issues auto-repaired
-      &middot;
-      <strong>{total_sev1}</strong> severity-1 issues remain
-    </div>
-  </div>
-
-  <h2 style="font-size:18px;margin:0 0 12px">Per-city audit</h2>
-  <table style="width:100%;border-collapse:collapse;font-size:14px">
-    <thead>
-      <tr style="background:#f3f4f6">
-        <th style="padding:8px;text-align:left">City</th>
-        <th style="padding:8px;text-align:right">Events</th>
-        <th style="padding:8px;text-align:right">Sev 1</th>
-        <th style="padding:8px;text-align:right">Sev 2</th>
-        <th style="padding:8px;text-align:right">Sev 3</th>
-        <th style="padding:8px;text-align:right">Total</th>
-      </tr>
-    </thead>
-    <tbody>{''.join(rows)}</tbody>
-  </table>
-
-  {('<h2 style="font-size:18px;margin:24px 0 12px">Auto-repair summary</h2>'
-    '<table style="width:100%;border-collapse:collapse;font-size:14px">'
-    '<thead><tr style="background:#f3f4f6">'
-    '<th style="padding:8px;text-align:left">City</th>'
-    '<th style="padding:8px;text-align:right">Before</th>'
-    '<th style="padding:8px;text-align:right">After</th>'
-    '<th style="padding:8px;text-align:right">Fixes</th>'
-    '<th style="padding:8px;text-align:left">Details</th>'
-    '</tr></thead>'
-    '<tbody>' + ''.join(repair_rows) + '</tbody>'
-    '</table>') if repair_rows else ''}
-
-  {llm_health_html}
-
-  <h2 style="font-size:18px;margin:32px 0 8px">Severity-1 issues needing review</h2>
-  <div style="font-size:13px;color:#6b7280;margin-bottom:16px">
-    These are events where users would see something broken: wrong dates, missing band names,
-    duplicate records, etc. Auto-repair couldn't resolve these on its own.
-  </div>
-  {''.join(issue_blocks) if issue_blocks else '<div style="padding:16px;background:#ecfdf5;color:#065f46;border-radius:8px">No severity-1 issues remaining. Clean across all 4 cities.</div>'}
-
-  <div style="margin-top:48px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af">
-    Generated by event_quality_audit.py + audit_email_digest.py · 
-    <a href="{REPO_URL}/actions" style="color:#9ca3af">View latest run</a>
-  </div>
-
+  {verdict_html}
+  {city_table}
+  {trend_table}
+  {anomaly_html}
+  {attention}
+  {footer_detail}
 </body>
 </html>"""
 
 
-def send_email(html: str, subject: str) -> bool:
+def send_email(html, subject):
     if not RESEND_API_KEY:
         print("RESEND_API_KEY not set — cannot send email")
         return False
-
     try:
         r = requests.post(
             "https://api.resend.com/emails",
-            headers={
-                "Authorization": f"Bearer {RESEND_API_KEY}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "from": DIGEST_FROM,
-                "to": [DIGEST_TO],
-                "subject": subject,
-                "html": html,
-            },
+            headers={"Authorization": f"Bearer {RESEND_API_KEY}", "Content-Type": "application/json"},
+            json={"from": DIGEST_FROM, "to": [DIGEST_TO], "subject": subject, "html": html},
             timeout=20,
         )
         if r.status_code == 200:
@@ -298,33 +344,28 @@ def send_email(html: str, subject: str) -> bool:
 
 def main():
     dry_run = "--dry-run" in sys.argv
-
     audit = _load_json("audit_issues.json")
     if not audit:
         print("No audit_issues.json found — run event_quality_audit.py first")
         sys.exit(1)
     repair = _load_json("repair_log.json")
+    llm_health = _load_json("scraper_llm_health.json")
+    baselines = _load_json("scraper_baselines.json")
 
     audit_date = audit.get("audit_date", "today")
     reports = audit.get("reports", [])
     total_sev1 = sum(_sev_count(r.get("by_severity") or {}, 1) for r in reports)
     total_events = sum(r.get("total_events", 0) for r in reports)
+    flag_count = len((llm_health or {}).get("flagged") or [])
+    flag_tag = f", {flag_count} flagged" if flag_count else ""
+    subject = f"[yoocal] {audit_date} — {total_events} events, {total_sev1} to review{flag_tag}"
 
-    llm_health_preview = _load_json("scraper_llm_health.json")
-    flag_count = len((llm_health_preview or {}).get("flagged") or [])
-    flag_tag = f", {flag_count} flagged sources" if flag_count else ""
-    subject = f"[yoocal] {audit_date} digest — {total_sev1} sev-1{flag_tag}, {total_events} events"
-
-    llm_health = _load_json("scraper_llm_health.json")
-    html = render_html(audit, repair, llm_health)
+    html = render_html(audit, repair, llm_health, baselines)
 
     if dry_run:
-        # Print to stdout for inspection
         Path("audit_digest_preview.html").write_text(html)
-        print(f"Dry run — HTML preview written to audit_digest_preview.html")
+        print("Dry run — HTML preview written to audit_digest_preview.html")
         print(f"Subject: {subject}")
-        print(f"Would send to: {DIGEST_TO}")
-        print(f"Would send from: {DIGEST_FROM}")
     else:
         send_email(html, subject)
 
