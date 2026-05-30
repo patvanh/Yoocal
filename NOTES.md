@@ -980,6 +980,69 @@ a blank white page for ~30-60s while it compiles on first request — not a bug,
 just slow first compile. Console shows harmless Google Maps key=undefined /
 favicon 404 in local dev (Maps key not set locally; fine in prod).
 
+## Update 28: Digest email rewrite + sev-1 cleanup + phantom-recurrence fix
+
+Started from "the daily quality digest email doesn't make sense." Rewrote it,
+then worked through the items it surfaced — which uncovered a recurrence
+regression and several data-quality issues.
+
+### Digest rewrite [e775edf]
+audit_email_digest.py was a developer audit dump (Sev1/2/3 columns, raw repair
+codes, no context). Rewrote to owner-friendly: plain-English verdict banner,
+events-by-city-today with normal/high/low flags vs recent average, last-few-days
+per-city trend table, source anomalies (>50% swing), "needs your attention"
+(sev-1 in plain language + health flags), technical detail demoted to footer.
+KEY: reads existing scraper_baselines.json['history'] — per-city/per-source dated
+daily counts already recorded, no new plumbing. Old version kept as
+audit_email_digest_OLD_backup.py. Preview via: python3 audit_email_digest.py --dry-run
+
+### Phantom recurrence regression — FOUND + FIXED [cfac467]
+Verifying recurrence on fresh data, found "Deer Creek Half Marathon" (one-time
+race) showing 20x — every Saturday for 180 days. Cause chain:
+- universal_scraper._parse_hvt_date_label matched ANY date_label starting with a
+  weekday ("Saturday, July 11, 2026") and stamped recurrence=weekly. NOT from our
+  recurrence_parser (that returned None) and NOT the enricher (cache was clean).
+- With no end_date, today's NEW 180-day open-ended projection (Update 26) then
+  fanned the mis-tag into 20 phantom races.
+Fix 1 (origin): bail before the weekday-recurrence pass when the label is a full
+single date ("Weekday, Month DD, YYYY"). Fix 2 (defensive, _fan_out_recurring):
+skip projection for one-time-style titles (marathon/5k/10k/race/fun run/triathlon/
+ultra) that are weekly AND open-ended. Verified: Half Marathon->1, Free Yoga
+(open-ended)->26, Market on Main (end_date)->12, Trail Race Series (end_date)->13.
+
+### Sev-1 audit cleanup: 38 -> 4 [35f9700]
+32 of 38 sev-1 were "Open Mic" (Jackson Chamber) flagged "missing artist." But
+"Open Mic" is a COMPLETE title (no headliner by design). Recurrence expansion
+fanned the weekly Open Mic to ~32 occurrences = 32 false flags. event_quality_
+audit.py: split GENERIC_TITLES (still flagged: concert/music/show/live music...)
+from COMPLETE_GENERIC_TITLES (exempt: open mic/trivia/karaoke/rodeo/festival/
+bingo/story time/line dancing/...). Dropped to 4 real issues.
+NOTE: as recurrence expansion creates more instances, per-occurrence audit
+flagging inflates counts — consider flagging unique events not occurrences later.
+
+### Remaining sev-1 triage (the 4)
+- "MAX" (Park City Institute) = truncated "Marc E. Bassy with MAX" -> fixed via
+  override [79e7f16] (title_eq MAX + source -> set title; matched exactly 1).
+- "10K" fragment, a near-dup, a Jackson title cut mid-sentence — accepted as rare
+  per-source noise the digest surfaces as-needed.
+
+### Siebkens (LLM health flag) — false alarm + real small dedup [ba7aa3c]
+LLM health check flagged Siebkens Resort: "our_count 8, page 14, missing events."
+BACKWARDS — we actually have 34 Siebkens events (LLM only saw one page view).
+The "our_count: 8" the health check used is wrong for multi-source venues.
+LESSON: the LLM scraper health check can FALSE-FLAG sources whose data is merged
+from multiple sources (hardcoded + scraped) — distrust its counts there.
+Real issue it accidentally surfaced: 2 duplicate pairs (Lilie Jun 3, Ryan
+Scheidemeyer Jun 24) — hardcoded scrape_siebkens_known() "Summer Concert: X" vs
+scraped Elkhart Tourism "Live Music by X", same artist+date, different titles so
+(title,date) dedup missed them. Removed the 2 hardcoded dups via override, kept
+the auto-updating scraped versions. (Only 2 of 34 — rest are legit.)
+
+BANKED: Deer Creek Express (VPC shuttle) still missing — VPC sitemap path returned
+only 14 events this scrape vs 112 in isolated test; coverage question, not
+corruption. scrape_siebkens_known() hardcoded list is a stale May-13 snapshot —
+consider retiring it in favor of the scraped Elkhart Tourism source entirely.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
