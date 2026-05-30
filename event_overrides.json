@@ -280,6 +280,26 @@
       "set": {
         "title": "Marc E. Bassy with MAX"
       }
+    },
+    {
+      "_id": "dedup-siebkens-lilie-jun3",
+      "city": "elkhart-lake",
+      "match": {
+        "title_eq": "Siebkens Summer Concert: Lilie",
+        "source_contains": "Siebkens Resort",
+        "date_eq": "2026-06-03"
+      },
+      "remove": true
+    },
+    {
+      "_id": "dedup-siebkens-ryan-scheidemeyer-jun24",
+      "city": "elkhart-lake",
+      "match": {
+        "title_eq": "Siebkens Summer Concert: Ryan Scheidemeyer & Friends",
+        "source_contains": "Siebkens Resort",
+        "date_eq": "2026-06-24"
+      },
+      "remove": true
     }
   ]
 }
