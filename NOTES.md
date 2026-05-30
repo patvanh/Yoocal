@@ -684,6 +684,33 @@ of the same change.
   enough to not lean on noisy source tags. Community still ~50-57% (under-
   mapping) untouched -- separate task.
 
+## Update 22: VPC health alert = false alarm; found recurring-event gap
+
+### Health alert resolved (shipped, ed99bce)
+- VPC-sitemap "CRITICAL actual=20 floor=40" was a FALSE ALARM. ~80% of the 132
+  scraped sitemap events dedupe into Park Record / VPC-API (by design); only
+  ~20-46 survive as sitemap-labeled, varies daily. Floor 40 sat inside normal
+  range. Lowered to 15. Also: requirements.txt was missing 'anthropic' ->
+  LLM health check crashed in CI (ModuleNotFoundError). Added it. NO events
+  were ever lost; this was monitoring miscalibration + a missing dep.
+
+### Found while investigating: recurring-event under-representation (BANKED)
+- Deer Creek Express (/event/deer-creek-express/27887/): runs 4x/week
+  (Mon/Thu/Fri/Sat), Jan 19 - Oct 31 2026. We show it as ONE event on today's
+  date, not the recurring series. Root cause: VPC's schema.org JSON-LD gives
+  only flat startDate/endDate + @type EducationEvent; the recurrence
+  ("Recurring weekly on Mon/Thu/Fri/Sat") is in PAGE PROSE only, not structured
+  data. schema_org_scraper parses correctly (1 event, recurrence=None) -- it
+  literally can't see the recurrence.
+- The schema parser, dedup, and past-filter are all CORRECT (verified by
+  tracing). startDate-past/endDate-future bump (lines 171-179) works. Not a bug
+  in existing code -- a missing FEATURE: prose-recurrence expansion.
+- SAME CLASS as existing TODO "mixed weekly+range HVT parser". Should be solved
+  together: parse human recurrence text + date range -> expand to instances.
+  Shared parser, affects all cities -- needs care + cross-city verification.
+- NOTE: earlier confusion was partly a STALE local file -- public/raw/events.json
+  was the May-28 snapshot during investigation. Always check updated_at first.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
