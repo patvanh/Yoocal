@@ -1040,8 +1040,11 @@ the auto-updating scraped versions. (Only 2 of 34 — rest are legit.)
 
 BANKED: Deer Creek Express (VPC shuttle) still missing — VPC sitemap path returned
 only 14 events this scrape vs 112 in isolated test; coverage question, not
-corruption. scrape_siebkens_known() hardcoded list is a stale May-13 snapshot —
-consider retiring it in favor of the scraped Elkhart Tourism source entirely.
+corruption. scrape_siebkens_known() hardcoded list: investigated retiring it — DO NOT.
+It provides 4 UNIQUE events the scraped Elkhart Tourism source misses (special
+race-weekend shows: Chocolateers/IMSA Jul 30, Boo!/Elktoberfest Sep 19, Sister
+Winchester Aug 10, Valley Fox Jul 29). Keep it. The only issue was 2 dup pairs,
+already fixed via remove-overrides [ba7aa3c]. Siebkens is fully handled.
 
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
