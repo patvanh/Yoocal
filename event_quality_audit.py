@@ -52,11 +52,21 @@ TRUNCATED_PATTERNS = [
 ]
 
 # Generic titles that need an artist name appended
+# Titles that genuinely signal a MISSING act/artist name — these should have
+# had a performer but the scraper only captured a placeholder.
 GENERIC_TITLES = {
     "concert", "music", "show", "live music", "concert series",
-    "music fest", "music festival", "rodeo", "festival",
-    "open mic", "trivia", "karaoke", "live performance",
-    "headlining act", "opening night",
+    "live performance", "headlining act", "opening night",
+}
+
+# Complete-but-generic titles: the title IS the event, nothing is missing.
+# An open mic has no headliner; trivia/karaoke/rodeo/festival are full names.
+# Do NOT flag these as "missing artist" (they were inflating sev-1 counts,
+# especially once recurrence expansion fans them into many occurrences).
+COMPLETE_GENERIC_TITLES = {
+    "open mic", "trivia", "trivia night", "karaoke", "rodeo",
+    "festival", "music fest", "music festival", "bingo", "story time",
+    "line dancing", "happy hour", "farmers market",
 }
 
 # Venue-prefix titles that drop the artist
