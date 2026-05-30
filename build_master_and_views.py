@@ -248,6 +248,17 @@ def _fan_out_recurring(events):
         # May 30 - Sep 19 series); deterministic computation captures every
         # matching weekday in range.
         rec = (e.get("recurrence") or "")
+        # Defensive: a one-time event mis-tagged weekly (e.g. "Deer Creek Half
+        # Marathon" on a Saturday) must NOT fan out — especially open-ended
+        # (no end_date), where it would project months of phantom occurrences.
+        # Skip projection when the title looks like a single-occurrence event
+        # AND there's no explicit end_date to bound it.
+        _title_lo = (e.get("title") or "").lower()
+        _ONE_TIME = ("marathon", "half marathon", " 5k", " 10k", "10k ", "5k ",
+                     " race", "race ", "fun run", " ultra", " triathlon")
+        if (rec in ("weekly", "weekly_multiple") and not e.get("end_date")
+                and any(p in _title_lo for p in _ONE_TIME)):
+            rec = ""  # treat as non-recurring; falls through to single event
         if rec in ("weekly", "weekly_multiple"):
             day_str = e.get("recurrence_day") or e.get("recurrence_days") or ""
             target_indices = set()

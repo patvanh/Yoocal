@@ -100,6 +100,19 @@ def _parse_hvt_date_label(event, label):
     if "vary" in s_lo or "various" in s_lo:
         return
 
+    # A full single date that happens to start with a weekday name
+    # ("Saturday, July 11, 2026") is NOT a recurrence — bail before PASS 1 so
+    # one-time events don't get mis-stamped weekly (which the build fan-out
+    # would then expand into many phantom occurrences).
+    if _hvt_re.match(
+        r"^[a-z]+,?\s+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*"
+        r"\s+\d{1,2},?\s+\d{4}",
+        s_lo,
+    ):
+        if not event.get("end_date"):
+            _try_parse_hvt_date_range(event, s_lo)
+        return
+
     # PASS 1: weekday-prefix recurrence ("Sat, May - Sep" / "Weekly, Thu mornings")
     m_weekday = _hvt_re.match(
         r"^(?:weekly,?\s+)?(mon|tue|wed|thu|fri|sat|sun)[a-z]*",
