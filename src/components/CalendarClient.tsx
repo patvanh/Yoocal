@@ -748,7 +748,25 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     // experience users had before cross-city. 'all' returns local first then
     // other-city. Specific city pill returns only that city's results.
     const cityKeyLocal = cityKeyProp || 'parkcity'
-    if (cityFilter === 'current') return local
+    // Nearby-city fallback: if the current city has NO matches for an active
+    // search, surface results from geographically adjacent cities (Park City
+    // <-> Heber are ~20min apart; Jackson and Elkhart stand alone). Results
+    // keep their _sourceCity badge so the user sees they're in another town.
+    const NEARBY_CITIES: Record<string, string[]> = {
+      parkcity: ['heber'],
+      heber: ['parkcity'],
+      jackson: [],
+      elkhartlake: [],
+    }
+    if (cityFilter === 'current') {
+      if (local.length === 0 && q) {
+        const nearby = NEARBY_CITIES[cityKeyLocal] || []
+        return other
+          .filter(e => nearby.includes(e._sourceCity || ''))
+          .sort((a, b) => (a.date || '').localeCompare(b.date || ''))
+      }
+      return local
+    }
     if (cityFilter === 'all') {
       // Sort by distance from the current city's center, then by date.
       // Current-city events get distance 0 so they always appear first;
@@ -1228,8 +1246,28 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                       }}>{ev.title}</div>
                       <div style={{
                         color: 'rgba(255,255,255,0.55)', fontSize: 12,
-                        whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
-                      }}>{ev.venue_name || ev.location || ev.source || ''}</div>
+                        display: 'flex', alignItems: 'center', gap: 6,
+                        whiteSpace: 'nowrap', overflow: 'hidden',
+                      }}>
+                        <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                          {ev.venue_name || ev.location || ev.source || ''}
+                        </span>
+                        {(() => {
+                          const sc = ev._sourceCity
+                          const cityName = ({parkcity:'Park City',heber:'Heber Valley',jackson:'Jackson Hole',elkhartlake:'Elkhart Lake'} as Record<string,string>)[sc || '']
+                          // Only badge events from a DIFFERENT city than the one being browsed.
+                          if (!cityName || !sc || sc === (cityKeyProp || 'parkcity')) return null
+                          return (
+                            <span style={{
+                              background: 'rgba(127,119,221,0.18)',
+                              color: '#AFA9EC',
+                              borderRadius: 999, padding: '1px 8px',
+                              fontSize: 10, fontWeight: 500,
+                              flexShrink: 0, whiteSpace: 'nowrap',
+                            }}>{cityName}</span>
+                          )
+                        })()}
+                      </div>
                     </div>
                   </div>
                 )
