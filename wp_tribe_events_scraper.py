@@ -242,7 +242,7 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
         desc = re.sub(r"<[^>]+>", " ", desc)
         desc = re.sub(r"\s+", " ", desc).strip()
         if len(desc) > 600:
-            desc = desc[:597] + "..."
+            desc = desc[:1997] + "..."
         if not desc:
             desc = title
 

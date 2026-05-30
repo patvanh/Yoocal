@@ -443,7 +443,7 @@ def scrape_elkhartlake_com():
 
                             desc_el = (c.find(class_=re.compile(r"tribe-events-list-event-description|entry-summary|excerpt", re.I)) or
                                       c.find("p"))
-                            description = desc_el.get_text(strip=True)[:300] if desc_el else ""
+                            description = desc_el.get_text(strip=True)[:2000] if desc_el else ""
 
                             link_el = c.find("a", href=True)
                             link = link_el["href"] if link_el else "https://www.elkhartlake.com/events/"
@@ -560,7 +560,7 @@ def scrape_siebkens():
                             .replace("&#039;", "'").replace("\\'", "'").replace('\\"', '"')
                 )
                 description = re.sub(r"<[^>]+>", "", desc_unescaped).strip()
-                description = re.sub(r"\s+", " ", description)[:400]
+                description = re.sub(r"\s+", " ", description)[:2000]
                 if not description:
                     description = "Live music at Siebkens Resort on the shores of Elkhart Lake."
 
@@ -634,7 +634,7 @@ def scrape_visit_sheboygan():
                 start_time = extract_time(raw_date)
 
                 desc_el = c.find("p")
-                description = desc_el.get_text(strip=True)[:300] if desc_el else ""
+                description = desc_el.get_text(strip=True)[:2000] if desc_el else ""
 
                 link_el = c.find("a", href=True)
                 link = link_el["href"] if link_el else "https://visitsheboygancounty.com/events/"
@@ -684,7 +684,7 @@ def scrape_osthoff():
                 start_time = extract_time(raw_date)
 
                 desc_el = c.find("p")
-                description = desc_el.get_text(strip=True)[:300] if desc_el else ""
+                description = desc_el.get_text(strip=True)[:2000] if desc_el else ""
 
                 link_el = c.find("a", href=True)
                 link = link_el["href"] if link_el else "https://www.osthoff.com/events/"
@@ -822,7 +822,7 @@ def scrape_google_events():
 
                     event = {
                         "title": title, "date": date,
-                        "description": description[:300],
+                        "description": description[:2000],
                         "location": location or "Elkhart Lake, WI",
                         "link": link or f"https://www.google.com/search?q={title.replace(' ','+')}",
                         "source": "Google Events",
@@ -1017,7 +1017,7 @@ def scrape_osthoff_calendar():
                 if link.startswith("/"): link = "https://osthoff.com" + link
 
                 desc_el = c.find("p")
-                description = desc_el.get_text(strip=True)[:300] if desc_el else ""
+                description = desc_el.get_text(strip=True)[:2000] if desc_el else ""
 
                 event = {
                     "title": title, "date": date, "description": description,

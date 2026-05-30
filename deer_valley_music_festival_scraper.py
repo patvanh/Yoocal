@@ -221,7 +221,7 @@ def _parse_event(raw):
         description = re.sub(r"<[^>]+>", " ", description)
         description = re.sub(r"\s+", " ", description).strip()
         if len(description) > 600:
-            description = description[:597] + "..."
+            description = description[:1997] + "..."
         if not description:
             description = f"Deer Valley Music Festival concert at {venue_name}."
 

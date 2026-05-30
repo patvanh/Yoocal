@@ -145,7 +145,7 @@ def _parse_event(raw):
             desc_html = raw.get("description") or ""
             desc = re.sub(r"<[^>]+>", " ", desc_html)
             desc = re.sub(r"\s+", " ", desc).strip()
-        description = desc[:280]
+        description = desc[:2000]
 
         # Location — Showpass returns a dict; build a venue string
         loc_obj = raw.get("location") or {}

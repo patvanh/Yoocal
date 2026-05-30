@@ -123,7 +123,7 @@ def _to_yoocal_event(
     return {
         "title": html.unescape(title),
         "date": start_date,
-        "description": description[:800],
+        "description": description[:2000],
         "location": default_city or "",
         "link": link or feed_url,
         "source": source_name,

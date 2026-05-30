@@ -129,7 +129,7 @@ def _extract_event(url: str, html: str) -> list[dict]:
             "title": title,
             "date": date_str,
             "start_time": time_str,
-            "description": description[:500] if description else None,
+            "description": description[:2000] if description else None,
             "venue_name": VENUE_NAME,
             "address": VENUE_ADDRESS,
             "lat": VENUE_LAT,

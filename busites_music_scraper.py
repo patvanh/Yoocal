@@ -87,7 +87,7 @@ def scrape_busites_music(
             "venue_name": venue_name or source_name,
             "address": venue_addr or "",
             "image_url": image.replace("\\/", "/") if image else "",
-            "description": desc[:500],
+            "description": desc[:2000],
             "categories": list(default_categories or ["Event"]),
         })
     print(f"[busites] {source_name}: {len(out)} future, {past} past")

@@ -485,8 +485,8 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
         description = html.unescape(str(desc_raw))
         description = re.sub(r"<[^>]+>", " ", description)
         description = re.sub(r"\s+", " ", description).strip()
-        if len(description) > 600:
-            description = description[:597] + "..."
+        if len(description) > 2000:
+            description = description[:1997] + "..."
         if not description:
             description = title
 

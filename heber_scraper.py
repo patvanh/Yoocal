@@ -140,7 +140,7 @@ def scrape_google_events():
                 event = {
                     "title": title,
                     "date": date,
-                    "description": description[:300],
+                    "description": description[:2000],
                     "location": location,
                     "link": link or f"https://www.google.com/search?q={title.replace(' ','+')}",
                     "source": "Google Events",
@@ -330,7 +330,7 @@ def scrape_eventbrite():
             link = ticket_info[0].get("link","") if ticket_info else item.get("link","")
             event = {
                 "title": title, "date": date,
-                "description": item.get("description","")[:300],
+                "description": item.get("description","")[:2000],
                 "location": location,
                 "link": link or "https://www.eventbrite.com/d/ut--heber/events/",
                 "source": "Eventbrite",

@@ -188,7 +188,7 @@ def _parse_event(ev, loc_names, type_lookup, default_lat, default_lng):
         description = re.sub(r"<[^>]+>", " ", desc_html)
         description = re.sub(r"\s+", " ", description).strip()
         if len(description) > 600:
-            description = description[:597] + "..."
+            description = description[:1997] + "..."
         if not description:
             description = "Race in Utah. See registration page for details."
 

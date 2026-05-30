@@ -166,7 +166,7 @@ def _normalize_event(cs: dict) -> dict | None:
 
     description = (cs.get("Description") or cs.get("Short") or "").strip()
     if len(description) > 600:
-        description = description[:597] + "..."
+        description = description[:1997] + "..."
 
     # Best link: PrimaryUrl > first Links entry > Park Record fallback
     link = cs.get("PrimaryUrl") or ""

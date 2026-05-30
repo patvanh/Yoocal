@@ -154,10 +154,10 @@ def _parse_event(raw):
         desc_html = raw.get("description") or ""
         desc_text = re.sub(r"<[^>]+>", " ", desc_html)
         desc_text = re.sub(r"\s+", " ", desc_text).strip()
-        description = subtitle if subtitle else desc_text[:300]
+        description = subtitle if subtitle else desc_text[:2000]
         if subtitle and desc_text:
             # Combine if we have both
-            description = (subtitle + " — " + desc_text)[:300]
+            description = (subtitle + " — " + desc_text)[:2000]
 
         # Location: first item in locations array
         locations = raw.get("locations") or []

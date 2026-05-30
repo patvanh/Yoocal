@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-30T09:46:10.278650-06:00",
+  "checked_at": "2026-05-30T11:42:17.575492-06:00",
   "today": "2026-05-30",
   "cities": {
     "park-city": [
@@ -63,9 +63,9 @@
         "source": "Visit Park City (sitemap)",
         "actual": 20,
         "baseline": 42.4,
-        "floor": 40,
-        "severity": "CRITICAL",
-        "message": "actual=20, floor=40 (below catastrophic threshold)"
+        "floor": 15,
+        "severity": "DEGRADED",
+        "message": "actual=20, baseline=42 (47% of normal)"
       },
       {
         "source": "Park City Institute",
@@ -339,12 +339,5 @@
       }
     ]
   },
-  "critical_alerts": [
-    {
-      "city": "park-city",
-      "source": "Visit Park City (sitemap)",
-      "severity": "CRITICAL",
-      "message": "actual=20, floor=40 (below catastrophic threshold)"
-    }
-  ]
+  "critical_alerts": []
 }

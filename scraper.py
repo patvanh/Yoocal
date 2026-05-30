@@ -318,7 +318,7 @@ def scrape_visit_park_city():
                 price = admission or price_raw
                 free_flag = doc.get("free")
 
-                description = str(doc.get("description") or doc.get("description_raw") or "").strip()[:300]
+                description = str(doc.get("description") or doc.get("description_raw") or "").strip()[:2000]
                 description = re.sub(r'<[^>]+>', '', description)
                 desc_lower = description.lower()
 
@@ -549,7 +549,7 @@ def scrape_kpcw():
                 start_time = extract_time_from_string(raw_date)
 
                 desc_el = c.find("p")
-                description = desc_el.get_text(strip=True)[:300] if desc_el else ""
+                description = desc_el.get_text(strip=True)[:2000] if desc_el else ""
 
                 link_el = c.find("a", href=True)
                 link = link_el["href"] if link_el else url
@@ -610,7 +610,7 @@ def scrape_eventbrite():
                         raw_start = item.get("startDate", "")
                         date = normalize_date(raw_start)
                         start_time = extract_time_from_iso(raw_start) or extract_time_from_string(raw_start)
-                        description = re.sub(r'<[^>]+>', '', item.get("description", ""))[:300]
+                        description = re.sub(r'<[^>]+>', '', item.get("description", ""))[:2000]
 
                         loc = item.get("location", {})
                         if isinstance(loc, dict):
@@ -978,7 +978,7 @@ def scrape_park_record():
                     parent = desc_el.parent
                     next_el = parent.find_next_sibling()
                     if next_el:
-                        detail['description'] = next_el.get_text(strip=True)[:300]
+                        detail['description'] = next_el.get_text(strip=True)[:2000]
                 detail_cache[link] = detail
             except:
                 detail_cache[link] = {}
@@ -1496,7 +1496,7 @@ def scrape_google_events():
                     event = {
                         "title": title,
                         "date": date,
-                        "description": description[:300],
+                        "description": description[:2000],
                         "location": location or "Park City, UT",
                         "link": link or "https://www.google.com/search?q=" + title.replace(" ", "+"),
                         "source": "Google Events",
@@ -1546,7 +1546,7 @@ def scrape_utah_com():
                         date = normalize_date_str(raw_date) or "See website"
                         start_time = extract_time_from_string(raw_date)
                         desc_el = c.find("p")
-                        description = desc_el.get_text(strip=True)[:300] if desc_el else ""
+                        description = desc_el.get_text(strip=True)[:2000] if desc_el else ""
                         link_el = c.find("a", href=True)
                         link = link_el["href"] if link_el else url
                         if link.startswith("/"): link = "https://www.utah.com" + link
@@ -1607,7 +1607,7 @@ def scrape_arts_council():
                 date = normalize_date_str(raw_date) or "See website"
                 start_time = extract_time_from_string(raw_date)
                 desc_el = c.find("p")
-                description = desc_el.get_text(strip=True)[:300] if desc_el else ""
+                description = desc_el.get_text(strip=True)[:2000] if desc_el else ""
                 link_el = c.find("a", href=True)
                 link = link_el["href"] if link_el else url
                 if link.startswith("/"): link = "https://www.pcscarts.org" + link

@@ -315,7 +315,7 @@ def _parse_event(raw):
 
         # Description (Tockify often truncates with ellipsis; keep up to 300 chars)
         description = (content.get("description") or {}).get("text") or ""
-        description = re.sub(r"<[^>]+>", "", description).strip()[:300]
+        description = re.sub(r"<[^>]+>", "", description).strip()[:2000]
 
         # Date sanity: Tockify often returns "billboard" events — the same
         # announcement repeated across many days leading up to the event, where

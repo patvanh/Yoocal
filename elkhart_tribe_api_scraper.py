@@ -75,7 +75,7 @@ def _normalize_event(tribe_ev: dict, source_name: str = "Elkhart Lake Tourism",
 
     description = _strip_html(tribe_ev.get("description") or "")
     if len(description) > 600:
-        description = description[:597] + "..."
+        description = description[:1997] + "..."
 
     # Venue
     venue_obj = tribe_ev.get("venue") or {}
