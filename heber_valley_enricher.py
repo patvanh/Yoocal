@@ -24,6 +24,8 @@ import re
 import time
 from pathlib import Path
 
+from recurrence_parser import parse_occurrence_dates
+
 CACHE_PATH = Path(".cache/heber_valley_enrichment.json")
 
 
@@ -199,6 +201,22 @@ def enrich_heber_valley_events(events):
         text = _fetch_page_text(url)
         if not text:
             cache[url] = {"status": "fetch_failed"}
+            continue
+
+        # Deterministic first: structured "Starts <date list>" block (Simpleview
+        # CMS template). Reliable + free; LLM only as fallback when absent.
+        det = parse_occurrence_dates(text)
+        if det and det.get("occurrence_dates"):
+            e["occurrence_dates"] = det["occurrence_dates"]
+            if det.get("recurrence_text"):
+                e["recurrence_text"] = det["recurrence_text"]
+            cache[url] = {
+                "start_date": det["occurrence_dates"][0],
+                "occurrence_dates": det["occurrence_dates"],
+                "recurrence_text": det.get("recurrence_text"),
+                "status": "deterministic",
+            }
+            enriched += 1
             continue
 
         result = _extract_dates_via_llm(e.get("title", ""), e.get("date"), text)
