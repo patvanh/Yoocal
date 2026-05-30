@@ -902,6 +902,46 @@ STILL OPEN (banked): the "Visit Park City" API path (scraper.py:74, source
 calendar) and was NOT touched — its 8 "maybe-unexpanded" recurring singles may
 still need recurrence handling. Last known VPC recurrence gap.
 
+## Update 26: VPC recurrence gap fully closed (API path)
+
+After fixing the VPC-sitemap path (Update 25), verification of the VPC SMART API
+path (scraper.py:74, source "Visit Park City" -- different scraper from the
+sitemap one) found recurring events still showing once. Three sub-cases, all now
+fixed:
+
+1. Recurrence set but no end_date (e.g. Fascia Rolling Class rec=weekly end=None,
+   Group Fitness rec=weekly_multiple). The API omits endDate for open-ended
+   series, so _fan_out_recurring couldn't bound the range.
+   FIX [77368b3]: in build_master_and_views._fan_out_recurring, weekly/
+   weekly_multiple events with NO end_date now project 180 days forward (events
+   WITH end_date unchanged). Each scrape regenerates from source, so cancelled
+   events self-correct next run; 60-occurrence cap is the backstop. Verified:
+   Fascia (1 day/wk) -> 26, Group Fitness (3 days/wk) -> 60 (capped).
+
+2. Daily recurrence (e.g. "Interactive Mixology Class"). INTENTIONALLY left
+   unfanned (stays 1) -- VPC "daily" events are usually bookable services, not
+   daily public events. The weekly-only guard naturally excludes daily.
+
+3. Recurrence declared ONLY in title ("Yoga on the Patio - Every Thursday",
+   "Music On The Patio - Every Saturday!", ESL "Every Wednesday", "Beat the Heat
+   - Every Monday"), API field empty.
+   FIX [f3e532c]: scraper.py after parse_recurrence, if none found, scan title
+   for "every <weekday>" -> recurrence=weekly + day. STRICT: bare day names
+   ("Friday Nights Live", "Park Silly Sunday Market") do NOT trigger (verified).
+
+VPC RECURRENCE COMPLETE: sitemap [a426529] + API no-end_date [77368b3] + API
+title-only [f3e532c] + daily/bookable left unfanned.
+
+PROCESS NOTE / near-miss: the title-fallback edit first used module name
+`_re_mod` (nonexistent; scraper.py imports plain `re` at line 23). ast.parse
+"syntax OK" masked it -- would have thrown NameError at scrape time on every VPC
+event with no recurrence. Caught by `import scraper` runtime check BEFORE commit.
+Lesson: syntax-check != runtime check; import/exercise scraper edits before ship.
+
+BANKED: bookable-service curation (Mixology/Plunj -- user doing manually);
+Elkhart recurrence formats unchecked; VisitJacksonHole build (Update 23); older
+items (Community bucket under-mapping, Heber 668 audit).
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
