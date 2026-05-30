@@ -38,6 +38,8 @@ from urllib.parse import urljoin, urlparse
 import requests
 
 # Event types we recognize as actual events
+from recurrence_parser import parse_weekly_recurrence
+
 EVENT_TYPES = {
     "Event", "MusicEvent", "TheaterEvent", "SportsEvent", "BusinessEvent",
     "ChildrensEvent", "ComedyEvent", "DanceEvent", "EducationEvent",
@@ -150,6 +152,10 @@ def scrape_schema_org_events(
             return []
 
     today_iso = datetime.now().strftime("%Y-%m-%d")
+    # Page-level recurrence ("Recurring weekly on Mon, Thu, ...") — Simpleview
+    # sites embed this in a JSON field. Applied to events from this page so the
+    # build fan-out engine expands them (needs end_date, set from schema).
+    page_recurrence = parse_weekly_recurrence(html_text)
     out = []
     seen_keys = set()
     dropped_past = 0
@@ -185,6 +191,12 @@ def scrape_schema_org_events(
                 parsed["start_time"] = st
                 if et:
                     parsed["end_time"] = et
+
+        # Stamp weekly recurrence (if the page declared it) so the build
+        # fan-out expands this into one event per matching weekday in range.
+        if page_recurrence and parsed.get("end_date"):
+            parsed["recurrence"] = page_recurrence["recurrence"]
+            parsed["recurrence_days"] = page_recurrence["recurrence_days"]
 
         # Dedup within this page
         key = (parsed["title"][:40].lower(), parsed["date"])

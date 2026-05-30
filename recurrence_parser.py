@@ -55,6 +55,41 @@ def parse_occurrence_dates(page_text: str) -> dict | None:
     return {"occurrence_dates": iso_dates, "recurrence_text": rec_text}
 
 
+# "Recurring weekly on Monday, Thursday, Friday, Saturday" — used by Simpleview
+# tourism sites (e.g. visitparkcity.com) in a JSON "recurrence" field. Combined
+# with schema.org startDate/endDate, the build fan-out engine computes every
+# matching weekday in range. Returns recurrence fields, NOT dates (the engine
+# expands them given an end_date).
+_WEEKLY_RE = re.compile(
+    r"Recurring\s+weekly\s+on\s+([A-Za-z,\s]+?)(?:[\".]|$)",
+    re.IGNORECASE,
+)
+_VALID_DAYS = {"monday","tuesday","wednesday","thursday","friday","saturday","sunday"}
+
+
+def parse_weekly_recurrence(page_text: str) -> dict | None:
+    """Extract 'Recurring weekly on <days>' -> recurrence fields.
+
+    Returns {"recurrence": "weekly", "recurrence_days": "Monday,Thursday,..."}
+    or None. Caller must supply end_date (from schema) for the fan-out engine
+    to compute occurrences.
+    """
+    if not page_text:
+        return None
+    m = _WEEKLY_RE.search(page_text)
+    if not m:
+        return None
+    raw = m.group(1)
+    days = []
+    for token in re.split(r"[,\s]+", raw):
+        t = token.strip().capitalize()
+        if t.lower() in _VALID_DAYS and t not in days:
+            days.append(t)
+    if not days:
+        return None
+    return {"recurrence": "weekly", "recurrence_days": ",".join(days)}
+
+
 if __name__ == "__main__":
     # quick self-test against gohebervalley cheese tasting
     import requests
