@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-30T15:46:09.531705",
+  "generated_at": "2026-05-30T22:06:30.785559",
   "audit_date": "2026-05-30",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1764,
+      "before_count": 1765,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -109,7 +109,7 @@
           ]
         },
         "classification": {
-          "fixed": 297,
+          "fixed": 310,
           "examples": [
             {
               "title": "A Spirited Paint Party with Artist Briar West",
@@ -153,8 +153,8 @@
           ]
         }
       },
-      "after_count": 1769,
-      "total_fixes": 325
+      "after_count": 1770,
+      "total_fixes": 338
     },
     {
       "city": "elkhart-lake",
@@ -222,7 +222,7 @@
     },
     {
       "city": "heber",
-      "before_count": 230,
+      "before_count": 231,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -355,7 +355,7 @@
           ]
         }
       },
-      "after_count": 233,
+      "after_count": 234,
       "total_fixes": 22
     },
     {
@@ -392,7 +392,7 @@
           ]
         },
         "multi_day_splits": {
-          "fixed": 2,
+          "fixed": 3,
           "examples": [
             {
               "title": "Teton Mudpots Summer Sale",
@@ -410,6 +410,15 @@
                 "2026-07-17",
                 "2026-07-18",
                 "2026-07-19"
+              ]
+            },
+            {
+              "title": "Art Fair Jackson Hole\u2014July",
+              "original_span": "2026-07-24 to 2026-07-26",
+              "split_into": [
+                "2026-07-24",
+                "2026-07-25",
+                "2026-07-26"
               ]
             }
           ]
@@ -436,8 +445,8 @@
           "examples": []
         }
       },
-      "after_count": 634,
-      "total_fixes": 12
+      "after_count": 636,
+      "total_fixes": 13
     }
   ]
 }
