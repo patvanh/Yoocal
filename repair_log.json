@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-30T22:06:30.785559",
+  "generated_at": "2026-05-30T23:17:52.447733",
   "audit_date": "2026-05-30",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1765,
+      "before_count": 1763,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -109,7 +109,7 @@
           ]
         },
         "classification": {
-          "fixed": 310,
+          "fixed": 312,
           "examples": [
             {
               "title": "A Spirited Paint Party with Artist Briar West",
@@ -153,8 +153,8 @@
           ]
         }
       },
-      "after_count": 1770,
-      "total_fixes": 338
+      "after_count": 1768,
+      "total_fixes": 340
     },
     {
       "city": "elkhart-lake",
@@ -222,7 +222,7 @@
     },
     {
       "city": "heber",
-      "before_count": 231,
+      "before_count": 230,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -355,12 +355,12 @@
           ]
         }
       },
-      "after_count": 234,
+      "after_count": 233,
       "total_fixes": 22
     },
     {
       "city": "jackson",
-      "before_count": 630,
+      "before_count": 545,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -445,7 +445,7 @@
           "examples": []
         }
       },
-      "after_count": 636,
+      "after_count": 551,
       "total_fixes": 13
     }
   ]

@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-05-30T16:06:31.318291-06:00",
+  "checked_at": "2026-05-30T17:17:53.185866-06:00",
   "today": "2026-05-30",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 745,
+        "actual": 750,
         "baseline": 795.8,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=745, baseline=796"
+        "message": "actual=750, baseline=796"
       },
       {
         "source": "Park City Annual Events",
@@ -45,11 +45,11 @@
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 53,
+        "actual": 52,
         "baseline": 45.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=53, baseline=46"
+        "message": "actual=52, baseline=46"
       },
       {
         "source": "Park City Farmers Market",
@@ -60,20 +60,20 @@
         "message": "actual=21, baseline=22"
       },
       {
-        "source": "Visit Park City (sitemap)",
-        "actual": 20,
-        "baseline": 42.4,
-        "floor": 15,
-        "severity": "DEGRADED",
-        "message": "actual=20, baseline=42 (47% of normal)"
-      },
-      {
         "source": "Park City Institute",
         "actual": 15,
         "baseline": 15,
         "floor": 5,
         "severity": "OK",
         "message": "actual=15, baseline=15"
+      },
+      {
+        "source": "Visit Park City (sitemap)",
+        "actual": 14,
+        "baseline": 42.4,
+        "floor": 15,
+        "severity": "CRITICAL",
+        "message": "actual=14, floor=15 (below catastrophic threshold)"
       },
       {
         "source": "Mountain Trails Foundation",
@@ -193,11 +193,11 @@
       },
       {
         "source": "Google Events",
-        "actual": 48,
+        "actual": 47,
         "baseline": 45.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=48, baseline=46"
+        "message": "actual=47, baseline=46"
       },
       {
         "source": "TownLift",
@@ -267,11 +267,11 @@
     "jackson": [
       {
         "source": "Jackson Hole Chamber of Commerce",
-        "actual": 243,
+        "actual": 155,
         "baseline": 207.4,
         "floor": 100,
         "severity": "OK",
-        "message": "actual=243, baseline=207"
+        "message": "actual=155, baseline=207"
       },
       {
         "source": "Center for the Arts Jackson Hole",
@@ -331,13 +331,20 @@
       },
       {
         "source": "Jackson Hole Mountain Resort",
-        "actual": 7,
+        "actual": 10,
         "baseline": 7,
         "floor": null,
         "severity": "OK",
-        "message": "actual=7, baseline=7"
+        "message": "actual=10, baseline=7"
       }
     ]
   },
-  "critical_alerts": []
+  "critical_alerts": [
+    {
+      "city": "park-city",
+      "source": "Visit Park City (sitemap)",
+      "severity": "CRITICAL",
+      "message": "actual=14, floor=15 (below catastrophic threshold)"
+    }
+  ]
 }
