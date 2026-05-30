@@ -752,6 +752,120 @@ BUILD PLAN (own focused session — substantial):
 - Park City's visitparkcity.com is ALSO Simpleview — a working VJH Algolia
   scraper could later improve PC coverage too.
 
+## Update 24: Day 11 (cont.) — recurring-events systemic fix SHIPPED + CI push bug fixed
+
+The big arc: recurring events were showing ONCE instead of on every occurrence,
+across all cities. User found gohebervalley.com/cheese-tasting (2nd Fri monthly,
+Jun-Dec = 7 dates) showing once. Root-caused it as systemic, built a reusable
+fix, and shipped it for the two biggest formats. THEN discovered the daily scrape
+push had been silently failing for who-knows-how-long (no data landing at all) —
+fixed that too (the keystone).
+
+### Recurring-events architecture (how it works now)
+- _fan_out_recurring() in build_master_and_views.py (~line 185-283) is the
+  UNIVERSAL, source-agnostic expansion engine. It was ALREADY built. It expands
+  any event carrying occurrence_dates (or recurrence+recurrence_days+end_date)
+  into individual dated instances. Caps at 60 occurrences / 365 days. Dedup key
+  is (title, date) so siblings don't collapse. The gap was never expansion — it
+  was that scrapers weren't POPULATING recurrence fields.
+- NEW: recurrence_parser.py — reusable, deterministic (no LLM). Two functions:
+  * parse_occurrence_dates(text) [FORMAT #1] — parses Simpleview "Starts <list of
+    MM/DD/YYYY> Ends" block + "General Schedule" text. Returns occurrence_dates +
+    recurrence_text. Used by gohebervalley.com (Heber Valley Tourism). Needs 2+
+    dates or returns None.
+  * parse_weekly_recurrence(text) [FORMAT #2] — parses "Recurring weekly on
+    Monday, Thursday, ..." (a JSON field Simpleview embeds). Returns
+    recurrence="weekly" + recurrence_days. Caller must supply end_date (from
+    schema) so the engine can compute the range.
+
+### What shipped (commits)
+- [a20d412] recurrence_parser.py + wired parse_occurrence_dates into
+  heber_valley_enricher.py BEFORE the LLM (deterministic-first, LLM fallback).
+  Verified: Cheese Tasting -> 7 dates -> fan-out -> 7 events. Also independently
+  verified Burrata Making Class -> 6 dates (4th Fri monthly). Generalizes.
+- [3d9f2ec] parse_weekly_recurrence wired into schema_org_scraper.scrape_schema_
+  org_events (the SHARED scraper feeding VPC sitemap, Heber sitemap, Jackson
+  sitemap/Chamber, jhiff, CFA). Guarded: only stamps recurrence when page has it
+  AND has end_date (avoids unbounded fan-out). Verified end-to-end: Deer Creek
+  Express (VPC, 4x/week Jan-Oct) -> weekly Mon,Thu,Fri,Sat -> fans to 60 (capped).
+- [ae68574] CI PUSH FIX (keystone — see below).
+
+### Source coverage map for recurrence (from a per-source repeat-title scan)
+Most recurring VOLUME is already handled because sources ENUMERATE occurrences
+themselves (each occurrence = its own entry, no expansion needed):
+  Park Record 71, Mountain Town Music 24, Chamber 12, Million Dollar Cowboy 10,
+  Elkhart Tourism 12, GTMF 4, Museum of Wildlife Art 4, Deer Valley 4.
+COVERED by our new parsers:
+  - Heber Valley Tourism (gohebervalley) -> FORMAT #1. ~20 events that were
+    "maybe-unexpanded" should fan out next scrape. VERIFY post-scrape.
+  - VPC sitemap, Jackson Chamber, CFA, jhiff (anything via scrape_schema_org_
+    events) -> FORMAT #2 if page says "Recurring weekly on".
+  - Jackson Chamber confirmed: it flows through scrape_schema_org_events as a
+    SITEMAP_SOURCE (jackson_scraper.py:76). simpleview_scraper.py EXISTS but is
+    NOT called for Jackson (no scrape_simpleview call) -> ruled out dual-path
+    doubling. Chamber sitemap has 1 Trivia URL -> 1 event -> fans to ~22.
+REMAINING GAPS (banked):
+  - Park City "Visit Park City" API path: 8 "maybe-unexpanded" recurring-sounding
+    singles. NOT the sitemap path (that's covered). The API path may need its own
+    recurrence handling. Likely the last meaningful PC gap.
+  - Scattered 1-2 elsewhere (KPCW, Road America, Oakley) — low priority.
+  - Elkhart sources — not yet checked for recurrence formats.
+
+### CI PUSH BUG — root-caused + fixed [ae68574] (THE KEYSTONE)
+Manual scrapes were "failing." Screenshot of a run: scrape SUCCEEDED
+([main 10fe6fc] chore(data): daily scrape, 17 files, 52513 insertions) but the
+"Commit and push updated JSON" step FAILED — git rebase aborted 3x with "cannot
+rebase: You have unstaged changes" -> "Could not push after 3 attempts." So NO
+scraped data had been landing despite successful generation.
+ROOT CAUSE: scrape-daily.yml "Check for changes" step (line 201) staged an
+EXPLICIT file list that omitted scraper_llm_health.json (written by
+scraper_llm_health.py:253-254, tracked). Left unstaged -> blocked rebase. Our
+earlier anthropic-dep fix [e5f395b era] made the LLM health step run again and
+produce that file, surfacing this latent bug.
+FIX (user chose robust option B): replaced explicit `git add <list>` with
+`git add -A` (gitignore excludes caches; added __pycache__/, *.pyc, *.pyo to keep
+-A clean). Now any run-written tracked file gets staged; tree stays clean for
+rebase. Confirmed no bytecode currently tracked.
+IMPORTANT IMPLICATION: because data hadn't been landing, the LIVE data was frozen
+(stale since ~last successful push). So multiple "bugs" are actually already-
+fixed-in-code but unreflected-in-data — they'll self-resolve on the next
+successful push. Example: %26 in titles ("Wine Tasting %26 Cheese Train", 3 Heber
+Valley Life events) — _clean_display_text() in build already decodes %26->& and
+is applied to titles (lines 735, 765); verified it returns the clean string. NO
+code fix needed; stale data only. Same logic for un-expanded recurring events and
+older category artifacts.
+
+### POST-SCRAPE VERIFICATION CHECKLIST (do when the running scrape finishes)
+A fresh scrape was triggered to test ae68574. When done, confirm:
+1. Run fully GREEN, esp. "Commit and push" step (was failing).
+2. LLM health step passes (anthropic installed) and writes scraper_llm_health.
+   json, now staged by git add -A.
+3. git pull, then verify recurrence came out CLEAN:
+   - Trivia Night ~= 22 NOT ~44 (the DOUBLING check — confirms no dual-path).
+   - Cheese Tasting @ Kohler Creamery ~= 7.
+   - Deer Creek Express expanded to many dates (was 1).
+   - Heber total UP (the ~20 unexpanded fan out).
+4. %26 titles now clean (auto-fixed by _clean_display_text on the fresh build).
+5. "5K" search finds Jackson Hole Half Marathon (description-cap fix [e5f395b]).
+Expected-and-OK: VPC-sitemap still ~20-36; total counts UP across cities
+(recurrence expansion working — may trigger harmless ELEVATED health status,
+which doesn't email). This push lands ALL of today's work to prod at once.
+
+### Other banked TODOs
+- Harness hygiene: classify_audit.py REAL_CASES line 156 "Moose Hockey
+  Celebration" assertion is STALE (event rolled off; 0 found in data). Same rule
+  (Celebration -> NOT Festival) is still covered by line 157 "Summer Solstice
+  Celebration" (matches "R Park Summer Solstice Celebration"). Swap/remove line
+  156 — but do it against FRESH post-scrape data so the replacement is durable.
+- VisitJacksonHole build (Update 23): discovery done (Algolia, app 629LY06J3Z,
+  key 13ba5fb..., env prod, ~1100 events). Still need exact Algolia INDEX NAME
+  (grab from DevTools Network on /do/events reload — fires once on load; all ~40
+  guessed patterns 404'd). Then build scraper. PC's visitparkcity.com is also
+  Simpleview — could improve PC later.
+- Older banked: Community bucket ~50-60% under-mapping (separate from over-
+  matching, which is fixed); Elkhart Community 4.3% outlier; Heber 668-event
+  sanity audit.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
