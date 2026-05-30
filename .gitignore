@@ -53,3 +53,8 @@ link_health.json
 link_health_fixes.json
 .cache/
 pending_sources_*.json
+
+# Python bytecode (generated in CI; keep git add -A clean)
+__pycache__/
+*.pyc
+*.pyo

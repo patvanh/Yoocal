@@ -198,7 +198,10 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git add public/events*.json public/raw/events*.json audit_issues.json repair_log.json llm_resolve_log.json llm_resolve_uncertain.json scraper_baselines.json scraper_health.json kpcw_heber_cache.json
+          # Stage everything the run produced (gitignore excludes caches/
+          # bytecode). Robust: avoids leaving run-written tracked files (e.g.
+          # scraper_llm_health.json) unstaged, which breaks the later rebase.
+          git add -A
           if git diff --cached --quiet; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
