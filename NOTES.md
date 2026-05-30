@@ -866,6 +866,42 @@ which doesn't email). This push lands ALL of today's work to prod at once.
   matching, which is fixed); Elkhart Community 4.3% outlier; Heber 668-event
   sanity audit.
 
+## Update 25: Day 11 (cont.) — VPC-sitemap recurring events were dropping (fixed)
+
+After the successful scrape (Update 24), verification showed Deer Creek Express
+(VPC, runs Mon/Thu/Fri/Sat Jan-Oct) was MISSING entirely (0 in data), even though
+Trivia Night (Chamber) expanded cleanly to 22. Both are weekly-recurring via our
+format-#2 wiring, so why did one work and one vanish?
+
+ROOT CAUSE: a SECOND recurrence expander. sitemap_event_scraper._expand_event_
+dates (run at scrape time, on both VPC sitemap AND Jackson Chamber paths via
+scrape_sitemap_events) detected recurrence ONLY by text-scanning title/desc for
+"mondays"/"every monday". It did NOT read the structured recurrence/recurrence_
+days fields that parse_weekly_recurrence sets. So structured-recurrence events
+fell through its logic unpredictably — Trivia happened to survive as 1 (then the
+build engine fanned it), but Deer Creek effectively dropped out. Two expanders
+(_expand_event_dates at scrape time + _fan_out_recurring at build time) that
+disagreed = events silently missed.
+
+FIX [a426529]: in _expand_event_dates, if an event already has recurrence/
+recurrence_days, return [ev] untouched — defer ALL recurrence expansion to the
+universal build engine (_fan_out_recurring). Single source of truth. Legacy
+text-scan kept as fallback for sources that don't set structured fields.
+VERIFIED post-fix on the live sitemap paths:
+  - VPC sitemap: Deer Creek now survives (recurrence=weekly, Mon/Thu/Fri/Sat,
+    end=Oct 31) -> build fans to 60. VPC sitemap total 112 events.
+  - Jackson Chamber sitemap: Trivia passes through as 1 (rec=weekly, Monday,
+    end=Oct 26) -> build fans to 22. NO doubling. Chamber total 226.
+
+LESSON: the old text-scan expander was working by accident for some events and
+dropping others. Now deterministic. This likely recovers OTHER VPC-sitemap
+weekly-recurring events that were silently dropping, not just Deer Creek.
+
+STILL OPEN (banked): the "Visit Park City" API path (scraper.py:74, source
+"Visit Park City" WITHOUT "(sitemap)") is a DIFFERENT scraper (Smart API/
+calendar) and was NOT touched — its 8 "maybe-unexpanded" recurring singles may
+still need recurrence handling. Last known VPC recurrence gap.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
