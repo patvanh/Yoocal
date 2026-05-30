@@ -711,6 +711,47 @@ of the same change.
 - NOTE: earlier confusion was partly a STALE local file -- public/raw/events.json
   was the May-28 snapshot during investigation. Always check updated_at first.
 
+## Update 23: VisitJacksonHole source — DISCOVERY DONE, build banked
+
+Goal: add visitjacksonhole.com/do/events as a Jackson source (suspected biggest
+coverage gap — Chamber is healthy at 84/86 for a sample window, resorts are
+small-by-nature, but VJH lists ~1100 /event/ links we don't capture).
+
+CONFIRMED REACHABLE (Simpleview site, Algolia-backed search):
+- Platform: Simpleview (CRM account "jacksonholewy"; assets on simpleviewinc.com)
+- Events are NOT in the sitemap (sitemap index has only post/page/activity subs;
+  no /event/ pages). They render client-side from Algolia. So the VPC sitemap
+  approach does NOT work here.
+- Algolia public creds (from inline <script> on /do/events, var site.ALGOLIA_*):
+    APP id:     629LY06J3Z
+    public key: 13ba5fb183974c4f50c8847d9815759b
+    env:        prod
+- Search endpoint works (POST .../1/indexes/{INDEX}/query returns 200 for a valid
+  index; we get 404 for wrong names, 403 only on list-indexes = key is search-only).
+
+MISSING PIECE (one 30-sec grab): the exact Algolia INDEX NAME. Guessed ~25
+prod_/jacksonholewy_ patterns, all 404. Not in main.min.js as a literal (likely
+built at runtime). GET IT FROM THE BROWSER: DevTools > Network > Fetch/XHR,
+clear filter, RELOAD page (must record from load — it fires once on load), find
+the request to *.algolia.net, copy index from URL path /1/indexes/<INDEX>/query.
+
+BUILD PLAN (own focused session — substantial):
+1. New scraper (e.g. visit_jackson_hole_scraper.py): query Algolia index with
+   pagination (hitsPerPage + page/offset), filter to events (not activities/
+   listings), map their schema -> our event dict (need to inspect fields first
+   via one query once index known).
+2. Handle dates + recurrence (VJH likely has same prose-recurrence issue as
+   Deer Creek — see Update 22).
+3. Wire into jackson_scraper.py alongside the other Jackson sources.
+4. Dedup: EXPECT HEAVY overlap with Chamber (243) + CFA + Cloudveil. Net-new
+   count likely far below 1100 (cf. VPC sitemap ~80% deduped). Real value =
+   the net-new events; verify after integrating.
+5. Add SOURCE_PRIORITY entry, scraper_health floor, baseline.
+6. NOTE: VJH blanket-tags via Simpleview categories — watch for the same
+   source-tag leak we fixed for CFA (Update 21). May need SOURCE_BLANKET_IGNORE.
+- Park City's visitparkcity.com is ALSO Simpleview — a working VJH Algolia
+  scraper could later improve PC coverage too.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
