@@ -248,7 +248,7 @@ def _fan_out_recurring(events):
         # May 30 - Sep 19 series); deterministic computation captures every
         # matching weekday in range.
         rec = (e.get("recurrence") or "")
-        if rec in ("weekly", "weekly_multiple") and e.get("end_date"):
+        if rec in ("weekly", "weekly_multiple"):
             day_str = e.get("recurrence_day") or e.get("recurrence_days") or ""
             target_indices = set()
             for d in day_str.replace("|", ",").split(","):
@@ -258,7 +258,14 @@ def _fan_out_recurring(events):
             if target_indices:
                 try:
                     sd = datetime.strptime((e.get("date") or "")[:10], "%Y-%m-%d").date()
-                    ed = datetime.strptime(e["end_date"][:10], "%Y-%m-%d").date()
+                    # Open-ended weekly events (e.g. VPC API "Yoga every Thursday"
+                    # with no endDate) project 180 days forward. Each scrape
+                    # regenerates from source, so cancelled events self-correct;
+                    # the 60-occurrence cap below is the hard backstop.
+                    if e.get("end_date"):
+                        ed = datetime.strptime(e["end_date"][:10], "%Y-%m-%d").date()
+                    else:
+                        ed = datetime.now().date() + timedelta(days=180)
                     cap_end = datetime.now().date() + timedelta(days=365)
                     if ed > cap_end:
                         ed = cap_end
