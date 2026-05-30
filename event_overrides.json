@@ -2,7 +2,7 @@
   "_meta": {
     "description": "Human-curated event corrections. Applied AFTER scrapers run.",
     "format": "See event_overrides.py docstring for schema.",
-    "last_updated": "2026-05-19"
+    "last_updated": "2026-05-30"
   },
   "overrides": [
     {
@@ -111,7 +111,7 @@
       "_id": "create-oakley-xtreme-bulls",
       "city": "heber",
       "create": {
-        "title": "Xtreme Bulls — Presented by Grade Tech",
+        "title": "Xtreme Bulls \u2014 Presented by Grade Tech",
         "date": "2026-07-06",
         "start_time": "7:30 PM",
         "end_time": "10:00 PM",
@@ -166,7 +166,7 @@
       "_id": "create-oakley-patriotic-program",
       "city": "heber",
       "create": {
-        "title": "Patriotic Program — Oakley Red Barn",
+        "title": "Patriotic Program \u2014 Oakley Red Barn",
         "date": "2026-07-04",
         "start_time": "11:30 AM",
         "end_time": "1:00 PM",
@@ -175,7 +175,7 @@
         "location": "Oakley Red Barn, Oakley, UT 84055",
         "lat": 40.71472,
         "lng": -111.30056,
-        "description": "Annual Patriotic Program held at the Oakley Red Barn — community celebration of Independence Day with music, speakers, and recognition of veterans.",
+        "description": "Annual Patriotic Program held at the Oakley Red Barn \u2014 community celebration of Independence Day with music, speakers, and recognition of veterans.",
         "source": "Oakley City",
         "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule"
       }
@@ -246,7 +246,7 @@
         "location": "Oakley City Recreational Complex, Oakley, UT 84055",
         "lat": 40.71472,
         "lng": -111.30056,
-        "description": "3rd Annual Oakley Pickleball Tournament — June 26 (Friday) and June 27 (Saturday). Registration $35 (includes first event), second event $10. Registration opened March 23rd, closes June 12th. Start times posted once brackets are made.",
+        "description": "3rd Annual Oakley Pickleball Tournament \u2014 June 26 (Friday) and June 27 (Saturday). Registration $35 (includes first event), second event $10. Registration opened March 23rd, closes June 12th. Start times posted once brackets are made.",
         "source": "Oakley City",
         "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule",
         "link": "https://pickleballtournaments.com/tournaments/oakley-pickleball-tournament-2026"
@@ -265,9 +265,20 @@
         "location": "Oakley Red Barn, Oakley, UT 84055",
         "lat": 40.71472,
         "lng": -111.30056,
-        "description": "Annual Tough Enough to Wear Pink Dinner & Auction at the Oakley Red Barn — a community fundraiser raising awareness and funds for cancer research.",
+        "description": "Annual Tough Enough to Wear Pink Dinner & Auction at the Oakley Red Barn \u2014 a community fundraiser raising awareness and funds for cancer research.",
         "source": "Oakley City",
         "source_url": "https://www.oakleyut.gov/july-4th/page/celebration-schedule"
+      }
+    },
+    {
+      "_id": "fix-max-title-marc-e-bassy-pc-institute",
+      "city": "park-city",
+      "match": {
+        "title_eq": "MAX",
+        "source_contains": "Park City Institute"
+      },
+      "set": {
+        "title": "Marc E. Bassy with MAX"
       }
     }
   ]
