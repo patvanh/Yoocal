@@ -58,7 +58,16 @@ def _expand_event_dates(ev: dict, today: str) -> list:
 
     span_days = (end_d - start_d).days + 1
 
-    # Detect day-of-week recurrence
+    # If the event already carries STRUCTURED recurrence fields (set by
+    # parse_weekly_recurrence in schema_org_scraper, e.g. "Recurring weekly on
+    # Monday, Thursday"), do NOT expand here. Pass it through untouched so the
+    # universal build-time engine (_fan_out_recurring in build_master_and_views)
+    # expands it -- single source of truth, avoids dual-expander disagreements.
+    if ev.get("recurrence_days") or ev.get("recurrence"):
+        return [ev]
+
+    # Legacy fallback: detect day-of-week recurrence from title/description text
+    # (for sources that DON'T set the structured fields above).
     desc = (ev.get("description") or "").lower()
     title = (ev.get("title") or "").lower()
     combined = title + " " + desc
