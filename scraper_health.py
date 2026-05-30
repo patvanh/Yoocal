@@ -46,7 +46,7 @@ HEALTH_FLOORS = {
     ("park-city", "Mountain Town Music"): 50,
     ("park-city", "Deer Valley Resort"): 20,
     ("park-city", "Visit Park City"): 15,  # Most VPC events get deduped to higher-priority sources
-    ("park-city", "Visit Park City (sitemap)"): 40,
+    ("park-city", "Visit Park City (sitemap)"): 15,  # ~80% of sitemap events dedupe into Park Record/VPC-API; only ~36 survive as sitemap-labeled. Week ranged 20-46. Floor below normal range w/ margin.
     ("park-city", "Park City Farmers Market"): 10,
     ("park-city", "Park City Institute"): 5,
     ("heber", "Heber Valley Tourism"): 30,
