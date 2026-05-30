@@ -942,6 +942,44 @@ BANKED: bookable-service curation (Mixology/Plunj -- user doing manually);
 Elkhart recurrence formats unchecked; VisitJacksonHole build (Update 23); older
 items (Community bucket under-mapping, Heber 668 audit).
 
+## Update 27: Nearby-city search fallback (frontend)
+
+User on the Heber page searched "park silly" -> nothing, even though Park Silly
+Sunday Market is a Park City event ~20min away. Request: if a search has no hits
+in the current city, fall back to nearby cities (B = nearby-only, not all-cities;
+a distance-based general solution comes later once we add more cities).
+
+ARCHITECTURE: most plumbing already existed in CalendarClient.tsx (Model C):
+- City pages already fetch the current city's JSON + ALL other cities' files in
+  parallel (~line 617), tagging other-city events with _sourceCity (line 636).
+- allUpcomingMatches (the SEARCH memo, ~line 727) already computed `local` +
+  `other` and switched on cityFilter ('current'|'all'|<city>). Default 'current'
+  returned ONLY local -> that's why park-silly-on-Heber showed nothing.
+- The "see all" overlay already rendered a _sourceCity city badge (~line 1539).
+
+FIX [4ba79b0]:
+1. In allUpcomingMatches, cityFilter==='current' branch: if local.length===0 AND
+   there's a query, return matches from NEARBY cities instead of empty. Adjacency
+   map NEARBY_CITIES = {parkcity:['heber'], heber:['parkcity'], jackson:[],
+   elkhartlake:[]}. Only triggers on zero-local-with-query; everything else
+   unchanged (local results when they exist, existing city filters intact).
+2. Added the city badge to the INLINE search dropdown rows (~line 1248), which
+   previously lacked it (only the "see all" overlay had it). Badge shows only
+   when ev._sourceCity differs from the current city, so local results stay
+   clean. Same purple pill style as the overlay.
+Verified in browser (npm run dev): Heber + "park silly" -> Park Silly results
+with "Park City" badge in both dropdown and overlay; local "cheese" search shows
+no badge. tsc clean.
+
+FUTURE (banked): generalize to distance-based nearby (compute from CITY_CENTERS
+rather than a hardcoded adjacency map) once there are more cities. The map is the
+pragmatic stopgap for the current 4-town/2-cluster setup.
+
+NOTE on local dev: first page load on `npm run dev` (Next 16 + Turbopack) can show
+a blank white page for ~30-60s while it compiles on first request — not a bug,
+just slow first compile. Console shows harmless Google Maps key=undefined /
+favicon 404 in local dev (Maps key not set locally; fine in prod).
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
