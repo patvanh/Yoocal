@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-28T19:21:28.623724",
-  "audit_date": "2026-05-28",
+  "generated_at": "2026-05-30T15:46:09.531705",
+  "audit_date": "2026-05-30",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1757,
+      "before_count": 1764,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -24,13 +24,21 @@
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 76
+              "had_span": 74
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 5,
+          "fixed": 6,
           "examples": [
+            {
+              "title": "Michelin-Starred Chef Klemens Gold Returns to Goldener Hirsch for the Summer Solstice",
+              "original_span": "2026-06-20 to 2026-06-21",
+              "split_into": [
+                "2026-06-20",
+                "2026-06-21"
+              ]
+            },
             {
               "title": "Chef Sarah Glover Weekend",
               "original_span": "2026-07-11 to 2026-07-12",
@@ -61,14 +69,6 @@
               "split_into": [
                 "2026-08-08",
                 "2026-08-09"
-              ]
-            },
-            {
-              "title": "Preview Weekend",
-              "original_span": "2026-06-13 to 2026-06-14",
-              "split_into": [
-                "2026-06-13",
-                "2026-06-14"
               ]
             }
           ]
@@ -109,7 +109,7 @@
           ]
         },
         "classification": {
-          "fixed": 337,
+          "fixed": 297,
           "examples": [
             {
               "title": "A Spirited Paint Party with Artist Briar West",
@@ -133,31 +133,32 @@
               ]
             },
             {
-              "title": "Park City Marketing Club Workshop: What's Your Story, with Paul Hochman from Humongous Media",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Education"
-              ]
-            },
-            {
               "title": "Progressive Art Experience",
               "before": [],
               "after": [
                 "Community"
               ]
+            },
+            {
+              "title": "Candlelight Kundalini",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Food & Drink",
+                "Wellness"
+              ]
             }
           ]
         }
       },
-      "after_count": 1761,
-      "total_fixes": 364
+      "after_count": 1769,
+      "total_fixes": 325
     },
     {
       "city": "elkhart-lake",
-      "before_count": 248,
+      "before_count": 245,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -216,20 +217,25 @@
           "examples": []
         }
       },
-      "after_count": 255,
+      "after_count": 252,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 229,
+      "before_count": 230,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
+              "had_span": 124
+            }
+          ]
         },
         "multi_day_splits": {
           "fixed": 2,
@@ -263,10 +269,10 @@
               "duration_hours": 1
             },
             {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
-              "duration_hours": 2
+              "title": "Yoga in the Park",
+              "start_time": "10:45 AM",
+              "new_end_time": "11:45 AM",
+              "duration_hours": 1
             },
             {
               "title": "Oakley Rodeo",
@@ -343,51 +349,50 @@
               "title": "Xtreme Bulls \u2014 Presented by Grade Tech",
               "before": [],
               "after": [
-                "Sports",
-                "Festival"
+                "Sports"
               ]
             }
           ]
         }
       },
-      "after_count": 232,
-      "total_fixes": 21
+      "after_count": 233,
+      "total_fixes": 22
     },
     {
       "city": "jackson",
-      "before_count": 599,
+      "before_count": 630,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 7,
+          "fixed": 8,
           "examples": [
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 115
+              "had_span": 113
             },
             {
               "title": "Music Classes",
-              "had_span": 1679
+              "had_span": 1677
             },
             {
               "title": "Visual Arts Classes",
-              "had_span": 1679
+              "had_span": 1677
             },
             {
               "title": "Writing Classes and Workshops",
-              "had_span": 1679
+              "had_span": 1677
             },
             {
               "title": "Dance and Movement Classes",
-              "had_span": 1679
+              "had_span": 1677
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 1,
+          "fixed": 2,
           "examples": [
             {
               "title": "Teton Mudpots Summer Sale",
@@ -396,6 +401,15 @@
                 "2026-06-17",
                 "2026-06-18",
                 "2026-06-19"
+              ]
+            },
+            {
+              "title": "Mata Ortiz Pop-Up Pottery Shop",
+              "original_span": "2026-07-17 to 2026-07-19",
+              "split_into": [
+                "2026-07-17",
+                "2026-07-18",
+                "2026-07-19"
               ]
             }
           ]
@@ -418,65 +432,12 @@
           ]
         },
         "classification": {
-          "fixed": 195,
-          "examples": [
-            {
-              "title": "30th Year of Moose Hockey Celebration",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Sports",
-                "Festival"
-              ]
-            },
-            {
-              "title": "Al Hubbard: When Turtles Talk",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Arts"
-              ]
-            },
-            {
-              "title": "\"Bison-tennial\" Community Exhibition Opening",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Arts"
-              ]
-            },
-            {
-              "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Education"
-              ]
-            },
-            {
-              "title": "Raptor Adaptations: Masters of Survival",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Kids",
-                "Education"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         }
       },
-      "after_count": 601,
-      "total_fixes": 205
+      "after_count": 634,
+      "total_fixes": 12
     }
   ]
 }
