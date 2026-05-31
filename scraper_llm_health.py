@@ -69,21 +69,55 @@ REGRESSION_FACTOR = 2.0
 MIN_LLM_COUNT_TO_FLAG = 5
 
 
-def count_events_per_source() -> dict[str, int]:
-    """Count events per source across all raw files."""
-    counts: Counter = Counter()
+def _load_all_raw_events() -> list:
+    """All events across raw files."""
+    out = []
     for path in RAW_FILES:
         if not Path(path).exists():
             continue
         try:
             d = json.load(open(path))
             events = d.get("events", d) if isinstance(d, dict) else d
-            for e in events:
-                src = e.get("source") or "UNKNOWN"
-                counts[src] += 1
+            out.extend(events)
         except Exception as ex:
             print(f"  warn: could not read {path}: {ex}", flush=True)
+    return out
+
+
+def count_events_per_source() -> dict[str, int]:
+    """Count events per source across all raw files."""
+    counts: Counter = Counter()
+    for e in _load_all_raw_events():
+        counts[e.get("source") or "UNKNOWN"] += 1
     return dict(counts)
+
+
+# Venues whose events legitimately arrive under MULTIPLE source names (a
+# hardcoded list + a tourism aggregator + a direct scrape all contribute). For
+# these, an exact-source count badly undercounts and the LLM health check
+# false-flags "missing events". Count by venue keyword across all sources.
+_MULTI_SOURCE_VENUES = {
+    "The Osthoff Resort": "osthoff",
+    "Siebkens Resort": "siebken",
+}
+
+
+def venue_aware_count(source: str, all_events: list) -> int:
+    """True count for a source. For known multi-source venues, count any event
+    whose title/location/venue/source contains the venue keyword; otherwise
+    fall back to exact source match."""
+    kw = _MULTI_SOURCE_VENUES.get(source)
+    if not kw:
+        return sum(1 for e in all_events if (e.get("source") or "") == source)
+    n = 0
+    for e in all_events:
+        blob = " ".join([
+            e.get("source") or "", e.get("title") or "",
+            e.get("location") or "", e.get("venue_name") or "",
+        ]).lower()
+        if kw in blob:
+            n += 1
+    return n
 
 
 def fetch_page(url: str) -> str | None:
@@ -168,10 +202,15 @@ def main():
     print(f"Scraper LLM health check starting at {datetime.now(MOUNTAIN).isoformat()}", flush=True)
     counts = count_events_per_source()
     print(f"Found {len(counts)} sources in raw files", flush=True)
+    all_events = _load_all_raw_events()  # for venue-aware counts (multi-source venues)
 
     results = []
     flagged = []
-    for source, our_count in sorted(counts.items(), key=lambda x: -x[1]):
+    for source, _raw_count in sorted(counts.items(), key=lambda x: -x[1]):
+        # Venue-aware count: for venues whose events span multiple source names
+        # (Osthoff, Siebkens), this gives the true total so the check doesn't
+        # false-flag "missing". For all other sources it equals the raw count.
+        our_count = venue_aware_count(source, all_events)
         url = SOURCE_URLS.get(source)
         if not url:
             results.append({
