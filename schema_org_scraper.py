@@ -56,6 +56,39 @@ DEFAULT_HEADERS = {
 
 
 # --------------------------------------------------------------
+# Resilient HTTP session: connection pooling + retry/backoff so that
+# rate-limiting (HTTP 429) or transient errors from CI datacenter IPs don't
+# silently drop event pages. Shared across all per-page fetches (VPC sitemap,
+# Jackson Chamber, etc.). Without this, ~130 of 145 VPC pages could fail under
+# throttling, producing a random partial scrape.
+import time as _time
+import random as _random
+from requests.adapters import HTTPAdapter
+
+try:
+    from urllib3.util.retry import Retry
+    _retry = Retry(
+        total=4,
+        connect=3,
+        read=3,
+        status=4,
+        backoff_factor=1.5,  # waits ~0,1.5,3,6s between status retries
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset(["GET"]),
+        respect_retry_after_header=True,
+        raise_on_status=False,
+    )
+except Exception:  # very old urllib3 fallback
+    _retry = None
+
+_SESSION = requests.Session()
+_SESSION.headers.update(DEFAULT_HEADERS)
+_adapter = HTTPAdapter(max_retries=_retry, pool_connections=10, pool_maxsize=20)
+_SESSION.mount("https://", _adapter)
+_SESSION.mount("http://", _adapter)
+
+
+# --------------------------------------------------------------
 # Public API
 # --------------------------------------------------------------
 
@@ -250,10 +283,35 @@ def scrape_schema_org_sources(sources_config):
 # Internals
 # --------------------------------------------------------------
 
-def _fetch(url, timeout=20):
-    r = requests.get(url, headers=DEFAULT_HEADERS, timeout=timeout, allow_redirects=True)
-    r.raise_for_status()
-    return r.text
+def _fetch(url, timeout=20, _max_attempts=3):
+    """Fetch a page via the shared resilient session.
+
+    The session adapter already retries 429/5xx with backoff. This outer loop
+    additionally retries connection-level errors (timeouts, resets) that the
+    adapter may surface as exceptions, with jittered sleeps so a burst of
+    page fetches doesn't hammer the origin in lockstep. A genuine 404 still
+    raises promptly (not in the retry status list)."""
+    last_exc = None
+    for attempt in range(1, _max_attempts + 1):
+        try:
+            # small jitter to desynchronize rapid sequential fetches
+            if attempt == 1:
+                _time.sleep(_random.uniform(0.0, 0.25))
+            r = _SESSION.get(url, timeout=timeout, allow_redirects=True)
+            r.raise_for_status()
+            return r.text
+        except requests.HTTPError:
+            # status error that survived the adapter's retries (e.g. real 404,
+            # or 429 past the retry budget) — don't keep hammering; re-raise.
+            raise
+        except requests.RequestException as e:
+            last_exc = e
+            if attempt < _max_attempts:
+                _time.sleep(1.0 * attempt + _random.uniform(0, 0.5))
+            continue
+    if last_exc:
+        raise last_exc
+    raise RuntimeError("fetch failed without exception")
 
 
 def _extract_schema_events(html_text):

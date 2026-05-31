@@ -6,9 +6,9 @@
     "lng": -111.4133
   },
   "radius_mi": 10,
-  "generated_at": "2026-05-30T18:34:44.743384-06:00",
+  "generated_at": "2026-05-30T19:05:07.800421-06:00",
   "today": "2026-05-30",
-  "event_count": 811,
+  "event_count": 869,
   "events": [
     {
       "title": "Star Wars: The Mandalorian & Grogu",
@@ -300,26 +300,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "2026 Midway 4th of July Celebration",
-      "date": "2026-07-04",
-      "description": "We open the day with a cannon blast, then town square gets busy (7:00 a.m.) with a flag ceremony, patriotic speaker, Honored Citizen award, music from...",
-      "location": "Midway Town Hall, 75 100 W, Midway, UT",
-      "link": "https://www.visitsaltlake.com/event/festivals-and-special-events/2026-midway-4th-of-july-celebration/79647/",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5119,
-      "lng": -111.4744,
-      "scraped_at": "2026-05-31T00:12:34.926707",
-      "categories": [
-        "Family"
-      ],
-      "address": "Midway Town Hall, 75 100 W, Midway, UT",
-      "filter_categories": [
-        "Family & Kids"
-      ],
-      "_distance_mi": 3.2
-    },
-    {
       "title": "Heber Valley Main to Main",
       "date": "2026-07-04",
       "description": "Join us for an exciting race day! The 10K race starts at 7 a.m. from Heber City Park, taking you through beautiful Midway streets and back. The 5K race begins at 7:15 a.m. at the same location.",
@@ -338,6 +318,26 @@
         "Sports"
       ],
       "_distance_mi": 0.0
+    },
+    {
+      "title": "2026 Midway 4th of July Celebration",
+      "date": "2026-07-04",
+      "description": "We open the day with a cannon blast, then town square gets busy (7:00 a.m.) with a flag ceremony, patriotic speaker, Honored Citizen award, music from...",
+      "location": "Midway Town Hall, 75 100 W, Midway, UT",
+      "link": "https://www.visitsaltlake.com/event/festivals-and-special-events/2026-midway-4th-of-july-celebration/79647/",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "lat": 40.5119,
+      "lng": -111.4744,
+      "scraped_at": "2026-05-31T00:12:34.926707",
+      "categories": [
+        "Family"
+      ],
+      "address": "Midway Town Hall, 75 100 W, Midway, UT",
+      "filter_categories": [
+        "Family & Kids"
+      ],
+      "_distance_mi": 3.2
     },
     {
       "title": "The Little Mermaid",
@@ -550,6 +550,56 @@
         "Running & Races"
       ],
       "_distance_mi": 3.2
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-05-30",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Princess and Pirate Train",
+      "date": "2026-05-30",
+      "description": "Princess and Pirate Train Calling all Princesses, Pirates and friends for this epic train adventure! Your 90 minute round trip includes interactive...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/princess-and-pirate-train/28762/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/princess-and-pirate-train/28762/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/6613e855-baf7-485c-a469-0503cf4c12f8_335ABDED-08F1-415F-A39D3CE844CB6E0B_41d28548-ecfa-46c6-9c26fd21676285b1.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "1:00 PM",
+      "end_time": "2:30 PM",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
     },
     {
       "title": "Disc Golf Tournament @ Wasatch Wunder Course",
@@ -1073,6 +1123,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-06-04",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-06-04",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -1289,6 +1365,32 @@
         "Music"
       ],
       "_distance_mi": 3.2
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-05",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
     },
     {
       "title": "Live Music @ Caf\u00e9 Galleria",
@@ -1641,6 +1743,32 @@
       ],
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-06",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -2366,6 +2494,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-06-11",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-06-11",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -2523,6 +2677,32 @@
         "Community"
       ],
       "_distance_mi": 3.2
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-12",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
     },
     {
       "title": "Live Music @ Caf\u00e9 Galleria",
@@ -2818,6 +2998,32 @@
         "Community",
         "Family & Kids",
         "Outdoors"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-13",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -3404,6 +3610,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-06-18",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-06-18",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -3608,6 +3840,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-06-19",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Live Music @ Caf\u00e9 Galleria",
       "date": "2026-06-19",
       "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
@@ -3796,6 +4054,32 @@
       "end_date": null,
       "filter_categories": [
         "Music"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-20",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -4437,6 +4721,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-06-25",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-06-25",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -4568,6 +4878,32 @@
         "Community"
       ],
       "_distance_mi": 3.2
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-26",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
     },
     {
       "title": "Live Music @ Caf\u00e9 Galleria",
@@ -4945,6 +5281,32 @@
         "Community",
         "Family & Kids",
         "Music"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-27",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -5731,6 +6093,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-07-02",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-07-02",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -5861,6 +6249,32 @@
       "recurrence_text": "Jun 30 - Jul 4",
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-03",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -6130,6 +6544,32 @@
       "filter_categories": [
         "Family & Kids",
         "Sports"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-04",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -6830,6 +7270,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-07-09",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-07-09",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -6933,6 +7399,32 @@
       "date_label": "Jul 9, 10, 11",
       "filter_categories": [
         "Sports"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-10",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -7125,6 +7617,32 @@
       "end_date": null,
       "filter_categories": [
         "Music"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-11",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -7692,6 +8210,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-07-16",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-07-16",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -7795,6 +8339,32 @@
       "date_label": "6:30 - 7:30 PM",
       "recurrence_text": "6:30 - 7:30 PM",
       "end_date": null,
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-17",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
       "filter_categories": [
         "Education & Talks"
       ],
@@ -8013,6 +8583,32 @@
       "end_date": null,
       "filter_categories": [
         "Sports"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-18",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -8553,6 +9149,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-07-23",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-07-23",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -8713,6 +9335,32 @@
         "Family & Kids",
         "Food & Drink",
         "Sports"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-24",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -9031,6 +9679,32 @@
       "recurrence_text": "Jul 24 - 26",
       "filter_categories": [
         "Arts & Theater"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-25",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -9521,6 +10195,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-07-30",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-07-30",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -9667,6 +10367,32 @@
         "Family & Kids",
         "Food & Drink",
         "Sports"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-31",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -9864,6 +10590,32 @@
         "Family & Kids",
         "Food & Drink",
         "Sports"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-08-01",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -10425,6 +11177,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-08-06",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-08-06",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -10553,6 +11331,32 @@
       ],
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-08-07",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -10723,6 +11527,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-06-01",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-06-01",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -10773,6 +11603,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-08",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -10854,6 +11710,32 @@
       ],
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-15",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -10960,6 +11842,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-06-22",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-06-22",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -11033,6 +11941,32 @@
       "end_date": null,
       "filter_categories": [
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-29",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -11112,6 +12046,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-07-06",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-07-06",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -11185,6 +12145,32 @@
       "end_date": null,
       "filter_categories": [
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-13",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -11266,6 +12252,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-07-20",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-07-20",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -11339,6 +12351,32 @@
       "end_date": null,
       "filter_categories": [
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-07-27",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -12290,6 +13328,32 @@
       "_distance_mi": 8.9
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-08-03",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-08-03",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -12340,6 +13404,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-08-10",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -12398,6 +13488,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-08-17",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-08-17",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -12452,6 +13568,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-08-24",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-08-24",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -12502,6 +13644,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-08-31",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -12529,6 +13697,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-09-07",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -14283,6 +15477,29 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEO & Google Business Tools",
+      "date": "2026-09-02",
+      "description": "Get Found First: Local Website Optimization, SEO & Google Business Tools Most local businesses are losing customers to competitors who simply show...",
+      "location": "UVU Wasatch Campus in Heber, 3111 College Way, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/wasatch-back-business-university%3a-get-found-first%3a-local-website-optimization-seo-%26-google-business-tools/29019/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/wasatch-back-business-university%3a-get-found-first%3a-local-website-optimization-seo-%26-google-business-tools/29019/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/Partner-Benefits-Review_3375DE45-5056-B3A8-49029D821FCC02E2_3376c9c4-5056-b3a8-493048976e5bf399_9D77B9BF-B0A9-ED44-61A4D6F2B1C6EB20_9d7819e7-d3d6-2e4b-3c218eeb32daef04.png",
+      "address": "3111 College Way, Heber City, UT, 84032",
+      "venue_name": "UVU Wasatch Campus in Heber",
+      "start_time": "11:30 AM",
+      "end_time": "1:00 PM",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Wednesday Morning Storytime @ Folklore Bookshop",
       "date": "2026-09-02",
       "description": "Wednesday Morning Storytime @ Folklore Bookshop in Heber Valley.",
@@ -15461,159 +16678,163 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+      "title": "Wasatch Back Business University: Beyond the Basics: Specific AI Tools That Are Actually Moving the Needle for Business",
       "date": "2026-11-04",
-      "description": "Wednesday Morning Storytime @ Folklore Bookshop in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/folklore-bookshop-morning-storytime",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
+      "description": "Beyond the Basics: Specific AI Tools That Are Actually Moving the Needle for Business Most business owners have tried ChatGPT. Very few have...",
+      "location": "UVU Wasatch Campus in Heber, 3111 College Way, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/wasatch-back-business-university%3a-beyond-the-basics%3a-specific-ai-tools-that-are-actually-moving-the-needle-for-business/29021/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/wasatch-back-business-university%3a-beyond-the-basics%3a-specific-ai-tools-that-are-actually-moving-the-needle-for-business/29021/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
-        "Kids",
+        "Community",
         "Education"
       ],
-      "scraped_at": "2026-05-31T00:08:50.141002",
-      "start_time": "10:30 AM",
-      "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=30-06-49",
-      "date_label": "Wed, 10:30 - 11:00 AM",
-      "recurrence": "weekly",
-      "recurrence_day": "Wednesday",
-      "recurrence_text": "Wed, 10:30 - 11:00 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Education & Talks",
-        "Family & Kids"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Heber Midday Wednesday Ride @ Southfield Park",
-      "date": "2026-11-04",
-      "description": "Heber Midday Wednesday Ride @ Southfield Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-midday-ride",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.141271",
-      "start_time": "12:00 PM",
-      "end_time": "1:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187352.jpg?decache=30-06-49",
-      "date_label": "Wed, 12:00 - 1:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Wednesday",
-      "recurrence_text": "Wed, 12:00 - 1:30 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Wasatch County Council Monthly Meetings",
-      "date": "2026-11-04",
-      "description": "Wasatch County Council Monthly Meetings in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wasatch-county-council-meetings",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.141365",
-      "start_time": "4:00 PM",
-      "end_time": "6:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750551.jpg?decache=30-06-49",
-      "date_label": "1st & 3rd Wed monthly, 4:00 PM",
-      "recurrence_text": "1st & 3rd Wed monthly, 4:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Open Art Studio Night @ Alchemy Art Studio",
-      "date": "2026-11-04",
-      "description": "Open Art Studio Night @ Alchemy Art Studio in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/alchemy-art-open-studio",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.141448",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=30-06-49",
-      "date_label": "Wed, 6:00 - 8:00 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Wednesday",
-      "recurrence_text": "Wed, 6:00 - 8:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Midway Music on the Square",
-      "date": "2026-11-04",
-      "description": "Midway Music on the Square in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/midway-music-on-the-square",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.145831",
-      "start_time": "6:30 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=30-06-49",
-      "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Wednesday",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Wasatch Back Business University - Beyond the Basics: Specific AI Tools That Are Actually Moving the Needle for Business",
-      "date": "2026-11-04",
-      "description": "Wasatch Back Business University - Beyond the Basics: Specific AI Tools That Are Actually Moving the Needle for Business in Heber Valley.",
-      "location": "UVU Wasatch Campus, 3111 College Way, Heber City, UT",
-      "link": "https://www.gohebervalley.com/november-business-university",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.203107",
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/Coffee-Chat-2-_7107056F-D71C-5F40-3058DF20049BB989_7148ed76-cff9-11a3-c98a75661a9720ea.png",
+      "address": "3111 College Way, Heber City, UT, 84032",
+      "venue_name": "UVU Wasatch Campus in Heber",
       "start_time": "11:30 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=30-06-49",
-      "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
-      "venue_name": "UVU Wasatch Campus",
-      "address": "3111 College Way, Heber City, UT, 84032",
+      "_all_sources": [
+        "Heber Valley Tourism",
+        "Visit Park City (sitemap)"
+      ],
+      "filter_categories": [
+        "Community",
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+      "date": "2026-11-04",
+      "description": "Wednesday Morning Storytime @ Folklore Bookshop in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/folklore-bookshop-morning-storytime",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Kids",
+        "Education"
+      ],
+      "scraped_at": "2026-05-31T00:08:50.141002",
+      "start_time": "10:30 AM",
+      "end_time": "11:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=30-06-49",
+      "date_label": "Wed, 10:30 - 11:00 AM",
+      "recurrence": "weekly",
+      "recurrence_day": "Wednesday",
+      "recurrence_text": "Wed, 10:30 - 11:00 AM",
+      "end_date": null,
+      "filter_categories": [
+        "Education & Talks",
+        "Family & Kids"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Heber Midday Wednesday Ride @ Southfield Park",
+      "date": "2026-11-04",
+      "description": "Heber Midday Wednesday Ride @ Southfield Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-midday-ride",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-31T00:08:50.141271",
+      "start_time": "12:00 PM",
+      "end_time": "1:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187352.jpg?decache=30-06-49",
+      "date_label": "Wed, 12:00 - 1:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Wednesday",
+      "recurrence_text": "Wed, 12:00 - 1:30 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Wasatch County Council Monthly Meetings",
+      "date": "2026-11-04",
+      "description": "Wasatch County Council Monthly Meetings in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wasatch-county-council-meetings",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-31T00:08:50.141365",
+      "start_time": "4:00 PM",
+      "end_time": "6:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750551.jpg?decache=30-06-49",
+      "date_label": "1st & 3rd Wed monthly, 4:00 PM",
+      "recurrence_text": "1st & 3rd Wed monthly, 4:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Open Art Studio Night @ Alchemy Art Studio",
+      "date": "2026-11-04",
+      "description": "Open Art Studio Night @ Alchemy Art Studio in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/alchemy-art-open-studio",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-31T00:08:50.141448",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=30-06-49",
+      "date_label": "Wed, 6:00 - 8:00 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Wednesday",
+      "recurrence_text": "Wed, 6:00 - 8:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Midway Music on the Square",
+      "date": "2026-11-04",
+      "description": "Midway Music on the Square in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/midway-music-on-the-square",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-05-31T00:08:50.145831",
+      "start_time": "6:30 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=30-06-49",
+      "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Wednesday",
+      "end_date": null,
       "filter_categories": [
         "Community"
       ],
@@ -15968,6 +17189,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-08-08",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -16140,6 +17387,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-08-13",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-08-13",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -16220,6 +17493,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-08-14",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -16413,6 +17712,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-08-15",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -16549,6 +17874,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-08-20",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-08-20",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -16677,6 +18028,32 @@
       ],
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-08-21",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -16900,6 +18277,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-08-22",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Live Music @ Caf\u00e9 Galleria",
       "date": "2026-08-22",
       "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
@@ -17034,6 +18437,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-08-27",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Meet the Cows - Dairy Farm Tour",
       "date": "2026-08-27",
       "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
@@ -17114,6 +18543,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-08-28",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -17411,6 +18866,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-08-29",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Live Music @ Caf\u00e9 Galleria",
       "date": "2026-08-29",
       "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
@@ -17566,6 +19047,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-09-03",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
       "date": "2026-09-03",
       "description": "Free Yoga for Ages 55+ @ Wasatch County Library in Heber Valley.",
@@ -17644,6 +19151,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-09-04",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -17847,6 +19380,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-09-05",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Commemorative Air Force Museum Tours",
       "date": "2026-09-05",
       "description": "Commemorative Air Force Museum Tours in Heber Valley.",
@@ -17925,6 +19484,32 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Deer Creek Express",
+      "date": "2026-09-10",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
       "date": "2026-09-10",
       "description": "Free Yoga for Ages 55+ @ Wasatch County Library in Heber Valley.",
@@ -17978,6 +19563,32 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-09-11",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "filter_categories": [
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },
@@ -18846,6 +20457,39 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Wasatch Half Marathon and 10K",
+      "date": "2026-09-26",
+      "description": "Come join us in the cool mountain scenery at The Wasatch Half Marathon and 10k! We are really to share this wonderful mostly trail run course to the race calendar. This event is one you don't want to miss. Starting and ending near the Soldier Hollow Nordic Center they\u2019ll be no shortage of breathtaking scenery with the rewards of accomplishing something great! No need for shuttles at this event as you\u2019ll be able to park and the start/finish line.",
+      "location": "Midway, UT",
+      "link": "https://triutah.com/wasatch-1%2F2",
+      "source": "Salt Lake Running Co",
+      "source_url": "https://slrc.com/event-calendar/",
+      "lat": 40.5119,
+      "lng": -111.4744,
+      "categories": [
+        "Education",
+        "Outdoor",
+        "Sports"
+      ],
+      "image_url": "https://s3-us-west-2.amazonaws.com/images.raceentry.com/infopages2/wasatch-12-marathon-and-10k-infopages2-55120.png?v=1727016497",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "address": "2002 Soldier Hollow Lane, Midway, UT, 84049",
+      "venue_name": "Soldier Hollow",
+      "_all_sources": [
+        "Heber Valley Tourism",
+        "Salt Lake Running Co"
+      ],
+      "is_free": false,
+      "filter_categories": [
+        "Education & Talks",
+        "Outdoors",
+        "Running & Races",
+        "Sports"
+      ],
+      "_distance_mi": 3.2
+    },
+    {
       "title": "Disc Golf Tournament @ Wasatch Wunder Course",
       "date": "2026-09-26",
       "description": "Disc Golf Tournament @ Wasatch Wunder Course in Heber Valley.",
@@ -18950,41 +20594,6 @@
         "Community"
       ],
       "_distance_mi": 0.0
-    },
-    {
-      "title": "Wasatch Half Marathon & 10K",
-      "date": "2026-09-26",
-      "description": "Wasatch Half Marathon & 10K in Heber Valley.",
-      "location": "Soldier Hollow, 2002 Soldier Hollow Lane, Midway, UT",
-      "link": "https://www.gohebervalley.com/wasatch-half-marathon",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5119,
-      "lng": -111.4744,
-      "categories": [
-        "Education",
-        "Outdoor",
-        "Sports"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.193493",
-      "start_time": "8:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180475.jpg?decache=30-06-49",
-      "date_label": "Race starts at 8:00 AM",
-      "venue_name": "Soldier Hollow",
-      "address": "2002 Soldier Hollow Lane, Midway, UT, 84049",
-      "_all_sources": [
-        "Heber Valley Tourism",
-        "Salt Lake Running Co"
-      ],
-      "is_free": false,
-      "filter_categories": [
-        "Education & Talks",
-        "Outdoors",
-        "Running & Races",
-        "Sports"
-      ],
-      "_distance_mi": 3.2
     },
     {
       "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
@@ -20526,195 +22135,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Midway Art Gallery Open House",
-      "date": "2026-11-27",
-      "description": "Midway Art Gallery Open House in Heber Valley.",
-      "location": "Midway Art Gallery, 120 West Main Street, Midway, UT",
-      "link": "https://www.gohebervalley.com/midway-art-gallery-open-house",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5119,
-      "lng": -111.4744,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.142147",
-      "start_time": "1:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749910.jpg?decache=30-06-49",
-      "date_label": "Fri & Sat, 10:00 AM - 5:00 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "recurrence_text": "Every Friday and Saturday, 10:00 AM - 5:00 PM",
-      "venue_name": "Midway Art Gallery",
-      "address": "120 West Main Street, Midway, UT, 84049",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 3.2
-    },
-    {
-      "title": "Ritual Chocolate Public Tour and Mini Tasting",
-      "date": "2026-11-27",
-      "description": "Ritual Chocolate Public Tour and Mini Tasting in Heber Valley.",
-      "location": "Ritual Chocolate Factory, 2175 West 3000 South, Suite 100, Heber City, UT",
-      "link": "https://www.gohebervalley.com/ritual-chocolate-tour-and-tasting",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Food & Drink"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.142410",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3120729.jpg?decache=30-06-49",
-      "date_label": "Fri @ 11 AM, Sat @ 1 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "recurrence_text": "Every Friday at 11 AM and Saturday at 1 PM",
-      "venue_name": "Ritual Chocolate Factory",
-      "address": "2175 West 3000 South, Suite 100, Heber City, UT, 84032",
-      "end_date": null,
-      "filter_categories": [
-        "Food & Drink"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Ice Skating Glide In Movies @ Black Rock Event Center",
-      "date": "2026-11-27",
-      "description": "Ice Skating Glide In Movies @ Black Rock Event Center in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/black-rock-glide-in-movies",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.142803",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187566.jpg?decache=30-06-49",
-      "date_label": "Fri, 6:00 - 8:00 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "recurrence_text": "Fri, 6:00 - 8:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music Fridays @ Melvin's Public House",
-      "date": "2026-11-27",
-      "description": "Live Music Fridays @ Melvin's Public House in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/live-music-at-melvins-pub",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Music"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.143013",
-      "start_time": "7:30 PM",
-      "end_time": "10:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728120.jpg?decache=30-06-49",
-      "date_label": "Weekly, Fri nights @ 7:30pm",
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "recurrence_text": "Weekly, Fri nights @ 7:30pm",
-      "end_date": null,
-      "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Mozzarella Making Class @ Kohler Creamery",
-      "date": "2026-11-27",
-      "description": "Mozzarella Making Class @ Kohler Creamery in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/kohler-creamery-mozzarella-making-class",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.153727",
-      "start_time": "10:30 AM",
-      "end_time": "11:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748645.jpg?decache=30-06-49",
-      "date_label": "4th Fri monthly, 10:30 -11:30 AM",
-      "recurrence_text": "4th Fri monthly, 10:30 -11:30 AM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Farmstead Burrata Class @ Kohler Creamery",
-      "date": "2026-11-27",
-      "description": "Farmstead Burrata Class @ Kohler Creamery in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/kohler-creamery-burrata-making-class",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.154060",
-      "start_time": "1:00 PM",
-      "end_time": "2:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748646.jpg?decache=30-06-49",
-      "date_label": "4th Fri monthly, 1:00 - 2:00 PM",
-      "recurrence_text": "4th Fri monthly, 1:00 - 2:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Intermountain Mustang and All Ford Stampede",
-      "date": "2026-11-27",
-      "description": "Intermountain Mustang and All Ford Stampede in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/intermountain-mustang-and-all-ford-stampede",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-05-31T00:08:50.177190",
-      "start_time": "8:00 AM",
-      "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=30-06-49",
-      "date_label": "Fri & Sat, 8:00 AM - 4:00 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "recurrence_text": "Fri & Sat, 8:00 AM - 4:00 PM",
-      "end_date": null,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Commemorative Air Force Museum Tours",
       "date": "2026-10-17",
       "description": "Commemorative Air Force Museum Tours in Heber Valley.",
@@ -21146,58 +22566,82 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Kid's Book Club @ Wasatch County Library",
-      "date": "2026-12-03",
-      "description": "Kid's Book Club @ Wasatch County Library in Heber Valley.",
+      "title": "Mozzarella Making Class @ Kohler Creamery",
+      "date": "2026-11-27",
+      "description": "Mozzarella Making Class @ Kohler Creamery in Heber Valley.",
       "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wasatch-county-library-kids-book-club",
+      "link": "https://www.gohebervalley.com/kohler-creamery-mozzarella-making-class",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
-        "Education"
+        "Community"
       ],
-      "scraped_at": "2026-05-31T00:08:50.141875",
-      "start_time": "4:00 PM",
-      "end_time": "5:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749593.jpg?decache=30-06-49",
-      "date_label": "1st Thu monthly, 3:30 - 5:00 PM",
-      "recurrence_text": "1st Thu monthly, 3:30 - 5:00 PM",
+      "scraped_at": "2026-05-31T00:08:50.153727",
+      "start_time": "10:30 AM",
+      "end_time": "11:30 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748645.jpg?decache=30-06-49",
+      "date_label": "4th Fri monthly, 10:30 -11:30 AM",
+      "recurrence_text": "4th Fri monthly, 10:30 -11:30 AM",
       "end_date": null,
       "filter_categories": [
-        "Education & Talks"
+        "Community"
       ],
       "_distance_mi": 0.0
     },
     {
-      "title": "Wasatch Back Business University: Business Finance",
-      "date": "2026-12-03",
-      "description": "Wasatch Back Business University: Business Finance in Heber Valley.",
+      "title": "Farmstead Burrata Class @ Kohler Creamery",
+      "date": "2026-11-27",
+      "description": "Farmstead Burrata Class @ Kohler Creamery in Heber Valley.",
       "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/december-business-university",
+      "link": "https://www.gohebervalley.com/kohler-creamery-burrata-making-class",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
-        "Community",
-        "Education"
+        "Community"
       ],
-      "scraped_at": "2026-05-31T00:08:50.209278",
-      "start_time": "11:30 PM",
-      "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=30-06-49",
-      "date_label": "Blair Education Center, 11:30 AM - 1:00 PM",
-      "address": "900 Round Valley Dr, Park City, UT, 84060",
-      "venue_name": "Blair Education Center - Intermountain Park City Hospital",
-      "_all_sources": [
-        "Heber Valley Tourism",
-        "Visit Park City (sitemap)"
-      ],
+      "scraped_at": "2026-05-31T00:08:50.154060",
+      "start_time": "1:00 PM",
+      "end_time": "2:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748646.jpg?decache=30-06-49",
+      "date_label": "4th Fri monthly, 1:00 - 2:00 PM",
+      "recurrence_text": "4th Fri monthly, 1:00 - 2:00 PM",
+      "end_date": null,
       "filter_categories": [
-        "Community",
-        "Education & Talks"
+        "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Free Concert Series @ Wasatch County Library",
+      "date": "2026-11-27",
+      "description": "Free Concert Series @ Wasatch County Library in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wasatch-county-library-concert-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Music"
+      ],
+      "scraped_at": "2026-05-31T00:08:50.154302",
+      "start_time": "6:00 PM",
+      "end_time": "7:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180701.jpg?decache=30-06-49",
+      "date_label": "Last Fri monthly, 6:00 PM - 7:00 PM ",
+      "recurrence_text": "Last Fri monthly, 6:00 PM - 7:00 PM",
+      "facets": [
+        "Free"
+      ],
+      "end_date": null,
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -21362,6 +22806,62 @@
       "end_date": null,
       "filter_categories": [
         "Community"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Kid's Book Club @ Wasatch County Library",
+      "date": "2026-12-03",
+      "description": "Kid's Book Club @ Wasatch County Library in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wasatch-county-library-kids-book-club",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "scraped_at": "2026-05-31T00:08:50.141875",
+      "start_time": "4:00 PM",
+      "end_time": "5:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749593.jpg?decache=30-06-49",
+      "date_label": "1st Thu monthly, 3:30 - 5:00 PM",
+      "recurrence_text": "1st Thu monthly, 3:30 - 5:00 PM",
+      "end_date": null,
+      "filter_categories": [
+        "Education & Talks"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Wasatch Back Business University: Business Finance",
+      "date": "2026-12-03",
+      "description": "Wasatch Back Business University: Business Finance in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/december-business-university",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community",
+        "Education"
+      ],
+      "scraped_at": "2026-05-31T00:08:50.209278",
+      "start_time": "11:30 PM",
+      "end_time": "1:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=30-06-49",
+      "date_label": "Blair Education Center, 11:30 AM - 1:00 PM",
+      "address": "900 Round Valley Dr, Park City, UT, 84060",
+      "venue_name": "Blair Education Center - Intermountain Park City Hospital",
+      "_all_sources": [
+        "Heber Valley Tourism",
+        "Visit Park City (sitemap)"
+      ],
+      "filter_categories": [
+        "Community",
+        "Education & Talks"
       ],
       "_distance_mi": 0.0
     },

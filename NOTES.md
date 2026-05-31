@@ -1077,6 +1077,49 @@ a direct test) on consecutive runs — now looks persistent, not transient; plus
 surfaced as a Heber absurd_span. Separate coverage/audit-timing thread to
 investigate on its own, not a quick override.
 
+## Update 30: Fix VPC scraper throttling — random missing events (root cause)
+
+Chased "Deer Creek Express missing." Found it is NOT event-specific: the VPC
+sitemap scraper fetches 145 event pages one-by-one, and from GitHub Actions
+datacenter IPs, VPC rate-limits most requests, so a run captures a RANDOM
+~15 of 145. Whichever pages get throttled = whichever events vanish that day.
+Explains why different VPC events go missing on different days (user noticed
+multiple over time). From a home IP it returns 112/145 with 0 failed.
+
+ROOT CAUSE: schema_org_scraper._fetch was a bare requests.get per page — no
+retry, no backoff, no 429 handling. Under throttling, raise_for_status() threw,
+the caller did silent `failed += 1`, event dropped.
+
+THREE-LAYER FIX (defense in depth):
+1. [scraper hardening] schema_org_scraper.py — added a shared requests.Session
+   with an HTTPAdapter + urllib3 Retry (total=4, backoff_factor=1.5,
+   status_forcelist 429/500/502/503/504, respects Retry-After). _fetch now uses
+   the session + an outer manual retry for connection errors + jitter. A real
+   404 still fails fast. This is the CURE — makes the scraper patient instead of
+   dropping pages under throttling. Shared by all per-page sitemap scrapers
+   (VPC + Jackson Chamber).
+2. [resilience guard] NEW scrape_resilience.py + hook in build_master_and_views
+   main(). Backstop: if a source's count collapses vs last-known-good (state in
+   last_good_sources.json), substitute the last-good events so a partial scrape
+   never guts the live site. Self-heals on recovery; after ACCEPT_LOW_AFTER=3
+   consecutive low runs it accepts the new lower count as the real baseline (so
+   a genuine seasonal drop isn't held stale forever). RETAIN_FRACTION=0.50,
+   MIN_BASELINE=8. Verified across baseline->throttle->persist->accept->recover.
+3. [visibility] the digest's source-anomaly section already flags a >50% drop
+   ("-67%") so even if both above fail, you SEE it.
+
+Seeded last_good_sources.json with a fresh full scrape (VPC sitemap=112 with
+events stored) so the guard's baseline starts good, not from the throttled 15.
+Verified: hardened _fetch returns 112/145 0-failed; Deer Creek Express present.
+
+NOTE on Deer Creek Express specifically: it is a Heber Valley Railroad event
+(Heber City) that VPC cross-lists. It correctly lands in the HEBER view, not
+Park City (we briefly thought 0-in-PC-view was a bug; it is right — geographic).
+Rich data IS captured (recurrence weekly Mon/Thu/Fri/Sat, venue, time).
+
+BANKED: classify_audit.py still has the stale "Moose Hockey" assertion (line
+156) from before — swap to fresh data when convenient.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`

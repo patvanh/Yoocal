@@ -1058,7 +1058,24 @@ def main():
             all_events.extend(events)
         except FileNotFoundError:
             print(f"  SKIP: {path} not found")
-    
+
+    # Resilience guard: if a source's count has collapsed vs its last-known-good
+    # (e.g. VPC sitemap throttled from CI: 15 of ~112 pages fetched), substitute
+    # the last-good events so a partial scrape doesn't silently gut the site.
+    # Self-heals on recovery; accepts a persistent drop after a few runs.
+    try:
+        from scrape_resilience import apply_resilience_guard, format_report
+        _before_guard = len(all_events)
+        all_events, _guard_report = apply_resilience_guard(all_events, today_iso)
+        _guard_msg = format_report(_guard_report)
+        if _guard_msg:
+            print("  Resilience guard adjustments:")
+            print(_guard_msg)
+        if len(all_events) != _before_guard:
+            print(f"  Resilience guard: {_before_guard} -> {len(all_events)} events after retention")
+    except Exception as _guard_ex:
+        print(f"  Resilience guard skipped: {_guard_ex}")
+
     # Drop scraped UI/navigation labels that aren't real events.
     # Strip trailing recurrence descriptors ("- Every Saturday!", etc.) from
     # ALL event titles, regardless of source. Once an event is a specific dated
