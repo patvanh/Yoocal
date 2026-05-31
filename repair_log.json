@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T15:41:41.794629",
+  "generated_at": "2026-05-31T19:50:28.080227",
   "audit_date": "2026-05-31",
   "reports": [
     {
@@ -222,20 +222,15 @@
     },
     {
       "city": "heber",
-      "before_count": 226,
+      "before_count": 132,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
-              "had_span": 117
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "multi_day_splits": {
           "fixed": 2,
@@ -260,14 +255,8 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 7,
+          "fixed": 6,
           "examples": [
-            {
-              "title": "Heber Valley Chamber Golf Tournament",
-              "start_time": "8:00 AM",
-              "new_end_time": "9:00 AM",
-              "duration_hours": 1
-            },
             {
               "title": "Yoga in the Park",
               "start_time": "10:45 AM",
@@ -278,6 +267,12 @@
               "title": "Comedy Magic Show - Anthony the Magic",
               "start_time": "3:30 PM",
               "new_end_time": "5:30 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Oakley Rodeo",
+              "start_time": "11:30 PM",
+              "new_end_time": "1:30 AM",
               "duration_hours": 2
             },
             {
@@ -355,8 +350,8 @@
           ]
         }
       },
-      "after_count": 229,
-      "total_fixes": 23
+      "after_count": 135,
+      "total_fixes": 21
     },
     {
       "city": "jackson",

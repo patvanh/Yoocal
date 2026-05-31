@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-31T09:41:42.617875-06:00",
+  "checked_at": "2026-05-31T13:50:28.844705-06:00",
   "today": "2026-05-31",
   "cities": {
     "park-city": [
@@ -184,20 +184,20 @@
     ],
     "heber": [
       {
-        "source": "Heber Valley Tourism",
-        "actual": 113,
-        "baseline": 115,
-        "floor": 30,
-        "severity": "OK",
-        "message": "actual=113, baseline=115"
-      },
-      {
         "source": "Google Events",
-        "actual": 46,
+        "actual": 47,
         "baseline": 47.2,
         "floor": null,
         "severity": "OK",
-        "message": "actual=46, baseline=47"
+        "message": "actual=47, baseline=47"
+      },
+      {
+        "source": "Heber Valley Life",
+        "actual": 24,
+        "baseline": 18,
+        "floor": 10,
+        "severity": "OK",
+        "message": "actual=24, baseline=18"
       },
       {
         "source": "TownLift",
@@ -208,14 +208,6 @@
         "message": "actual=22, baseline=18"
       },
       {
-        "source": "Heber Valley Life",
-        "actual": 18,
-        "baseline": 18,
-        "floor": 10,
-        "severity": "OK",
-        "message": "actual=18, baseline=18"
-      },
-      {
         "source": "Oakley City",
         "actual": 13,
         "baseline": 13,
@@ -224,12 +216,28 @@
         "message": "actual=13, baseline=13"
       },
       {
+        "source": "Heber Valley Tourism",
+        "actual": 10,
+        "baseline": 115,
+        "floor": 30,
+        "severity": "CRITICAL",
+        "message": "actual=10, floor=30 (below catastrophic threshold)"
+      },
+      {
         "source": "Eventbrite",
         "actual": 7,
         "baseline": 8.8,
         "floor": null,
         "severity": "OK",
         "message": "actual=7, baseline=9"
+      },
+      {
+        "source": "Salt Lake Running Co",
+        "actual": 4,
+        "baseline": 2,
+        "floor": null,
+        "severity": "ELEVATED",
+        "message": "actual=4, baseline=2 (200% of normal)"
       },
       {
         "source": "RunSignup",
@@ -254,14 +262,6 @@
         "floor": null,
         "severity": "DEGRADED",
         "message": "actual=2, baseline=3 (59% of normal)"
-      },
-      {
-        "source": "Salt Lake Running Co",
-        "actual": 2,
-        "baseline": 2,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=2, baseline=2"
       }
     ],
     "jackson": [
@@ -345,6 +345,12 @@
       "source": "Visit Park City (sitemap)",
       "severity": "CRITICAL",
       "message": "actual=14, floor=15 (below catastrophic threshold)"
+    },
+    {
+      "city": "heber",
+      "source": "Heber Valley Tourism",
+      "severity": "CRITICAL",
+      "message": "actual=10, floor=30 (below catastrophic threshold)"
     }
   ]
 }
