@@ -134,6 +134,14 @@ jobs:
           python build_master_and_views.py
           echo "::endgroup::"
 
+      - name: Re-run quality audit on final built data
+        id: audit_final
+        continue-on-error: true
+        run: |
+          echo "::group::Quality audit (post-build, final)"
+          python event_quality_audit.py
+          echo "::endgroup::"
+
       - name: LLM scraper health check
         id: llm_health_check
         continue-on-error: true
