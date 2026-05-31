@@ -1188,6 +1188,35 @@ add it to _MULTI_SOURCE_VENUES.
 This completes the digest cleanup (Updates 31-32): every section — city counts,
 anomalies, needs-attention, health check — now reflects reality.
 
+## Update 33: HVT fetch hardened; throttling confirmed multi-source
+
+Confirmed both VPC sitemap and HVT (Heber Valley Tourism / gohebervalley) scrape
+correctly — from a home IP VPC returns 112 (0 failed of 145) and HVT returns 118.
+So the scrapers PARSE fine; the low CI counts (VPC ~14, HVT ~10) are PURELY
+datacenter-IP throttling, NOT broken scrapers.
+
+KEY: throttling is NOT VPC-specific. A scrape surfaced "Heber Valley Tourism
+actual=10, floor=30" alongside the usual VPC alert — so multiple sources get
+rate-limited from GitHub's IPs. This validates the source-agnostic resilience
+guard (it caught BOTH this run: VPC retained at low_streak=3, HVT at low_streak=1;
+published stayed whole at 275 VPC / 726 HVT fanned-out).
+
+FIX: universal_scraper.scrape_gohebervalley() used a bare requests.get with no
+retry — one throttled/timed-out request returned partial (the 10-count). Added a
+shared _resilient_session() (urllib3 Retry total=4, backoff 1.5, retries 429/5xx,
+respects Retry-After) and routed the HVT fetch through it + raise_for_status, so a
+throttled non-200 retries instead of parsing an error page. Mirrors VPC's
+schema_org_scraper/_get hardening. Verified HVT still 118 locally. [221a02f]
+
+STATE OF THE THROTTLE DEFENSE (all 3 layers live):
+1. Hardened fetches w/ retry+backoff (VPC schema_org + scraper._get; HVT now too).
+2. VPC sitemap 1.5s crawl delay [495622e] — still UNTESTED in CI.
+3. Resilience guard (scrape_resilience.py) — catches whatever retries can't,
+   with CATASTROPHIC_FRACTION=0.20 so a throttled source (<20% of baseline) is
+   retained INDEFINITELY, never auto-accepted as the new normal.
+Retries give the best shot at full data; the guard is the backstop. Either
+outcome on the next scrape is fine — the site stays whole.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
