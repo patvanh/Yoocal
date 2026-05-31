@@ -1120,6 +1120,50 @@ Rich data IS captured (recurrence weekly Mon/Thu/Fri/Sat, venue, time).
 BANKED: classify_audit.py still has the stale "Moose Hockey" assertion (line
 156) from before — swap to fresh data when convenient.
 
+## Update 31: Digest accuracy fixes + on-demand digest + email routing
+
+After the first real digest landed, reviewed it and fixed four accuracy issues
+plus email plumbing. All from one digest read-through.
+
+EMAIL ROUTING:
+- The daily digest was going to patrick@yoocal.com (unmonitored) while the alert
+  that DID arrive went to patrick@vanhornpc.com. Pointed digest to
+  patrick@vanhornpc.com, from quality@yoocal.com (the proven-working sender).
+- Disabled the old scraper_health.py "Scraper Health Alert" email (send_urgent_
+  alert early-returns) — redundant now that the resilience guard auto-fixes
+  throttling and the digest reports anomalies. Health CHECK still runs (baselines).
+- NEW workflow .github/workflows/send-digest.yml: on-demand "Send digest now"
+  button (workflow_dispatch), reads committed data, emails in ~30s, no scrape.
+
+DIGEST ACCURACY (four issues from the review):
+1. Phantom "past date" flags (e.g. "Group Fitness — 2026-05-30 is in the past")
+   for recurring events that are actually fine. Cause: audit ran only BEFORE
+   build_master_and_views fan-out, so it audited the prior run's per-city files
+   (yesterday's dates) while the build regenerated them with today's dates. FIX:
+   added a 3rd audit run AFTER the build in the workflow (step "Re-run quality
+   audit on final built data"), so audit_issues.json matches published data.
+2. Every city flagged "high". Cause: "events today" used r['total_events']
+   (post-fan-out, inflated) while the average came from baseline-history raw
+   counts (pre-fan-out) — different scales. FIX: today + average both derive
+   from baseline history now. Also windowed both the city average AND the
+   source-anomaly average to last 7 prior days, so ancient sparse days (a source
+   logging ~9 events before the full scraper set came online) don't drag it.
+3. VPC sitemap -62% showed as a bare scary drop. FIX: digest now reads
+   last_good_sources.json and annotates guard-retained sources: "retained by
+   guard — N events still live" (green). A throttled scrape reads as handled.
+4. absurd_span (sev-1) on recurring events (Deer Creek Express 154 days, etc.).
+   A recurring event's date->end_date is its season, by design. FIX: span check
+   in event_quality_audit.py skips events with recurrence set. Real multi-day
+   events (Big Sky PBR Jul 16-18) still get the informational sev-3 note.
+
+NOTE: the source-anomaly section was already CORRECT — "Visit Park City 20->96"
+and "Gallery 2->7" are real jumps (recurrence fan-out of the API source landing
+on 5-30, now the new normal; will self-clear as the average catches up). Only
+the city-level "high" flags (#2) were the actual bug.
+
+After all four: sev-1 down to 2 (just cross-source duplicate suspects). The
+digest tomorrow should be clean and trustworthy.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
