@@ -15,8 +15,8 @@ import requests
 
 REPO_URL = os.environ.get("REPO_URL", "https://github.com/patvanh/Yoocal")
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
-DIGEST_FROM = os.environ.get("DIGEST_FROM", "yoocal <digest@yoocal.com>")
-DIGEST_TO = os.environ.get("DIGEST_TO", "patrick@yoocal.com")
+DIGEST_FROM = os.environ.get("DIGEST_FROM", "yoocal <quality@yoocal.com>")
+DIGEST_TO = os.environ.get("DIGEST_TO", "patrick@vanhornpc.com")
 MAX_ISSUES_PER_CITY = 10
 ANOMALY_PCT = 0.50  # flag a source if today is >50% above/below recent average
 

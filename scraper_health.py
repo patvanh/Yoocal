@@ -157,6 +157,14 @@ def run_health_check() -> dict:
 
 
 def send_urgent_alert(report: dict) -> bool:
+    # DISABLED: this urgent-alert email is now redundant. The resilience guard
+    # (scrape_resilience.py) auto-retains last-good data when a source drops, so
+    # a throttled scrape no longer means missing events for users; and the daily
+    # digest (audit_email_digest.py) reports any anomalies in plain language.
+    # Keeping the health CHECK (it writes baselines) but not the scary email.
+    print("Health alert email disabled (resilience guard + digest cover this).")
+    return False
+
     alerts = report.get("critical_alerts", [])
     if not alerts:
         return False
