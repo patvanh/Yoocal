@@ -67,6 +67,58 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
+
+# ─────────────────────────────────────────────
+# Resilient HTTP: one shared Session with retry/backoff for ALL scrapers in
+# this module. CI datacenter IPs get rate-limited (HTTP 429) by some event
+# sites; a bare requests.get drops the page silently on throttle. _get() retries
+# 429/5xx with exponential backoff (respecting Retry-After) so pages aren't lost.
+# Use _get(url, ...) anywhere we'd have used requests.get(url, ...) for a page
+# fetch. Signature mirrors requests.get; HEADERS are applied by default.
+import time as _time
+import random as _random
+from requests.adapters import HTTPAdapter
+try:
+    from urllib3.util.retry import Retry
+    _RETRY = Retry(
+        total=4, connect=3, read=3, status=4,
+        backoff_factor=1.5,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset(["GET", "POST"]),
+        respect_retry_after_header=True,
+        raise_on_status=False,
+    )
+except Exception:
+    _RETRY = None
+_SESSION = requests.Session()
+_adapter = HTTPAdapter(max_retries=_RETRY, pool_connections=10, pool_maxsize=20)
+_SESSION.mount("https://", _adapter)
+_SESSION.mount("http://", _adapter)
+
+
+def _get(url, **kwargs):
+    """Resilient GET: shared session + retry/backoff + jitter. Defaults to
+    module HEADERS and a 20s timeout if not provided. Drop-in for requests.get
+    on page fetches."""
+    kwargs.setdefault("headers", HEADERS)
+    kwargs.setdefault("timeout", 20)
+    kwargs.setdefault("allow_redirects", True)
+    last = None
+    for attempt in range(1, 4):
+        try:
+            if attempt == 1:
+                _time.sleep(_random.uniform(0.0, 0.2))
+            return _SESSION.get(url, **kwargs)
+        except requests.HTTPError:
+            raise
+        except requests.RequestException as e:
+            last = e
+            if attempt < 3:
+                _time.sleep(1.0 * attempt + _random.uniform(0, 0.4))
+    if last:
+        raise last
+    raise RuntimeError("fetch failed without exception")
+
 # ─────────────────────────────────────────────
 # 1. VISIT PARK CITY — Smart API Scraper
 # ─────────────────────────────────────────────
@@ -385,9 +437,8 @@ def scrape_visit_park_city():
                 # extract from visible HTML (e.g. "Time: 9:00 AM to 10:30 AM").
                 if not event.get("start_time") and event.get("link", "").startswith("http"):
                     try:
-                        page_resp = requests.get(
+                        page_resp = _get(
                             event["link"],
-                            headers={"User-Agent": "Mozilla/5.0 (Macintosh) Chrome/124.0"},
                             timeout=10,
                         )
                         if page_resp.status_code == 200:
@@ -409,7 +460,7 @@ def scrape_visit_park_city():
         print(f"  Smart scrape failed ({e}), using basic scrape...")
         try:
             url = "https://www.visitparkcity.com/events/"
-            r = requests.get(url, headers=HEADERS, timeout=15)
+            r = _get(url, timeout=15)
             soup = BeautifulSoup(r.text, "html.parser")
 
             # Find every article that has a date marker
@@ -535,7 +586,7 @@ def scrape_kpcw():
     events = []
     try:
         url = "https://www.kpcw.org/kpcw-community-calendar"
-        r = requests.get(url, headers=HEADERS, timeout=15)
+        r = _get(url, timeout=15)
         soup = BeautifulSoup(r.text, "html.parser")
 
         containers = (
@@ -605,7 +656,7 @@ def scrape_eventbrite():
 
     for url in urls:
         try:
-            r = requests.get(url, headers=HEADERS, timeout=15)
+            r = _get(url, timeout=15)
             soup = BeautifulSoup(r.text, "html.parser")
 
             scripts = soup.find_all("script", type="application/ld+json")
@@ -696,7 +747,7 @@ def scrape_running_in_the_usa():
     events = []
     try:
         url = "https://www.runningintheusa.com/race/list/park%20city-ut/upcoming"
-        r = requests.get(url, headers=HEADERS, timeout=15)
+        r = _get(url, timeout=15)
         soup = BeautifulSoup(r.text, "html.parser")
 
         containers = (
@@ -973,7 +1024,7 @@ def scrape_park_record():
         def fetch_event_detail(link):
             if not link or link in detail_cache: return
             try:
-                r = requests.get(link, headers=HEADERS, timeout=8)
+                r = _get(link, timeout=8)
                 soup = BeautifulSoup(r.text, "html.parser")
                 detail = {}
                 price_el = soup.find(string=re.compile(r'Price|Cost|Admission', re.I))
@@ -1097,7 +1148,7 @@ def scrape_park_record():
             check_date = datetime(today_dt.year, today_dt.month, max(1, today_dt.day - days_back))
             url = f"https://www.parkrecord.com/{check_date.year}/{str(check_date.month).zfill(2)}/"
             try:
-                r = requests.get(url, headers=HEADERS, timeout=10)
+                r = _get(url, timeout=10)
                 soup = BeautifulSoup(r.text, "html.parser")
                 for a in soup.find_all("a", href=True):
                     href = a["href"]
@@ -1112,7 +1163,7 @@ def scrape_park_record():
         if not article_url:
             try:
                 search_url = "https://www.parkrecord.com/?s=scene+happenings"
-                r = requests.get(search_url, headers=HEADERS, timeout=10)
+                r = _get(search_url, timeout=10)
                 soup = BeautifulSoup(r.text, "html.parser")
                 for a in soup.find_all("a", href=True):
                     href = a["href"]
@@ -1139,7 +1190,7 @@ def scrape_park_record():
                 browser.close()
             soup = BeautifulSoup(html, "html.parser")
         except:
-            r = requests.get(article_url, headers=HEADERS, timeout=15)
+            r = _get(article_url, timeout=15)
             soup = BeautifulSoup(r.text, "html.parser")
 
         article_body = (
@@ -1450,7 +1501,7 @@ def scrape_google_events():
                 "hl": "en",
                 "api_key": SERPAPI_KEY
             }
-            r = requests.get(url, params=params, timeout=15)
+            r = _get(url, params=params, timeout=15)
             if r.status_code != 200:
                 print(f"  SerpApi error {r.status_code} for '{query}'")
                 continue
@@ -1540,7 +1591,7 @@ def scrape_utah_com():
         ]
         for url in urls:
             try:
-                r = requests.get(url, headers=HEADERS, timeout=15)
+                r = _get(url, timeout=15)
                 soup = BeautifulSoup(r.text, "html.parser")
                 containers = (
                     soup.find_all("article") or
