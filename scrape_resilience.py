@@ -31,6 +31,7 @@ STATE_FILE = "last_good_sources.json"
 RETAIN_FRACTION = 0.50    # below 50% of last-good => degraded
 ACCEPT_LOW_AFTER = 3      # after 3 straight low runs, accept the new normal
 MIN_BASELINE = 8          # don't guard tiny sources
+MAX_STORED_EVENTS = 100   # cap events stored per source (keeps state file small)
 
 
 def _load_state(path=STATE_FILE):
@@ -76,7 +77,7 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
         if not snap or snap.get("count", 0) < MIN_BASELINE:
             out.extend(evs)
             state[source] = {"count": incoming, "date": today_iso,
-                             "low_streak": 0, "events": evs}
+                             "low_streak": 0, "events": evs[:MAX_STORED_EVENTS]}
             report.append({"source": source, "status": "baseline",
                            "incoming": incoming})
             continue
@@ -86,7 +87,7 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
             # Healthy: use incoming, refresh snapshot.
             out.extend(evs)
             state[source] = {"count": incoming, "date": today_iso,
-                             "low_streak": 0, "events": evs}
+                             "low_streak": 0, "events": evs[:MAX_STORED_EVENTS]}
             report.append({"source": source, "status": "ok",
                            "incoming": incoming, "good": good})
         else:
@@ -95,7 +96,7 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
                 # Persisted low => accept as the new real baseline.
                 out.extend(evs)
                 state[source] = {"count": incoming, "date": today_iso,
-                                 "low_streak": 0, "events": evs}
+                                 "low_streak": 0, "events": evs[:MAX_STORED_EVENTS]}
                 report.append({"source": source, "status": "accepted_low",
                                "incoming": incoming, "good": good,
                                "streak": streak})
