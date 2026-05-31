@@ -1164,6 +1164,30 @@ the city-level "high" flags (#2) were the actual bug.
 After all four: sev-1 down to 2 (just cross-source duplicate suspects). The
 digest tomorrow should be clean and trustworthy.
 
+## Update 32: Health-check venue-aware counts (fix multi-source false flags)
+
+The digest's "Health check flagged these sources" section kept flagging Osthoff
+Resort and Siebkens Resort as "scraper likely missing events" every run. Same
+root cause we noted for Siebkens in Update 28, now fixed properly and confirmed
+systematic (Osthoff too).
+
+CAUSE: scraper_llm_health.py computed our_count by EXACT source-name match. But
+some venues' events arrive under multiple source names — e.g. Siebkens via the
+hardcoded "Siebkens Resort" list AND the scraped "Elkhart Lake Tourism" source.
+So our_count was 6 (Siebkens) / 18 (Osthoff) vs reality 35 / 84. The LLM saw
+~14 events on the page, compared to our wrong low count, and flagged "missing."
+
+FIX: added venue_aware_count(source, all_events) + _MULTI_SOURCE_VENUES map
+{Osthoff->'osthoff', Siebkens->'siebken'}. For those venues, count any event
+whose source/title/location/venue contains the keyword; all other sources use
+the exact-source count (unchanged). Verified Osthoff 18->84, Siebkens 6->35,
+controls (Elkhart Tourism 203, Road America 15) unchanged. They'll stop
+false-flagging next scrape. If another multi-source venue starts false-flagging,
+add it to _MULTI_SOURCE_VENUES.
+
+This completes the digest cleanup (Updates 31-32): every section — city counts,
+anomalies, needs-attention, health check — now reflects reality.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
