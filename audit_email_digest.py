@@ -97,7 +97,7 @@ def _source_anomalies(history):
     return flagged
 
 
-def render_html(audit, repair, llm_health=None, baselines=None):
+def render_html(audit, repair, llm_health=None, baselines=None, guard_state=None):
     audit_date = audit.get("audit_date", "today")
     reports = audit.get("reports", [])
     history = (baselines or {}).get("history") or {}
@@ -207,14 +207,24 @@ def render_html(audit, repair, llm_health=None, baselines=None):
     # ── 4. source anomalies ───────────────────────────────
     if anomalies:
         anom_rows = []
+        gs = guard_state or {}
         for a in anomalies[:15]:
             label = CITY_LABEL.get(a["city"], a["city"])
             pct = round(a["change"] * 100)
             arrow = "&#9650;" if a["change"] > 0 else "&#9660;"
             color = "#92400e" if a["change"] > 0 else "#b91c1c"
+            # If the resilience guard is retaining this source (a throttled/failed
+            # scrape), the events are NOT lost — note that so a drop isn't alarming.
+            retained = ""
+            g = gs.get(a["source"])
+            if a["change"] < 0 and g and g.get("low_streak", 0) > 0:
+                retained = (
+                    f'<div style="font-size:11px;color:#065f46;margin-top:2px">'
+                    f'&#10003; retained by guard — {g.get("count", 0)} events still live</div>'
+                )
             anom_rows.append(
                 f'<tr style="border-bottom:1px solid #f0f0f0">'
-                f'<td style="padding:8px">{a["source"]}<div style="font-size:12px;color:#9ca3af">{label}</div></td>'
+                f'<td style="padding:8px">{a["source"]}<div style="font-size:12px;color:#9ca3af">{label}</div>{retained}</td>'
                 f'<td style="padding:8px;text-align:right;font-weight:600">{a["current"]}</td>'
                 f'<td style="padding:8px;text-align:right;color:#6b7280">~{a["avg"]}</td>'
                 f'<td style="padding:8px;text-align:right;color:{color};font-weight:600">{arrow} {pct:+d}%</td>'
@@ -363,6 +373,7 @@ def main():
     repair = _load_json("repair_log.json")
     llm_health = _load_json("scraper_llm_health.json")
     baselines = _load_json("scraper_baselines.json")
+    guard_state = _load_json("last_good_sources.json")
 
     audit_date = audit.get("audit_date", "today")
     reports = audit.get("reports", [])
@@ -372,7 +383,7 @@ def main():
     flag_tag = f", {flag_count} flagged" if flag_count else ""
     subject = f"[yoocal] {audit_date} — {total_events} events, {total_sev1} to review{flag_tag}"
 
-    html = render_html(audit, repair, llm_health, baselines)
+    html = render_html(audit, repair, llm_health, baselines, guard_state)
 
     if dry_run:
         Path("audit_digest_preview.html").write_text(html)
