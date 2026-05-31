@@ -300,6 +300,51 @@
         "date_eq": "2026-06-24"
       },
       "remove": true
+    },
+    {
+      "_id": "fix-jackson-sunday-brunch-hillfolk-noir",
+      "city": "jackson",
+      "match": {
+        "title_eq": "Music on Main presents Sunday Brunch with",
+        "source_contains": "Jackson Hole Chamber"
+      },
+      "set": {
+        "title": "Music on Main presents Sunday Brunch with Hillfolk Noir"
+      }
+    },
+    {
+      "_id": "fix-pc-trail-series-10k-title",
+      "city": "park-city",
+      "match": {
+        "title_eq": "10K",
+        "source_contains": "Mountain Trails",
+        "date_eq": "2026-07-11"
+      },
+      "set": {
+        "title": "Park City Trail Series \u2014 10K"
+      }
+    },
+    {
+      "_id": "fix-pc-trail-series-half-marathon-title",
+      "city": "park-city",
+      "match": {
+        "title_eq": "Half Marathon",
+        "source_contains": "Mountain Trails",
+        "date_eq": "2026-08-01"
+      },
+      "set": {
+        "title": "Park City Trail Series \u2014 Half Marathon"
+      }
+    },
+    {
+      "_id": "dedup-wasatch-back-business-jun3",
+      "city": "park-city",
+      "match": {
+        "title_contains": "wasatch back business university: utilizing sba",
+        "source_contains": "Heber Valley Tourism",
+        "date_eq": "2026-06-03"
+      },
+      "remove": true
     }
   ]
 }
