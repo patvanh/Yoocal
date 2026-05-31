@@ -1,23 +1,23 @@
 {
-  "checked_at": "2026-05-30T17:17:53.185866-06:00",
+  "checked_at": "2026-05-30T18:34:42.633550-06:00",
   "today": "2026-05-30",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 750,
+        "actual": 735,
         "baseline": 795.8,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=750, baseline=796"
+        "message": "actual=735, baseline=796"
       },
       {
         "source": "Park City Annual Events",
-        "actual": 429,
+        "actual": 427,
         "baseline": 437.4,
         "floor": 200,
         "severity": "OK",
-        "message": "actual=429, baseline=437"
+        "message": "actual=427, baseline=437"
       },
       {
         "source": "Mountain Town Music",
@@ -45,11 +45,11 @@
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 52,
+        "actual": 53,
         "baseline": 45.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=52, baseline=46"
+        "message": "actual=53, baseline=46"
       },
       {
         "source": "Park City Farmers Market",
@@ -69,11 +69,11 @@
       },
       {
         "source": "Visit Park City (sitemap)",
-        "actual": 14,
+        "actual": 15,
         "baseline": 42.4,
         "floor": 15,
-        "severity": "CRITICAL",
-        "message": "actual=14, floor=15 (below catastrophic threshold)"
+        "severity": "DEGRADED",
+        "message": "actual=15, baseline=42 (35% of normal)"
       },
       {
         "source": "Mountain Trails Foundation",
@@ -101,11 +101,11 @@
       },
       {
         "source": "Salt Lake Running Co",
-        "actual": 10,
+        "actual": 9,
         "baseline": 6.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=10, baseline=7"
+        "message": "actual=9, baseline=7"
       },
       {
         "source": "Park City Gallery Association",
@@ -143,19 +143,19 @@
     "elkhart-lake": [
       {
         "source": "Elkhart Lake Tourism",
-        "actual": 209,
+        "actual": 203,
         "baseline": 212.6,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=209, baseline=213"
+        "message": "actual=203, baseline=213"
       },
       {
         "source": "The Osthoff Resort",
-        "actual": 19,
+        "actual": 18,
         "baseline": 17,
         "floor": null,
         "severity": "OK",
-        "message": "actual=19, baseline=17"
+        "message": "actual=18, baseline=17"
       },
       {
         "source": "Road America",
@@ -167,11 +167,11 @@
       },
       {
         "source": "Siebkens Resort",
-        "actual": 8,
+        "actual": 6,
         "baseline": 8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=8, baseline=8"
+        "message": "actual=6, baseline=8"
       },
       {
         "source": "Village of Elkhart Lake",
@@ -193,27 +193,27 @@
       },
       {
         "source": "Google Events",
-        "actual": 47,
+        "actual": 49,
         "baseline": 45.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=47, baseline=46"
+        "message": "actual=49, baseline=46"
       },
       {
         "source": "TownLift",
-        "actual": 23,
+        "actual": 22,
         "baseline": 17,
         "floor": null,
         "severity": "OK",
-        "message": "actual=23, baseline=17"
+        "message": "actual=22, baseline=17"
       },
       {
         "source": "Heber Valley Life",
-        "actual": 19,
+        "actual": 18,
         "baseline": 17.8,
         "floor": 10,
         "severity": "OK",
-        "message": "actual=19, baseline=18"
+        "message": "actual=18, baseline=18"
       },
       {
         "source": "Oakley City",
@@ -267,11 +267,11 @@
     "jackson": [
       {
         "source": "Jackson Hole Chamber of Commerce",
-        "actual": 155,
+        "actual": 150,
         "baseline": 207.4,
         "floor": 100,
         "severity": "OK",
-        "message": "actual=155, baseline=207"
+        "message": "actual=150, baseline=207"
       },
       {
         "source": "Center for the Arts Jackson Hole",
@@ -291,11 +291,11 @@
       },
       {
         "source": "Million Dollar Cowboy Bar",
-        "actual": 63,
+        "actual": 62,
         "baseline": 65.5,
         "floor": null,
         "severity": "OK",
-        "message": "actual=63, baseline=66"
+        "message": "actual=62, baseline=66"
       },
       {
         "source": "National Museum of Wildlife Art",
@@ -339,12 +339,5 @@
       }
     ]
   },
-  "critical_alerts": [
-    {
-      "city": "park-city",
-      "source": "Visit Park City (sitemap)",
-      "severity": "CRITICAL",
-      "message": "actual=14, floor=15 (below catastrophic threshold)"
-    }
-  ]
+  "critical_alerts": []
 }
