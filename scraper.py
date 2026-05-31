@@ -1793,6 +1793,7 @@ def scrape_visit_park_city_sitemap_wrapper():
             default_lng=-111.4980,
             default_city="Park City, UT",
             default_categories=["Community"],
+            delay_seconds=1.5,  # slow crawl to stay under VPC rate limit from CI
         )
     except Exception as ex:
         print(f"[VPC sitemap] failed: {ex}")

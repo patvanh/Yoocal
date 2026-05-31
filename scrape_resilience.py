@@ -30,6 +30,9 @@ from datetime import datetime
 STATE_FILE = "last_good_sources.json"
 RETAIN_FRACTION = 0.50    # below 50% of last-good => degraded
 ACCEPT_LOW_AFTER = 3      # after 3 straight low runs, accept the new normal
+CATASTROPHIC_FRACTION = 0.20  # a drop below 20% of baseline is treated as
+                              # failure/throttling, NEVER auto-accepted as the
+                              # new normal — retained indefinitely until recovery
 MIN_BASELINE = 8          # don't guard tiny sources
 MAX_STORED_EVENTS = 100   # cap events stored per source (keeps state file small)
 
@@ -92,7 +95,8 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
                            "incoming": incoming, "good": good})
         else:
             streak = snap.get("low_streak", 0) + 1
-            if streak >= ACCEPT_LOW_AFTER:
+            catastrophic = incoming < CATASTROPHIC_FRACTION * good
+            if streak >= ACCEPT_LOW_AFTER and not catastrophic:
                 # Persisted low => accept as the new real baseline.
                 out.extend(evs)
                 state[source] = {"count": incoming, "date": today_iso,
