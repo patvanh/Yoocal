@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-05-30T18:34:42.633550-06:00",
+  "checked_at": "2026-05-30T21:30:57.974013-06:00",
   "today": "2026-05-30",
   "cities": {
     "park-city": [
@@ -185,11 +185,11 @@
     "heber": [
       {
         "source": "Heber Valley Tourism",
-        "actual": 114,
+        "actual": 112,
         "baseline": 116.4,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=114, baseline=116"
+        "message": "actual=112, baseline=116"
       },
       {
         "source": "Google Events",

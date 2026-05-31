@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T00:34:41.858513",
+  "generated_at": "2026-05-31T03:30:57.171056",
   "audit_date": "2026-05-30",
   "reports": [
     {
@@ -226,11 +226,16 @@
     },
     {
       "city": "heber",
-      "before_count": 230,
+      "before_count": 229,
       "passes": {
         "past_dates": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Midway America250 Celebrations",
+              "date": "2026-05-09"
+            }
+          ]
         },
         "absurd_spans": {
           "fixed": 1,
@@ -359,8 +364,8 @@
           ]
         }
       },
-      "after_count": 233,
-      "total_fixes": 22
+      "after_count": 231,
+      "total_fixes": 23
     },
     {
       "city": "jackson",

@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-05-30T18:36:55.357844-06:00",
-  "total_sources": 40,
-  "sources_checked": 13,
-  "sources_flagged": 2,
+  "checked_at": "2026-05-30T21:33:17.451646-06:00",
+  "total_sources": 39,
+  "sources_checked": 12,
+  "sources_flagged": 1,
   "results": [
     {
       "source": "The Park Record",
@@ -36,7 +36,7 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page relies on JavaScript to render event listings; static HTML shows empty containers and placeholder cards with no actual event data."
+      "notes": "Event list container is empty in static HTML; events are dynamically rendered by JavaScript via layoutjs_a59fd71a widget."
     },
     {
       "source": "Center for the Arts Jackson Hole",
@@ -46,14 +46,13 @@
     },
     {
       "source": "Heber Valley Tourism",
-      "our_count": 114,
+      "our_count": 112,
       "url": "https://www.gohebervalley.com/events/",
       "status": "checked",
-      "llm_count_on_page": 0,
-      "page_status": "blocked",
+      "llm_count_on_page": 1,
+      "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page returned a rate limit error (30 requests per minute), blocking event content visibility.",
-      "flagged_reason": "Source page is blocked"
+      "notes": "Page uses Vue.js to render events dynamically; static HTML shows only template/placeholder markup with empty data containers."
     },
     {
       "source": "Visit Park City",
@@ -63,17 +62,7 @@
       "llm_count_on_page": 13,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page uses JavaScript to render event cards; static HTML shows only 4 featured event cards visible plus 9 linked events in text, but dropdown menus and dynamic content are empty containers requiring JS execution."
-    },
-    {
-      "source": "Egyptian Theatre",
-      "our_count": 81,
-      "url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
-      "status": "checked",
-      "llm_count_on_page": 22,
-      "page_status": "healthy",
-      "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 22 distinct upcoming events from May 2026 through Feb 2027; cumulative database count of 81 across multiple scrapes is plausible given event churn over time."
+      "notes": "Page uses JavaScript to render event cards; static HTML shows only 4 hero slides and 1 featured event card, but dropdown menus and dynamic content are empty containers awaiting JS execution."
     },
     {
       "source": "Grand Teton Music Festival",
@@ -86,10 +75,10 @@
       "our_count": 64,
       "url": "https://www.deervalley.com/things-to-do/events",
       "status": "checked",
-      "llm_count_on_page": 29,
+      "llm_count_on_page": 59,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 59 events found in results header with 29 visible in the JSON var; database count of 64 across multiple scrapes is plausibly correct given pagination and recurring events."
+      "notes": "Page shows 59 events found in results header; database count of 64 is plausibly correct given cumulative scrapes over time."
     },
     {
       "source": "Million Dollar Cowboy Bar",
@@ -135,7 +124,7 @@
       "llm_count_on_page": 10,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 10 blog posts with event/market announcements; database total of 21 across multiple scrapes is plausible given this is cumulative historical data."
+      "notes": "Page shows 10 blog posts with event/market announcements; cumulative database count of 21 across multiple scrapes is plausible given the archive spans 2020-2026."
     },
     {
       "source": "Heber Valley Life",
@@ -151,7 +140,7 @@
       "llm_count_on_page": 12,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Smart Slider carousel displays 12 distinct upcoming music events (Asphalt Gypsies through Until Dawn, June 2026), and cumulative database count of 18 across multiple scrapes is plausibly correct given events may rotate in/out."
+      "notes": "Page shows 12 distinct upcoming music events in the Smart Slider carousel (Asphalt Gypsies through Until Dawn, June-July 2026); database count of 18 likely represents cumulative historical events from multiple scrapes."
     },
     {
       "source": "Park City Institute",
@@ -161,7 +150,7 @@
       "llm_count_on_page": 15,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 15 distinct events with full details, dates, and ticket links matching the database count."
+      "notes": "Page displays 15 distinct concert events with full details, dates, and ticket buttons for July-August 2026 season."
     },
     {
       "source": "Visit Park City (sitemap)",
@@ -171,7 +160,7 @@
       "llm_count_on_page": 9,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page requires JavaScript execution to render event cards; static HTML shows only empty container divs with no visible event data."
+      "notes": "Featured events section appears to load via JavaScript; static HTML shows only 9 event titles in text but cards/images require JS rendering."
     },
     {
       "source": "Road America",
@@ -181,7 +170,7 @@
       "llm_count_on_page": 10,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 10 upcoming major events plus Season Pass and Event Calendar overview items; database count of 15 is plausibly close given cumulative multi-run collection."
+      "notes": "Page shows 10 distinct upcoming event cards (excluding past events and non-event items like Season Pass and Event Calendar), while database count of 15 likely includes past events and multiple scrapes over time."
     },
     {
       "source": "Mountain Trails Foundation",
@@ -191,7 +180,7 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page contains only empty containers and encoded style blocks; events are rendered dynamically via JavaScript."
+      "notes": "Page contains only encoded CSS and navigation; actual event content requires JavaScript execution to render."
     },
     {
       "source": "RunningInTheUSA Jackson",
@@ -252,11 +241,11 @@
       "our_count": 6,
       "url": "https://www.siebkens.com/events/",
       "status": "checked",
-      "llm_count_on_page": 14,
+      "llm_count_on_page": 15,
       "page_status": "healthy",
       "judgment": "scraper_likely_missing_events",
-      "notes": "Page displays 14 distinct upcoming events in static HTML; scraper count of 6 is significantly lower than visible events.",
-      "flagged_reason": "LLM sees ~14 events but our DB has 6"
+      "notes": "Page displays 15 distinct upcoming events in June-July 2026, but scraper database shows only 6 total events across all historical scrapes, indicating significant undercounting.",
+      "flagged_reason": "LLM sees ~15 events but our DB has 6"
     },
     {
       "source": "Deer Valley Music Festival",
@@ -296,31 +285,20 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "The calendar view is dynamically rendered via JavaScript; the HTML shows empty containers and a loader, with a message 'There are no upcoming events' and only 3 past events visible."
+      "notes": "Page uses The Events Calendar with client-side rendering; the calendar table is empty in static HTML, and there's a message 'There are no upcoming events' - actual events are loaded via JavaScript from REST API."
     }
   ],
   "flagged": [
-    {
-      "source": "Heber Valley Tourism",
-      "our_count": 114,
-      "url": "https://www.gohebervalley.com/events/",
-      "status": "checked",
-      "llm_count_on_page": 0,
-      "page_status": "blocked",
-      "judgment": "cannot_assess",
-      "notes": "Page returned a rate limit error (30 requests per minute), blocking event content visibility.",
-      "flagged_reason": "Source page is blocked"
-    },
     {
       "source": "Siebkens Resort",
       "our_count": 6,
       "url": "https://www.siebkens.com/events/",
       "status": "checked",
-      "llm_count_on_page": 14,
+      "llm_count_on_page": 15,
       "page_status": "healthy",
       "judgment": "scraper_likely_missing_events",
-      "notes": "Page displays 14 distinct upcoming events in static HTML; scraper count of 6 is significantly lower than visible events.",
-      "flagged_reason": "LLM sees ~14 events but our DB has 6"
+      "notes": "Page displays 15 distinct upcoming events in June-July 2026, but scraper database shows only 6 total events across all historical scrapes, indicating significant undercounting.",
+      "flagged_reason": "LLM sees ~15 events but our DB has 6"
     }
   ]
 }
