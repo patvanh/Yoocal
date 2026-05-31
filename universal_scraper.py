@@ -20,6 +20,31 @@ from dataclasses import dataclass, field, asdict
 from typing import Any
 import requests
 from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
+try:
+    from urllib3.util.retry import Retry
+except Exception:  # pragma: no cover
+    from urllib3.util import Retry
+
+# Shared resilient session — retries throttled/failed requests with backoff so a
+# single CI fetch that gets rate-limited doesn't return partial/empty data.
+_RESILIENT_SESSION = None
+def _resilient_session() -> requests.Session:
+    global _RESILIENT_SESSION
+    if _RESILIENT_SESSION is None:
+        s = requests.Session()
+        retry = Retry(
+            total=4, connect=3, read=3,
+            backoff_factor=1.5,
+            status_forcelist=(429, 500, 502, 503, 504),
+            allowed_methods=frozenset(["GET"]),
+            respect_retry_after_header=True,
+        )
+        ad = HTTPAdapter(max_retries=retry)
+        s.mount("http://", ad)
+        s.mount("https://", ad)
+        _RESILIENT_SESSION = s
+    return _RESILIENT_SESSION
 
 MOUNTAIN = timezone(timedelta(hours=-6))
 
@@ -799,8 +824,8 @@ def scrape_gohebervalley() -> list[dict]:
                       "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     }
     try:
-        import requests
-        resp = requests.get(URL, headers=HEADERS, timeout=30)
+        resp = _resilient_session().get(URL, headers=HEADERS, timeout=30)
+        resp.raise_for_status()
         html = resp.text
     except Exception as e:
         print(f"  [Heber Valley Tourism] fetch failed: {e}")
