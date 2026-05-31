@@ -77,7 +77,11 @@ def _source_anomalies(history):
                 continue
             pts = sorted(pts, key=lambda e: e["date"])
             latest = pts[-1]
-            prior = pts[:-1]
+            # Average over recent prior days only (last 7), not all history —
+            # early sparse days (a source logging a handful before the full set
+            # came online) would otherwise drag the average down and fake a
+            # huge "jump".
+            prior = pts[:-1][-7:]
             avg = sum(p.get("count", 0) for p in prior) / max(1, len(prior))
             cur = latest.get("count", 0)
             if avg <= 0:
@@ -135,10 +139,18 @@ def render_html(audit, repair, llm_health=None, baselines=None):
         city = r["city"]
         ckey = city.lower().replace(" ", "-")
         label = CITY_LABEL.get(city, CITY_LABEL.get(ckey, city))
-        today_n = r.get("total_events", 0)
-        # recent average for this city from history
+        # Use the baseline-history raw counts for BOTH today and the average so
+        # they're comparable. (r['total_events'] is the post-fan-out published
+        # count — inflated by recurrence expansion — and comparing it to the
+        # pre-fan-out historical average made every city look "high".)
         per_date = city_totals.get(city) or city_totals.get(ckey) or {}
-        prior_vals = [v for d, v in sorted(per_date.items())][:-1]
+        sorted_days = [v for d, v in sorted(per_date.items())]
+        today_n = sorted_days[-1] if sorted_days else r.get("total_events", 0)
+        # Average over a RECENT window (last 7 prior days), not all history —
+        # early dates often have only a source or two logged (e.g. 9 events
+        # before the full scraper set came online), which would drag the
+        # average down and make a normal day look "high".
+        prior_vals = sorted_days[:-1][-7:]
         avg = sum(prior_vals) / len(prior_vals) if prior_vals else 0
         if avg > 0:
             chg = (today_n - avg) / avg
