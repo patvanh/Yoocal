@@ -172,7 +172,11 @@ def audit_event(e: dict, today_iso: str) -> list[dict]:
             "suggested_fix": "Drop from events.json (handled by date filter)",
         })
 
-    if (_is_iso_date(date_val) and _is_iso_date(end_date)
+    # Recurring events legitimately span a whole season (date -> end_date is the
+    # recurrence range, e.g. a weekly shuttle running Jun–Oct). Their span is by
+    # design, NOT a "stamped one event over months" defect — skip span flagging.
+    _is_recurring = bool(e.get("recurrence") or e.get("recurrence_days") or e.get("recurrence_day"))
+    if (not _is_recurring and _is_iso_date(date_val) and _is_iso_date(end_date)
             and date_val != end_date and end_date > date_val):
         try:
             d1 = date.fromisoformat(date_val)
