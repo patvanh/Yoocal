@@ -1,0 +1,41 @@
+name: Send digest now
+
+# On-demand daily health digest. Reads the latest committed data
+# (audit_issues.json, repair_log.json, scraper_llm_health.json,
+# scraper_baselines.json) and emails the digest — WITHOUT running a full scrape.
+# Click "Run workflow" in the Actions tab to send the current status anytime.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  digest:
+    name: Build and send digest
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Send digest email
+        run: |
+          echo "Sending digest from latest committed data..."
+          python -u audit_email_digest.py
