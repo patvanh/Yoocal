@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-31T03:30:57.171056",
-  "audit_date": "2026-05-30",
+  "generated_at": "2026-05-31T15:41:41.794629",
+  "audit_date": "2026-05-31",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1747,
+      "before_count": 1749,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -16,12 +16,8 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 3,
+          "fixed": 2,
           "examples": [
-            {
-              "title": "(Re)sounding: Art Exhibition",
-              "had_span": 108
-            },
             {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
@@ -116,13 +112,6 @@
           "fixed": 308,
           "examples": [
             {
-              "title": "(Re)sounding: Art Exhibition",
-              "before": [],
-              "after": [
-                "Arts"
-              ]
-            },
-            {
               "title": "Candlelight Kundalini",
               "before": [
                 "Community"
@@ -153,12 +142,19 @@
               "after": [
                 "Community"
               ]
+            },
+            {
+              "title": "Stein's Famous Sunday Brunch",
+              "before": [],
+              "after": [
+                "Food & Drink"
+              ]
             }
           ]
         }
       },
-      "after_count": 1752,
-      "total_fixes": 337
+      "after_count": 1754,
+      "total_fixes": 336
     },
     {
       "city": "elkhart-lake",
@@ -226,16 +222,11 @@
     },
     {
       "city": "heber",
-      "before_count": 229,
+      "before_count": 226,
       "passes": {
         "past_dates": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Midway America250 Celebrations",
-              "date": "2026-05-09"
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "absurd_spans": {
           "fixed": 1,
@@ -269,7 +260,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 7,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -284,9 +275,9 @@
               "duration_hours": 1
             },
             {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
+              "title": "Comedy Magic Show - Anthony the Magic",
+              "start_time": "3:30 PM",
+              "new_end_time": "5:30 PM",
               "duration_hours": 2
             },
             {
@@ -364,7 +355,7 @@
           ]
         }
       },
-      "after_count": 231,
+      "after_count": 229,
       "total_fixes": 23
     },
     {
