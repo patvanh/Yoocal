@@ -1046,6 +1046,37 @@ race-weekend shows: Chocolateers/IMSA Jul 30, Boo!/Elktoberfest Sep 19, Sister
 Winchester Aug 10, Valley Fox Jul 29). Keep it. The only issue was 2 dup pairs,
 already fixed via remove-overrides [ba7aa3c]. Siebkens is fully handled.
 
+## Update 29: Override city must match SOURCE city (pre-merge), not display city
+
+Verifying the post-scrape sev-1 fixes, the Wasatch Back Business University dup
+removal [override dedup-wasatch-back-business-jun3] did NOT fire, even though it
+matched the published events.json perfectly in local testing.
+
+ROOT CAUSE — pipeline ordering: event_overrides.py (workflow step 1, "Apply
+event overrides") runs against the per-city RAW scraper files, BEFORE
+build_master_and_views.py (last step) does the cross-city merge. The two
+Wasatch Jun-3 records live in DIFFERENT raw files:
+  - raw/events-heber.json:  "...Utilizing SBA..." [Heber Valley Tourism]  <- to remove
+  - raw/events.json (PC):   "...The Resources..." [Visit Park City sitemap] <- keep
+The Heber-sourced one only appears in the PUBLISHED park-city events.json via the
+build merge (Model C cross-city pull, same mechanism as nearby-city search). My
+override was filed city=park-city, so at override-time it searched park-city raw
+and never saw the Heber-sourced event. Fix: city -> heber (its SOURCE city).
+
+RULE for future overrides: file an override under the event's SOURCE city (the
+scraper that produces it / where it sits in raw/events-<city>.json), NOT the city
+where it shows up after merging. The MAX, Hillfolk Noir, and Siebkens overrides
+worked first try because they were already under their true source cities.
+Verified the corrected override matches 1 in heber raw, keeper untouched in PC raw.
+
+ALSO NOTED (banked, not fixed): audit_issues.json showed stale pre-override titles
+("10K", "MAX") even though overrides run before the audit and the PUBLISHED data
+has the corrected titles — an audit-reporting quirk, not a data problem (live site
+is correct). And Deer Creek Express: VPC sitemap returned 15 in-pipeline (vs 112 in
+a direct test) on consecutive runs — now looks persistent, not transient; plus it
+surfaced as a Heber absurd_span. Separate coverage/audit-timing thread to
+investigate on its own, not a quick override.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
