@@ -18,7 +18,7 @@ const CITY_NAMES: Record<string, string> = {
 export default function CityLanding({ citySlug, cityKey }: { citySlug: string; cityKey: string }) {
   const cityName = CITY_NAMES[cityKey] || "Local"
   return (
-    <>
+    <div style={{ background: '#1a1830', minHeight: '100vh' }}>
       {/* NAV */}
       <nav>
         <a href="/" className="nav-logo"><div className="nav-dot" /> yoocal</a>
@@ -53,6 +53,6 @@ export default function CityLanding({ citySlug, cityKey }: { citySlug: string; c
           <EventsV2Embedded cityKeyProp={cityKey} />
         </div>
       </section>
-    </>
+    </div>
   )
 }

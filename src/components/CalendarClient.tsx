@@ -1031,7 +1031,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           <span style={{
             fontSize: 13, fontWeight: 700, color: '#fff', whiteSpace: 'nowrap',
             background: '#534AB7', padding: '5px 12px', borderRadius: 999, marginLeft: 4,
-          }}>{filteredEvents.length} event{filteredEvents.length !== 1 ? 's' : ''}</span>
+          }}>{loading ? '' : `${filteredEvents.length} event${filteredEvents.length !== 1 ? 's' : ''}`}</span>
         </div>
       </div>
       
@@ -1348,7 +1348,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           fontSize: 16, fontWeight: 600, color: 'rgba(255,255,255,0.7)',
           fontFamily: "'DM Serif Display', serif", textAlign: 'center', whiteSpace: 'nowrap',
         }}>
-          {filteredEvents.length} event{filteredEvents.length !== 1 ? 's' : ''}
+          {loading ? '' : `${filteredEvents.length} event${filteredEvents.length !== 1 ? 's' : ''}`}
         </div>
       </div>
       {/* Featured events orange band */}
@@ -1386,9 +1386,9 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       )}
       
       {loading ? (
-        <div style={{ textAlign: 'center', padding: 60, color: '#6b6880' }}>Loading events...</div>
+        <div style={{ textAlign: 'center', padding: 60, color: 'rgba(255,255,255,0.4)' }}>Loading events…</div>
       ) : filteredEvents.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: 60, color: '#6b6880', background: '#fff', borderRadius: 14, border: '1px solid rgba(83,74,183,0.12)' }}>
+        <div style={{ textAlign: 'center', padding: 60, color: 'rgba(255,255,255,0.6)', background: 'rgba(255,255,255,0.04)', borderRadius: 14, border: '1px solid rgba(255,255,255,0.1)' }}>
           No events match your filters. Try widening the time range or clearing search.
         </div>
       ) : (

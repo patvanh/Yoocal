@@ -1256,3 +1256,34 @@ home-IP scrapes to catch more under-counts like this one.
 - Per-event slug + cross-city redirect -> `src/lib/events.ts`
 - City centers + radius config + SOURCE_PRIORITY -> top of
   `build_master_and_views.py`
+
+## OUTSTANDING TODO (as of 2026-05-31, end of Day 11 session 2)
+
+### Mobile / frontend
+- [ ] WHITE BOX FLASH ON PAGE REFRESH (hard reload) — the city-switch flash is
+      fixed (CityLanding chips now use <Link>), but refreshing a city page still
+      shows a brief white/unstyled flash before the dark theme paints (FOUC on
+      initial load). Lower priority (users rarely hard-refresh). Needs careful
+      fix — earlier `html{background:dark}` attempt made the switch-flash worse,
+      so investigate properly (likely body/background on initial paint, or a
+      mounted-gate). DO NOT guess; capture with DevTools Performance filmstrip.
+
+### Data / scrapers
+- [ ] JACKSON CHAMBER still throttled in CI: 147 vs true ~221 (+74 gap). The
+      1.5s crawl-delay did NOT beat the throttle. Needs the same kind of fetch
+      fix HVT got (resilient session / alternate route / Firecrawl). HVT itself
+      RECOVERED: 10 -> 113 after the fetch hardening. ✓
+- [ ] HVT fully validated at 113/118 ✓ (the +108 coverage-audit gap is closed).
+
+### SEO (resolved — no action)
+- Google Search Console "Page with redirect" (7 URLs): canonical-domain
+  redirects are CORRECT. The 3 Heber event-page redirects (silver-lake music,
+  five-course dinner) are events GONE from HVT's source (confirmed not in raw
+  even after HVT recovery) — redirects are correct, URLs will age out. Re-run
+  Google "START NEW VALIDATION" anytime.
+
+### Earlier banked (still open)
+- [ ] classify_audit.py: make "missing" assertions a soft-skip (not failure) so
+      seasonal events dropping out doesn't break the suite.
+- [ ] Heber Valley Life crawls 1112 sitemap URLs for ~24 future events
+      (inefficient/throttle-risk) — consider crawling only recent entries.
