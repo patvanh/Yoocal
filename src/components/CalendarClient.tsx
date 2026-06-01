@@ -1277,9 +1277,10 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             }}
             className="v2-search-input"
           />
-          {mounted && searchRect && dropdownOpen && createPortal((
+          {dropdownOpen && (
             <div ref={dropdownRef} style={{
-              position: 'fixed', top: 0, left: 0, width: searchRect.width, maxWidth: 'calc(100vw - 16px)', boxSizing: 'border-box', transform: `translate3d(${searchRect.left}px, ${searchRect.top}px, 0)`, willChange: 'transform',
+              position: 'absolute', top: 'calc(100% + 6px)', left: 0, right: 0,
+              boxSizing: 'border-box',
               background: '#221a3a', border: '1px solid rgba(255,255,255,0.12)',
               borderRadius: 12, zIndex: 300, overflow: 'visible',
               boxShadow: '0 12px 40px rgba(0,0,0,0.4)',
@@ -1434,7 +1435,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                 >See all {groupedResults.length} {groupedResults.length === 1 ? "event" : "events"} &rarr;</div>
               )}
             </div>
-          ), document.body)}
+          )}
           
         </div>
         <div style={{ display: dropdownOpen ? 'none' : 'flex', gap: 10, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center' }}>
