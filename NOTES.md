@@ -1297,3 +1297,29 @@ home-IP scrapes to catch more under-counts like this one.
   annual race. Options if ever wanted: add runnercard.com as a general source
   (reusable, like RunSignup) once it has the 2026 entry, or let a local submit
   it via the existing Submit Event flow.
+
+### Park City featured-events coverage check (2026-06-01) — ALL FOUND ✓
+Cross-checked a PC tourism "Featured Events & Activities" list against raw
+events.json — all 9 present with correct dates:
+- CREATE PC Local Artists Collective (Jun 26, Park Record)
+- Latino Arts Festival (Jun 12-14, Visit Park City)
+- Park Silly Sunday Market (Jun 14, direct source)
+- Savor the Summit (Jun 27, Deer Valley)
+- July 4th Parade & Celebration (Jul 4, Visit PC + PC Annual Events)
+- Kimball Arts Festival (Aug 7, Visit Park City)
+- Miner's Day Celebration (Sep 7, Visit Park City)
+- Park City Shot Ski (Oct 10, Visit Park City)
+- Howl-O-Ween (Oct 31, PC Annual Events)
+Conclusion: PC coverage is strong; major featured events captured, often from
+multiple sources. No gaps from this list.
+
+### Jackson chamber — fix committed, awaiting CI validation (2026-06-01)
+Confirmed twice from home IP: chamber sitemap has 231 /event/ URLs, 218 future,
+0 failed. CI captured only 147 → real ~71-event throttle gap. Hardened the
+sitemap-INDEX fetch with the resilient session (commit 793ca4a). Per-page
+fetches were already resilient (0 failed from home).
+NEXT: after next CI scrape, check chamber count in raw events-jackson.json.
+  - If ~218 → index fetch was the bottleneck, FIXED.
+  - If still ~147 → throttle is on the 231 per-page fetches in CI; escalate to
+    longer backoff or Firecrawl for the chamber. Read the CI diagnostic line
+    "X future, Y past, Z failed of N URLs" to localize.
