@@ -1375,7 +1375,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           </div>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(440px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(440px, 100%), 1fr))',
             gap: 8,
           }}>
             {featuredEvents.map((ev, i) => (
@@ -1394,7 +1394,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       ) : (
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(440px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(440px, 100%), 1fr))',
           gap: 8,
         }}>
           {filteredEvents.map((ev, i) => (

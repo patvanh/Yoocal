@@ -317,7 +317,8 @@ export default function HomeBrand() {
           background: var(--dark);
           padding: 140px 80px 200px;
           position: relative;
-          overflow: hidden;
+          overflow: visible;        /* let the search dropdown escape the hero */
+          overflow-x: clip;          /* but still prevent horizontal scroll */
           text-align: center;
         }
         .hb-hero::before {

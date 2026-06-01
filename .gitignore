@@ -58,3 +58,5 @@ pending_sources_*.json
 __pycache__/
 *.pyc
 *.pyo
+coverage_audit_report.txt
+coverage_audit_run.log
