@@ -96,17 +96,29 @@ function _wordRegex(w: string): RegExp {
   return r
 }
 
+// Fold accents (\u00e9 -> e) and strip punctuation (apostrophes, hyphens, etc.)
+// so search matches regardless of how the user types it. "miners day" matches
+// "Miner's Day"; "cafe" matches "Café"; "howloween" matches "Howl-O-Ween".
+function _searchNormalize(s: string): string {
+  return (s || '')
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')  // strip diacritics
+    .replace(/[^a-z0-9\s]/g, '')                          // drop punctuation
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 function matchesQuery(e: V2YocEvent, qLower: string): boolean {
   if (!qLower) return true
-  const text = [
+  const text = _searchNormalize([
     e.title, e.description, e.venue_name, e.location, e.address, e.source,
     ...(e.categories || []), ...(e.filter_categories || []), ...(e.facets || [])
-  ].filter(Boolean).join(' ').toLowerCase()
+  ].filter(Boolean).join(' '))
   // Tokenize the query and require ALL tokens to appear somewhere in the
   // searchable text. Lets "running 5k" match titles like "Park City Trail
   // Series 5K" (contains both "running"-related categories and "5k") even
   // when the literal phrase "running 5k" never appears verbatim.
-  const tokens = qLower.split(/\s+/).filter(Boolean)
+  const tokens = _searchNormalize(qLower).split(/\s+/).filter(Boolean)
   if (tokens.length === 0) return true
   // Each token matches if it appears literally OR if any of its synonyms
   // does. Synonym lookup is prefix-aware: typing "concer" still matches
@@ -880,6 +892,19 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     const q = searchQuery.trim().toLowerCase()
     const todayStr = v2DateToStr(v2TodayMountain())
     if (!q && activeChips.size === 0) return []
+    // Relevance score for ordering: a title hit on the query beats a mere
+    // description/category/synonym hit, so searching "miners day" surfaces the
+    // actual "Miners Day Parade" above loosely-matching June lectures. Matches
+    // the tiering used by the "see all" overlay so both views agree.
+    const _qTokens = _searchNormalize(q).split(/\s+/).filter(Boolean)
+    const _relevance = (e: V2YocEvent): number => {
+      if (_qTokens.length === 0) return 0
+      const title = _searchNormalize(e.title || '')
+      if (title.includes(_searchNormalize(q))) return 0          // full phrase in title
+      if (_qTokens.every(t => title.includes(t))) return 1       // all tokens in title
+      if (_qTokens.some(t => title.includes(t))) return 2        // some tokens in title
+      return 3                                                    // matched elsewhere
+    }
     const filterAndSort = (list: V2YocEvent[]) => list
       .filter(e => ((e.end_date || e.date) || '') >= todayStr)
       .filter(e => matchesQuery(e, q))
@@ -889,7 +914,11 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         }
         return true
       })
-      .sort((a, b) => (a.date || '').localeCompare(b.date || ''))
+      .sort((a, b) => {
+        const ra = _relevance(a), rb = _relevance(b)
+        if (ra !== rb) return ra - rb                            // relevance first
+        return (a.date || '').localeCompare(b.date || '')        // then by date
+      })
     // Cross-city search: current city's matches surface first (most relevant
     // to the user who picked this city), then other-city matches appended.
     // Piece 3 will add distance-based sorting within the other-city tier;
