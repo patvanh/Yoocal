@@ -1217,6 +1217,37 @@ STATE OF THE THROTTLE DEFENSE (all 3 layers live):
 Retries give the best shot at full data; the guard is the backstop. Either
 outcome on the next scrape is fine — the site stays whole.
 
+## Update 34: VisitJacksonHole RESOLVED — it's the chamber we already scrape
+
+The banked "build VisitJacksonHole via Algolia, ~1100 events" item (Update 23)
+was a MISREAD. visitjacksonhole.com/do/events does not host its own events —
+the events link redirects to jacksonholechamber.com/events/, which we ALREADY
+scrape (jackson_scraper.py SITEMAP_SOURCES + rss_scraper.py). The ALGOLIA_* vars
+in the page's `site` object are just app+key+env (no index name); the actual
+events come from jacksonholechamber. The "~1100" estimate was wrong.
+
+THE REAL ISSUE (and fix): we were getting only 150 of the chamber's true 221
+events. The chamber sitemap has 234 /event/ URLs; a home-IP scrape returns 221
+future (0 past, 0 failed). CI was throttled to 150 — same datacenter-IP
+rate-limiting as VPC sitemap + HVT (234 per-page fetches trip the limiter).
+- The guard couldn't help here: 150/221 = 68%, ABOVE RETAIN_FRACTION 0.50, so
+  the guard saw 150 as "healthy" and wouldn't substitute. KEY LESSON: the guard
+  only catches CATASTROPHIC drops (<50%); a partial throttle (68%) slips through.
+  For partial throttling, the fix must be at the source (get the data), not the
+  guard.
+- FIX [bc099fd]: chamber sitemap crawl delay 0.15s -> 1.5s (mirrors VPC), and
+  reseeded the guard's chamber baseline 150 -> 221 (true count from home IP) as
+  backstop. Next scrape tests whether the slower crawl recovers the ~71 events.
+
+DO NOT chase a VisitJacksonHole Algolia source — it doesn't exist. If Jackson
+needs more events, improve the chamber crawl (throttle resilience) or add OTHER
+Jackson venues, not VJH.
+
+BROADER LESSON: throttling now confirmed on FOUR sources (VPC sitemap, HVT,
+chamber — all heavy per-page crawlers). Any source seeded into the guard from CI
+data has a THROTTLED baseline. Worth auditing other guard baselines against
+home-IP scrapes to catch more under-counts like this one.
+
 ### What lives where (quick reference for future-me)
 - Backend universal fixes -> `build_master_and_views.py`
 - Frontend universal fixes -> `src/components/CalendarClient.tsx`
