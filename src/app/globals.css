@@ -290,8 +290,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    overflow-x: auto;
-    scrollbar-width: none;
+    flex-wrap: wrap;
     backdrop-filter: blur(10px);
   }
   .location-bar::-webkit-scrollbar { display: none; }

@@ -1015,10 +1015,10 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           }}
         >📍 Use my location</button>
         <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>or</span>
-        <div style={{ width: 220 }}>
+        <div style={{ flex: '1 1 200px', minWidth: 180, maxWidth: 280 }}>
           <CitySearch placeholder="City or ZIP — switch town" variant="compact" />
         </div>
-        <div style={{ flex: 1, minWidth: 200, display: 'flex', alignItems: 'center', gap: 12 }}>
+        <div style={{ flex: '1 1 240px', minWidth: 0, display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600 }}>Radius:</span>
           <input
             type="range"
@@ -1286,7 +1286,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           ), document.body)}
           
         </div>
-        <div style={{ display: 'flex', gap: 6, marginBottom: 12, overflowX: 'auto', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: 6, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center' }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', minWidth: 56, fontWeight: 600 }}>When:</span>
           <V2Chip active={dayFilter === 'all'} onClick={() => setDayFilter('all')}>All upcoming</V2Chip>
           <V2Chip active={dayFilter === 'today'} onClick={() => setDayFilter('today')}>Today · {todayDow}</V2Chip>
@@ -1300,7 +1300,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             />
           )}
         </div>
-        <div style={{ display: 'flex', gap: 6, marginBottom: 12, overflowX: 'auto', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: 6, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center' }}>
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', minWidth: 56, fontWeight: 600 }}>Time:</span>
           <V2Chip compact active={timeFilter === 'any'} onClick={() => setTimeFilter('any')}>Any time</V2Chip>
           <V2Chip compact active={timeFilter === 'morning'} onClick={() => setTimeFilter('morning')}>Morning</V2Chip>
@@ -1320,33 +1320,33 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         </div>
       </div>
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr auto 1fr',
+        display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
+        gap: 6,
         margin: '12px 4px 20px',
       }}>
-        <div /> {/* left spacer */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, justifyContent: 'center' }}>
           <button onClick={shiftDay(-1)} style={{
             background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)',
             color: '#fff', width: 36, height: 36, borderRadius: '50%',
-            fontSize: 18, cursor: 'pointer', lineHeight: 1,
+            fontSize: 18, cursor: 'pointer', lineHeight: 1, flexShrink: 0,
           }} title="Previous day">‹</button>
           <div style={{
             fontSize: 22, fontWeight: 600, color: '#fff',
-            fontFamily: "'DM Serif Display', serif", minWidth: 280, textAlign: 'center',
+            fontFamily: "'DM Serif Display', serif", textAlign: 'center',
           }}>
             {dateRangeLabel}
           </div>
           <button onClick={shiftDay(1)} style={{
             background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)',
             color: '#fff', width: 36, height: 36, borderRadius: '50%',
-            fontSize: 18, cursor: 'pointer', lineHeight: 1,
+            fontSize: 18, cursor: 'pointer', lineHeight: 1, flexShrink: 0,
           }} title="Next day">›</button>
         </div>
         <div style={{
-          fontSize: 22, fontWeight: 600, color: '#fff',
-          fontFamily: "'DM Serif Display', serif", textAlign: 'right',
+          fontSize: 16, fontWeight: 600, color: 'rgba(255,255,255,0.7)',
+          fontFamily: "'DM Serif Display', serif", textAlign: 'center', whiteSpace: 'nowrap',
         }}>
           {filteredEvents.length} event{filteredEvents.length !== 1 ? 's' : ''}
         </div>
@@ -1415,7 +1415,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              maxWidth: 720, margin: '24px auto', width: 'calc(100% - 32px)',
+              maxWidth: 720, margin: '24px auto', width: 'calc(100% - 32px)', boxSizing: 'border-box',
               background: '#1B1638', borderRadius: 16,
               border: '1px solid rgba(255,255,255,0.08)',
               padding: '16px 16px 24px',
