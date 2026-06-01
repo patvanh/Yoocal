@@ -1287,3 +1287,13 @@ home-IP scrapes to catch more under-counts like this one.
       seasonal events dropping out doesn't break the suite.
 - [ ] Heber Valley Life crawls 1112 sitemap URLs for ~24 future events
       (inefficient/throttle-risk) — consider crawling only recent entries.
+
+### Minor gap (low priority — don't over-engineer)
+- Swiss Days 10K Run (Sat Sep 5 2026, Centennial Park Midway) is MISSING. Lives
+  only on midwayswissdays.org (one-festival Webflow site, has 2026 date) +
+  runnercard.com (has structured data but only past 2025 entry until 2026 reg
+  opens). Neither is a yoocal source. The Swiss Days FESTIVAL is captured (HVT);
+  only the separate 10K sub-event is missing. Not worth custom scraping for one
+  annual race. Options if ever wanted: add runnercard.com as a general source
+  (reusable, like RunSignup) once it has the 2026 entry, or let a local submit
+  it via the existing Submit Event flow.

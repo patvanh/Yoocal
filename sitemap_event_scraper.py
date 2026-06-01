@@ -112,11 +112,22 @@ def scrape_sitemap_events(
         source_name = urlparse(sitemap_url).netloc
 
     try:
-        r = requests.get(
-            sitemap_url,
-            headers={"User-Agent": "Mozilla/5.0 (Macintosh) Chrome/124.0"},
-            timeout=timeout,
-        )
+        # Use the resilient session (retry/backoff on 429/5xx) so a throttled
+        # CI datacenter IP doesn't get a truncated/blocked sitemap and crawl
+        # fewer URLs than exist. Same hardening that recovered HVT.
+        try:
+            from schema_org_scraper import _SESSION as _S
+            r = _S.get(
+                sitemap_url,
+                headers={"User-Agent": "Mozilla/5.0 (Macintosh) Chrome/124.0"},
+                timeout=timeout,
+            )
+        except Exception:
+            r = requests.get(
+                sitemap_url,
+                headers={"User-Agent": "Mozilla/5.0 (Macintosh) Chrome/124.0"},
+                timeout=timeout,
+            )
     except Exception as e:
         print(f"[sitemap] {source_name}: sitemap fetch failed: {e}")
         return []
