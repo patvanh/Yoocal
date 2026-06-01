@@ -80,6 +80,9 @@ SITEMAP_SOURCES = [
         "default_lng": JACKSON_LNG,
         "default_city": "Jackson, WY",
         "default_categories": ["Community"],
+        "delay_seconds": 1.5,  # slow the 234-page crawl to stay under the
+                               # chamber's rate limit from CI datacenter IPs
+                               # (home IP gets 221; CI throttled to ~150)
     },
     {
         "sitemap_url": "https://www.jhcenterforthearts.org/events-sitemap.xml",
