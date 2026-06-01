@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { EventsV2Embedded } from "@/components/CalendarClient"
 
 const CITY_NAMES: Record<string, string> = {
@@ -32,10 +33,10 @@ export default function CityLanding({ citySlug, cityKey }: { citySlug: string; c
         {/* Browse by city pills */}
         <div className="location-bar" id="location-city-chips">
           <span className="loc-label">Browse by city</span>
-          <a href="/park-city" className={`loc-chip${cityKey === "parkcity" ? " active" : ""}`}>📍 Park City, UT</a>
-          <a href="/elkhart-lake" className={`loc-chip${cityKey === "elkhartlake" ? " active" : ""}`}>📍 Elkhart Lake, WI</a>
-          <a href="/heber" className={`loc-chip${cityKey === "heber" ? " active" : ""}`}>📍 Heber Valley, UT</a>
-          <a href="/jackson-hole" className={`loc-chip${cityKey === "jackson" ? " active" : ""}`}>📍 Jackson Hole, WY</a>
+          <Link href="/park-city" className={`loc-chip${cityKey === "parkcity" ? " active" : ""}`}>📍 Park City, UT</Link>
+          <Link href="/elkhart-lake" className={`loc-chip${cityKey === "elkhartlake" ? " active" : ""}`}>📍 Elkhart Lake, WI</Link>
+          <Link href="/heber" className={`loc-chip${cityKey === "heber" ? " active" : ""}`}>📍 Heber Valley, UT</Link>
+          <Link href="/jackson-hole" className={`loc-chip${cityKey === "jackson" ? " active" : ""}`}>📍 Jackson Hole, WY</Link>
           <a href="#" className="loc-chip" style={{ opacity: 0.5 }}>+ Aspen, CO — coming soon</a>
         </div>
       </div>
