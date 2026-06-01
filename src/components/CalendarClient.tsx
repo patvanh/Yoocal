@@ -1243,7 +1243,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           />
           {mounted && searchRect && dropdownOpen && createPortal((
             <div ref={dropdownRef} style={{
-              position: 'fixed', top: 0, left: 0, width: searchRect.width, transform: `translate3d(${searchRect.left}px, ${searchRect.top}px, 0)`, willChange: 'transform',
+              position: 'fixed', top: 0, left: 0, width: searchRect.width, maxWidth: 'calc(100vw - 16px)', boxSizing: 'border-box', transform: `translate3d(${searchRect.left}px, ${searchRect.top}px, 0)`, willChange: 'transform',
               background: '#221a3a', border: '1px solid rgba(255,255,255,0.12)',
               borderRadius: 12, zIndex: 300, overflow: 'hidden',
               boxShadow: '0 12px 40px rgba(0,0,0,0.4)',
