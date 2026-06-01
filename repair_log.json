@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-01T03:07:38.072238",
-  "audit_date": "2026-05-31",
+  "generated_at": "2026-06-01T22:22:34.215570",
+  "audit_date": "2026-06-01",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1742,
+      "before_count": 1526,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -16,12 +16,8 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 3,
+          "fixed": 2,
           "examples": [
-            {
-              "title": "(Re)sounding: Art Exhibition",
-              "had_span": 107
-            },
             {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
@@ -113,7 +109,7 @@
           ]
         },
         "classification": {
-          "fixed": 311,
+          "fixed": 316,
           "examples": [
             {
               "title": "Fascia Rolling Class",
@@ -144,17 +140,17 @@
               ]
             },
             {
-              "title": "Summer Program Registration",
+              "title": "Tailored Tuesdays",
               "before": [],
               "after": [
-                "Government"
+                "Community"
               ]
             }
           ]
         }
       },
-      "after_count": 1747,
-      "total_fixes": 340
+      "after_count": 1531,
+      "total_fixes": 344
     },
     {
       "city": "elkhart-lake",
@@ -222,7 +218,7 @@
     },
     {
       "city": "heber",
-      "before_count": 225,
+      "before_count": 231,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -260,7 +256,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 5,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -269,10 +265,10 @@
               "duration_hours": 1
             },
             {
-              "title": "Yoga in the Park",
-              "start_time": "10:45 AM",
-              "new_end_time": "11:45 AM",
-              "duration_hours": 1
+              "title": "Oakley Rodeo",
+              "start_time": "11:30 PM",
+              "new_end_time": "1:30 AM",
+              "duration_hours": 2
             },
             {
               "title": "Oakley Rodeo",
@@ -355,12 +351,12 @@
           ]
         }
       },
-      "after_count": 228,
-      "total_fixes": 22
+      "after_count": 234,
+      "total_fixes": 21
     },
     {
       "city": "jackson",
-      "before_count": 534,
+      "before_count": 521,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -445,7 +441,7 @@
           "examples": []
         }
       },
-      "after_count": 540,
+      "after_count": 527,
       "total_fixes": 13
     }
   ]
