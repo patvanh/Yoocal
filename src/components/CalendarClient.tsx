@@ -472,6 +472,158 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
   )
 }
 
+type FilterOption = { value: string; label: string }
+
+function FilterDropdown({
+  label, value, options, onChange,
+}: {
+  label: string
+  value: string
+  options: FilterOption[]
+  onChange: (v: string) => void
+}) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement | null>(null)
+  useEffect(() => {
+    if (!open) return
+    const onDoc = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', onDoc)
+    return () => document.removeEventListener('mousedown', onDoc)
+  }, [open])
+  return (
+    <div ref={ref} style={{ position: 'relative', display: 'inline-block' }}>
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        style={{
+          display: 'inline-flex', alignItems: 'center', gap: 6,
+          padding: '7px 14px', fontSize: 13, fontWeight: 600,
+          borderRadius: 999, cursor: 'pointer',
+          background: 'rgba(255,255,255,0.06)',
+          border: '1px solid rgba(255,255,255,0.18)',
+          color: '#fff', fontFamily: 'inherit', whiteSpace: 'nowrap',
+        }}
+      >
+        {label}
+        <span style={{ fontSize: 10, opacity: 0.7, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}>▾</span>
+      </button>
+      {open && (
+        <div style={{
+          position: 'absolute', top: 'calc(100% + 6px)', left: 0, zIndex: 200,
+          background: '#211a45', border: '1px solid rgba(175,169,236,0.28)',
+          borderRadius: 12, padding: 5, minWidth: 180,
+          boxShadow: '0 16px 40px rgba(0,0,0,0.5)',
+        }}>
+          {options.map(opt => (
+            <button
+              key={opt.value}
+              type="button"
+              onClick={() => { onChange(opt.value); setOpen(false) }}
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                width: '100%', textAlign: 'left', gap: 10,
+                padding: '8px 12px', fontSize: 13, borderRadius: 8,
+                background: opt.value === value ? 'rgba(127,119,221,0.28)' : 'transparent',
+                border: 'none', cursor: 'pointer', color: '#fff', fontFamily: 'inherit',
+              }}
+            >
+              <span>{opt.label}</span>
+              {opt.value === value && <span style={{ color: '#AFA9EC', fontSize: 13 }}>✓</span>}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+function MultiFilterDropdown({
+  label, selected, options, onToggle, onClear,
+}: {
+  label: string
+  selected: Set<string>
+  options: FilterOption[]
+  onToggle: (v: string) => void
+  onClear: () => void
+}) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement | null>(null)
+  useEffect(() => {
+    if (!open) return
+    const onDoc = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', onDoc)
+    return () => document.removeEventListener('mousedown', onDoc)
+  }, [open])
+  const active = selected.size > 0
+  return (
+    <div ref={ref} style={{ position: 'relative', display: 'inline-block' }}>
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        style={{
+          display: 'inline-flex', alignItems: 'center', gap: 6,
+          padding: '7px 14px', fontSize: 13, fontWeight: 600,
+          borderRadius: 999, cursor: 'pointer',
+          background: active ? 'rgba(127,119,221,0.28)' : 'rgba(255,255,255,0.06)',
+          border: active ? '1px solid rgba(127,119,221,0.6)' : '1px solid rgba(255,255,255,0.18)',
+          color: '#fff', fontFamily: 'inherit', whiteSpace: 'nowrap',
+        }}
+      >
+        {label}
+        <span style={{ fontSize: 10, opacity: 0.7, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}>▾</span>
+      </button>
+      {open && (
+        <div style={{
+          position: 'absolute', top: 'calc(100% + 6px)', left: 0, zIndex: 200,
+          background: '#211a45', border: '1px solid rgba(175,169,236,0.28)',
+          borderRadius: 12, padding: 5, minWidth: 200, maxHeight: 320, overflowY: 'auto',
+          boxShadow: '0 16px 40px rgba(0,0,0,0.5)',
+        }}>
+          <button
+            type="button"
+            onClick={() => { onClear(); }}
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              width: '100%', textAlign: 'left', gap: 10,
+              padding: '8px 12px', fontSize: 13, borderRadius: 8,
+              background: selected.size === 0 ? 'rgba(127,119,221,0.28)' : 'transparent',
+              border: 'none', cursor: 'pointer', color: '#fff', fontFamily: 'inherit',
+              marginBottom: 2,
+            }}
+          >
+            <span>All categories</span>
+            {selected.size === 0 && <span style={{ color: '#AFA9EC' }}>✓</span>}
+          </button>
+          {options.map(opt => {
+            const on = selected.has(opt.value)
+            return (
+              <button
+                key={opt.value}
+                type="button"
+                onClick={() => onToggle(opt.value)}
+                style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                  width: '100%', textAlign: 'left', gap: 10,
+                  padding: '8px 12px', fontSize: 13, borderRadius: 8,
+                  background: on ? 'rgba(127,119,221,0.28)' : 'transparent',
+                  border: 'none', cursor: 'pointer', color: '#fff', fontFamily: 'inherit',
+                }}
+              >
+                <span>{opt.label}</span>
+                {on && <span style={{ color: '#AFA9EC' }}>✓</span>}
+              </button>
+            )
+          })}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {}) {
   const [events, setEvents] = useState<V2YocEvent[]>([])
   // Events from cities OTHER than the current one. Used by cross-city search
@@ -486,7 +638,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   const [loading, setLoading] = useState(true)
   const [dayFilter, setDayFilter] = useState<V2DayFilter>('today')
   const [timeFilter, setTimeFilter] = useState<V2TimeFilter>('any')
-  const [activeCategory, setActiveCategory] = useState<string>('all')
+  const [activeCategories, setActiveCategories] = useState<Set<string>>(new Set())
   const [showAllCategories, setShowAllCategories] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedEvent, setSelectedEvent] = useState<EventModalData | null>(null)
@@ -696,8 +848,8 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       })
     }
     
-    if (activeCategory !== 'all') {
-      result = result.filter(e => (e.categories || []).includes(activeCategory))
+    if (activeCategories.size > 0) {
+      result = result.filter(e => (e.categories || []).some(c => activeCategories.has(c)))
     }
     
 
@@ -722,7 +874,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       return ta - tb
     })
     return result
-  }, [events, dayFilter, timeFilter, activeCategory, pickedDate, radius, userCoords, cityKey])
+  }, [events, dayFilter, timeFilter, activeCategories, pickedDate, radius, userCoords, cityKey])
 
   const allUpcomingMatches = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
@@ -1041,6 +1193,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         border: '1px solid rgba(255,255,255,0.10)',
         borderRadius: 16, padding: 18, marginBottom: 18,
         backdropFilter: 'blur(8px)',
+        position: 'relative', zIndex: 100,
       }}>
         <div style={{ position: 'relative', marginBottom: 16 }}>
           <input
@@ -1063,7 +1216,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             <div ref={dropdownRef} style={{
               position: 'fixed', top: 0, left: 0, width: searchRect.width, transform: `translate3d(${searchRect.left}px, ${searchRect.top}px, 0)`, willChange: 'transform',
               background: '#221a3a', border: '1px solid rgba(255,255,255,0.12)',
-              borderRadius: 12, zIndex: 50, overflow: 'hidden',
+              borderRadius: 12, zIndex: 300, overflow: 'hidden',
               boxShadow: '0 12px 40px rgba(0,0,0,0.4)',
             }}>
               {/* Quick filter chips */}
@@ -1286,37 +1439,44 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           ), document.body)}
           
         </div>
-        <div style={{ display: 'flex', gap: 6, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', minWidth: 56, fontWeight: 600 }}>When:</span>
-          <V2Chip active={dayFilter === 'all'} onClick={() => setDayFilter('all')}>All upcoming</V2Chip>
-          <V2Chip active={dayFilter === 'today'} onClick={() => setDayFilter('today')}>Today · {todayDow}</V2Chip>
-          <V2Chip active={dayFilter === 'tomorrow'} onClick={() => setDayFilter('tomorrow')}>Tomorrow</V2Chip>
-          <V2Chip active={dayFilter === 'weekend'} onClick={() => setDayFilter('weekend')}>This weekend</V2Chip>
-          <V2Chip active={dayFilter === '7days'} onClick={() => setDayFilter('7days')}>Next 7 days</V2Chip>
-          <V2Chip active={dayFilter === 'pickdate'} onClick={() => setDayFilter('pickdate')}>Pick date</V2Chip>
+        <div style={{ display: 'flex', gap: 10, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+          <FilterDropdown
+            label={'When: ' + (({all:'All upcoming',today:'Today · '+todayDow,tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days',pickdate:'Pick date'} as Record<string,string>)[dayFilter] || 'All upcoming')}
+            value={dayFilter}
+            options={[
+              { value: 'all', label: 'All upcoming' },
+              { value: 'today', label: 'Today · ' + todayDow },
+              { value: 'tomorrow', label: 'Tomorrow' },
+              { value: 'weekend', label: 'This weekend' },
+              { value: '7days', label: 'Next 7 days' },
+              { value: 'pickdate', label: 'Pick date' },
+            ]}
+            onChange={(v) => setDayFilter(v as V2DayFilter)}
+          />
           {dayFilter === 'pickdate' && (
             <input type="date" value={pickedDate} onChange={(e) => setPickedDate(e.target.value)}
               style={{ padding: '6px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(83,74,183,0.18)' }}
             />
           )}
-        </div>
-        <div style={{ display: 'flex', gap: 6, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', minWidth: 56, fontWeight: 600 }}>Time:</span>
-          <V2Chip compact active={timeFilter === 'any'} onClick={() => setTimeFilter('any')}>Any time</V2Chip>
-          <V2Chip compact active={timeFilter === 'morning'} onClick={() => setTimeFilter('morning')}>Morning</V2Chip>
-          <V2Chip compact active={timeFilter === 'afternoon'} onClick={() => setTimeFilter('afternoon')}>Afternoon</V2Chip>
-          <V2Chip compact active={timeFilter === 'evening'} onClick={() => setTimeFilter('evening')}>Evening</V2Chip>
-          <V2Chip compact active={timeFilter === 'latenight'} onClick={() => setTimeFilter('latenight')}>Late night</V2Chip>
-        </div>
-        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
-          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', minWidth: 56, fontWeight: 600 }}>Vibe:</span>
-          <V2Chip compact active={activeCategory === 'all'} onClick={() => setActiveCategory('all')}>All categories</V2Chip>
-          {V2_ALL_CATEGORIES.map(cat => (
-            <V2Chip key={cat} compact active={activeCategory === cat}
-              onClick={() => setActiveCategory(cat)}
-              color={activeCategory === cat ? V2_CATEGORY_COLORS[cat] : undefined}
-            >{cat}</V2Chip>
-          ))}
+          <FilterDropdown
+            label={'Time: ' + (({any:'Any time',morning:'Morning',afternoon:'Afternoon',evening:'Evening',latenight:'Late night'} as Record<string,string>)[timeFilter] || 'Any time')}
+            value={timeFilter}
+            options={[
+              { value: 'any', label: 'Any time' },
+              { value: 'morning', label: 'Morning' },
+              { value: 'afternoon', label: 'Afternoon' },
+              { value: 'evening', label: 'Evening' },
+              { value: 'latenight', label: 'Late night' },
+            ]}
+            onChange={(v) => setTimeFilter(v as V2TimeFilter)}
+          />
+          <MultiFilterDropdown
+            label={'Vibe: ' + (activeCategories.size === 0 ? 'All categories' : activeCategories.size === 1 ? Array.from(activeCategories)[0] : activeCategories.size + ' selected')}
+            selected={activeCategories}
+            options={V2_ALL_CATEGORIES.map(cat => ({ value: cat, label: cat }))}
+            onToggle={(v) => setActiveCategories(prev => { const n = new Set(prev); if (n.has(v)) n.delete(v); else n.add(v); return n })}
+            onClear={() => setActiveCategories(new Set())}
+          />
         </div>
       </div>
       <div style={{
