@@ -131,6 +131,10 @@ function matchesQuery(e: V2YocEvent, qLower: string): boolean {
   return tokens.every(tok => {
     if (text.includes(tok)) return true
     const tokStem = _stem(tok)
+    // Plural query -> singular match: "5ks" -> "5k", "concerts" -> "concert".
+    // The literal check above misses these; try the stemmed token directly
+    // against the text before falling through to synonyms.
+    if (tokStem !== tok && tokStem.length >= 2 && text.includes(tokStem)) return true
     // Find all synonym keys that match the user's token via prefix or stem.
     // "conc" -> "concert" key (prefix). "concerts" -> "concert" (stem).
     // "runs" -> "running" (both stem to a shared prefix "run").
@@ -157,6 +161,19 @@ function isFreeEvent(e: V2YocEvent): boolean {
 }
 
 type ChipId = 'weekend' | 'today' | 'free' | 'pickdate' | 'tomorrow' | 'next7' | 'music' | 'outdoors' | 'food' | 'family' | 'arts' | 'sports' | 'kids' | 'wellness' | 'education' | 'festivals'
+
+// Shared date-occurrence helpers (used by both the main-view filter and the
+// search-results filter). Pure: event + date strings in, boolean out.
+function occursOn(e: V2YocEvent, dayStr: string): boolean {
+  const start = e.date || ''
+  const end = e.end_date || start
+  return start <= dayStr && dayStr <= end
+}
+function occursInRange(e: V2YocEvent, rangeStart: string, rangeEnd: string): boolean {
+  const start = e.date || ''
+  const end = e.end_date || start
+  return start <= rangeEnd && end >= rangeStart  // range overlap
+}
 
 function chipPassesEvent(chip: ChipId, e: V2YocEvent, todayStr: string, pickedDate: string): boolean {
   if (chip === 'free') return isFreeEvent(e)
@@ -239,9 +256,13 @@ function v2DistanceMiles(lat1: number, lng1: number, lat2: number, lng2: number)
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
 }
 
+// These MUST match the filter_categories buckets the build pipeline produces
+// (see build_master_and_views.py / category_normalizer.py). The Vibe filter
+// matches an event's filter_categories against these, so any mismatch (e.g.
+// 'Outdoor' vs 'Outdoors') silently filters out everything in that bucket.
 const V2_ALL_CATEGORIES = [
-  'Music', 'Food & Drink', 'Outdoor', 'Family', 'Arts', 'Theater', 'Film',
-  'Sports', 'Kids', 'Wellness', 'Education', 'Festival', 'Government', 'Community',
+  'Music', 'Food & Drink', 'Arts & Theater', 'Outdoors', 'Sports',
+  'Running & Races', 'Family & Kids', 'Wellness', 'Education & Talks', 'Community',
 ]
 const V2_PRIMARY_CATEGORIES = ['Music', 'Food & Drink', 'Outdoor', 'Family']
 
@@ -648,7 +669,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   type CityFilterValue = 'current' | 'all' | 'parkcity' | 'heber' | 'jackson' | 'elkhartlake'
   const [cityFilter, setCityFilter] = useState<CityFilterValue>('current')
   const [loading, setLoading] = useState(true)
-  const [dayFilter, setDayFilter] = useState<V2DayFilter>('today')
+  const [dayFilter, setDayFilter] = useState<V2DayFilter>('all')
   const [timeFilter, setTimeFilter] = useState<V2TimeFilter>('any')
   const [activeCategories, setActiveCategories] = useState<Set<string>>(new Set())
   const [showAllCategories, setShowAllCategories] = useState(false)
@@ -818,17 +839,6 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     // An event "occurs on" a day if that day falls between its start date and
     // end_date (inclusive). Multi-day events (festivals like Song Summit) should
     // appear on every day they run, not just the first day.
-    const occursOn = (e: V2YocEvent, dayStr: string): boolean => {
-      const start = e.date || ''
-      const end = e.end_date || start
-      return start <= dayStr && dayStr <= end
-    }
-    const occursInRange = (e: V2YocEvent, rangeStart: string, rangeEnd: string): boolean => {
-      const start = e.date || ''
-      const end = e.end_date || start
-      // Overlap test: event range intersects [rangeStart, rangeEnd]
-      return start <= rangeEnd && end >= rangeStart
-    }
 
     // Keep events that haven't fully ended yet (end_date >= today).
     result = result.filter(e => ((e.end_date || e.date) || '') >= todayStr)
@@ -861,7 +871,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     }
     
     if (activeCategories.size > 0) {
-      result = result.filter(e => (e.categories || []).some(c => activeCategories.has(c)))
+      result = result.filter(e => ((e.filter_categories && e.filter_categories.length ? e.filter_categories : (e.categories || [])).some(c => activeCategories.has(c))))
     }
     
 
@@ -891,7 +901,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   const allUpcomingMatches = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
     const todayStr = v2DateToStr(v2TodayMountain())
-    if (!q && activeChips.size === 0) return []
+    if (!q && dayFilter === 'all' && timeFilter === 'any' && activeCategories.size === 0) return []
     // Relevance score for ordering: a title hit on the query beats a mere
     // description/category/synonym hit, so searching "miners day" surfaces the
     // actual "Miners Day Parade" above loosely-matching June lectures. Matches
@@ -909,8 +919,34 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       .filter(e => ((e.end_date || e.date) || '') >= todayStr)
       .filter(e => matchesQuery(e, q))
       .filter(e => {
-        for (const chip of activeChips) {
-          if (!chipPassesEvent(chip, e, todayStr, chipPickedDate)) return false
+        // When filter (shared semantics with main view). 'all'/unknown = no
+        // date narrowing, so a search shows ALL upcoming matches by default.
+        if (dayFilter === 'today') { if (!occursOn(e, todayStr)) return false }
+        else if (dayFilter === 'tomorrow') {
+          const tom = new Date(v2TodayMountain()); tom.setDate(tom.getDate() + 1)
+          if (!occursOn(e, v2DateToStr(tom))) return false
+        } else if (dayFilter === 'weekend') {
+          const { start, end } = v2WeekendDates()
+          if (!occursInRange(e, v2DateToStr(start), v2DateToStr(end))) return false
+        } else if (dayFilter === '7days') {
+          const week = new Date(v2TodayMountain()); week.setDate(week.getDate() + 7)
+          if (!occursInRange(e, todayStr, v2DateToStr(week))) return false
+        } else if (dayFilter === 'pickdate') {
+          if (!occursOn(e, pickedDate)) return false
+        }
+        // Time filter (shared with main view).
+        if (timeFilter !== 'any') {
+          const t = v2ParseTime12h(e.start_time)
+          if (t !== null) {
+            if (timeFilter === 'morning' && !(t < 12*60)) return false
+            if (timeFilter === 'afternoon' && !(t >= 12*60 && t < 17*60)) return false
+            if (timeFilter === 'evening' && !(t >= 17*60 && t < 21*60)) return false
+            if (timeFilter === 'latenight' && !(t >= 21*60)) return false
+          }
+        }
+        // Vibe filter (multi-select; empty = all).
+        if (activeCategories.size > 0) {
+          if (!((e.filter_categories && e.filter_categories.length ? e.filter_categories : (e.categories || [])).some(c => activeCategories.has(c)))) return false
         }
         return true
       })
@@ -971,7 +1007,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     // Specific city: filter from the appropriate pool
     if (cityFilter === cityKeyLocal) return local
     return other.filter(e => (e._sourceCity || '') === cityFilter)
-  }, [events, otherCityEvents, searchQuery, activeChips, chipPickedDate, cityFilter, cityKeyProp])
+  }, [events, otherCityEvents, searchQuery, dayFilter, timeFilter, activeCategories, pickedDate, cityFilter, cityKeyProp])
 
   // Group results by normalized title for the "See all" overlay. Each row
   // shows one card per unique event identity, with all future occurrences
@@ -1245,160 +1281,93 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             <div ref={dropdownRef} style={{
               position: 'fixed', top: 0, left: 0, width: searchRect.width, maxWidth: 'calc(100vw - 16px)', boxSizing: 'border-box', transform: `translate3d(${searchRect.left}px, ${searchRect.top}px, 0)`, willChange: 'transform',
               background: '#221a3a', border: '1px solid rgba(255,255,255,0.12)',
-              borderRadius: 12, zIndex: 300, overflow: 'hidden',
+              borderRadius: 12, zIndex: 300, overflow: 'visible',
               boxShadow: '0 12px 40px rgba(0,0,0,0.4)',
             }}>
-              {/* Quick filter chips */}
+              {/* Unified filters: same When/Time/Vibe dropdowns as under the
+                  search bar, driving the shared dayFilter/timeFilter/activeCategories
+                  state so they actually filter the search results. */}
               <div style={{
                 padding: '10px 14px', borderBottom: '1px solid rgba(255,255,255,0.06)',
                 background: 'rgba(127,119,221,0.05)',
-                display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center',
+                display: 'flex', gap: 8, flexWrap: 'wrap',
+                alignItems: 'flex-start', justifyContent: 'flex-start',
+                position: 'relative', zIndex: 2,
               }}>
-                {([
-                  {id: 'weekend' as ChipId, label: 'This weekend'},
-                  {id: 'today' as ChipId, label: 'Today'},
-                  {id: 'tomorrow' as ChipId, label: 'Tomorrow'},
-                ]).map(c => {
-                  const active = activeChips.has(c.id)
-                  return (
-                    <button key={c.id} type="button" onClick={() => toggleChip(c.id)}
-                      style={{
-                        background: active ? '#534AB7' : 'rgba(255,255,255,0.08)',
-                        color: active ? '#fff' : 'rgba(255,255,255,0.78)',
-                        border: active ? '1px solid transparent' : '1px solid rgba(255,255,255,0.12)',
-                        borderRadius: 999, padding: '4px 11px', fontSize: 11,
-                        fontWeight: active ? 500 : 400, cursor: 'pointer',
-                        fontFamily: 'inherit',
-                      }}>{c.label}</button>
-                  )
-                })}
-                <button type="button"
-                  onClick={() => {
-                    const inp = pickDateInputRef.current
-                    if (!inp) return
-                    // Suppress outside-close for 30 seconds while user
-                    // navigates the native picker (months, year, day).
-                    suppressOutsideRef.current = Date.now() + 60000
-                    if (typeof inp.showPicker === 'function') {
-                      try { inp.showPicker() } catch { inp.focus(); inp.click() }
+                <FilterDropdown
+                  label={'When: ' + (({all:'All upcoming',today:'Today',tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days',pickdate:(pickedDate || 'Pick date')} as Record<string,string>)[dayFilter] || 'All upcoming')}
+                  value={dayFilter}
+                  options={[
+                    { value: 'all', label: 'All upcoming' },
+                    { value: 'today', label: 'Today' },
+                    { value: 'tomorrow', label: 'Tomorrow' },
+                    { value: 'weekend', label: 'This weekend' },
+                    { value: '7days', label: 'Next 7 days' },
+                    { value: 'pickdate', label: 'Pick date\u2026' },
+                  ]}
+                  onChange={(v) => {
+                    if (v === 'pickdate') {
+                      const inp = pickDateInputRef.current
+                      suppressOutsideRef.current = Date.now() + 60000
+                      setDayFilter('pickdate')
+                      if (inp) {
+                        if (typeof inp.showPicker === 'function') {
+                          try { inp.showPicker() } catch { inp.focus(); inp.click() }
+                        } else { inp.focus(); inp.click() }
+                      }
                     } else {
-                      inp.focus(); inp.click()
+                      setDayFilter(v as V2DayFilter)
                     }
                   }}
-                  style={{
-                    background: activeChips.has('pickdate') ? '#534AB7' : 'rgba(255,255,255,0.08)',
-                    color: activeChips.has('pickdate') ? '#fff' : 'rgba(255,255,255,0.78)',
-                    border: activeChips.has('pickdate') ? '1px solid transparent' : '1px solid rgba(255,255,255,0.12)',
-                    borderRadius: 999, padding: '4px 11px', fontSize: 11,
-                    cursor: 'pointer', fontFamily: 'inherit',
-                  }}>
-                  {chipPickedDate && activeChips.has('pickdate') ? chipPickedDate : 'Pick a date'}
-                </button>
+                />
+                <FilterDropdown
+                  label={'Time: ' + (({any:'Any time',morning:'Morning',afternoon:'Afternoon',evening:'Evening',latenight:'Late night'} as Record<string,string>)[timeFilter] || 'Any time')}
+                  value={timeFilter}
+                  options={[
+                    { value: 'any', label: 'Any time' },
+                    { value: 'morning', label: 'Morning' },
+                    { value: 'afternoon', label: 'Afternoon' },
+                    { value: 'evening', label: 'Evening' },
+                    { value: 'latenight', label: 'Late night' },
+                  ]}
+                  onChange={(v) => setTimeFilter(v as V2TimeFilter)}
+                />
+                <MultiFilterDropdown
+                  label={'Vibe: ' + (activeCategories.size === 0 ? 'All categories' : activeCategories.size === 1 ? Array.from(activeCategories)[0] : activeCategories.size + ' selected')}
+                  selected={activeCategories}
+                  options={V2_ALL_CATEGORIES.map(cat => ({ value: cat, label: cat }))}
+                  onToggle={(v) => setActiveCategories(prev => { const n = new Set(prev); if (n.has(v)) n.delete(v); else n.add(v); return n })}
+                  onClear={() => setActiveCategories(new Set())}
+                />
                 <input
                   ref={pickDateInputRef}
                   type="date"
-                  value={chipPickedDate}
+                  value={dayFilter === 'pickdate' ? pickedDate : ''}
                   onChange={(e) => {
                     const v = e.target.value
-                    setChipPickedDate(v)
-                    setActiveChips(prev => {
-                      const next = new Set(prev)
-                      // Picking a date is a When choice — clear other When chips.
-                      for (const w of ['weekend','today','tomorrow','next7'] as ChipId[]) next.delete(w)
-                      if (v) next.add('pickdate'); else next.delete('pickdate')
-                      return next
-                    })
+                    if (v) { setPickedDate(v); setDayFilter('pickdate') }
                     suppressOutsideRef.current = 0
                   }}
                   style={{ position: 'absolute', opacity: 0, width: 0, height: 0, padding: 0, border: 0, pointerEvents: 'none' }}
                 />
-                {(activeChips.size > 0 || searchQuery.trim()) && (
+                {(dayFilter !== 'all' || timeFilter !== 'any' || activeCategories.size > 0 || searchQuery.trim()) && (
                   <button type="button"
                     onClick={() => {
                       setSearchQuery('')
-                      setActiveChips(new Set())
-                      setChipPickedDate('')
-                      setShowMoreFilters(false)
+                      setDayFilter('all')
+                      setTimeFilter('any')
+                      setActiveCategories(new Set())
                       setDropdownOpen(false)
                     }}
                     style={{
                       background: 'rgba(255,255,255,0.04)',
                       color: 'rgba(255,255,255,0.6)',
                       border: '1px solid rgba(255,255,255,0.10)',
-                      borderRadius: 999, padding: '4px 11px', fontSize: 11,
+                      borderRadius: 999, padding: '6px 13px', fontSize: 12,
                       cursor: 'pointer', fontFamily: 'inherit',
-                    }}>Clear filters</button>
+                    }}>Clear</button>
                 )}
-                <button type="button"
-                  onClick={() => setShowMoreFilters(v => !v)}
-                  style={{
-                    background: 'transparent',
-                    color: '#AFA9EC',
-                    border: '1px dashed rgba(127,119,221,0.4)',
-                    borderRadius: 999, padding: '4px 11px', fontSize: 11,
-                    cursor: 'pointer', fontFamily: 'inherit',
-                  }}>{showMoreFilters ? '− Less filters' : '+ More filters'}</button>
               </div>
-              {showMoreFilters && (
-                <div style={{
-                  padding: '10px 14px', borderBottom: '1px solid rgba(255,255,255,0.06)',
-                  background: 'rgba(127,119,221,0.03)',
-                }}>
-                  <div style={{
-                    fontSize: 10, color: 'rgba(255,255,255,0.5)', fontWeight: 600,
-                    letterSpacing: 0.5, textTransform: 'uppercase', marginBottom: 6,
-                  }}>More when</div>
-                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginBottom: 10 }}>
-                    {([
-                      {id: 'next7' as ChipId, label: 'Next 7 days'},
-                    ]).map(c => {
-                      const active = activeChips.has(c.id)
-                      return (
-                        <button key={c.id} type="button" onClick={() => toggleChip(c.id)}
-                          style={{
-                            background: active ? '#534AB7' : 'rgba(255,255,255,0.08)',
-                            color: active ? '#fff' : 'rgba(255,255,255,0.78)',
-                            border: active ? '1px solid transparent' : '1px solid rgba(255,255,255,0.12)',
-                            borderRadius: 999, padding: '4px 11px', fontSize: 11,
-                            fontWeight: active ? 500 : 400, cursor: 'pointer',
-                            fontFamily: 'inherit',
-                          }}>{c.label}</button>
-                      )
-                    })}
-                  </div>
-                  <div style={{
-                    fontSize: 10, color: 'rgba(255,255,255,0.5)', fontWeight: 600,
-                    letterSpacing: 0.5, textTransform: 'uppercase', marginBottom: 6,
-                  }}>Vibe</div>
-                  <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                    {([
-                      {id: 'music' as ChipId, label: 'Music'},
-                      {id: 'outdoors' as ChipId, label: 'Outdoors'},
-                      {id: 'food' as ChipId, label: 'Food & Drink'},
-                      {id: 'family' as ChipId, label: 'Family'},
-                      {id: 'arts' as ChipId, label: 'Arts'},
-                      {id: 'sports' as ChipId, label: 'Sports'},
-                      {id: 'kids' as ChipId, label: 'Kids'},
-                      {id: 'wellness' as ChipId, label: 'Wellness'},
-                      {id: 'education' as ChipId, label: 'Education'},
-                      {id: 'festivals' as ChipId, label: 'Festivals'},
-                    ]).map(c => {
-                      const active = activeChips.has(c.id)
-                      return (
-                        <button key={c.id} type="button" onClick={() => toggleChip(c.id)}
-                          style={{
-                            background: active ? '#534AB7' : 'rgba(255,255,255,0.08)',
-                            color: active ? '#fff' : 'rgba(255,255,255,0.78)',
-                            border: active ? '1px solid transparent' : '1px solid rgba(255,255,255,0.12)',
-                            borderRadius: 999, padding: '4px 11px', fontSize: 11,
-                            fontWeight: active ? 500 : 400, cursor: 'pointer',
-                            fontFamily: 'inherit',
-                          }}>{c.label}</button>
-                      )
-                    })}
-                  </div>
-                </div>
-              )}
               {allUpcomingMatches.slice(0, 5).map((ev, i) => {
                 const d = v2ParseEventDate((ev.date || '').slice(0, 10))
                 const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
@@ -1468,7 +1437,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           ), document.body)}
           
         </div>
-        <div style={{ display: 'flex', gap: 10, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center' }}>
+        <div style={{ display: dropdownOpen ? 'none' : 'flex', gap: 10, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center' }}>
           <FilterDropdown
             label={'When: ' + (({all:'All upcoming',today:'Today · '+todayDow,tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days',pickdate:'Pick date'} as Record<string,string>)[dayFilter] || 'All upcoming')}
             value={dayFilter}
