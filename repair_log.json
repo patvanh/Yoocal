@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-31T19:50:28.080227",
+  "generated_at": "2026-06-01T03:07:38.072238",
   "audit_date": "2026-05-31",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1749,
+      "before_count": 1742,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -16,15 +16,19 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 2,
+          "fixed": 3,
           "examples": [
+            {
+              "title": "(Re)sounding: Art Exhibition",
+              "had_span": 107
+            },
             {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
             },
             {
-              "title": "Old Town walking tour",
-              "had_span": 73
+              "title": "(Re)sounding: Art Exhibition",
+              "had_span": 105
             }
           ]
         },
@@ -109,16 +113,12 @@
           ]
         },
         "classification": {
-          "fixed": 308,
+          "fixed": 311,
           "examples": [
             {
-              "title": "Candlelight Kundalini",
-              "before": [
-                "Community"
-              ],
+              "title": "Fascia Rolling Class",
+              "before": [],
               "after": [
-                "Community",
-                "Food & Drink",
                 "Wellness"
               ]
             },
@@ -144,21 +144,21 @@
               ]
             },
             {
-              "title": "Stein's Famous Sunday Brunch",
+              "title": "Summer Program Registration",
               "before": [],
               "after": [
-                "Food & Drink"
+                "Government"
               ]
             }
           ]
         }
       },
-      "after_count": 1754,
-      "total_fixes": 336
+      "after_count": 1747,
+      "total_fixes": 340
     },
     {
       "city": "elkhart-lake",
-      "before_count": 236,
+      "before_count": 233,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -217,20 +217,25 @@
           "examples": []
         }
       },
-      "after_count": 243,
+      "after_count": 240,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 132,
+      "before_count": 225,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 1,
+          "examples": [
+            {
+              "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
+              "had_span": 117
+            }
+          ]
         },
         "multi_day_splits": {
           "fixed": 2,
@@ -258,16 +263,16 @@
           "fixed": 6,
           "examples": [
             {
+              "title": "Heber Valley Chamber Golf Tournament",
+              "start_time": "8:00 AM",
+              "new_end_time": "9:00 AM",
+              "duration_hours": 1
+            },
+            {
               "title": "Yoga in the Park",
               "start_time": "10:45 AM",
               "new_end_time": "11:45 AM",
               "duration_hours": 1
-            },
-            {
-              "title": "Comedy Magic Show - Anthony the Magic",
-              "start_time": "3:30 PM",
-              "new_end_time": "5:30 PM",
-              "duration_hours": 2
             },
             {
               "title": "Oakley Rodeo",
@@ -350,12 +355,12 @@
           ]
         }
       },
-      "after_count": 135,
-      "total_fixes": 21
+      "after_count": 228,
+      "total_fixes": 22
     },
     {
       "city": "jackson",
-      "before_count": 539,
+      "before_count": 534,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -366,23 +371,23 @@
           "examples": [
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 112
+              "had_span": 111
             },
             {
               "title": "Music Classes",
-              "had_span": 1676
+              "had_span": 1675
             },
             {
               "title": "Visual Arts Classes",
-              "had_span": 1676
+              "had_span": 1675
             },
             {
               "title": "Writing Classes and Workshops",
-              "had_span": 1676
+              "had_span": 1675
             },
             {
               "title": "Dance and Movement Classes",
-              "had_span": 1676
+              "had_span": 1675
             }
           ]
         },
@@ -440,7 +445,7 @@
           "examples": []
         }
       },
-      "after_count": 545,
+      "after_count": 540,
       "total_fixes": 13
     }
   ]
