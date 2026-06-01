@@ -636,6 +636,12 @@ def scrape_hebervalleylife_sitemap():
             default_lng=-111.4133,
             default_city="Heber City, UT",
             default_categories=["Community"],
+            # This MEC sitemap lists 1100+ events going back to 2021. Current
+            # events get re-edited (lastmod bumped) each season, so an 8-month
+            # window prunes the dead historical pages while keeping everything
+            # plausibly upcoming. Cuts ~1100 fetches to ~100; per-page crawl
+            # still does the real future-date filtering.
+            min_lastmod_days=240,
         )
     except Exception as ex:
         print(f"[hebervalleylife] failed: {ex}")

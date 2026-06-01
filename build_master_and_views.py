@@ -142,6 +142,10 @@ def _normalize_title(title: str) -> str:
         tokens = tokens[1:]
     while tokens and tokens[-1] in _DAYS:
         tokens = tokens[:-1]
+    # Strip a LEADING standalone year ("2026 Kimball Arts Festival") so a
+    # year-prefixed aggregator title dedupes with the bare title. Guard against
+    # eating a real date phrase: only strip if what follows isn't a month/
+    # ordinal/day-number (defined just below as _DATE_CTX).
     # Strip a trailing standalone year ("...Rodeo 2026") so cross-source
     # dupes match. Don't strip when the previous token is a month name or
     # an ordinal suffix — that indicates a date phrase ("may 28 2026" or
@@ -150,6 +154,11 @@ def _normalize_title(title: str) -> str:
                "august","september","october","november","december",
                "jan","feb","mar","apr","jun","jul","aug","sep","sept","oct","nov","dec"}
     _DATE_CTX = _MONTHS | {"th","st","nd","rd"} | {str(d) for d in range(1, 32)}
+    # Leading year (mirror of trailing-year strip below).
+    if (tokens and len(tokens) >= 2
+            and _re.fullmatch(r"20\d\d", tokens[0])
+            and tokens[1] not in _DATE_CTX):
+        tokens = tokens[1:]
     if (tokens and len(tokens) >= 2
             and _re.fullmatch(r"20\d\d", tokens[-1])
             and tokens[-2] not in _DATE_CTX):

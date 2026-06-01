@@ -107,6 +107,7 @@ def scrape_sitemap_events(
     max_pages=None,
     delay_seconds=0.15,
     timeout=15,
+    min_lastmod_days=None,
 ):
     if source_name is None:
         source_name = urlparse(sitemap_url).netloc
@@ -138,6 +139,39 @@ def scrape_sitemap_events(
 
     all_urls = re.findall(r"<loc>([^<]+)</loc>", r.text)
     urls = [u for u in all_urls if re.search(url_pattern, u)]
+
+    # Optional crawl-efficiency filter: WordPress/MEC sitemaps list every event
+    # ever (1000+), but stale pages keep their old <lastmod> while current-season
+    # events get re-edited (bumped into the current year). lastmod is the page
+    # EDIT time, not the event date — so this is a generous proxy only: it prunes
+    # obviously-dead pages to avoid wasted fetches + throttle, and the per-page
+    # crawl still does real date filtering. Use a wide window so we never drop a
+    # real upcoming event that simply wasn't recently edited.
+    if min_lastmod_days is not None:
+        import datetime as _dt
+        # Map each matching loc to its <lastmod> by walking <url> blocks.
+        pairs = re.findall(r"<url>\s*<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", r.text)
+        lastmod_by_url = {u: m for (u, m) in pairs}
+        cutoff = _dt.date.today() - _dt.timedelta(days=min_lastmod_days)
+        kept = []
+        skipped_stale = 0
+        for u in urls:
+            lm = lastmod_by_url.get(u, "")[:10]
+            if not lm:
+                kept.append(u)  # no lastmod -> keep (can't judge)
+                continue
+            try:
+                lm_date = _dt.date.fromisoformat(lm)
+            except ValueError:
+                kept.append(u); continue
+            if lm_date >= cutoff:
+                kept.append(u)
+            else:
+                skipped_stale += 1
+        print(f"[sitemap] {source_name}: lastmod filter ({min_lastmod_days}d) "
+              f"kept {len(kept)} of {len(urls)} (skipped {skipped_stale} stale)")
+        urls = kept
+
     print(f"[sitemap] {source_name}: {len(urls)} URLs matching {url_pattern!r}")
 
     if max_pages and len(urls) > max_pages:
