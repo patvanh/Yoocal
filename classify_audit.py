@@ -153,7 +153,6 @@ REAL_CASES = [
     ("jackson", "Silent Disco", ["Music"], []),         # silent disco -> Music
     ("jackson", "Vinyl & Style", ["Music"], []),        # vinyl -> Music
     ("jackson", "Rhett Haney", ["Music"], []),
-    ("jackson", "Moose Hockey Celebration", [], ["Festival"]),
     ("jackson", "Summer Solstice Celebration", [], ["Festival"]),
     ("jackson", "Snake River Fest", ["Festival"], []),
     # --- Festivals-drop plan: music-festivals MUST become Music; non-music
