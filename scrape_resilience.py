@@ -105,15 +105,32 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
                                "incoming": incoming, "good": good,
                                "streak": streak})
             else:
-                # Degraded: substitute last-good events, keep good count.
+                # Degraded: retain last-good events so a throttled scrape doesn't
+                # gut the source — but UNION with the incoming events, so any NEW
+                # events the current (partial) scrape captured are still kept.
+                # Without this, a brand-new event (e.g. Midway Swiss Days, freshly
+                # added to a throttled source) would be dropped because it's not
+                # in the older snapshot. Dedup by (normalized title, date).
                 retained = snap.get("events") or []
-                out.extend(retained)
+                def _k(e):
+                    t = "".join((e.get("title") or "").lower().split())
+                    return (t, (e.get("date") or "")[:10])
+                seen_keys = set()
+                unioned = []
+                for e in retained + evs:  # retained first (last-good wins on tie)
+                    k = _k(e)
+                    if k in seen_keys:
+                        continue
+                    seen_keys.add(k)
+                    unioned.append(e)
+                out.extend(unioned)
                 snap["low_streak"] = streak
                 snap["date"] = today_iso  # note we saw it, but keep good count
                 state[source] = snap
                 report.append({"source": source, "status": "degraded_retained",
                                "incoming": incoming, "good": good,
-                               "retained": len(retained), "streak": streak})
+                               "retained": len(retained), "unioned": len(unioned),
+                               "streak": streak})
 
     _save_state(state, state_path)
     return out, report
