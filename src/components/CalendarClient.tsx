@@ -532,7 +532,9 @@ function FilterDropdown({
         onClick={() => setOpen(o => !o)}
         style={{
           display: 'inline-flex', alignItems: 'center', gap: 6,
+          justifyContent: 'space-between',
           padding: '7px 14px', fontSize: 13, fontWeight: 600,
+          minWidth: 150, boxSizing: 'border-box',
           borderRadius: 999, cursor: 'pointer',
           background: 'rgba(255,255,255,0.06)',
           border: '1px solid rgba(255,255,255,0.18)',
@@ -599,7 +601,9 @@ function MultiFilterDropdown({
         onClick={() => setOpen(o => !o)}
         style={{
           display: 'inline-flex', alignItems: 'center', gap: 6,
+          justifyContent: 'space-between',
           padding: '7px 14px', fontSize: 13, fontWeight: 600,
+          minWidth: 150, boxSizing: 'border-box',
           borderRadius: 999, cursor: 'pointer',
           background: active ? 'rgba(127,119,221,0.28)' : 'rgba(255,255,255,0.06)',
           border: active ? '1px solid rgba(127,119,221,0.6)' : '1px solid rgba(255,255,255,0.18)',
@@ -705,29 +709,10 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   const searchInputRef = useRef<HTMLInputElement | null>(null)
   const pickDateInputRef = useRef<HTMLInputElement | null>(null)
   const suppressOutsideRef = useRef<number>(0)
-  const [searchRect, setSearchRect] = useState<{top:number;left:number;width:number} | null>(null)
+  // Mount guard for client-only portals (e.g. the See-all overlay uses
+  // createPortal -> document.body, which doesn't exist during SSR).
   const [mounted, setMounted] = useState(false)
   useEffect(() => { setMounted(true) }, [])
-  useEffect(() => {
-    if (!dropdownOpen) { setSearchRect(null); return }
-    let rafId = 0
-    const update = () => {
-      if (rafId) return
-      rafId = requestAnimationFrame(() => {
-        rafId = 0
-        const r = searchInputRef.current?.getBoundingClientRect()
-        if (!r) return
-        setSearchRect({ top: r.bottom + 6, left: r.left, width: r.width })
-      })
-    }
-    update()
-    window.addEventListener('resize', update)
-    window.addEventListener('scroll', update, true)
-    return () => {
-      window.removeEventListener('resize', update)
-      window.removeEventListener('scroll', update, true)
-    }
-  }, [dropdownOpen])
 
   const dropdownRef = useRef<HTMLDivElement | null>(null)
   useEffect(() => {
