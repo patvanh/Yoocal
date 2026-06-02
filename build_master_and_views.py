@@ -994,13 +994,49 @@ def _venue_time_dedup(events: list) -> list:
         if len(members) == 1:
             out.append(members[0])
             continue
-        # Pick winner: best (lowest) source priority, then longest description
-        members.sort(key=lambda r: (
-            SOURCE_PRIORITY.get(r.get("source", ""), DEFAULT_PRIORITY),
-            -len(r.get("description") or ""),
-        ))
-        out.append(members[0])
-        dropped += len(members) - 1
+        # Same venue/date/time is a strong signal but NOT sufficient on its own:
+        # two genuinely different events can share an arena and start time (e.g.
+        # 'Mountain Valley Stampede Rodeo' and 'Mountain Valley Special Needs
+        # Round Up Rodeo' both 7pm at the rodeo grounds). Only collapse members
+        # whose titles are actually similar. Sub-group by title compatibility:
+        # a member joins a bucket if its normalized title is a substring of, or
+        # shares strong token overlap with, the bucket's representative.
+        def _title_compatible(t1, t2):
+            n1, n2 = _normalize_title(t1), _normalize_title(t2)
+            if not n1 or not n2:
+                return True  # can't judge -> allow (preserve old behavior)
+            if n1 == n2 or n1 in n2 or n2 in n1:
+                return True
+            s1, s2 = set(n1.split()), set(n2.split())
+            if not s1 or not s2:
+                return True
+            # Jaccard (intersection / UNION), not min-overlap. Min-overlap is
+            # fooled by shared boilerplate: 'Mountain Valley Stampede Rodeo' vs
+            # 'Mountain Valley Special Needs Round Up Rodeo' share 3 generic
+            # tokens (mountain/valley/rodeo) = 0.75 by min, but the
+            # distinguishing words differ entirely. Jaccard = 3/8 = 0.375,
+            # correctly judging them DIFFERENT. Keller variant titles still
+            # score high (mostly identical tokens) and merge.
+            jaccard = len(s1 & s2) / len(s1 | s2)
+            return jaccard >= 0.6
+        buckets = []  # list of [representative_title, [members]]
+        for e in members:
+            placed = False
+            for b in buckets:
+                if _title_compatible(b[0], e.get("title") or ""):
+                    b[1].append(e); placed = True; break
+            if not placed:
+                buckets.append([e.get("title") or "", [e]])
+        for _rep, bucket_members in buckets:
+            if len(bucket_members) == 1:
+                out.append(bucket_members[0])
+                continue
+            bucket_members.sort(key=lambda r: (
+                SOURCE_PRIORITY.get(r.get("source", ""), DEFAULT_PRIORITY),
+                -len(r.get("description") or ""),
+            ))
+            out.append(bucket_members[0])
+            dropped += len(bucket_members) - 1
 
     if dropped:
         print(f"  [venue-time-dedup] collapsed {dropped} same-venue same-time records")
