@@ -125,11 +125,25 @@ def _fetch_sitemap_urls():
 
 def _parse_show(url):
     """Fetch + parse a single show page. Returns event dict or None."""
-    try:
-        r = requests.get(url, headers=UA, timeout=15)
-        if r.status_code != 200:
-            return None
-    except Exception:
+    # Retry with backoff on throttle/transient errors. CloudFlare in front of
+    # this site rate-limits datacenter IPs (CI) far more aggressively than
+    # residential ones, returning 429/503; without retry those pages were
+    # silently dropped, so CI scraped ~40-66 events vs ~290 from a home IP.
+    import time as _t
+    r = None
+    for _attempt in range(4):
+        try:
+            r = requests.get(url, headers=UA, timeout=20)
+        except Exception:
+            _t.sleep(1.5 * (_attempt + 1))
+            continue
+        if r.status_code == 200:
+            break
+        if r.status_code in (429, 503, 502, 500):
+            _t.sleep(2.0 * (_attempt + 1))  # back off and retry
+            continue
+        return None  # genuine 4xx (404 etc.) — don't retry
+    if r is None or r.status_code != 200:
         return None
 
     decoded = html.unescape(r.text)
@@ -212,12 +226,13 @@ def scrape_mountain_town_music():
     parse_misses = 0
     past_dropped = 0
 
-    # Parallel fetches: 5 concurrent. CloudFlare in front of this site
-    # handles bursts fine; we just need to stay courteous.
+    # Parallel fetches: 2 concurrent (was 5). CloudFlare throttles CI's
+    # datacenter IP aggressively; fewer simultaneous requests + the retry/
+    # backoff in _parse_show keep the full set landing instead of ~40-66.
     def _job(u):
         return u, _parse_show(u)
 
-    with ThreadPoolExecutor(max_workers=5) as ex:
+    with ThreadPoolExecutor(max_workers=2) as ex:
         futures = [ex.submit(_job, url) for url, _ in pairs]
         for f in as_completed(futures):
             try:
