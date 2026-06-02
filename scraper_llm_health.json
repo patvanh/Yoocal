@@ -1,18 +1,24 @@
 {
-  "checked_at": "2026-06-02T15:01:46.371054-06:00",
-  "total_sources": 39,
+  "checked_at": "2026-06-02T17:47:45.048786-06:00",
+  "total_sources": 40,
   "sources_checked": 13,
   "sources_flagged": 1,
   "results": [
     {
       "source": "The Park Record",
-      "our_count": 740,
+      "our_count": 729,
       "status": "skipped_no_url",
       "url": null
     },
     {
       "source": "Park City Annual Events",
       "our_count": 423,
+      "status": "skipped_no_url",
+      "url": null
+    },
+    {
+      "source": "Mountain Town Music",
+      "our_count": 263,
       "status": "skipped_no_url",
       "url": null
     },
@@ -30,7 +36,13 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page uses JavaScript to render event listings; the 'Calendar of Events' section contains only an empty container div with no static HTML events visible."
+      "notes": "The events are loaded dynamically via JavaScript (layoutjsContainer div is empty in static HTML), so the actual event count cannot be determined from this raw HTML."
+    },
+    {
+      "source": "Jackson Hole Mountain Resort",
+      "our_count": 118,
+      "status": "skipped_no_url",
+      "url": null
     },
     {
       "source": "Heber Valley Tourism",
@@ -40,7 +52,7 @@
       "llm_count_on_page": 1,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page uses Vue.js templates with v-for loops to render events dynamically; static HTML shows only 1 featured event and empty template structures."
+      "notes": "Page uses Vue.js to render events dynamically; raw HTML shows template structure with v-for loops but no actual event data populated."
     },
     {
       "source": "Center for the Arts Jackson Hole",
@@ -49,42 +61,30 @@
       "status": "fetch_failed"
     },
     {
-      "source": "Jackson Hole Mountain Resort",
-      "our_count": 107,
-      "status": "skipped_no_url",
-      "url": null
-    },
-    {
       "source": "Visit Park City",
-      "our_count": 96,
+      "our_count": 100,
       "url": "https://www.visitparkcity.com/events/",
       "status": "checked",
-      "llm_count_on_page": 10,
+      "llm_count_on_page": 9,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page uses JavaScript to render event cards; static HTML shows empty slider containers and placeholder card structures with no event data populated."
+      "notes": "Page requires JavaScript execution to render event cards; static HTML shows only featured events list with 9 items and empty slider containers."
     },
     {
       "source": "Egyptian Theatre",
       "our_count": 86,
       "url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "status": "checked",
-      "llm_count_on_page": 23,
+      "llm_count_on_page": 21,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 23 distinct events across June-Dec 2026 and Feb 2027; 86 cumulative events in database across many scrapes is plausible given pagination/full listing access."
+      "notes": "Page displays 21 distinct upcoming events across June-December 2026 and February 2027; database count of 86 is plausibly correct as cumulative total from many scrapes over time."
     },
     {
       "source": "Grand Teton Music Festival",
       "our_count": 77,
       "url": "https://gtmf.org/concerts/",
       "status": "fetch_failed"
-    },
-    {
-      "source": "Mountain Town Music",
-      "our_count": 66,
-      "status": "skipped_no_url",
-      "url": null
     },
     {
       "source": "Deer Valley Resort",
@@ -94,7 +94,7 @@
       "llm_count_on_page": 60,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 60 events in a JSON results variable; scraper's cumulative 65 count across multiple runs is plausibly consistent with ongoing event additions."
+      "notes": "Page shows 60 events found; scraper's cumulative 65 across many runs is plausibly close and accounts for additional scrapes over time."
     },
     {
       "source": "Million Dollar Cowboy Bar",
@@ -122,7 +122,7 @@
     },
     {
       "source": "Google Events",
-      "our_count": 46,
+      "our_count": 48,
       "status": "skipped_no_url",
       "url": null
     },
@@ -134,13 +134,13 @@
     },
     {
       "source": "Visit Park City (sitemap)",
-      "our_count": 26,
+      "our_count": 24,
       "url": "https://www.visitparkcity.com/events/",
       "status": "checked",
-      "llm_count_on_page": 10,
+      "llm_count_on_page": 9,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page requires JavaScript execution; dropdown menus and card sliders are empty in static HTML, showing only featured event links in text (9 listed) plus 1 card placeholder visible."
+      "notes": "Page requires JavaScript execution to render event cards; static HTML shows only 2 visible event titles in a textbox section, with empty card placeholders below."
     },
     {
       "source": "Park City Farmers Market",
@@ -150,7 +150,7 @@
       "llm_count_on_page": 10,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 10 blog posts about farmers market events (openings, applications, vendor spotlights); cumulative scraper count of 21 across many runs is plausibly correct given historical posts."
+      "notes": "Page shows 10 blog posts about farmers market events; database count of 21 is plausible as cumulative across multiple scrapes over time."
     },
     {
       "source": "Heber Valley Life",
@@ -166,7 +166,7 @@
       "llm_count_on_page": 12,
       "page_status": "healthy",
       "judgment": "scraper_likely_missing_events",
-      "notes": "Page shows 12 upcoming Lake Deck music events in June 2026 carousel, plus button to full Entertainment Calendar; 84 total events in database likely includes past events, spa events, and other entertainment categories not fully visible in this static HTML.",
+      "notes": "Page shows 12 Lake Deck music events in carousel, but database has 84 total; scraper should check calendar page and other event categories (spa events, brunches, jazz festival, Christmas market, etc.) for complete coverage.",
       "flagged_reason": "LLM judgment: scraper likely missing events"
     },
     {
@@ -177,17 +177,23 @@
       "llm_count_on_page": 15,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 15 distinct concert events with full details, dates, and ticket links; database count of 15 aligns well with visible events."
+      "notes": "Page displays 15 distinct concert events with full details, dates, and ticket purchase buttons in static HTML; database count of 15 matches visible events."
     },
     {
       "source": "Mountain Trails Foundation",
       "our_count": 14,
       "url": "https://www.mountaintrails.org/events/",
       "status": "checked",
-      "llm_count_on_page": 0,
+      "llm_count_on_page": 5,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page contains only navigation and hero section; event content appears to be rendered dynamically via JavaScript after page load."
+      "notes": "Page contains empty View containers and encoded style divs indicating event content is rendered via JavaScript, not present in static HTML."
+    },
+    {
+      "source": "RunningInTheUSA Jackson",
+      "our_count": 14,
+      "status": "skipped_no_url",
+      "url": null
     },
     {
       "source": "Road America",
@@ -197,7 +203,7 @@
       "llm_count_on_page": 10,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 10 distinct upcoming events (excluding past events like MotoAmerica and Spring Vintage); database count of 14 likely includes past/archived events from previous scrapes."
+      "notes": "Page shows 10 distinct upcoming events (excluding past events and non-event items like Season Pass and Event Calendar); database count of 14 is plausible given multiple scrapes over time."
     },
     {
       "source": "Park City Opera",
@@ -246,10 +252,10 @@
       "our_count": 36,
       "url": "https://www.siebkens.com/events/",
       "status": "checked",
-      "llm_count_on_page": 15,
+      "llm_count_on_page": 14,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 15 distinct upcoming events in June-July 2026; database total of 36 likely includes past events and multiple scrapes over time."
+      "notes": "Page shows 14 visible events in photo gallery layout; database count of 36 likely includes past events, pagination, and multiple scrape runs over time."
     },
     {
       "source": "Deer Valley Music Festival",
@@ -289,7 +295,7 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page uses The Events Calendar plugin with dynamic JS rendering; static HTML shows empty calendar table and 'no upcoming events' message, but indicates 35 events exist via loader text and past events visible."
+      "notes": "The calendar table is empty in static HTML, events are loaded via JavaScript (The Events Calendar plugin with REST API calls), making it impossible to assess scraper accuracy from this HTML alone."
     }
   ],
   "flagged": [
@@ -301,7 +307,7 @@
       "llm_count_on_page": 12,
       "page_status": "healthy",
       "judgment": "scraper_likely_missing_events",
-      "notes": "Page shows 12 upcoming Lake Deck music events in June 2026 carousel, plus button to full Entertainment Calendar; 84 total events in database likely includes past events, spa events, and other entertainment categories not fully visible in this static HTML.",
+      "notes": "Page shows 12 Lake Deck music events in carousel, but database has 84 total; scraper should check calendar page and other event categories (spa events, brunches, jazz festival, Christmas market, etc.) for complete coverage.",
       "flagged_reason": "LLM judgment: scraper likely missing events"
     }
   ]

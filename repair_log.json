@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-02T20:59:38.073886",
+  "generated_at": "2026-06-02T23:45:41.369832",
   "audit_date": "2026-06-02",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1562,
+      "before_count": 1750,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -23,16 +23,16 @@
               "had_span": 181
             },
             {
+              "title": "Old Town walking tour",
+              "had_span": 71
+            },
+            {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
             },
             {
               "title": "Fascia Rolling Class",
               "had_span": 181
-            },
-            {
-              "title": "Old Town walking tour",
-              "had_span": 71
             }
           ]
         },
@@ -117,7 +117,7 @@
           ]
         },
         "classification": {
-          "fixed": 314,
+          "fixed": 311,
           "examples": [
             {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
@@ -157,8 +157,8 @@
           ]
         }
       },
-      "after_count": 1567,
-      "total_fixes": 344
+      "after_count": 1755,
+      "total_fixes": 341
     },
     {
       "city": "elkhart-lake",
@@ -226,7 +226,7 @@
     },
     {
       "city": "heber",
-      "before_count": 238,
+      "before_count": 240,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -264,7 +264,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 7,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -273,9 +273,9 @@
               "duration_hours": 1
             },
             {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
+              "title": "Comedy Magic Show - Anthony the Magic",
+              "start_time": "8:30 PM",
+              "new_end_time": "10:30 PM",
               "duration_hours": 2
             },
             {
@@ -359,12 +359,12 @@
           ]
         }
       },
-      "after_count": 241,
-      "total_fixes": 22
+      "after_count": 243,
+      "total_fixes": 23
     },
     {
       "city": "jackson",
-      "before_count": 614,
+      "before_count": 639,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -484,7 +484,7 @@
           "examples": []
         }
       },
-      "after_count": 629,
+      "after_count": 654,
       "total_fixes": 27
     }
   ]

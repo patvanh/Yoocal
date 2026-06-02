@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-06-02T14:59:38.852270-06:00",
+  "checked_at": "2026-06-02T17:45:42.168471-06:00",
   "today": "2026-06-02",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 740,
+        "actual": 729,
         "baseline": 771,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=740, baseline=771"
+        "message": "actual=729, baseline=771"
       },
       {
         "source": "Park City Annual Events",
@@ -20,20 +20,20 @@
         "message": "actual=423, baseline=429"
       },
       {
+        "source": "Mountain Town Music",
+        "actual": 263,
+        "baseline": 195.2,
+        "floor": 50,
+        "severity": "OK",
+        "message": "actual=263, baseline=195"
+      },
+      {
         "source": "Visit Park City",
-        "actual": 96,
+        "actual": 100,
         "baseline": 63.6,
         "floor": 15,
         "severity": "ELEVATED",
-        "message": "actual=96, baseline=64 (151% of normal)"
-      },
-      {
-        "source": "Mountain Town Music",
-        "actual": 66,
-        "baseline": 195.2,
-        "floor": 50,
-        "severity": "DEGRADED",
-        "message": "actual=66, baseline=195 (34% of normal)"
+        "message": "actual=100, baseline=64 (157% of normal)"
       },
       {
         "source": "Deer Valley Resort",
@@ -53,11 +53,11 @@
       },
       {
         "source": "Visit Park City (sitemap)",
-        "actual": 26,
+        "actual": 24,
         "baseline": 27,
         "floor": 15,
         "severity": "OK",
-        "message": "actual=26, baseline=27"
+        "message": "actual=24, baseline=27"
       },
       {
         "source": "Park City Farmers Market",
@@ -193,11 +193,11 @@
       },
       {
         "source": "Google Events",
-        "actual": 46,
+        "actual": 48,
         "baseline": 48.2,
         "floor": null,
         "severity": "OK",
-        "message": "actual=46, baseline=48"
+        "message": "actual=48, baseline=48"
       },
       {
         "source": "TownLift",
@@ -274,20 +274,20 @@
         "message": "actual=153, baseline=171"
       },
       {
+        "source": "Jackson Hole Mountain Resort",
+        "actual": 118,
+        "baseline": 8.6,
+        "floor": null,
+        "severity": "ELEVATED",
+        "message": "actual=118, baseline=9 (1372% of normal)"
+      },
+      {
         "source": "Center for the Arts Jackson Hole",
         "actual": 117,
         "baseline": 115.6,
         "floor": 30,
         "severity": "OK",
         "message": "actual=117, baseline=116"
-      },
-      {
-        "source": "Jackson Hole Mountain Resort",
-        "actual": 107,
-        "baseline": 8.6,
-        "floor": null,
-        "severity": "ELEVATED",
-        "message": "actual=107, baseline=9 (1244% of normal)"
       },
       {
         "source": "Grand Teton Music Festival",
@@ -320,6 +320,14 @@
         "floor": 20,
         "severity": "OK",
         "message": "actual=49, baseline=50"
+      },
+      {
+        "source": "RunningInTheUSA Jackson",
+        "actual": 14,
+        "baseline": 14,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=14, baseline=14"
       },
       {
         "source": "Grand Targhee Resort",
