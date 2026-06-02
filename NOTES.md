@@ -1323,3 +1323,33 @@ NEXT: after next CI scrape, check chamber count in raw events-jackson.json.
   - If still ~147 → throttle is on the 231 per-page fetches in CI; escalate to
     longer backoff or Firecrawl for the chamber. Read the CI diagnostic line
     "X future, Y past, Z failed of N URLs" to localize.
+
+## 2026-06-02 — Jackson investigation + recurring-event fix
+FIXED (shipped, commits e723fd6 + 922ad1b):
+- Recurring events with PAST start dates were silently dropped (schema_org_scraper
+  dropped them as "past" before applying the "Recurring weekly on <day>" stamp).
+  e.g. weekly karaoke (started Jan, recurs Wed) vanished. Now: recurrence checked
+  BEFORE past-drop; past start bumped to today; 180-day forward window; build
+  fan-out expands to occurrences. Verified karaoke -> 26 Wednesdays.
+
+DIAGNOSED (not bugs):
+- Jackson chamber scrape is HEALTHY: 220 events, 0 failed of 231 URLs. No throttle.
+  (The old "147 vs 218" throttle theory was wrong — home scrape gets 220 clean.)
+- jackson_scraper dedup fine (only ~6 minor colon-split merges).
+- ROOT GAP: Jackson is genuinely UNDER-SOURCED. 6.1 events/day vs Park City 10/day.
+  Park City has 2 huge aggregators (Park Record 581, Visit Park City 746). Jackson
+  has no equivalent.
+
+TODO — Jackson source expansion (each is its own integration project):
+- jacksonholewy.com/events/ — official tourism DMO, BUT custom JS platform (no
+  tribe API, no sitemap, no simpleview markers). Needs API discovery or Firecrawl.
+- JH News & Guide (jhnewsandguide.com) — TNCMS newspaper; events not in article
+  sitemap; find calendar system.
+- PlanetJH, Teton Valley ID (Driggs/Victor) regional spillover — wider radius idea.
+
+OTHER OPEN (from this session):
+- search shows today-only after default reverted to 'today' (want all-upcoming on
+  search via a 'dayFilterTouched' flag)
+- ~5-8 real cross-source dups (e.g. "Joe Hill lecture" vs "Lecture")
+- America250 daily over-listing (Heber source lists daily for a month)
+- build a standing data-quality audit script (systematic, not whack-a-mole)
