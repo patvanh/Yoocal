@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-01T22:22:34.215570",
-  "audit_date": "2026-06-01",
+  "generated_at": "2026-06-02T20:59:38.073886",
+  "audit_date": "2026-06-02",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1526,
+      "before_count": 1562,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -16,15 +16,23 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 2,
+          "fixed": 4,
           "examples": [
+            {
+              "title": "Group Fitness Classes",
+              "had_span": 181
+            },
             {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
             },
             {
-              "title": "(Re)sounding: Art Exhibition",
-              "had_span": 105
+              "title": "Fascia Rolling Class",
+              "had_span": 181
+            },
+            {
+              "title": "Old Town walking tour",
+              "had_span": 71
             }
           ]
         },
@@ -109,22 +117,8 @@
           ]
         },
         "classification": {
-          "fixed": 316,
+          "fixed": 314,
           "examples": [
-            {
-              "title": "Fascia Rolling Class",
-              "before": [],
-              "after": [
-                "Wellness"
-              ]
-            },
-            {
-              "title": "Group Fitness Classes",
-              "before": [],
-              "after": [
-                "Government"
-              ]
-            },
             {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
               "before": [],
@@ -145,11 +139,25 @@
               "after": [
                 "Community"
               ]
+            },
+            {
+              "title": "Fascia Rolling Class",
+              "before": [],
+              "after": [
+                "Wellness"
+              ]
+            },
+            {
+              "title": "Rise + Release: Block",
+              "before": [],
+              "after": [
+                "Wellness"
+              ]
             }
           ]
         }
       },
-      "after_count": 1531,
+      "after_count": 1567,
       "total_fixes": 344
     },
     {
@@ -218,7 +226,7 @@
     },
     {
       "city": "heber",
-      "before_count": 231,
+      "before_count": 238,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -256,7 +264,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 5,
+          "fixed": 6,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -351,12 +359,12 @@
           ]
         }
       },
-      "after_count": 234,
-      "total_fixes": 21
+      "after_count": 241,
+      "total_fixes": 22
     },
     {
       "city": "jackson",
-      "before_count": 521,
+      "before_count": 614,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -367,28 +375,28 @@
           "examples": [
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 111
+              "had_span": 110
             },
             {
               "title": "Music Classes",
-              "had_span": 1675
+              "had_span": 1674
             },
             {
               "title": "Visual Arts Classes",
-              "had_span": 1675
+              "had_span": 1674
             },
             {
               "title": "Writing Classes and Workshops",
-              "had_span": 1675
+              "had_span": 1674
             },
             {
               "title": "Dance and Movement Classes",
-              "had_span": 1675
+              "had_span": 1674
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 3,
+          "fixed": 6,
           "examples": [
             {
               "title": "Teton Mudpots Summer Sale",
@@ -397,6 +405,23 @@
                 "2026-06-17",
                 "2026-06-18",
                 "2026-06-19"
+              ]
+            },
+            {
+              "title": "Rodeo Tent Sale",
+              "original_span": "2026-06-25 to 2026-06-27",
+              "split_into": [
+                "2026-06-25",
+                "2026-06-26",
+                "2026-06-27"
+              ]
+            },
+            {
+              "title": "Teton Mountain Runs 50K, 30K, 15K",
+              "original_span": "2026-07-11 to 2026-07-12",
+              "split_into": [
+                "2026-07-11",
+                "2026-07-12"
               ]
             },
             {
@@ -420,8 +445,14 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 2,
+          "fixed": 13,
           "examples": [
+            {
+              "title": "Karaoke at The Virginian Saloon",
+              "start_time": "8:00 PM",
+              "new_end_time": "11:00 PM",
+              "duration_hours": 3
+            },
             {
               "title": "Little Wings Story Time",
               "start_time": "11:00 AM",
@@ -433,6 +464,18 @@
               "start_time": "8:00 PM",
               "new_end_time": "9:00 PM",
               "duration_hours": 1
+            },
+            {
+              "title": "Red, White and Tunes Friday Show",
+              "start_time": "6:00 PM",
+              "new_end_time": "8:00 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Red, White and Tunes Saturday Show",
+              "start_time": "6:00 PM",
+              "new_end_time": "8:00 PM",
+              "duration_hours": 2
             }
           ]
         },
@@ -441,8 +484,8 @@
           "examples": []
         }
       },
-      "after_count": 527,
-      "total_fixes": 13
+      "after_count": 629,
+      "total_fixes": 27
     }
   ]
 }
