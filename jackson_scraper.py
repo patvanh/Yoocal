@@ -93,6 +93,22 @@ SITEMAP_SOURCES = [
         "default_city": "Jackson, WY",
         "default_categories": ["Arts"],
     },
+    {
+        # JacksonHole.com (Teton Village resort portal): People's Market, Snake
+        # River Fest, Bike Park, Sunday Funday, Met Opera in HD, etc. Nuxt/Vue
+        # app whose event pages embed HTML-ENTITY-ENCODED schema.org Event
+        # JSON-LD (&quot; not "). schema_org_scraper now unescapes before parse,
+        # so the plain sitemap path works — 119 future events, no API key.
+        # (Replaces the old Firecrawl extractor for this domain, which got 7.)
+        "sitemap_url": "https://www.jacksonhole.com/sitemap.xml",
+        "url_pattern": r"/events/[a-z0-9-]+$",
+        "source_name": "Jackson Hole Mountain Resort",
+        "default_lat": 43.5875,
+        "default_lng": -110.8279,
+        "default_city": "Teton Village, WY",
+        "default_categories": ["Outdoors"],
+        "delay_seconds": 0.5,
+    },
 ]
 
 
@@ -145,14 +161,6 @@ FIRECRAWL_SOURCES = [
         "default_lat": 43.7871,
         "default_lng": -110.9596,
         "default_city": "Alta, WY",
-        "default_categories": [],
-    },
-    {
-        "url": "https://www.jacksonhole.com/events",
-        "source_name": "Jackson Hole Mountain Resort",
-        "default_lat": JACKSON_LAT,
-        "default_lng": JACKSON_LNG,
-        "default_city": "Jackson, WY",
         "default_categories": [],
     },
 ]

@@ -353,8 +353,18 @@ def _find_events_in_block(block):
     try:
         data = json.loads(cleaned)
     except Exception:
-        # Try regex fallback
-        return _regex_extract_events(block)
+        # Some sites (e.g. jacksonhole.com, a Nuxt/Vue app) HTML-entity-encode
+        # their JSON-LD: &quot;startDate&quot; instead of "startDate". That fails
+        # json.loads above. Unescape and retry BEFORE the regex fallback — this
+        # unlocks entity-encoded schema sources. Clean sources never reach here
+        # (they parsed on the first try), so this is risk-free for them.
+        try:
+            unescaped = html.unescape(cleaned)
+            data = json.loads(unescaped)
+        except Exception:
+            # Try regex fallback (also unescape the block so the regex sees
+            # clean "startDate" / "name" tokens).
+            return _regex_extract_events(html.unescape(block))
 
     items = data if isinstance(data, list) else [data]
     for item in items:
