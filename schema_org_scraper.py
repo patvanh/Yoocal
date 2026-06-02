@@ -217,8 +217,10 @@ def scrape_schema_org_events(
             if parsed["date"] < today_iso:
                 parsed["date"] = today_iso
             if not parsed.get("end_date") or parsed["end_date"] < today_iso:
-                # Default forward window for recurrence fan-out (90 days).
-                _end = datetime.now() + timedelta(days=90)
+                # Forward window for recurrence fan-out. Matches the build's own
+                # open-ended weekly default (180 days) so projection depth is
+                # consistent whether the window is set here or in the build.
+                _end = datetime.now() + timedelta(days=180)
                 parsed["end_date"] = _end.strftime("%Y-%m-%d")
         else:
             # Non-recurring: keep only if start OR end is today/future.
