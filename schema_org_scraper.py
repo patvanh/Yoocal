@@ -32,7 +32,7 @@ Recognized event types (all converted to yoocal events):
 import re
 import json
 import html
-from datetime import datetime
+from datetime import datetime, timedelta
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -207,15 +207,29 @@ def scrape_schema_org_events(
         if not parsed:
             dropped_unparseable += 1
             continue
-        # Keep event if either start OR end date is today/future
-        eff_end = parsed.get("end_date") or parsed["date"]
-        if eff_end < today_iso:
-            dropped_past += 1
-            continue
-        # If start is past but end is future, bump date forward to today
-        # so the event shows up on current+future days
-        if parsed["date"] < today_iso <= eff_end:
-            parsed["date"] = today_iso
+        # Recurring events (page declares "Recurring weekly on <day>") describe an
+        # ONGOING schedule, so a past start date does NOT mean the event is over —
+        # e.g. weekly karaoke that started in January is still happening now. For
+        # these, give the build fan-out a forward window: bump the start to today
+        # and ensure an end_date exists so the engine expands future occurrences.
+        # MUST run before the past-drop below, or these get killed prematurely.
+        if page_recurrence:
+            if parsed["date"] < today_iso:
+                parsed["date"] = today_iso
+            if not parsed.get("end_date") or parsed["end_date"] < today_iso:
+                # Default forward window for recurrence fan-out (90 days).
+                _end = datetime.now() + timedelta(days=90)
+                parsed["end_date"] = _end.strftime("%Y-%m-%d")
+        else:
+            # Non-recurring: keep only if start OR end is today/future.
+            eff_end = parsed.get("end_date") or parsed["date"]
+            if eff_end < today_iso:
+                dropped_past += 1
+                continue
+            # If start is past but end is future, bump date forward to today
+            # so the event shows up on current+future days.
+            if parsed["date"] < today_iso <= eff_end:
+                parsed["date"] = today_iso
 
         # If JSON-LD didn't supply start_time, try to extract from visible HTML
         if not parsed.get("start_time"):
