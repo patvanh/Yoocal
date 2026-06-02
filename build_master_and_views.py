@@ -957,6 +957,69 @@ def _normalize_time(t: str) -> str:
     return f"{h:02d}:{mn:02d}"
 
 
+def _cross_source_fuzzy_merge(events: list) -> list:
+    """Same-date, cross-source near-duplicate titles that exact-match and
+    _prefix_merge miss (word reorder, dropped/added leading word, curly-quote
+    or em-dash punctuation, single-char typo). DIFFERENT sources only; token-set
+    Jaccard >= 0.85; hard block when the symmetric token diff contains a
+    race-distance or bare-number token (so '7K' vs 'Half Marathon' and different
+    acts in a shared series stay separate). Winner via merge_events."""
+    from collections import defaultdict as _dd
+    import re as _re
+    _RACE_NUM = _re.compile(r"^(\d+\s*k|\d+\s*mile|half|marathon|\d{2,4})$")
+
+    def _compatible(t1, t2):
+        n1, n2 = _normalize_title(t1 or ""), _normalize_title(t2 or "")
+        if not n1 or not n2:
+            return False
+        if n1 == n2:
+            return True
+        s1, s2 = set(n1.split()), set(n2.split())
+        if not s1 or not s2:
+            return False
+        diff = s1 ^ s2
+        if any(_RACE_NUM.match(tok) for tok in diff):
+            return False
+        # (a) high token-set overlap (reorder / one-word diff / punctuation)
+        if len(s1 & s2) / len(s1 | s2) >= 0.75:
+            return True
+        # (b) full-subset case: one title's tokens are wholly contained in the
+        # other (e.g. "Until Dawn" inside "...Live Music by Until Dawn", or
+        # "Farmers & Artisans Market" inside "Elkhart Lake Farmers & Artisans
+        # Market"). Jaccard is low here because the wrapper adds many tokens, but
+        # it is the same event. Guard against generic short subsets ("Live
+        # Music", "Concert") by requiring the SHORTER title to carry >= 2
+        # distinctive (non-stopword) tokens.
+        _STOP = {"the", "a", "an", "of", "by", "at", "in", "on", "and", "live",
+                 "music", "event", "events", "series", "with", "to", "for"}
+        small, big = (s1, s2) if len(s1) <= len(s2) else (s2, s1)
+        if small.issubset(big) and len(small - _STOP) >= 2:
+            return True
+        return False
+
+    by_date = _dd(list)
+    for e in events:
+        by_date[(e.get("date") or "")[:10]].append(e)
+    out = []
+    merged = 0
+    for _date, group in by_date.items():
+        dropped = [False] * len(group)
+        for i in range(len(group)):
+            if dropped[i]:
+                continue
+            for j in range(i + 1, len(group)):
+                if dropped[j] or group[i].get("source") == group[j].get("source"):
+                    continue
+                if _compatible(group[i].get("title"), group[j].get("title")):
+                    group[i] = merge_events([group[i], group[j]])
+                    dropped[j] = True
+                    merged += 1
+        out.extend(e for k, e in enumerate(group) if not dropped[k])
+    if merged:
+        print(f"  [cross-source-merge] merged {merged} cross-source near-duplicates")
+    return out
+
+
 def _venue_time_dedup(events: list) -> list:
     """Collapse records sharing the same (normalized_venue, date, start_time).
 
@@ -1172,6 +1235,12 @@ def main():
     # Second pass: merge suffix-variant dupes the (title,date) key missed.
     deduped = _prefix_merge(deduped)
     print(f"After prefix-merge: {len(deduped)}")
+
+    # Third pass: cross-source near-dupes (reorder/prefix/punctuation/typo) that
+    # exact-match + prefix-merge miss. Different-source only, Jaccard>=0.85,
+    # race/number guard. See _cross_source_fuzzy_merge.
+    deduped = _cross_source_fuzzy_merge(deduped)
+    print(f"After cross-source-merge: {len(deduped)}")
     
     # Third pass: drop low-trust aggregator records (Google Events, Eventbrite)
     # that duplicate higher-quality sources. Conservative — only suppresses
