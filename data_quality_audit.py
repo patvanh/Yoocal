@@ -413,6 +413,42 @@ def check_field_health(events, max_ex):
     }
 
 
+def check_ongoing_dropped(events, max_ex):
+    """C8: ongoing date-range events (past start, future end) should EXIST.
+
+    Seasonal/multi-week events — scenic trains, summer exhibits, 'all summer'
+    attractions, long recurring runs — have a start date in the past and an end
+    date in the future. A healthy dataset always has some. ZERO is the signature
+    of a scraper dropping the whole class as 'past' before checking end_date
+    (the Deer Creek Express bug, dropped repeatedly in scraper.py). We flag a
+    near-empty count as a likely systematic drop, and also surface any single
+    event whose end_date is in the future but whose start was dropped to a
+    suspiciously-late value (best-effort)."""
+    ongoing = []
+    for e in events:
+        d = ev_date(e); end = ev_end(e)
+        if d and end and d <= TODAY_ISO <= end:
+            ongoing.append(e)
+    # Heuristic: a city/dataset with events but ZERO ongoing-range events almost
+    # certainly has the class-drop bug. Flag HIGH on zero, when there's data.
+    # Require a higher event floor so small towns (which legitimately may have
+    # no currently-running multi-week event) don't false-alarm. 500+ events with
+    # zero ongoing-range events is the real signature of a class-drop bug.
+    suspicious = (len(events) >= 500 and len(ongoing) == 0)
+    return {
+        "code": "C8",
+        "name": "ONGOING-DROPPED",
+        "severity": MED if suspicious else LOW,
+        "count": 0 if not suspicious else 1,
+        "desc": "Date-range events (past start, future end) are MISSING entirely "
+                "(0 found in a populated dataset) — signature of a scraper dropping "
+                "ongoing/seasonal events as 'past' before checking end_date.",
+        "examples": [{"ongoing_events_found": len(ongoing),
+                      "note": "expected > 0 for any populated city; 0 = likely class-drop bug"}]
+                     if suspicious else [{"ongoing_events_found": len(ongoing)}],
+    }
+
+
 ALL_CHECKS = [
     check_recurring_dropped,
     check_multiday_gap,
@@ -420,6 +456,7 @@ ALL_CHECKS = [
     check_bad_dates,
     check_cross_source_dup,
     check_field_health,
+    check_ongoing_dropped,
     # C6 handled separately (needs baseline + city)
 ]
 

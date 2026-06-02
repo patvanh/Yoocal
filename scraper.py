@@ -369,10 +369,16 @@ def scrape_visit_park_city():
                             continue
                         start_date = nxt.strftime("%Y-%m-%d")
                     else:
-                        # Non-recurring event with a past date, OR monthly with
-                        # no parseable day — we can't trust it lands today. Drop
-                        # it rather than show a wrong date.
-                        continue
+                        # Past start date, not cleanly recurring. Before dropping,
+                        # check for an ONGOING date range: a future end_date means
+                        # the event is still running (e.g. Deer Creek Express, a
+                        # seasonal Jan-Oct scenic train; summer exhibits). Keep it
+                        # and bump the display date to today. Only a truly expired
+                        # one-time event (no future end_date) is dropped.
+                        if end_date and end_date >= today_str:
+                            start_date = today_str
+                        else:
+                            continue
                 location = doc.get("location") or "Park City, UT"
                 url_path = doc.get("url") or ""
                 link = f"https://www.visitparkcity.com{url_path}" if url_path and not url_path.startswith("http") else (url_path or "https://www.visitparkcity.com/events/")
