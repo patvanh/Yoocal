@@ -1353,3 +1353,31 @@ OTHER OPEN (from this session):
 - ~5-8 real cross-source dups (e.g. "Joe Hill lecture" vs "Lecture")
 - America250 daily over-listing (Heber source lists daily for a month)
 - build a standing data-quality audit script (systematic, not whack-a-mole)
+
+## 2026-06-02 (cont) — Jackson source expansion via discover_sources_v3
+RAN discover_sources_v3.py --city "Jackson Hole Wyoming" (clean unbuffered run,
+91 domains probed, 39 actionable findings -> pending_sources_v3.json).
+
+ADDED (committed):
+- jacksonhole.com: 7 (firecrawl) -> 119 (sitemap+schema). Required the
+  entity-encoded-JSON-LD decode fix in schema_org_scraper.py. Big win.
+
+EVALUATED, NOT added (with reasons):
+- snowkingmountain.com (tribe, 24 concerts): ALREADY covered via The Cloudveil
+  (21 Snow King concerts, richer titles "+ opener at Snow King"). Redundant.
+- buckrail.com (RSS, "60"): NEWS HEADLINES, not events (council decisions, WYDOT
+  work, election announcements). RSS stamps publish-date. Would pollute calendar.
+- jhnordic.com (tribe): only 1 future event (seasonal Nordic, off-season now).
+- thewort.com (tribe): endpoint returns non-JSON, not viable.
+- tetonscience.org: 18 sitemap URLs but not at /event/ or /events/ path.
+
+REMAINING thin candidates in pending_sources_v3.json (future incremental adds,
+~3-6 events each, need param/path verification): jacksonholenet.com,
+jacksonholewy.net, dishingjh.com (dining, tribe), jhnewsandguide.com (/calendar/,
+6), jhpublicart.org, artassociation.org, jhlandtrust.org.
+
+CONCLUSION: Jackson is genuinely a smaller market — no hidden major aggregator
+exists (discovery confirmed). jacksonhole.com (+119) was the real prize. Long
+tail is thin/partly illusory (news mis-tagged as events, seasonal, redundant).
+Suspicious-huge sitemaps (astoriahotspringspark 146, mentalwellnessjh 382,
+findarace 2879, velo22 118) correctly auto-flagged low/poor-data by the tool.
