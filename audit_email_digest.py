@@ -88,10 +88,20 @@ def _source_anomalies(history):
                 continue
             change = (cur - avg) / avg
             if abs(change) >= ANOMALY_PCT:
+                # Distinguish a PERSISTENT decline (real break — the count has
+                # been at/below this low for multiple consecutive days) from a
+                # SINGLE-DAY dip (one off scrape, or dedup variation — usually
+                # self-corrects and is not alarming). Only drops get this tag.
+                persistent = False
+                if change < 0 and len(pts) >= 3:
+                    last3 = [p.get("count", 0) for p in pts[-3:]]
+                    # all of the last 3 days are well below the prior average
+                    persistent = all(c < avg * (1 - ANOMALY_PCT) for c in last3)
                 flagged.append({
                     "city": city, "source": src,
                     "current": cur, "avg": round(avg, 1),
                     "change": change, "date": latest.get("date"),
+                    "persistent": persistent,
                 })
     flagged.sort(key=lambda f: abs(f["change"]), reverse=True)
     return flagged
@@ -221,6 +231,18 @@ def render_html(audit, repair, llm_health=None, baselines=None, guard_state=None
                 retained = (
                     f'<div style="font-size:11px;color:#065f46;margin-top:2px">'
                     f'&#10003; retained by guard — {g.get("count", 0)} events still live</div>'
+                )
+            elif a["change"] < 0 and not a.get("persistent"):
+                # One-off dip, not a sustained decline — usually a transient
+                # scrape or duplicates removed by dedup, not lost coverage.
+                retained = (
+                    f'<div style="font-size:11px;color:#6b7280;margin-top:2px">'
+                    f'single-day dip — likely transient or dedup cleanup, not a confirmed loss</div>'
+                )
+            elif a["change"] < 0 and a.get("persistent"):
+                retained = (
+                    f'<div style="font-size:11px;color:#b91c1c;margin-top:2px">'
+                    f'&#9888; down 3+ days running — check this scraper</div>'
                 )
             anom_rows.append(
                 f'<tr style="border-bottom:1px solid #f0f0f0">'
