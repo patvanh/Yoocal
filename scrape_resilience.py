@@ -34,7 +34,7 @@ CATASTROPHIC_FRACTION = 0.20  # a drop below 20% of baseline is treated as
                               # failure/throttling, NEVER auto-accepted as the
                               # new normal — retained indefinitely until recovery
 MIN_BASELINE = 8          # don't guard tiny sources
-MAX_STORED_EVENTS = 100   # cap events stored per source (keeps state file small)
+# (cap removed) retain the FULL event set so a failed source recovers fully.
 
 
 def _load_state(path=STATE_FILE):
@@ -50,6 +50,19 @@ def _load_state(path=STATE_FILE):
 def _save_state(state, path=STATE_FILE):
     with open(path, "w") as f:
         json.dump(state, f, indent=2)
+
+
+def _future_only(events, today_iso):
+    """Keep only events on/after today (or with a future end_date). Prevents a
+    long-failed source's frozen snapshot from serving events that have since
+    passed, and keeps the state file from hoarding stale rows."""
+    out = []
+    for e in events:
+        d = (e.get("date") or "")[:10]
+        end = (e.get("end_date") or "")[:10]
+        if (d and d >= today_iso) or (end and end >= today_iso):
+            out.append(e)
+    return out
 
 
 def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
@@ -80,7 +93,7 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
         if not snap or snap.get("count", 0) < MIN_BASELINE:
             out.extend(evs)
             state[source] = {"count": incoming, "date": today_iso,
-                             "low_streak": 0, "events": evs[:MAX_STORED_EVENTS]}
+                             "low_streak": 0, "events": evs}
             report.append({"source": source, "status": "baseline",
                            "incoming": incoming})
             continue
@@ -90,7 +103,7 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
             # Healthy: use incoming, refresh snapshot.
             out.extend(evs)
             state[source] = {"count": incoming, "date": today_iso,
-                             "low_streak": 0, "events": evs[:MAX_STORED_EVENTS]}
+                             "low_streak": 0, "events": evs}
             report.append({"source": source, "status": "ok",
                            "incoming": incoming, "good": good})
         else:
@@ -100,7 +113,7 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
                 # Persisted low => accept as the new real baseline.
                 out.extend(evs)
                 state[source] = {"count": incoming, "date": today_iso,
-                                 "low_streak": 0, "events": evs[:MAX_STORED_EVENTS]}
+                                 "low_streak": 0, "events": evs}
                 report.append({"source": source, "status": "accepted_low",
                                "incoming": incoming, "good": good,
                                "streak": streak})
@@ -111,7 +124,7 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
                 # Without this, a brand-new event (e.g. Midway Swiss Days, freshly
                 # added to a throttled source) would be dropped because it's not
                 # in the older snapshot. Dedup by (normalized title, date).
-                retained = snap.get("events") or []
+                retained = _future_only(snap.get("events") or [], today_iso)
                 def _k(e):
                     t = "".join((e.get("title") or "").lower().split())
                     return (t, (e.get("date") or "")[:10])
@@ -146,7 +159,7 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
         if good < MIN_BASELINE:
             continue  # too small to guard
         streak = snap.get("low_streak", 0) + 1
-        retained = snap.get("events") or []
+        retained = _future_only(snap.get("events") or [], today_iso)
         if retained:
             out.extend(retained)
         snap["low_streak"] = streak
