@@ -2,7 +2,7 @@
   "generated_at": "2026-06-03",
   "cities": {
     "all": {
-      "events": 4451,
+      "events": 4245,
       "findings": [
         {
           "code": "C1",
@@ -14,16 +14,22 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 15
+          "count": 14
+        },
+        {
+          "code": "C6",
+          "name": "COVERAGE-CLIFF",
+          "severity": "HIGH",
+          "count": 1
         }
       ]
     },
     "elkhartlake": {
-      "events": 251,
+      "events": 249,
       "findings": []
     },
     "heber": {
-      "events": 984,
+      "events": 981,
       "findings": [
         {
           "code": "C8",
@@ -34,16 +40,22 @@
       ]
     },
     "jackson": {
-      "events": 1309,
+      "events": 1149,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "MED",
           "count": 1
+        },
+        {
+          "code": "C6",
+          "name": "COVERAGE-CLIFF",
+          "severity": "HIGH",
+          "count": 1
         }
       ]
     }
   },
-  "high_total": 0
+  "high_total": 2
 }
