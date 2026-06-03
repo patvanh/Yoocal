@@ -1,23 +1,23 @@
 {
-  "checked_at": "2026-06-02T17:45:42.168471-06:00",
+  "checked_at": "2026-06-02T21:58:16.463543-06:00",
   "today": "2026-06-02",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 729,
+        "actual": 725,
         "baseline": 771,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=729, baseline=771"
+        "message": "actual=725, baseline=771"
       },
       {
         "source": "Park City Annual Events",
-        "actual": 423,
+        "actual": 421,
         "baseline": 429,
         "floor": 200,
         "severity": "OK",
-        "message": "actual=423, baseline=429"
+        "message": "actual=421, baseline=429"
       },
       {
         "source": "Mountain Town Music",
@@ -44,20 +44,12 @@
         "message": "actual=65, baseline=64"
       },
       {
-        "source": "KPCW Community Calendar",
-        "actual": 53,
-        "baseline": 51.6,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=53, baseline=52"
-      },
-      {
         "source": "Visit Park City (sitemap)",
-        "actual": 24,
+        "actual": 25,
         "baseline": 27,
         "floor": 15,
         "severity": "OK",
-        "message": "actual=24, baseline=27"
+        "message": "actual=25, baseline=27"
       },
       {
         "source": "Park City Farmers Market",
@@ -193,11 +185,11 @@
       },
       {
         "source": "Google Events",
-        "actual": 48,
+        "actual": 41,
         "baseline": 48.2,
         "floor": null,
         "severity": "OK",
-        "message": "actual=48, baseline=48"
+        "message": "actual=41, baseline=48"
       },
       {
         "source": "TownLift",
@@ -222,14 +214,6 @@
         "floor": null,
         "severity": "OK",
         "message": "actual=13, baseline=13"
-      },
-      {
-        "source": "Eventbrite",
-        "actual": 9,
-        "baseline": 8.4,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=9, baseline=8"
       },
       {
         "source": "RunSignup",
@@ -283,11 +267,11 @@
       },
       {
         "source": "Center for the Arts Jackson Hole",
-        "actual": 117,
+        "actual": 115,
         "baseline": 115.6,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=117, baseline=116"
+        "message": "actual=115, baseline=116"
       },
       {
         "source": "Grand Teton Music Festival",
@@ -299,11 +283,11 @@
       },
       {
         "source": "Million Dollar Cowboy Bar",
-        "actual": 60,
+        "actual": 59,
         "baseline": 63,
         "floor": null,
         "severity": "OK",
-        "message": "actual=60, baseline=63"
+        "message": "actual=59, baseline=63"
       },
       {
         "source": "National Museum of Wildlife Art",

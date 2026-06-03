@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-02T23:45:41.369832",
+  "generated_at": "2026-06-03T03:58:15.697298",
   "audit_date": "2026-06-02",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1750,
+      "before_count": 1692,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -16,22 +16,26 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 5,
           "examples": [
             {
-              "title": "Group Fitness Classes",
+              "title": "(Re)sounding: Art Exhibition",
+              "had_span": 105
+            },
+            {
+              "title": "Fascia Rolling Class",
               "had_span": 181
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 71
+              "had_span": 72
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
             },
             {
-              "title": "Fascia Rolling Class",
+              "title": "Group Fitness Classes",
               "had_span": 181
             }
           ]
@@ -117,8 +121,22 @@
           ]
         },
         "classification": {
-          "fixed": 311,
+          "fixed": 323,
           "examples": [
+            {
+              "title": "(Re)sounding: Art Exhibition",
+              "before": [],
+              "after": [
+                "Arts"
+              ]
+            },
+            {
+              "title": "Group Fitness Classes",
+              "before": [],
+              "after": [
+                "Government"
+              ]
+            },
             {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
               "before": [],
@@ -127,38 +145,24 @@
               ]
             },
             {
+              "title": "Old Town walking tour",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
               "title": "Progressive Art Experience",
               "before": [],
               "after": [
                 "Community"
               ]
-            },
-            {
-              "title": "Tailored Tuesdays",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Fascia Rolling Class",
-              "before": [],
-              "after": [
-                "Wellness"
-              ]
-            },
-            {
-              "title": "Rise + Release: Block",
-              "before": [],
-              "after": [
-                "Wellness"
-              ]
             }
           ]
         }
       },
-      "after_count": 1755,
-      "total_fixes": 341
+      "after_count": 1697,
+      "total_fixes": 354
     },
     {
       "city": "elkhart-lake",
@@ -226,7 +230,7 @@
     },
     {
       "city": "heber",
-      "before_count": 240,
+      "before_count": 224,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -264,7 +268,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 7,
+          "fixed": 6,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -273,9 +277,9 @@
               "duration_hours": 1
             },
             {
-              "title": "Comedy Magic Show - Anthony the Magic",
-              "start_time": "8:30 PM",
-              "new_end_time": "10:30 PM",
+              "title": "Oakley Rodeo",
+              "start_time": "11:30 PM",
+              "new_end_time": "1:30 AM",
               "duration_hours": 2
             },
             {
@@ -359,12 +363,12 @@
           ]
         }
       },
-      "after_count": 243,
-      "total_fixes": 23
+      "after_count": 227,
+      "total_fixes": 22
     },
     {
       "city": "jackson",
-      "before_count": 639,
+      "before_count": 636,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -374,24 +378,24 @@
           "fixed": 8,
           "examples": [
             {
+              "title": "Historic Downtown Walking Tour",
+              "had_span": 122
+            },
+            {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 110
+              "had_span": 109
             },
             {
               "title": "Music Classes",
-              "had_span": 1674
+              "had_span": 1673
             },
             {
               "title": "Visual Arts Classes",
-              "had_span": 1674
+              "had_span": 1673
             },
             {
               "title": "Writing Classes and Workshops",
-              "had_span": 1674
-            },
-            {
-              "title": "Dance and Movement Classes",
-              "had_span": 1674
+              "had_span": 1673
             }
           ]
         },
@@ -484,7 +488,7 @@
           "examples": []
         }
       },
-      "after_count": 654,
+      "after_count": 651,
       "total_fixes": 27
     }
   ]
