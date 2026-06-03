@@ -85,15 +85,6 @@ SITEMAP_SOURCES = [
                                # (home IP gets 221; CI throttled to ~150)
     },
     {
-        "sitemap_url": "https://www.jhcenterforthearts.org/events-sitemap.xml",
-        "url_pattern": r"/event/",
-        "source_name": "Center for the Arts Jackson Hole",
-        "default_lat": JACKSON_LAT,
-        "default_lng": JACKSON_LNG,
-        "default_city": "Jackson, WY",
-        "default_categories": ["Arts"],
-    },
-    {
         # JacksonHole.com (Teton Village resort portal): People's Market, Snake
         # River Fest, Bike Park, Sunday Funday, Met Opera in HD, etc. Nuxt/Vue
         # app whose event pages embed HTML-ENTITY-ENCODED schema.org Event
@@ -154,6 +145,18 @@ FIRECRAWL_SOURCES = [
         "default_lng": JACKSON_LNG,
         "default_city": "Jackson, WY",
         "default_categories": ["Running & Races"],
+    },
+    {
+        # jhcenterforthearts.org cloaks structured data from datacenter IPs: the
+        # sitemap event pages return 'no Schema.org Event JSON-LD' in CI (0
+        # events) though they're full from a residential IP. Firecrawl fetches
+        # the rendered /calendar/ and Haiku extracts the events — works in CI.
+        "url": "https://www.jhcenterforthearts.org/calendar/",
+        "source_name": "Center for the Arts Jackson Hole",
+        "default_lat": JACKSON_LAT,
+        "default_lng": JACKSON_LNG,
+        "default_city": "Jackson, WY",
+        "default_categories": ["Arts"],
     },
     {
         "url": "https://www.grandtarghee.com/events/",
