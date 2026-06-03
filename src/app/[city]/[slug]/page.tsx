@@ -466,6 +466,13 @@ export default async function EventPage({ params }: Props) {
             >
               📅 Add to Calendar
             </a>
+            <a
+              href={`/api/ics/${citySlug}/${slug}`}
+              className="btn-secondary"
+              style={{ color: 'var(--purple)' }}
+            >
+              🍎 Apple / .ics
+            </a>
             <a href={`/?city=${cityKey}`} className="btn-secondary" style={{ color: 'var(--purple)' }}>
               ← Back to {city.name} events
             </a>
