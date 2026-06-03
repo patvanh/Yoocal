@@ -213,6 +213,9 @@ export default async function EventPage({ params }: Props) {
     "@type": "Event",
     name: event.title,
     description: (event.description && event.description.trim()) || event.title,
+    ...(/^https?:\/\//.test((event.image_url || "").trim())
+      ? { image: [(event.image_url || "").trim()] }
+      : {}),
     startDate: event.start_time
       ? `${event.date}T${to24h(event.start_time)}`
       : event.date,
@@ -251,21 +254,20 @@ export default async function EventPage({ params }: Props) {
       "@type": "PerformingGroup",
       name: event.title,
     },
-    offers: {
-      "@type": "Offer",
-      url: event.link || `https://www.yoocal.com/${citySlug}/${slug}`,
-      price: (() => {
-        if (event.is_free === true) return "0";
-        const raw = (event.price || "").toString().trim();
-        if (!raw) return "0";
-        // Match the first number (handles "$25", "$10-$229", "$10.50", "25")
-        const m = raw.match(/(\d+(?:\.\d+)?)/);
-        return m ? m[1] : "0";
-      })(),
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      validFrom: event.date,
-    },
+    // Only assert an Offer when we actually know the price (explicitly free, or a
+    // parseable amount). Emitting price:"0" for unknown prices would wrongly tell
+    // Google the event is free. Omitting offers entirely is valid schema.
+    ...(() => {
+      if (event.is_free === true) {
+        return { offers: { "@type": "Offer", url: event.link || `https://www.yoocal.com/${citySlug}/${slug}`, price: "0", priceCurrency: "USD", availability: "https://schema.org/InStock", validFrom: event.date } };
+      }
+      const raw = (event.price || "").toString().trim();
+      const m = raw.match(/(\d+(?:\.\d+)?)/);
+      if (m) {
+        return { offers: { "@type": "Offer", url: event.link || `https://www.yoocal.com/${citySlug}/${slug}`, price: m[1], priceCurrency: "USD", availability: "https://schema.org/InStock", validFrom: event.date } };
+      }
+      return {}; // unknown price -> no offers (don't fabricate free)
+    })(),
     url: event.link || `https://www.yoocal.com/${citySlug}/${slug}`,
     isAccessibleForFree: event.is_free === true,
     eventStatus: "https://schema.org/EventScheduled",
