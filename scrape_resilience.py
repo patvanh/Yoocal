@@ -30,6 +30,11 @@ from datetime import datetime
 STATE_FILE = "last_good_sources.json"
 RETAIN_FRACTION = 0.50    # below 50% of last-good => degraded
 ACCEPT_LOW_AFTER = 3      # after 3 straight low runs, accept the new normal
+CATASTROPHIC_ACCEPT_AFTER = 5  # a catastrophic-but-PERSISTENT level (held this
+                               # many straight runs) is real, not a blip, so
+                               # accept it — otherwise a source that legitimately
+                               # shrinks a lot (e.g. sitemap->Firecrawl) is frozen
+                               # on stale data forever.
 CATASTROPHIC_FRACTION = 0.20  # a drop below 20% of baseline is treated as
                               # failure/throttling, NEVER auto-accepted as the
                               # new normal — retained indefinitely until recovery
@@ -109,7 +114,9 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
         else:
             streak = snap.get("low_streak", 0) + 1
             catastrophic = incoming < CATASTROPHIC_FRACTION * good
-            if streak >= ACCEPT_LOW_AFTER and not catastrophic:
+            accept = (streak >= ACCEPT_LOW_AFTER and not catastrophic) or \
+                     (streak >= CATASTROPHIC_ACCEPT_AFTER)
+            if accept:
                 # Persisted low => accept as the new real baseline.
                 out.extend(evs)
                 state[source] = {"count": incoming, "date": today_iso,
