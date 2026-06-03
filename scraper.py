@@ -749,57 +749,29 @@ def scrape_eventbrite():
 # 4. RUNNING IN THE USA
 # ─────────────────────────────────────────────
 def scrape_running_in_the_usa():
-    print("Scraping runningintheusa.com for Park City races...")
+    print("Scraping runningintheusa.com for Park City races (via Firecrawl)...")
     events = []
+    # runningintheusa.com hard-blocks direct HTTP (403), so a plain requests
+    # scrape returns nothing usable. Firecrawl fetches it server-side and Claude
+    # extracts the events — same working pattern as the Jackson scraper. Falls
+    # back to the curated known_races below if Firecrawl/extract is unavailable.
     try:
-        url = "https://www.runningintheusa.com/race/list/park%20city-ut/upcoming"
-        r = _get(url, timeout=15)
-        soup = BeautifulSoup(r.text, "html.parser")
-
-        containers = (
-            soup.find_all("div", class_=re.compile(r"race|event|result|card|row|item", re.I)) or
-            soup.find_all("tr") or
-            soup.find_all("li")
+        from firecrawl_extractor import extract_events_from_url
+        fc_events = extract_events_from_url(
+            url="https://www.runningintheusa.com/race/list/park%20city-ut/upcoming",
+            source_name="Running in the USA",
+            default_lat=40.6461, default_lng=-111.4980,
+            default_city="Park City, UT",
+            default_categories=["Running & Races"],
         )
-
-        for c in containers:
-            try:
-                title_el = c.find("a") or c.find("h2") or c.find("h3") or c.find("h4")
-                if not title_el: continue
-                title = title_el.get_text(strip=True)
-                skip = ["more information", "details", "update", "save", "upcoming races", "sort by"]
-                if len(title) < 3 or title.lower() in skip: continue
-
-                date_el = c.find(class_=re.compile(r"date|time", re.I)) or c.find("time")
-                raw_date = date_el.get_text(strip=True) if date_el else "See website"
-                date = normalize_date_str(raw_date) or raw_date
-                start_time = extract_time_from_string(raw_date)
-
-                dist_el = c.find(class_=re.compile(r"dist|distance|type", re.I))
-                distance = dist_el.get_text(strip=True) if dist_el else ""
-
-                link_el = c.find("a", href=True)
-                link = link_el["href"] if link_el else url
-                if link.startswith("/"): link = "https://www.runningintheusa.com" + link
-
-                event = {
-                    "title": title,
-                    "date": date,
-                    "description": f"Race in Park City, UT. {distance}".strip().rstrip("."),
-                    "location": "Park City, UT",
-                    "link": link,
-                    "source": "Running in the USA",
-                    "source_url": url,
-                    "category": "sports",
-                    "scraped_at": datetime.now().isoformat()
-                }
-                if start_time: event["start_time"] = start_time
-                events.append(event)
-            except:
-                continue
-
+        for e in fc_events:
+            e.setdefault("category", "sports")
+            e.setdefault("location", "Park City, UT")
+            e["scraped_at"] = datetime.now().isoformat()
+        events.extend(fc_events)
+        print(f"  Firecrawl returned {len(fc_events)} Park City races")
     except Exception as e:
-        print(f"  HTTP scrape failed ({e}), using known races only")
+        print(f"  Firecrawl scrape failed ({e}), using known races only")
 
     known_races = [
         {
