@@ -1,6 +1,7 @@
 import { notFound, redirect, permanentRedirect } from 'next/navigation'
 import type { Metadata } from 'next'
 import EventMap from '@/components/EventMap'
+import ShareButtons from '@/components/ShareButtons'
 import {
   CITY_CONFIG,
   findEvent,
@@ -477,6 +478,10 @@ export default async function EventPage({ params }: Props) {
               ← Back to {city.name} events
             </a>
           </div>
+          <ShareButtons
+            url={`https://www.yoocal.com/${citySlug}/${slug}`}
+            title={event.title}
+          />
 
           {/* Map */}
           {event.location && (
