@@ -47,6 +47,11 @@ CITIES = {
 INPUT_FILES = [
     "public/raw/events.json",
     "public/raw/events-heber.json",
+    # Heber-addressed events relocated out of the Park City scrape (e.g. Deer
+    # Creek Express). Written ONLY by scraper.py's merge_into_heber_file; no
+    # other writer touches it, so it cannot be clobbered. The build routes these
+    # to the correct city view by address/radius like any other event.
+    "public/raw/events-heber-relocated.json",
     "public/raw/events-jackson.json",
     "public/raw/events-elkhartlake.json",
     "public/raw/events-egyptian.json",

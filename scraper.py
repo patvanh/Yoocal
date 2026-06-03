@@ -1916,7 +1916,7 @@ def relocate_heber_events(events):
     return pc, heber
 
 
-def merge_into_heber_file(new_events, filename="public/events-heber.json"):
+def merge_into_heber_file(new_events, filename="public/raw/events-heber-relocated.json"):
     """Merge new Heber events into the Heber file with title+date dedup."""
     if not new_events:
         return
