@@ -132,6 +132,40 @@ function addOneHourTo24h(time12: string | undefined | null): string {
   return `${String(nh).padStart(2,"0")}${t.slice(2)}`;
 }
 
+// Build a Google Calendar template URL (no client JS needed — plain link).
+// Dates use the same start/end logic as the JSON-LD below.
+function googleCalUrl(event: {
+  title?: string; date?: string; end_date?: string;
+  start_time?: string; end_time?: string;
+  description?: string; location?: string;
+}): string {
+  const compact = (isoDateTime: string) =>
+    isoDateTime.replace(/[-:]/g, "").replace(/\.\d+/, "");
+  const startIso = event.start_time
+    ? `${event.date}T${to24h(event.start_time)}:00`
+    : `${event.date}`;
+  const endIso = event.end_time
+    ? `${event.end_date || event.date}T${to24h(event.end_time)}:00`
+    : event.end_date
+      ? `${event.end_date}`
+      : event.start_time
+        ? `${event.date}T${addOneHourTo24h(event.start_time)}:00`
+        : `${event.date}`;
+  // All-day events (no time) use YYYYMMDD; timed events use YYYYMMDDTHHMMSS.
+  const fmt = (iso: string) =>
+    iso.includes("T") ? compact(iso) : iso.replace(/-/g, "");
+  const dates = `${fmt(startIso)}/${fmt(endIso)}`;
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: event.title || "Event",
+    dates,
+    details: (event.description || "").slice(0, 500),
+    location: event.location || "",
+  });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+
+
 export default async function EventPage({ params }: Props) {
   const { city: citySlug, slug } = await params
   const cityKey = cityKeyFromSlug(citySlug)
@@ -423,6 +457,15 @@ export default async function EventPage({ params }: Props) {
                 View event details →
               </a>
             )}
+            <a
+              href={googleCalUrl(event)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+              style={{ color: 'var(--purple)' }}
+            >
+              📅 Add to Calendar
+            </a>
             <a href={`/?city=${cityKey}`} className="btn-secondary" style={{ color: 'var(--purple)' }}>
               ← Back to {city.name} events
             </a>
