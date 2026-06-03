@@ -424,17 +424,29 @@ def check_ongoing_dropped(events, max_ex):
     near-empty count as a likely systematic drop, and also surface any single
     event whose end_date is in the future but whose start was dropped to a
     suspiciously-late value (best-effort)."""
+    from collections import defaultdict as _dd
     ongoing = []
     for e in events:
         d = ev_date(e); end = ev_end(e)
         if d and end and d <= TODAY_ISO <= end:
             ongoing.append(e)
-    # Heuristic: a city/dataset with events but ZERO ongoing-range events almost
-    # certainly has the class-drop bug. Flag HIGH on zero, when there's data.
-    # Require a higher event floor so small towns (which legitimately may have
-    # no currently-running multi-week event) don't false-alarm. 500+ events with
-    # zero ongoing-range events is the real signature of a class-drop bug.
-    suspicious = (len(events) >= 500 and len(ongoing) == 0)
+    # Also recognize a fanned-out RECURRING SERIES that straddles today: the same
+    # title on >=1 past date AND >=1 today/future date. The build represents long
+    # recurring runs (e.g. Deer Creek Express, ~60 Mon/Thu/Fri/Sat dates) as dated
+    # occurrences with no end_date, which the range test alone misses.
+    by_title = _dd(list)
+    for e in events:
+        t = (e.get("title") or "").strip().lower()
+        d = ev_date(e)
+        if t and d:
+            by_title[t].append(d)
+    straddling_series = 0
+    for t, dates in by_title.items():
+        if len(dates) >= 3:
+            if any(x < TODAY_ISO for x in dates) and any(x >= TODAY_ISO for x in dates):
+                straddling_series += 1
+    ongoing_total = len(ongoing) + straddling_series
+    suspicious = (len(events) >= 500 and ongoing_total == 0)
     return {
         "code": "C8",
         "name": "ONGOING-DROPPED",
@@ -443,9 +455,11 @@ def check_ongoing_dropped(events, max_ex):
         "desc": "Date-range events (past start, future end) are MISSING entirely "
                 "(0 found in a populated dataset) — signature of a scraper dropping "
                 "ongoing/seasonal events as 'past' before checking end_date.",
-        "examples": [{"ongoing_events_found": len(ongoing),
-                      "note": "expected > 0 for any populated city; 0 = likely class-drop bug"}]
-                     if suspicious else [{"ongoing_events_found": len(ongoing)}],
+        "examples": [{"ongoing_range_rows": len(ongoing),
+                      "straddling_recurring_series": straddling_series,
+                      "note": "0 of BOTH in a populated city = likely class-drop bug"}]
+                     if suspicious else [{"ongoing_range_rows": len(ongoing),
+                                          "straddling_recurring_series": straddling_series}],
     }
 
 
