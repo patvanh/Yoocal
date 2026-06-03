@@ -107,7 +107,7 @@ def _source_anomalies(history):
     return flagged
 
 
-def render_html(audit, repair, llm_health=None, baselines=None, guard_state=None):
+def render_html(audit, repair, llm_health=None, baselines=None, guard_state=None, dq_findings=None):
     audit_date = audit.get("audit_date", "today")
     reports = audit.get("reports", [])
     history = (baselines or {}).get("history") or {}
@@ -350,6 +350,44 @@ def render_html(audit, repair, llm_health=None, baselines=None, guard_state=None
         f'<a href="{REPO_URL}/actions" style="color:#9ca3af">View run</a></div>'
     )
 
+    # ── Data-quality findings (C1-C8 standing guard) ──────────────────────
+    dq_html = ""
+    dq = dq_findings or {}
+    dq_cities = dq.get("cities") or {}
+    dq_rows = []
+    SEV_COLOR = {"HIGH": "#b91c1c", "MED": "#b45309"}
+    for city, info in sorted(dq_cities.items()):
+        for f in info.get("findings", []):
+            sev = f.get("severity", "")
+            if sev not in ("HIGH", "MED"):
+                continue
+            color = SEV_COLOR.get(sev, "#6b7280")
+            dq_rows.append(
+                f"<tr>"
+                f"<td style='padding:6px 10px;font-size:13px'><b style='color:{color}'>{sev}</b></td>"
+                f"<td style='padding:6px 10px;font-size:13px'>{city}</td>"
+                f"<td style='padding:6px 10px;font-size:13px'>{f.get('code','')} {f.get('name','')}</td>"
+                f"<td style='padding:6px 10px;font-size:13px;text-align:right'>{f.get('count',0)}</td>"
+                f"</tr>"
+            )
+    if dq_rows:
+        dq_html = (
+            "<h2 style='font-size:17px;margin:28px 0 8px'>Data-quality checks</h2>"
+            "<table style='width:100%;border-collapse:collapse;border:1px solid #eee'>"
+            "<thead><tr style='background:#f9fafb'>"
+            "<th style='padding:6px 10px;font-size:12px;text-align:left'>Severity</th>"
+            "<th style='padding:6px 10px;font-size:12px;text-align:left'>City</th>"
+            "<th style='padding:6px 10px;font-size:12px;text-align:left'>Check</th>"
+            "<th style='padding:6px 10px;font-size:12px;text-align:right'>Count</th>"
+            "</tr></thead><tbody>" + "".join(dq_rows) + "</tbody></table>"
+        )
+    elif dq_cities:
+        dq_html = (
+            "<h2 style='font-size:17px;margin:28px 0 8px'>Data-quality checks</h2>"
+            "<div style='color:#059669;font-size:13px'>All C1-C8 checks clean — "
+            "no HIGH or MED findings.</div>"
+        )
+
     return f"""<!DOCTYPE html>
 <html>
 <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1f2937;max-width:680px;margin:0 auto;padding:24px">
@@ -359,6 +397,7 @@ def render_html(audit, repair, llm_health=None, baselines=None, guard_state=None
   {city_table}
   {trend_table}
   {anomaly_html}
+  {dq_html}
   {attention}
   {footer_detail}
 </body>
@@ -396,6 +435,7 @@ def main():
     llm_health = _load_json("scraper_llm_health.json")
     baselines = _load_json("scraper_baselines.json")
     guard_state = _load_json("last_good_sources.json")
+    dq_findings = _load_json("data_quality_findings.json")
 
     audit_date = audit.get("audit_date", "today")
     reports = audit.get("reports", [])
@@ -405,7 +445,7 @@ def main():
     flag_tag = f", {flag_count} flagged" if flag_count else ""
     subject = f"[yoocal] {audit_date} — {total_events} events, {total_sev1} to review{flag_tag}"
 
-    html = render_html(audit, repair, llm_health, baselines, guard_state)
+    html = render_html(audit, repair, llm_health, baselines, guard_state, dq_findings)
 
     if dry_run:
         Path("audit_digest_preview.html").write_text(html)
