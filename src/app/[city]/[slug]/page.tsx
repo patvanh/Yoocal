@@ -60,6 +60,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? event.description.slice(0, 155)
     : `${event.title} happening in ${cityConfig.name} on ${dateStr}. Find local events on Yoocal.`
 
+  // Use the event's real image for social previews when it has one (~84% do);
+  // otherwise fall back to the branded default. Only accept absolute http(s)
+  // URLs — a relative or junk value would break the preview.
+  const rawImg = (event.image_url || '').trim()
+  const ogImage = /^https?:\/\//.test(rawImg) ? rawImg : 'https://www.yoocal.com/og-image.png'
+
   return {
     title,
     description,
@@ -67,7 +73,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `https://www.yoocal.com/${city}/${slug}`,
-      images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+      type: 'website',
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImage],
     },
     alternates: {
       canonical: `https://www.yoocal.com/${city}/${slug}`,
