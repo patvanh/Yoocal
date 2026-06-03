@@ -75,7 +75,9 @@ jobs:
         continue-on-error: true
         run: |
           echo "::group::Jackson Hole scraper"
-          python jackson_scraper.py
+          echo "FIRECRAWL_API_KEY length: ${#FIRECRAWL_API_KEY}"
+          echo "ANTHROPIC_API_KEY length: ${#ANTHROPIC_API_KEY}"
+          python -u jackson_scraper.py
           echo "::endgroup::"
 
       - name: Apply event overrides
