@@ -763,6 +763,31 @@ def scrape_townlift():
     return events
 
 
+def scrape_running_in_the_usa_heber():
+    """Heber Valley races from runningintheusa.com via Firecrawl.
+
+    The site hard-blocks direct HTTP (403), so we fetch via Firecrawl + Claude
+    extraction (same working pattern as Park City / Jackson). Uses the
+    Heber-direct list URL (NOT within-25-miles, which sweeps in Provo/SLC/Park
+    City races). Complements RunSignup, which only surfaces a few Heber races.
+    """
+    print("Scraping runningintheusa.com for Heber races (via Firecrawl)...")
+    try:
+        from firecrawl_extractor import extract_events_from_url
+        evs = extract_events_from_url(
+            url="https://www.runningintheusa.com/race/list/heber%20city-ut/upcoming",
+            source_name="RunningInTheUSA Heber",
+            default_lat=40.5069, default_lng=-111.4133,
+            default_city="Heber City, UT",
+            default_categories=["Running & Races"],
+        )
+        print(f"  RunningInTheUSA Heber returned {len(evs)} races")
+        return evs
+    except Exception as ex:
+        print(f"  RunningInTheUSA Heber scrape failed: {ex}")
+        return []
+
+
 def main():
     print("=" * 55)
     print("  Yoocal Heber Valley Scraper")
@@ -801,6 +826,7 @@ def main():
     all_events += scrape_google_events()
     all_events += scrape_eventbrite()
     all_events += scrape_runsignup()
+    all_events += scrape_running_in_the_usa_heber()
     all_events += scrape_slrc_heber_wrapper()
     all_events += scrape_dainty_pear_wrapper()
     all_events += scrape_hebervalleylife_sitemap()
