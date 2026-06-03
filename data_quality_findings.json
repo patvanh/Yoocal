@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-06-03",
+  "cities": {
+    "all": {
+      "events": 4451,
+      "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "MED",
+          "count": 1
+        },
+        {
+          "code": "C5",
+          "name": "CROSS-SOURCE-DUP",
+          "severity": "MED",
+          "count": 15
+        }
+      ]
+    },
+    "elkhartlake": {
+      "events": 251,
+      "findings": []
+    },
+    "heber": {
+      "events": 984,
+      "findings": [
+        {
+          "code": "C8",
+          "name": "ONGOING-DROPPED",
+          "severity": "MED",
+          "count": 1
+        }
+      ]
+    },
+    "jackson": {
+      "events": 1309,
+      "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "MED",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "high_total": 0
+}

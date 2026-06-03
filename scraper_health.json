@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-03T09:59:45.646382-06:00",
+  "checked_at": "2026-06-03T13:54:47.104836-06:00",
   "today": "2026-06-03",
   "cities": {
     "park-city": [
@@ -21,11 +21,11 @@
       },
       {
         "source": "Mountain Town Music",
-        "actual": 263,
+        "actual": 254,
         "baseline": 206.5,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=263, baseline=206"
+        "message": "actual=254, baseline=206"
       },
       {
         "source": "Visit Park City",
@@ -45,19 +45,19 @@
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 56,
+        "actual": 47,
         "baseline": 51.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=56, baseline=52"
+        "message": "actual=47, baseline=52"
       },
       {
         "source": "Visit Park City (sitemap)",
-        "actual": 23,
+        "actual": 24,
         "baseline": 26.7,
         "floor": 15,
         "severity": "OK",
-        "message": "actual=23, baseline=27"
+        "message": "actual=24, baseline=27"
       },
       {
         "source": "Park City Farmers Market",
@@ -193,11 +193,11 @@
       },
       {
         "source": "Google Events",
-        "actual": 40,
+        "actual": 41,
         "baseline": 47,
         "floor": null,
         "severity": "OK",
-        "message": "actual=40, baseline=47"
+        "message": "actual=41, baseline=47"
       },
       {
         "source": "TownLift",
@@ -307,11 +307,11 @@
       },
       {
         "source": "National Museum of Wildlife Art",
-        "actual": 53,
+        "actual": 58,
         "baseline": 52.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=53, baseline=53"
+        "message": "actual=58, baseline=53"
       },
       {
         "source": "The Cloudveil",
@@ -330,6 +330,14 @@
         "message": "actual=14, baseline=14"
       },
       {
+        "source": "Center for the Arts Jackson Hole",
+        "actual": 13,
+        "baseline": 115.5,
+        "floor": 30,
+        "severity": "CRITICAL",
+        "message": "actual=13, floor=30 (below catastrophic threshold)"
+      },
+      {
         "source": "Grand Targhee Resort",
         "actual": 13,
         "baseline": 9,
@@ -339,5 +347,12 @@
       }
     ]
   },
-  "critical_alerts": []
+  "critical_alerts": [
+    {
+      "city": "jackson",
+      "source": "Center for the Arts Jackson Hole",
+      "severity": "CRITICAL",
+      "message": "actual=13, floor=30 (below catastrophic threshold)"
+    }
+  ]
 }
