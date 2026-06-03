@@ -539,6 +539,11 @@ def main():
     ap.add_argument("--glob", default=VIEW_GLOB)
     ap.add_argument("--json", metavar="PATH",
                     help="also write all findings to this JSON file (for the digest)")
+    ap.add_argument("--gate", action="store_true",
+                    help="exit non-zero ONLY on gateable HIGH findings (real data "
+                         "bugs: C1/C2/C5/C7). C6 coverage-cliff is excluded — it "
+                         "fires on transient CI throttles the resilience guard "
+                         "already handles, so it must not block the data commit.")
     args = ap.parse_args()
 
     paths = sorted(glob.glob(args.glob))
@@ -561,6 +566,8 @@ def main():
     print("=" * 72)
 
     high_total = 0
+    gateable_high = 0
+    GATEABLE_CODES = {"C1", "C2", "C5", "C7"}  # real data bugs; NOT C6 (transient)
     new_baseline = {}
     findings_out = {"generated_at": TODAY_ISO, "cities": {}}
 
@@ -587,6 +594,8 @@ def main():
                     print(ex)
             if sev == HIGH and r["count"]:
                 high_total += r["count"]
+                if r["code"] in GATEABLE_CODES:
+                    gateable_high += r["count"]
 
     if args.save_baseline:
         with open(BASELINE_FILE, "w") as f:
@@ -602,8 +611,11 @@ def main():
         print(f"\nWrote findings -> {args.json}")
 
     print("\n" + "=" * 72)
-    print(f"HIGH-severity findings: {high_total}")
+    print(f"HIGH-severity findings: {high_total}  "
+          f"(gateable: {gateable_high}, non-gateable e.g. C6: {high_total - gateable_high})")
     print("=" * 72)
+    if args.gate:
+        sys.exit(1 if gateable_high else 0)
     sys.exit(1 if high_total else 0)
 
 

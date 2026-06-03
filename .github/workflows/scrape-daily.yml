@@ -263,3 +263,14 @@ jobs:
       - name: No changes to commit
         if: steps.changes.outputs.has_changes == 'false'
         run: echo "No JSON changes from this run. Nothing to commit."
+
+      - name: Data-quality GATE (fail run on real-bug HIGHs)
+        if: always()
+        run: |
+          echo "::group::Data-quality gate (C1/C2/C5/C7)"
+          # Runs AFTER the data commit so a failure alerts (red run) without
+          # blocking the data from shipping. Fails ONLY on gateable HIGH findings
+          # (real data bugs). C6 coverage-cliff is surfaced earlier but does NOT
+          # gate (transient CI throttles handled by the resilience guard).
+          python data_quality_audit.py --gate
+          echo "::endgroup::"
