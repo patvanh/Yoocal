@@ -69,6 +69,11 @@ MASTER_FILE = "public/events-all.json"
 EXCLUDED_TITLE_PATTERNS = [
     "plunj",                               # PLUNJ — cold plunge drop-in
     "group fitness classes at park city",  # daily rec-center drop-in
+    "triple trail challenge",              # TTC = "do all 3" series umbrella; its
+                                           # legs (Round Valley Rambler, Jupiter
+                                           # Peak 25K, Mid Mountain 50K) are each
+                                           # listed separately, so the umbrella is
+                                           # a redundant meta-entry (also mis-priced).
 ]
 
 # Some amenities are better matched by VENUE than title (e.g. recurring church
@@ -660,7 +665,7 @@ def _infer_pricing(record: dict) -> dict:
     # Mountain Trails Foundation) is otherwise mostly free. Don't auto-tag
     # these as free.
     title_lo = (record.get("title") or "").lower()
-    if _re_pricing.search(r"\b(5\s?k|10\s?k|half\s+marathon|marathon|trail\s+series)\b", title_lo):
+    if _re_pricing.search(r"\b(\d+\s?k|\d+\s?mile|half\s+marathon|marathon|ultra|fun\s+run|trail\s+(run|race|series|challenge)|hill\s+climb|rambler|relay|duathlon|triathlon)\b", title_lo):
         record["is_free"] = False
         return record
 
@@ -962,6 +967,77 @@ def _normalize_time(t: str) -> str:
     return f"{h:02d}:{mn:02d}"
 
 
+def _link_merge(events: list) -> list:
+    """Same-date events pointing to the SAME registration/event link are the same
+    event even when titles differ wildly ("Round Valley Rambler (7k & Half
+    Marathon)" vs "RVR 1/2 Marathon & 7K Trail Run", both runttc.com; "Moose on
+    the Loose Kid #1" vs "Moose on the Loose Kids Trail Race", both
+    parkcityss.org/moose-on-the-loose). The link is a stronger, lower-risk signal
+    than fuzzy title matching.
+
+    Guard: do NOT merge a series UMBRELLA into one of its legs that shares the
+    same landing page ("Triple Trail Challenge" vs its "Round Valley Rambler" leg
+    on runttc.com). "Concert series" is exempt — it names a venue/recurring series
+    of individual shows, not a multi-event umbrella."""
+    import re as _re
+    from collections import defaultdict as _dd
+    _UMBRELLA = _re.compile(r"\b(series|challenge|triple|championship|grand slam|circuit)\b")
+
+    def _is_umbrella(t):
+        t2 = _re.sub(r"concert series", "", t)
+        return bool(_UMBRELLA.search(t2))
+
+    def _norm_link(u):
+        u = (u or "").strip().lower()
+        if not u:
+            return ""
+        u = _re.sub(r"^https?://", "", u)
+        u = _re.sub(r"^www\.", "", u)
+        return u.rstrip("/")
+
+    def _mergeable(a, b):
+        ta, tb = _normalize_title(a.get("title") or ""), _normalize_title(b.get("title") or "")
+        if not ta or not tb:
+            return False
+        if _is_umbrella(ta) != _is_umbrella(tb):
+            return False
+        return True
+
+    by_key = _dd(list)
+    passthrough = []
+    for e in events:
+        nl = _norm_link(e.get("link"))
+        if nl:
+            by_key[((e.get("date") or "")[:10], nl)].append(e)
+        else:
+            passthrough.append(e)
+
+    out = list(passthrough)
+    merged = 0
+    for _key, group in by_key.items():
+        if len(group) == 1:
+            out.append(group[0])
+            continue
+        kept = []
+        used = [False] * len(group)
+        for i in range(len(group)):
+            if used[i]:
+                continue
+            cur = group[i]
+            for j in range(i + 1, len(group)):
+                if used[j]:
+                    continue
+                if _mergeable(cur, group[j]):
+                    cur = merge_events([cur, group[j]])
+                    used[j] = True
+                    merged += 1
+            kept.append(cur)
+        out.extend(kept)
+    if merged:
+        print(f"  [link-merge] merged {merged} same-date same-link duplicates")
+    return out
+
+
 def _cross_source_fuzzy_merge(events: list) -> list:
     """Same-date, cross-source near-duplicate titles that exact-match and
     _prefix_merge miss (word reorder, dropped/added leading word, curly-quote
@@ -1246,6 +1322,9 @@ def main():
     # race/number guard. See _cross_source_fuzzy_merge.
     deduped = _cross_source_fuzzy_merge(deduped)
     print(f"After cross-source-merge: {len(deduped)}")
+
+    deduped = _link_merge(deduped)
+    print(f"After link-merge: {len(deduped)}")
     
     # Third pass: drop low-trust aggregator records (Google Events, Eventbrite)
     # that duplicate higher-quality sources. Conservative — only suppresses

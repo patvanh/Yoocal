@@ -51,7 +51,7 @@ _RUN_PATTERNS = [
 ]
 _RUN_RE = re.compile("|".join(_RUN_PATTERNS), re.I)
 # distance + "race" combo, or "run/runners" as a standalone activity word
-_RUN_EXTRA = re.compile(r"\b(\d+\s?(mile|mi)\s?(run|race))\b|\brunners?\b|\b5k\b|\b10k\b", re.I)
+_RUN_EXTRA = re.compile(r"\b\d+\s?k\b|\b\d+\s?(mile|mi)\s?(run|race)\b|half\s+marathon|\bmarathon\b|\bultra\b|fun\s+run|trail\s+(run|race|series|challenge)|hill\s+climb|\brambler\b|\brelay\b|\bduathlon\b|\btriathlon\b|\brunners?\b", re.I)
 
 
 def _title_is_footrace(title):
