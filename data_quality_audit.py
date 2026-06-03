@@ -75,7 +75,11 @@ _RECURRING_STRONG = re.compile(
 _SINGULAR_EVENT = re.compile(
     r"\b(marathon|half\s*marathon|10k|5k|1k|50k|50\s*mile|ultra|relay|triathlon"
     r"|duathlon|gala|fun\s*run|hill\s*climb|challenge|fest|festival|championship"
-    r"|tournament|invitational|classic|open|derby)\b",
+    r"|tournament|invitational|classic|open|derby"
+    # On-demand BOOKABLE experiences: a recurrence field means "available on
+    # various days", not a fixed dropped series. VPC lists them per-date.
+    r"|class|experience|tasting|workshop|tour|lesson|session|reservation"
+    r"|for \d+|guests?)\b",
     re.IGNORECASE,
 )
 

@@ -132,6 +132,30 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
                                "retained": len(retained), "unioned": len(unioned),
                                "streak": streak})
 
+    # ── Totally-missing sources ──────────────────────────────────────────
+    # The loop above only sees sources PRESENT in this scrape. A source that
+    # returns ZERO events (a total CI failure, not a partial collapse) never
+    # appears in by_source, so it would silently vanish — the exact gap that
+    # let "Center for the Arts Jackson Hole" (208 -> 0) gut the Jackson view
+    # despite being in last_good. Catch sources in state that we did NOT see at
+    # all this run and retain their last-good events (same low-streak logic).
+    for source, snap in list(state.items()):
+        if source in seen_sources:
+            continue
+        good = snap.get("count", 0)
+        if good < MIN_BASELINE:
+            continue  # too small to guard
+        streak = snap.get("low_streak", 0) + 1
+        retained = snap.get("events") or []
+        if retained:
+            out.extend(retained)
+        snap["low_streak"] = streak
+        snap["date"] = today_iso
+        state[source] = snap
+        report.append({"source": source, "status": "missing_retained",
+                       "incoming": 0, "good": good,
+                       "retained": len(retained), "streak": streak})
+
     _save_state(state, state_path)
     return out, report
 
@@ -145,6 +169,11 @@ def format_report(report):
                 f"  GUARD: {r['source']} scraped {r['incoming']} "
                 f"(usual ~{r['good']}) — kept last-good {r['retained']} "
                 f"events [low streak {r['streak']}]")
+        elif r["status"] == "missing_retained":
+            lines.append(
+                f"  GUARD: {r['source']} returned NOTHING "
+                f"(usual ~{r['good']}) — kept last-good {r['retained']} "
+                f"events [missing streak {r['streak']}]")
         elif r["status"] == "accepted_low":
             lines.append(
                 f"  GUARD: {r['source']} low {r['incoming']} for "
