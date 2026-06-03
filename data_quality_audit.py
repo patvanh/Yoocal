@@ -509,6 +509,8 @@ def main():
                     help="write current per-source counts to data_quality_baseline.json")
     ap.add_argument("--max-examples", type=int, default=5)
     ap.add_argument("--glob", default=VIEW_GLOB)
+    ap.add_argument("--json", metavar="PATH",
+                    help="also write all findings to this JSON file (for the digest)")
     args = ap.parse_args()
 
     paths = sorted(glob.glob(args.glob))
@@ -532,14 +534,21 @@ def main():
 
     high_total = 0
     new_baseline = {}
+    findings_out = {"generated_at": TODAY_ISO, "cities": {}}
 
     for path in paths:
         city, n, results = run_city(path, baseline, args.max_examples)
         print(f"\n### {city}  ({n} events)")
+        findings_out["cities"][city] = {"events": n, "findings": []}
         for r in results:
             if r["code"] == "C6":
                 new_baseline[city] = r.pop("_current_counts")
             sev = r["severity"]
+            if r["count"] and sev in (HIGH, MED):
+                findings_out["cities"][city]["findings"].append({
+                    "code": r["code"], "name": r["name"],
+                    "severity": sev, "count": r["count"],
+                })
             mark = {"HIGH": "‼", "MED": "•", "LOW": " "}[sev]
             line = f"  [{mark} {sev:4}] {r['code']} {r['name']}: {r['count']}"
             print(line)
@@ -557,6 +566,12 @@ def main():
         print(f"\nSaved baseline -> {BASELINE_FILE} "
               f"({sum(len(v) for v in new_baseline.values())} source-counts across "
               f"{len(new_baseline)} cities)")
+
+    findings_out["high_total"] = high_total
+    if args.json:
+        with open(args.json, "w") as f:
+            json.dump(findings_out, f, indent=2)
+        print(f"\nWrote findings -> {args.json}")
 
     print("\n" + "=" * 72)
     print(f"HIGH-severity findings: {high_total}")

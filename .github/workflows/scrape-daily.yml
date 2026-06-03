@@ -144,6 +144,19 @@ jobs:
           python event_quality_audit.py
           echo "::endgroup::"
 
+      - name: Data-quality standing guard (C1-C8)
+        id: dq_audit
+        continue-on-error: true
+        run: |
+          echo "::group::Data-quality standing guard (C1-C8)"
+          # Scans built per-city views for the bug classes we've hit (recurring
+          # drops, multiday gaps, venue-time collisions, bad dates, cross-source
+          # dups, coverage cliffs, encoding artifacts, ongoing-event drops).
+          # Writes findings JSON for the digest. continue-on-error so a HIGH
+          # finding surfaces WITHOUT blocking the daily data commit.
+          python data_quality_audit.py --json data_quality_findings.json || true
+          echo "::endgroup::"
+
       - name: LLM scraper health check
         id: llm_health_check
         continue-on-error: true
