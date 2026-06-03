@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-03T21:13:28.634431",
+  "generated_at": "2026-06-03T21:15:17.564448",
   "audit_date": "2026-06-03",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1731,
+      "before_count": 1693,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -113,7 +113,7 @@
           ]
         },
         "classification": {
-          "fixed": 304,
+          "fixed": 315,
           "examples": [
             {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
@@ -153,12 +153,12 @@
           ]
         }
       },
-      "after_count": 1736,
-      "total_fixes": 333
+      "after_count": 1698,
+      "total_fixes": 344
     },
     {
       "city": "elkhart-lake",
-      "before_count": 233,
+      "before_count": 231,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -217,12 +217,12 @@
           "examples": []
         }
       },
-      "after_count": 240,
+      "after_count": 238,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 237,
+      "before_count": 236,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -355,7 +355,7 @@
           ]
         }
       },
-      "after_count": 240,
+      "after_count": 239,
       "total_fixes": 22
     },
     {

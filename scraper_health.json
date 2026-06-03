@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-03T15:13:29.439739-06:00",
+  "checked_at": "2026-06-03T15:15:18.333753-06:00",
   "today": "2026-06-03",
   "cities": {
     "park-city": [
@@ -21,11 +21,11 @@
       },
       {
         "source": "Mountain Town Music",
-        "actual": 255,
+        "actual": 262,
         "baseline": 206.5,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=255, baseline=206"
+        "message": "actual=262, baseline=206"
       },
       {
         "source": "Visit Park City",
@@ -42,14 +42,6 @@
         "floor": 20,
         "severity": "OK",
         "message": "actual=65, baseline=64"
-      },
-      {
-        "source": "KPCW Community Calendar",
-        "actual": 45,
-        "baseline": 51.8,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=45, baseline=52"
       },
       {
         "source": "Visit Park City (sitemap)",
@@ -167,11 +159,11 @@
       },
       {
         "source": "Siebkens Resort",
-        "actual": 7,
+        "actual": 5,
         "baseline": 6.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=7, baseline=7"
+        "message": "actual=5, baseline=7"
       },
       {
         "source": "Village of Elkhart Lake",
@@ -230,14 +222,6 @@
         "floor": null,
         "severity": "OK",
         "message": "actual=9, baseline=8"
-      },
-      {
-        "source": "KPCW Community Calendar",
-        "actual": 3,
-        "baseline": 2.5,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=3, baseline=2"
       },
       {
         "source": "RunSignup",
