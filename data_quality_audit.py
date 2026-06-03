@@ -69,6 +69,16 @@ _RECURRING_STRONG = re.compile(
     re.IGNORECASE,
 )
 
+# Titles that are inherently SINGLE-occurrence even if a source sets a stray
+# recurrence field (annual races, one-night galas). A recurrence flag on these
+# is bad source data, not a dropped series — C1 must not HIGH-flag them.
+_SINGULAR_EVENT = re.compile(
+    r"\b(marathon|half\s*marathon|10k|5k|1k|50k|50\s*mile|ultra|relay|triathlon"
+    r"|duathlon|gala|fun\s*run|hill\s*climb|challenge|fest|festival|championship"
+    r"|tournament|invitational|classic|open|derby)\b",
+    re.IGNORECASE,
+)
+
 # WEAK signals: generic activity words that appear in plenty of legitimate
 # ONE-OFF events ('Family Yoga in the Garden', 'Live Music by Bowser'). These
 # alone are NOT enough to flag — we only treat a weak-signal title as suspicious
@@ -161,12 +171,19 @@ def check_recurring_dropped(events, max_ex):
         title = e.get("title") or ""
         has_strong = bool(_RECURRING_STRONG.search(title))
         claims_recurrence = bool(e.get("recurrence") or e.get("recurrence_days"))
+        is_singular = bool(_SINGULAR_EVENT.search(title))
+        # A recurrence field on an inherently-singular event (a half marathon,
+        # gala, etc.) is bad source data, not a dropped series — don't trust it.
+        if is_singular:
+            claims_recurrence = False
         if not (has_strong or claims_recurrence):
             continue
-        key = (norm_title(title), ev_venue(e))
+        key = norm_title(title)
         by_key[key].add(ev_date(e))
         sample.setdefault(key, e)
-        reason.setdefault(key, "strong-title" if has_strong else "recurrence-field")
+        # recurrence-field = strong evidence (HIGH). strong-title alone = a guess
+        # from the name with no data backing it (MED).
+        reason.setdefault(key, "recurrence-field" if claims_recurrence else "strong-title")
     findings = []
     for key, dates in by_key.items():
         if len(dates) == 1:
@@ -179,14 +196,21 @@ def check_recurring_dropped(events, max_ex):
                 "source": e.get("source"),
             })
     findings.sort(key=lambda f: f["title"] or "")
+    has_field_evidence = any(f["why"] == "recurrence-field" for f in findings)
+    if not findings:
+        sev = LOW
+    elif has_field_evidence:
+        sev = HIGH
+    else:
+        sev = MED
     return {
         "code": "C1",
         "name": "RECURRING-DROPPED",
-        "severity": HIGH if findings else LOW,
+        "severity": sev,
         "count": len(findings),
-        "desc": "Event should recur (explicit cadence in title, or recurrence field "
-                "set) but appears on only ONE future date — likely dropped as 'past' "
-                "before recurrence expansion.",
+        "desc": "Event should recur (recurrence field set, or strong cadence word in "
+                "title) but appears on only ONE future date. recurrence-field findings "
+                "are HIGH (data-backed); strong-title-only are MED (name-based guess).",
         "examples": findings[:max_ex],
     }
 
