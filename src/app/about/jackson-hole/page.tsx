@@ -81,6 +81,115 @@ export default function AboutJacksonHolePage() {
           </div>
         </div>
 
+        <div className="section">
+          <div className="section-label">Explore</div>
+          <h2>Things to do in Jackson Hole</h2>
+          <p className="subtitle">
+            From the Tetons to the town square — there&apos;s always
+            something happening in the valley.
+          </p>
+          <div className="grid-3">
+            <div className="card">
+              <div className="card-icon">🎻</div>
+              <h3>Festivals &amp; Music</h3>
+              <p>
+                The Grand Teton Music Festival brings world-class orchestral
+                programs to Walk Festival Hall for seven weeks each summer.
+                Center for the Arts and Snow King concerts run year-round.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-icon">🤠</div>
+              <h3>Rodeo &amp; Western Life</h3>
+              <p>
+                The Jackson Hole Rodeo runs all summer at the fairgrounds.
+                The Teton County Fair fills late July with livestock shows,
+                a carnival, and a working slice of Wyoming ranch culture.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-icon">🏔️</div>
+              <h3>National Parks</h3>
+              <p>
+                Grand Teton National Park is minutes away and Yellowstone is
+                just north — two of America&apos;s greatest parks at the
+                valley&apos;s doorstep for hiking, wildlife, and scenery.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-icon">⛷️</div>
+              <h3>Skiing &amp; Snow</h3>
+              <p>
+                Jackson Hole Mountain Resort, Snow King, and nearby Grand
+                Targhee deliver some of the deepest, steepest terrain in the
+                country — an average of 459&quot; of snow a year.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-icon">🦌</div>
+              <h3>Wildlife &amp; Winter</h3>
+              <p>
+                The National Elk Refuge offers winter sleigh rides among
+                thousands of elk. Ice climbing, fat biking, and Nordic
+                trails round out the cold-season calendar.
+              </p>
+            </div>
+            <div className="card">
+              <div className="card-icon">🎨</div>
+              <h3>Arts &amp; Galleries</h3>
+              <p>
+                The National Museum of Wildlife Art, the Center for the Arts,
+                and a dense gallery scene around the town square make Jackson
+                a serious arts destination, not just an outdoor one.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="section">
+          <div className="section-label">When to go</div>
+          <h2>Best times to visit Jackson Hole</h2>
+          <p className="subtitle">
+            A true four-season valley — each one a different trip.
+          </p>
+          <div className="season-grid">
+            <div className="season">
+              <div className="season-icon">❄️</div>
+              <h3>Winter (Dec–Mar)</h3>
+              <p>
+                Peak ski season and deep snow. Elk refuge sleigh rides, ice
+                climbing, and quiet town nights. Book early around the
+                holidays.
+              </p>
+            </div>
+            <div className="season">
+              <div className="season-icon">🌸</div>
+              <h3>Spring (Apr–May)</h3>
+              <p>
+                Mud season — the quietest, cheapest window. Parks begin
+                reopening roads and wildlife is active as the valley thaws.
+              </p>
+            </div>
+            <div className="season">
+              <div className="season-icon">☀️</div>
+              <h3>Summer (Jun–Sep)</h3>
+              <p>
+                Festival season. The Grand Teton Music Festival, the rodeo,
+                fairs, and full access to both national parks. Warm days,
+                cool nights — the busiest and best window.
+              </p>
+            </div>
+            <div className="season">
+              <div className="season-icon">🍂</div>
+              <h3>Fall (Oct–Nov)</h3>
+              <p>
+                Golden aspens, the elk rut, and far fewer people. A
+                spectacular, calmer time before the ski resorts spin up.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="cta-banner">
           <h2>See what&apos;s happening this week</h2>
           <p>
@@ -153,6 +262,39 @@ export default function AboutJacksonHolePage() {
         }
         .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; }
 
+        .section { margin-bottom: 72px; }
+        .section-label {
+          font-size: 12px; font-weight: 700; text-transform: uppercase;
+          letter-spacing: 1px; color: var(--amber);
+          margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+        }
+        .section-label::before {
+          content: ''; width: 24px; height: 2px;
+          background: var(--purple-light); display: inline-block;
+        }
+        .section h2 { font-family: 'DM Serif Display', serif; font-size: 32px; margin-bottom: 8px; }
+        .section .subtitle { font-size: 16px; color: var(--muted); margin-bottom: 32px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .card {
+          background: white; border: 1px solid var(--border);
+          border-radius: 16px; padding: 28px; transition: all 0.2s;
+        }
+        .card:hover {
+          border-color: var(--purple); transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(83,74,183,0.08);
+        }
+        .card-icon { font-size: 28px; margin-bottom: 12px; }
+        .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+        .card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+        .season-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        .season {
+          background: white; border: 1px solid var(--border);
+          border-radius: 16px; padding: 24px; text-align: center;
+        }
+        .season-icon { font-size: 32px; margin-bottom: 12px; }
+        .season h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+        .season p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
         .cta-banner {
           background: var(--dark); border-radius: 24px;
           padding: 60px; text-align: center; margin-top: 80px;
@@ -174,6 +316,7 @@ export default function AboutJacksonHolePage() {
           .hero { padding: 100px 24px 60px; }
           .content { padding: 48px 24px; }
           .intro { grid-template-columns: 1fr; gap: 40px; }
+          .grid-3, .season-grid { grid-template-columns: 1fr 1fr; }
         }
       `}</style>
     </>
