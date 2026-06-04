@@ -740,6 +740,7 @@ function MultiFilterDropdown({
 }
 
 export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {}) {
+  const cityLabel = ({ parkcity: 'Park City', heber: 'Heber Valley', jackson: 'Jackson Hole', elkhartlake: 'Elkhart Lake' } as Record<string, string>)[cityKeyProp || 'parkcity'] || 'your area'
   const [events, setEvents] = useState<V2YocEvent[]>([])
   // Events from cities OTHER than the current one. Used by cross-city search
   // (Model C): current city's events surface first, fallback to nearest from
@@ -1567,11 +1568,15 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         </div>
       </div>
       <div style={{
+        fontFamily: "'DM Serif Display', serif", fontSize: 26, color: '#fff',
+        textAlign: 'center', margin: '4px 0 10px',
+      }}>Today in {cityLabel}</div>
+      <div style={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         gap: 6,
-        margin: '12px 4px 20px',
+        margin: '4px 4px 20px',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, justifyContent: 'center' }}>
           <button onClick={shiftDay(-1)} style={{
@@ -1599,6 +1604,12 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         </div>
       </div>
       {/* Featured events: gold-outlined photo cards, 3-up */}
+      {featuredEvents.length > 0 && (
+        <div style={{
+          fontSize: 12, fontWeight: 700, letterSpacing: 0.6, textTransform: 'uppercase',
+          color: '#e0a83a', margin: '0 0 10px',
+        }}>Featured today</div>
+      )}
       {featuredEvents.length > 0 && (
         <div style={{
           display: 'grid',
