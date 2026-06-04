@@ -424,7 +424,7 @@
     background: 
       linear-gradient(180deg, #2d2853 0%, #353063 50%, #2d2853 100%),
       radial-gradient(ellipse at top, rgba(127,119,221,0.15) 0%, transparent 60%);
-    padding: 100px 0;
+    padding: 40px 0 60px;
     color: white;
     position: relative;
   }
