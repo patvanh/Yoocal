@@ -11,7 +11,7 @@
  */
 
 type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson";
-type ActiveKey = "about" | "weekend" | "free" | "venues" | "business" | null;
+type ActiveKey = "about" | "weekend" | "free" | "concerts" | "venues" | "business" | null;
 
 export default function SiteNav({
   activeKey = null,
@@ -41,6 +41,7 @@ export default function SiteNav({
   const KEY_TO_SLUG: Record<string,string> = {parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole"};
   const weekendHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/this-weekend` : "/this-weekend";
   const freeHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/free-events` : "/park-city/free-events";
+  const concertsHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/concerts` : "/park-city/concerts";
   const venuesHref = cityKey ? `/venues?city=${cityKey}` : "/venues";
 
   // Only show city-specific This Weekend / Venues links when we're in a city context
@@ -66,6 +67,12 @@ export default function SiteNav({
                 className={activeKey === "weekend" ? "active" : ""}
               >
                 This Weekend
+              </a>
+              <a
+                href={concertsHref}
+                className={activeKey === "concerts" ? "active" : ""}
+              >
+                Concerts
               </a>
               <a
                 href={freeHref}
