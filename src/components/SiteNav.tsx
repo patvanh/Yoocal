@@ -38,7 +38,8 @@ export default function SiteNav({
           ? "About Heber"
           : "About";
 
-  const weekendHref = cityKey ? `/this-weekend?city=${cityKey}` : "/this-weekend";
+  const KEY_TO_SLUG: Record<string,string> = {parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole"};
+  const weekendHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/this-weekend` : "/this-weekend";
   const venuesHref = cityKey ? `/venues?city=${cityKey}` : "/venues";
 
   // Only show city-specific This Weekend / Venues links when we're in a city context
