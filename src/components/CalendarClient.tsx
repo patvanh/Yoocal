@@ -534,13 +534,13 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
         padding: '10px 8px', minWidth: 70, flexShrink: 0, gap: 2,
         border: '1px solid rgba(175,169,236,0.25)',
       }}>
-        <span style={{ fontSize: 14, fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>{monthDay}</span>
+        <span style={{ fontSize: 15, fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>{monthDay}</span>
         <span style={{ fontSize: 10, color: '#AFA9EC', fontWeight: 600, letterSpacing: 0.5, lineHeight: 1 }}>{dayOfWeek}</span>
         {thru && (
           <span style={{ fontSize: 9, color: 'rgba(175,169,236,0.85)', fontWeight: 600, lineHeight: 1, marginTop: 1 }}>{thru}</span>
         )}
         {event.start_time && (
-          <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 500, lineHeight: 1, marginTop: 2 }}>
+          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)', fontWeight: 700, lineHeight: 1, marginTop: 2 }}>
             {time.hour}{time.period.toLowerCase()}
           </span>
         )}
@@ -564,19 +564,19 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
             {event.is_free === false && <span style={{ color: '#f59e0b', marginLeft: 8, fontWeight: 600 }}>· Paid</span>}
           </div>
         )}
-        {event.description && (
-          <div style={{
-            fontSize: 12, color: 'rgba(255,255,255,0.45)',
-            marginBottom: 6, lineHeight: 1.4,
-            display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-          }}>
-            {event.description}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          {event.description && (
+            <div style={{
+              fontSize: 12, color: 'rgba(255,255,255,0.45)', lineHeight: 1.4,
+              whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
+              flex: 1, minWidth: 0,
+            }}>
+              {event.description}
+            </div>
+          )}
+          <div style={{ display: 'flex', gap: 4, flexShrink: 0 }}>
+            {(event.categories || []).slice(0, 2).map(c => <V2CategoryPill key={c} name={c} role="category" />)}
           </div>
-        )}
-        <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
-          {(event.categories || []).slice(0, 3).map(c => <V2CategoryPill key={c} name={c} role="category" />)}
-          {(event.facets || []).slice(0, 2).map(f => <V2CategoryPill key={f} name={f} role="facet" />)}
         </div>
       </div>
     </button>
