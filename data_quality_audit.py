@@ -83,6 +83,18 @@ _SINGULAR_EVENT = re.compile(
     re.IGNORECASE,
 )
 
+# FINITE recurring series: the title names a BOUNDED run ("6-Week Program",
+# "4-Part Series", "8-session course"). These legitimately have a recurrence
+# field (they meet weekly) but a fixed number of meetings, so as the series
+# progresses it naturally winds down to one remaining future date. That is NOT
+# a dropped series — C1 must not HIGH-flag a finite program near its end.
+_FINITE_SERIES = re.compile(
+    r"\b\d+\s*[-\u2010\u2011\u2012\u2013\u2014]?\s*"
+    r"(week|day|part|session|class|night|month)s?\b"
+    r"|\b(series|program|course|workshop|bootcamp|camp)\b",
+    re.IGNORECASE,
+)
+
 # WEAK signals: generic activity words that appear in plenty of legitimate
 # ONE-OFF events ('Family Yoga in the Garden', 'Live Music by Bowser'). These
 # alone are NOT enough to flag — we only treat a weak-signal title as suspicious
@@ -176,9 +188,11 @@ def check_recurring_dropped(events, max_ex):
         has_strong = bool(_RECURRING_STRONG.search(title))
         claims_recurrence = bool(e.get("recurrence") or e.get("recurrence_days"))
         is_singular = bool(_SINGULAR_EVENT.search(title))
+        is_finite = bool(_FINITE_SERIES.search(title))
         # A recurrence field on an inherently-singular event (a half marathon,
-        # gala, etc.) is bad source data, not a dropped series — don't trust it.
-        if is_singular:
+        # gala, etc.) OR a finite/bounded series ("6-Week Program") near its end
+        # is not a dropped series — don't trust the recurrence field for C1.
+        if is_singular or is_finite:
             claims_recurrence = False
         if not (has_strong or claims_recurrence):
             continue
