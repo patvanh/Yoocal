@@ -407,6 +407,84 @@ function V2CategoryPill({ name, role = 'category' }: { name: string; role?: 'cat
   )
 }
 
+const V2_CAT_STYLE: Record<string, { color: string; grad: string }> = {
+  'Music':            { color: '#7c5cff', grad: 'linear-gradient(135deg,#3a2a5e,#7c5cff)' },
+  'Food & Drink':     { color: '#e0892a', grad: 'linear-gradient(135deg,#7a4a1e,#e0892a)' },
+  'Arts & Theater':   { color: '#d6457a', grad: 'linear-gradient(135deg,#6e2440,#d6457a)' },
+  'Outdoors':         { color: '#2fa36b', grad: 'linear-gradient(135deg,#1e5e44,#2fa36b)' },
+  'Sports':           { color: '#2f7fa3', grad: 'linear-gradient(135deg,#1c4a60,#2f7fa3)' },
+  'Running & Races':  { color: '#e0892a', grad: 'linear-gradient(135deg,#7a4a1e,#e0892a)' },
+  'Family & Kids':    { color: '#c0489b', grad: 'linear-gradient(135deg,#62265a,#c0489b)' },
+  'Wellness':         { color: '#3aa39a', grad: 'linear-gradient(135deg,#1f5e58,#3aa39a)' },
+  'Education & Talks':{ color: '#5566c4', grad: 'linear-gradient(135deg,#2e3670,#5566c4)' },
+  'Community':        { color: '#6b61d6', grad: 'linear-gradient(135deg,#393379,#6b61d6)' },
+}
+function v2CatStyleFor(ev: V2YocEvent) {
+  const cats = [...(ev.filter_categories || []), ...(ev.categories || [])]
+  for (const c of cats) { if (V2_CAT_STYLE[c]) return { bucket: c, ...V2_CAT_STYLE[c] } }
+  return { bucket: 'Community', ...V2_CAT_STYLE['Community'] }
+}
+
+function V2FeaturedCard({ event, onClick, viewedDay }: { event: V2YocEvent; onClick: () => void; viewedDay?: string }) {
+  const startStr = (event.date || '').slice(0, 10)
+  const endStr = (event.end_date || startStr).slice(0, 10)
+  const badgeStr = (viewedDay && startStr <= viewedDay && viewedDay <= endStr) ? viewedDay : startStr
+  const date = v2ParseEventDate(badgeStr)
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+  const dow = date ? ['SUN','MON','TUE','WED','THU','FRI','SAT'][date.getDay()] : '?'
+  const mon = date ? MON[date.getMonth()] : ''
+  const dnum = date ? date.getDate() : ''
+  const time = v2FormatTimeDisplay(event.start_time)
+  const st = v2CatStyleFor(event)
+  const hasImg = !!event.image_url && /^https?:\/\//.test(event.image_url)
+  const isFree = event.is_free === true
+  const priceTag = isFree ? 'Free' : (event.price && event.price.trim() ? event.price : null)
+  const desc = (event.description || '').trim()
+  const shortDesc = desc.length > 120 ? desc.slice(0, 120).replace(/\s+\S*$/, '') + '\u2026' : desc
+
+  return (
+    <button onClick={onClick} style={{
+      display: 'flex', flexDirection: 'column', textAlign: 'left', width: '100%',
+      background: '#fff', border: '2px solid #e0a83a', borderRadius: 16, overflow: 'hidden',
+      cursor: 'pointer', padding: 0, fontFamily: "'DM Sans', sans-serif",
+      boxShadow: '0 2px 12px rgba(26,24,48,0.06)',
+    }}>
+      <div style={{ height: 136, position: 'relative',
+        background: hasImg ? `center/cover no-repeat url(${event.image_url})` : st.grad }}>
+        <span style={{ position: 'absolute', top: 11, left: 11, background: 'rgba(26,24,48,0.82)',
+          color: '#ffd27a', fontSize: 10, fontWeight: 700, padding: '5px 10px', borderRadius: 100,
+          letterSpacing: 0.3 }}>\u2605 Featured</span>
+        <span style={{ position: 'absolute', top: 11, right: 11, width: 32, height: 32,
+          borderRadius: '50%', background: 'rgba(255,255,255,0.92)', display: 'flex',
+          alignItems: 'center', justifyContent: 'center', color: '#565270', fontSize: 16 }}>\u2661</span>
+      </div>
+      <div style={{ padding: '12px 14px 14px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+        <div style={{ display: 'flex', gap: 12 }}>
+          <div style={{ flexShrink: 0, width: 42, textAlign: 'center', border: '1px solid rgba(26,24,48,0.08)',
+            borderRadius: 9, padding: '5px 0', lineHeight: 1 }}>
+            <div style={{ fontSize: 9, fontWeight: 700, color: '#e0892a', textTransform: 'uppercase', letterSpacing: 0.4 }}>{mon}</div>
+            <div style={{ fontSize: 18, fontWeight: 800, color: '#16142b', margin: '1px 0' }}>{dnum}</div>
+            <div style={{ fontSize: 8, color: '#8b88a0', textTransform: 'uppercase' }}>{dow}</div>
+          </div>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontSize: 12, fontWeight: 700, color: '#7c5cff' }}>{time.hour}{time.period ? ' ' + time.period : ''}</div>
+            <h3 style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.22, margin: '1px 0 4px', color: '#16142b', letterSpacing: '-.2px' }}>{event.title}</h3>
+            {event.location && <div style={{ fontSize: 12, color: '#8b88a0', fontWeight: 500 }}>\uD83D\uDCCD {event.location}</div>}
+            <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginTop: 9 }}>
+              <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.3,
+                padding: '3px 9px', borderRadius: 100, background: `color-mix(in srgb, ${st.color} 14%, white)`, color: st.color }}>{st.bucket}</span>
+              {priceTag && <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.3,
+                padding: '3px 9px', borderRadius: 100, background: isFree ? 'rgba(47,163,107,0.15)' : 'rgba(26,24,48,0.06)',
+                color: isFree ? '#1f8a52' : '#565270' }}>{priceTag}</span>}
+            </div>
+          </div>
+        </div>
+        {shortDesc && <p style={{ fontSize: 13, color: '#565270', lineHeight: 1.45, margin: '8px 0 0' }}>{shortDesc}</p>}
+      </div>
+    </button>
+  )
+}
+
 function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V2YocEvent; onClick: () => void; featured?: boolean; viewedDay?: string }) {
   // Multi-day events: if we're viewing a specific day inside the event's span,
   // badge THAT day (not the event's start), so a May 26-30 event shown on the
@@ -1520,37 +1598,18 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           {loading ? '' : `${filteredEvents.length} event${filteredEvents.length !== 1 ? 's' : ''}`}
         </div>
       </div>
-      {/* Featured events orange band */}
+      {/* Featured events: gold-outlined photo cards, 3-up */}
       {featuredEvents.length > 0 && (
         <div style={{
-          background: 'linear-gradient(135deg, #FAEEDA 0%, #FCD9A8 50%, #FAEEDA 100%)',
-          padding: '24px 20px',
-          borderRadius: 16,
-          margin: '0 0 24px',
-          border: '1px solid rgba(239,159,39,0.5)',
-          boxShadow: '0 4px 20px rgba(239,159,39,0.25)',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(265px, 1fr))',
+          gap: 18,
+          alignItems: 'stretch',
+          margin: '0 0 28px',
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-            <div style={{
-              display: 'inline-flex', alignItems: 'center', gap: 6,
-              background: '#EF9F27', color: 'white',
-              padding: '5px 14px', borderRadius: 100,
-              fontSize: 11, fontWeight: 700, letterSpacing: 0.5,
-              textTransform: 'uppercase',
-            }}>★ Featured</div>
-            <span style={{ fontSize: 12, color: 'rgba(154,52,18,0.85)', fontWeight: 600 }}>
-              {viewedDayStr === v2DateToStr(v2TodayMountain()) ? 'Happening today' : `Happening ${dateRangeLabel}`}
-            </span>
-          </div>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(min(440px, 100%), 1fr))',
-            gap: 8,
-          }}>
-            {featuredEvents.map((ev, i) => (
-              <V2EventCard key={`featured-${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} featured viewedDay={viewedDayStr} />
-            ))}
-          </div>
+          {featuredEvents.map((ev, i) => (
+            <V2FeaturedCard key={`featured-${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} viewedDay={viewedDayStr} />
+          ))}
         </div>
       )}
       
