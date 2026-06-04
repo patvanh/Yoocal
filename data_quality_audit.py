@@ -483,11 +483,21 @@ def check_ongoing_dropped(events, max_ex):
         if t and d:
             by_title[t].append(d)
     straddling_series = 0
+    fanned_future_series = 0
     for t, dates in by_title.items():
-        if len(dates) >= 3:
-            if any(x < TODAY_ISO for x in dates) and any(x >= TODAY_ISO for x in dates):
+        uniq = set(dates)
+        if len(uniq) >= 3:
+            has_past = any(x < TODAY_ISO for x in uniq)
+            has_future = any(x >= TODAY_ISO for x in uniq)
+            if has_past and has_future:
                 straddling_series += 1
-    ongoing_total = len(ongoing) + straddling_series
+            # A title fanned out across 3+ distinct FUTURE dates is the same
+            # healthy expansion pattern, even if the series has not started yet
+            # (e.g. a summer market/series early in the season is all-future).
+            # Counting only straddling series false-alarmed C8 early-season.
+            elif has_future:
+                fanned_future_series += 1
+    ongoing_total = len(ongoing) + straddling_series + fanned_future_series
     suspicious = (len(events) >= 500 and ongoing_total == 0)
     return {
         "code": "C8",
@@ -499,9 +509,11 @@ def check_ongoing_dropped(events, max_ex):
                 "ongoing/seasonal events as 'past' before checking end_date.",
         "examples": [{"ongoing_range_rows": len(ongoing),
                       "straddling_recurring_series": straddling_series,
-                      "note": "0 of BOTH in a populated city = likely class-drop bug"}]
+                      "fanned_future_series": fanned_future_series,
+                      "note": "0 of ALL three in a populated city = likely class-drop bug"}]
                      if suspicious else [{"ongoing_range_rows": len(ongoing),
-                                          "straddling_recurring_series": straddling_series}],
+                                          "straddling_recurring_series": straddling_series,
+                                          "fanned_future_series": fanned_future_series}],
     }
 
 
