@@ -49,13 +49,13 @@ export default function CityLanding({ citySlug, cityKey }: { citySlug: string; c
 
       {/* CALENDAR */}
       <section className="calendar-section" id="events" style={{ textAlign: "center" }}>
-        <h1 style={{ fontSize: "clamp(40px, 6vw, 68px)", lineHeight: 1.05 }}>
+        <h1 style={{ fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.08 }}>
           Things to do in <em>{cityName}</em>
         </h1>
-        <p style={{ marginBottom: "24px", marginTop: "12px", fontSize: "18px", color: "rgba(255,255,255,0.7)" }}>
+        <p style={{ marginBottom: "20px", marginTop: "8px", fontSize: "16px", color: "rgba(255,255,255,0.7)" }}>
           {cityName} — updated daily
         </p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", justifyContent: "center", marginBottom: "40px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", justifyContent: "center", marginBottom: "28px" }}>
           <a href={`/${citySlug}/this-weekend`} style={quickLink}>This weekend</a>
           <a href={`/${citySlug}/this-month`} style={quickLink}>This month</a>
           <a href={`/${citySlug}/concerts`} style={quickLink}>Concerts &amp; live music</a>
