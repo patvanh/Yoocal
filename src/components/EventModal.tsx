@@ -40,6 +40,19 @@ export default function EventModal({
   const [showCalDropdown, setShowCalDropdown] = useState(false);
   const [showShareDropdown, setShowShareDropdown] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [descExpanded, setDescExpanded] = useState(false);
+  const [descClamped, setDescClamped] = useState(false);
+  const descRef = useRef<HTMLParagraphElement | null>(null);
+
+  useEffect(() => {
+    setDescExpanded(false);
+    // Measure after paint: is the (unclamped) text taller than the clamp box?
+    const id = requestAnimationFrame(() => {
+      const el = descRef.current;
+      if (el) setDescClamped(el.scrollHeight - el.clientHeight > 4);
+    });
+    return () => cancelAnimationFrame(id);
+  }, [event?.title, event?.description]);
   const modalRef = useRef<HTMLDivElement | null>(null);
 
   // Close on Escape, lock body scroll while open
@@ -146,7 +159,23 @@ export default function EventModal({
         </div>
 
         {event.description && (
-          <p className="ye-desc">{event.description}</p>
+          <div className="ye-desc-wrap">
+            <p
+              ref={descRef}
+              className={`ye-desc${descExpanded ? " expanded" : ""}`}
+            >
+              {event.description}
+            </p>
+            {descClamped && (
+              <button
+                type="button"
+                className="ye-desc-toggle"
+                onClick={() => setDescExpanded((v) => !v)}
+              >
+                {descExpanded ? "See less" : "See more"}
+              </button>
+            )}
+          </div>
         )}
 
         <div className="ye-actions">
@@ -284,17 +313,29 @@ export default function EventModal({
         .ye-close {
           background: rgba(255,255,255,0.08);
           border: none; color: rgba(255,255,255,0.7);
-          width: 32px; height: 32px;
+          width: 40px; height: 40px;
           border-radius: 50%;
-          cursor: pointer; font-size: 20px;
+          cursor: pointer; font-size: 24px;
           flex-shrink: 0;
           display: flex; align-items: center; justify-content: center;
           line-height: 1;
           padding: 0;
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
         }
         .ye-close:hover {
           background: rgba(255,255,255,0.16);
           color: white;
+        }
+        .ye-close:active {
+          background: rgba(255,255,255,0.22);
+        }
+        @media (max-width: 600px) {
+          .ye-close {
+            width: 48px; height: 48px;
+            font-size: 28px;
+            background: rgba(255,255,255,0.12);
+          }
         }
 
         .ye-title {
@@ -330,12 +371,33 @@ export default function EventModal({
           text-align: center;
         }
 
+        .ye-desc-wrap { margin: 0 0 24px; }
         .ye-desc {
           font-size: 15px;
           color: rgba(255,255,255,0.6);
           line-height: 1.7;
-          margin: 0 0 24px;
+          margin: 0;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          overflow: hidden;
         }
+        .ye-desc.expanded {
+          -webkit-line-clamp: unset;
+          overflow: visible;
+        }
+        .ye-desc-toggle {
+          margin-top: 8px;
+          background: none;
+          border: none;
+          padding: 0;
+          color: #9b8ff0;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+          font-family: inherit;
+        }
+        .ye-desc-toggle:hover { text-decoration: underline; }
 
         .ye-actions {
           display: flex;
