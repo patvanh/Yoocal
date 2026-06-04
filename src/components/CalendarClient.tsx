@@ -1251,7 +1251,15 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             type="text"
             placeholder="Search bands, venues, or what to do..."
             value={searchQuery}
-            onChange={(e) => { setSearchQuery(e.target.value); setDropdownOpen(true) }}
+            onChange={(e) => {
+              const v = e.target.value
+              // Starting a search (empty -> text) auto-switches When to 'all
+              // upcoming' — someone searching "music" wants all upcoming music,
+              // not just today's. The day default stays 'today' for browsing.
+              if (v.trim() && !searchQuery.trim() && dayFilter === 'today') setDayFilter('all')
+              setSearchQuery(v)
+              setDropdownOpen(true)
+            }}
             onFocus={() => setDropdownOpen(true)}
             style={{
               width: '100%', padding: '11px 16px', fontSize: 14,
