@@ -42,7 +42,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <Script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" strategy="afterInteractive" />
       </head>
-      <body>{children}<Analytics /></body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.yoocal.com/#org","name":"Yoocal","url":"https://www.yoocal.com","logo":"https://www.yoocal.com/og-image.png","description":"Local events for scenic resort towns — one free calendar updated daily."},{"@type":"WebSite","@id":"https://www.yoocal.com/#website","url":"https://www.yoocal.com","name":"Yoocal","publisher":{"@id":"https://www.yoocal.com/#org"}}]}' }}
+        />
+        {children}<Analytics />
+      </body>
     </html>
   )
 }

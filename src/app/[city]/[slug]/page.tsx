@@ -208,6 +208,16 @@ export default async function EventPage({ params }: Props) {
   const mapLng = venueCoords?.[1] ?? event.lng ?? city.center[1]
 
   // Schema.org Event structured data
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Yoocal", item: "https://www.yoocal.com" },
+      { "@type": "ListItem", position: 2, name: city.name, item: `https://www.yoocal.com/${citySlug}` },
+      { "@type": "ListItem", position: 3, name: event.title, item: `https://www.yoocal.com/${citySlug}/${slug}` },
+    ],
+  }
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -282,6 +292,10 @@ export default async function EventPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* NAV */}
