@@ -69,7 +69,7 @@ export default async function CityFreeEventsPage(
 
   return (
     <>
-      <SiteNav cityKey={cityKey} />
+      <SiteNav activeKey="free" cityKey={cityKey} />
       <div className="hero">
         <div className="hero-content">
           <div className="hero-eyebrow">Free Events</div>
