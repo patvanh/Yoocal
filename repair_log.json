@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-03T21:15:17.564448",
-  "audit_date": "2026-06-03",
+  "generated_at": "2026-06-04T18:41:36.096590",
+  "audit_date": "2026-06-04",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1693,
+      "before_count": 1704,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -16,19 +16,27 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 3,
+          "fixed": 5,
           "examples": [
-            {
-              "title": "Fascia Rolling Class",
-              "had_span": 181
-            },
             {
               "title": "Group Fitness Classes",
               "had_span": 181
             },
             {
+              "title": "Old Town walking tour",
+              "had_span": 69
+            },
+            {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
+            },
+            {
+              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
+              "had_span": 84
+            },
+            {
+              "title": "Fascia Rolling Class",
+              "had_span": 181
             }
           ]
         },
@@ -78,7 +86,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 19,
+          "fixed": 7,
           "examples": [
             {
               "title": "HOMETOWN SHOW Jessie Ritter @ Jackson MO City Park Rock Garden",
@@ -113,8 +121,18 @@
           ]
         },
         "classification": {
-          "fixed": 315,
+          "fixed": 287,
           "examples": [
+            {
+              "title": "A Spirited Paint Party with Artist Briar West",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Food & Drink"
+              ]
+            },
             {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
               "before": [],
@@ -124,13 +142,6 @@
             },
             {
               "title": "Progressive Art Experience",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [],
               "after": [
                 "Community"
@@ -153,12 +164,12 @@
           ]
         }
       },
-      "after_count": 1698,
-      "total_fixes": 344
+      "after_count": 1709,
+      "total_fixes": 306
     },
     {
       "city": "elkhart-lake",
-      "before_count": 231,
+      "before_count": 245,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -217,12 +228,12 @@
           "examples": []
         }
       },
-      "after_count": 238,
+      "after_count": 252,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 236,
+      "before_count": 241,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -355,12 +366,12 @@
           ]
         }
       },
-      "after_count": 239,
+      "after_count": 244,
       "total_fixes": 22
     },
     {
       "city": "jackson",
-      "before_count": 555,
+      "before_count": 632,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -371,11 +382,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 122
+              "had_span": 121
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 109
+              "had_span": 108
             }
           ]
         },
@@ -472,7 +483,7 @@
           "examples": []
         }
       },
-      "after_count": 568,
+      "after_count": 645,
       "total_fixes": 20
     }
   ]
