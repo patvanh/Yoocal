@@ -1381,3 +1381,102 @@ exists (discovery confirmed). jacksonhole.com (+119) was the real prize. Long
 tail is thin/partly illusory (news mis-tagged as events, seasonal, redundant).
 Suspicious-huge sitemaps (astoriahotspringspark 146, mentalwellnessjh 382,
 findarace 2879, velo22 118) correctly auto-flagged low/poor-data by the tool.
+
+## Update 35: City-page redesign (reskin) + data-quality gate fixes + modal/calendar UX (2026-06-04, Day 12+)
+
+Big session. Grouped by area.
+
+### City-page visual redesign (reskin of EventsV2Embedded / CityLanding)
+Team produced a search-first city-page design (dark hero + photo featured cards
++ filter pills). Reskinned the real page to match it, keeping ALL backend/data/
+filter/search/featured-selection logic untouched — purely presentation.
+Shipped commits:
+- **1811e58** — Featured events now render as `V2FeaturedCard` (NEW component,
+  added before V2EventCard): gold 2px-outlined photo cards, 3-up grid
+  (auto-fit minmax 265px). Photo = event.image_url when present, else a
+  category-colored GRADIENT fallback (V2_CAT_STYLE map + v2CatStyleFor helper,
+  keyed on the 10 filter_categories buckets). Featured badge top-left, heart
+  top-right, compact body (date chip, time, title, venue, category pill,
+  price/Free tag, clamped 120-char description). Replaced the old orange
+  gradient band.
+- **4815325** — Hero shrunk: "Things to do in [City]" h1 from clamp(40,6vw,68)
+  to clamp(30,4.2vw,46); subtitle 18->16px; tighter margins. Events surface
+  higher.
+- **9dce051** — Section headings inside EventsV2Embedded: centered "Today in
+  [City]" (cityLabel derived from cityKeyProp) above the centered "< date >"
+  day-nav, plus a left-aligned gold "Featured today" eyebrow above the cards.
+- **e994b3f** — V2EventCard (non-featured cards) restyled: description + up to
+  2 category pills now share ONE row (desc fades left w/ ellipsis, tags right)
+  instead of stacking; date/time in the pill bigger+bolder. V2EventCard renders
+  ONLY in the main grid (one usage), so this doesn't touch search/overlay.
+Featured cards confirmed looking good on the dark background (kept content
+area dark — did NOT lighten it).
+
+### Design decisions locked during mockup phase (for future-me)
+- Accounts/saved/personalization are NOT built → all account CTAs were rejected
+  as dishonest. Honest newsletter capture used instead where signup is wanted.
+- Featured photo fallback: chose category GRADIENT + (later) optional stock
+  photos. Real stock photos can be dropped in /public and the V2FeaturedCard
+  fallback line flipped from gradient to <img>. Currently gradient.
+- Emojis removed sitewide from the redesign EXCEPT the 📍 pin; clean SVG
+  line-icons used instead (in the mockup; real-page icon swap not all done).
+- Mockup workflow lesson: browser-caches the HTML by filename, so each mockup
+  iteration was saved under a NEW filename (v2..v18). Visualizer inline tool
+  renders in claude.ai's OWN design system, NOT Yoocal's brand — not a faithful
+  preview; standalone HTML mockup is the right tool.
+
+### BANKED / TODO from this session
+- **Newsletter banner on city page**: mockup had an honest email-capture banner
+  (forms.groupmail.info/subscribe/yoocal) + a feature row (Updated daily /
+  Local focused / Every source / Get notified, SVG icons). NOT ported to the
+  real page (mockup-only). Decided to skip for now. Banked if wanted later.
+- **Heart = public interest counter (NOT save)**: idea to repurpose the heart
+  on event cards from "save" (needs accounts we don't have) into an anonymous
+  public popularity counter — any guest taps, count increments, shows "N
+  interested" below the heart. Honest (no fake account/saved), no login,
+  adds social proof + signal on what people care about. IMPLEMENTATION: needs
+  a write-capable shared datastore + an API route to increment/read counts
+  (Vercel KV or similar) — this is NEW infrastructure (current data is static
+  JSON regenerated daily by scrapers, read-only). localStorage-only would be
+  per-browser/non-shared = useless. So this is a real feature project, not a
+  frontend tweak. Scope before building.
+- Real-page icon emoji->SVG swap (mockup did it; real page still has some).
+- Featured photos: source licensed category stock images to /public/stock/ if
+  moving off the gradient fallback.
+
+### Data-quality GATE fixes (audit checks were too strict; data was fine)
+- **3a9d778** C1: added _FINITE_SERIES regex so finite "N-week program/series"
+  events winding down to 1 future date aren't HIGH-flagged as dropped recurring.
+- **ee61359** C6: reset data_quality_baseline.json — CFA (Center for the Arts
+  Jackson Hole) baseline 208 (pre-cloaking-fix junk) -> 14 (legit Firecrawl
+  count). Verified CFA was the only meaningful drop; others grew. Baseline is a
+  DELIBERATE commit (like the CFA purge) — normally git checkout'd on rebase.
+- **2844cd0** C8: added fanned_future_series counter. The pipeline FANS OUT
+  multi-day/recurring events into per-day records by design (GTMF=45 day-rows,
+  markets=19-22, camps=61), so the site legitimately has ~0 date-range rows.
+  C8 counted only straddling (past+future) series as healthy; early-season an
+  all-future summer series wasn't counted -> false MED on Heber. Now a title on
+  3+ distinct FUTURE dates counts as healthy. C8 LOW across all 4 cities.
+  KEY DATA-MODEL FACT: end_date-based logic must account for the fan-out design.
+Audit now: 0 HIGH, gate passes, no false MEDs.
+
+### SEO / growth push (earlier in session, all shipped)
+16 path-based intent landing pages (4 cities x this-weekend/free-events/
+concerts/this-month), all prebuilt + sitemapped + per-city metadata/canonical.
+Structured data: Organization+WebSite JSON-LD sitewide, BreadcrumbList on event
+pages, Event JSON-LD got image + conditional offers. City->intent cross-link
+pills. Commits a5db530, 86a6cb2, 372b5ad, b447e91, 22c288d, ce8ad2d, 3cec62f,
+fbfd0d0. Pending (non-code): Search Console sitemap submit + Rich Results test;
+backlink outreach to tourism boards/chambers (highest long-term lever).
+
+### Calendar UX
+- **b4da812** default dayFilter -> 'today' (browse default).
+- **cb8c121** both Clear buttons reset to 'today' (+ new Clear on default pill row).
+- **b925933** searching auto-switches When -> 'all upcoming' (gated on dayFilter
+  still being 'today' so a deliberate When pick isn't overridden). Symmetric:
+  search->all-upcoming, clear->today, browse->today.
+
+### Event modal UX
+- **d772bc4** long descriptions clamp to 4 lines + See more/See less toggle
+  (only shows when text overflows); close button 32px -> 40px desktop / 48px
+  mobile w/ touch-action:manipulation + :active state (was below 44px tap target).
