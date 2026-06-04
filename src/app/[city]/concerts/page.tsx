@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import CitySwitcher from "@/components/CitySwitcher";
-import WeekendDayList from "@/components/WeekendDayList";
+import IntentDayList from "@/components/IntentDayList";
 import { cityKeyFromSlug } from "@/lib/events";
 import { CITY_CONFIG, loadCityEvents, formatLocalISODate } from "@/lib/city-events";
 
@@ -100,7 +100,7 @@ export default async function CityConcertsPage(
             <p>Our scraper runs daily \u2014 check back soon, or browse the full <a href={`/${city}`}>{cfg.label} calendar</a>.</p>
           </div>
         ) : (
-          <WeekendDayList events={events} />
+          <IntentDayList events={events} />
         )}
         <div className="bottom-cta">
           <p>See everything happening in {cfg.label} \u2192 <a href={`/${city}`}>browse all upcoming events</a></p>
@@ -108,25 +108,51 @@ export default async function CityConcertsPage(
       </div>
       <SiteFooter cityLabel={cfg.label} />
       <style>{`
-        body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
-        .hero { background: var(--dark); padding: 120px 80px 64px; position: relative; overflow: hidden; text-align: center; }
-        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(83,74,183,0.4) 0%, transparent 70%); }
-        .hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
-        .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 100px; margin-bottom: 24px; letter-spacing: 0.5px; border: 1px solid rgba(255,255,255,0.15); }
-        .hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5.5vw, 64px); color: white; line-height: 1.05; margin-bottom: 18px; }
+        body { font-family: 'DM Sans', sans-serif; background: #f4f2f9; color: #1a1830; overflow-x: hidden; }
+        .hero {
+          background: linear-gradient(135deg, #1a1830 0%, #2a2450 55%, #1f1b3a 100%);
+          padding: 110px 32px 64px; text-align: center; position: relative; overflow: hidden;
+        }
+        .hero::after {
+          content: ''; position: absolute; inset: 0;
+          background: radial-gradient(ellipse 70% 90% at 50% -10%, rgba(123,92,255,0.30) 0%, transparent 60%);
+          pointer-events: none;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+        .hero-eyebrow {
+          display: inline-flex; align-items: center; gap: 8px;
+          background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.92);
+          font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 100px;
+          margin-bottom: 22px; letter-spacing: 0.4px; border: 1px solid rgba(255,255,255,0.16);
+          text-transform: uppercase;
+        }
+        .hero h1 {
+          font-family: 'DM Serif Display', serif; font-size: clamp(38px, 5.5vw, 58px);
+          color: white; line-height: 1.04; margin: 0 0 14px;
+        }
         .hero h1 em { font-style: italic; color: #9b8ff0; }
-        .hero p { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 540px; margin: 0 auto; }
-        .content { max-width: 900px; margin: 0 auto; padding: 56px 32px 100px; }
-        .empty { text-align: center; padding: 80px 24px; background: white; border-radius: 24px; border: 1px solid var(--border); }
-        .empty-emoji { font-size: 48px; margin-bottom: 16px; }
-        .empty h2 { font-family: 'DM Serif Display', serif; font-size: 28px; margin-bottom: 12px; }
-        .empty p { color: var(--muted); font-size: 16px; }
-        .empty a { color: var(--purple); font-weight: 600; }
-        .bottom-cta { text-align: center; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
-        .bottom-cta p { font-size: 14px; color: var(--muted); }
-        .bottom-cta a { color: var(--purple); font-weight: 600; text-decoration: none; }
+        .hero p { font-size: 17px; color: rgba(255,255,255,0.62); line-height: 1.55; max-width: 540px; margin: 0 auto 26px; }
+        .content {
+          max-width: 880px; margin: -32px auto 0; padding: 0 20px 100px;
+          position: relative; z-index: 3;
+        }
+        .empty {
+          text-align: center; padding: 72px 24px; background: white;
+          border-radius: 22px; border: 1px solid rgba(26,24,48,0.08);
+          box-shadow: 0 12px 40px rgba(26,24,48,0.10);
+        }
+        .empty-emoji { font-size: 46px; margin-bottom: 14px; }
+        .empty h2 { font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 10px; }
+        .empty p { color: #6b6880; font-size: 16px; }
+        .empty a { color: #6b61d6; font-weight: 600; }
+        .bottom-cta { text-align: center; margin-top: 44px; padding-top: 0; border-top: none; }
+        .bottom-cta p { font-size: 14px; color: #6b6880; }
+        .bottom-cta a { color: #6b61d6; font-weight: 700; text-decoration: none; }
         .bottom-cta a:hover { text-decoration: underline; }
-        @media (max-width: 600px) { .hero { padding: 100px 20px 48px; } .content { padding: 40px 16px 64px; } }
+        @media (max-width: 600px) {
+          .hero { padding: 92px 18px 56px; }
+          .content { padding: 0 14px 64px; }
+        }
       `}</style>
     </>
   );
