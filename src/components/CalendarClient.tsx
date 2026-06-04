@@ -1336,11 +1336,11 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                   }}
                   style={{ position: 'absolute', opacity: 0, width: 0, height: 0, padding: 0, border: 0, pointerEvents: 'none' }}
                 />
-                {(dayFilter !== 'all' || timeFilter !== 'any' || activeCategories.size > 0 || searchQuery.trim()) && (
+                {(dayFilter !== 'today' || timeFilter !== 'any' || activeCategories.size > 0 || searchQuery.trim()) && (
                   <button type="button"
                     onClick={() => {
                       setSearchQuery('')
-                      setDayFilter('all')
+                      setDayFilter('today')
                       setTimeFilter('any')
                       setActiveCategories(new Set())
                       setDropdownOpen(false)
@@ -1461,6 +1461,23 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             onToggle={(v) => setActiveCategories(prev => { const n = new Set(prev); if (n.has(v)) n.delete(v); else n.add(v); return n })}
             onClear={() => setActiveCategories(new Set())}
           />
+          {(dayFilter !== 'today' || timeFilter !== 'any' || activeCategories.size > 0 || searchQuery.trim()) && (
+            <button type="button"
+              onClick={() => {
+                setSearchQuery('')
+                setDayFilter('today')
+                setTimeFilter('any')
+                setActiveCategories(new Set())
+              }}
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                color: 'rgba(255,255,255,0.7)',
+                border: '1px solid rgba(255,255,255,0.14)',
+                borderRadius: 999, padding: '8px 16px', fontSize: 13,
+                fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap',
+              }}
+            >Clear</button>
+          )}
         </div>
       </div>
       <div style={{
