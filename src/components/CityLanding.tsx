@@ -17,6 +17,12 @@ const CITY_NAMES: Record<string, string> = {
  */
 export default function CityLanding({ citySlug, cityKey }: { citySlug: string; cityKey: string }) {
   const cityName = CITY_NAMES[cityKey] || "Local"
+  const quickLink: React.CSSProperties = {
+    display: "inline-block", padding: "8px 16px", borderRadius: "100px",
+    background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)",
+    color: "rgba(255,255,255,0.9)", fontSize: "14px", fontWeight: 600,
+    textDecoration: "none",
+  }
   return (
     <div style={{ background: '#1a1830', minHeight: '100vh' }}>
       {/* NAV */}
@@ -46,9 +52,15 @@ export default function CityLanding({ citySlug, cityKey }: { citySlug: string; c
         <h1 style={{ fontSize: "clamp(40px, 6vw, 68px)", lineHeight: 1.05 }}>
           Things to do in <em>{cityName}</em>
         </h1>
-        <p style={{ marginBottom: "40px", marginTop: "12px", fontSize: "18px", color: "rgba(255,255,255,0.7)" }}>
+        <p style={{ marginBottom: "24px", marginTop: "12px", fontSize: "18px", color: "rgba(255,255,255,0.7)" }}>
           {cityName} — updated daily
         </p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", justifyContent: "center", marginBottom: "40px" }}>
+          <a href={`/${citySlug}/this-weekend`} style={quickLink}>This weekend</a>
+          <a href={`/${citySlug}/this-month`} style={quickLink}>This month</a>
+          <a href={`/${citySlug}/concerts`} style={quickLink}>Concerts &amp; live music</a>
+          <a href={`/${citySlug}/free-events`} style={quickLink}>Free events</a>
+        </div>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 16px", textAlign: "left" }}>
           <EventsV2Embedded cityKeyProp={cityKey} />
         </div>
