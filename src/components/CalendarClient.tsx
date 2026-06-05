@@ -371,7 +371,7 @@ function V2Chip({ active, onClick, children, color, compact = false }: {
     ? { background: color.bg, color: color.fg, border: '1px solid transparent', fontWeight: 600 }
     : { background: '#534AB7', color: '#fff', border: '1px solid transparent', fontWeight: 500 }
   const inactiveStyle = {
-    background: 'rgba(255,255,255,0.06)',
+    background: 'rgba(26,24,48,0.5)',
     color: '#fff',
     border: '1px solid rgba(255,255,255,0.18)',
   }
@@ -453,10 +453,10 @@ function V2FeaturedCard({ event, onClick, viewedDay }: { event: V2YocEvent; onCl
         background: hasImg ? `center/cover no-repeat url(${event.image_url})` : st.grad }}>
         <span style={{ position: 'absolute', top: 11, left: 11, background: 'rgba(26,24,48,0.82)',
           color: '#ffd27a', fontSize: 10, fontWeight: 700, padding: '5px 10px', borderRadius: 100,
-          letterSpacing: 0.3 }}>\u2605 Featured</span>
+          letterSpacing: 0.3 }}>★ Featured</span>
         <span style={{ position: 'absolute', top: 11, right: 11, width: 32, height: 32,
           borderRadius: '50%', background: 'rgba(255,255,255,0.92)', display: 'flex',
-          alignItems: 'center', justifyContent: 'center', color: '#565270', fontSize: 16 }}>\u2661</span>
+          alignItems: 'center', justifyContent: 'center', color: '#565270', fontSize: 16 }}>♡</span>
       </div>
       <div style={{ padding: '12px 14px 14px', display: 'flex', flexDirection: 'column', flex: 1 }}>
         <div style={{ display: 'flex', gap: 12 }}>
@@ -586,12 +586,13 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
 type FilterOption = { value: string; label: string }
 
 function FilterDropdown({
-  label, value, options, onChange,
+  label, value, options, onChange, minWidth = 150,
 }: {
   label: string
   value: string
   options: FilterOption[]
   onChange: (v: string) => void
+  minWidth?: number
 }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement | null>(null)
@@ -612,9 +613,9 @@ function FilterDropdown({
           display: 'inline-flex', alignItems: 'center', gap: 6,
           justifyContent: 'space-between',
           padding: '7px 14px', fontSize: 13, fontWeight: 600,
-          minWidth: 150, boxSizing: 'border-box',
+          minWidth, boxSizing: 'border-box',
           borderRadius: 999, cursor: 'pointer',
-          background: 'rgba(255,255,255,0.06)',
+          background: 'rgba(26,24,48,0.5)',
           border: '1px solid rgba(255,255,255,0.18)',
           color: '#fff', fontFamily: 'inherit', whiteSpace: 'nowrap',
         }}
@@ -653,13 +654,14 @@ function FilterDropdown({
 }
 
 function MultiFilterDropdown({
-  label, selected, options, onToggle, onClear,
+  label, selected, options, onToggle, onClear, minWidth = 150,
 }: {
   label: string
   selected: Set<string>
   options: FilterOption[]
   onToggle: (v: string) => void
   onClear: () => void
+  minWidth?: number
 }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement | null>(null)
@@ -681,9 +683,9 @@ function MultiFilterDropdown({
           display: 'inline-flex', alignItems: 'center', gap: 6,
           justifyContent: 'space-between',
           padding: '7px 14px', fontSize: 13, fontWeight: 600,
-          minWidth: 150, boxSizing: 'border-box',
+          minWidth, boxSizing: 'border-box',
           borderRadius: 999, cursor: 'pointer',
-          background: active ? 'rgba(127,119,221,0.28)' : 'rgba(255,255,255,0.06)',
+          background: active ? 'rgba(127,119,221,0.28)' : 'rgba(26,24,48,0.5)',
           border: active ? '1px solid rgba(127,119,221,0.6)' : '1px solid rgba(255,255,255,0.18)',
           color: '#fff', fontFamily: 'inherit', whiteSpace: 'nowrap',
         }}
@@ -764,6 +766,9 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   const [chipPickedDate, setChipPickedDate] = useState<string>('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [showMoreFilters, setShowMoreFilters] = useState(false)
+  // "Free" quick-pill filter. Off by default so it doesn't alter existing
+  // behavior; when on, only free events pass (uses isFreeEvent).
+  const [freeOnly, setFreeOnly] = useState(false)
   // When chips are mutually exclusive (one date filter at a time). Vibe chips
   // stack. Pick-a-date is a When chip too.
   const WHEN_CHIPS: ReadonlyArray<ChipId> = ['weekend', 'today', 'tomorrow', 'next7', 'pickdate']
@@ -844,6 +849,13 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
 
 
   const [pickedDate, setPickedDate] = useState<string>(v2DateToStr(v2TodayMountain()))
+  // End of a custom date RANGE in 'pickdate' mode. Empty string = single day
+  // (pickedDate only). When set (and >= pickedDate) events occurring anywhere in
+  // [pickedDate, pickedEndDate] are shown.
+  const [pickedEndDate, setPickedEndDate] = useState<string>('')
+  // Effective end of the picked range: clamp to start when end is unset/invalid,
+  // so a single-day pick keeps its current behavior.
+  const pickedRangeEnd = (pickedEndDate && pickedEndDate >= pickedDate) ? pickedEndDate : pickedDate
   const [radius, setRadius] = useState<number>(10)
   const [locationMode, setLocationMode] = useState<'city' | 'mylocation' | 'zip'>('city')
   const [zipCode, setZipCode] = useState<string>('')
@@ -919,9 +931,11 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       const week = new Date(today); week.setDate(today.getDate() + 7)
       result = result.filter(e => occursInRange(e, todayStr, v2DateToStr(week)))
     } else if (dayFilter === 'pickdate') {
-      result = result.filter(e => occursOn(e, pickedDate))
+      // Range-aware: occursInRange with start === end is equivalent to occursOn,
+      // so a single-day pick (pickedRangeEnd === pickedDate) behaves as before.
+      result = result.filter(e => occursInRange(e, pickedDate, pickedRangeEnd))
     }
-    
+
     if (timeFilter !== 'any') {
       result = result.filter(e => {
         const t = v2ParseTime12h(e.start_time)
@@ -937,7 +951,8 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     if (activeCategories.size > 0) {
       result = result.filter(e => ((e.filter_categories && e.filter_categories.length ? e.filter_categories : (e.categories || [])).some(c => activeCategories.has(c))))
     }
-    
+
+    if (freeOnly) result = result.filter(e => isFreeEvent(e))
 
 
     // Radius filter: keep events within `radius` miles of the origin.
@@ -960,7 +975,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       return ta - tb
     })
     return result
-  }, [events, dayFilter, timeFilter, activeCategories, pickedDate, radius, userCoords, cityKey])
+  }, [events, dayFilter, timeFilter, activeCategories, freeOnly, pickedDate, pickedRangeEnd, radius, userCoords, cityKey])
 
   const allUpcomingMatches = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
@@ -996,7 +1011,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           const week = new Date(v2TodayMountain()); week.setDate(week.getDate() + 7)
           if (!occursInRange(e, todayStr, v2DateToStr(week))) return false
         } else if (dayFilter === 'pickdate') {
-          if (!occursOn(e, pickedDate)) return false
+          if (!occursInRange(e, pickedDate, pickedRangeEnd)) return false
         }
         // Time filter (shared with main view).
         if (timeFilter !== 'any') {
@@ -1012,6 +1027,8 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         if (activeCategories.size > 0) {
           if (!((e.filter_categories && e.filter_categories.length ? e.filter_categories : (e.categories || [])).some(c => activeCategories.has(c)))) return false
         }
+        // Free quick-pill filter (shared with main view).
+        if (freeOnly && !isFreeEvent(e)) return false
         return true
       })
       .sort((a, b) => {
@@ -1071,7 +1088,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     // Specific city: filter from the appropriate pool
     if (cityFilter === cityKeyLocal) return local
     return other.filter(e => (e._sourceCity || '') === cityFilter)
-  }, [events, otherCityEvents, searchQuery, dayFilter, timeFilter, activeCategories, pickedDate, cityFilter, cityKeyProp])
+  }, [events, otherCityEvents, searchQuery, dayFilter, timeFilter, activeCategories, freeOnly, pickedDate, pickedRangeEnd, cityFilter, cityKeyProp])
 
   // Group results by normalized title for the "See all" overlay. Each row
   // shows one card per unique event identity, with all future occurrences
@@ -1225,15 +1242,20 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       return `${fmtShort(today)} – ${fmtShort(week)}`
     }
     if (dayFilter === 'pickdate') {
-      const parts = pickedDate.split('-')
-      if (parts.length === 3) {
-        const d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]))
-        return fmt(d)
+      const toDate = (s: string) => {
+        const p = s.split('-')
+        return p.length === 3 ? new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2])) : null
       }
-      return pickedDate
+      const startD = toDate(pickedDate)
+      // Show a range ("Jun 5 – Jun 12") when an end date past the start is set.
+      if (pickedRangeEnd !== pickedDate) {
+        const endD = toDate(pickedRangeEnd)
+        if (startD && endD) return `${fmtShort(startD)} – ${fmtShort(endD)}`
+      }
+      return startD ? fmt(startD) : pickedDate
     }
     return 'All upcoming'
-  }, [dayFilter, pickedDate])
+  }, [dayFilter, pickedDate, pickedRangeEnd])
   
   // Shift day filter forward/back by N days. Sets to pickdate mode.
   const shiftDay = (delta: number) => () => {
@@ -1251,6 +1273,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     })()
     base.setDate(base.getDate() + delta)
     setPickedDate(v2DateToStr(base))
+    setPickedEndDate('')  // arrow navigation is single-day; drop any range end
     setDayFilter('pickdate')
   }
   
@@ -1268,26 +1291,27 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     <div style={{ fontFamily: "'DM Sans', sans-serif" }}>
       {/* Photo hero: festival bg + dark overlay, holds title + search + filters */}
       <div style={{
-        position: 'relative', overflow: 'hidden',
+        // overflow must stay visible: the search-results dropdown is positioned
+        // inside this hero and would be clipped at the hero's bottom edge by
+        // overflow:hidden, cutting off a tall results list.
+        position: 'relative', overflow: 'visible',
         margin: '0 0 28px', padding: '96px 28px 40px',
         marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
         background: "linear-gradient(180deg, rgba(26,24,48,0.5), rgba(26,24,48,0.8)), url('/hero.jpg') center/cover no-repeat",
       }}>
         <div style={{ textAlign: 'center', marginBottom: 22 }}>
-          <h1 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 'clamp(30px, 4vw, 46px)', color: '#fff', lineHeight: 1.08, margin: 0 }}>
+          <h1 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 'clamp(44px, 6vw, 76px)', color: '#fff', lineHeight: 1.08, margin: 0 }}>
             Things to do in <em style={{ color: '#b9aef5' }}>{cityLabel}</em>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 16, margin: '8px 0 0' }}>Discover the best events, live music, food, and more.</p>
         </div>
-      {/* Search + filter chips */}
+      {/* Search + filter chips — no card/box: the search bar and filters sit
+          directly on the hero photo. position+zIndex stay so the results
+          dropdown still paints above the event cards below. */}
       <div style={{
-        background: 'rgba(255,255,255,0.04)',
-        border: '1px solid rgba(255,255,255,0.10)',
-        borderRadius: 16, padding: 18, marginBottom: 18,
-        backdropFilter: 'blur(8px)',
-        position: 'relative', zIndex: 100,
+        position: 'relative', zIndex: 1000, marginBottom: 18,
       }}>
-        <div style={{ position: 'relative', marginBottom: 16 }}>
+        <div style={{ position: 'relative', margin: '0 auto 16px', maxWidth: 560 }}>
           <input
             ref={searchInputRef}
             type="text"
@@ -1304,8 +1328,8 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             }}
             onFocus={() => setDropdownOpen(true)}
             style={{
-              width: '100%', padding: '11px 16px', fontSize: 14,
-              border: '1px solid rgba(255,255,255,0.18)', borderRadius: 10,
+              width: '100%', padding: '11px 18px', fontSize: 14,
+              border: '1px solid rgba(255,255,255,0.18)', borderRadius: 999,
               color: '#fff', boxSizing: 'border-box',
               background: 'rgba(255,255,255,0.06)',
               outline: 'none',
@@ -1330,32 +1354,50 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                 alignItems: 'flex-start', justifyContent: 'flex-start',
                 position: 'relative', zIndex: 2,
               }}>
-                <FilterDropdown
-                  label={'When: ' + (({all:'All upcoming',today:'Today',tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days',pickdate:(pickedDate || 'Pick date')} as Record<string,string>)[dayFilter] || 'All upcoming')}
-                  value={dayFilter}
-                  options={[
-                    { value: 'all', label: 'All upcoming' },
-                    { value: 'today', label: 'Today' },
-                    { value: 'tomorrow', label: 'Tomorrow' },
-                    { value: 'weekend', label: 'This weekend' },
-                    { value: '7days', label: 'Next 7 days' },
-                    { value: 'pickdate', label: 'Pick date\u2026' },
-                  ]}
-                  onChange={(v) => {
-                    if (v === 'pickdate') {
-                      const inp = pickDateInputRef.current
-                      suppressOutsideRef.current = Date.now() + 60000
-                      setDayFilter('pickdate')
-                      if (inp) {
-                        if (typeof inp.showPicker === 'function') {
-                          try { inp.showPicker() } catch { inp.focus(); inp.click() }
-                        } else { inp.focus(); inp.click() }
+                {/* When dropdown, with the date RANGE picker (From / To) stacked
+                    directly underneath it when Pick-date mode is active. */}
+                <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8 }}>
+                  <FilterDropdown
+                    label={'When: ' + (({all:'All upcoming',today:'Today',tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days',pickdate:(pickedDate || 'Pick date')} as Record<string,string>)[dayFilter] || 'All upcoming')}
+                    value={dayFilter}
+                    options={[
+                      { value: 'all', label: 'All upcoming' },
+                      { value: 'today', label: 'Today' },
+                      { value: 'tomorrow', label: 'Tomorrow' },
+                      { value: 'weekend', label: 'This weekend' },
+                      { value: '7days', label: 'Next 7 days' },
+                      { value: 'pickdate', label: 'Pick date\u2026' },
+                    ]}
+                    onChange={(v) => {
+                      if (v === 'pickdate') {
+                        const inp = pickDateInputRef.current
+                        suppressOutsideRef.current = Date.now() + 60000
+                        setDayFilter('pickdate')
+                        if (inp) {
+                          if (typeof inp.showPicker === 'function') {
+                            try { inp.showPicker() } catch { inp.focus(); inp.click() }
+                          } else { inp.focus(); inp.click() }
+                        }
+                      } else {
+                        setDayFilter(v as V2DayFilter)
                       }
-                    } else {
-                      setDayFilter(v as V2DayFilter)
-                    }
-                  }}
-                />
+                    }}
+                  />
+                  {/* Leave the To field empty for a single day; set it for a range. */}
+                  {dayFilter === 'pickdate' && (
+                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                      <input type="date" value={pickedDate}
+                        onChange={(e) => { if (e.target.value) setPickedDate(e.target.value); suppressOutsideRef.current = 0 }}
+                        style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }}
+                      />
+                      <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>to</span>
+                      <input type="date" value={pickedEndDate} min={pickedDate}
+                        onChange={(e) => { setPickedEndDate(e.target.value); suppressOutsideRef.current = 0 }}
+                        style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }}
+                      />
+                    </div>
+                  )}
+                </div>
                 <FilterDropdown
                   label={'Time: ' + (({any:'Any time',morning:'Morning',afternoon:'Afternoon',evening:'Evening',latenight:'Late night'} as Record<string,string>)[timeFilter] || 'Any time')}
                   value={timeFilter}
@@ -1386,13 +1428,16 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                   }}
                   style={{ position: 'absolute', opacity: 0, width: 0, height: 0, padding: 0, border: 0, pointerEvents: 'none' }}
                 />
-                {(dayFilter !== 'today' || timeFilter !== 'any' || activeCategories.size > 0 || searchQuery.trim()) && (
+                {(dayFilter !== 'today' || timeFilter !== 'any' || activeCategories.size > 0 || freeOnly || searchQuery.trim()) && (
                   <button type="button"
                     onClick={() => {
                       setSearchQuery('')
                       setDayFilter('today')
                       setTimeFilter('any')
                       setActiveCategories(new Set())
+                      setFreeOnly(false)
+                      setPickedEndDate('')
+                      setShowMoreFilters(false)
                       setDropdownOpen(false)
                     }}
                     style={{
@@ -1473,37 +1518,41 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           )}
           
         </div>
-        <div style={{ display: dropdownOpen ? 'none' : 'flex', gap: 10, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center' }}>
-          <FilterDropdown
-            label={'When: ' + (({all:'All upcoming',today:'Today · '+todayDow,tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days',pickdate:'Pick date'} as Record<string,string>)[dayFilter] || 'All upcoming')}
-            value={dayFilter}
-            options={[
-              { value: 'all', label: 'All upcoming' },
-              { value: 'today', label: 'Today · ' + todayDow },
-              { value: 'tomorrow', label: 'Tomorrow' },
-              { value: 'weekend', label: 'This weekend' },
-              { value: '7days', label: 'Next 7 days' },
-              { value: 'pickdate', label: 'Pick date' },
-            ]}
-            onChange={(v) => setDayFilter(v as V2DayFilter)}
-          />
-          {dayFilter === 'pickdate' && (
-            <input type="date" value={pickedDate} onChange={(e) => setPickedDate(e.target.value)}
-              style={{ padding: '6px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(83,74,183,0.18)' }}
+        {/* Keep this row in the layout while the search dropdown is open so the
+            hero doesn't collapse on focus — hide it with visibility (which
+            reserves its height) instead of display:none (which removes it). */}
+        <div style={{ display: 'flex', visibility: dropdownOpen ? 'hidden' : 'visible', gap: 10, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
+          {/* When dropdown, with the custom date RANGE picker (From / To)
+              stacked directly UNDERNEATH it when Pick-date mode is active. */}
+          <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8 }}>
+            <FilterDropdown
+              label={'When: ' + (({all:'All upcoming',today:'Today · '+todayDow,tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days',pickdate:'Pick date'} as Record<string,string>)[dayFilter] || 'All upcoming')}
+              value={dayFilter}
+              options={[
+                { value: 'all', label: 'All upcoming' },
+                { value: 'today', label: 'Today · ' + todayDow },
+                { value: 'tomorrow', label: 'Tomorrow' },
+                { value: 'weekend', label: 'This weekend' },
+                { value: '7days', label: 'Next 7 days' },
+                { value: 'pickdate', label: 'Pick date' },
+              ]}
+              onChange={(v) => setDayFilter(v as V2DayFilter)}
             />
-          )}
-          <FilterDropdown
-            label={'Time: ' + (({any:'Any time',morning:'Morning',afternoon:'Afternoon',evening:'Evening',latenight:'Late night'} as Record<string,string>)[timeFilter] || 'Any time')}
-            value={timeFilter}
-            options={[
-              { value: 'any', label: 'Any time' },
-              { value: 'morning', label: 'Morning' },
-              { value: 'afternoon', label: 'Afternoon' },
-              { value: 'evening', label: 'Evening' },
-              { value: 'latenight', label: 'Late night' },
-            ]}
-            onChange={(v) => setTimeFilter(v as V2TimeFilter)}
-          />
+            {/* Leave the To field empty for a single day; set it for a range. */}
+            {dayFilter === 'pickdate' && (
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                <input type="date" value={pickedDate}
+                  onChange={(e) => { if (e.target.value) setPickedDate(e.target.value) }}
+                  style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }}
+                />
+                <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>to</span>
+                <input type="date" value={pickedEndDate} min={pickedDate}
+                  onChange={(e) => setPickedEndDate(e.target.value)}
+                  style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }}
+                />
+              </div>
+            )}
+          </div>
           <MultiFilterDropdown
             label={'Vibe: ' + (activeCategories.size === 0 ? 'All categories' : activeCategories.size === 1 ? Array.from(activeCategories)[0] : activeCategories.size + ' selected')}
             selected={activeCategories}
@@ -1511,13 +1560,33 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             onToggle={(v) => setActiveCategories(prev => { const n = new Set(prev); if (n.has(v)) n.delete(v); else n.add(v); return n })}
             onClear={() => setActiveCategories(new Set())}
           />
-          {(dayFilter !== 'today' || timeFilter !== 'any' || activeCategories.size > 0 || searchQuery.trim()) && (
+          {/* Quick pills: shortcuts to the most common filters. They drive the
+              same shared state as the dropdowns, so selections stay in sync. */}
+          <V2Chip active={dayFilter === 'weekend'} onClick={() => setDayFilter(dayFilter === 'weekend' ? 'today' : 'weekend')}>This weekend</V2Chip>
+          <V2Chip active={freeOnly} onClick={() => setFreeOnly(v => !v)}>Free</V2Chip>
+          <V2Chip active={activeCategories.has('Music')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Music')) n.delete('Music'); else n.add('Music'); return n })}>Music</V2Chip>
+          <V2Chip active={activeCategories.has('Food & Drink')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Food & Drink')) n.delete('Food & Drink'); else n.add('Food & Drink'); return n })}>Food & Drink</V2Chip>
+          {/* More: remaining category vibes in a dropdown popover (like the When
+              dropdown). Using a popover instead of inline pills means opening it
+              doesn't reflow the row and shift the hero. */}
+          <MultiFilterDropdown
+            label="More"
+            minWidth={0}
+            selected={new Set(Array.from(activeCategories).filter(c => c !== 'Music' && c !== 'Food & Drink'))}
+            options={V2_ALL_CATEGORIES.filter(c => c !== 'Music' && c !== 'Food & Drink').map(cat => ({ value: cat, label: cat }))}
+            onToggle={(v) => setActiveCategories(prev => { const n = new Set(prev); if (n.has(v)) n.delete(v); else n.add(v); return n })}
+            onClear={() => setActiveCategories(prev => { const n = new Set(prev); for (const c of V2_ALL_CATEGORIES) if (c !== 'Music' && c !== 'Food & Drink') n.delete(c); return n })}
+          />
+          {(dayFilter !== 'today' || timeFilter !== 'any' || activeCategories.size > 0 || freeOnly || searchQuery.trim()) && (
             <button type="button"
               onClick={() => {
                 setSearchQuery('')
                 setDayFilter('today')
                 setTimeFilter('any')
                 setActiveCategories(new Set())
+                setFreeOnly(false)
+                setPickedEndDate('')
+                setShowMoreFilters(false)
               }}
               style={{
                 background: 'rgba(255,255,255,0.06)',
@@ -1530,33 +1599,46 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           )}
         </div>
       </div>
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 16 }}>
-          <select
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 10, marginTop: 16, flexWrap: 'wrap' }}>
+          {/* City + radius pickers — reuse FilterDropdown so they match the
+              When/Vibe filter dropdowns exactly (custom popover, not a native
+              <select>). City navigates; radius drives the radius filter state. */}
+          <FilterDropdown
+            label={({ parkcity: 'Park City, UT', elkhartlake: 'Elkhart Lake, WI', heber: 'Heber Valley, UT', jackson: 'Jackson Hole, WY' } as Record<string, string>)[cityKeyProp || 'parkcity'] || 'Park City, UT'}
             value={cityKeyProp || 'parkcity'}
-            onChange={(e) => {
-              const slug = ({ parkcity: 'park-city', elkhartlake: 'elkhart-lake', heber: 'heber', jackson: 'jackson-hole' } as Record<string, string>)[e.target.value]
+            options={[
+              { value: 'parkcity', label: 'Park City, UT' },
+              { value: 'elkhartlake', label: 'Elkhart Lake, WI' },
+              { value: 'heber', label: 'Heber Valley, UT' },
+              { value: 'jackson', label: 'Jackson Hole, WY' },
+            ]}
+            onChange={(v) => {
+              const slug = ({ parkcity: 'park-city', elkhartlake: 'elkhart-lake', heber: 'heber', jackson: 'jackson-hole' } as Record<string, string>)[v]
               if (slug) window.location.href = '/' + slug
             }}
-            style={{
-              background: 'rgba(255,255,255,0.14)', color: '#fff', fontWeight: 600,
-              border: '1px solid rgba(255,255,255,0.28)', borderRadius: 100,
-              padding: '9px 18px', fontSize: 14, cursor: 'pointer',
-              fontFamily: "'DM Sans', sans-serif",
-            }}
-          >
-            <option value="parkcity" style={{ color: '#000' }}>Park City, UT</option>
-            <option value="elkhartlake" style={{ color: '#000' }}>Elkhart Lake, WI</option>
-            <option value="heber" style={{ color: '#000' }}>Heber Valley, UT</option>
-            <option value="jackson" style={{ color: '#000' }}>Jackson Hole, WY</option>
-          </select>
+          />
+          <FilterDropdown
+            label={`Within ${radius} mi`}
+            value={String(radius)}
+            options={[
+              { value: '10', label: 'Within 10 mi' },
+              { value: '25', label: 'Within 25 mi' },
+              { value: '50', label: 'Within 50 mi' },
+              { value: '100', label: 'Within 100 mi' },
+            ]}
+            onChange={(v) => setRadius(Number(v))}
+          />
         </div>
       </div>
       <div style={{
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        gap: 12, flexWrap: 'wrap', margin: '4px 0 18px',
+        // 3-column grid (1fr auto 1fr) so the date label is centered on the
+        // page regardless of the side items' widths. space-between left it
+        // off-center because "Today in …" and the event count differ in width.
+        display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center',
+        gap: 12, margin: '4px 0 18px',
       }}>
-        <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: 24, color: '#fff', flexShrink: 0 }}>Today in {cityLabel}</div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 14, justifyContent: 'center' }}>
+        <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: 24, color: '#fff', justifySelf: 'start' }}>Today in {cityLabel}</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, justifyContent: 'center', justifySelf: 'center' }}>
           <button onClick={shiftDay(-1)} style={{
             background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)',
             color: '#fff', width: 36, height: 36, borderRadius: '50%',
@@ -1575,8 +1657,8 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           }} title="Next day">›</button>
         </div>
         <div style={{
-          fontSize: 15, fontWeight: 600, color: 'rgba(255,255,255,0.7)',
-          whiteSpace: 'nowrap', flexShrink: 0,
+          fontFamily: "'DM Serif Display', serif", fontSize: 24, color: '#fff',
+          whiteSpace: 'nowrap', justifySelf: 'end',
         }}>
           {loading ? '' : `${filteredEvents.length} event${filteredEvents.length !== 1 ? 's' : ''}`}
         </div>
