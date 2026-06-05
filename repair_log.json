@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-04T18:41:36.096590",
+  "generated_at": "2026-06-05T02:45:24.035901",
   "audit_date": "2026-06-04",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1704,
+      "before_count": 1727,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -16,15 +16,15 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 5,
+          "fixed": 7,
           "examples": [
             {
-              "title": "Group Fitness Classes",
-              "had_span": 181
+              "title": "(Re)sounding: Art Exhibition",
+              "had_span": 103
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 69
+              "had_span": 70
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
@@ -32,7 +32,7 @@
             },
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 84
+              "had_span": 83
             },
             {
               "title": "Fascia Rolling Class",
@@ -86,7 +86,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 7,
+          "fixed": 8,
           "examples": [
             {
               "title": "HOMETOWN SHOW Jessie Ritter @ Jackson MO City Park Rock Garden",
@@ -107,30 +107,41 @@
               "duration_hours": 3
             },
             {
-              "title": "2026 Deer Valley Music Festival: Chicago the Musical In Concert",
-              "start_time": "7:30 PM",
-              "new_end_time": "10:30 PM",
-              "duration_hours": 3
-            },
-            {
               "title": "Concerts on the Slopes",
               "start_time": "7:00 PM",
               "new_end_time": "10:00 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "2026 Deer Valley Music Festival: Chicago the Musical In Concert",
+              "start_time": "7:30 PM",
+              "new_end_time": "10:30 PM",
               "duration_hours": 3
             }
           ]
         },
         "classification": {
-          "fixed": 287,
+          "fixed": 300,
           "examples": [
             {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [
-                "Community"
-              ],
+              "title": "(Re)sounding: Art Exhibition",
+              "before": [],
               "after": [
-                "Community",
-                "Food & Drink"
+                "Arts"
+              ]
+            },
+            {
+              "title": "A Spirited Paint Party with Artist Briar West",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Group Fitness Classes",
+              "before": [],
+              "after": [
+                "Government"
               ]
             },
             {
@@ -146,30 +157,16 @@
               "after": [
                 "Community"
               ]
-            },
-            {
-              "title": "Live Free (Kick Butt) & Thrive Tribe",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Wheel Try It",
-              "before": [],
-              "after": [
-                "Community"
-              ]
             }
           ]
         }
       },
-      "after_count": 1709,
-      "total_fixes": 306
+      "after_count": 1732,
+      "total_fixes": 322
     },
     {
       "city": "elkhart-lake",
-      "before_count": 245,
+      "before_count": 243,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -228,12 +225,12 @@
           "examples": []
         }
       },
-      "after_count": 252,
+      "after_count": 250,
       "total_fixes": 4
     },
     {
       "city": "heber",
-      "before_count": 241,
+      "before_count": 239,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -366,12 +363,12 @@
           ]
         }
       },
-      "after_count": 244,
+      "after_count": 242,
       "total_fixes": 22
     },
     {
       "city": "jackson",
-      "before_count": 632,
+      "before_count": 617,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -382,11 +379,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 121
+              "had_span": 120
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 108
+              "had_span": 107
             }
           ]
         },
@@ -483,7 +480,7 @@
           "examples": []
         }
       },
-      "after_count": 645,
+      "after_count": 630,
       "total_fixes": 20
     }
   ]

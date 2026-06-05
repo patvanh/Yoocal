@@ -1,67 +1,55 @@
 {
-  "generated_at": "2026-06-04",
+  "generated_at": "2026-06-05",
   "cities": {
     "all": {
-      "events": 4265,
+      "events": 4392,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
-          "severity": "HIGH",
-          "count": 2
+          "severity": "MED",
+          "count": 1
+        },
+        {
+          "code": "C4",
+          "name": "BAD-DATE",
+          "severity": "MED",
+          "count": 17
         },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
           "count": 14
-        },
-        {
-          "code": "C6",
-          "name": "COVERAGE-CLIFF",
-          "severity": "HIGH",
-          "count": 1
         }
       ]
     },
     "elkhartlake": {
-      "events": 260,
+      "events": 258,
       "findings": []
     },
     "heber": {
-      "events": 942,
+      "events": 1000,
       "findings": [
         {
-          "code": "C1",
-          "name": "RECURRING-DROPPED",
-          "severity": "HIGH",
-          "count": 1
-        },
-        {
-          "code": "C8",
-          "name": "ONGOING-DROPPED",
+          "code": "C4",
+          "name": "BAD-DATE",
           "severity": "MED",
-          "count": 1
+          "count": 5
         }
       ]
     },
     "jackson": {
-      "events": 1221,
+      "events": 1217,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "MED",
-          "count": 1
-        },
-        {
-          "code": "C6",
-          "name": "COVERAGE-CLIFF",
-          "severity": "HIGH",
           "count": 1
         }
       ]
     }
   },
-  "high_total": 5
+  "high_total": 0
 }
