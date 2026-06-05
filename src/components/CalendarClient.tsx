@@ -654,7 +654,7 @@ function FilterDropdown({
 }
 
 function DateRangeDropdown({
-  label, from, to, onFrom, onTo, onToday, onAllUpcoming, minWidth = 150,
+  label, from, to, onFrom, onTo, onToday, onAllUpcoming, onFieldFocus, minWidth = 150,
 }: {
   label: string
   from: string
@@ -663,6 +663,7 @@ function DateRangeDropdown({
   onTo: (v: string) => void
   onToday: () => void
   onAllUpcoming: () => void
+  onFieldFocus?: () => void
   minWidth?: number
 }) {
   const [open, setOpen] = useState(false)
@@ -704,12 +705,12 @@ function DateRangeDropdown({
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
             <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: 0.4 }}>From</span>
-              <input type="date" value={from} onChange={(e) => { if (e.target.value) onFrom(e.target.value) }}
+              <input type="date" value={from} onFocus={() => onFieldFocus?.()} onChange={(e) => { if (e.target.value) onFrom(e.target.value) }}
                 style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }} />
             </label>
             <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: 0.4 }}>To</span>
-              <input type="date" value={to} min={from} onChange={(e) => onTo(e.target.value)}
+              <input type="date" value={to} min={from} onFocus={() => onFieldFocus?.()} onChange={(e) => onTo(e.target.value)}
                 style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }} />
             </label>
           </div>
@@ -1426,50 +1427,19 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                 alignItems: 'flex-start', justifyContent: 'flex-start',
                 position: 'relative', zIndex: 2,
               }}>
-                {/* When dropdown, with the date RANGE picker (From / To) stacked
-                    directly underneath it when Pick-date mode is active. */}
-                <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8 }}>
-                  <FilterDropdown
-                    label={'When: ' + (({all:'All upcoming',today:'Today',tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days',pickdate:(pickedDate || 'Pick date')} as Record<string,string>)[dayFilter] || 'All upcoming')}
-                    value={dayFilter}
-                    options={[
-                      { value: 'all', label: 'All upcoming' },
-                      { value: 'today', label: 'Today' },
-                      { value: 'tomorrow', label: 'Tomorrow' },
-                      { value: 'weekend', label: 'This weekend' },
-                      { value: '7days', label: 'Next 7 days' },
-                      { value: 'pickdate', label: 'Pick date\u2026' },
-                    ]}
-                    onChange={(v) => {
-                      if (v === 'pickdate') {
-                        const inp = pickDateInputRef.current
-                        suppressOutsideRef.current = Date.now() + 60000
-                        setDayFilter('pickdate')
-                        if (inp) {
-                          if (typeof inp.showPicker === 'function') {
-                            try { inp.showPicker() } catch { inp.focus(); inp.click() }
-                          } else { inp.focus(); inp.click() }
-                        }
-                      } else {
-                        setDayFilter(v as V2DayFilter)
-                      }
-                    }}
-                  />
-                  {/* Leave the To field empty for a single day; set it for a range. */}
-                  {dayFilter === 'pickdate' && (
-                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                      <input type="date" value={pickedDate}
-                        onChange={(e) => { if (e.target.value) setPickedDate(e.target.value); suppressOutsideRef.current = 0 }}
-                        style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }}
-                      />
-                      <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>to</span>
-                      <input type="date" value={pickedEndDate} min={pickedDate}
-                        onChange={(e) => { setPickedEndDate(e.target.value); suppressOutsideRef.current = 0 }}
-                        style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }}
-                      />
-                    </div>
-                  )}
-                </div>
+                {/* Single date pill (matches hero): From/To range picker.
+                    onFieldFocus arms suppressOutsideRef so the native date
+                    picker popup doesn't trip the dropdown's outside-close. */}
+                <DateRangeDropdown
+                  label={'When: ' + (dayFilter === 'pickdate' ? dateRangeLabel : (({all:'All upcoming',today:'Today · '+todayDow,tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days'} as Record<string,string>)[dayFilter] || 'All upcoming'))}
+                  from={pickedDate}
+                  to={dayFilter === 'pickdate' ? pickedEndDate : ''}
+                  onFieldFocus={() => { suppressOutsideRef.current = Date.now() + 60000 }}
+                  onFrom={(v) => { setPickedDate(v); setDayFilter('pickdate'); suppressOutsideRef.current = 0 }}
+                  onTo={(v) => { setPickedEndDate(v); setDayFilter('pickdate'); suppressOutsideRef.current = 0 }}
+                  onToday={() => { setPickedDate(v2DateToStr(v2TodayMountain())); setPickedEndDate(''); setDayFilter('today') }}
+                  onAllUpcoming={() => { setPickedEndDate(''); setDayFilter('all') }}
+                />
                 <FilterDropdown
                   label={'Time: ' + (({any:'Any time',morning:'Morning',afternoon:'Afternoon',evening:'Evening',latenight:'Late night'} as Record<string,string>)[timeFilter] || 'Any time')}
                   value={timeFilter}
@@ -1489,6 +1459,12 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                   onToggle={(v) => setActiveCategories(prev => { const n = new Set(prev); if (n.has(v)) n.delete(v); else n.add(v); return n })}
                   onClear={() => setActiveCategories(new Set())}
                 />
+                {/* Quick pills mirrored from the hero row so they stay visible
+                    while the search dropdown is open (same shared state). */}
+                <V2Chip active={dayFilter === 'weekend'} onClick={() => setDayFilter(dayFilter === 'weekend' ? 'today' : 'weekend')}>This weekend</V2Chip>
+                <V2Chip active={freeOnly} onClick={() => setFreeOnly(v => !v)}>Free</V2Chip>
+                <V2Chip active={activeCategories.has('Music')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Music')) n.delete('Music'); else n.add('Music'); return n })}>Music</V2Chip>
+                <V2Chip active={activeCategories.has('Food & Drink')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Food & Drink')) n.delete('Food & Drink'); else n.add('Food & Drink'); return n })}>Food & Drink</V2Chip>
                 <input
                   ref={pickDateInputRef}
                   type="date"
@@ -1513,11 +1489,11 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                       setDropdownOpen(false)
                     }}
                     style={{
-                      background: 'rgba(255,255,255,0.04)',
-                      color: 'rgba(255,255,255,0.6)',
-                      border: '1px solid rgba(255,255,255,0.10)',
-                      borderRadius: 999, padding: '6px 13px', fontSize: 12,
-                      cursor: 'pointer', fontFamily: 'inherit',
+                      background: 'rgba(26,24,48,0.5)',
+                      color: '#fff',
+                      border: '1px solid rgba(255,255,255,0.18)',
+                      borderRadius: 999, padding: '7px 14px', fontSize: 13,
+                      fontWeight: 600, cursor: 'pointer', fontFamily: 'inherit',
                     }}>Clear</button>
                 )}
               </div>
