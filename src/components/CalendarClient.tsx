@@ -653,6 +653,78 @@ function FilterDropdown({
   )
 }
 
+function DateRangeDropdown({
+  label, from, to, onFrom, onTo, onToday, onAllUpcoming, minWidth = 150,
+}: {
+  label: string
+  from: string
+  to: string
+  onFrom: (v: string) => void
+  onTo: (v: string) => void
+  onToday: () => void
+  onAllUpcoming: () => void
+  minWidth?: number
+}) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement | null>(null)
+  useEffect(() => {
+    if (!open) return
+    const onDoc = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', onDoc)
+    return () => document.removeEventListener('mousedown', onDoc)
+  }, [open])
+  return (
+    <div ref={ref} style={{ position: 'relative', display: 'inline-block' }}>
+      <button
+        type="button"
+        onClick={() => setOpen(o => !o)}
+        style={{
+          display: 'inline-flex', alignItems: 'center', gap: 6,
+          justifyContent: 'space-between',
+          padding: '7px 14px', fontSize: 13, fontWeight: 600,
+          minWidth, boxSizing: 'border-box',
+          borderRadius: 999, cursor: 'pointer',
+          background: 'rgba(26,24,48,0.5)',
+          border: '1px solid rgba(255,255,255,0.18)',
+          color: '#fff', fontFamily: 'inherit', whiteSpace: 'nowrap',
+        }}
+      >
+        {label}
+        <span style={{ fontSize: 10, opacity: 0.7, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}>▾</span>
+      </button>
+      {open && (
+        <div style={{
+          position: 'absolute', top: 'calc(100% + 6px)', left: 0, zIndex: 200,
+          background: '#211a45', border: '1px solid rgba(175,169,236,0.28)',
+          borderRadius: 12, padding: 12, minWidth: 210,
+          boxShadow: '0 16px 40px rgba(0,0,0,0.5)',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+            <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+              <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: 0.4 }}>From</span>
+              <input type="date" value={from} onChange={(e) => { if (e.target.value) onFrom(e.target.value) }}
+                style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }} />
+            </label>
+            <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+              <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: 0.4 }}>To</span>
+              <input type="date" value={to} min={from} onChange={(e) => onTo(e.target.value)}
+                style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }} />
+            </label>
+          </div>
+          <div style={{ display: 'flex', gap: 8 }}>
+            <button type="button" onClick={() => { onToday(); setOpen(false) }}
+              style={{ flex: 1, padding: '6px 10px', fontSize: 12, fontWeight: 600, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>Today</button>
+            <button type="button" onClick={() => { onAllUpcoming(); setOpen(false) }}
+              style={{ flex: 1, padding: '6px 10px', fontSize: 12, fontWeight: 600, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>All upcoming</button>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function MultiFilterDropdown({
   label, selected, options, onToggle, onClear, minWidth = 150,
 }: {
@@ -1522,37 +1594,19 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             hero doesn't collapse on focus — hide it with visibility (which
             reserves its height) instead of display:none (which removes it). */}
         <div style={{ display: 'flex', visibility: dropdownOpen ? 'hidden' : 'visible', gap: 10, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-          {/* When dropdown, with the custom date RANGE picker (From / To)
-              stacked directly UNDERNEATH it when Pick-date mode is active. */}
-          <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8 }}>
-            <FilterDropdown
-              label={'When: ' + (({all:'All upcoming',today:'Today · '+todayDow,tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days',pickdate:'Pick date'} as Record<string,string>)[dayFilter] || 'All upcoming')}
-              value={dayFilter}
-              options={[
-                { value: 'all', label: 'All upcoming' },
-                { value: 'today', label: 'Today · ' + todayDow },
-                { value: 'tomorrow', label: 'Tomorrow' },
-                { value: 'weekend', label: 'This weekend' },
-                { value: '7days', label: 'Next 7 days' },
-                { value: 'pickdate', label: 'Pick date' },
-              ]}
-              onChange={(v) => setDayFilter(v as V2DayFilter)}
-            />
-            {/* Leave the To field empty for a single day; set it for a range. */}
-            {dayFilter === 'pickdate' && (
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                <input type="date" value={pickedDate}
-                  onChange={(e) => { if (e.target.value) setPickedDate(e.target.value) }}
-                  style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }}
-                />
-                <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>to</span>
-                <input type="date" value={pickedEndDate} min={pickedDate}
-                  onChange={(e) => setPickedEndDate(e.target.value)}
-                  style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }}
-                />
-              </div>
-            )}
-          </div>
+          {/* Single date pill: From/To range picker, always visible.
+              Default From=To=today shows today first; editing either field
+              switches to pickdate mode and filters by the [From, To] range.
+              Today / All upcoming presets live in the popover. */}
+          <DateRangeDropdown
+            label={'When: ' + (dayFilter === 'pickdate' ? dateRangeLabel : (({all:'All upcoming',today:'Today · '+todayDow,tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days'} as Record<string,string>)[dayFilter] || 'All upcoming'))}
+            from={pickedDate}
+            to={dayFilter === 'pickdate' ? pickedEndDate : ''}
+            onFrom={(v) => { setPickedDate(v); setDayFilter('pickdate') }}
+            onTo={(v) => { setPickedEndDate(v); setDayFilter('pickdate') }}
+            onToday={() => { setPickedDate(v2DateToStr(v2TodayMountain())); setPickedEndDate(''); setDayFilter('today') }}
+            onAllUpcoming={() => { setPickedEndDate(''); setDayFilter('all') }}
+          />
           <MultiFilterDropdown
             label={'Vibe: ' + (activeCategories.size === 0 ? 'All categories' : activeCategories.size === 1 ? Array.from(activeCategories)[0] : activeCategories.size + ' selected')}
             selected={activeCategories}
@@ -1589,11 +1643,12 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                 setShowMoreFilters(false)
               }}
               style={{
-                background: 'rgba(255,255,255,0.06)',
-                color: 'rgba(255,255,255,0.7)',
-                border: '1px solid rgba(255,255,255,0.14)',
-                borderRadius: 999, padding: '8px 16px', fontSize: 13,
+                background: 'rgba(26,24,48,0.5)',
+                color: '#fff',
+                border: '1px solid rgba(255,255,255,0.18)',
+                borderRadius: 999, padding: '7px 14px', fontSize: 13,
                 fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap',
+                fontFamily: 'inherit',
               }}
             >Clear</button>
           )}
