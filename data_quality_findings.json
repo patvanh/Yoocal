@@ -2,19 +2,13 @@
   "generated_at": "2026-06-05",
   "cities": {
     "all": {
-      "events": 4392,
+      "events": 4348,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "MED",
           "count": 1
-        },
-        {
-          "code": "C4",
-          "name": "BAD-DATE",
-          "severity": "MED",
-          "count": 17
         },
         {
           "code": "C5",
@@ -30,17 +24,10 @@
     },
     "heber": {
       "events": 1000,
-      "findings": [
-        {
-          "code": "C4",
-          "name": "BAD-DATE",
-          "severity": "MED",
-          "count": 5
-        }
-      ]
+      "findings": []
     },
     "jackson": {
-      "events": 1217,
+      "events": 1218,
       "findings": [
         {
           "code": "C1",
