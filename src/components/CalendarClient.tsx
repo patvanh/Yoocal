@@ -1530,11 +1530,27 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           )}
         </div>
       </div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 16 }}>
+          <select
+            value={cityKeyProp || 'parkcity'}
+            onChange={(e) => {
+              const slug = ({ parkcity: 'park-city', elkhartlake: 'elkhart-lake', heber: 'heber', jackson: 'jackson-hole' } as Record<string, string>)[e.target.value]
+              if (slug) window.location.href = '/' + slug
+            }}
+            style={{
+              background: 'rgba(255,255,255,0.14)', color: '#fff', fontWeight: 600,
+              border: '1px solid rgba(255,255,255,0.28)', borderRadius: 100,
+              padding: '9px 18px', fontSize: 14, cursor: 'pointer',
+              fontFamily: "'DM Sans', sans-serif",
+            }}
+          >
+            <option value="parkcity" style={{ color: '#000' }}>Park City, UT</option>
+            <option value="elkhartlake" style={{ color: '#000' }}>Elkhart Lake, WI</option>
+            <option value="heber" style={{ color: '#000' }}>Heber Valley, UT</option>
+            <option value="jackson" style={{ color: '#000' }}>Jackson Hole, WY</option>
+          </select>
+        </div>
       </div>
-      <div style={{
-        fontFamily: "'DM Serif Display', serif", fontSize: 26, color: '#fff',
-        textAlign: 'center', margin: '4px 0 10px',
-      }}>{null}</div>
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         gap: 12, flexWrap: 'wrap', margin: '4px 0 18px',
