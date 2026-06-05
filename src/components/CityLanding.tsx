@@ -35,32 +35,9 @@ export default function CityLanding({ citySlug, cityKey }: { citySlug: string; c
         </div>
       </nav>
 
-      <div className="hero-wrapper">
-        {/* Browse by city pills */}
-        <div className="location-bar" id="location-city-chips">
-          <span className="loc-label">Browse by city</span>
-          <Link href="/park-city" className={`loc-chip${cityKey === "parkcity" ? " active" : ""}`}>📍 Park City, UT</Link>
-          <Link href="/elkhart-lake" className={`loc-chip${cityKey === "elkhartlake" ? " active" : ""}`}>📍 Elkhart Lake, WI</Link>
-          <Link href="/heber" className={`loc-chip${cityKey === "heber" ? " active" : ""}`}>📍 Heber Valley, UT</Link>
-          <Link href="/jackson-hole" className={`loc-chip${cityKey === "jackson" ? " active" : ""}`}>📍 Jackson Hole, WY</Link>
-          <a href="#" className="loc-chip" style={{ opacity: 0.5 }}>+ Aspen, CO — coming soon</a>
-        </div>
-      </div>
 
       {/* CALENDAR */}
       <section className="calendar-section" id="events" style={{ textAlign: "center" }}>
-        <h1 style={{ fontSize: "clamp(30px, 4.2vw, 46px)", lineHeight: 1.08 }}>
-          Things to do in <em>{cityName}</em>
-        </h1>
-        <p style={{ marginBottom: "20px", marginTop: "8px", fontSize: "16px", color: "rgba(255,255,255,0.7)" }}>
-          {cityName} — updated daily
-        </p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", justifyContent: "center", marginBottom: "28px" }}>
-          <a href={`/${citySlug}/this-weekend`} style={quickLink}>This weekend</a>
-          <a href={`/${citySlug}/this-month`} style={quickLink}>This month</a>
-          <a href={`/${citySlug}/concerts`} style={quickLink}>Concerts &amp; live music</a>
-          <a href={`/${citySlug}/free-events`} style={quickLink}>Free events</a>
-        </div>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 16px", textAlign: "left" }}>
           <EventsV2Embedded cityKeyProp={cityKey} />
         </div>

@@ -1266,6 +1266,18 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   
   return (
     <div style={{ fontFamily: "'DM Sans', sans-serif" }}>
+      {/* Photo hero: festival bg + dark overlay, holds title + search + filters */}
+      <div style={{
+        position: 'relative', borderRadius: 20, overflow: 'hidden',
+        margin: '0 0 24px', padding: '40px 28px 28px',
+        background: "linear-gradient(180deg, rgba(26,24,48,0.66), rgba(26,24,48,0.86)), url('/hero.jpg') center/cover no-repeat",
+      }}>
+        <div style={{ textAlign: 'center', marginBottom: 22 }}>
+          <h1 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 'clamp(30px, 4vw, 46px)', color: '#fff', lineHeight: 1.08, margin: 0 }}>
+            Things to do in <em style={{ color: '#b9aef5' }}>{cityLabel}</em>
+          </h1>
+          <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 16, margin: '8px 0 0' }}>Discover the best events, live music, food, and more.</p>
+        </div>
       {/* Radius / Location bar */}
       <div style={{
         background: 'rgba(255,255,255,0.04)',
@@ -1566,6 +1578,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             >Clear</button>
           )}
         </div>
+      </div>
       </div>
       <div style={{
         fontFamily: "'DM Serif Display', serif", fontSize: 26, color: '#fff',
