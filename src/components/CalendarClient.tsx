@@ -1268,9 +1268,10 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     <div style={{ fontFamily: "'DM Sans', sans-serif" }}>
       {/* Photo hero: festival bg + dark overlay, holds title + search + filters */}
       <div style={{
-        position: 'relative', borderRadius: 20, overflow: 'hidden',
-        margin: '0 0 24px', padding: '40px 28px 28px',
-        background: "linear-gradient(180deg, rgba(26,24,48,0.66), rgba(26,24,48,0.86)), url('/hero.jpg') center/cover no-repeat",
+        position: 'relative', overflow: 'hidden',
+        margin: '0 0 28px', padding: '96px 28px 40px',
+        marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
+        background: "linear-gradient(180deg, rgba(26,24,48,0.5), rgba(26,24,48,0.8)), url('/hero.jpg') center/cover no-repeat",
       }}>
         <div style={{ textAlign: 'center', marginBottom: 22 }}>
           <h1 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 'clamp(30px, 4vw, 46px)', color: '#fff', lineHeight: 1.08, margin: 0 }}>
@@ -1278,56 +1279,6 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 16, margin: '8px 0 0' }}>Discover the best events, live music, food, and more.</p>
         </div>
-      {/* Radius / Location bar */}
-      <div style={{
-        background: 'rgba(255,255,255,0.04)',
-        border: '1px solid rgba(255,255,255,0.10)',
-        borderRadius: 16, padding: '14px 18px', marginBottom: 12,
-        display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap',
-        position: 'relative', zIndex: 30,
-      }}>
-        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600, minWidth: 56 }}>Where:</span>
-        <button
-          onClick={() => {
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(
-                (pos) => {
-                  setUserCoords({ lat: pos.coords.latitude, lng: pos.coords.longitude })
-                  setLocationMode('mylocation')
-                },
-                (err) => console.error('Location error:', err)
-              )
-            }
-          }}
-          style={{
-            padding: '6px 14px', fontSize: 13, borderRadius: 999,
-            background: locationMode === 'mylocation' ? '#534AB7' : 'rgba(255,255,255,0.06)',
-            color: '#fff',
-            border: locationMode === 'mylocation' ? '1px solid transparent' : '1px solid rgba(255,255,255,0.18)',
-            cursor: 'pointer', fontFamily: "'DM Sans', sans-serif",
-          }}
-        >📍 Use my location</button>
-        <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>or</span>
-        <div style={{ flex: '1 1 200px', minWidth: 180, maxWidth: 280 }}>
-          <CitySearch placeholder="City or ZIP — switch town" variant="compact" />
-        </div>
-        <div style={{ flex: '1 1 240px', minWidth: 0, display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.65)', fontWeight: 600 }}>Radius:</span>
-          <input
-            type="range"
-            min={1} max={50} step={1}
-            value={radius}
-            onChange={(e) => setRadius(Number(e.target.value))}
-            style={{ flex: 1, accentColor: '#7F77DD', minWidth: 100 }}
-          />
-          <span style={{ fontSize: 13, color: '#fff', fontWeight: 600, minWidth: 50, textAlign: 'right' }}>{radius} mi</span>
-          <span style={{
-            fontSize: 13, fontWeight: 700, color: '#fff', whiteSpace: 'nowrap',
-            background: '#534AB7', padding: '5px 12px', borderRadius: 999, marginLeft: 4,
-          }}>{loading ? '' : `${filteredEvents.length} event${filteredEvents.length !== 1 ? 's' : ''}`}</span>
-        </div>
-      </div>
-      
       {/* Search + filter chips */}
       <div style={{
         background: 'rgba(255,255,255,0.04)',
@@ -1583,15 +1534,13 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       <div style={{
         fontFamily: "'DM Serif Display', serif", fontSize: 26, color: '#fff',
         textAlign: 'center', margin: '4px 0 10px',
-      }}>Today in {cityLabel}</div>
+      }}>{null}</div>
       <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 6,
-        margin: '4px 4px 20px',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        gap: 12, flexWrap: 'wrap', margin: '4px 0 18px',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16, justifyContent: 'center' }}>
+        <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: 24, color: '#fff', flexShrink: 0 }}>Today in {cityLabel}</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, justifyContent: 'center' }}>
           <button onClick={shiftDay(-1)} style={{
             background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)',
             color: '#fff', width: 36, height: 36, borderRadius: '50%',
@@ -1610,8 +1559,8 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           }} title="Next day">›</button>
         </div>
         <div style={{
-          fontSize: 16, fontWeight: 600, color: 'rgba(255,255,255,0.7)',
-          fontFamily: "'DM Serif Display', serif", textAlign: 'center', whiteSpace: 'nowrap',
+          fontSize: 15, fontWeight: 600, color: 'rgba(255,255,255,0.7)',
+          whiteSpace: 'nowrap', flexShrink: 0,
         }}>
           {loading ? '' : `${filteredEvents.length} event${filteredEvents.length !== 1 ? 's' : ''}`}
         </div>
@@ -1619,9 +1568,9 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       {/* Featured events: gold-outlined photo cards, 3-up */}
       {featuredEvents.length > 0 && (
         <div style={{
-          fontSize: 12, fontWeight: 700, letterSpacing: 0.6, textTransform: 'uppercase',
-          color: '#e0a83a', margin: '0 0 10px',
-        }}>Featured today</div>
+          fontSize: 20, fontWeight: 800, letterSpacing: 0.4, textTransform: 'uppercase',
+          color: '#e0a83a', margin: '0 0 14px',
+        }}>Featured Today</div>
       )}
       {featuredEvents.length > 0 && (
         <div style={{
