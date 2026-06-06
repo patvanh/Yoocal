@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-05T17:56:48.531743",
-  "audit_date": "2026-06-05",
+  "generated_at": "2026-06-06T15:36:21.738300",
+  "audit_date": "2026-06-06",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1731,
+      "before_count": 1722,
       "passes": {
         "past_dates": {
           "fixed": 1,
@@ -24,7 +24,7 @@
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 68
+              "had_span": 67
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
@@ -32,7 +32,7 @@
             },
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 83
+              "had_span": 82
             },
             {
               "title": "Fascia Rolling Class",
@@ -122,7 +122,7 @@
           ]
         },
         "classification": {
-          "fixed": 296,
+          "fixed": 293,
           "examples": [
             {
               "title": "A Spirited Paint Party with Artist Briar West",
@@ -169,12 +169,12 @@
           ]
         }
       },
-      "after_count": 1738,
-      "total_fixes": 317
+      "after_count": 1729,
+      "total_fixes": 314
     },
     {
       "city": "elkhart-lake",
-      "before_count": 243,
+      "before_count": 240,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -185,17 +185,8 @@
           "examples": []
         },
         "multi_day_splits": {
-          "fixed": 3,
+          "fixed": 2,
           "examples": [
-            {
-              "title": "WeatherTech Chicago Region SCCA June Sprints",
-              "original_span": "2026-06-05 to 2026-06-07",
-              "split_into": [
-                "2026-06-05",
-                "2026-06-06",
-                "2026-06-07"
-              ]
-            },
             {
               "title": "WeatherTech Vintage Weekend with Brian Redman",
               "original_span": "2026-07-16 to 2026-07-19",
@@ -233,12 +224,12 @@
           "examples": []
         }
       },
-      "after_count": 250,
-      "total_fixes": 4
+      "after_count": 245,
+      "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 243,
+      "before_count": 244,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -371,12 +362,12 @@
           ]
         }
       },
-      "after_count": 246,
+      "after_count": 247,
       "total_fixes": 22
     },
     {
       "city": "jackson",
-      "before_count": 618,
+      "before_count": 642,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -387,11 +378,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 120
+              "had_span": 119
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 107
+              "had_span": 106
             }
           ]
         },
@@ -488,7 +479,7 @@
           "examples": []
         }
       },
-      "after_count": 631,
+      "after_count": 655,
       "total_fixes": 20
     }
   ]

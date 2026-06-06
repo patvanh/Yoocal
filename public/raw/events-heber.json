@@ -1,21 +1,7 @@
 {
-  "updated_at": "2026-06-05T17:44:59.833846",
-  "total": 236,
+  "updated_at": "2026-06-06T15:25:13.597645",
+  "total": 237,
   "events": [
-    {
-      "title": "Wasatch History Speaker Series",
-      "date": "2026-06-10",
-      "description": "Wasatch County Library invites the community to attend the next Wasatch History Speaker Series presentation on Wednesday, June 10, from 6\u20137 PM. History educator",
-      "location": "Wasatch County Library, 465 East 1200 South, Heber City, UT 84032, USA",
-      "link": "https://library.wasatchcounty.gov/localhistory",
-      "source": "KPCW Community Calendar",
-      "source_url": "https://www.kpcw.org/kpcw-community-calendar",
-      "lat": 40.49376729999999,
-      "lng": -111.4056241,
-      "categories": [
-        "Education"
-      ]
-    },
     {
       "title": "Gateway to Summer at the Kamas City Event Center - June 12 & 13, 2026",
       "date": "2026-06-12",
@@ -31,6 +17,20 @@
         "Music",
         "Arts",
         "Food & Drink"
+      ]
+    },
+    {
+      "title": "Wasatch History Speaker Series",
+      "date": "2026-06-10",
+      "description": "Wasatch County Library invites the community to attend the next Wasatch History Speaker Series presentation on Wednesday, June 10, from 6\u20137 PM. History educator",
+      "location": "Wasatch County Library, 465 East 1200 South, Heber City, UT 84032, USA",
+      "link": "https://library.wasatchcounty.gov/localhistory",
+      "source": "KPCW Community Calendar",
+      "source_url": "https://www.kpcw.org/kpcw-community-calendar",
+      "lat": 40.49376729999999,
+      "lng": -111.4056241,
+      "categories": [
+        "Education"
       ]
     },
     {
@@ -82,7 +82,7 @@
     },
     {
       "title": "Midway Art Gallery Open House",
-      "date": "2026-06-05",
+      "date": "2026-06-06",
       "description": "Midway Art Gallery Open House in Heber Valley.",
       "location": "Heber Valley, UT",
       "link": "https://www.gohebervalley.com/midway-art-gallery-open-house",
@@ -93,15 +93,14 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.922578",
+      "scraped_at": "2026-06-06T15:16:19.060930",
       "start_time": "1:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749910.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749910.jpg?decache=06-09-18",
       "date_label": "Fri & Sat, 10:00 AM - 5:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Friday",
       "occurrence_dates": [
-        "2026-06-05",
         "2026-06-06",
         "2026-06-12",
         "2026-06-13",
@@ -167,10 +166,30 @@
       "recurrence_text": "Fri & Sat, 10:00 AM - 5:00 PM"
     },
     {
+      "title": "Free Fishing Day",
+      "date": "2026-06-06",
+      "description": "Free Fishing Day in Heber Valley.",
+      "location": "Wasatch Mountain State Park, Midway, UT",
+      "link": "https://www.gohebervalley.com/free-fishing-day",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.506904,
+      "lng": -111.432958,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.062103",
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749547.jpg?decache=06-09-18",
+      "date_label": "Utah State Parks, 8:00 AM - 5:00 PM",
+      "venue_name": "Wasatch Mountain State Park"
+    },
+    {
       "title": "Utah High School Rodeo State Finals",
-      "date": "2026-06-05",
+      "date": "2026-06-03",
       "description": "Utah High School Rodeo State Finals in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Wasatch County Outdoor Arena, 415 South Southfield Road, Heber City, UT",
       "link": "https://www.gohebervalley.com/utah-high-school-rodeo-finals",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -184,426 +203,14 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.923710",
+      "scraped_at": "2026-06-06T15:16:19.062226",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2730479.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2730479.jpg?decache=06-09-18",
       "date_label": "Jun 3 - 6",
       "end_date": "2026-06-06",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-06"
-      ],
-      "recurrence_text": "Jun 3 - 6"
-    },
-    {
-      "title": "The Weekly Stillness Experience @ Wasatch County Library",
-      "date": "2026-06-05",
-      "description": "The Weekly Stillness Experience @ Wasatch County Library in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/haven-of-stillness-weekly-experience",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.923860",
-      "start_time": "9:00 AM",
-      "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187335.jpg?decache=05-11-08",
-      "date_label": "Fri, May 8 - Jun 12, 9:00 - 10:00 AM",
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "end_date": "2026-06-12",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-12"
-      ],
-      "recurrence_text": "Fri, May 8 - Jun 12, 9:00 - 10:00 AM"
-    },
-    {
-      "title": "Ritual Chocolate Public Tour and Mini Tasting",
-      "date": "2026-06-05",
-      "description": "Ritual Chocolate Public Tour and Mini Tasting in Heber Valley.",
-      "location": "Ritual Chocolate Factory, 2175 West 3000 South, Suite 100, Heber City, UT",
-      "link": "https://www.gohebervalley.com/ritual-chocolate-tour-and-tasting",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.470847,
-      "lng": -111.449884,
-      "categories": [
-        "Food & Drink"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.924007",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3120729.jpg?decache=05-11-08",
-      "date_label": "Fri @ 11 AM, Sat @ 1 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "recurrence_text": "Every Friday at 11 AM and Saturday at 1 PM",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-06",
-        "2026-06-12",
-        "2026-06-13",
-        "2026-06-19",
-        "2026-06-20",
-        "2026-06-26",
-        "2026-06-27",
-        "2026-07-03",
-        "2026-07-04",
-        "2026-07-10",
-        "2026-07-11",
-        "2026-07-17",
-        "2026-07-18",
-        "2026-07-24",
-        "2026-07-25",
-        "2026-07-31",
-        "2026-08-01",
-        "2026-08-07",
-        "2026-08-08",
-        "2026-08-14",
-        "2026-08-15",
-        "2026-08-21",
-        "2026-08-22",
-        "2026-08-28",
-        "2026-08-29"
-      ],
-      "venue_name": "Ritual Chocolate Factory",
-      "address": "2175 West 3000 South, Suite 100, Heber City, UT, 84032"
-    },
-    {
-      "title": "Anna's European Antiques Pop-Up Event",
-      "date": "2026-06-05",
-      "description": "Anna's European Antiques Pop-Up Event in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/annas-european-antiques-pop-up",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.482537,
-      "lng": -111.420723,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.924102",
-      "start_time": "11:00 AM",
-      "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2757070.jpg?decache=05-11-08",
-      "date_label": "Various dates, 11:00 AM - 4:00PM ",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-06",
-        "2026-06-26",
-        "2026-06-27",
-        "2026-07-03",
-        "2026-07-10",
-        "2026-07-11",
-        "2026-07-17",
-        "2026-07-18"
-      ],
-      "recurrence_text": "Various dates, 11:00 AM - 4:00PM"
-    },
-    {
-      "title": "Meet the Cows - Dairy Farm Tour",
-      "date": "2026-06-05",
-      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
-      "location": "Heber Valley Milk & Artisan Cheese, 920 River Road, Midway, UT",
-      "link": "https://www.gohebervalley.com/dairy-farm-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.526638,
-      "lng": -111.462471,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.924179",
-      "start_time": "11:00 AM",
-      "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=05-11-08",
-      "date_label": "Daily, Mon - Sat, 11:00 AM",
-      "recurrence_text": "Daily, Monday through Saturday at 11:00 AM",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-06",
-        "2026-06-07",
-        "2026-06-09",
-        "2026-06-10",
-        "2026-06-11",
-        "2026-06-12",
-        "2026-06-13",
-        "2026-06-14",
-        "2026-06-16",
-        "2026-06-17",
-        "2026-06-18",
-        "2026-06-19",
-        "2026-06-20",
-        "2026-06-21",
-        "2026-06-23",
-        "2026-06-24",
-        "2026-06-25",
-        "2026-06-26",
-        "2026-06-27",
-        "2026-06-28",
-        "2026-06-30",
-        "2026-07-01",
-        "2026-07-02",
-        "2026-07-03",
-        "2026-07-04",
-        "2026-07-05",
-        "2026-07-07",
-        "2026-07-08",
-        "2026-07-09",
-        "2026-07-10",
-        "2026-07-11",
-        "2026-07-12",
-        "2026-07-14",
-        "2026-07-15",
-        "2026-07-16",
-        "2026-07-17",
-        "2026-07-18",
-        "2026-07-19",
-        "2026-07-21",
-        "2026-07-22",
-        "2026-07-23",
-        "2026-07-24",
-        "2026-07-25",
-        "2026-07-26",
-        "2026-07-28",
-        "2026-07-29",
-        "2026-07-30",
-        "2026-07-31",
-        "2026-08-01",
-        "2026-08-02",
-        "2026-08-04",
-        "2026-08-05",
-        "2026-08-06",
-        "2026-08-07",
-        "2026-08-08",
-        "2026-08-09",
-        "2026-08-11",
-        "2026-08-12",
-        "2026-08-13",
-        "2026-08-14",
-        "2026-08-15",
-        "2026-08-16",
-        "2026-08-18",
-        "2026-08-19",
-        "2026-08-20",
-        "2026-08-21",
-        "2026-08-22",
-        "2026-08-23",
-        "2026-08-25",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28",
-        "2026-08-29",
-        "2026-08-30",
-        "2026-09-01",
-        "2026-09-02"
-      ],
-      "venue_name": "Heber Valley Milk & Artisan Cheese",
-      "address": "920 River Road, Midway, UT, 84049"
-    },
-    {
-      "title": "Live Music @ Caf\u00e9 Galleria",
-      "date": "2026-06-05",
-      "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
-      "location": "Cafe Galleria, 101 West Main Street, Midway, UT",
-      "link": "https://www.gohebervalley.com/live-music-at-cafe-galleria",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.512205,
-      "lng": -111.474441,
-      "categories": [
-        "Music"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.924271",
-      "start_time": "5:30 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=05-11-08",
-      "date_label": "May - Oct (weather permitting), dates & times vary",
-      "end_date": "2026-10-09",
-      "recurrence_text": "Most days of the week, May - Oct (weather permitting), dates & times vary",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-06",
-        "2026-06-07",
-        "2026-06-12",
-        "2026-06-13",
-        "2026-06-14",
-        "2026-06-19",
-        "2026-06-20",
-        "2026-06-21",
-        "2026-06-26",
-        "2026-06-27",
-        "2026-06-28",
-        "2026-07-03",
-        "2026-07-04",
-        "2026-07-05",
-        "2026-07-10",
-        "2026-07-11",
-        "2026-07-12",
-        "2026-07-17",
-        "2026-07-18",
-        "2026-07-19",
-        "2026-07-24",
-        "2026-07-25",
-        "2026-07-26",
-        "2026-07-31",
-        "2026-08-01",
-        "2026-08-02",
-        "2026-08-07",
-        "2026-08-08",
-        "2026-08-09",
-        "2026-08-14",
-        "2026-08-15",
-        "2026-08-16",
-        "2026-08-21",
-        "2026-08-22",
-        "2026-08-23",
-        "2026-08-28",
-        "2026-08-29",
-        "2026-08-30"
-      ],
-      "venue_name": "Cafe Galleria",
-      "address": "101 West Main Street, Midway, UT, 84049"
-    },
-    {
-      "title": "Ice Skating Glide In Movies @ Black Rock Event Center",
-      "date": "2026-06-05",
-      "description": "Ice Skating Glide In Movies @ Black Rock Event Center in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/black-rock-glide-in-movies",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.924351",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187566.jpg?decache=05-11-08",
-      "date_label": "Fri, 6:00 - 8:00 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-12",
-        "2026-06-19",
-        "2026-06-26"
-      ],
-      "recurrence_text": "Fri, 6:00 - 8:00 PM"
-    },
-    {
-      "title": "Wild West Days Train @ Heber Valley Railroad",
-      "date": "2026-06-05",
-      "description": "Wild West Days Train @ Heber Valley Railroad in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/wild-west-days-train",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5022051,
-      "lng": -111.4245238,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.924479",
-      "start_time": "6:30 PM",
-      "end_time": "9:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750931.jpg?decache=05-11-08",
-      "date_label": "Jun 5 - 6",
-      "end_date": "2026-06-06",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-06"
-      ],
-      "recurrence_text": "Jun 5 - 6"
-    },
-    {
-      "title": "Live Music Fridays @ Melvin's Public House",
-      "date": "2026-06-05",
-      "description": "Live Music Fridays @ Melvin's Public House in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/live-music-at-melvins-pub",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.509484,
-      "lng": -111.413545,
-      "categories": [
-        "Music"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.924573",
-      "start_time": "7:30 PM",
-      "end_time": "10:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728120.jpg?decache=05-11-08",
-      "date_label": "Weekly, Fri nights @ 7:30pm",
-      "recurrence": "weekly",
-      "recurrence_day": "Friday",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-12",
-        "2026-06-19",
-        "2026-06-26",
-        "2026-07-03",
-        "2026-07-10",
-        "2026-07-17",
-        "2026-07-24",
-        "2026-07-31",
-        "2026-08-07",
-        "2026-08-14",
-        "2026-08-21",
-        "2026-08-28"
-      ],
-      "recurrence_text": "Weekly, Fri nights @ 7:30pm"
-    },
-    {
-      "title": "Free Outdoor Concerts @ Heber Valley Railroad Depot",
-      "date": "2026-06-05",
-      "description": "Free Outdoor Concerts @ Heber Valley Railroad Depot in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/live-music-at-heber-valley-railroad",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5022051,
-      "lng": -111.4245238,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.924665",
-      "start_time": "8:30 PM",
-      "end_time": "9:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3122456.jpg?decache=05-11-08",
-      "date_label": "8:30 - 9:30 PM",
-      "occurrence_dates": [
-        "2026-06-05",
-        "2026-06-27"
-      ],
-      "recurrence_text": "8:30 - 9:30 PM"
-    },
-    {
-      "title": "Free Fishing Day",
-      "date": "2026-06-06",
-      "description": "Free Fishing Day in Heber Valley.",
-      "location": "Wasatch Mountain State Park, Midway, UT",
-      "link": "https://www.gohebervalley.com/free-fishing-day",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.506904,
-      "lng": -111.432958,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-06-05T17:38:08.924814",
-      "start_time": "8:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749547.jpg?decache=05-11-08",
-      "date_label": "Utah State Parks, 8:00 AM - 5:00 PM",
-      "venue_name": "Wasatch Mountain State Park"
+      "venue_name": "Wasatch County Outdoor Arena",
+      "address": "415 South Southfield Road, Heber City, UT, 84032"
     },
     {
       "title": "Commemorative Air Force Museum Tours",
@@ -618,10 +225,10 @@
       "categories": [
         "Arts"
       ],
-      "scraped_at": "2026-06-05T17:38:08.924960",
+      "scraped_at": "2026-06-06T15:16:19.062350",
       "start_time": "10:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725246.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725246.jpg?decache=06-09-18",
       "date_label": "Sat, 10:00 AM - 4:00 PM ",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -656,10 +263,10 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-06-05T17:38:08.925043",
+      "scraped_at": "2026-06-06T15:16:19.062497",
       "start_time": "10:00 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741863.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741863.jpg?decache=06-09-18",
       "date_label": "Every Sat, Jun thru Oct, 10:00 AM - 1:00 PM",
       "occurrence_dates": [
         "2026-06-06",
@@ -685,6 +292,28 @@
       "recurrence_text": "Every Sat, Jun thru Oct, 10:00 AM - 1:00 PM"
     },
     {
+      "title": "Wild West Days Train @ Heber Valley Railroad",
+      "date": "2026-06-05",
+      "description": "Wild West Days Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley Railroad, 450 South 600 West, Heber City, UT",
+      "link": "https://www.gohebervalley.com/wild-west-days-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022051,
+      "lng": -111.4245238,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.062598",
+      "start_time": "10:00 AM",
+      "end_time": "11:30 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750931.jpg?decache=06-09-18",
+      "date_label": "Jun 5 - 6",
+      "end_date": "2026-06-06",
+      "venue_name": "Heber Valley Railroad",
+      "address": "450 South 600 West, Heber City, UT, 84032"
+    },
+    {
       "title": "Classic Car Show @ Spring Gardens",
       "date": "2026-06-06",
       "description": "Classic Car Show @ Spring Gardens in Heber Valley.",
@@ -697,13 +326,144 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.925201",
+      "scraped_at": "2026-06-06T15:16:19.062693",
       "start_time": "10:00 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187226.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187226.jpg?decache=06-09-18",
       "date_label": "10:00 AM - 1:00 PM",
       "venue_name": "Spring Gardens Assisted Living",
       "address": "551 East 1200 South, Heber City, UT, 84032"
+    },
+    {
+      "title": "Anna's European Antiques Pop-Up Event",
+      "date": "2026-06-06",
+      "description": "Anna's European Antiques Pop-Up Event in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/annas-european-antiques-pop-up",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.482537,
+      "lng": -111.420723,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.062783",
+      "start_time": "11:00 AM",
+      "end_time": "4:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2757070.jpg?decache=06-09-18",
+      "date_label": "Various dates, 11:00 AM - 4:00PM ",
+      "occurrence_dates": [
+        "2026-06-06",
+        "2026-06-26",
+        "2026-06-27",
+        "2026-07-03",
+        "2026-07-10",
+        "2026-07-11",
+        "2026-07-17",
+        "2026-07-18"
+      ],
+      "recurrence_text": "Various dates, 11:00 AM - 4:00PM"
+    },
+    {
+      "title": "Meet the Cows - Dairy Farm Tour",
+      "date": "2026-06-06",
+      "description": "Meet the Cows - Dairy Farm Tour in Heber Valley.",
+      "location": "Heber Valley Milk & Artisan Cheese, 920 River Road, Midway, UT",
+      "link": "https://www.gohebervalley.com/dairy-farm-tour",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.526638,
+      "lng": -111.462471,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.062863",
+      "start_time": "11:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727817.jpg?decache=06-09-18",
+      "date_label": "Daily, Mon - Sat, 11:00 AM",
+      "recurrence_text": "Daily, Monday through Saturday at 11:00 AM",
+      "occurrence_dates": [
+        "2026-06-06",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-13",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-27",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-04",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-11",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-18",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-25",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-01",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-29",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03"
+      ],
+      "venue_name": "Heber Valley Milk & Artisan Cheese",
+      "address": "920 River Road, Midway, UT, 84049"
     },
     {
       "title": "Summer Festival @ Wasatch Mountain State Park",
@@ -718,10 +478,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.925437",
+      "scraped_at": "2026-06-06T15:16:19.062950",
       "start_time": "11:00 AM",
       "end_time": "2:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187988.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187988.jpg?decache=06-09-18",
       "date_label": "11:00 AM - 2:00 PM",
       "venue_name": "Wasatch Mountain State Park Visitor Center",
       "address": "1281 Warm Springs Road, Midway, UT, 84049"
@@ -739,10 +499,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.925528",
+      "scraped_at": "2026-06-06T15:16:19.063043",
       "start_time": "11:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750786.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750786.jpg?decache=06-09-18",
       "date_label": "11:00 AM - 5:00 PM",
       "occurrence_dates": [
         "2026-06-06",
@@ -763,18 +523,18 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.925682",
+      "scraped_at": "2026-06-06T15:16:19.063204",
       "start_time": "12:00 PM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749909.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749909.jpg?decache=06-09-18",
       "date_label": "12:00 - 5:00 PM",
       "venue_name": "Midway Art Gallery",
       "address": "120 West Main Street, Suite 120B, Midway, UT, 84049"
     },
     {
-      "title": "Show Pony Midway 5th Anniversary Celebration",
+      "title": "5th Anniversary Celebration @ Show Pony Midway",
       "date": "2026-06-06",
-      "description": "Show Pony Midway 5th Anniversary Celebration in Heber Valley.",
+      "description": "5th Anniversary Celebration @ Show Pony Midway in Heber Valley.",
       "location": "Show Pony Midway, 295 East Main Street, Midway, UT",
       "link": "https://www.gohebervalley.com/show-pony-midway-5th-anniversary-celebration",
       "source": "Heber Valley Tourism",
@@ -784,13 +544,65 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.925762",
+      "scraped_at": "2026-06-06T15:16:19.063289",
       "start_time": "12:30 PM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187964.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187964.jpg?decache=06-09-18",
       "date_label": "12:30 - 4:00 PM",
       "venue_name": "Show Pony Midway",
       "address": "295 East Main Street, Midway, UT, 84049"
+    },
+    {
+      "title": "Ritual Chocolate Public Tour and Mini Tasting",
+      "date": "2026-06-06",
+      "description": "Ritual Chocolate Public Tour and Mini Tasting in Heber Valley.",
+      "location": "Ritual Chocolate Factory, 2175 West 3000 South, Suite 100, Heber City, UT",
+      "link": "https://www.gohebervalley.com/ritual-chocolate-tour-and-tasting",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.470847,
+      "lng": -111.449884,
+      "categories": [
+        "Food & Drink"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.063377",
+      "start_time": "1:00 PM",
+      "end_time": "2:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3120729.jpg?decache=06-09-18",
+      "date_label": "Fri @ 11 AM, Sat @ 1 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Friday",
+      "recurrence_text": "Every Friday at 11 AM and Saturday at 1 PM",
+      "occurrence_dates": [
+        "2026-06-06",
+        "2026-06-12",
+        "2026-06-13",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-26",
+        "2026-06-27",
+        "2026-07-03",
+        "2026-07-04",
+        "2026-07-10",
+        "2026-07-11",
+        "2026-07-17",
+        "2026-07-18",
+        "2026-07-24",
+        "2026-07-25",
+        "2026-07-31",
+        "2026-08-01",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-28",
+        "2026-08-29",
+        "2026-09-04"
+      ],
+      "venue_name": "Ritual Chocolate Factory",
+      "address": "2175 West 3000 South, Suite 100, Heber City, UT, 84032"
     },
     {
       "title": "Mountain Top Luau @ Sundance Resort",
@@ -805,13 +617,76 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.926065",
+      "scraped_at": "2026-06-06T15:16:19.063643",
       "start_time": "4:00 PM",
       "end_time": "7:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741947.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741947.jpg?decache=06-09-18",
       "date_label": "4:00 - 7:30 PM",
       "venue_name": "Sundance Mountain Resort",
       "address": "8841 North Alpine Loop Road, Sundance, UT, 84604"
+    },
+    {
+      "title": "Live Music @ Caf\u00e9 Galleria",
+      "date": "2026-06-06",
+      "description": "Live Music @ Caf\u00e9 Galleria in Heber Valley.",
+      "location": "Cafe Galleria, 101 West Main Street, Midway, UT",
+      "link": "https://www.gohebervalley.com/live-music-at-cafe-galleria",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.512205,
+      "lng": -111.474441,
+      "categories": [
+        "Music"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.063734",
+      "start_time": "5:30 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748025.jpg?decache=06-09-18",
+      "date_label": "May - Oct (weather permitting), dates & times vary",
+      "recurrence_text": "May - October (weather permitting), mostly Fridays, Saturdays, and Sundays with varying times",
+      "occurrence_dates": [
+        "2026-06-06",
+        "2026-06-07",
+        "2026-06-12",
+        "2026-06-13",
+        "2026-06-14",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-21",
+        "2026-06-26",
+        "2026-06-27",
+        "2026-06-28",
+        "2026-07-03",
+        "2026-07-04",
+        "2026-07-05",
+        "2026-07-10",
+        "2026-07-11",
+        "2026-07-12",
+        "2026-07-17",
+        "2026-07-18",
+        "2026-07-19",
+        "2026-07-24",
+        "2026-07-25",
+        "2026-07-26",
+        "2026-07-31",
+        "2026-08-01",
+        "2026-08-02",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09",
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-16",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23",
+        "2026-08-28",
+        "2026-08-29",
+        "2026-08-30",
+        "2026-09-04"
+      ],
+      "venue_name": "Cafe Galleria",
+      "address": "101 West Main Street, Midway, UT, 84049"
     },
     {
       "title": "Annual Victory Hangar Dance",
@@ -826,10 +701,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.926216",
+      "scraped_at": "2026-06-06T15:16:19.063814",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728262.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728262.jpg?decache=06-09-18",
       "date_label": "6:00 - 10:00 PM",
       "venue_name": "Heber City Airport",
       "address": "2365 Airport Road, Heber City, UT, 84032"
@@ -847,10 +722,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.926303",
+      "scraped_at": "2026-06-06T15:16:19.063908",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=06-09-18",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -889,10 +764,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.926404",
+      "scraped_at": "2026-06-06T15:16:19.064015",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=06-09-18",
       "date_label": "Dates vary, 7:00 - 8:30 PM",
       "occurrence_dates": [
         "2026-06-06",
@@ -916,10 +791,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-06-05T17:38:08.926493",
+      "scraped_at": "2026-06-06T15:16:19.064098",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=06-09-18",
       "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -958,10 +833,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.926735",
+      "scraped_at": "2026-06-06T15:16:19.064353",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=06-09-18",
       "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -995,10 +870,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.926888",
+      "scraped_at": "2026-06-06T15:16:19.064528",
       "start_time": "4:00 PM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187950.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187950.jpg?decache=06-09-18",
       "date_label": "4:00 - 5:00 PM",
       "venue_name": "Wasatch County Library",
       "address": "465 East 1200 South, Heber City, UT, 84032"
@@ -1016,10 +891,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.926973",
+      "scraped_at": "2026-06-06T15:16:19.064617",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728189.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728189.jpg?decache=06-09-18",
       "date_label": "Weekly, Mon nights @ 7:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Monday",
@@ -1057,10 +932,10 @@
       "categories": [
         "Education"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927121",
+      "scraped_at": "2026-06-06T15:16:19.064769",
       "start_time": "6:30 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186384.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186384.jpg?decache=06-09-18",
       "date_label": "1st & 3rd Tue, 6:30 - 8:00 PM",
       "occurrence_dates": [
         "2026-06-09",
@@ -1094,10 +969,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927197",
+      "scraped_at": "2026-06-06T15:16:19.064846",
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185653.jpg?decache=06-09-18",
       "date_label": "Tue, 7:00 - 9:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Tuesday",
@@ -1139,7 +1014,7 @@
       "title": "Country Swing & Line Dancing @ The Sycamore Building",
       "date": "2026-06-09",
       "description": "Country Swing & Line Dancing @ The Sycamore Building in Heber Valley.",
-      "location": "The Sycamore Building",
+      "location": "Heber Valley, UT",
       "link": "https://www.gohebervalley.com/swing-dance-at-sycamore",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1148,18 +1023,34 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927285",
+      "scraped_at": "2026-06-06T15:16:19.064939",
       "start_time": "8:00 PM",
       "end_time": "11:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3176611.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3176611.jpg?decache=06-09-18",
       "date_label": "Every 2nd and 4th Tue, 8:00 PM - 11:00PM",
-      "venue_name": "The Sycamore Building"
+      "occurrence_dates": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-07-14",
+        "2026-07-28",
+        "2026-08-11",
+        "2026-08-25",
+        "2026-09-08",
+        "2026-09-22",
+        "2026-10-13",
+        "2026-10-27",
+        "2026-11-10",
+        "2026-11-24",
+        "2026-12-08",
+        "2026-12-22"
+      ],
+      "recurrence_text": "Every 2nd and 4th Tue, 8:00 PM - 11:00PM"
     },
     {
       "title": "Wednesday Morning Storytime @ Folklore Bookshop",
       "date": "2026-06-10",
       "description": "Wednesday Morning Storytime @ Folklore Bookshop in Heber Valley.",
-      "location": "Folklore Bookshop",
+      "location": "Heber Valley, UT",
       "link": "https://www.gohebervalley.com/folklore-bookshop-morning-storytime",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1169,14 +1060,46 @@
         "Kids",
         "Education"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927372",
+      "scraped_at": "2026-06-06T15:16:19.065029",
       "start_time": "10:30 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157801.jpg?decache=06-09-18",
       "date_label": "Wed, 10:30 - 11:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Wednesday",
-      "venue_name": "Folklore Bookshop"
+      "occurrence_dates": [
+        "2026-06-10",
+        "2026-06-17",
+        "2026-06-24",
+        "2026-07-01",
+        "2026-07-08",
+        "2026-07-15",
+        "2026-07-22",
+        "2026-07-29",
+        "2026-08-05",
+        "2026-08-12",
+        "2026-08-19",
+        "2026-08-26",
+        "2026-09-02",
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23",
+        "2026-09-30",
+        "2026-10-07",
+        "2026-10-14",
+        "2026-10-21",
+        "2026-10-28",
+        "2026-11-04",
+        "2026-11-11",
+        "2026-11-18",
+        "2026-11-25",
+        "2026-12-02",
+        "2026-12-09",
+        "2026-12-16",
+        "2026-12-23",
+        "2026-12-30"
+      ],
+      "recurrence_text": "Wed, 10:30 - 11:00 AM"
     },
     {
       "title": "Heber Midday Wednesday Ride @ Southfield Park",
@@ -1191,10 +1114,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927533",
+      "scraped_at": "2026-06-06T15:16:19.065184",
       "start_time": "12:00 PM",
       "end_time": "1:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187352.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187352.jpg?decache=06-09-18",
       "date_label": "Wed, 12:00 - 1:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Wednesday",
@@ -1232,10 +1155,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927616",
+      "scraped_at": "2026-06-06T15:16:19.065272",
       "start_time": "12:30 PM",
       "end_time": "1:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188002.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188002.jpg?decache=06-09-18",
       "date_label": "Every Wed, 12:30 - 1:30 PM",
       "occurrence_dates": [
         "2026-06-10",
@@ -1257,10 +1180,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927694",
+      "scraped_at": "2026-06-06T15:16:19.065354",
       "start_time": "4:00 PM",
       "end_time": "5:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187945.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187945.jpg?decache=06-09-18",
       "date_label": "4:00 - 5:30 PM",
       "recurrence_text": "Monthly on the second Wednesday of each month",
       "occurrence_dates": [
@@ -1284,10 +1207,10 @@
       "categories": [
         "Education"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927773",
+      "scraped_at": "2026-06-06T15:16:19.065451",
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187982.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187982.jpg?decache=06-09-18",
       "date_label": "6:00 - 7:00 PM",
       "venue_name": "Wasatch County Library",
       "address": "465 East 1200 South, Heber City, UT, 84032"
@@ -1305,10 +1228,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927850",
+      "scraped_at": "2026-06-06T15:16:19.065533",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185548.jpg?decache=06-09-18",
       "date_label": "Wed, 6:00 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Wednesday",
@@ -1359,10 +1282,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-06-05T17:38:08.927933",
+      "scraped_at": "2026-06-06T15:16:19.065621",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187986.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187986.jpg?decache=06-09-18",
       "date_label": "Various dates, 6:00 - 8:00 PM",
       "occurrence_dates": [
         "2026-06-10",
@@ -1385,10 +1308,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.928009",
+      "scraped_at": "2026-06-06T15:16:19.065702",
       "start_time": "6:30 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=06-09-18",
       "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Wednesday",
@@ -1408,9 +1331,9 @@
     },
     {
       "title": "Still Water, Clear Seeing 6-Week Meditation Program",
-      "date": "2026-06-10",
+      "date": "2026-05-06",
       "description": "Still Water, Clear Seeing 6-Week Meditation Program in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Private Residence, 8 East Altamont Drive, Midway, UT",
       "link": "https://www.gohebervalley.com/haven-of-stillness-meditation-retreat",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1419,19 +1342,31 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-06-05T17:38:08.928100",
+      "scraped_at": "2026-06-06T15:16:19.065801",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187334.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187334.jpg?decache=06-09-18",
       "date_label": "Wed, May 6 - Jun 10, 1 session per week",
       "recurrence": "weekly",
-      "recurrence_day": "Wednesday"
+      "recurrence_day": "Wednesday",
+      "end_date": "2026-06-10",
+      "recurrence_text": "Weekly sessions, Wednesdays, for 6 consecutive weeks",
+      "occurrence_dates": [
+        "2026-05-06",
+        "2026-05-13",
+        "2026-05-20",
+        "2026-05-27",
+        "2026-06-03",
+        "2026-06-10"
+      ],
+      "venue_name": "Private Residence",
+      "address": "8 East Altamont Drive, Midway, UT, 84049"
     },
     {
       "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
       "date": "2026-06-11",
       "description": "Free Yoga for Ages 55+ @ Wasatch County Library in Heber Valley.",
-      "location": "Wasatch County Library",
+      "location": "Heber Valley, UT",
       "link": "https://www.gohebervalley.com/yoga-free-gentle-community-yoga-practice-ages-55",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1440,14 +1375,46 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-06-05T17:38:08.928195",
+      "scraped_at": "2026-06-06T15:16:19.065903",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748467.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748467.jpg?decache=06-09-18",
       "date_label": "Weekly, Thu mornings",
       "recurrence": "weekly",
       "recurrence_day": "Thursday",
-      "venue_name": "Wasatch County Library",
+      "occurrence_dates": [
+        "2026-06-11",
+        "2026-06-18",
+        "2026-06-25",
+        "2026-07-02",
+        "2026-07-09",
+        "2026-07-16",
+        "2026-07-23",
+        "2026-07-30",
+        "2026-08-06",
+        "2026-08-13",
+        "2026-08-20",
+        "2026-08-27",
+        "2026-09-03",
+        "2026-09-10",
+        "2026-09-17",
+        "2026-09-24",
+        "2026-10-01",
+        "2026-10-08",
+        "2026-10-15",
+        "2026-10-22",
+        "2026-10-29",
+        "2026-11-05",
+        "2026-11-12",
+        "2026-11-19",
+        "2026-11-26",
+        "2026-12-03",
+        "2026-12-10",
+        "2026-12-17",
+        "2026-12-24",
+        "2026-12-31"
+      ],
+      "recurrence_text": "Weekly, Thu mornings",
       "facets": [
         "Free"
       ]
@@ -1456,7 +1423,7 @@
       "title": "Kid's Book Club @ Wasatch County Library",
       "date": "2026-06-11",
       "description": "Kid's Book Club @ Wasatch County Library in Heber Valley.",
-      "location": "Wasatch County Library",
+      "location": "Heber Valley, UT",
       "link": "https://www.gohebervalley.com/wasatch-county-library-kids-book-club",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1465,12 +1432,21 @@
       "categories": [
         "Education"
       ],
-      "scraped_at": "2026-06-05T17:38:08.928348",
+      "scraped_at": "2026-06-06T15:16:19.066066",
       "start_time": "4:00 PM",
       "end_time": "5:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749593.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749593.jpg?decache=06-09-18",
       "date_label": "1st Thu monthly, 3:30 - 5:00 PM",
-      "venue_name": "Wasatch County Library"
+      "occurrence_dates": [
+        "2026-06-11",
+        "2026-07-09",
+        "2026-08-13",
+        "2026-09-03",
+        "2026-10-01",
+        "2026-11-05",
+        "2026-12-03"
+      ],
+      "recurrence_text": "1st Thu monthly, 3:30 - 5:00 PM"
     },
     {
       "title": "Heber Market on Main",
@@ -1485,10 +1461,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.928452",
+      "scraped_at": "2026-06-06T15:16:19.066147",
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=06-09-18",
       "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
       "recurrence": "weekly",
       "recurrence_day": "Thursday"
@@ -1506,10 +1482,10 @@
       "categories": [
         "Family"
       ],
-      "scraped_at": "2026-06-05T17:38:08.928556",
+      "scraped_at": "2026-06-06T15:16:19.066251",
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187317.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187317.jpg?decache=06-09-18",
       "date_label": "Heber City Main Street Park, 5:00 - 9:00 PM",
       "venue_name": "Heber Market on Main",
       "address": "250 South Main Street, Heber City, UT, 84032"
@@ -1518,7 +1494,7 @@
       "title": "Wine Dinner @ Midway Mercantile",
       "date": "2026-06-11",
       "description": "Wine Dinner @ Midway Mercantile in Heber Valley.",
-      "location": "Midway Mercantile, Midway, UT",
+      "location": "Heber Valley, UT",
       "link": "https://www.gohebervalley.com/midway-mercantile-wine-dinner",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1527,12 +1503,16 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-06-05T17:38:08.928638",
+      "scraped_at": "2026-06-06T15:16:19.066338",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740838.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740838.jpg?decache=06-09-18",
       "date_label": "Jun 11 & Jul 8, 6:00 PM",
-      "venue_name": "Midway Mercantile",
+      "occurrence_dates": [
+        "2026-06-11",
+        "2026-07-08"
+      ],
+      "recurrence_text": "Jun 11 & Jul 8, 6:00 PM",
       "facets": [
         "21+"
       ]
@@ -1550,11 +1530,33 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.928717",
+      "scraped_at": "2026-06-06T15:16:19.066466",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187532.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187532.jpg?decache=06-09-18",
       "date_label": "Jun 11, 18, 25"
+    },
+    {
+      "title": "The Weekly Stillness Experience @ Wasatch County Library",
+      "date": "2026-06-12",
+      "description": "The Weekly Stillness Experience @ Wasatch County Library in Heber Valley.",
+      "location": "Wasatch County Library",
+      "link": "https://www.gohebervalley.com/haven-of-stillness-weekly-experience",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.066639",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187335.jpg?decache=06-09-18",
+      "date_label": "Fri, May 8 - Jun 12, 9:00 - 10:00 AM",
+      "recurrence": "weekly",
+      "recurrence_day": "Friday",
+      "venue_name": "Wasatch County Library"
     },
     {
       "title": "Midway Art Walk",
@@ -1569,17 +1571,17 @@
       "categories": [
         "Arts"
       ],
-      "scraped_at": "2026-06-05T17:38:08.929085",
+      "scraped_at": "2026-06-06T15:16:19.066871",
       "start_time": "4:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748083.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748083.jpg?decache=06-09-18",
       "date_label": "2nd Fri monthly, 5:00 - 8:00 PM"
     },
     {
       "title": "Utah Local Author Day @ Folklore Bookshop",
       "date": "2026-06-12",
       "description": "Utah Local Author Day @ Folklore Bookshop in Heber Valley.",
-      "location": "Folklore Bookshop, 49 North 200 West, Suite 101, Midway, UT",
+      "location": "Folklore Bookshop",
       "link": "https://www.gohebervalley.com/folklore-bookshop-utah-local-authors-day",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1588,19 +1590,18 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.929169",
+      "scraped_at": "2026-06-06T15:16:19.066953",
       "start_time": "5:00 PM",
       "end_time": "7:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152599.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152599.jpg?decache=06-09-18",
       "date_label": "5:00 - 7:00 PM",
-      "venue_name": "Folklore Bookshop",
-      "address": "49 North 200 West, Suite 101, Midway, UT, 84049"
+      "venue_name": "Folklore Bookshop"
     },
     {
       "title": "Cheese Tasting @ Kohler Creamery",
       "date": "2026-06-12",
       "description": "Cheese Tasting @ Kohler Creamery in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Kohler Creamery",
       "link": "https://www.gohebervalley.com/cheese-tasting",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1609,27 +1610,45 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-06-05T17:38:08.929327",
+      "scraped_at": "2026-06-06T15:16:19.067116",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2728024.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2728024.jpg?decache=06-09-18",
       "date_label": "2nd Fri monthly, 6:00 - 8:00 PM",
+      "venue_name": "Kohler Creamery"
+    },
+    {
+      "title": "Ice Skating Glide In Movies @ Black Rock Event Center",
+      "date": "2026-06-12",
+      "description": "Ice Skating Glide In Movies @ Black Rock Event Center in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/black-rock-glide-in-movies",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.067202",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187566.jpg?decache=06-09-18",
+      "date_label": "Fri, 6:00 - 8:00 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Friday",
       "occurrence_dates": [
         "2026-06-12",
-        "2026-07-10",
-        "2026-08-14",
-        "2026-09-11",
-        "2026-10-09",
-        "2026-11-13",
-        "2026-12-11"
+        "2026-06-19",
+        "2026-06-26"
       ],
-      "recurrence_text": "2nd Fri monthly, 6:00 - 8:00 PM"
+      "recurrence_text": "Fri, 6:00 - 8:00 PM"
     },
     {
       "title": "Princess & Pirate Train @ Heber Valley Railroad",
       "date": "2026-06-12",
       "description": "Princess & Pirate Train @ Heber Valley Railroad in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Heber Valley Railroad",
       "link": "https://www.gohebervalley.com/princess-and-pirate-train",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1638,18 +1657,48 @@
       "categories": [
         "Family"
       ],
-      "scraped_at": "2026-06-05T17:38:08.929501",
+      "scraped_at": "2026-06-06T15:16:19.067291",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728121.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728121.jpg?decache=06-09-18",
       "date_label": "Dates & times vary",
+      "venue_name": "Heber Valley Railroad"
+    },
+    {
+      "title": "Live Music Fridays @ Melvin's Public House",
+      "date": "2026-06-12",
+      "description": "Live Music Fridays @ Melvin's Public House in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/live-music-at-melvins-pub",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.509484,
+      "lng": -111.413545,
+      "categories": [
+        "Music"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.067375",
+      "start_time": "7:30 PM",
+      "end_time": "10:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728120.jpg?decache=06-09-18",
+      "date_label": "Weekly, Fri nights @ 7:30pm",
+      "recurrence": "weekly",
+      "recurrence_day": "Friday",
       "occurrence_dates": [
         "2026-06-12",
+        "2026-06-19",
+        "2026-06-26",
+        "2026-07-03",
         "2026-07-10",
+        "2026-07-17",
+        "2026-07-24",
+        "2026-07-31",
+        "2026-08-07",
         "2026-08-14",
-        "2026-09-18"
+        "2026-08-21",
+        "2026-08-28"
       ],
-      "recurrence_text": "Dates & times vary"
+      "recurrence_text": "Weekly, Fri nights @ 7:30pm"
     },
     {
       "title": "Gathered With Heart Summer Kick Off Event",
@@ -1664,10 +1713,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.929861",
+      "scraped_at": "2026-06-06T15:16:19.067701",
       "start_time": "11:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187225.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187225.jpg?decache=06-09-18",
       "date_label": "11:00 AM - 5:00 PM",
       "venue_name": "Southfield Park",
       "address": "895 West 100 South, Heber City, UT, 84032"
@@ -1685,10 +1734,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-06-05T17:38:08.930476",
+      "scraped_at": "2026-06-06T15:16:19.068332",
       "start_time": "8:00 AM",
       "end_time": "9:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187843.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187843.jpg?decache=06-09-18",
       "occurrence_dates": [
         "2026-06-15",
         "2026-06-22",
@@ -1702,7 +1751,7 @@
       "title": "Flag Quilt-Making Camp @ USU Extension - Wasatch",
       "date": "2026-06-15",
       "description": "Flag Quilt-Making Camp @ USU Extension - Wasatch in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "USU Extension - Wasatch",
       "link": "https://www.gohebervalley.com/usu-extension-wasatch-flag-quilt",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1711,19 +1760,13 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.930554",
+      "scraped_at": "2026-06-06T15:16:19.068427",
       "start_time": "10:00 AM",
       "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187860.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187860.jpg?decache=06-09-18",
       "date_label": "Jun 15 - 18, 10:00 AM - 12:00 PM",
       "end_date": "2026-06-18",
-      "occurrence_dates": [
-        "2026-06-15",
-        "2026-06-16",
-        "2026-06-17",
-        "2026-06-18"
-      ],
-      "recurrence_text": "Jun 15 - 18, 10:00 AM - 12:00 PM"
+      "venue_name": "USU Extension - Wasatch"
     },
     {
       "title": "Midway America250 Celebrations",
@@ -1738,10 +1781,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.930709",
+      "scraped_at": "2026-06-06T15:16:19.068591",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2730478.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2730478.jpg?decache=06-09-18",
       "occurrence_dates": [
         "2026-06-15",
         "2026-07-04"
@@ -1760,27 +1803,11 @@
       "categories": [
         "Government"
       ],
-      "scraped_at": "2026-06-05T17:38:08.931012",
+      "scraped_at": "2026-06-06T15:16:19.068902",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741948.jpg?decache=05-11-08",
-      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
-      "occurrence_dates": [
-        "2026-06-16",
-        "2026-07-07",
-        "2026-07-21",
-        "2026-08-04",
-        "2026-08-18",
-        "2026-09-01",
-        "2026-09-15",
-        "2026-10-06",
-        "2026-10-20",
-        "2026-11-03",
-        "2026-11-17",
-        "2026-12-01",
-        "2026-12-15"
-      ],
-      "recurrence_text": "1st & 3rd Tue monthly, 6:00 PM"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741948.jpg?decache=06-09-18",
+      "date_label": "1st & 3rd Tue monthly, 6:00 PM"
     },
     {
       "title": "Midway City Council Monthly Meetings",
@@ -1795,27 +1822,11 @@
       "categories": [
         "Government"
       ],
-      "scraped_at": "2026-06-05T17:38:08.931100",
+      "scraped_at": "2026-06-06T15:16:19.068992",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750550.jpg?decache=05-11-08",
-      "date_label": "1st & 3rd Tue monthly, 6:00 PM",
-      "occurrence_dates": [
-        "2026-06-16",
-        "2026-07-07",
-        "2026-07-21",
-        "2026-08-04",
-        "2026-08-18",
-        "2026-09-01",
-        "2026-09-15",
-        "2026-10-06",
-        "2026-10-20",
-        "2026-11-03",
-        "2026-11-17",
-        "2026-12-01",
-        "2026-12-15"
-      ],
-      "recurrence_text": "1st & 3rd Tue monthly, 6:00 PM"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750550.jpg?decache=06-09-18",
+      "date_label": "1st & 3rd Tue monthly, 6:00 PM"
     },
     {
       "title": "June Chamber Mixer",
@@ -1830,10 +1841,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.931621",
+      "scraped_at": "2026-06-06T15:16:19.069539",
       "start_time": "4:00 PM",
       "end_time": "6:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748056.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748056.jpg?decache=06-09-18",
       "date_label": "Intermountain Health Heber Valley Hospital, 4:00 - 6:00 PM"
     },
     {
@@ -1849,10 +1860,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.931709",
+      "scraped_at": "2026-06-06T15:16:19.069632",
       "start_time": "4:00 PM",
       "end_time": "6:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750551.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750551.jpg?decache=06-09-18",
       "date_label": "1st & 3rd Wed monthly, 4:00 PM",
       "occurrence_dates": [
         "2026-06-17",
@@ -1875,7 +1886,7 @@
       "title": "Mahjong Mania @ Folklore Bookshop",
       "date": "2026-06-17",
       "description": "Mahjong Mania @ Folklore Bookshop in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Folklore Bookshop",
       "link": "https://www.gohebervalley.com/folklore-bookshop-mahjong",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1884,22 +1895,18 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-06-05T17:38:08.931926",
+      "scraped_at": "2026-06-06T15:16:19.069858",
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185667.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185667.jpg?decache=06-09-18",
       "date_label": "Dates vary, 7:00 - 8:30 PM",
-      "occurrence_dates": [
-        "2026-06-17",
-        "2026-06-24"
-      ],
-      "recurrence_text": "Dates vary, 7:00 - 8:30 PM"
+      "venue_name": "Folklore Bookshop"
     },
     {
       "title": "Sunset Sound Healing in the Labyrinth",
       "date": "2026-06-17",
       "description": "Sunset Sound Healing in the Labyrinth in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Instructor's private residence, Heber City, UT",
       "link": "https://www.gohebervalley.com/sunset-labyrinth-sound-healing",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1908,17 +1915,18 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.932004",
+      "scraped_at": "2026-06-06T15:16:19.069940",
       "start_time": "7:30 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187837.jpg?decache=05-11-08",
-      "date_label": "7:30 - 10:00 PM"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187837.jpg?decache=06-09-18",
+      "date_label": "7:30 - 10:00 PM",
+      "venue_name": "Instructor's private residence"
     },
     {
       "title": "Cacao Ceremony @ Ritual Chocolate",
       "date": "2026-06-18",
       "description": "Cacao Ceremony @ Ritual Chocolate in Heber Valley.",
-      "location": "Ritual Chocolate, 2175 West 3000 South, Suite 100, Heber City, UT",
+      "location": "Ritual Chocolate",
       "link": "https://www.gohebervalley.com/ritual-chocolate-cacao-ceremony",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1927,19 +1935,18 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.932369",
+      "scraped_at": "2026-06-06T15:16:19.070322",
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740850.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740850.jpg?decache=06-09-18",
       "date_label": "6:00 - 7:00 PM",
-      "venue_name": "Ritual Chocolate",
-      "address": "2175 West 3000 South, Suite 100, Heber City, UT, 84032"
+      "venue_name": "Ritual Chocolate"
     },
     {
       "title": "Tween Book Club @ Folklore Bookshop",
       "date": "2026-06-18",
       "description": "Tween Book Club @ Folklore Bookshop in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Folklore Bookshop",
       "link": "https://www.gohebervalley.com/folklore-bookshop-tween-book-club",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -1948,21 +1955,12 @@
       "categories": [
         "Education"
       ],
-      "scraped_at": "2026-06-05T17:38:08.932477",
+      "scraped_at": "2026-06-06T15:16:19.070431",
       "start_time": "6:30 PM",
       "end_time": "7:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3154262.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3154262.jpg?decache=06-09-18",
       "date_label": "6:30 - 7:30 PM",
-      "occurrence_dates": [
-        "2026-06-18",
-        "2026-07-16",
-        "2026-08-20",
-        "2026-09-17",
-        "2026-10-15",
-        "2026-11-19",
-        "2026-12-17"
-      ],
-      "recurrence_text": "6:30 - 7:30 PM"
+      "venue_name": "Folklore Bookshop"
     },
     {
       "title": "Sundance Resort Bluebird Concert Series",
@@ -1978,10 +1976,10 @@
         "Music",
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.933064",
+      "scraped_at": "2026-06-06T15:16:19.071064",
       "start_time": "8:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727547.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727547.jpg?decache=06-09-18",
       "date_label": "Various dates & times"
     },
     {
@@ -1997,10 +1995,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.933203",
+      "scraped_at": "2026-06-06T15:16:19.071211",
       "start_time": "7:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727577.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727577.jpg?decache=06-09-18",
       "date_label": "7:00 - 11:00 AM",
       "venue_name": "Rock Cliff Rec Area at Jordanelle State Park and Reservoir"
     },
@@ -2017,10 +2015,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.933276",
+      "scraped_at": "2026-06-06T15:16:19.071289",
       "start_time": "7:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727664.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727664.jpg?decache=06-09-18",
       "date_label": "7:00 AM start time",
       "venue_name": "Soldier Hollow",
       "address": "2002 Soldier Hollow Lane, Midway, UT, 84049"
@@ -2038,10 +2036,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.933507",
+      "scraped_at": "2026-06-06T15:16:19.071537",
       "start_time": "10:00 AM",
       "end_time": "2:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188023.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188023.jpg?decache=06-09-18",
       "date_label": "10:00 AM - 2:00 PM",
       "venue_name": "Jordanelle Ridge Barn & Cafe",
       "address": "2013 North Coyote Canyon Parkway, UT, 84032"
@@ -2060,10 +2058,10 @@
         "Food & Drink",
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.933962",
+      "scraped_at": "2026-06-06T15:16:19.072014",
       "start_time": "9:00 AM",
       "end_time": "3:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3115397.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3115397.jpg?decache=06-09-18",
       "date_label": "9:00 AM - 3:00 PM",
       "venue_name": "Sundance Mountain Resort",
       "address": "8841 North Alpine Loop Road, Sundance, UT, 84604"
@@ -2072,7 +2070,7 @@
       "title": "Lavender Field Exploration Day @ Blue Canyon Lavender Farm",
       "date": "2026-06-23",
       "description": "Lavender Field Exploration Day @ Blue Canyon Lavender Farm in Heber Valley.",
-      "location": "Blue Canyon Lavender Farm, 1850 Edwards Lane, Heber City, UT",
+      "location": "Blue Canyon Farm, 1850 Edwards Lane, Heber City, UT",
       "link": "https://www.gohebervalley.com/essential-earth-explorations-lavender-field",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -2081,12 +2079,12 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.934573",
+      "scraped_at": "2026-06-06T15:16:19.072654",
       "start_time": "8:30 AM",
       "end_time": "10:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187580.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187580.jpg?decache=06-09-18",
       "date_label": "8:30 - 10:30 AM",
-      "venue_name": "Blue Canyon Lavender Farm",
+      "venue_name": "Blue Canyon Farm",
       "address": "1850 Edwards Lane, Heber City, UT, 84032"
     },
     {
@@ -2102,10 +2100,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.935236",
+      "scraped_at": "2026-06-06T15:16:19.073340",
       "start_time": "5:30 PM",
       "end_time": "7:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187978.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187978.jpg?decache=06-09-18",
       "date_label": "5:30 - 7:30 PM",
       "venue_name": "The Onyx Club at Black Rock Mountain Resort",
       "address": "895 West Peace Tree Trail, Heber City, UT, 84032"
@@ -2123,10 +2121,10 @@
       "categories": [
         "Theater"
       ],
-      "scraped_at": "2026-06-05T17:38:08.935546",
+      "scraped_at": "2026-06-06T15:16:19.073664",
       "start_time": "7:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3151758.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3151758.jpg?decache=06-09-18",
       "date_label": "Jun 24 - Jul 4",
       "end_date": "2026-07-04",
       "occurrence_dates": [
@@ -2154,10 +2152,10 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-06-05T17:38:08.935709",
+      "scraped_at": "2026-06-06T15:16:19.073832",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186450.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186450.jpg?decache=06-09-18",
       "date_label": "7:00 - 8:30 PM",
       "venue_name": "Best Western Plus",
       "address": "1227 South US Highway 40, Heber City, UT, 84032"
@@ -2175,10 +2173,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.936225",
+      "scraped_at": "2026-06-06T15:16:19.074365",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760322.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760322.jpg?decache=06-09-18",
       "date_label": "Jun 26 - 28",
       "end_date": "2026-06-28",
       "occurrence_dates": [
@@ -2201,10 +2199,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-06-05T17:38:08.936310",
+      "scraped_at": "2026-06-06T15:16:19.074497",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=06-09-18",
       "date_label": "Jun 26, 27, 29",
       "occurrence_dates": [
         "2026-06-26",
@@ -2226,10 +2224,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.936393",
+      "scraped_at": "2026-06-06T15:16:19.074588",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=06-09-18",
       "date_label": "Jun 26 - 28",
       "end_date": "2026-06-28",
       "occurrence_dates": [
@@ -2252,10 +2250,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.936515",
+      "scraped_at": "2026-06-06T15:16:19.074686",
       "start_time": "10:30 AM",
       "end_time": "11:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748645.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748645.jpg?decache=06-09-18",
       "date_label": "4th Fri monthly, 10:30 -11:30 AM",
       "occurrence_dates": [
         "2026-06-26",
@@ -2280,10 +2278,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.936827",
+      "scraped_at": "2026-06-06T15:16:19.075007",
       "start_time": "1:00 PM",
       "end_time": "2:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748646.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748646.jpg?decache=06-09-18",
       "date_label": "4th Fri monthly, 1:00 - 2:00 PM",
       "occurrence_dates": [
         "2026-06-26",
@@ -2308,10 +2306,10 @@
       "categories": [
         "Music"
       ],
-      "scraped_at": "2026-06-05T17:38:08.937059",
+      "scraped_at": "2026-06-06T15:16:19.075251",
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180701.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180701.jpg?decache=06-09-18",
       "date_label": "Last Fri monthly, 6:00 PM - 7:00 PM ",
       "occurrence_dates": [
         "2026-06-26",
@@ -2339,10 +2337,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.937660",
+      "scraped_at": "2026-06-06T15:16:19.075882",
       "start_time": "9:00 AM",
       "end_time": "3:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725277.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725277.jpg?decache=06-09-18",
       "date_label": "9:00 AM - 3:00 PM",
       "venue_name": "Heber City Main Street Park",
       "address": "250 South Main Street, Heber City, UT, 84032"
@@ -2360,10 +2358,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.937886",
+      "scraped_at": "2026-06-06T15:16:19.076117",
       "start_time": "10:30 AM",
       "end_time": "12:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187531.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187531.jpg?decache=06-09-18",
       "date_label": "10:30 AM - 12:30 PM",
       "venue_name": "West Side Blooms",
       "address": "340 West 400 North, Heber City, UT, 84032"
@@ -2372,7 +2370,7 @@
       "title": "Artist in the Garden @ Water from the Moon",
       "date": "2026-06-27",
       "description": "Artist in the Garden @ Water from the Moon in Heber Valley.",
-      "location": "Water from the Moon",
+      "location": "Water from the Moon, 118 South 500 West, Heber City, UT",
       "link": "https://www.gohebervalley.com/artist-in-the-garden-water-from-the-moon",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -2381,18 +2379,19 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.938043",
+      "scraped_at": "2026-06-06T15:16:19.076279",
       "start_time": "11:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157790.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157790.jpg?decache=06-09-18",
       "date_label": "11:00 AM - 4:00 PM ",
-      "venue_name": "Water from the Moon"
+      "venue_name": "Water from the Moon",
+      "address": "118 South 500 West, Heber City, UT, 84032"
     },
     {
       "title": "Grand Re-Opening & 50s Summer Party @ Avon Theater",
       "date": "2026-06-27",
       "description": "Grand Re-Opening & 50s Summer Party @ Avon Theater in Heber Valley.",
-      "location": "Avon Theater",
+      "location": "Avon Theater, 94 South Main Street, Heber City, UT",
       "link": "https://www.gohebervalley.com/avon-theater-grand-reopening",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -2401,11 +2400,33 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.938278",
+      "scraped_at": "2026-06-06T15:16:19.076530",
       "start_time": "5:00 PM",
       "end_time": "6:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187230.jpg?decache=05-11-08",
-      "venue_name": "Avon Theater"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187230.jpg?decache=06-09-18",
+      "venue_name": "Avon Theater",
+      "address": "94 South Main Street, Heber City, UT, 84032"
+    },
+    {
+      "title": "Free Outdoor Concerts @ Heber Valley Railroad Depot",
+      "date": "2026-06-27",
+      "description": "Free Outdoor Concerts @ Heber Valley Railroad Depot in Heber Valley.",
+      "location": "Heber Valley Railroad Depot, 450 South 600 West, Heber City, UT",
+      "link": "https://www.gohebervalley.com/live-music-at-heber-valley-railroad",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022051,
+      "lng": -111.4245238,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-06-06T15:16:19.076934",
+      "start_time": "8:30 PM",
+      "end_time": "9:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3122456.jpg?decache=06-09-18",
+      "date_label": "8:30 - 9:30 PM",
+      "venue_name": "Heber Valley Railroad Depot",
+      "address": "450 South 600 West, Heber City, UT, 84032"
     },
     {
       "title": "Deer Valley Mountain Pride Day",
@@ -2420,10 +2441,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.938966",
+      "scraped_at": "2026-06-06T15:16:19.077243",
       "start_time": "10:00 AM",
       "end_time": "2:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3125336.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3125336.jpg?decache=06-09-18",
       "date_label": "10:00 AM - 2:00 PM",
       "venue_name": "Deer Valley Resort",
       "address": "2250 Deer Valley Drive South, Park City, UT, 84060"
@@ -2441,18 +2462,26 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.939571",
+      "scraped_at": "2026-06-06T15:16:19.077900",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750806.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750806.jpg?decache=06-09-18",
       "date_label": "Jun 30 - Jul 4",
-      "end_date": "2026-07-04"
+      "end_date": "2026-07-04",
+      "occurrence_dates": [
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-03",
+        "2026-07-04"
+      ],
+      "recurrence_text": "Jun 30 - Jul 4"
     },
     {
       "title": "Toby Keith Tribute Band Free Concert",
       "date": "2026-07-03",
       "description": "Toby Keith Tribute Band Free Concert in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Heber City Main Street Park, 250 South Main Street, Heber City, UT",
       "link": "https://www.gohebervalley.com/red-white-and-blue-concert",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -2461,11 +2490,13 @@
       "categories": [
         "Music"
       ],
-      "scraped_at": "2026-06-05T17:38:08.941190",
+      "scraped_at": "2026-06-06T15:16:19.079630",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187506.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187506.jpg?decache=06-09-18",
       "date_label": "7:00 - 10:00 PM",
+      "venue_name": "Heber City Main Street Park",
+      "address": "250 South Main Street, Heber City, UT, 84032",
       "facets": [
         "Free"
       ]
@@ -2474,7 +2505,7 @@
       "title": "Midway Annual July 4th Celebration",
       "date": "2026-07-04",
       "description": "Midway Annual July 4th Celebration in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Midway Town Square, 75 North 100 West, Midway, UT",
       "link": "https://www.gohebervalley.com/midway-fourth-of-july-celebration",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -2483,11 +2514,13 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.941431",
+      "scraped_at": "2026-06-06T15:16:19.079868",
       "start_time": "6:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741890.jpg?decache=05-11-08",
-      "date_label": "6:00 - 11:00 AM"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741890.jpg?decache=06-09-18",
+      "date_label": "6:00 - 11:00 AM",
+      "venue_name": "Midway Town Square",
+      "address": "75 North 100 West, Midway, UT, 84049"
     },
     {
       "title": "July 4th Freedom Train @ Heber Valley Railroad",
@@ -2502,10 +2535,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.941687",
+      "scraped_at": "2026-06-06T15:16:19.080135",
       "start_time": "9:00 AM",
       "end_time": "10:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741907.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741907.jpg?decache=06-09-18",
       "date_label": "9:00 AM, 11:30 AM, 2:00 PM",
       "venue_name": "Heber Valley Railroad"
     },
@@ -2522,10 +2555,10 @@
       "categories": [
         "Music"
       ],
-      "scraped_at": "2026-06-05T17:38:08.942818",
+      "scraped_at": "2026-06-06T15:16:19.081310",
       "start_time": "8:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187274.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187274.jpg?decache=06-09-18",
       "date_label": "8:00 - 10:00 PM",
       "venue_name": "Midway Town Square",
       "address": "75 North 100 West, Midway, UT, 84049"
@@ -2543,10 +2576,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.943494",
+      "scraped_at": "2026-06-06T15:16:19.082012",
       "start_time": "6:00 PM",
       "end_time": "7:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3184887.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3184887.jpg?decache=06-09-18",
       "date_label": "1st Tue monthly, 6:00 - 7:00 PM",
       "occurrence_dates": [
         "2026-07-07",
@@ -2571,17 +2604,11 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-06-05T17:38:08.944285",
+      "scraped_at": "2026-06-06T15:16:19.082849",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=05-11-08",
-      "date_label": "Jul 9, 10, 11",
-      "occurrence_dates": [
-        "2026-07-09",
-        "2026-07-10",
-        "2026-07-11"
-      ],
-      "recurrence_text": "Jul 9, 10, 11"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=06-09-18",
+      "date_label": "Jul 9, 10, 11"
     },
     {
       "title": "Deer Creek Half Marathon",
@@ -2596,10 +2623,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-06-05T17:38:08.945538",
+      "scraped_at": "2026-06-06T15:16:19.084135",
       "start_time": "6:00 AM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180730.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180730.jpg?decache=06-09-18",
       "date_label": "Sat, 6:00 AM start time",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -2619,10 +2646,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.945977",
+      "scraped_at": "2026-06-06T15:16:19.084602",
       "start_time": "12:00 PM",
       "end_time": "7:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187148.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187148.jpg?decache=06-09-18",
       "date_label": "Jul 11 - 12",
       "end_date": "2026-07-12",
       "occurrence_dates": [
@@ -2635,7 +2662,7 @@
       "title": "Sunrise Yoga in the Labyrinth",
       "date": "2026-07-15",
       "description": "Sunrise Yoga in the Labyrinth in Heber Valley.",
-      "location": "Instructor's private residence, Heber City, UT",
+      "location": "Heber Valley, UT",
       "link": "https://www.gohebervalley.com/sunrise-labyrinth-yoga",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -2644,12 +2671,11 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-06-05T17:38:08.947114",
+      "scraped_at": "2026-06-06T15:16:19.085777",
       "start_time": "6:00 AM",
       "end_time": "9:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3123832.jpg?decache=05-11-08",
-      "date_label": "6:00 - 9:00 AM",
-      "venue_name": "Instructor's private residence"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3123832.jpg?decache=06-09-18",
+      "date_label": "6:00 - 9:00 AM"
     },
     {
       "title": "TedFest Music Festival",
@@ -2665,18 +2691,12 @@
         "Music",
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.947996",
+      "scraped_at": "2026-06-06T15:16:19.086688",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=06-09-18",
       "date_label": "Jul 17 - 19",
-      "end_date": "2026-07-19",
-      "occurrence_dates": [
-        "2026-07-17",
-        "2026-07-18",
-        "2026-07-19"
-      ],
-      "recurrence_text": "Jul 17 - 19"
+      "end_date": "2026-07-19"
     },
     {
       "title": "Heber Valley Pioneer Baseball Tournament",
@@ -2691,10 +2711,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-06-05T17:38:08.948086",
+      "scraped_at": "2026-06-06T15:16:19.086781",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=06-09-18",
       "date_label": "Jul 17 - 18",
       "end_date": "2026-07-18",
       "occurrence_dates": [
@@ -2716,24 +2736,18 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-06-05T17:38:08.950971",
+      "scraped_at": "2026-06-06T15:16:19.089750",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2724434.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2724434.jpg?decache=06-09-18",
       "date_label": "Jul 23 - 25, 7:00 - 10:00 PM",
-      "end_date": "2026-07-25",
-      "occurrence_dates": [
-        "2026-07-23",
-        "2026-07-24",
-        "2026-07-25"
-      ],
-      "recurrence_text": "Jul 23 - 25, 7:00 - 10:00 PM"
+      "end_date": "2026-07-25"
     },
     {
       "title": "Charleston Town Pioneer Day Celebration",
       "date": "2026-07-24",
       "description": "Charleston Town Pioneer Day Celebration in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Charleston Town Park, 3575 West 3600 South, Charleston, UT",
       "link": "https://www.gohebervalley.com/charleston-july-pioneer-celebration",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -2742,11 +2756,13 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.951134",
+      "scraped_at": "2026-06-06T15:16:19.089919",
       "start_time": "6:45 AM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3163382.jpg?decache=05-11-08",
-      "date_label": "6:45 AM - 10:00 PM"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3163382.jpg?decache=06-09-18",
+      "date_label": "6:45 AM - 10:00 PM",
+      "venue_name": "Charleston Town Park",
+      "address": "3575 West 3600 South, Charleston, UT, 84032"
     },
     {
       "title": "Charleston 5K",
@@ -2761,10 +2777,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.951208",
+      "scraped_at": "2026-06-06T15:16:19.089997",
       "start_time": "7:00 AM",
       "end_time": "9:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750856.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750856.jpg?decache=06-09-18",
       "date_label": "7:00 - 9:00 AM ",
       "venue_name": "Charleston Park",
       "address": "3575 West 3600 South, Heber City, UT, 84032"
@@ -2783,10 +2799,10 @@
         "Arts",
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.951518",
+      "scraped_at": "2026-06-06T15:16:19.090304",
       "start_time": "12:00 PM",
       "end_time": "6:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727546.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727546.jpg?decache=06-09-18",
       "date_label": "Jul 24 - 26",
       "end_date": "2026-07-26",
       "occurrence_dates": [
@@ -2800,7 +2816,7 @@
       "title": "Midland in Concert @ Sundance Resort",
       "date": "2026-07-25",
       "description": "Midland in Concert @ Sundance Resort in Heber Valley.",
-      "location": "Sundance Resort",
+      "location": "Sundance Mountain Resort, 8841 North Alpine Loop Road, Sundance, UT",
       "link": "https://www.gohebervalley.com/sundance-outdoor-summer-concert",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -2810,12 +2826,13 @@
         "Music",
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.952641",
+      "scraped_at": "2026-06-06T15:16:19.091478",
       "start_time": "8:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750632.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750632.jpg?decache=06-09-18",
       "date_label": "8:00 - 10:00 PM",
-      "venue_name": "Sundance Resort"
+      "venue_name": "Sundance Mountain Resort",
+      "address": "8841 North Alpine Loop Road, Sundance, UT, 84604"
     },
     {
       "title": "Wasatch County Fair Days",
@@ -2835,10 +2852,10 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.953081",
+      "scraped_at": "2026-06-06T15:16:19.091940",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=06-09-18",
       "date_label": "July 27 - August 1, event times vary",
       "occurrence_dates": [
         "2026-07-27",
@@ -2867,12 +2884,18 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.954184",
+      "scraped_at": "2026-06-06T15:16:19.093085",
       "start_time": "7:30 PM",
       "end_time": "10:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726716.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726716.jpg?decache=06-09-18",
       "date_label": "Jul 30 - Aug 1, 7:30 - 10:30 PM",
-      "end_date": "2026-08-01"
+      "end_date": "2026-08-01",
+      "occurrence_dates": [
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-01"
+      ],
+      "recurrence_text": "Jul 30 - Aug 1, 7:30 - 10:30 PM"
     },
     {
       "title": "Mountain Valley Special Needs Round Up Rodeo",
@@ -2892,10 +2915,10 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.954346",
+      "scraped_at": "2026-06-06T15:16:19.093257",
       "start_time": "8:30 AM",
       "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3125323.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3125323.jpg?decache=06-09-18",
       "date_label": "8:30 AM - 12:00 PM",
       "venue_name": "Wasatch County Rodeo Grounds",
       "address": "415 South Southfield Road, Heber City, UT, 84032"
@@ -2913,10 +2936,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-06-05T17:38:08.957474",
+      "scraped_at": "2026-06-06T15:16:19.096482",
       "start_time": "6:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3161632.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3161632.jpg?decache=06-09-18",
       "date_label": "6:00 AM - 11:00 AM",
       "venue_name": "Old Mill Elementary School",
       "address": "1600 East 980th South, Heber City, UT, 84032"
@@ -2935,9 +2958,9 @@
         "Sports",
         "Education"
       ],
-      "scraped_at": "2026-06-05T17:38:08.958461",
+      "scraped_at": "2026-06-06T15:16:19.097498",
       "start_time": "8:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728272.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728272.jpg?decache=06-09-18",
       "date_label": "Soldier Hollow Gold Course, 8:00 AM Shotgun",
       "venue_name": "Soldier Hollow - Gold Course",
       "end_time": "9:00 AM"
@@ -2955,10 +2978,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.958763",
+      "scraped_at": "2026-06-06T15:16:19.097808",
       "start_time": "8:30 AM",
       "end_time": "9:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=06-09-18",
       "date_label": "Heber Valley Visitor Center, 8:30 - 9:30 AM",
       "recurrence_text": "Every other month on the second Wednesday at 8:30 AM",
       "occurrence_dates": [
@@ -2980,10 +3003,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.959590",
+      "scraped_at": "2026-06-06T15:16:19.098655",
       "start_time": "8:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=06-09-18",
       "date_label": "Fri & Sat, 8:00 AM - 4:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Friday",
@@ -3006,10 +3029,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-06-05T17:38:08.960781",
+      "scraped_at": "2026-06-06T15:16:19.099878",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187839.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187839.jpg?decache=06-09-18",
       "date_label": "7:00 - 10:00 PM",
       "venue_name": "Instructor's private residence"
     },
@@ -3026,10 +3049,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-06-05T17:38:08.964391",
+      "scraped_at": "2026-06-06T15:16:19.103589",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3122383.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3122383.jpg?decache=06-09-18",
       "date_label": "Aug 28 - 29",
       "end_date": "2026-08-29",
       "occurrence_dates": [
@@ -3051,10 +3074,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.964490",
+      "scraped_at": "2026-06-06T15:16:19.103681",
       "start_time": "8:00 AM",
       "end_time": "12:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185673.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185673.jpg?decache=06-09-18",
       "date_label": "Aug 28 - 29",
       "end_date": "2026-08-29",
       "occurrence_dates": [
@@ -3077,10 +3100,10 @@
         "Music",
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.964573",
+      "scraped_at": "2026-06-06T15:16:19.103766",
       "start_time": "10:00 AM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=06-09-18",
       "date_label": "Aug 28 - 30",
       "end_date": "2026-08-30",
       "occurrence_dates": [
@@ -3103,16 +3126,16 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.965331",
+      "scraped_at": "2026-06-06T15:16:19.104561",
       "start_time": "6:00 AM",
       "end_time": "7:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740868.jpg?decache=05-11-08"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740868.jpg?decache=06-09-18"
     },
     {
       "title": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools",
       "date": "2026-09-02",
       "description": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "UVU Wasatch Campus, 3111 College Way, Heber City, UT",
       "link": "https://www.gohebervalley.com/sept-business-university",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -3121,11 +3144,13 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.967385",
+      "scraped_at": "2026-06-06T15:16:19.106643",
       "start_time": "11:30 PM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=05-11-08",
-      "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=06-09-18",
+      "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
+      "venue_name": "UVU Wasatch Campus",
+      "address": "3111 College Way, Heber City, UT, 84032"
     },
     {
       "title": "Midway Swiss Days Festival",
@@ -3140,10 +3165,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-06-05T17:38:08.967780",
+      "scraped_at": "2026-06-06T15:16:19.107035",
       "start_time": "8:00 AM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=06-09-18",
       "date_label": "Sep 4-5, 8:00 AM - 8:00 PM",
       "end_date": "2026-09-05"
     },
@@ -3160,10 +3185,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.968176",
+      "scraped_at": "2026-06-06T15:16:19.107441",
       "start_time": "7:00 PM",
       "end_time": "9:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178906.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178906.jpg?decache=06-09-18",
       "date_label": "7:00 - 9:30 PM",
       "venue_name": "Heber Valley Railroad",
       "address": "450 South 600 West, Heber City, UT, 84032"
@@ -3181,10 +3206,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.970125",
+      "scraped_at": "2026-06-06T15:16:19.109409",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=06-09-18",
       "date_label": "Apr 17 - 19, Sep 11 - 13",
       "occurrence_dates": [
         "2026-09-11",
@@ -3206,10 +3231,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.971815",
+      "scraped_at": "2026-06-06T15:16:19.111123",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=06-09-18",
       "date_label": "Sep 16 - 19",
       "end_date": "2026-09-19",
       "occurrence_dates": [
@@ -3224,7 +3249,7 @@
       "title": "Mountain Bike World Series @ Soldier Hollow",
       "date": "2026-09-19",
       "description": "Mountain Bike World Series @ Soldier Hollow in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Soldier Hollow",
       "link": "https://www.gohebervalley.com/soho-whoop-uci-world-series",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -3233,17 +3258,13 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.973085",
+      "scraped_at": "2026-06-06T15:16:19.112440",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=06-09-18",
       "date_label": "Sep 19 - 20",
       "end_date": "2026-09-20",
-      "occurrence_dates": [
-        "2026-09-19",
-        "2026-09-20"
-      ],
-      "recurrence_text": "Sep 19 - 20"
+      "venue_name": "Soldier Hollow"
     },
     {
       "title": "Wasatch EuroFest Car Show",
@@ -3258,10 +3279,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.974583",
+      "scraped_at": "2026-06-06T15:16:19.113984",
       "start_time": "12:00 PM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187859.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187859.jpg?decache=06-09-18",
       "date_label": "Sep 24 - 26",
       "end_date": "2026-09-26",
       "occurrence_dates": [
@@ -3275,7 +3296,7 @@
       "title": "Wasatch Half Marathon & 10K",
       "date": "2026-09-26",
       "description": "Wasatch Half Marathon & 10K in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Soldier Hollow, 2002 Soldier Hollow Lane, Midway, UT",
       "link": "https://www.gohebervalley.com/wasatch-half-marathon",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -3284,17 +3305,19 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-06-05T17:38:08.975337",
+      "scraped_at": "2026-06-06T15:16:19.114781",
       "start_time": "8:00 AM",
       "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180475.jpg?decache=05-11-08",
-      "date_label": "Race starts at 8:00 AM"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180475.jpg?decache=06-09-18",
+      "date_label": "Race starts at 8:00 AM",
+      "venue_name": "Soldier Hollow",
+      "address": "2002 Soldier Hollow Lane, Midway, UT, 84049"
     },
     {
       "title": "Disc Golf Tournament @ Wasatch Wunder Course",
       "date": "2026-09-26",
       "description": "Disc Golf Tournament @ Wasatch Wunder Course in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Wasatch Wunder Course",
       "link": "https://www.gohebervalley.com/disc-golf-tournament",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -3304,22 +3327,18 @@
         "Sports",
         "Education"
       ],
-      "scraped_at": "2026-06-05T17:38:08.975440",
+      "scraped_at": "2026-06-06T15:16:19.114881",
       "start_time": "9:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2755717.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2755717.jpg?decache=06-09-18",
       "date_label": "May 30 - 31, Sep 26 - 27",
-      "occurrence_dates": [
-        "2026-09-26",
-        "2026-09-27"
-      ],
-      "recurrence_text": "May 30 - 31, Sep 26 - 27"
+      "venue_name": "Wasatch Wunder Course"
     },
     {
       "title": "Wasatch Back Business University - Say Something Worth Reading: Content Creation & Marketing That Actually Drives Business",
       "date": "2026-10-07",
       "description": "Wasatch Back Business University - Say Something Worth Reading: Content Creation & Marketing That Actually Drives Business in Heber Valley.",
-      "location": "Heber Valley, UT",
+      "location": "Blair Education Center at Intermountain Park City Hospital, 900 Round Valley Drive, Park City, UT",
       "link": "https://www.gohebervalley.com/october-business-university",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
@@ -3328,11 +3347,13 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.978406",
+      "scraped_at": "2026-06-06T15:16:19.117980",
       "start_time": "11:30 PM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=05-11-08",
-      "date_label": "Blair Education Center, 11:30 AM - 1:00 PM"
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=06-09-18",
+      "date_label": "Blair Education Center, 11:30 AM - 1:00 PM",
+      "venue_name": "Blair Education Center at Intermountain Park City Hospital",
+      "address": "900 Round Valley Drive, Park City, UT, 84060"
     },
     {
       "title": "Utah Tourism Conference in Heber Valley",
@@ -3347,12 +3368,19 @@
       "categories": [
         "Education"
       ],
-      "scraped_at": "2026-06-05T17:38:08.979669",
+      "scraped_at": "2026-06-06T15:16:19.119283",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=06-09-18",
       "date_label": "Oct 13 - 16",
-      "end_date": "2026-10-16"
+      "end_date": "2026-10-16",
+      "occurrence_dates": [
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16"
+      ],
+      "recurrence_text": "Oct 13 - 16"
     },
     {
       "title": "Wasatch Back Business University - Beyond the Basics: Specific AI Tools That Are Actually Moving the Needle for Business",
@@ -3367,10 +3395,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.984655",
+      "scraped_at": "2026-06-06T15:16:19.124437",
       "start_time": "11:30 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=06-09-18",
       "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
       "venue_name": "UVU Wasatch Campus",
       "address": "3111 College Way, Heber City, UT, 84032"
@@ -3388,10 +3416,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.987981",
+      "scraped_at": "2026-06-06T15:16:19.127868",
       "start_time": "5:30 PM",
       "end_time": "9:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132170.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132170.jpg?decache=06-09-18",
       "date_label": "Black Rock Mountain Resort 5:30 - 9:30 PM",
       "venue_name": "Black Rock Mountain Resort"
     },
@@ -3408,28 +3436,13 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:38:08.990649",
+      "scraped_at": "2026-06-06T15:16:19.130627",
       "start_time": "11:30 PM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=05-11-08",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=06-09-18",
       "date_label": "Blair Education Center, 11:30 AM - 1:00 PM",
       "venue_name": "Blair Education Center at Intermountain Park City Hospital",
       "address": "900 Round Valley Drive, Park City, UT, 84060"
-    },
-    {
-      "title": "Wild West Days Trains",
-      "date": "2026-06-05",
-      "description": "You won't want to miss this fun and family friendly Old West Train event! The Wild West Days Train includes a short, 45-minute round trip train ride (except the 90 minute ride on Friday evening at...",
-      "location": "Heber Valley Railroad, 450 S 6th W, Heber City, UT",
-      "link": "https://www.visitsaltlake.com/event/festivals-and-special-events/wild-west-days-trains/79197/",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:09.193061",
-      "categories": [
-        "Family"
-      ]
     },
     {
       "title": "Fiddlers 'n Fireworks 2026",
@@ -3441,7 +3454,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:09.193083",
+      "scraped_at": "2026-06-06T15:20:41.354927",
       "categories": [
         "Music"
       ]
@@ -3456,7 +3469,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:09.193112",
+      "scraped_at": "2026-06-06T15:20:41.354952",
       "categories": [
         "Community"
       ]
@@ -3471,9 +3484,27 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:09.193136",
+      "scraped_at": "2026-06-06T15:20:41.354969",
       "categories": [
         "Community"
+      ]
+    },
+    {
+      "title": "Road To The Million Championship Concert",
+      "date": "2026-06-20",
+      "description": "Road to the Million Championship Night returns June 20 in Heber City. Live music, elite competition. Kids 5 & under free. The biggest night of the week is almost here. Join us Saturday, June 20th...",
+      "location": "Wasatch County Event Complex, Southfield Park, 415 S Fld Rd, Heber City, UT",
+      "link": "https://www.eventbrite.com/e/road-to-the-million-championship-concert-tickets-1990828161623",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "scraped_at": "2026-06-06T15:20:41.354980",
+      "is_free": true,
+      "categories": [
+        "Music",
+        "Sports",
+        "Kids"
       ]
     },
     {
@@ -3486,7 +3517,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:09.193147",
+      "scraped_at": "2026-06-06T15:20:41.354994",
       "start_time": "10:30 PM",
       "categories": [
         "Community"
@@ -3505,22 +3536,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:09.193171",
-      "categories": [
-        "Community"
-      ]
-    },
-    {
-      "title": "13th Annual 1940's Hangar Dance",
-      "date": "2026-06-05",
-      "description": "We are excited to get back into the swing of things, so to speak! Come in your vintage dress (not required, but highly encouraged), and be transported back in time as you dance the night away to...",
-      "location": "Heber Valley Airport, 630 S Airport Rd, Heber City, UT",
-      "link": "https://www.ksl.com/events/details/577513?date=2026-06-06",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:16.058406",
+      "scraped_at": "2026-06-06T15:20:41.355005",
       "categories": [
         "Community"
       ]
@@ -3535,10 +3551,75 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:16.058457",
+      "scraped_at": "2026-06-06T15:20:41.355016",
       "start_time": "8:30 PM",
       "categories": [
         "Community"
+      ]
+    },
+    {
+      "title": "Wizard's Train 2026",
+      "date": "2026-07-31",
+      "description": "Put on your robes and grab your wand and come and ride the Wizard's Train. It departs at 7 pm and includes a 90 minute round trip. Costumed staff of popular characters will entertain you on board...",
+      "location": "Heber Valley Railroad, 450 S 6th W, Heber City, UT",
+      "link": "https://www.visitsaltlake.com/event/festivals-and-special-events/wizards-train-2026/80276/",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "scraped_at": "2026-06-06T15:20:41.355039",
+      "categories": [
+        "Community"
+      ]
+    },
+    {
+      "title": "13th Annual 1940's Hangar Dance",
+      "date": "2026-06-06",
+      "description": "We are excited to get back into the swing of things, so to speak! Come in your vintage dress (not required, but highly encouraged), and be transported back in time as you dance the night away to...",
+      "location": "Heber Valley Airport, 630 S Airport Rd, Heber City, UT",
+      "link": "https://www.ksl.com/events/details/577513?date=2026-06-06",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "scraped_at": "2026-06-06T15:20:45.840715",
+      "categories": [
+        "Community"
+      ]
+    },
+    {
+      "title": "Spring Gardens Heber Car Show and Country Market",
+      "date": "2026-06-06",
+      "description": "Help a Senior Stay in Assisted LivingThe Golden Gap Foundation is thrilled to invite you to our kickoff fundraiser to Close the Golden Gap! Join us for an evening of community, connection, and...",
+      "location": "Spring Gardens Senior Living Heber, 551 E 1200 S, Heber City, UT",
+      "link": "https://seniorsbluebook.com/events/spring-gardens-heber-car-show-and-country-market/1780761600",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "scraped_at": "2026-06-06T15:20:45.840739",
+      "categories": [
+        "Community"
+      ]
+    },
+    {
+      "title": "Park Silly Sunday Market presents Broken Compass Bluegrass",
+      "date": "2026-06-07",
+      "description": "Find tickets for Broken Compass Bluegrass with Kyle Ledson at Park Silly Sunday Market in Park City on 6/7/2026 at 3:00 PM",
+      "location": "Park Silly Sunday Market, 780 Main St, Park City, UT",
+      "link": "https://open.spotify.com/concert/6ZfxDfFtL1bikCVLAXApsD",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "scraped_at": "2026-06-06T15:20:45.840747",
+      "categories": [
+        "Music",
+        "Food & Drink",
+        "Outdoor"
+      ],
+      "facets": [
+        "Paid"
       ]
     },
     {
@@ -3551,7 +3632,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120394",
+      "scraped_at": "2026-06-06T15:20:50.791904",
       "categories": [
         "Family"
       ]
@@ -3566,7 +3647,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120429",
+      "scraped_at": "2026-06-06T15:20:50.791923",
       "categories": [
         "Wellness"
       ]
@@ -3581,7 +3662,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120439",
+      "scraped_at": "2026-06-06T15:20:50.791935",
       "categories": [
         "Music"
       ]
@@ -3596,7 +3677,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120448",
+      "scraped_at": "2026-06-06T15:20:50.791944",
       "categories": [
         "Community"
       ],
@@ -3614,7 +3695,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120457",
+      "scraped_at": "2026-06-06T15:20:50.791953",
       "categories": [
         "Community"
       ],
@@ -3632,7 +3713,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120466",
+      "scraped_at": "2026-06-06T15:20:50.791961",
       "categories": [
         "Community"
       ],
@@ -3642,15 +3723,16 @@
     },
     {
       "title": "The Little Mermaid",
-      "date": "2026-07-17",
-      "description": "Ticket listings for The Little Mermaid at High Valley Arts Outdoor Theater in Midway, Utah on 17/07/2026",
+      "date": "2026-07-16",
+      "description": "Ticket listings for The Little Mermaid at High Valley Arts Outdoor Theater in Midway, Utah on 07/16/2026",
       "location": "High Valley Arts Outdoor Theater, 40 508678 #111.464453, Midway, UT",
-      "link": "https://www.viagogo.com/ae/E-160937649",
+      "link": "https://www.stubhub.com/the-little-mermaid-midway-tickets-7-16-2026/event/161115231/",
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120474",
+      "scraped_at": "2026-06-06T15:20:50.791972",
+      "start_time": "11:15 PM",
       "categories": [
         "Community"
       ],
@@ -3668,7 +3750,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120481",
+      "scraped_at": "2026-06-06T15:20:50.791981",
       "categories": [
         "Wellness"
       ]
@@ -3683,7 +3765,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120488",
+      "scraped_at": "2026-06-06T15:20:50.791990",
       "categories": [
         "Community"
       ],
@@ -3701,7 +3783,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:17.120495",
+      "scraped_at": "2026-06-06T15:20:50.791998",
       "categories": [
         "Community"
       ],
@@ -3719,7 +3801,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:19.250299",
+      "scraped_at": "2026-06-06T15:20:51.842315",
       "start_time": "10:30 PM",
       "categories": [
         "Community"
@@ -3738,7 +3820,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:19.250319",
+      "scraped_at": "2026-06-06T15:20:51.842333",
       "start_time": "11:30 PM",
       "categories": [
         "Food & Drink",
@@ -3760,7 +3842,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:19.250329",
+      "scraped_at": "2026-06-06T15:20:51.842346",
       "start_time": "11:30 PM",
       "categories": [
         "Food & Drink",
@@ -3782,7 +3864,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:19.250338",
+      "scraped_at": "2026-06-06T15:20:51.842356",
       "start_time": "11:30 PM",
       "categories": [
         "Food & Drink",
@@ -3804,7 +3886,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:19.250346",
+      "scraped_at": "2026-06-06T15:20:51.842365",
       "categories": [
         "Community"
       ]
@@ -3819,7 +3901,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:19.250356",
+      "scraped_at": "2026-06-06T15:20:51.842377",
       "start_time": "11:30 PM",
       "categories": [
         "Food & Drink",
@@ -3841,7 +3923,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:19.250373",
+      "scraped_at": "2026-06-06T15:20:51.842398",
       "start_time": "9:30 PM",
       "categories": [
         "Music"
@@ -3857,7 +3939,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:19.250381",
+      "scraped_at": "2026-06-06T15:20:51.842429",
       "start_time": "11:30 PM",
       "categories": [
         "Food & Drink",
@@ -3870,22 +3952,6 @@
       "end_time": "1:30 AM"
     },
     {
-      "title": "Something Rotten",
-      "date": "2026-06-05",
-      "description": "Welcome to the Renaissance and the outrageous, crowd-pleasing musical farce, Something Rotten . Created by Grammy Award-winning songwriter Wayne Kirkpatrick, and successful screenwriters Karey...",
-      "location": "Egyptian Theatre, 328 Main St, Park City, UT",
-      "link": "https://tickets.egyptiantheatrecompany.org/tickets/454357",
-      "source": "Google Events",
-      "source_url": "https://www.google.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:19.250389",
-      "categories": [
-        "Music",
-        "Theater"
-      ]
-    },
-    {
       "title": "Wasatch County Fair Days",
       "date": "2026-08-01",
       "description": "Wasatch Count Fair Days Demolition Derby & Mountain Valley Stampede One of the best PRCA rodeos in the state! The Mountain Valley Stampede Rodeo is great family fun with the best stock from Powder...",
@@ -3895,7 +3961,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:23.130013",
+      "scraped_at": "2026-06-06T15:20:54.158169",
       "categories": [
         "Music",
         "Food & Drink",
@@ -3916,7 +3982,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:23.130044",
+      "scraped_at": "2026-06-06T15:20:54.158200",
       "categories": [
         "Food & Drink",
         "Sports",
@@ -3936,7 +4002,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:23.130068",
+      "scraped_at": "2026-06-06T15:20:54.158216",
       "categories": [
         "Kids"
       ]
@@ -3951,7 +4017,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:23.967097",
+      "scraped_at": "2026-06-06T15:20:54.936697",
       "start_time": "10:30 PM",
       "categories": [
         "Community"
@@ -3970,7 +4036,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:23.967120",
+      "scraped_at": "2026-06-06T15:20:54.936721",
       "start_time": "10:30 PM",
       "categories": [
         "Community"
@@ -3989,7 +4055,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:23.967130",
+      "scraped_at": "2026-06-06T15:20:54.936732",
       "start_time": "10:30 PM",
       "categories": [
         "Community"
@@ -4008,7 +4074,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:25.767654",
+      "scraped_at": "2026-06-06T15:21:03.611266",
       "start_time": "8:30 PM",
       "categories": [
         "Music",
@@ -4028,10 +4094,25 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:25.767673",
+      "scraped_at": "2026-06-06T15:21:03.611292",
       "categories": [
         "Music",
         "Festival"
+      ]
+    },
+    {
+      "title": ".38 Special",
+      "date": "2026-07-24",
+      "description": "Celebrating 50 years together, 38 Special continues to bring their explosive, guitar-driven Southern rock to audiences across the country. With more than 20 million albums sold and a catalog...",
+      "location": "Park City Mountain Cabriolet Ski Lift Base, 4000 Canyons Resort Dr, Park City, UT",
+      "link": "https://open.spotify.com/concert/4iUdLHHfwINYIVPBXdzLMS",
+      "source": "Google Events",
+      "source_url": "https://www.google.com",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "scraped_at": "2026-06-06T15:21:03.611303",
+      "categories": [
+        "Community"
       ]
     },
     {
@@ -4044,7 +4125,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:25.767684",
+      "scraped_at": "2026-06-06T15:21:03.611314",
       "start_time": "5:00 PM",
       "categories": [
         "Education"
@@ -4060,7 +4141,7 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:25.767695",
+      "scraped_at": "2026-06-06T15:21:03.611325",
       "categories": [
         "Music",
         "Kids",
@@ -4068,22 +4149,23 @@
       ]
     },
     {
-      "title": ".38 Special",
-      "date": "2026-07-24",
-      "description": "Celebrating 50 years together, 38 Special continues to bring their explosive, guitar-driven Southern rock to audiences across the country. With more than 20 million albums sold and a catalog...",
-      "location": "Park City Mountain Cabriolet Ski Lift Base, 4000 Canyons Resort Dr, Park City, UT",
-      "link": "https://open.spotify.com/concert/4iUdLHHfwINYIVPBXdzLMS",
+      "title": "Utah Summer CLE Seminar",
+      "date": "2026-06-26",
+      "description": "Get your last minute CLE credits and enjoy a member appreciation activity with your family afterward! Join ACC Mountain West for our Summer CLE Seminar! This event will be held in beautiful Park...",
+      "location": "U.S. Ski & Snowboard, 1 Victory Ln, Park City, UT",
+      "link": "https://www.eventbrite.com/e/utah-summer-cle-seminar-tickets-1990427936539",
       "source": "Google Events",
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:25.767703",
+      "scraped_at": "2026-06-06T15:21:03.611357",
+      "start_time": "8:30 AM",
       "categories": [
-        "Community"
+        "Education"
       ]
     },
     {
-      "title": "Deer Valley Music Festival - The Music of Celine Dion",
+      "title": "The Music Of Celine Dion",
       "date": "2026-08-15",
       "description": "The Music Of Celine Dion, Utah Symphony | Utah Opera (USUO), Aug 14 2026, Park City | Get your tickets for 1 upcoming performances",
       "location": "Deer Valley Snow Park Outdoor Amphitheater, 2250 Deer Valley Dr S #501, Park City, UT",
@@ -4092,11 +4174,10 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:25.767723",
+      "scraped_at": "2026-06-06T15:21:03.611379",
       "start_time": "10:30 PM",
       "categories": [
-        "Music",
-        "Festival"
+        "Music"
       ],
       "facets": [
         "Paid"
@@ -4112,27 +4193,10 @@
       "source_url": "https://www.google.com",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:25.767731",
+      "scraped_at": "2026-06-06T15:21:03.611390",
       "categories": [
         "Food & Drink",
         "Outdoor"
-      ]
-    },
-    {
-      "title": "Road To The Million Championship Concert",
-      "date": "2026-06-20",
-      "description": "Road to the Million Championship Night returns June 20 in Heber City. Live music, elite competition. Kids 5 & under free. The biggest night of the week is almost here. Join us Saturday, June 20th...",
-      "location": "Wasatch County Event Complex, Southfield Park, 415 S Fld Rd, Heber City, UT",
-      "link": "https://www.eventbrite.com/e/road-to-the-million-championship-concert-tickets-1990828161623",
-      "source": "Eventbrite",
-      "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:31.366631",
-      "categories": [
-        "Music",
-        "Sports",
-        "Kids"
       ]
     },
     {
@@ -4145,7 +4209,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:31.366652",
+      "scraped_at": "2026-06-06T15:21:05.278873",
       "start_time": "8:30 PM",
       "categories": [
         "Food & Drink"
@@ -4161,7 +4225,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:31.366663",
+      "scraped_at": "2026-06-06T15:21:05.278885",
       "categories": [
         "Music"
       ]
@@ -4176,7 +4240,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:31.366673",
+      "scraped_at": "2026-06-06T15:21:05.278895",
       "categories": [
         "Community"
       ]
@@ -4191,7 +4255,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:31.366682",
+      "scraped_at": "2026-06-06T15:21:05.278904",
       "categories": [
         "Food & Drink"
       ]
@@ -4206,7 +4270,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:31.366690",
+      "scraped_at": "2026-06-06T15:21:05.278913",
       "categories": [
         "Community"
       ]
@@ -4221,7 +4285,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:31.366699",
+      "scraped_at": "2026-06-06T15:21:05.278923",
       "start_time": "9:30 PM",
       "categories": [
         "Film"
@@ -4237,7 +4301,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:31.366714",
+      "scraped_at": "2026-06-06T15:21:05.278938",
       "categories": [
         "Food & Drink"
       ]
@@ -4252,7 +4316,7 @@
       "source_url": "https://www.eventbrite.com/d/ut--heber/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-06-05T17:42:31.366723",
+      "scraped_at": "2026-06-06T15:21:05.278947",
       "categories": [
         "Food & Drink"
       ]
@@ -4386,7 +4450,7 @@
         "Community",
         "Wellness"
       ],
-      "scraped_at": "2026-06-05T17:42:34.712829",
+      "scraped_at": "2026-06-06T15:21:12.558425",
       "start_time": "6:45 PM",
       "price": "$80.00",
       "sold_out": true
@@ -4408,7 +4472,7 @@
         "Community",
         "Arts"
       ],
-      "scraped_at": "2026-06-05T17:42:34.712924",
+      "scraped_at": "2026-06-06T15:21:12.558514",
       "start_time": "7:30 PM",
       "price": "$115.00"
     },
@@ -4428,7 +4492,7 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-06-05T17:42:34.713004",
+      "scraped_at": "2026-06-06T15:21:12.558595",
       "start_time": "7:30 PM",
       "price": "$90.00"
     },
@@ -4561,28 +4625,6 @@
       "end_time": "2:30 PM",
       "address": "450 S 6th W, Heber City, UT 84032",
       "venue_name": "Heber Valley Railroad"
-    },
-    {
-      "title": "Summer Concerts at the Depot",
-      "date": "2026-06-05",
-      "description": "Free outdoor concerts happening on select dates this summer at the Heber Valley Railroad Depot. This is the place to be for live outdoor music! Enjoy these complimentary shows. Seating provided on a first come, first served basis. Dancing is encouraged!!",
-      "location": "Heber Valley Railroad, 450 S 6th W, Heber City, UT 84032",
-      "link": "https://hebervalleylife.com/events/summer-concerts-at-the-depot/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/summer-concerts-at-the-depot/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "start_time": "2:30 PM",
-      "end_time": "3:30 PM",
-      "image_url": "https://i0.wp.com/hebervalleylife.com/wp-content/uploads/2023/05/condert-depot.webp?fit=1920%2C1080&#038;ssl=1",
-      "address": "450 S 6th W, Heber City, UT 84032",
-      "venue_name": "Heber Valley Railroad",
-      "facets": [
-        "Free"
-      ]
     },
     {
       "title": "Main-to-Main 5K %26 10K Races",
@@ -5209,8 +5251,8 @@
       "link": "https://townlift.com/event/the-business-table/",
       "source": "TownLift",
       "source_url": "https://www.townlift.com",
-      "lat": 40.6460921,
-      "lng": -111.4979963,
+      "lat": 40.6461,
+      "lng": -111.498,
       "categories": [
         "Community",
         "Food & Drink"
