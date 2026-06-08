@@ -83,12 +83,34 @@ EXCLUDED_VENUE_PATTERNS = [
     "creekside christian fellowship",      # weekly church services (dead site)
 ]
 
+_ALL_WEEKDAYS = {"monday", "tuesday", "wednesday", "thursday", "friday",
+                 "saturday", "sunday"}
+
+
+def _is_always_on_program(e):
+    """Structural amenity signal: recurs every day of the week with no specific
+    start time => an always-on program (drop-in fitness, open swim, facility
+    hours), not a dated event. Fanning it out floods the calendar with one
+    time-less card per day. Catches this class without hardcoding each title in
+    EXCLUDED_TITLE_PATTERNS. Tight on purpose (all 7 days AND no time) so real
+    recurring events — which have specific days and usually a time — are safe."""
+    if (e.get("recurrence") or "").lower() not in ("weekly", "weekly_multiple"):
+        return False
+    if (e.get("start_time") or "").strip():
+        return False
+    days_raw = e.get("recurrence_days") or e.get("recurrence_day") or ""
+    days = {d.strip().lower() for d in days_raw.replace("|", ",").split(",") if d.strip()}
+    return _ALL_WEEKDAYS.issubset(days)
+
+
 def _is_excluded_amenity(e):
     t = (e.get("title") or "").lower()
     if any(p in t for p in EXCLUDED_TITLE_PATTERNS):
         return True
     v = (e.get("venue_name") or "").lower()
     if any(p in v for p in EXCLUDED_VENUE_PATTERNS):
+        return True
+    if _is_always_on_program(e):
         return True
     return False
 
