@@ -292,7 +292,7 @@ def render_html(audit, repair, llm_health=None, baselines=None, guard_state=None
                 f"<tr style='border-bottom:1px solid #eee'>"
                 f"<td style='padding:6px 10px'>"
                 f"<div><strong>{(i.get('event_title') or '(no title)')[:80]}</strong></div>"
-                f"<div style='font-size:12px;color:#666;margin-top:2px'>{i.get('message', '')[:160]}</div>"
+                f"<div style='font-size:12px;color:#666;margin-top:2px'>{i.get('message', '')[:500]}</div>"
                 f"</td>"
                 f"<td style='padding:6px 10px;font-size:13px'>{link_html}</td>"
                 f"</tr>"
@@ -319,7 +319,7 @@ def render_html(audit, repair, llm_health=None, baselines=None, guard_state=None
             fr.append(
                 f"<tr style='border-bottom:1px solid #eee'>"
                 f"<td style='padding:6px 10px'><strong>{f.get('source','?')}</strong>"
-                f"<div style='font-size:12px;color:#666'>{(f.get('reason') or f.get('note') or '')[:160]}</div></td></tr>"
+                f"<div style='font-size:12px;color:#666'>{(f.get('flagged_reason') or f.get('notes') or f.get('reason') or f.get('note') or '')[:300]}</div></td></tr>"
             )
         health_block = (
             "<h3 style='margin:20px 0 8px;font-size:16px'>Health check flagged these sources</h3>"
