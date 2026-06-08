@@ -140,6 +140,14 @@ def _normalize_title(title: str) -> str:
     t = _html.unescape(title)               # &amp; -> &, &#39; -> '
     t = _re.sub(r"<[^>]+>", " ", t)         # strip HTML tags (<em>, </em>, <strong>...)
     t = t.lower()
+    # Canonicalize race-distance synonyms so "13.1M Half Marathon" and bare
+    # "Half Marathon" (same distance, different notation) dedupe to one event.
+    # Word forms first; bare "marathon" is left alone (a half != a full) and
+    # other distances (5k/10k) keep their own distinct tokens.
+    t = _re.sub(r"\bhalf[\s-]?marathon\b", " halfmarathon ", t)
+    t = _re.sub(r"\b13\.1\s*(?:miles?|mi|m)\b", " halfmarathon ", t)
+    t = _re.sub(r"\bfull[\s-]?marathon\b", " fullmarathon ", t)
+    t = _re.sub(r"\b26\.2\s*(?:miles?|mi|m)\b", " fullmarathon ", t)
     t = _re.sub(r"[^a-z0-9 ]+", " ", t)     # punctuation -> space
     # Collapse common phrasing variants from multi-feed dupes: "2 go"/"2go" is
     # the same as "to go" (e.g. "Crafternoons 2 Go" vs "Crafternoons To-Go").
@@ -173,6 +181,13 @@ def _normalize_title(title: str) -> str:
             and _re.fullmatch(r"20\d\d", tokens[-1])
             and tokens[-2] not in _DATE_CTX):
         tokens = tokens[:-1]
+    # Collapse adjacent duplicate tokens (e.g. canonicalized "halfmarathon
+    # halfmarathon" from "13.1M Half Marathon").
+    deduped = []
+    for _w in tokens:
+        if not deduped or deduped[-1] != _w:
+            deduped.append(_w)
+    tokens = deduped
     return " ".join(tokens)
 
 
