@@ -1115,15 +1115,20 @@ def _merge_duplicate_events(records: list) -> dict:
       - Venue / location / address: prefer the most specific
       - Image: prefer the first non-empty
       - Categories: union all
-      - Source: prefer the highest-priority source (elkhartlake.com > Osthoff > Siebkens > Google Events)
+      - Source: prefer the highest-priority source (venue-direct > Elkhart Lake Tourism > Google Events)
       - Series: add a `series` field if we detect the act is part of a known
         venue's series (Lake Deck, Siebkens, Elk Room)
     """
     source_priority = {
-        "Elkhart Lake Tourism": 0,
-        "The Osthoff Resort": 1,
-        "Siebkens Resort": 2,
-        "Road America": 3,
+        # Venue-direct / primary organizer wins attribution over the tourism
+        # aggregator (matches build_master_and_views.SOURCE_PRIORITY: a venue's
+        # own site is more authoritative for its events than the town feed).
+        # Title/description/venue are still chosen on their own merits below,
+        # so this only sets the source label + canonical link.
+        "The Osthoff Resort": 0,
+        "Siebkens Resort": 1,
+        "Road America": 2,
+        "Elkhart Lake Tourism": 3,
         "Google Events": 9,
         "Eventbrite": 9,
         "AllEvents": 9,
