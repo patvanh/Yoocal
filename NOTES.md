@@ -57,7 +57,7 @@ discover_sources_v3 now has newspaper/radio/TV/library/venue query templates.
 - [ ] Empty-day UX: fall-forward to upcoming when a day has no events.
 - [ ] Recurring event flooding (PLUNJ 225x, Group Fitness) — collapse repeats.
 - [ ] Jackson discovery results sitting done in pending_sources_v3.json — triage.
-- [ ] Triple Trail Challenge / multi-date series events — need representation.
+- [x] Triple Trail Challenge — DONE (no change needed, verified 2026-06-08). The 3 legs already show correctly, one per date, from Mountain Trails Foundation → runttc.com: Round Valley Rambler 6/13, Jupiter Peak 25K 7/18, Mid Mountain 50K 8/15. The "Triple Trail Challenge" prefixed entries were a malformed umbrella scrape (two legs in one title) + cross-source leg dupes from Running in the USA — correctly suppressed by the amenity exclusion. The season-long challenge isn't a dated event, so no calendar card is warranted.
 - [ ] Optional: Round Valley Rambler merge override.
 - [ ] Tune featured QUALITY_BAR per-city if it feels too sparse/generous.
 
