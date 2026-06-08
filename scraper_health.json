@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-06-08T11:19:10.016590-06:00",
+  "checked_at": "2026-06-08T13:03:34.464293-06:00",
   "today": "2026-06-08",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 717,
+        "actual": 734,
         "baseline": 716.9,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=717, baseline=717"
+        "message": "actual=734, baseline=717"
       },
       {
         "source": "Park City Annual Events",
@@ -45,11 +45,11 @@
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 47,
+        "actual": 48,
         "baseline": 45.5,
         "floor": null,
         "severity": "OK",
-        "message": "actual=47, baseline=46"
+        "message": "actual=48, baseline=46"
       },
       {
         "source": "Visit Park City (sitemap)",
@@ -151,11 +151,11 @@
       },
       {
         "source": "The Osthoff Resort",
-        "actual": 57,
+        "actual": 71,
         "baseline": 17.6,
         "floor": null,
         "severity": "ELEVATED",
-        "message": "actual=57, baseline=18 (324% of normal)"
+        "message": "actual=71, baseline=18 (404% of normal)"
       },
       {
         "source": "Siebkens Resort",
@@ -193,11 +193,11 @@
       },
       {
         "source": "Google Events",
-        "actual": 29,
+        "actual": 34,
         "baseline": 41.9,
         "floor": null,
-        "severity": "DEGRADED",
-        "message": "actual=29, baseline=42 (69% of normal)"
+        "severity": "OK",
+        "message": "actual=34, baseline=42"
       },
       {
         "source": "TownLift",
@@ -225,11 +225,11 @@
       },
       {
         "source": "Eventbrite",
-        "actual": 8,
+        "actual": 7,
         "baseline": 8.4,
         "floor": null,
         "severity": "OK",
-        "message": "actual=8, baseline=8"
+        "message": "actual=7, baseline=8"
       },
       {
         "source": "KPCW Community Calendar",
@@ -283,11 +283,11 @@
       },
       {
         "source": "Jackson Hole Mountain Resort",
-        "actual": 147,
+        "actual": 148,
         "baseline": 110.7,
         "floor": null,
         "severity": "OK",
-        "message": "actual=147, baseline=111"
+        "message": "actual=148, baseline=111"
       },
       {
         "source": "The Cloudveil",
