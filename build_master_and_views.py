@@ -68,7 +68,7 @@ MASTER_FILE = "public/events-all.json"
 # never catch a real event. Add new amenities here as you spot them.
 EXCLUDED_TITLE_PATTERNS = [
     "plunj",                               # PLUNJ — cold plunge drop-in
-    "group fitness classes at park city",  # daily rec-center drop-in
+    "group fitness classes",               # daily rec-center drop-in (title is generic; venue carries the location)
     "triple trail challenge",              # TTC = "do all 3" series umbrella; its
                                            # legs (Round Valley Rambler, Jupiter
                                            # Peak 25K, Mid Mountain 50K) are each
