@@ -18,9 +18,9 @@ const CITY_NAMES: Record<string, string> = {
 export default function CityLanding({ citySlug, cityKey }: { citySlug: string; cityKey: string }) {
   const cityName = CITY_NAMES[cityKey] || "Local"
   const quickLink: React.CSSProperties = {
-    display: "inline-block", padding: "8px 16px", borderRadius: "100px",
-    background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)",
-    color: "rgba(255,255,255,0.9)", fontSize: "14px", fontWeight: 600,
+    display: "inline-block", padding: "9px 18px", borderRadius: "100px",
+    background: "#534AB7", border: "1px solid #6E64C9",
+    color: "#ffffff", fontSize: "14px", fontWeight: 600,
     textDecoration: "none",
   }
   return (
@@ -35,6 +35,17 @@ export default function CityLanding({ citySlug, cityKey }: { citySlug: string; c
         </div>
       </nav>
 
+      {/* BROWSE STRIP — quick links to the per-city intent landing pages.
+          These navigate to other pages (unlike the in-hero filter pills,
+          which filter the calendar in place), so they use the lighter
+          quickLink pill style to read as navigation, not filters. */}
+      <div style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto", padding: "78px 16px 6px", display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center", alignItems: "center" }}>
+        <span style={{ color: "rgba(255,255,255,0.75)", fontSize: 13, fontWeight: 600, marginRight: 2 }}>Browse:</span>
+        <Link href={`/${citySlug}/this-weekend`} style={quickLink}>This weekend</Link>
+        <Link href={`/${citySlug}/free-events`} style={quickLink}>Free events</Link>
+        <Link href={`/${citySlug}/concerts`} style={quickLink}>Concerts</Link>
+        <Link href={`/${citySlug}/this-month`} style={quickLink}>This month</Link>
+      </div>
 
       {/* CALENDAR */}
       <section className="calendar-section" id="events" style={{ textAlign: "center" }}>
