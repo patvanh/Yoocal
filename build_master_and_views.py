@@ -140,6 +140,7 @@ def _normalize_title(title: str) -> str:
     t = _html.unescape(title)               # &amp; -> &, &#39; -> '
     t = _re.sub(r"<[^>]+>", " ", t)         # strip HTML tags (<em>, </em>, <strong>...)
     t = t.lower()
+    t = _re.sub(r"['’]s\b", "", t)         # strip possessive 's ("Heber's" -> "heber")
     # Canonicalize race-distance synonyms so "13.1M Half Marathon" and bare
     # "Half Marathon" (same distance, different notation) dedupe to one event.
     # Word forms first; bare "marathon" is left alone (a half != a full) and
@@ -1090,6 +1091,15 @@ def _cross_source_fuzzy_merge(events: list) -> list:
                  "music", "event", "events", "series", "with", "to", "for"}
         small, big = (s1, s2) if len(s1) <= len(s2) else (s2, s1)
         if small.issubset(big) and len(small - _STOP) >= 2:
+            return True
+        # Day-of-week words get stripped asymmetrically by _normalize_title
+        # (leading day removed, mid-title day kept), so retry the subset test
+        # with day names removed from both sides. Date already disambiguates
+        # recurring events, so dropping the day word here is safe.
+        _DOW = {"monday", "tuesday", "wednesday", "thursday", "friday",
+                "saturday", "sunday"}
+        sd_small = small - _DOW
+        if sd_small and sd_small.issubset(big - _DOW) and len(sd_small - _STOP) >= 2:
             return True
         return False
 
