@@ -1311,6 +1311,7 @@ def main():
     # elkhartlake.com via the Tribe REST API (the data source behind the
     # public tourism calendar). This replaces the old HTML scrape +
     # hardcoded events list which produced "See website" date entries.
+    osth_tribe = []
     try:
         from elkhart_tribe_api_scraper import scrape_elkhartlake_tribe_api, scrape_osthoff_tribe_api
         elk_tribe = scrape_elkhartlake_tribe_api()
@@ -1340,12 +1341,17 @@ def main():
         all_events += scrape_elkhartlake_com()
     all_events += scrape_siebkens()
     all_events += scrape_visit_sheboygan()
-    all_events += scrape_osthoff()
+    # Osthoff HTML scrapers are a FALLBACK only — the Osthoff Tribe REST API
+    # above is complete and authoritative. They previously ran unconditionally,
+    # adding a redundant Playwright timeout and source-label drift.
+    if not osth_tribe:
+        print("  [Osthoff] Tribe API empty — using HTML fallback scrapers")
+        all_events += scrape_osthoff()
+        all_events += scrape_osthoff_calendar()
     all_events += scrape_village_calendar()
     all_events += scrape_google_events()
     all_events += scrape_eventbrite()
     all_events += scrape_allevents()
-    all_events += scrape_osthoff_calendar()
 
     print(f"\nTotal raw events: {len(all_events)}")
     unique = deduplicate(all_events)
