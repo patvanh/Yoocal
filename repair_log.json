@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-07T15:51:38.734150",
-  "audit_date": "2026-06-07",
+  "generated_at": "2026-06-08T17:19:09.244144",
+  "audit_date": "2026-06-08",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1653,
+      "before_count": 1730,
       "passes": {
         "past_dates": {
           "fixed": 2,
@@ -20,16 +20,8 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 5,
+          "fixed": 6,
           "examples": [
-            {
-              "title": "Moose on the Loose Kids Trail Series",
-              "had_span": 57
-            },
-            {
-              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 81
-            },
             {
               "title": "Fascia Rolling Class",
               "had_span": 181
@@ -40,7 +32,15 @@
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 66
+              "had_span": 65
+            },
+            {
+              "title": "Moose on the Loose Kids Trail Series",
+              "had_span": 57
+            },
+            {
+              "title": "(Re)sounding: Art Exhibition",
+              "had_span": 98
             }
           ]
         },
@@ -126,24 +126,31 @@
           ]
         },
         "classification": {
-          "fixed": 269,
+          "fixed": 312,
           "examples": [
             {
-              "title": "2026 Oakley Rodeo BBQ",
-              "before": [
-                "Community"
-              ],
+              "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
+              "before": [],
               "after": [
-                "Community",
-                "Food & Drink",
-                "Sports",
-                "Kids",
-                "Family",
-                "Festival"
+                "Food & Drink"
               ]
             },
             {
-              "title": "A Spirited Paint Party with Artist Briar West",
+              "title": "Progressive Art Experience",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Employer Committee (Disability Hiring)",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Newcomers Coffee Social & Speaker Event",
               "before": [
                 "Community"
               ],
@@ -153,46 +160,21 @@
               ]
             },
             {
-              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
-              "before": [
-                "Community"
-              ],
+              "title": "Rise + Release: Block",
+              "before": [],
               "after": [
-                "Community",
-                "Kids",
-                "Education"
-              ]
-            },
-            {
-              "title": "Coffee & Calm: Designer Chats",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Wellness",
-                "Education"
-              ]
-            },
-            {
-              "title": "Park City Mountain Farmers Market",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Food & Drink"
+                "Wellness"
               ]
             }
           ]
         }
       },
-      "after_count": 1659,
-      "total_fixes": 291
+      "after_count": 1736,
+      "total_fixes": 335
     },
     {
       "city": "elkhart-lake",
-      "before_count": 234,
+      "before_count": 232,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -242,12 +224,12 @@
           "examples": []
         }
       },
-      "after_count": 239,
+      "after_count": 237,
       "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 226,
+      "before_count": 216,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -285,7 +267,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 7,
+          "fixed": 5,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -294,9 +276,9 @@
               "duration_hours": 1
             },
             {
-              "title": "Comedy Magic Show - Anthony the Magic",
-              "start_time": "3:30 PM",
-              "new_end_time": "5:30 PM",
+              "title": "Oakley Rodeo",
+              "start_time": "11:30 PM",
+              "new_end_time": "1:30 AM",
               "duration_hours": 2
             },
             {
@@ -380,12 +362,12 @@
           ]
         }
       },
-      "after_count": 229,
-      "total_fixes": 23
+      "after_count": 219,
+      "total_fixes": 21
     },
     {
       "city": "jackson",
-      "before_count": 651,
+      "before_count": 649,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -396,11 +378,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 118
+              "had_span": 117
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 105
+              "had_span": 104
             }
           ]
         },
@@ -497,7 +479,7 @@
           "examples": []
         }
       },
-      "after_count": 664,
+      "after_count": 662,
       "total_fixes": 20
     }
   ]
