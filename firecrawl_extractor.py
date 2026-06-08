@@ -98,40 +98,63 @@ def _valid_iso(s):
 
 
 def extract_events_from_url(url, source_name, default_lat=None, default_lng=None,
-                            default_city=None, default_categories=None):
-    """Firecrawl-fetch + Claude-extract events from any URL -> yoocal events."""
-    md = _firecrawl_markdown(url)
-    if not md:
-        print(f"  [{source_name}] no markdown")
-        return []
+                            default_city=None, default_categories=None,
+                            page_param=None, max_pages=1):
+    """Firecrawl-fetch + Claude-extract events from any URL -> yoocal events.
+
+    Pagination: when page_param is set and max_pages > 1, fetch successive pages
+    by appending ?{page_param}={n} for n = 1..max_pages, merging and de-duping by
+    (title, date). Stops early the first time a page adds no NEW events (end of
+    list), so max_pages is a safe upper bound, not a fixed Firecrawl cost.
+    """
     today = date.today()
-    raw = _claude_extract(md, source_name, today.year)
-    out = []
-    for e in raw:
-        if not isinstance(e, dict):
-            continue
-        start = _valid_iso(e.get("date"))
-        if not start or start < today.isoformat():
-            continue  # sanity: must parse + be future
-        title = (e.get("title") or "").strip()
-        if not title or len(title) < 3:
-            continue
-        end = _valid_iso(e.get("end_date")) or start
-        out.append({
-            "title": title,
-            "date": start,
-            "end_date": end,
-            "location": (e.get("location") or default_city or "").strip(),
-            "venue_name": "",
-            "link": (e.get("url") or url),
-            "source": source_name,
-            "source_url": url,
-            "lat": default_lat or 0,
-            "lng": default_lng or 0,
-            "city": default_city or "",
-            "categories": default_categories or [],
-        })
-    print(f"  [{source_name}] {len(out)} events (firecrawl+extract, {len(md)} md chars)")
+    if page_param and max_pages > 1:
+        sep = "&" if "?" in url else "?"
+        page_urls = [f"{url}{sep}{page_param}={n}" for n in range(1, max_pages + 1)]
+    else:
+        page_urls = [url]
+    out, seen = [], set()
+    for i, page_url in enumerate(page_urls):
+        md = _firecrawl_markdown(page_url)
+        if not md:
+            if i == 0:
+                print(f"  [{source_name}] no markdown")
+            break
+        raw = _claude_extract(md, source_name, today.year)
+        added = 0
+        for e in raw:
+            if not isinstance(e, dict):
+                continue
+            start = _valid_iso(e.get("date"))
+            if not start or start < today.isoformat():
+                continue  # sanity: must parse + be future
+            title = (e.get("title") or "").strip()
+            if not title or len(title) < 3:
+                continue
+            key = (title.lower(), start)
+            if key in seen:
+                continue  # cross-page (or in-page) duplicate
+            seen.add(key)
+            end = _valid_iso(e.get("end_date")) or start
+            out.append({
+                "title": title,
+                "date": start,
+                "end_date": end,
+                "location": (e.get("location") or default_city or "").strip(),
+                "venue_name": "",
+                "link": (e.get("url") or page_url),
+                "source": source_name,
+                "source_url": page_url,
+                "lat": default_lat or 0,
+                "lng": default_lng or 0,
+                "city": default_city or "",
+                "categories": default_categories or [],
+            })
+            added += 1
+        # End of pagination: a later page that contributed nothing new.
+        if i > 0 and added == 0:
+            break
+    print(f"  [{source_name}] {len(out)} events (firecrawl+extract, {len(page_urls)} page(s) max)")
     return out
 
 

@@ -151,12 +151,16 @@ FIRECRAWL_SOURCES = [
         # sitemap event pages return 'no Schema.org Event JSON-LD' in CI (0
         # events) though they're full from a residential IP. Firecrawl fetches
         # the rendered /calendar/ and Haiku extracts the events — works in CI.
-        "url": "https://www.jhcenterforthearts.org/calendar/",
+        "url": "https://www.jhcenterforthearts.org/calendar-events/",
         "source_name": "Center for the Arts Jackson Hole",
         "default_lat": JACKSON_LAT,
         "default_lng": JACKSON_LNG,
         "default_city": "Jackson, WY",
         "default_categories": ["Arts"],
+        # Calendar is paginated (?sf_paged=N, ~5 pages). Fetch them all; the
+        # extractor early-stops once a page yields no new events.
+        "page_param": "sf_paged",
+        "max_pages": 7,
     },
     {
         "url": "https://www.grandtarghee.com/events/",

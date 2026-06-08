@@ -50,7 +50,7 @@ SOURCE_URLS = {
     "Heber Valley Tourism":       "https://www.gohebervalley.com/events/",
     "KPCW Community Calendar":    "https://www.kpcw.org/community-calendar",
     "Jackson Hole Chamber of Commerce": "https://www.jacksonholechamber.com/events/",
-    "Center for the Arts Jackson Hole": "https://jhcenterforthearts.org/events/",
+    "Center for the Arts Jackson Hole": "https://www.jhcenterforthearts.org/calendar-events/",
     "Grand Teton Music Festival": "https://gtmf.org/concerts/",
     "National Museum of Wildlife Art": "https://wildlifeart.org/calendar/",
     "Elkhart Lake Tourism":       "https://www.elkhartlake.com/events/",
@@ -267,9 +267,16 @@ def main():
         if status == "healthy" and llm_count >= MIN_LLM_COUNT_TO_FLAG and our_count < (llm_count / REGRESSION_FACTOR):
             is_flagged = True
             record["flagged_reason"] = f"LLM sees ~{llm_count} events but our DB has {our_count}"
-        elif judgment == "scraper_likely_missing_events" and status not in ("javascript_required", "empty"):
+        elif (judgment == "scraper_likely_missing_events"
+              and status not in ("javascript_required", "empty")
+              and llm_count >= MIN_LLM_COUNT_TO_FLAG
+              and our_count < llm_count):
+            # Only trust the "missing events" judgment when the page genuinely
+            # shows MORE than we have. When our_count >= llm_count we clearly
+            # aren't missing the page's events (e.g. Osthoff: 78 in DB vs a
+            # 12-event carousel) — the judgment string alone is not enough.
             is_flagged = True
-            record["flagged_reason"] = "LLM judgment: scraper likely missing events"
+            record["flagged_reason"] = f"LLM judgment: scraper likely missing events (LLM ~{llm_count} vs our {our_count})"
         elif status in ("blocked", "error"):
             is_flagged = True
             record["flagged_reason"] = f"Source page is {status}"
