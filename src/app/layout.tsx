@@ -1,5 +1,6 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
+import ServiceWorkerRegister from '@/components/ServiceWorkerRegister'
 import { DM_Sans, DM_Serif_Display } from 'next/font/google'
 
 const dmSans = DM_Sans({
@@ -26,7 +27,11 @@ export const metadata: Metadata = {
     siteName: 'Yoocal',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
+  appleWebApp: { capable: true, title: 'Yoocal', statusBarStyle: 'black-translucent' },
+  icons: { apple: '/icons/apple-touch-icon.png' },
 }
+
+export const viewport: Viewport = { themeColor: '#1a1830' }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -47,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.yoocal.com/#org","name":"Yoocal","url":"https://www.yoocal.com","logo":"https://www.yoocal.com/og-image.png","description":"Local events for scenic resort towns — one free calendar updated daily."},{"@type":"WebSite","@id":"https://www.yoocal.com/#website","url":"https://www.yoocal.com","name":"Yoocal","publisher":{"@id":"https://www.yoocal.com/#org"}}]}' }}
         />
-        {children}<Analytics />
+        <ServiceWorkerRegister />{children}<Analytics />
       </body>
     </html>
   )
