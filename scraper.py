@@ -1989,7 +1989,7 @@ def main():
         all_events += scrape_park_silly()
     except Exception as ex:
         print(f"  [park_silly] skipped: {ex}")
-    all_events += scrape_google_events()
+    # all_events += scrape_google_events()  # retired: Google Events echoes official sources with wrong dates
     all_events += scrape_utah_com()
     all_events += scrape_arts_council()
     # KPCW covers both Park City and Heber. Tockify repeats some announcements

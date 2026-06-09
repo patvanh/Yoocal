@@ -1313,6 +1313,16 @@ def main():
     except Exception as _guard_ex:
         print(f"  Resilience guard skipped: {_guard_ex}")
 
+    # Google Events (SerpApi) retired as a source: it echoes events we already
+    # get from official/venue sources, often with wrong dates (e.g. it listed
+    # the Deer Valley Music Festival a day early), and those date-mismatched
+    # dupes slip past dedup. Drop all of its records site-wide.
+    _before_ge = len(all_events)
+    all_events = [e for e in all_events
+                  if (e.get("source") or "").strip().lower() != "google events"]
+    if len(all_events) != _before_ge:
+        print(f"  Dropped {_before_ge - len(all_events)} Google Events records (source retired)")
+
     # Drop scraped UI/navigation labels that aren't real events.
     # Strip trailing recurrence descriptors ("- Every Saturday!", etc.) from
     # ALL event titles, regardless of source. Once an event is a specific dated

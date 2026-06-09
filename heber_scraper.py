@@ -923,7 +923,7 @@ def main():
         print(f"  [hv-enrich] enricher error (continuing without enrichment): {ex}")
 
     all_events += hv_events
-    all_events += scrape_google_events()
+    # all_events += scrape_google_events()  # retired: Google Events echoes official sources with wrong dates
     all_events += scrape_eventbrite()
     all_events += scrape_runsignup()
     all_events += scrape_running_in_the_usa_heber()

@@ -1349,7 +1349,7 @@ def main():
         all_events += scrape_osthoff()
         all_events += scrape_osthoff_calendar()
     all_events += scrape_village_calendar()
-    all_events += scrape_google_events()
+    # all_events += scrape_google_events()  # retired: Google Events echoes official sources with wrong dates
     all_events += scrape_eventbrite()
     all_events += scrape_allevents()
 
