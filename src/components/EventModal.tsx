@@ -28,6 +28,7 @@ export type EventModalData = {
   is_free?: boolean | null;
   price?: string;
   categories?: string[];    // ["Outdoor", "Music"]
+  image_url?: string;
 };
 
 export default function EventModal({
@@ -111,6 +112,17 @@ export default function EventModal({
         aria-modal="true"
         aria-labelledby="ye-modal-title"
       >
+        {event.image_url && /^https?:\/\//.test(event.image_url) && (
+          <div
+            aria-hidden="true"
+            style={{
+              margin: '-28px -28px 20px',
+              height: 200,
+              borderRadius: '20px 20px 0 0',
+              background: `center/cover no-repeat url(${event.image_url})`,
+            }}
+          />
+        )}
         <div className="ye-modal-head">
           <div className="ye-tags">
             {event.categories?.map((c) => (

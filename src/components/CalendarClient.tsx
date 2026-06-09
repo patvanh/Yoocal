@@ -454,22 +454,19 @@ function V2FeaturedCard({ event, onClick, viewedDay }: { event: V2YocEvent; onCl
         <span style={{ position: 'absolute', top: 11, left: 11, background: 'rgba(26,24,48,0.82)',
           color: '#ffd27a', fontSize: 10, fontWeight: 700, padding: '5px 10px', borderRadius: 100,
           letterSpacing: 0.3 }}>★ Featured</span>
-        <span style={{ position: 'absolute', top: 11, right: 11, width: 32, height: 32,
-          borderRadius: '50%', background: 'rgba(255,255,255,0.92)', display: 'flex',
-          alignItems: 'center', justifyContent: 'center', color: '#565270', fontSize: 16 }}>♡</span>
       </div>
       <div style={{ padding: '12px 14px 14px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-        <div style={{ display: 'flex', gap: 12 }}>
-          <div style={{ flexShrink: 0, width: 42, textAlign: 'center', border: '1px solid rgba(26,24,48,0.08)',
-            borderRadius: 9, padding: '5px 0', lineHeight: 1 }}>
-            <div style={{ fontSize: 9, fontWeight: 700, color: '#e0892a', textTransform: 'uppercase', letterSpacing: 0.4 }}>{mon}</div>
-            <div style={{ fontSize: 18, fontWeight: 800, color: '#16142b', margin: '1px 0' }}>{dnum}</div>
-            <div style={{ fontSize: 8, color: '#8b88a0', textTransform: 'uppercase' }}>{dow}</div>
+        <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+          <div style={{ flexShrink: 0, width: 48, textAlign: 'center', background: '#f4f3f9',
+            borderRadius: 10, padding: '7px 0 8px', lineHeight: 1 }}>
+            <div style={{ fontSize: 10, fontWeight: 800, color: '#e0892a', textTransform: 'uppercase', letterSpacing: 0.6 }}>{mon}</div>
+            <div style={{ fontSize: 21, fontWeight: 800, color: '#16142b', margin: '2px 0 1px' }}>{dnum}</div>
+            <div style={{ fontSize: 9, fontWeight: 600, color: '#8b88a0', textTransform: 'uppercase', letterSpacing: 0.4 }}>{dow}</div>
           </div>
           <div style={{ minWidth: 0 }}>
             <div style={{ fontSize: 12, fontWeight: 700, color: '#7c5cff' }}>{time.hour}{time.period ? ' ' + time.period : ''}</div>
             <h3 style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.22, margin: '1px 0 4px', color: '#16142b', letterSpacing: '-.2px' }}>{event.title}</h3>
-            {event.location && <div style={{ fontSize: 12, color: '#8b88a0', fontWeight: 500 }}>\uD83D\uDCCD {event.location}</div>}
+            {event.location && <div style={{ fontSize: 12, color: '#8b88a0', fontWeight: 500 }}>📍 {event.location}</div>}
             <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginTop: 9 }}>
               <span style={{ fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.3,
                 padding: '3px 9px', borderRadius: 100, background: `color-mix(in srgb, ${st.color} 14%, white)`, color: st.color }}>{st.bucket}</span>
@@ -997,6 +994,13 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       })
   }, [cityKeyProp])
   
+  // A fresh visit to a city should open on what's happening now, not all
+  // upcoming. Reset to "today" whenever the embedded calendar loads a city.
+  useEffect(() => {
+    setDayFilter('today')
+    setSearchQuery('')
+  }, [cityKeyProp])
+
   const filteredEvents = useMemo(() => {
     let result = events
     const today = v2TodayMountain()
@@ -1336,7 +1340,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     const richness = (e: any) => (e.categories?.length || 0) + (e.hook ? 2 : 0)
     const QUALITY_BAR = ({ parkcity: 2, jackson: 2, heber: 1, elkhartlake: 1 } as Record<string, number>)[cityKey] ?? 2  // multiple categories, or a hook — a genuine standout
 
-    const windowEvents = events.filter((e: any) => occursInRange(e, rangeStart, rangeEnd))
+    const windowEvents = events.filter((e: any) => occursInRange(e, rangeStart, rangeEnd) && !!e.image_url && /^https?:\/\//.test(e.image_url))
 
     // Cap scales with how busy the window is: a quiet day shouldn't fill the
     // strip, a packed window can show more. This is a MAXIMUM — we still only
@@ -1442,6 +1446,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       location: ev.venue_name || ev.location,
       description: ev.description, link: ev.link, source: ev.source,
       is_free: ev.is_free, price: ev.price, categories: ev.categories,
+      image_url: ev.image_url,
     })
   }
   
