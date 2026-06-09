@@ -1,171 +1,184 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import EventModal, { type EventModalData } from "@/components/EventModal";
 
 const CAT_COLOR: Record<string, string> = {
-  "Music": "#7c5cff",
-  "Arts & Theater": "#d6457a",
-  "Food & Drink": "#e0892a",
-  "Outdoors": "#2fa36b",
-  "Running & Races": "#e0892a",
-  "Sports": "#2f7fa3",
-  "Family & Kids": "#c0489b",
-  "Wellness": "#3aa39a",
-  "Nightlife": "#9b51e0",
-  "Education & Talks": "#5566c4",
-  "Community": "#6b61d6",
+  "Music": "#7c5cff", "Arts & Theater": "#d6457a", "Food & Drink": "#e0892a",
+  "Outdoors": "#2fa36b", "Running & Races": "#e0892a", "Sports": "#2f7fa3",
+  "Family & Kids": "#c0489b", "Wellness": "#3aa39a", "Nightlife": "#9b51e0",
+  "Education & Talks": "#5566c4", "Community": "#6b61d6",
 };
-
 function accentFor(ev: EventModalData): string {
-  for (const c of ev.categories || []) {
-    if (CAT_COLOR[c]) return CAT_COLOR[c];
-  }
+  for (const c of ev.categories || []) if (CAT_COLOR[c]) return CAT_COLOR[c];
   return "#6b61d6";
 }
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const MON3 = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const iso2 = (n: number) => String(n).padStart(2, "0");
+function parseIso(iso: string) { const [y,m,d] = iso.split("-").map(Number); return new Date(y, m-1, d); }
 
-function dayLabel(iso: string): { weekday: string; rest: string } {
-  // iso "YYYY-MM-DD" -> parse as local date (avoid TZ shift)
-  const [y, m, d] = iso.split("-").map((n) => parseInt(n, 10));
-  const dt = new Date(y, (m || 1) - 1, d || 1);
-  const weekday = dt.toLocaleDateString("en-US", { weekday: "long" });
-  const rest = dt.toLocaleDateString("en-US", { month: "long", day: "numeric" });
-  return { weekday, rest };
-}
-
-export default function IntentDayList({ events }: { events: EventModalData[] }) {
+export default function IntentDayList({ events, variant = "month" }: { events: EventModalData[]; variant?: "month" | "columns" }) {
   const [active, setActive] = useState<EventModalData | null>(null);
+  const [query, setQuery] = useState("");
+  const [expanded, setExpanded] = useState<string | null>(null);
+  const todayIso = new Date().toISOString().slice(0, 10);
 
-  // Group by start date (YYYY-MM-DD), preserving the incoming sort order.
-  const groups: { iso: string; events: EventModalData[] }[] = [];
-  for (const ev of events) {
-    const iso = (ev.date || "").slice(0, 10);
-    if (!iso) continue;
-    let g = groups.find((x) => x.iso === iso);
-    if (!g) { g = { iso, events: [] }; groups.push(g); }
-    g.events.push(ev);
-  }
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return events;
+    return events.filter((e) =>
+      `${e.title || ""} ${e.location || ""} ${e.description || ""} ${e.source || ""}`.toLowerCase().includes(q)
+    );
+  }, [events, query]);
+
+  const byDate = useMemo(() => {
+    const m: Record<string, EventModalData[]> = {};
+    for (const e of filtered) { const d = (e.date || "").slice(0, 10); if (!d) continue; (m[d] = m[d] || []).push(e); }
+    return m;
+  }, [filtered]);
+
+  const [cursor, setCursor] = useState(() => {
+    const isos = events.map((e) => (e.date || "").slice(0, 10)).filter(Boolean).sort();
+    const base = isos[0] || new Date().toISOString().slice(0, 10);
+    const [y, m] = base.split("-").map(Number);
+    return { y, m: m - 1 };
+  });
+  const cells = useMemo(() => {
+    const pad = new Date(cursor.y, cursor.m, 1).getDay();
+    const days = new Date(cursor.y, cursor.m + 1, 0).getDate();
+    const out: ({ d: number; iso: string; events: EventModalData[] } | null)[] = [];
+    for (let i = 0; i < pad; i++) out.push(null);
+    for (let d = 1; d <= days; d++) { const k = `${cursor.y}-${iso2(cursor.m + 1)}-${iso2(d)}`; out.push({ d, iso: k, events: byDate[k] || [] }); }
+    while (out.length % 7 !== 0) out.push(null);
+    return out;
+  }, [cursor, byDate]);
+  const monthCount = cells.reduce((n, c) => n + (c ? c.events.length : 0), 0);
+  const step = (delta: number) => { setExpanded(null); setCursor((c) => { const dt = new Date(c.y, c.m + delta, 1); return { y: dt.getFullYear(), m: dt.getMonth() }; }); };
+
+  const dayCols = useMemo(() => Object.keys(byDate).sort().map((iso) => ({ iso, events: byDate[iso] })), [byDate]);
+
+  const search = (
+    <div className="i-search">
+      <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search by name, venue, or artist..." />
+      <span className="i-count">{filtered.length} {filtered.length === 1 ? "event" : "events"}</span>
+    </div>
+  );
+  const srList = (
+    <ul className="i-sr">
+      {events.map((e, i) => (<li key={`sr${i}`}><a href={e.link || "#"}>{e.title}</a> &mdash; {(e.date || "").slice(0, 10)}{e.location ? ` — ${e.location}` : ""}</li>))}
+    </ul>
+  );
 
   return (
-    <>
-      <div className="ip-days">
-        {groups.map((g) => {
-          const { weekday, rest } = dayLabel(g.iso);
-          return (
-            <section key={g.iso} className="ip-day">
-              <div className="ip-day-head">
-                <span className="ip-day-weekday">{weekday}</span>
-                <span className="ip-day-date">{rest}</span>
-                <span className="ip-day-count">{g.events.length} {g.events.length === 1 ? "event" : "events"}</span>
-              </div>
-              <ul className="ip-list">
-                {g.events.map((ev, i) => {
-                  const accent = accentFor(ev);
-                  const cat = (ev.categories || [])[0];
-                  const tag = priceTag(ev);
-                  return (
-                    <li key={`${ev.title}-${ev.start_time ?? "any"}-${i}`}>
-                      <button
-                        type="button"
-                        onClick={() => setActive(ev)}
-                        className="ip-card"
-                        style={{ ["--accent" as string]: accent }}
-                      >
-                        <div className="ip-time">
-                          <span className="ip-time-main">{ev.start_time ?? "All day"}</span>
-                          {ev.end_time && ev.start_time ? (
-                            <span className="ip-time-end">until {ev.end_time}</span>
-                          ) : null}
-                        </div>
-                        <div className="ip-cardbody">
-                          <h3>{ev.title}</h3>
-                          {ev.location && <div className="ip-loc">{ev.location}</div>}
-                          {ev.description && <p className="ip-desc">{truncate(ev.description, 150)}</p>}
-                          <div className="ip-meta">
-                            {cat && <span className="ip-cat">{cat}</span>}
-                            {tag && <span className={`ip-tag${tag === "Free" ? " free" : ""}`}>{tag}</span>}
-                            {ev.source && <span className="ip-src">via {ev.source}</span>}
-                            <span className="ip-link">Details →</span>
-                          </div>
-                        </div>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-          );
-        })}
-      </div>
+    <div className="iw">
+      {search}
 
+      {variant === "columns" ? (
+        <>
+          <div className="cl">
+            {dayCols.map((col) => {
+              const dt = parseIso(col.iso);
+              return (
+                <div className="cl-col" key={col.iso}>
+                  <div className="cl-head">
+                    <span className="cl-wd">{WD[dt.getDay()]}</span>
+                    <span className="cl-md">{MON3[dt.getMonth()]} {dt.getDate()}</span>
+                  </div>
+                  <div className="cl-evs">
+                    {col.events.map((ev, k) => (
+                      <button key={`${col.iso}-${k}`} type="button" className="cl-ev" style={{ ["--a" as string]: accentFor(ev) }} onClick={() => setActive(ev)} title={ev.title}>
+                        {ev.start_time ? <span className="cl-ev-t">{ev.start_time}</span> : null}
+                        <span className="cl-ev-x">{ev.title}</span>
+                        {ev.location ? <span className="cl-ev-loc">{ev.location}</span> : null}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          {dayCols.length === 0 && <div className="i-empty">No events{query ? " matching your search" : ""} right now.</div>}
+        </>
+      ) : (
+        <>
+          <div className="mg-nav">
+            <button type="button" onClick={() => step(-1)} aria-label="Previous month">&lsaquo;</button>
+            <span className="mg-month">{MONTHS[cursor.m]} {cursor.y}</span>
+            <button type="button" onClick={() => step(1)} aria-label="Next month">&rsaquo;</button>
+          </div>
+          <div className="mg-wd">{WD.map((w) => <span key={w}>{w}</span>)}</div>
+          <div className="mg-grid">
+            {cells.map((c, i) => {
+              if (!c) return <div key={`b${i}`} className="mg-cell mg-blank" />;
+              const isToday = c.iso === todayIso;
+              const isExp = expanded === c.iso;
+              const shown = isExp ? c.events : c.events.slice(0, 3);
+              const more = c.events.length - shown.length;
+              return (
+                <div key={c.iso} className={`mg-cell${isToday ? " mg-today" : ""}`}>
+                  <div className="mg-date">{c.d}</div>
+                  {shown.map((ev, k) => (
+                    <button key={`${c.iso}-${k}`} type="button" className="mg-ev" style={{ ["--a" as string]: accentFor(ev) }} onClick={() => setActive(ev)} title={ev.title}>
+                      {ev.start_time ? <span className="mg-ev-t">{ev.start_time}</span> : null}
+                      <span className="mg-ev-x">{ev.title}</span>
+                    </button>
+                  ))}
+                  {more > 0 && (<button type="button" className="mg-more" onClick={() => setExpanded(c.iso)}>+{more} more</button>)}
+                </div>
+              );
+            })}
+          </div>
+          {monthCount === 0 && (<div className="i-empty">Nothing in {MONTHS[cursor.m]}{query ? " matching your search" : ""}. Use the arrows to browse other months.</div>)}
+        </>
+      )}
+
+      {srList}
       <EventModal event={active} onClose={() => setActive(null)} />
 
       <style>{`
-        .ip-days { display: flex; flex-direction: column; gap: 36px; }
-        .ip-day-head {
-          display: flex; align-items: baseline; gap: 12px;
-          padding: 0 4px 14px; margin-bottom: 4px;
-          border-bottom: 2px solid rgba(26,24,48,0.10);
-        }
-        .ip-day-weekday {
-          font-family: 'DM Serif Display', serif; font-size: 24px; color: #16142b; line-height: 1;
-        }
-        .ip-day-date { font-size: 15px; color: #8b88a0; font-weight: 600; }
-        .ip-day-count {
-          margin-left: auto; font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
-          text-transform: uppercase; color: #6b61d6;
-          background: rgba(107,97,214,0.10); padding: 4px 11px; border-radius: 100px;
-        }
-        .ip-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-        .ip-card {
-          position: relative; display: grid; grid-template-columns: 104px 1fr; gap: 20px;
-          padding: 20px 22px 20px 24px; background: #fff;
-          border: 1px solid rgba(26,24,48,0.06); border-left: 5px solid var(--accent);
-          border-radius: 16px; text-align: left; color: #1a1830; font-family: inherit;
-          cursor: pointer; width: 100%; box-shadow: 0 3px 12px rgba(26,24,48,0.05);
-          transition: transform 0.16s ease, box-shadow 0.16s ease;
-        }
-        .ip-card:hover { transform: translateY(-3px); box-shadow: 0 16px 36px rgba(26,24,48,0.16); }
-        .ip-time { display: flex; flex-direction: column; gap: 2px; padding-top: 2px; font-variant-numeric: tabular-nums; }
-        .ip-time-main { font-size: 14px; font-weight: 800; color: var(--accent); line-height: 1.15; }
-        .ip-time-end { font-size: 12px; color: #9b98ac; font-weight: 500; }
-        .ip-cardbody { min-width: 0; }
-        .ip-cardbody h3 { font-family: 'DM Serif Display', serif; font-size: 19px; font-weight: 400; margin: 0 0 5px; line-height: 1.22; color: #16142b; }
-        .ip-loc { font-size: 13px; color: #8b88a0; margin-bottom: 7px; font-weight: 500; }
-        .ip-desc { font-size: 14px; color: #565270; line-height: 1.55; margin: 7px 0 12px; }
-        .ip-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; }
-        .ip-cat {
-          padding: 3px 11px; border-radius: 100px; font-weight: 700; font-size: 11px;
-          letter-spacing: 0.3px; text-transform: uppercase;
-          background: color-mix(in srgb, var(--accent) 13%, white); color: var(--accent);
-        }
-        .ip-tag {
-          padding: 3px 11px; border-radius: 100px; font-weight: 700; font-size: 11px;
-          letter-spacing: 0.3px; text-transform: uppercase;
-          background: rgba(26,24,48,0.06); color: #565270;
-        }
-        .ip-tag.free { background: rgba(47,163,107,0.15); color: #1f8a52; }
-        .ip-src { color: #a4a1b5; font-style: italic; }
-        .ip-link { margin-left: auto; color: var(--accent); font-weight: 700; }
-        @media (max-width: 600px) {
-          .ip-card { grid-template-columns: 1fr; gap: 6px; padding: 16px 16px 16px 18px; }
-          .ip-time { flex-direction: row; gap: 8px; align-items: baseline; }
-          .ip-cardbody h3 { font-size: 17px; }
-          .ip-link { margin-left: 0; }
-          .ip-day-weekday { font-size: 20px; }
+        .iw { display: flex; flex-direction: column; gap: 14px; }
+        .i-search { display: flex; align-items: center; gap: 12px; }
+        .i-search input { flex: 1; padding: 12px 16px; font-size: 15px; font-family: inherit; border-radius: 12px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); color: #fff; outline: none; }
+        .i-search input::placeholder { color: rgba(255,255,255,0.4); }
+        .i-search input:focus { border-color: rgba(175,169,236,0.5); }
+        .i-count { font-size: 12px; font-weight: 700; color: #AFA9EC; white-space: nowrap; }
+        .i-empty { text-align: center; padding: 28px; color: rgba(255,255,255,0.5); font-size: 14px; }
+        .i-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+        .mg-nav { display: flex; align-items: center; justify-content: center; gap: 18px; }
+        .mg-nav button { width: 34px; height: 34px; border-radius: 50%; cursor: pointer; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); color: #fff; font-size: 18px; line-height: 1; font-family: inherit; }
+        .mg-nav button:hover { background: rgba(255,255,255,0.12); }
+        .mg-month { font-family: 'DM Serif Display', serif; font-size: 22px; color: #fff; min-width: 210px; text-align: center; }
+        .mg-wd { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+        .mg-wd span { text-align: center; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+        .mg-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+        .mg-cell { min-height: 94px; border-radius: 10px; padding: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; gap: 3px; overflow: hidden; }
+        .mg-blank { background: transparent; border: none; }
+        .mg-today { border-color: rgba(175,169,236,0.55); background: rgba(127,119,221,0.12); }
+        .mg-date { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.7); }
+        .mg-today .mg-date { color: #fff; }
+        .mg-ev { display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%; cursor: pointer; font-family: inherit; border: none; border-left: 3px solid var(--a); border-radius: 4px; background: color-mix(in srgb, var(--a) 22%, transparent); padding: 3px 6px; color: #fff; }
+        .mg-ev:hover { background: color-mix(in srgb, var(--a) 40%, transparent); }
+        .mg-ev-t { font-size: 9px; font-weight: 700; color: rgba(255,255,255,0.75); line-height: 1.1; }
+        .mg-ev-x { font-size: 11px; font-weight: 600; line-height: 1.15; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+        .mg-more { background: none; border: none; color: #AFA9EC; font-size: 10px; font-weight: 700; cursor: pointer; padding: 1px 4px; text-align: left; font-family: inherit; }
+        .cl { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 10px; align-items: start; }
+        .cl-col { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
+        .cl-head { padding: 8px 11px; background: rgba(127,119,221,0.15); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; gap: 1px; }
+        .cl-wd { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+        .cl-md { font-family: 'DM Serif Display', serif; font-size: 18px; color: #fff; line-height: 1; }
+        .cl-evs { display: flex; flex-direction: column; gap: 6px; padding: 8px; }
+        .cl-ev { display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%; cursor: pointer; font-family: inherit; border: none; border-left: 3px solid var(--a); border-radius: 6px; background: color-mix(in srgb, var(--a) 20%, transparent); padding: 6px 9px; color: #fff; }
+        .cl-ev:hover { background: color-mix(in srgb, var(--a) 38%, transparent); }
+        .cl-ev-t { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.75); }
+        .cl-ev-x { font-size: 13px; font-weight: 600; line-height: 1.25; }
+        .cl-ev-loc { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 2px; }
+        @media (max-width: 700px) {
+          .mg-grid, .mg-wd { gap: 3px; } .mg-cell { min-height: 72px; padding: 4px; } .mg-ev-x { font-size: 10px; } .mg-month { font-size: 18px; min-width: 150px; }
+          .cl { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
         }
       `}</style>
-    </>
+    </div>
   );
-}
-
-function priceTag(ev: EventModalData): string | null {
-  if (ev.is_free === true) return "Free";
-  if (ev.price && ev.price.trim()) return ev.price;
-  return null;
-}
-
-function truncate(s: string, max: number): string {
-  if (s.length <= max) return s;
-  return s.slice(0, max).replace(/\s+\S*$/, "") + "…";
 }

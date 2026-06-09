@@ -654,7 +654,8 @@ function FilterDropdown({
 }
 
 function DateRangeDropdown({
-  label, from, to, onFrom, onTo, onToday, onAllUpcoming, onFieldFocus, minWidth = 150,
+  label, from, to, onFrom, onTo, onToday, onAllUpcoming,
+  onTomorrow, onWeekend, onNext7, onFieldFocus, minWidth = 150,
 }: {
   label: string
   from: string
@@ -663,6 +664,9 @@ function DateRangeDropdown({
   onTo: (v: string) => void
   onToday: () => void
   onAllUpcoming: () => void
+  onTomorrow?: () => void
+  onWeekend?: () => void
+  onNext7?: () => void
   onFieldFocus?: () => void
   minWidth?: number
 }) {
@@ -702,7 +706,26 @@ function DateRangeDropdown({
           borderRadius: 12, padding: 12, minWidth: 210,
           boxShadow: '0 16px 40px rgba(0,0,0,0.5)',
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 10 }}>
+            <button type="button" onClick={() => { onToday(); setOpen(false) }}
+              style={{ padding: '6px 10px', fontSize: 12, fontWeight: 600, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>Today</button>
+            {onTomorrow && (
+              <button type="button" onClick={() => { onTomorrow(); setOpen(false) }}
+                style={{ padding: '6px 10px', fontSize: 12, fontWeight: 600, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>Tomorrow</button>
+            )}
+            {onWeekend && (
+              <button type="button" onClick={() => { onWeekend(); setOpen(false) }}
+                style={{ padding: '6px 10px', fontSize: 12, fontWeight: 600, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>This weekend</button>
+            )}
+            {onNext7 && (
+              <button type="button" onClick={() => { onNext7(); setOpen(false) }}
+                style={{ padding: '6px 10px', fontSize: 12, fontWeight: 600, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>Next 7 days</button>
+            )}
+            <button type="button" onClick={() => { onAllUpcoming(); setOpen(false) }}
+              style={{ padding: '6px 10px', fontSize: 12, fontWeight: 600, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>All upcoming</button>
+          </div>
+          <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.45)', textTransform: 'uppercase', letterSpacing: 0.4, marginBottom: 6 }}>Or a date range</div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
               <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)', textTransform: 'uppercase', letterSpacing: 0.4 }}>From</span>
               <input type="date" value={from} onFocus={() => onFieldFocus?.()} onChange={(e) => { if (e.target.value) onFrom(e.target.value) }}
@@ -713,12 +736,6 @@ function DateRangeDropdown({
               <input type="date" value={to} min={from} onFocus={() => onFieldFocus?.()} onChange={(e) => onTo(e.target.value)}
                 style={{ padding: '7px 10px', fontSize: 13, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'rgba(26,24,48,0.5)', color: '#fff', colorScheme: 'dark', fontFamily: 'inherit' }} />
             </label>
-          </div>
-          <div style={{ display: 'flex', gap: 8 }}>
-            <button type="button" onClick={() => { onToday(); setOpen(false) }}
-              style={{ flex: 1, padding: '6px 10px', fontSize: 12, fontWeight: 600, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>Today</button>
-            <button type="button" onClick={() => { onAllUpcoming(); setOpen(false) }}
-              style={{ flex: 1, padding: '6px 10px', fontSize: 12, fontWeight: 600, borderRadius: 8, border: '1px solid rgba(255,255,255,0.18)', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>All upcoming</button>
           </div>
         </div>
       )}
@@ -1234,53 +1251,63 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   // Featured events: things happening TODAY only. Manual flags first, then
   // today's best events ranked by tag richness. Empty if nothing today.
   const featuredEvents = useMemo(() => {
-    // Featured follows the SELECTED day (the day shown in the header), not a
-    // hardcoded "today" — otherwise navigating to June 1 still featured today's
-    // events (and could surface a past event). Derive the viewed day from the
-    // same day-filter state the main list uses.
-    const dayStr = (() => {
-      if (dayFilter === 'pickdate') return pickedDate
-      const t = v2TodayMountain()
-      if (dayFilter === 'tomorrow') t.setDate(t.getDate() + 1)
-      // weekend / 7days / all / today all anchor on today for the featured pick
-      return v2DateToStr(t)
-    })()
-
-    // Active on the selected day = day falls within event's date..end_date,
-    // so a multi-day festival spanning that day counts.
-    const activeOnDay = (e: any) => {
-      const start = (e.date || '').slice(0, 10)
-      const end = (e.end_date || start).slice(0, 10)
-      return start <= dayStr && dayStr <= end
+    // Featured highlights the best events in the CURRENTLY-VIEWED window — the
+    // same date range the main list shows — not a hardcoded "today". Range
+    // modes (weekend / 7days / all / a picked date range) span the whole
+    // window; single-day modes are just that day.
+    const today = v2TodayMountain()
+    const todayStr = v2DateToStr(today)
+    let rangeStart = todayStr
+    let rangeEnd = todayStr
+    if (dayFilter === 'tomorrow') {
+      const tom = new Date(today); tom.setDate(today.getDate() + 1)
+      rangeStart = rangeEnd = v2DateToStr(tom)
+    } else if (dayFilter === 'weekend') {
+      const { start, end } = v2WeekendDates()
+      rangeStart = v2DateToStr(start); rangeEnd = v2DateToStr(end)
+    } else if (dayFilter === '7days') {
+      const week = new Date(today); week.setDate(today.getDate() + 7)
+      rangeStart = todayStr; rangeEnd = v2DateToStr(week)
+    } else if (dayFilter === 'pickdate') {
+      rangeStart = pickedDate; rangeEnd = pickedRangeEnd
+    } else if (dayFilter === 'all') {
+      rangeStart = todayStr; rangeEnd = '9999-12-31'
     }
+    // dayFilter === 'today' keeps rangeStart = rangeEnd = todayStr.
+
     const richness = (e: any) => (e.categories?.length || 0) + (e.hook ? 2 : 0)
     const QUALITY_BAR = 2  // multiple categories, or a hook — a genuine standout
 
-    const todayEvents = events.filter(activeOnDay)
+    const windowEvents = events.filter((e: any) => occursInRange(e, rangeStart, rangeEnd))
 
-    // Cap scales with how busy the day is: a quiet day shouldn't fill the strip,
-    // a packed day can show more. This is a MAXIMUM — we still only show genuine
-    // standouts up to it (never pad with filler).
-    const n = todayEvents.length
+    // Cap scales with how busy the window is: a quiet day shouldn't fill the
+    // strip, a packed window can show more. This is a MAXIMUM — we still only
+    // show genuine standouts up to it (never pad with filler).
+    const n = windowEvents.length
     const MAX = n >= 11 ? 5 : n >= 5 ? 3 : 1
 
     // Manually-flagged events always lead (still capped by the tier).
-    const manual = todayEvents.filter((e: any) => e.featured === true)
+    const manual = windowEvents.filter((e: any) => e.featured === true)
     if (manual.length >= MAX) return manual.slice(0, MAX)
 
-    // Fill remaining slots with the day's genuine standouts (don't pad to MAX).
-    const ranked = todayEvents
+    // Fill remaining slots with the window's genuine standouts: richest first,
+    // soonest on ties (don't pad to MAX).
+    const dstr = (e: any) => (e.date || '').slice(0, 10)
+    const ranked = windowEvents
       .filter((e: any) => e.featured !== true)
-      .sort((a, b) => richness(b) - richness(a) || (a.start_time || '').localeCompare(b.start_time || ''))
+      .sort((a, b) =>
+        richness(b) - richness(a) ||
+        dstr(a).localeCompare(dstr(b)) ||
+        (a.start_time || '').localeCompare(b.start_time || ''))
     const standouts = ranked.filter((e: any) => richness(e) >= QUALITY_BAR)
 
     const combined = [...manual, ...standouts].slice(0, MAX)
 
-    // Never show an empty strip when the day has events: fall back to the
-    // single best event of the day.
+    // Never show an empty strip when the window has events: fall back to the
+    // single best event in the window.
     if (combined.length === 0 && ranked.length > 0) return ranked.slice(0, 1)
     return combined
-  }, [events, dayFilter, pickedDate])
+  }, [events, dayFilter, pickedDate, pickedRangeEnd])
   
   // Single day the user is viewing — only meaningful in single-day modes
   // (today/tomorrow/pickdate). In range modes (weekend/7days/all) we return ''
@@ -1438,6 +1465,9 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                   onFrom={(v) => { setPickedDate(v); setDayFilter('pickdate'); suppressOutsideRef.current = 0 }}
                   onTo={(v) => { setPickedEndDate(v); setDayFilter('pickdate'); suppressOutsideRef.current = 0 }}
                   onToday={() => { setPickedDate(v2DateToStr(v2TodayMountain())); setPickedEndDate(''); setDayFilter('today') }}
+                  onTomorrow={() => { setPickedEndDate(''); setDayFilter('tomorrow') }}
+                  onWeekend={() => { setPickedEndDate(''); setDayFilter('weekend') }}
+                  onNext7={() => { setPickedEndDate(''); setDayFilter('7days') }}
                   onAllUpcoming={() => { setPickedEndDate(''); setDayFilter('all') }}
                 />
                 <FilterDropdown
@@ -1461,7 +1491,6 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                 />
                 {/* Quick pills mirrored from the hero row so they stay visible
                     while the search dropdown is open (same shared state). */}
-                <V2Chip active={dayFilter === 'weekend'} onClick={() => setDayFilter(dayFilter === 'weekend' ? 'today' : 'weekend')}>This weekend</V2Chip>
                 <V2Chip active={freeOnly} onClick={() => setFreeOnly(v => !v)}>Free</V2Chip>
                 <V2Chip active={activeCategories.has('Music')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Music')) n.delete('Music'); else n.add('Music'); return n })}>Music</V2Chip>
                 <V2Chip active={activeCategories.has('Food & Drink')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Food & Drink')) n.delete('Food & Drink'); else n.add('Food & Drink'); return n })}>Food & Drink</V2Chip>
@@ -1581,6 +1610,9 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             onFrom={(v) => { setPickedDate(v); setDayFilter('pickdate') }}
             onTo={(v) => { setPickedEndDate(v); setDayFilter('pickdate') }}
             onToday={() => { setPickedDate(v2DateToStr(v2TodayMountain())); setPickedEndDate(''); setDayFilter('today') }}
+            onTomorrow={() => { setPickedEndDate(''); setDayFilter('tomorrow') }}
+            onWeekend={() => { setPickedEndDate(''); setDayFilter('weekend') }}
+            onNext7={() => { setPickedEndDate(''); setDayFilter('7days') }}
             onAllUpcoming={() => { setPickedEndDate(''); setDayFilter('all') }}
           />
           <MultiFilterDropdown
@@ -1592,7 +1624,6 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           />
           {/* Quick pills: shortcuts to the most common filters. They drive the
               same shared state as the dropdowns, so selections stay in sync. */}
-          <V2Chip active={dayFilter === 'weekend'} onClick={() => setDayFilter(dayFilter === 'weekend' ? 'today' : 'weekend')}>This weekend</V2Chip>
           <V2Chip active={freeOnly} onClick={() => setFreeOnly(v => !v)}>Free</V2Chip>
           <V2Chip active={activeCategories.has('Music')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Music')) n.delete('Music'); else n.add('Music'); return n })}>Music</V2Chip>
           <V2Chip active={activeCategories.has('Food & Drink')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Food & Drink')) n.delete('Food & Drink'); else n.add('Food & Drink'); return n })}>Food & Drink</V2Chip>

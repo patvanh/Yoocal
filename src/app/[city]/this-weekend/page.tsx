@@ -63,9 +63,7 @@ export default async function CityWeekendPage(
           <div className="hero-eyebrow">This Weekend</div>
           <h1>Everything happening this <em>weekend.</em></h1>
           <p>
-            {grouped[0].day.label.split(",")[0]},{" "}
-            {grouped[1].day.label.split(",")[0]}, and{" "}
-            {grouped[2].day.label.split(",")[0]} in {cfg.label}.{" "}
+            Thursday through Sunday in {cfg.label}.{" "}
             {total > 0 ? `${total} events on the calendar.` : "Updated daily from every source that matters."}
           </p>
           <CitySwitcher active={cityKey} />
@@ -92,7 +90,7 @@ export default async function CityWeekendPage(
             is_free: e.is_free,
             price: e.price,
             categories: Array.isArray(e.categories) ? (e.categories as string[]) : undefined,
-          })))} />
+          })))} variant="columns" />
         )}
         <div className="bottom-cta">
           <p>See the full {cfg.label} calendar \u2192 <a href={`/${city}`}>browse all upcoming events</a></p>
@@ -100,7 +98,7 @@ export default async function CityWeekendPage(
       </div>
       <SiteFooter cityLabel={cfg.label} />
       <style>{`
-        body { font-family: 'DM Sans', sans-serif; background: #f4f2f9; color: #1a1830; overflow-x: hidden; }
+        body { font-family: 'DM Sans', sans-serif; background: #1a1830; color: #fff; overflow-x: hidden; }
         .hero {
           background: linear-gradient(135deg, #1a1830 0%, #2a2450 55%, #1f1b3a 100%);
           padding: 110px 32px 64px; text-align: center; position: relative; overflow: hidden;
@@ -129,22 +127,28 @@ export default async function CityWeekendPage(
           position: relative; z-index: 3;
         }
         .empty {
-          text-align: center; padding: 72px 24px; background: white;
-          border-radius: 22px; border: 1px solid rgba(26,24,48,0.08);
-          box-shadow: 0 12px 40px rgba(26,24,48,0.10);
+          text-align: center; padding: 72px 24px; background: rgba(255,255,255,0.04);
+          border-radius: 22px; border: 1px solid rgba(255,255,255,0.10);
+          box-shadow: none;
         }
         .empty-emoji { font-size: 46px; margin-bottom: 14px; }
-        .empty h2 { font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 10px; }
-        .empty p { color: #6b6880; font-size: 16px; }
-        .empty a { color: #6b61d6; font-weight: 600; }
+        .empty h2 { font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 10px; color: #fff; }
+        .empty p { color: rgba(255,255,255,0.60); font-size: 16px; }
+        .empty a { color: #9b8ff0; font-weight: 600; }
         .bottom-cta { text-align: center; margin-top: 44px; padding-top: 0; border-top: none; }
-        .bottom-cta p { font-size: 14px; color: #6b6880; }
-        .bottom-cta a { color: #6b61d6; font-weight: 700; text-decoration: none; }
+        .bottom-cta p { font-size: 14px; color: rgba(255,255,255,0.50); }
+        .bottom-cta a { color: #9b8ff0; font-weight: 700; text-decoration: none; }
         .bottom-cta a:hover { text-decoration: underline; }
         @media (max-width: 600px) {
           .hero { padding: 92px 18px 56px; }
           .content { padding: 0 14px 64px; }
         }
+        /* compact hero — minimal slim bar */
+        .hero { padding: 78px 24px 18px !important; min-height: 0 !important; }
+        .hero-eyebrow { display: none !important; }
+        .hero h1 { font-size: clamp(24px, 3vw, 34px) !important; margin: 0 0 16px !important; line-height: 1.06 !important; }
+        .hero p { display: none !important; }
+        .content { margin-top: 6px !important; }
       `}</style>
     </>
   );

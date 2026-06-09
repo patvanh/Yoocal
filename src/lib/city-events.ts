@@ -163,22 +163,27 @@ export function computeWeekendWindow(reference: Date = new Date()): {
     friday.setDate(friday.getDate() + (5 - day));
   }
 
+  const thursday = new Date(friday);
+  thursday.setDate(friday.getDate() - 1);
   const monday = new Date(friday);
   monday.setDate(monday.getDate() + 3);
 
-  const days = [0, 1, 2].map((offset) => {
-    const d = new Date(friday);
-    d.setDate(friday.getDate() + offset);
-    const iso = formatLocalISODate(d);
-    const label = d.toLocaleDateString("en-US", {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-    });
-    return { date: d, iso, label };
-  });
+  const todayIso = formatLocalISODate(ref);
+  const days = [0, 1, 2, 3]
+    .map((offset) => {
+      const d = new Date(thursday);
+      d.setDate(thursday.getDate() + offset);
+      const iso = formatLocalISODate(d);
+      const label = d.toLocaleDateString("en-US", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+      });
+      return { date: d, iso, label };
+    })
+    .filter((d) => d.iso >= todayIso);
 
-  return { start: friday, end: monday, days };
+  return { start: thursday, end: monday, days };
 }
 
 /** Local-date ISO string (YYYY-MM-DD) without UTC shift weirdness. */
