@@ -133,7 +133,7 @@ _TITLE_FILLERS = {
     "evening", "with", "feat", "featuring", "vs", "and",
     "concert", "show", "performance", "performs",
     "series",  # "...Concert Series" / "...To-Go Series" suffix noise
-    "park", "city",  # location words also strip
+    "park", "city", "county",  # location/administrative words also strip
     "at",  # collapses "@ Venue" (punct stripped to space) with "at Venue"
 }
 
@@ -786,6 +786,7 @@ SOURCE_PRIORITY = {
     "Park City Song Summit": 1, "Park City Farmers Market": 1,
     "Mountain Trails Foundation": 1, "Village of Elkhart Lake": 1,
     "Egyptian Theatre": 1,
+    "Wasatch County Parks & Rec": 1,
     # Tier 2: trusted aggregator / tourism board / local newspaper
     "The Park Record": 2, "Park City Annual Events": 2,
     "Visit Park City": 2, "Visit Park City (sitemap)": 2,
