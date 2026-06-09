@@ -2,19 +2,25 @@
   "generated_at": "2026-06-09",
   "cities": {
     "all": {
-      "events": 4661,
+      "events": 4757,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "MED",
-          "count": 1
+          "count": 2
         },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 23
+          "count": 22
+        },
+        {
+          "code": "C6",
+          "name": "COVERAGE-CLIFF",
+          "severity": "HIGH",
+          "count": 1
         }
       ]
     },
@@ -23,11 +29,24 @@
       "findings": []
     },
     "heber": {
-      "events": 1012,
-      "findings": []
+      "events": 1081,
+      "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "MED",
+          "count": 1
+        },
+        {
+          "code": "C6",
+          "name": "COVERAGE-CLIFF",
+          "severity": "HIGH",
+          "count": 1
+        }
+      ]
     },
     "jackson": {
-      "events": 1392,
+      "events": 1414,
       "findings": [
         {
           "code": "C1",
@@ -39,10 +58,10 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 9
+          "count": 8
         }
       ]
     }
   },
-  "high_total": 0
+  "high_total": 2
 }

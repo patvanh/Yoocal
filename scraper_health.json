@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-06-09T12:09:30.929143-06:00",
+  "checked_at": "2026-06-09T15:01:59.905850-06:00",
   "today": "2026-06-09",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 846,
+        "actual": 867,
         "baseline": 714.4,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=846, baseline=714"
+        "message": "actual=867, baseline=714"
       },
       {
         "source": "Park City Annual Events",
@@ -45,11 +45,11 @@
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 52,
+        "actual": 53,
         "baseline": 45,
         "floor": null,
         "severity": "OK",
-        "message": "actual=52, baseline=45"
+        "message": "actual=53, baseline=45"
       },
       {
         "source": "Visit Park City (sitemap)",
@@ -185,19 +185,19 @@
     "heber": [
       {
         "source": "Heber Valley Tourism",
-        "actual": 116,
+        "actual": 118,
         "baseline": 119.3,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=116, baseline=119"
+        "message": "actual=118, baseline=119"
       },
       {
-        "source": "Google Events",
-        "actual": 40,
-        "baseline": 40.1,
+        "source": "Wasatch County Parks & Rec",
+        "actual": 27,
+        "baseline": null,
         "floor": null,
         "severity": "OK",
-        "message": "actual=40, baseline=40"
+        "message": "actual=27 (no baseline yet)"
       },
       {
         "source": "TownLift",
@@ -209,11 +209,11 @@
       },
       {
         "source": "Heber Valley Life",
-        "actual": 17,
+        "actual": 16,
         "baseline": 18.1,
         "floor": 10,
         "severity": "OK",
-        "message": "actual=17, baseline=18"
+        "message": "actual=16, baseline=18"
       },
       {
         "source": "Oakley City",
@@ -225,11 +225,11 @@
       },
       {
         "source": "Eventbrite",
-        "actual": 8,
+        "actual": 9,
         "baseline": 8.1,
         "floor": null,
         "severity": "OK",
-        "message": "actual=8, baseline=8"
+        "message": "actual=9, baseline=8"
       },
       {
         "source": "KPCW Community Calendar",
@@ -275,11 +275,11 @@
     "jackson": [
       {
         "source": "Jackson Hole Chamber of Commerce",
-        "actual": 151,
+        "actual": 168,
         "baseline": 159.4,
         "floor": 100,
         "severity": "OK",
-        "message": "actual=151, baseline=159"
+        "message": "actual=168, baseline=159"
       },
       {
         "source": "Jackson Hole Mountain Resort",
@@ -299,11 +299,11 @@
       },
       {
         "source": "Dishing Jackson Hole",
-        "actual": 91,
+        "actual": 92,
         "baseline": null,
         "floor": null,
         "severity": "OK",
-        "message": "actual=91 (no baseline yet)"
+        "message": "actual=92 (no baseline yet)"
       },
       {
         "source": "Grand Teton Music Festival",
@@ -331,11 +331,11 @@
       },
       {
         "source": "Center for the Arts Jackson Hole",
-        "actual": 51,
+        "actual": 52,
         "baseline": 27.4,
         "floor": 30,
         "severity": "ELEVATED",
-        "message": "actual=51, baseline=27 (186% of normal)"
+        "message": "actual=52, baseline=27 (190% of normal)"
       },
       {
         "source": "Snow King Mountain",

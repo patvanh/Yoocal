@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-09T18:09:30.118943",
+  "generated_at": "2026-06-09T21:01:59.137373",
   "audit_date": "2026-06-09",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1862,
+      "before_count": 1884,
       "passes": {
         "past_dates": {
           "fixed": 2,
@@ -126,7 +126,7 @@
           ]
         },
         "classification": {
-          "fixed": 371,
+          "fixed": 374,
           "examples": [
             {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
@@ -169,8 +169,8 @@
           ]
         }
       },
-      "after_count": 1868,
-      "total_fixes": 393
+      "after_count": 1890,
+      "total_fixes": 396
     },
     {
       "city": "elkhart-lake",
@@ -229,7 +229,7 @@
     },
     {
       "city": "heber",
-      "before_count": 227,
+      "before_count": 216,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -276,27 +276,27 @@
               "duration_hours": 1
             },
             {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
+              "title": "Mountain Valley Stampede Rodeo",
+              "start_time": "7:30 PM",
+              "new_end_time": "9:30 PM",
               "duration_hours": 2
             },
             {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
+              "title": "Mountain Valley Stampede Rodeo",
+              "start_time": "7:30 PM",
+              "new_end_time": "9:30 PM",
               "duration_hours": 2
             },
             {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
+              "title": "Wilderness Circuit Finals Rodeo Friday Nov. 6th at 7:30 pm",
+              "start_time": "7:30 PM",
+              "new_end_time": "9:30 PM",
               "duration_hours": 2
             },
             {
-              "title": "Oakley Rodeo",
-              "start_time": "11:30 PM",
-              "new_end_time": "1:30 AM",
+              "title": "Wilderness Circuit Finals Rodeo Saturday Nov 7th Matinee 1:00 pm",
+              "start_time": "1:00 PM",
+              "new_end_time": "3:00 PM",
               "duration_hours": 2
             }
           ]
@@ -362,12 +362,12 @@
           ]
         }
       },
-      "after_count": 230,
+      "after_count": 219,
       "total_fixes": 21
     },
     {
       "city": "jackson",
-      "before_count": 789,
+      "before_count": 808,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -479,7 +479,7 @@
           "examples": []
         }
       },
-      "after_count": 802,
+      "after_count": 821,
       "total_fixes": 20
     }
   ]
