@@ -1291,18 +1291,24 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       return v2DistanceMiles(originCenter.lat, originCenter.lng, c.lat, c.lng)
     }
     arr.sort((a, b) => {
-      // When "All cities" is active, distance wins. Current city's events
-      // always lead, then closest city, then next-closest. Prefix-match
-      // tier only acts as a tiebreaker WITHIN a city. This matches user
-      // mental model: "show me what's local first, then expand outward."
-      if (cityFilter === 'all') {
+      // Text search prioritizes RELEVANCE over proximity. If you typed words
+      // that appear in an event's TITLE (tier 0 = title prefix, tier 1 = all
+      // tokens in title), that event leads regardless of city — typing "princ"
+      // surfaces "Princess and Pirate Train" even from a neighboring city.
+      // Only weaker matches (tier 2: description / venue / category) stay
+      // local-first by distance when "All cities" is active.
+      const aTitle = a.tier <= 1
+      const bTitle = b.tier <= 1
+      if (aTitle !== bTitle) return aTitle ? -1 : 1
+      if (aTitle && bTitle) {
+        // Both match in the title: prefix (tier 0) before contains (tier 1).
+        if (a.tier !== b.tier) return a.tier - b.tier
+      } else if (cityFilter === 'all') {
+        // Both are weaker matches: closer city leads.
         const adist = groupCityDist(a)
         const bdist = groupCityDist(b)
         if (adist !== bdist) return adist - bdist
       }
-      // Within the same city (or non-'all' filters), tier matters: events
-      // whose titles match the query prefix lead.
-      if (a.tier !== b.tier) return a.tier - b.tier
       const ad = a.occurrences[0]?.date || ''
       const bd = b.occurrences[0]?.date || ''
       return ad.localeCompare(bd)
