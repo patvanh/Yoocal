@@ -67,6 +67,24 @@ TRIBE_EVENT_SOURCES = [
         "default_categories": ["Arts"],
         "default_city": "Jackson, WY",
     },
+    {
+        # Snow King Amphitheater "King Concert" series + mountain events.
+        "base_url": "https://www.snowkingmountain.com",
+        "source_name": "Snow King Mountain",
+        "default_lat": 43.4663,
+        "default_lng": -110.7560,
+        "default_categories": ["Music", "Concert"],
+        "default_city": "Jackson, WY",
+    },
+    {
+        # Dishing Jackson Hole — local food & drink events calendar.
+        "base_url": "https://www.dishingjh.com",
+        "source_name": "Dishing Jackson Hole",
+        "default_lat": JACKSON_LAT,
+        "default_lng": JACKSON_LNG,
+        "default_categories": ["Food & Drink"],
+        "default_city": "Jackson, WY",
+    },
 ]
 
 
