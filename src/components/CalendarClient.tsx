@@ -1067,6 +1067,64 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     return result
   }, [events, dayFilter, timeFilter, activeCategories, freeOnly, pickedDate, pickedRangeEnd, radius, userCoords, cityKey])
 
+  // Empty-day fall-forward: if the chosen window has nothing matching, find the
+  // soonest FUTURE day (after the window) whose events still pass the other
+  // active filters, so a quiet day points the user forward instead of dead-ending.
+  const fallForwardEvents = useMemo(() => {
+    if (loading) return null
+    if (filteredEvents.length > 0) return null
+    if (dayFilter === 'all') return null
+    const today = v2TodayMountain()
+    const todayStr = v2DateToStr(today)
+    let refEnd = todayStr
+    let emptyLabel = 'Nothing today'
+    if (dayFilter === 'tomorrow') {
+      const t = new Date(today); t.setDate(today.getDate() + 1); refEnd = v2DateToStr(t); emptyLabel = 'Nothing tomorrow'
+    } else if (dayFilter === 'weekend') {
+      const { end } = v2WeekendDates(); refEnd = v2DateToStr(end); emptyLabel = 'Nothing this weekend'
+    } else if (dayFilter === '7days') {
+      const w = new Date(today); w.setDate(today.getDate() + 7); refEnd = v2DateToStr(w); emptyLabel = 'Nothing in the next 7 days'
+    } else if (dayFilter === 'pickdate') {
+      refEnd = pickedRangeEnd; emptyLabel = pickedRangeEnd > pickedDate ? 'Nothing in that range' : 'Nothing on that day'
+    }
+    let pool = events
+      .filter(e => ((e.end_date || e.date) || '') >= todayStr)
+      .filter(e => (e.date || '').slice(0, 10) > refEnd)
+    if (timeFilter !== 'any') {
+      pool = pool.filter(e => {
+        const t = v2ParseTime12h(e.start_time)
+        if (t === null) return true
+        if (timeFilter === 'morning') return t < 12 * 60
+        if (timeFilter === 'afternoon') return t >= 12 * 60 && t < 17 * 60
+        if (timeFilter === 'evening') return t >= 17 * 60 && t < 21 * 60
+        if (timeFilter === 'latenight') return t >= 21 * 60
+        return true
+      })
+    }
+    if (activeCategories.size > 0) {
+      pool = pool.filter(e => ((e.filter_categories && e.filter_categories.length ? e.filter_categories : (e.categories || [])).some(c => activeCategories.has(c))))
+    }
+    if (freeOnly) pool = pool.filter(e => isFreeEvent(e))
+    const origin = userCoords || CITY_CENTERS[cityKey] || CITY_CENTERS.parkcity
+    if (origin) {
+      pool = pool.filter(e => {
+        if (typeof e.lat !== 'number' || typeof e.lng !== 'number') return true
+        return v2DistanceMiles(origin.lat, origin.lng, e.lat, e.lng) <= radius
+      })
+    }
+    if (pool.length === 0) return null
+    pool.sort((a, b) => {
+      if (a.date !== b.date) return (a.date || '').localeCompare(b.date || '')
+      const ta = v2ParseTime12h(a.start_time) ?? 24 * 60
+      const tb = v2ParseTime12h(b.start_time) ?? 24 * 60
+      return ta - tb
+    })
+    const nextDay = (pool[0].date || '').slice(0, 10)
+    const dayEvents = pool.filter(e => (e.date || '').slice(0, 10) === nextDay)
+    const pretty = new Date(nextDay + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })
+    return { date: nextDay, events: dayEvents, emptyLabel, pretty }
+  }, [loading, filteredEvents, events, dayFilter, timeFilter, activeCategories, freeOnly, pickedDate, pickedRangeEnd, radius, userCoords, cityKey])
+
   const allUpcomingMatches = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
     const todayStr = v2DateToStr(v2TodayMountain())
@@ -1276,7 +1334,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     // dayFilter === 'today' keeps rangeStart = rangeEnd = todayStr.
 
     const richness = (e: any) => (e.categories?.length || 0) + (e.hook ? 2 : 0)
-    const QUALITY_BAR = 2  // multiple categories, or a hook — a genuine standout
+    const QUALITY_BAR = ({ parkcity: 2, jackson: 2, heber: 1, elkhartlake: 1 } as Record<string, number>)[cityKey] ?? 2  // multiple categories, or a hook — a genuine standout
 
     const windowEvents = events.filter((e: any) => occursInRange(e, rangeStart, rangeEnd))
 
@@ -1756,9 +1814,23 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       {loading ? (
         <div style={{ textAlign: 'center', padding: 60, color: 'rgba(255,255,255,0.4)' }}>Loading events…</div>
       ) : filteredEvents.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: 60, color: 'rgba(255,255,255,0.6)', background: 'rgba(255,255,255,0.04)', borderRadius: 14, border: '1px solid rgba(255,255,255,0.1)' }}>
-          No events match your filters. Try widening the time range or clearing search.
-        </div>
+        fallForwardEvents ? (
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', padding: '14px 18px', margin: '0 0 16px', background: 'rgba(127,119,221,0.12)', border: '1px solid rgba(175,169,236,0.3)', borderRadius: 12, fontSize: 14 }}>
+              <span style={{ color: 'rgba(255,255,255,0.8)' }}>{fallForwardEvents.emptyLabel} that matches your filters.</span>
+              <span style={{ color: '#AFA9EC', fontWeight: 700 }}>Next up — {fallForwardEvents.pretty}:</span>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(440px, 100%), 1fr))', gap: 8 }}>
+              {fallForwardEvents.events.map((ev, i) => (
+                <V2EventCard key={`ff-${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} viewedDay={fallForwardEvents.date} />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div style={{ textAlign: 'center', padding: 60, color: 'rgba(255,255,255,0.6)', background: 'rgba(255,255,255,0.04)', borderRadius: 14, border: '1px solid rgba(255,255,255,0.1)' }}>
+            No events match your filters. Try widening the time range or clearing search.
+          </div>
+        )
       ) : (
         <div style={{
           display: 'grid',
