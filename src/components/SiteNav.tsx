@@ -11,7 +11,7 @@
  */
 
 type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson";
-type ActiveKey = "about" | "weekend" | "free" | "concerts" | "venues" | "business" | null;
+type ActiveKey = "about" | "weekend" | "free" | "concerts" | "month" | "venues" | "business" | null;
 
 export default function SiteNav({
   activeKey = null,
@@ -42,6 +42,7 @@ export default function SiteNav({
   const weekendHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/this-weekend` : "/this-weekend";
   const freeHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/free-events` : "/park-city/free-events";
   const concertsHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/concerts` : "/park-city/concerts";
+  const monthHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/this-month` : "/park-city/this-month";
   const venuesHref = cityKey ? `/venues?city=${cityKey}` : "/venues";
 
   // Only show city-specific This Weekend / Venues links when we're in a city context
@@ -79,6 +80,12 @@ export default function SiteNav({
                 className={activeKey === "free" ? "active" : ""}
               >
                 Free Events
+              </a>
+              <a
+                href={monthHref}
+                className={activeKey === "month" ? "active" : ""}
+              >
+                This Month
               </a>
               <a
                 href={venuesHref}
