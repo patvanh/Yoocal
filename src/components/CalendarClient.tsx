@@ -1730,7 +1730,14 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         <div style={{
           fontSize: 20, fontWeight: 800, letterSpacing: 0.4, textTransform: 'uppercase',
           color: '#e0a83a', margin: '0 0 14px',
-        }}>Featured Today</div>
+        }}>{
+          dayFilter === 'tomorrow' ? 'Featured Tomorrow'
+          : dayFilter === 'weekend' ? 'Featured This Weekend'
+          : dayFilter === '7days' ? 'Featured This Week'
+          : dayFilter === 'pickdate' ? 'Featured'
+          : dayFilter === 'all' ? 'Featured'
+          : 'Featured Today'
+        }</div>
       )}
       {featuredEvents.length > 0 && (
         <div style={{
