@@ -11,6 +11,7 @@ type City = {
   name: string
   region: string
   emoji: string
+  image?: string
   blurb: string
   founder?: boolean
 }
@@ -18,6 +19,7 @@ type City = {
 const CITIES: City[] = [
   {
     key: "parkcity",
+    image: "/cities/parkcity.jpg",
     name: "Park City",
     region: "Utah",
     emoji: "⛷️",
@@ -26,6 +28,7 @@ const CITIES: City[] = [
   },
   {
     key: "jackson",
+    image: "/cities/jackson.jpg",
     name: "Jackson Hole",
     region: "Wyoming",
     emoji: "🦌",
@@ -33,6 +36,7 @@ const CITIES: City[] = [
   },
   {
     key: "heber",
+    image: "/cities/heber.jpg",
     name: "Heber Valley",
     region: "Utah",
     emoji: "🏞️",
@@ -40,6 +44,7 @@ const CITIES: City[] = [
   },
   {
     key: "elkhartlake",
+    image: "/cities/elkhartlake.jpg",
     name: "Elkhart Lake",
     region: "Wisconsin",
     emoji: "🏁",
@@ -86,6 +91,24 @@ export default function HomeBrand() {
   const [open, setOpen] = useState(false)
   const [activeIdx, setActiveIdx] = useState(0)
   const wrapRef = useRef<HTMLDivElement>(null)
+  const [email, setEmail] = useState("")
+  const [subState, setSubState] = useState<"idle" | "loading" | "done" | "error">("idle")
+  async function handleSubscribe(e: React.FormEvent) {
+    e.preventDefault()
+    const v = email.trim()
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) { setSubState("error"); return }
+    setSubState("loading")
+    try {
+      const r = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: v }),
+      })
+      setSubState(r.ok ? "done" : "error")
+    } catch {
+      setSubState("error")
+    }
+  }
 
   function pickCity(key: string) {
     try {
@@ -275,19 +298,59 @@ export default function HomeBrand() {
               key={c.key}
               onClick={() => pickCity(c.key)}
               className="hb-card"
+              style={c.image ? { backgroundImage: `linear-gradient(to top, rgba(15,12,35,0.85) 0%, rgba(15,12,35,0.3) 42%, rgba(15,12,35,0) 70%), url(${c.image})` } : undefined}
             >
-              <div className="hb-card-emoji">{c.emoji}</div>
+              {!c.image && <span className="hb-card-fallback">{c.emoji}</span>}
               <div className="hb-card-info">
                 <h3>
                   {c.name}
                   {c.founder && <span className="hb-founder">Where it all began</span>}
                 </h3>
                 <p className="hb-region">{c.region}</p>
-                <p className="hb-blurb">{c.blurb}</p>
               </div>
-              <div className="hb-arrow">→</div>
             </button>
           ))}
+        </div>
+
+        <div className="hb-how">
+          <div className="hb-how-item">
+            <div className="hb-how-num">1</div>
+            <h3>Pick your town</h3>
+            <p>Four mountain &amp; lake towns live now, with more on the way.</p>
+          </div>
+          <div className="hb-how-item">
+            <div className="hb-how-num">2</div>
+            <h3>See everything happening</h3>
+            <p>Concerts, festivals, races and more &mdash; every source in one place, refreshed daily.</p>
+          </div>
+          <div className="hb-how-item">
+            <div className="hb-how-num">3</div>
+            <h3>Never miss out</h3>
+            <p>Always free. Get the week&apos;s best events in your inbox.</p>
+          </div>
+        </div>
+
+        <div className="hb-duo">
+        <div className="hb-news">
+          <h2>Get the week&apos;s best events in your inbox</h2>
+          <p>A short weekly email with the can&apos;t-miss happenings in your town. Free, no spam.</p>
+          {subState === "done" ? (
+            <div className="hb-news-done">You&apos;re in &mdash; check your inbox soon. ✦</div>
+          ) : (
+            <form className="hb-news-form" onSubmit={handleSubscribe}>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => { setEmail(e.target.value); if (subState === "error") setSubState("idle") }}
+                placeholder="you@email.com"
+                aria-label="Email address"
+              />
+              <button type="submit" disabled={subState === "loading"}>
+                {subState === "loading" ? "Joining…" : "Notify me"}
+              </button>
+            </form>
+          )}
+          {subState === "error" && <div className="hb-news-err">Please enter a valid email and try again.</div>}
         </div>
 
         <div className="hb-cta">
@@ -302,6 +365,7 @@ export default function HomeBrand() {
             Submit your town →
           </a>
         </div>
+        </div>
       </div>
 
       <SiteFooter />
@@ -315,7 +379,7 @@ export default function HomeBrand() {
         }
         .hb-hero {
           background: var(--dark);
-          padding: 140px 80px 200px;
+          padding: 92px 80px 72px;
           position: relative;
           overflow: visible;        /* let the search dropdown escape the hero */
           overflow-x: clip;          /* but still prevent horizontal scroll */
@@ -404,7 +468,7 @@ export default function HomeBrand() {
           font-size: 12px; color: var(--muted);
         }
 
-        .hb-content { max-width: 1100px; margin: 0 auto; padding: 80px 40px 120px; }
+        .hb-content { max-width: 1100px; margin: 0 auto; padding: 40px 40px 40px; }
         .hb-section-label {
           font-size: 12px; font-weight: 700; text-transform: uppercase;
           letter-spacing: 1px; color: var(--amber);
@@ -429,39 +493,61 @@ export default function HomeBrand() {
           margin-bottom: 80px;
         }
         .hb-card {
-          display: flex; align-items: center; gap: 20px;
-          background: white; border: 1px solid var(--border);
-          border-radius: 20px; padding: 28px;
+          position: relative;
+          display: flex; flex-direction: column; justify-content: flex-end;
+          aspect-ratio: 16 / 9;
+          background-color: #2a2545; background-size: cover; background-position: center;
+          border: 1px solid var(--border);
+          border-radius: 20px; padding: 22px;
           text-align: left;
           cursor: pointer;
           font-family: inherit;
-          color: inherit;
-          transition: all 0.2s;
+          color: #fff;
+          overflow: hidden;
+          transition: transform 0.2s, box-shadow 0.2s;
         }
         .hb-card:hover {
-          border-color: var(--purple);
-          transform: translateY(-2px);
-          box-shadow: 0 12px 32px rgba(83,74,183,0.08);
+          transform: translateY(-3px);
+          box-shadow: 0 16px 40px rgba(83,74,183,0.18);
         }
-        .hb-card-emoji { font-size: 40px; flex-shrink: 0; }
-        .hb-card-info { flex: 1; }
+        .hb-card-fallback {
+          position: absolute; inset: 0;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 72px; opacity: 0.45;
+        }
+        .hb-card-info { position: relative; z-index: 1; }
         .hb-card-info h3 {
-          font-size: 18px; font-weight: 600; margin-bottom: 2px;
+          font-size: 22px; font-weight: 700; margin-bottom: 2px; color: #fff;
           display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
         }
         .hb-founder {
           font-size: 10px; font-weight: 700;
           text-transform: uppercase; letter-spacing: 0.6px;
           color: var(--amber);
-          background: rgba(244,164,96,0.12);
+          background: rgba(244,164,96,0.18);
           padding: 3px 9px;
           border-radius: 100px;
         }
-        .hb-region { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
-        .hb-blurb { font-size: 13px; color: var(--muted); line-height: 1.5; }
-        .hb-arrow { font-size: 22px; color: var(--purple); opacity: 0.6; }
-        .hb-card:hover .hb-arrow { opacity: 1; }
+        .hb-region { font-size: 13px; color: rgba(255,255,255,0.8); margin-bottom: 0; }
 
+        .hb-how { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; margin: 4px 0 56px; }
+        .hb-how-item { text-align: left; }
+        .hb-how-num { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: var(--purple); background: rgba(83,74,183,0.1); margin-bottom: 14px; }
+        .hb-how-item h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--dark); }
+        .hb-how-item p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+        .hb-duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 0; align-items: stretch; }
+        .hb-news { background: var(--dark); border-radius: 24px; padding: clamp(36px, 5vw, 56px) clamp(24px, 5vw, 48px); text-align: center; display: flex; flex-direction: column; justify-content: center; }
+        .hb-news h2 { font-family: 'DM Serif Display', serif; font-size: clamp(24px, 3vw, 34px); color: #fff; margin-bottom: 10px; }
+        .hb-news > p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 26px; }
+        .hb-news-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+        .hb-news-form input { flex: 1; min-width: 220px; padding: 14px 18px; font-size: 15px; font-family: inherit; border-radius: 100px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); color: #fff; outline: none; }
+        .hb-news-form input::placeholder { color: rgba(255,255,255,0.4); }
+        .hb-news-form input:focus { border-color: rgba(155,143,240,0.6); }
+        .hb-news-form button { padding: 14px 26px; font-size: 15px; font-weight: 700; font-family: inherit; border: none; border-radius: 100px; background: var(--purple); color: #fff; cursor: pointer; }
+        .hb-news-form button:hover { background: #6E64C9; }
+        .hb-news-form button:disabled { opacity: 0.6; cursor: default; }
+        .hb-news-done { font-size: 16px; font-weight: 600; color: #fff; }
+        .hb-news-err { font-size: 13px; color: #ffb4b4; margin-top: 12px; }
         .hb-cta {
           background: var(--dark);
           border-radius: 24px;
