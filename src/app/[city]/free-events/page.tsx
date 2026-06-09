@@ -4,7 +4,7 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 import CitySwitcher from "@/components/CitySwitcher";
 import IntentDayList from "@/components/IntentDayList";
-import { cityKeyFromSlug } from "@/lib/events";
+import { cityKeyFromSlug, eventSlug } from "@/lib/events";
 import { CITY_CONFIG, loadCityEvents, formatLocalISODate } from "@/lib/city-events";
 
 export const revalidate = 3600;
@@ -65,6 +65,7 @@ export default async function CityFreeEventsPage(
     is_free: e.is_free,
     price: e.price,
     categories: Array.isArray(e.categories) ? (e.categories as string[]) : undefined,
+    detailSlug: eventSlug(e),
   }));
 
   return (
@@ -90,7 +91,7 @@ export default async function CityFreeEventsPage(
             <p>Our scraper runs daily \u2014 check back soon, or browse the full <a href={`/${city}`}>{cfg.label} calendar</a>.</p>
           </div>
         ) : (
-          <IntentDayList events={events} variant="columns" />
+          <IntentDayList events={events} variant="columns" citySlug={city} />
         )}
         <div className="bottom-cta">
           <p>See everything happening in {cfg.label} \u2192 <a href={`/${city}`}>browse all upcoming events</a></p>

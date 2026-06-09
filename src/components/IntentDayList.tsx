@@ -19,7 +19,7 @@ const WD = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const iso2 = (n: number) => String(n).padStart(2, "0");
 function parseIso(iso: string) { const [y,m,d] = iso.split("-").map(Number); return new Date(y, m-1, d); }
 
-export default function IntentDayList({ events, variant = "month" }: { events: EventModalData[]; variant?: "month" | "columns" }) {
+export default function IntentDayList({ events, variant = "month", citySlug }: { events: EventModalData[]; variant?: "month" | "columns"; citySlug?: string }) {
   const [active, setActive] = useState<EventModalData | null>(null);
   const [query, setQuery] = useState("");
   const [expanded, setExpanded] = useState<string | null>(null);
@@ -67,7 +67,7 @@ export default function IntentDayList({ events, variant = "month" }: { events: E
   );
   const srList = (
     <ul className="i-sr">
-      {events.map((e, i) => (<li key={`sr${i}`}><a href={e.link || "#"}>{e.title}</a> &mdash; {(e.date || "").slice(0, 10)}{e.location ? ` — ${e.location}` : ""}</li>))}
+      {events.map((e, i) => (<li key={`sr${i}`}><a href={(citySlug && (e as any).detailSlug ? `/${citySlug}/${(e as any).detailSlug}` : e.link) || "#"}>{e.title}</a> &mdash; {(e.date || "").slice(0, 10)}{e.location ? ` — ${e.location}` : ""}</li>))}
     </ul>
   );
 
@@ -88,11 +88,11 @@ export default function IntentDayList({ events, variant = "month" }: { events: E
                   </div>
                   <div className="cl-evs">
                     {col.events.map((ev, k) => (
-                      <button key={`${col.iso}-${k}`} type="button" className="cl-ev" style={{ ["--a" as string]: accentFor(ev) }} onClick={() => setActive(ev)} title={ev.title}>
+                      <a key={`${col.iso}-${k}`} href={citySlug && (ev as any).detailSlug ? `/${citySlug}/${(ev as any).detailSlug}` : undefined} className="cl-ev" style={{ ["--a" as string]: accentFor(ev) }} onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey) return; e.preventDefault(); setActive(ev); }} title={ev.title}>
                         {ev.start_time ? <span className="cl-ev-t">{ev.start_time}</span> : null}
                         <span className="cl-ev-x">{ev.title}</span>
                         {ev.location ? <span className="cl-ev-loc">{ev.location}</span> : null}
-                      </button>
+                      </a>
                     ))}
                   </div>
                 </div>
@@ -120,10 +120,10 @@ export default function IntentDayList({ events, variant = "month" }: { events: E
                 <div key={c.iso} className={`mg-cell${isToday ? " mg-today" : ""}`}>
                   <div className="mg-date">{c.d}</div>
                   {shown.map((ev, k) => (
-                    <button key={`${c.iso}-${k}`} type="button" className="mg-ev" style={{ ["--a" as string]: accentFor(ev) }} onClick={() => setActive(ev)} title={ev.title}>
+                    <a key={`${c.iso}-${k}`} href={citySlug && (ev as any).detailSlug ? `/${citySlug}/${(ev as any).detailSlug}` : undefined} className="mg-ev" style={{ ["--a" as string]: accentFor(ev) }} onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey) return; e.preventDefault(); setActive(ev); }} title={ev.title}>
                       {ev.start_time ? <span className="mg-ev-t">{ev.start_time}</span> : null}
                       <span className="mg-ev-x">{ev.title}</span>
-                    </button>
+                    </a>
                   ))}
                   {more > 0 && (<button type="button" className="mg-more" onClick={() => setExpanded(c.iso)}>+{more} more</button>)}
                 </div>
@@ -158,7 +158,7 @@ export default function IntentDayList({ events, variant = "month" }: { events: E
         .mg-today { border-color: rgba(175,169,236,0.55); background: rgba(127,119,221,0.12); }
         .mg-date { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.7); }
         .mg-today .mg-date { color: #fff; }
-        .mg-ev { display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%; cursor: pointer; font-family: inherit; border: none; border-left: 3px solid var(--a); border-radius: 4px; background: color-mix(in srgb, var(--a) 22%, transparent); padding: 3px 6px; color: #fff; }
+        .mg-ev { text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%; cursor: pointer; font-family: inherit; border: none; border-left: 3px solid var(--a); border-radius: 4px; background: color-mix(in srgb, var(--a) 22%, transparent); padding: 3px 6px; color: #fff; }
         .mg-ev:hover { background: color-mix(in srgb, var(--a) 40%, transparent); }
         .mg-ev-t { font-size: 9px; font-weight: 700; color: rgba(255,255,255,0.75); line-height: 1.1; }
         .mg-ev-x { font-size: 11px; font-weight: 600; line-height: 1.15; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
@@ -169,7 +169,7 @@ export default function IntentDayList({ events, variant = "month" }: { events: E
         .cl-wd { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(255,255,255,0.55); }
         .cl-md { font-family: 'DM Serif Display', serif; font-size: 18px; color: #fff; line-height: 1; }
         .cl-evs { display: flex; flex-direction: column; gap: 6px; padding: 8px; }
-        .cl-ev { display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%; cursor: pointer; font-family: inherit; border: none; border-left: 3px solid var(--a); border-radius: 6px; background: color-mix(in srgb, var(--a) 20%, transparent); padding: 6px 9px; color: #fff; }
+        .cl-ev { text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%; cursor: pointer; font-family: inherit; border: none; border-left: 3px solid var(--a); border-radius: 6px; background: color-mix(in srgb, var(--a) 20%, transparent); padding: 6px 9px; color: #fff; }
         .cl-ev:hover { background: color-mix(in srgb, var(--a) 38%, transparent); }
         .cl-ev-t { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.75); }
         .cl-ev-x { font-size: 13px; font-weight: 600; line-height: 1.25; }
