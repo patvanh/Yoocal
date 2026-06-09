@@ -330,8 +330,16 @@ def _fan_out_recurring(events):
                     # with no endDate) project 180 days forward. Each scrape
                     # regenerates from source, so cancelled events self-correct;
                     # the 60-occurrence cap below is the hard backstop.
+                    # Bound the projection. Prefer an explicit end_date; else,
+                    # if the scraper already gave an occurrence list, trust its
+                    # LAST date as the end so we never invent phantom weeks past
+                    # the real run (the Heber market is Jun 11-Aug 20, not out to
+                    # December). Only truly list-less events project 180 days.
+                    _occ_existing = [o for o in (e.get("occurrence_dates") or []) if o]
                     if e.get("end_date"):
                         ed = datetime.strptime(e["end_date"][:10], "%Y-%m-%d").date()
+                    elif _occ_existing:
+                        ed = max(datetime.strptime(o[:10], "%Y-%m-%d").date() for o in _occ_existing)
                     else:
                         ed = datetime.now().date() + timedelta(days=180)
                     cap_end = datetime.now().date() + timedelta(days=365)
