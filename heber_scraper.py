@@ -788,6 +788,106 @@ def scrape_running_in_the_usa_heber():
         return []
 
 
+def scrape_wasatch_parks_rec():
+    """Wasatch County Parks & Rec / Event Complex (Heber).
+
+    The event LISTING is JS-rendered (Saffire postbacks) and can't be scraped
+    directly -- but the sitemap lists every event detail page, and those ARE
+    server-rendered. So: read the sitemap, keep /events/<year>/<slug> URLs,
+    fetch each detail page, and parse title/date/image from the static HTML.
+    Low volume but unique to Heber (Fair Days, the Miss Wasatch pageant, the
+    rodeos, the demolition derby).
+    """
+    print("Scraping Wasatch County Parks & Rec (sitemap + detail pages)...")
+    BASE = "https://www.wasatchparksandrec.com"
+    HEADERS = {"User-Agent": "Mozilla/5.0 (yoocal events aggregator)"}
+    MONTHS = {m[:3].lower(): i for i, m in enumerate(
+        ["January", "February", "March", "April", "May", "June", "July",
+         "August", "September", "October", "November", "December"], 1)}
+    today = datetime.now().date()
+
+    def _iso(mon, day, yr):
+        mi = MONTHS.get(str(mon)[:3].lower())
+        return f"{yr:04d}-{mi:02d}-{int(day):02d}" if mi else None
+
+    def _parse_dates(text):
+        text = text.replace("\xa0", " ")
+        ym = re.search(r"(20\d{2})", text)
+        if not ym:
+            return None, None
+        year = int(ym.group(1))
+        pairs = re.findall(r"([A-Za-z]{3,9})\.?\s+(\d{1,2})\b", text)
+        if not pairs:
+            return None, None
+        start = _iso(pairs[0][0], pairs[0][1], year)
+        end = start
+        if len(pairs) >= 2:
+            end = _iso(pairs[1][0], pairs[1][1], year) or start
+        else:
+            rng = re.search(r"\d{1,2}\s*[-\u2013]\s*(\d{1,2})", text)
+            if rng:
+                end = _iso(pairs[0][0], rng.group(1), year) or start
+        if start and end and end < start:  # range crosses New Year
+            end = f"{year + 1}{end[4:]}"
+        return start, end
+
+    def _norm_time(t):
+        m = re.match(r"(\d{1,2}:\d{2})\s*([AaPp][Mm])", t)
+        return f"{m.group(1)} {m.group(2).upper()}" if m else ""
+
+    def _meta(html, prop):
+        m = re.search(r'<meta[^>]+(?:property|name)=["\']' + re.escape(prop)
+                      + r'["\'][^>]*content=["\']([^"\']*)["\']', html, re.I)
+        return m.group(1).strip() if m else ""
+
+    try:
+        sm = requests.get(f"{BASE}/sitemap.xml", headers=HEADERS, timeout=20).text
+    except Exception as ex:
+        print(f"  Wasatch sitemap fetch failed: {ex}")
+        return []
+
+    urls = list(dict.fromkeys(
+        re.findall(r"<loc>([^<]*/events/\d{4}/[^<]+)</loc>", sm)))
+    print(f"  Found {len(urls)} event detail URLs in sitemap")
+
+    out = []
+    for u in urls:
+        try:
+            html = requests.get(u, headers=HEADERS, timeout=20).text
+        except Exception:
+            continue
+        title = _meta(html, "og:title")
+        if not title or len(title) < 3:
+            continue
+        tl = title.lower()
+        if any(p in tl for p in ("registration", "information", "camping")):
+            continue  # admin/registration/info pages, not real attendee events
+        text = re.sub(r"<[^>]+>", " ", html)
+        dm = re.search(r"Date:\s*([A-Za-z0-9 ,\u2013\-]+?20\d{2})", text)
+        start, end = _parse_dates(dm.group(1)) if dm else (None, None)
+        if not start or start < today.isoformat():
+            continue  # undated (sign-up/release pages) or already past
+        tm = re.search(r"(\d{1,2}:\d{2}\s*[AaPp][Mm])", text)
+        out.append({
+            "title": title,
+            "date": start,
+            "end_date": end or start,
+            "start_time": _norm_time(tm.group(1)) if tm else "",
+            "location": "Heber City, UT",
+            "venue_name": "Wasatch County Event Complex",
+            "description": _meta(html, "og:description"),
+            "link": u,
+            "source": "Wasatch County Parks & Rec",
+            "source_url": f"{BASE}/events",
+            "image_url": _meta(html, "og:image"),
+            "lat": 40.4897, "lng": -111.4133,
+            "city": "Heber City, UT",
+            "categories": ["Community"],
+        })
+    print(f"  Wasatch County Parks & Rec returned {len(out)} events")
+    return out
+
+
 def main():
     print("=" * 55)
     print("  Yoocal Heber Valley Scraper")
@@ -827,6 +927,7 @@ def main():
     all_events += scrape_eventbrite()
     all_events += scrape_runsignup()
     all_events += scrape_running_in_the_usa_heber()
+    all_events += scrape_wasatch_parks_rec()
     all_events += scrape_slrc_heber_wrapper()
     all_events += scrape_dainty_pear_wrapper()
     all_events += scrape_hebervalleylife_sitemap()
