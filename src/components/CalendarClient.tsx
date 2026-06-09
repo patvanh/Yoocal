@@ -1141,8 +1141,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     const _relevance = (e: V2YocEvent): number => {
       if (_qTokens.length === 0) return 0
       const title = _searchNormalize(e.title || '')
-      if (title.includes(_searchNormalize(q))) return 0          // full phrase in title
-      if (_qTokens.every(t => title.includes(t))) return 1       // all tokens in title
+      if (_qTokens.every(t => title.includes(t))) return 1       // all query words in title -> soonest-first within this tier
       if (_qTokens.some(t => title.includes(t))) return 2        // some tokens in title
       return 3                                                    // matched elsewhere
     }
@@ -1301,8 +1300,8 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       const bTitle = b.tier <= 1
       if (aTitle !== bTitle) return aTitle ? -1 : 1
       if (aTitle && bTitle) {
-        // Both match in the title: prefix (tier 0) before contains (tier 1).
-        if (a.tier !== b.tier) return a.tier - b.tier
+        // Both match in the title: fall through to the soonest-date sort below
+        // so a near-term occurrence isn't buried under a later exact-phrase match.
       } else if (cityFilter === 'all') {
         // Both are weaker matches: closer city leads.
         const adist = groupCityDist(a)
