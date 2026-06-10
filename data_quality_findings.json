@@ -1,20 +1,26 @@
 {
-  "generated_at": "2026-06-09",
+  "generated_at": "2026-06-10",
   "cities": {
     "all": {
-      "events": 4757,
+      "events": 4606,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
-          "severity": "MED",
+          "severity": "HIGH",
           "count": 2
+        },
+        {
+          "code": "C4",
+          "name": "BAD-DATE",
+          "severity": "MED",
+          "count": 17
         },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 22
+          "count": 20
         },
         {
           "code": "C6",
@@ -29,13 +35,19 @@
       "findings": []
     },
     "heber": {
-      "events": 1081,
+      "events": 901,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 2
+        },
+        {
+          "code": "C4",
+          "name": "BAD-DATE",
           "severity": "MED",
-          "count": 1
+          "count": 5
         },
         {
           "code": "C6",
@@ -46,22 +58,16 @@
       ]
     },
     "jackson": {
-      "events": 1414,
+      "events": 1405,
       "findings": [
-        {
-          "code": "C1",
-          "name": "RECURRING-DROPPED",
-          "severity": "MED",
-          "count": 1
-        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 8
+          "count": 7
         }
       ]
     }
   },
-  "high_total": 2
+  "high_total": 6
 }

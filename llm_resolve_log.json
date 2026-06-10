@@ -1,6 +1,33 @@
 {
-  "generated_at": "2026-06-09T21:01:59.523790",
-  "attempted": 0,
-  "applied": 0,
-  "log": []
+  "generated_at": "2026-06-10T01:56:30.650525",
+  "attempted": 2,
+  "applied": 1,
+  "log": [
+    {
+      "city": "jackson",
+      "title": "Damien Gunn",
+      "type": "title_truncated",
+      "link": "https://www.milliondollarcowboybar.com/events/damien-gunn-1-1",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only mentions an event on June 5, 2025 at Million Dollar Cowboy Bar, but contains no information about the July 27, 2026 event, so I cannot determine if the title should be expanded beyond 'Damien Gunn'."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    },
+    {
+      "city": "jackson",
+      "title": "Fitz and The Tantrums King Concert",
+      "type": "title_truncated",
+      "link": "https://snowkingmountain.com/event/fitz-and-the-tantrums-king-concert/",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Fitz and The Tantrums - Snow King Mountain Resort",
+        "reasoning": "The source text shows the complete event title includes the venue 'Snow King Mountain Resort' rather than just 'King Concert', which appears to be a truncation error."
+      },
+      "applied": true,
+      "note": "title: 'Fitz and The Tantrums King Concert' \u2192 'Fitz and The Tantrums - Snow King Mountain Resort'"
+    }
+  ]
 }

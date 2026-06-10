@@ -1,4 +1,18 @@
 {
-  "generated_at": "2026-06-09T21:01:59.524023",
-  "uncertain": []
+  "generated_at": "2026-06-10T01:56:30.650695",
+  "uncertain": [
+    {
+      "city": "jackson",
+      "title": "Damien Gunn",
+      "type": "title_truncated",
+      "link": "https://www.milliondollarcowboybar.com/events/damien-gunn-1-1",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only mentions an event on June 5, 2025 at Million Dollar Cowboy Bar, but contains no information about the July 27, 2026 event, so I cannot determine if the title should be expanded beyond 'Damien Gunn'."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    }
+  ]
 }

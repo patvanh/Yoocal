@@ -1,23 +1,23 @@
 {
-  "checked_at": "2026-06-09T15:01:59.905850-06:00",
+  "checked_at": "2026-06-09T19:56:31.043716-06:00",
   "today": "2026-06-09",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 867,
+        "actual": 876,
         "baseline": 714.4,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=867, baseline=714"
+        "message": "actual=876, baseline=714"
       },
       {
         "source": "Park City Annual Events",
-        "actual": 409,
+        "actual": 407,
         "baseline": 416.6,
         "floor": 200,
         "severity": "OK",
-        "message": "actual=409, baseline=417"
+        "message": "actual=407, baseline=417"
       },
       {
         "source": "Mountain Town Music",
@@ -45,19 +45,19 @@
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 53,
+        "actual": 52,
         "baseline": 45,
         "floor": null,
         "severity": "OK",
-        "message": "actual=53, baseline=45"
+        "message": "actual=52, baseline=45"
       },
       {
         "source": "Visit Park City (sitemap)",
-        "actual": 27,
+        "actual": 29,
         "baseline": 27.1,
         "floor": 15,
         "severity": "OK",
-        "message": "actual=27, baseline=27"
+        "message": "actual=29, baseline=27"
       },
       {
         "source": "Park City Farmers Market",
@@ -185,19 +185,19 @@
     "heber": [
       {
         "source": "Heber Valley Tourism",
-        "actual": 118,
+        "actual": 128,
         "baseline": 119.3,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=118, baseline=119"
+        "message": "actual=128, baseline=119"
       },
       {
         "source": "Wasatch County Parks & Rec",
-        "actual": 27,
+        "actual": 26,
         "baseline": null,
         "floor": null,
         "severity": "OK",
-        "message": "actual=27 (no baseline yet)"
+        "message": "actual=26 (no baseline yet)"
       },
       {
         "source": "TownLift",
@@ -233,11 +233,11 @@
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 5,
+        "actual": 6,
         "baseline": 4.3,
         "floor": null,
         "severity": "OK",
-        "message": "actual=5, baseline=4"
+        "message": "actual=6, baseline=4"
       },
       {
         "source": "RunSignup",
@@ -283,19 +283,19 @@
       },
       {
         "source": "Jackson Hole Mountain Resort",
-        "actual": 148,
+        "actual": 146,
         "baseline": 130.6,
         "floor": null,
         "severity": "OK",
-        "message": "actual=148, baseline=131"
+        "message": "actual=146, baseline=131"
       },
       {
         "source": "The Cloudveil",
-        "actual": 124,
+        "actual": 123,
         "baseline": 105.3,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=124, baseline=105"
+        "message": "actual=123, baseline=105"
       },
       {
         "source": "Dishing Jackson Hole",
@@ -323,19 +323,19 @@
       },
       {
         "source": "Million Dollar Cowboy Bar",
-        "actual": 52,
+        "actual": 51,
         "baseline": 56,
         "floor": null,
         "severity": "OK",
-        "message": "actual=52, baseline=56"
+        "message": "actual=51, baseline=56"
       },
       {
         "source": "Center for the Arts Jackson Hole",
-        "actual": 52,
+        "actual": 51,
         "baseline": 27.4,
         "floor": 30,
         "severity": "ELEVATED",
-        "message": "actual=52, baseline=27 (190% of normal)"
+        "message": "actual=51, baseline=27 (186% of normal)"
       },
       {
         "source": "Snow King Mountain",
