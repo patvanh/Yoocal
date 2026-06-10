@@ -228,10 +228,13 @@ def scrape_schema_org_events(
             if eff_end < today_iso:
                 dropped_past += 1
                 continue
-            # If start is past but end is future, bump date forward to today
-            # so the event shows up on current+future days.
-            if parsed["date"] < today_iso <= eff_end:
-                parsed["date"] = today_iso
+            # Do NOT bump a non-recurring event's start to today. A single page
+            # with a placeholder/season start + far-future end (e.g. Visit Park
+            # City "Park Silly Sunday Market") would otherwise be stamped as
+            # "happening today" on the wrong day. Genuine multi-day spans still
+            # render across their range from the real start via the frontend
+            # filter; truly-past single events were already dropped above.
+            pass
 
         # If JSON-LD didn't supply start_time, try to extract from visible HTML
         if not parsed.get("start_time"):
