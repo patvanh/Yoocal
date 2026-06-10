@@ -880,8 +880,11 @@ SOURCE_PRIORITY = {
     "Wasatch County Parks & Rec": 1,
     # Tier 2: trusted aggregator / tourism board / local newspaper
     "The Park Record": 2, "Park City Annual Events": 2,
+    # Chambers/tourism boards are primary sources — outrank The Park Record
+    # (which republishes the nowplayingutah aggregator, often with wrong times).
+    "Heber Valley Tourism": 1,
     "Visit Park City": 2, "Visit Park City (sitemap)": 2,
-    "Mountain Town Music": 2, "Heber Valley Tourism": 2,
+    "Mountain Town Music": 2,
     "Jackson Hole Chamber of Commerce": 2, "Elkhart Lake Tourism": 2,
     "RunSignup": 2, "Salt Lake Running Co": 2,
     "Park City Gallery Association": 2,
@@ -1000,7 +1003,7 @@ def _prefix_merge(events: list[dict]) -> list[dict]:
 # source already lists the same event. Google Events in particular has been
 # observed mis-tagging dates (e.g. Mountain Valley Stampede Rodeo on Jul 29
 # when the real run is Jul 30-Aug 1 per Heber Valley Tourism).
-_LOW_TRUST_AGGREGATORS = {"Google Events", "Eventbrite", "Bandsintown", "EventTicketsCenter"}
+_LOW_TRUST_AGGREGATORS = {"Google Events", "Eventbrite", "Bandsintown", "EventTicketsCenter", "The Park Record"}
 
 
 def _suppress_aggregator_dupes(events: list, window_days: int = 7) -> list:
@@ -1020,12 +1023,17 @@ def _suppress_aggregator_dupes(events: list, window_days: int = 7) -> list:
     from collections import defaultdict as _dd
 
     # Index ALL non-aggregator records by normalized title -> set of dates
+    import re as _sup_re
+    def _suppress_key(title):
+        t = _normalize_title(title or "")
+        t = _sup_re.sub(r"^(hebers|heber|park city|jacksons|jackson|midway|kamas|oakley)\b\s*", "", t)
+        return t.strip()
     high_trust_by_title = _dd(list)
     for e in events:
         src = e.get("source") or ""
         if src in _LOW_TRUST_AGGREGATORS:
             continue
-        nt = _normalize_title(e.get("title") or "")
+        nt = _suppress_key(e.get("title") or "")
         d = e.get("date")
         if nt and d:
             try:
@@ -1042,7 +1050,7 @@ def _suppress_aggregator_dupes(events: list, window_days: int = 7) -> list:
             out.append(e)
             continue
         # Check if a high-trust source has this title near this date
-        nt = _normalize_title(e.get("title") or "")
+        nt = _suppress_key(e.get("title") or "")
         d = e.get("date")
         if not nt or not d:
             out.append(e)
