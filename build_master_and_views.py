@@ -829,6 +829,20 @@ def _strip_title_year(t: str) -> str:
     return rest
 
 
+def _best_display_title(records: list) -> str:
+    """Among records merged into one event, pick the cleanest title: prefer one
+    WITHOUT a '<promoter> Presents' prefix, then the shortest (least cruft)."""
+    import re as _re
+    titles = [(_r.get("title") or "").strip() for _r in records]
+    titles = [t for t in titles if t]
+    if not titles:
+        return ""
+    def _score(t):
+        has_promoter = 1 if _re.match(r"^.{0,80}?\bpresents\b\s*[:/-]", t, _re.I) else 0
+        return (has_promoter, len(t))
+    return min(titles, key=_score)
+
+
 def _normalize_image_url(url: str) -> str:
     """Bump earthdiver Cloudflare image-transform width so schema images clear
     Google's 720px rich-result minimum. CF clamps to the asset's native width,
@@ -912,7 +926,7 @@ def merge_events(records: list[dict]) -> dict:
         base["_all_sources"] = sorted(srcs)
 
     base = _sanitize_span(_infer_pricing(_derive_address(_apply_single_venue_lookup(_backfill_venue(base)))))
-    base["title"] = _strip_title_year(_clean_display_text(base.get("title", "")))
+    base["title"] = _strip_title_year(_clean_display_text(_best_display_title(records) or base.get("title", "")))
     if base.get("description"):
         base["description"] = _clean_display_text(base["description"])
     if base.get("image_url"):
