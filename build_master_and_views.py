@@ -366,11 +366,13 @@ def _fan_out_recurring(events):
         end_date = e.get("end_date")
         start_date = (e.get("date") or "")[:10]
         if occ:
+            _series_end = max([o[:10] for o in occ if o] + ([end_date[:10]] if end_date else []))
             for d in occ:
                 copy = dict(e)
                 copy["date"] = d
                 copy["end_date"] = None
                 copy.pop("occurrence_dates", None)
+                copy["series_end"] = _series_end  # last date of the series (survives fan-out)
                 result.append(copy)
             fanned += 1
         elif end_date and start_date and end_date > start_date:
@@ -385,6 +387,7 @@ def _fan_out_recurring(events):
                     copy = dict(e)
                     copy["date"] = d.isoformat()
                     copy["end_date"] = None
+                    copy["series_end"] = end.isoformat()  # last date of the run (survives fan-out)
                     result.append(copy)
                     d += timedelta(days=1)
                 fanned += 1

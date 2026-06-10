@@ -196,6 +196,17 @@ def check_recurring_dropped(events, max_ex):
             claims_recurrence = False
         if not (has_strong or claims_recurrence):
             continue
+        # ENDED series: if this recurring event's own series-end is at/before its
+        # single future date, the series is naturally winding down -- the earlier
+        # occurrences happened and are simply past. Not a dropped recurrence.
+        # series_end is stamped by fan-out and survives onto each per-day record
+        # (end_date/occurrence_dates are nulled there); fall back to those for
+        # un-fanned records.
+        _occ = e.get("occurrence_dates") or []
+        _series_end = (e.get("series_end") or "")[:10] or ev_end(e) or (
+            max(d[:10] for d in _occ) if _occ else "")
+        if _series_end and _series_end <= ev_date(e):
+            continue
         key = norm_title(title)
         by_key[key].add(ev_date(e))
         sample.setdefault(key, e)
