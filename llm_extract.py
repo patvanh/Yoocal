@@ -32,8 +32,14 @@ MODEL = "claude-haiku-4-5-20251001"
 OUT = "extracted_corrections.json"
 PRICE_IN, PRICE_OUT = 1.00, 5.00
 # fields we propose corrections for (high-value, the ones that break)
-PROPOSE = ["date", "end_date", "start_time", "recurrence", "recurrence_days",
-           "recurrence_nth", "venue_name"]
+PROPOSE = ["date", "end_date", "start_time", "end_time", "recurrence",
+           "recurrence_days", "recurrence_nth", "venue_name", "address",
+           "description", "category", "price", "is_free"]
+
+# Corrections for category must map to exactly these canonical buckets.
+CANONICAL_CATEGORIES = ["Music", "Arts & Theater", "Food & Drink", "Outdoors",
+    "Running & Races", "Sports", "Family & Kids", "Wellness", "Nightlife",
+    "Education & Talks", "Community"]
 CONF_GATE = 0.75   # only PROPOSE a change at/above this confidence
 
 def load_all_events():
@@ -69,6 +75,12 @@ def existing_view(e):
         "recurrence_days": e.get("recurrence_days") or e.get("recurrence_day") or None,
         "recurrence_nth": None,
         "venue_name": e.get("venue_name") or e.get("location") or None,
+        "end_time": e.get("end_time") or None,
+        "address": e.get("address") or None,
+        "description": e.get("description") or None,
+        "category": (e.get("categories") or [None])[0] if e.get("categories") else None,
+        "price": e.get("price") or None,
+        "is_free": e.get("is_free"),
     }
 
 def build_prompt(e):
@@ -85,7 +97,12 @@ def build_prompt(e):
         '  "recurrence_days": ["weekday names like Monday"] or null,\n'
         '  "recurrence_nth": [1,3] for \"1st & 3rd\" monthly patterns, else null,\n'
         '  "venue_name": "the specific place/business name if stated, else null",\n'
-        '  "confidence": {"date":0.0,"end_date":0.0,"start_time":0.0,"recurrence":0.0,"venue_name":0.0}\n'
+        '  "address": "street address if stated (e.g. 250 South Main Street, Heber City, UT), else null",\n'
+        '  "description": "a 1-3 sentence factual description from the text, else null",\n'
+        '  "category": "EXACTLY ONE of: Music, Arts & Theater, Food & Drink, Outdoors, Running & Races, Sports, Family & Kids, Wellness, Nightlife, Education & Talks, Community; else null",\n'
+        '  "price": "the cost as written (e.g. $25, $10-15, Free) if stated, else null",\n'
+        '  "is_free": true/false/null (true only if the text clearly says free admission),\n'
+        '  "confidence": {"date":0.0,"end_date":0.0,"start_time":0.0,"end_time":0.0,"recurrence":0.0,"venue_name":0.0,"address":0.0,"description":0.0,"category":0.0,"price":0.0,"is_free":0.0}\n'
         "}\n"
         "Rules: 'Daily, Mon - Sat' => recurrence daily (or weekly with all six "
         "days). '1st & 3rd Tuesday' => monthly_nth, days [Tuesday], nth [1,3]. "
@@ -122,6 +139,9 @@ def diff_proposal(existing, extracted, src_text="", today=None):
     out = {}
     for f in PROPOSE:
         new = extracted.get(f)
+        # category must be one of the canonical buckets, else ignore the proposal
+        if f == "category" and new not in CANONICAL_CATEGORIES:
+            continue
         if new in (None, "", [], "none") and f != "recurrence":
             continue
         old = existing.get(f)

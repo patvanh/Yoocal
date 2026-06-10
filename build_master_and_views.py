@@ -1436,6 +1436,38 @@ def main():
     if _title_cleaned:
         print(f"  Cleaned {_title_cleaned} '- Every <Day>' title suffixes")
 
+    try:
+        import os as _os, json as _json
+        _corr_path = _os.path.join(_os.path.dirname(__file__), "reviewed_corrections.json")
+        if _os.path.exists(_corr_path):
+            import apply_corrections as _ac
+            _corr = _json.load(open(_corr_path))
+            # index corrections by (normalized title, source) so every date-copy
+            # of an event gets the same field fix (venue/category/etc.)
+            _by_ts = {}
+            for _v in _corr.values():
+                _k = (( _v.get("title") or "").strip().lower(), _v.get("source") or "")
+                _by_ts.setdefault(_k, {}).update(_v.get("proposal") or {})
+            _applied, _added, _out = 0, 0, []
+            for _e in all_events:
+                _k = (( _e.get("title") or "").strip().lower(), _e.get("source") or "")
+                _prop = _by_ts.get(_k)
+                if not _prop:
+                    _out.append(_e); continue
+                _gated = {f: d for f, d in _prop.items()
+                          if f not in ("date", "end_date") and isinstance(d, dict)
+                          and float(d.get("conf", 0)) >= 0.85}
+                if not _gated:
+                    _out.append(_e); continue
+                _res = _ac.apply_to_event(_e, _gated)
+                _applied += 1
+                if len(_res) > 1: _added += len(_res) - 1
+                _out.extend(_res)
+            all_events = _out
+            print(f"  Applied reviewed corrections to {_applied} events (+{_added} from multi-nth split)")
+    except Exception as _ce:
+        print(f"  WARN: corrections apply skipped: {_ce}")
+
     all_events = _fan_out_recurring(all_events)
 
     _before_junk = len(all_events)
