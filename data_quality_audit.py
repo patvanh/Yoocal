@@ -609,6 +609,9 @@ def main():
                 findings_out["cities"][city]["findings"].append({
                     "code": r["code"], "name": r["name"],
                     "severity": sev, "count": r["count"],
+                    # Persist the offending events so the file + email digest can
+                    # name them (e.g. which series got dropped), not just a count.
+                    "examples": r.get("examples", []),
                 })
             mark = {"HIGH": "‼", "MED": "•", "LOW": " "}[sev]
             line = f"  [{mark} {sev:4}] {r['code']} {r['name']}: {r['count']}"
