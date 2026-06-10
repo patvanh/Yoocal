@@ -2,69 +2,306 @@
   "generated_at": "2026-06-10",
   "cities": {
     "all": {
-      "events": 4606,
+      "events": 4711,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 2
+          "count": 2,
+          "examples": [
+            {
+              "title": "Midway Farmers Market",
+              "venue": "midway town square",
+              "only_date": "2026-06-13",
+              "why": "strong-title",
+              "source": "Heber Valley Tourism"
+            },
+            {
+              "title": "Soulful Sundays @ Heber City Park",
+              "venue": "main street park heber city",
+              "only_date": "2026-06-14",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            }
+          ]
         },
         {
           "code": "C4",
           "name": "BAD-DATE",
           "severity": "MED",
-          "count": 17
+          "count": 13,
+          "examples": {
+            "past": [
+              {
+                "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "Visit Park City"
+              },
+              {
+                "title": "Progressive Art Experience",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "Visit Park City"
+              },
+              {
+                "title": "(Re)sounding: Art Exhibition",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "Visit Park City"
+              },
+              {
+                "title": "Summer Garden Camps",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "Visit Park City"
+              },
+              {
+                "title": "Old Town walking tour",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "Visit Park City"
+              }
+            ],
+            "far_future": [],
+            "unparseable": []
+          }
         },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 20
+          "count": 22,
+          "examples": [
+            {
+              "date": "2026-06-13",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-06-14",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-06-21",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-06-28",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-05",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            }
+          ]
         },
         {
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 1
+          "count": 1,
+          "examples": [
+            {
+              "source": "Google Events",
+              "was": 16,
+              "now": 0,
+              "lost": 16
+            }
+          ]
         }
       ]
     },
     "elkhartlake": {
       "events": 258,
-      "findings": []
-    },
-    "heber": {
-      "events": 901,
-      "findings": [
-        {
-          "code": "C1",
-          "name": "RECURRING-DROPPED",
-          "severity": "HIGH",
-          "count": 2
-        },
-        {
-          "code": "C4",
-          "name": "BAD-DATE",
-          "severity": "MED",
-          "count": 5
-        },
-        {
-          "code": "C6",
-          "name": "COVERAGE-CLIFF",
-          "severity": "HIGH",
-          "count": 1
-        }
-      ]
-    },
-    "jackson": {
-      "events": 1405,
       "findings": [
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 7
+          "count": 1,
+          "examples": [
+            {
+              "date": "2026-09-19",
+              "title_a": "Siebkens Live Music: Boo! The Band (Elktoberfest)",
+              "src_a": "Siebkens Resort",
+              "title_b": "Elktoberfest",
+              "src_b": "Elkhart Lake Tourism",
+              "sim": 0.85
+            }
+          ]
+        }
+      ]
+    },
+    "heber": {
+      "events": 1007,
+      "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 2,
+          "examples": [
+            {
+              "title": "Midway Farmers Market",
+              "venue": "midway town square",
+              "only_date": "2026-06-13",
+              "why": "strong-title",
+              "source": "Heber Valley Tourism"
+            },
+            {
+              "title": "Soulful Sundays @ Heber City Park",
+              "venue": "main street park heber city",
+              "only_date": "2026-06-14",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            }
+          ]
+        },
+        {
+          "code": "C4",
+          "name": "BAD-DATE",
+          "severity": "MED",
+          "count": 5,
+          "examples": {
+            "past": [
+              {
+                "title": "Library Board Openings",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "The Park Record"
+              },
+              {
+                "title": "Meet the Cows - Dairy Farm Tour",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "Heber Valley Tourism"
+              },
+              {
+                "title": "Cornhole @ Wallsburg Town Hall",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "Heber Valley Tourism"
+              },
+              {
+                "title": "Heber's No Reading Book Club",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "Heber Valley Tourism"
+              },
+              {
+                "title": "Country Swing & Line Dancing @ The Sycamore Building",
+                "date": "2026-06-09",
+                "end": "-",
+                "source": "Heber Valley Tourism"
+              }
+            ],
+            "far_future": [],
+            "unparseable": []
+          }
+        },
+        {
+          "code": "C5",
+          "name": "CROSS-SOURCE-DUP",
+          "severity": "MED",
+          "count": 1,
+          "examples": [
+            {
+              "date": "2026-06-13",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            }
+          ]
+        },
+        {
+          "code": "C6",
+          "name": "COVERAGE-CLIFF",
+          "severity": "HIGH",
+          "count": 1,
+          "examples": [
+            {
+              "source": "Google Events",
+              "was": 13,
+              "now": 0,
+              "lost": 13
+            }
+          ]
+        }
+      ]
+    },
+    "jackson": {
+      "events": 1409,
+      "findings": [
+        {
+          "code": "C5",
+          "name": "CROSS-SOURCE-DUP",
+          "severity": "MED",
+          "count": 7,
+          "examples": [
+            {
+              "date": "2026-07-05",
+              "title_a": "Sunday Fundays, Concert on the Commons Series",
+              "src_a": "Dishing Jackson Hole",
+              "title_b": "Sunday Funday",
+              "src_b": "Jackson Hole Mountain Resort",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-12",
+              "title_a": "Sunday Fundays, Concert on the Commons Series",
+              "src_a": "Dishing Jackson Hole",
+              "title_b": "Sunday Funday",
+              "src_b": "Jackson Hole Mountain Resort",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-19",
+              "title_a": "Sunday Fundays, Concert on the Commons Series",
+              "src_a": "Dishing Jackson Hole",
+              "title_b": "Sunday Funday",
+              "src_b": "Jackson Hole Mountain Resort",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-26",
+              "title_a": "Sunday Fundays, Concert on the Commons Series",
+              "src_a": "Dishing Jackson Hole",
+              "title_b": "Sunday Funday",
+              "src_b": "Jackson Hole Mountain Resort",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-02",
+              "title_a": "Sunday Fundays, Concert on the Commons Series",
+              "src_a": "Dishing Jackson Hole",
+              "title_b": "Sunday Funday",
+              "src_b": "Jackson Hole Mountain Resort",
+              "sim": 0.85
+            }
+          ]
         }
       ]
     }

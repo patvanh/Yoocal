@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-10T01:56:30.650525",
+  "generated_at": "2026-06-10T04:56:16.525601",
   "attempted": 2,
-  "applied": 1,
+  "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "Damien Gunn",
+      "title": "JH Downhill Championships Race #2 (Dirty Harry)",
       "type": "title_truncated",
-      "link": "https://www.milliondollarcowboybar.com/events/damien-gunn-1-1",
+      "link": "https://www.jacksonhole.com/events/jh-downhill-championships-race-2-dirty-harry",
       "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source page text only mentions an event on June 5, 2025 at Million Dollar Cowboy Bar, but contains no information about the July 27, 2026 event, so I cannot determine if the title should be expanded beyond 'Damien Gunn'."
+        "confidence": "high",
+        "new_title": "JH Downhill Championships Race #2 (Dirty Harry)",
+        "reasoning": "The source page text shows the exact same title 'JH Downhill Championships Race #2 (Dirty Harry)' in the Event Details section, confirming it is the complete title and not truncated."
       },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "applied": true,
+      "note": "title: 'JH Downhill Championships Race #2 (Dirty Harry)' \u2192 'JH Downhill Championships Race #2 (Dirty Harry)'"
     },
     {
       "city": "jackson",
-      "title": "Fitz and The Tantrums King Concert",
+      "title": "Snow King Hill Climb",
       "type": "title_truncated",
-      "link": "https://snowkingmountain.com/event/fitz-and-the-tantrums-king-concert/",
+      "link": "https://www.runningintheusa.com/details/125411",
       "resolution": {
         "confidence": "high",
-        "new_title": "Fitz and The Tantrums - Snow King Mountain Resort",
-        "reasoning": "The source text shows the complete event title includes the venue 'Snow King Mountain Resort' rather than just 'King Concert', which appears to be a truncation error."
+        "new_title": "Snow King Hill Climb",
+        "reasoning": "The source page clearly shows 'Snow King Hill Climb' as the complete race title multiple times throughout the page, indicating this is the full official title and not truncated."
       },
       "applied": true,
-      "note": "title: 'Fitz and The Tantrums King Concert' \u2192 'Fitz and The Tantrums - Snow King Mountain Resort'"
+      "note": "title: 'Snow King Hill Climb' \u2192 'Snow King Hill Climb'"
     }
   ]
 }
