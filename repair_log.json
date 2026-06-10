@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-10T19:17:51.092245",
+  "generated_at": "2026-06-10T21:42:26.366057",
   "audit_date": "2026-06-10",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1869,
+      "before_count": 1863,
       "passes": {
         "past_dates": {
           "fixed": 2,
@@ -20,7 +20,7 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 3,
           "examples": [
             {
               "title": "Fascia Rolling Class",
@@ -29,10 +29,6 @@
             {
               "title": "Group Fitness Classes",
               "had_span": 181
-            },
-            {
-              "title": "Old Town walking tour",
-              "had_span": 64
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
@@ -122,24 +118,31 @@
           ]
         },
         "classification": {
-          "fixed": 389,
+          "fixed": 368,
           "examples": [
             {
-              "title": "Employer Committee (Disability Hiring)",
+              "title": "Summer Garden Camps",
               "before": [],
               "after": [
                 "Community"
               ]
             },
             {
-              "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
-              "before": [],
+              "title": "2026 Oakley Rodeo BBQ",
+              "before": [
+                "Community"
+              ],
               "after": [
-                "Food & Drink"
+                "Community",
+                "Food & Drink",
+                "Sports",
+                "Kids",
+                "Family",
+                "Festival"
               ]
             },
             {
-              "title": "Newcomers Coffee Social & Speaker Event",
+              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [
                 "Community"
               ],
@@ -149,24 +152,31 @@
               ]
             },
             {
-              "title": "Progressive Art Experience",
-              "before": [],
-              "after": [
+              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
+              "before": [
                 "Community"
+              ],
+              "after": [
+                "Community",
+                "Kids",
+                "Education"
               ]
             },
             {
-              "title": "Summer Garden Camps",
-              "before": [],
-              "after": [
+              "title": "Forum Fest at Canyons Village",
+              "before": [
                 "Community"
+              ],
+              "after": [
+                "Community",
+                "Festival"
               ]
             }
           ]
         }
       },
-      "after_count": 1875,
-      "total_fixes": 409
+      "after_count": 1869,
+      "total_fixes": 387
     },
     {
       "city": "elkhart-lake",
@@ -225,19 +235,15 @@
     },
     {
       "city": "heber",
-      "before_count": 237,
+      "before_count": 238,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 2,
+          "fixed": 1,
           "examples": [
-            {
-              "title": "Ritual Chocolate Public Tour and Mini Tasting",
-              "had_span": 191
-            },
             {
               "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
               "had_span": 110
@@ -362,12 +368,12 @@
           ]
         }
       },
-      "after_count": 240,
-      "total_fixes": 23
+      "after_count": 241,
+      "total_fixes": 22
     },
     {
       "city": "jackson",
-      "before_count": 822,
+      "before_count": 731,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -479,7 +485,7 @@
           "examples": []
         }
       },
-      "after_count": 835,
+      "after_count": 744,
       "total_fixes": 19
     }
   ]

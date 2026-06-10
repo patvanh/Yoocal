@@ -1,33 +1,17 @@
 {
-  "generated_at": "2026-06-10T19:17:59.238633",
+  "generated_at": "2026-06-10T21:42:26.781542",
   "attempted": 2,
   "applied": 0,
   "log": [
     {
       "city": "jackson",
-      "title": "On the Road at St. John\u2019s Episcopal Church",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/on-the-road-at-st-john%e2%80%99s-episcopal-church/3496/",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source page text only shows 'On the Road at St. John's Episcopal Church' as the title with no additional information that would indicate a more complete version."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "skipped": "no event_index"
     },
     {
       "city": "jackson",
-      "title": "Country DJ Steady Jake",
       "type": "title_truncated",
-      "link": "https://www.milliondollarcowboybar.com/events/country-dj-steady-jake-12-0",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source text only contains a promotional description for 'Country DJ Steady Jake' as a service provider but does not provide any additional event title information beyond what was already given."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "skipped": "no event_index"
     }
   ]
 }

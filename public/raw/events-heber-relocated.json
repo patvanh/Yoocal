@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-10T18:54:57.621943",
-  "total": 146,
+  "updated_at": "2026-06-10T21:21:42.419850",
+  "total": 147,
   "events": [
     {
       "title": "Deer Creek Express",
@@ -2993,6 +2993,33 @@
       "venue_name": "Heber Valley Railroad",
       "start_time": "1:00 PM",
       "end_time": "2:30 PM"
+    },
+    {
+      "title": "Extreme Cup Soccer Tournament",
+      "date": "2026-08-01",
+      "description": "The Park City Extreme Cup Soccer Tournament is one of the largest sanctioned U.S. Youth Soccer tournament for boys and girls U9 through U19 in the...",
+      "location": "Various locations through out Summit County and the Heber Valley, Park City, UT",
+      "link": "https://www.visitparkcity.com/event/extreme-cup-soccer-tournament/28981/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/event/extreme-cup-soccer-tournament/28981/",
+      "lat": 40.6461,
+      "lng": -111.498,
+      "categories": [
+        "Sports"
+      ],
+      "end_date": null,
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/Soccer_17622224-BA03-24E5-184BCD9558E992E1_176a63b4-047c-a7ec-709ae5252d8c71cb.jpg",
+      "address": "Park City, UT",
+      "venue_name": "Various locations through out Summit County and the Heber Valley",
+      "_all_sources": [
+        "Visit Park City",
+        "Visit Park City (sitemap)"
+      ],
+      "series_end": "2026-08-01",
+      "filter_categories": [
+        "Sports"
+      ],
+      "_distance_mi": 0.0
     }
   ]
 }

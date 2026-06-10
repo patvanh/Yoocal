@@ -2,7 +2,7 @@
   "generated_at": "2026-06-10",
   "cities": {
     "all": {
-      "events": 4596,
+      "events": 4707,
       "findings": [
         {
           "code": "C1",
@@ -119,7 +119,7 @@
       ]
     },
     "heber": {
-      "events": 997,
+      "events": 1112,
       "findings": [
         {
           "code": "C1",
@@ -176,7 +176,7 @@
       ]
     },
     "jackson": {
-      "events": 1356,
+      "events": 1362,
       "findings": [
         {
           "code": "C5",
@@ -186,42 +186,42 @@
           "examples": [
             {
               "date": "2026-07-05",
-              "title_a": "Sunday Fundays, Concert on the Commons Series",
-              "src_a": "Dishing Jackson Hole",
-              "title_b": "Sunday Funday",
-              "src_b": "Jackson Hole Mountain Resort",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             },
             {
               "date": "2026-07-12",
-              "title_a": "Sunday Fundays, Concert on the Commons Series",
-              "src_a": "Dishing Jackson Hole",
-              "title_b": "Sunday Funday",
-              "src_b": "Jackson Hole Mountain Resort",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             },
             {
               "date": "2026-07-19",
-              "title_a": "Sunday Fundays, Concert on the Commons Series",
-              "src_a": "Dishing Jackson Hole",
-              "title_b": "Sunday Funday",
-              "src_b": "Jackson Hole Mountain Resort",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             },
             {
               "date": "2026-07-26",
-              "title_a": "Sunday Fundays, Concert on the Commons Series",
-              "src_a": "Dishing Jackson Hole",
-              "title_b": "Sunday Funday",
-              "src_b": "Jackson Hole Mountain Resort",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             },
             {
               "date": "2026-08-02",
-              "title_a": "Sunday Fundays, Concert on the Commons Series",
-              "src_a": "Dishing Jackson Hole",
-              "title_b": "Sunday Funday",
-              "src_b": "Jackson Hole Mountain Resort",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             }
           ]
