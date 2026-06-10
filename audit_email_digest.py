@@ -370,6 +370,21 @@ def render_html(audit, repair, llm_health=None, baselines=None, guard_state=None
                 f"<td style='padding:6px 10px;font-size:13px;text-align:right'>{f.get('count',0)}</td>"
                 f"</tr>"
             )
+            # List the named example events under the row so the specific
+            # offenders (e.g. which series got dropped) show in the inbox.
+            _exs = f.get("examples") or []
+            _names = []
+            for _ex in (_exs if isinstance(_exs, list) else [])[:6]:
+                if not isinstance(_ex, dict):
+                    continue
+                _t = _ex.get("title") or _ex.get("title_a") or "(untitled)"
+                _simrc = _ex.get("source") or _ex.get("src_a") or ""
+                _names.append(f"{_t}" + (f" <span style='color:#9ca3af'>· {_simrc}</span>" if _simrc else ""))
+            if _names:
+                dq_rows.append(
+                    f"<tr><td></td><td colspan='3' style='padding:2px 10px 8px;"
+                    f"font-size:12px;color:#6b7280'>" + " &nbsp;•&nbsp; ".join(_names) + "</td></tr>"
+                )
     if dq_rows:
         dq_html = (
             "<h2 style='font-size:17px;margin:28px 0 8px'>Data-quality checks</h2>"
