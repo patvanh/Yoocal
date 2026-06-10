@@ -143,15 +143,32 @@ def _parse_hvt_date_label(event, label):
         r"^(?:weekly,?\s+)?(mon|tue|wed|thu|fri|sat|sun)[a-z]*",
         s_lo,
     )
-    if m_weekday:
+    # A weekday prefix ALONE is not proof of weekly recurrence -- "Fri & Sat,
+    # 8AM-4PM" is a two-day event naming its days, not "every Friday". Require a
+    # corroborating recurrence signal, and bail when the label names a second
+    # day with &/and (a multi-day single event).
+    m_range = _hvt_re.search(
+        r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*"
+        r"\s*[-\u2013\u2014]\s*"
+        r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b",
+        s_lo,
+    )
+    # corroborating span can be month-month ("May - Sep") OR month day - ... ("May 8 - Jun 12")
+    _has_span = bool(m_range) or bool(_hvt_re.search(
+        r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+\d{1,2}\s*[-\u2013\u2014]\s*"
+        r"(?:(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+)?\d{1,2}\b", s_lo))
+    _has_weekly_word = bool(_hvt_re.search(r"\bweekly\b|\bevery\b", s_lo))
+    _has_plural_cue = bool(_hvt_re.search(
+        r"\b(mon|tue|wed|thu|fri|sat|sun)[a-z]*s\b|\bmornings\b|\bevenings\b|\bafternoons\b|\bnights\b",
+        s_lo))
+    _multi_day_single = bool(_hvt_re.match(
+        r"^(mon|tue|wed|thu|fri|sat|sun)[a-z]*\s*(?:&|and|,)\s*(mon|tue|wed|thu|fri|sat|sun)[a-z]*",
+        s_lo))
+    _is_weekly = bool(m_weekday) and not _multi_day_single and (
+        _has_span or _has_weekly_word or _has_plural_cue)
+    if _is_weekly:
         day_name = _HVT_WEEKDAY[m_weekday.group(1)]
         end_date_iso = None
-        m_range = _hvt_re.search(
-            r"\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*"
-            r"\s*[-\u2013\u2014]\s*"
-            r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b",
-            s_lo,
-        )
         if m_range:
             end_month = _HVT_MONTH_NUM[m_range.group(2)]
             try:
