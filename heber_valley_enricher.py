@@ -107,7 +107,7 @@ def _extract_dates_via_llm(title, start_date_hint, article_text):
         '  "end_date": "YYYY-MM-DD" or null (only if event spans >1 day),\n'
         '  "is_recurring": true or false,\n'
         '  "recurrence_text": "human description" or null,\n'
-        '  "occurrence_dates": ["YYYY-MM-DD", ...] or null (all dates, up to 90 days from today),\n'
+        '  "occurrence_dates": ["YYYY-MM-DD", ...] or null (every occurrence through the real end date, do NOT cap),\n'
         '  "venue_name": "the venue/place name (e.g. Wasatch County Outdoor Arena)" or null,\n'
         '  "street_address": "street address only (e.g. 415 South Southfield Road)" or null,\n'
         '  "city": "city name (e.g. Heber City)" or null,\n'
@@ -118,7 +118,7 @@ def _extract_dates_via_llm(title, start_date_hint, article_text):
         "and the hint was 2026-07-27, set start_date=2026-07-23 and end_date=2026-08-01.\n"
         "- If the article says 'Every Saturday from June to October' set is_recurring=true, "
         "recurrence_text='Every Saturday June-October', and occurrence_dates to every Saturday "
-        "from today through 90 days out.\n"
+        "from the start through the real end date (e.g. all the way through October).\n"
         "- If single one-day event, leave end_date/is_recurring/occurrence_dates null/false.\n"
         "- Year is 2026 unless the article explicitly says otherwise.\n"
         "- Look carefully for date ranges like 'DATES:', 'When:', 'July X through August Y'.\n"
@@ -166,8 +166,14 @@ def enrich_heber_valley_events(events):
         url = e.get("link")
         if not url or "gohebervalley.com" not in url:
             continue
+        url = url.rstrip("/")  # normalize: trailing-slash variants share one cache key
 
-        if url in cache:
+        # Only TRUST cache entries from the deterministic parser (page-structured,
+        # stable, uncapped). LLM-derived ("ok") or failed entries are re-fetched
+        # and re-parsed each run so the accurate result wins and stale/capped LLM
+        # data self-heals. These CMS pages almost all carry the structured block,
+        # so after one run nearly everything is a cached deterministic hit.
+        if url in cache and cache[url].get("status") == "deterministic":
             cached = cache[url]
             cached_hit += 1
             llm_start = cached.get("start_date")

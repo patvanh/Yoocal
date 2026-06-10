@@ -162,6 +162,13 @@ def _normalize_title(title: str) -> str:
     t = _html.unescape(title)               # &amp; -> &, &#39; -> '
     t = _re.sub(r"<[^>]+>", " ", t)         # strip HTML tags (<em>, </em>, <strong>...)
     t = t.lower()
+    # Drop a leading "<presenter> presents <:|-|/>" promoter clause (e.g.
+    # "Park City Film Presents: Jack Johnson" -> "Jack Johnson"). Runs before
+    # tokenizing so the whole clause goes, not just the word "presents". Only
+    # strips when real title text remains after the separator.
+    _pm = _re.match(r"^.{0,80}?\bpresents\b\s*[:/-]\s*(.+)$", t)
+    if _pm and _pm.group(1).strip():
+        t = _pm.group(1)
     t = _re.sub(r"['’]s\b", "", t)         # strip possessive 's ("Heber's" -> "heber")
     # Canonicalize race-distance synonyms so "13.1M Half Marathon" and bare
     # "Half Marathon" (same distance, different notation) dedupe to one event.
