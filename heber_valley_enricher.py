@@ -68,7 +68,7 @@ def _fetch_page_text(url, timeout=15):
     except ImportError:
         return None
     try:
-        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (Yoocal)"}, timeout=timeout)
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"}, timeout=timeout)
         r.raise_for_status()
         html = r.text
     except Exception as ex:
@@ -80,8 +80,8 @@ def _fetch_page_text(url, timeout=15):
     html = re.sub(r"<footer.*?</footer>", "", html, flags=re.S | re.I)
     text = re.sub(r"<[^>]+>", " ", html)
     text = re.sub(r"\s+", " ", text).strip()
-    if len(text) > 8000:
-        text = text[:8000]
+    # Do NOT truncate: recurring-event date lists ("Starts ...") run long and
+    # often sit past 8KB; cutting here drops months of occurrences.
     return text
 
 
