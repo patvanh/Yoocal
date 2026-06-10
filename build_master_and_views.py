@@ -1108,7 +1108,7 @@ def _link_merge(events: list) -> list:
     of individual shows, not a multi-event umbrella."""
     import re as _re
     from collections import defaultdict as _dd
-    _UMBRELLA = _re.compile(r"\b(series|challenge|triple|championship|grand slam|circuit)\b")
+    _UMBRELLA = _re.compile(r"\b(series|challenge|triple|championship|grand slam|circuit|market|festival|fair|fest)\b")
 
     def _is_umbrella(t):
         t2 = _re.sub(r"concert series", "", t)
@@ -1446,6 +1446,32 @@ def main():
     all_events = [e for e in all_events if not _is_excluded_amenity(e)]
     if _before_excl != len(all_events):
         print(f"Dropped {_before_excl - len(all_events)} always-on amenity events")
+
+    # Drop "starts-today" placeholders: a scraper that couldn't parse a recurring
+    # event's schedule defaulted the start to the scrape date and stamped a
+    # season-long end with no recurrence, so it renders as a phantom "today" on
+    # the wrong day. Signature: start == build date, span > _MAX_EVENT_SPAN_DAYS,
+    # no recurrence/occurrence list. (Root fix belongs in the source scraper.)
+    def _is_today_placeholder(e):
+        dt = (e.get("date") or "")[:10]
+        ed = (e.get("end_date") or "")[:10]
+        if dt != today_iso or not ed or ed <= dt:
+            return False
+        if (e.get("recurrence") or e.get("recurrence_days")
+                or e.get("recurrence_day") or e.get("occurrence_dates")):
+            return False
+        try:
+            span = (_dt_span.date.fromisoformat(ed) - _dt_span.date.fromisoformat(dt)).days
+        except ValueError:
+            return False
+        return span > _MAX_EVENT_SPAN_DAYS
+    _before_ph = len(all_events)
+    _dropped_ph = [e for e in all_events if _is_today_placeholder(e)]
+    all_events = [e for e in all_events if not _is_today_placeholder(e)]
+    if _dropped_ph:
+        print(f"Dropped {len(_dropped_ph)} 'starts-today' placeholder record(s) "
+              f"(unparsed recurring): "
+              + ", ".join(f"{e.get('title')} [{e.get('source')}]" for e in _dropped_ph[:8]))
 
     print(f"\nTotal records (before dedup): {len(all_events)}")
     
