@@ -807,6 +807,28 @@ def _clean_display_text(s: str) -> str:
     return s
 
 
+_DISPLAY_MONTHS = {"january","february","march","april","may","june","july",
+    "august","september","october","november","december","jan","feb","mar",
+    "apr","jun","jul","aug","sep","sept","oct","nov","dec"}
+
+
+def _strip_title_year(t: str) -> str:
+    """Drop a leading aggregator year prefix from a DISPLAY title. Conservative:
+    only when 2+ words remain and the next word isn't a month/number."""
+    import re as _re
+    m = _re.match(r"^(20\d\d)\s+(.+)$", t or "")
+    if not m:
+        return t
+    rest = m.group(2).strip()
+    words = rest.split()
+    if len(words) < 2:
+        return t
+    nxt = words[0].lower().strip(".,")
+    if nxt in _DISPLAY_MONTHS or nxt.isdigit():
+        return t
+    return rest
+
+
 def _normalize_image_url(url: str) -> str:
     """Bump earthdiver Cloudflare image-transform width so schema images clear
     Google's 720px rich-result minimum. CF clamps to the asset's native width,
@@ -860,7 +882,7 @@ def merge_events(records: list[dict]) -> dict:
     """When multiple records dedupe to the same key, pick the best fields."""
     if len(records) == 1:
         _r = _sanitize_span(_infer_pricing(_derive_address(_apply_single_venue_lookup(_backfill_venue(dict(records[0]))))))
-        _r["title"] = _clean_display_text(_r.get("title", ""))
+        _r["title"] = _strip_title_year(_clean_display_text(_r.get("title", "")))
         if _r.get("description"):
             _r["description"] = _clean_display_text(_r["description"])
         if _r.get("image_url"):
@@ -890,7 +912,7 @@ def merge_events(records: list[dict]) -> dict:
         base["_all_sources"] = sorted(srcs)
 
     base = _sanitize_span(_infer_pricing(_derive_address(_apply_single_venue_lookup(_backfill_venue(base)))))
-    base["title"] = _clean_display_text(base.get("title", ""))
+    base["title"] = _strip_title_year(_clean_display_text(base.get("title", "")))
     if base.get("description"):
         base["description"] = _clean_display_text(base["description"])
     if base.get("image_url"):
