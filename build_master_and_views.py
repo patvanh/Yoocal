@@ -614,6 +614,43 @@ _VENUE_NAME_ADDRESSES = {
 }
 
 
+_VENUE_ALIASES = {
+    "goldener hirsch, auberge collection": "Goldener Hirsch",
+    "blair education center - intermountain park city hospital": "Blair Education Center at Intermountain Park City Hospital",
+    "alpine park city social aid & pleasure club": "Park City Social Aid & Pleasure Club",
+    "swaner preserve and ecocenter": "Swaner Preserve & EcoCenter",
+}
+
+
+def _norm_venue_key(name: str) -> str:
+    import re as _re
+    return _re.sub(r"\s+", " ", (name or "").strip().lower())
+
+
+def _strip_venue_promoter(name: str) -> str:
+    """Drop a leading '<promoter> Presents <:|-|/>' label some feeds bake into
+    venue_name (e.g. 'Grand Valley Bank Presents / Jazz In City Park')."""
+    import re as _re
+    m = _re.match(r"^.{0,80}?\bpresents\b\s*[:/-]\s*(.+)$", name or "", _re.I)
+    if m and m.group(1).strip():
+        return m.group(1).strip()
+    return name
+
+
+def _canonicalize_venue(record: dict) -> int:
+    """Normalize venue_name in place: strip a promoter prefix, then map a known
+    same-place alias to one canonical name. Returns 1 if changed, else 0."""
+    vn = (record.get("venue_name") or "").strip()
+    if not vn:
+        return 0
+    cleaned = _strip_venue_promoter(vn)
+    canon = _VENUE_ALIASES.get(_norm_venue_key(cleaned), cleaned)
+    if canon != record.get("venue_name"):
+        record["venue_name"] = canon
+        return 1
+    return 0
+
+
 def _apply_single_venue_lookup(record: dict) -> dict:
     """Fill address from known-venue lookup tables. Source-keyed first, then
     venue_name-keyed. Never overwrites existing fields."""
@@ -1376,6 +1413,13 @@ def main():
 
     print(f"\nTotal records (before dedup): {len(all_events)}")
     
+    # Canonicalize venue names (curated same-place aliases + strip
+    # "<promoter> Presents /" prefixes) BEFORE dedup so venue-based passes,
+    # address lookups, and display all agree on one name per place.
+    _vc = sum(_canonicalize_venue(e) for e in all_events)
+    if _vc:
+        print(f"Canonicalized {_vc} venue name(s)")
+
     # Step 2: Global dedup
     by_key = {}
     for e in all_events:
