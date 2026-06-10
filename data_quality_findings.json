@@ -2,14 +2,21 @@
   "generated_at": "2026-06-10",
   "cities": {
     "all": {
-      "events": 4711,
+      "events": 4605,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 2,
+          "count": 3,
           "examples": [
+            {
+              "title": "Coffee & Calm: Designer Chats",
+              "venue": "curated style collective",
+              "only_date": "2026-06-10",
+              "why": "recurrence-field",
+              "source": "Visit Park City"
+            },
             {
               "title": "Midway Farmers Market",
               "venue": "midway town square",
@@ -25,48 +32,6 @@
               "source": "Heber Valley Tourism"
             }
           ]
-        },
-        {
-          "code": "C4",
-          "name": "BAD-DATE",
-          "severity": "MED",
-          "count": 13,
-          "examples": {
-            "past": [
-              {
-                "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "Visit Park City"
-              },
-              {
-                "title": "Progressive Art Experience",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "Visit Park City"
-              },
-              {
-                "title": "(Re)sounding: Art Exhibition",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "Visit Park City"
-              },
-              {
-                "title": "Summer Garden Camps",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "Visit Park City"
-              },
-              {
-                "title": "Old Town walking tour",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "Visit Park City"
-              }
-            ],
-            "far_future": [],
-            "unparseable": []
-          }
         },
         {
           "code": "C5",
@@ -154,7 +119,7 @@
       ]
     },
     "heber": {
-      "events": 1007,
+      "events": 998,
       "findings": [
         {
           "code": "C1",
@@ -177,48 +142,6 @@
               "source": "Heber Valley Tourism"
             }
           ]
-        },
-        {
-          "code": "C4",
-          "name": "BAD-DATE",
-          "severity": "MED",
-          "count": 5,
-          "examples": {
-            "past": [
-              {
-                "title": "Library Board Openings",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "The Park Record"
-              },
-              {
-                "title": "Meet the Cows - Dairy Farm Tour",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "Heber Valley Tourism"
-              },
-              {
-                "title": "Cornhole @ Wallsburg Town Hall",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "Heber Valley Tourism"
-              },
-              {
-                "title": "Heber's No Reading Book Club",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "Heber Valley Tourism"
-              },
-              {
-                "title": "Country Swing & Line Dancing @ The Sycamore Building",
-                "date": "2026-06-09",
-                "end": "-",
-                "source": "Heber Valley Tourism"
-              }
-            ],
-            "far_future": [],
-            "unparseable": []
-          }
         },
         {
           "code": "C5",
@@ -253,7 +176,7 @@
       ]
     },
     "jackson": {
-      "events": 1409,
+      "events": 1362,
       "findings": [
         {
           "code": "C5",
@@ -306,5 +229,5 @@
       ]
     }
   },
-  "high_total": 6
+  "high_total": 7
 }

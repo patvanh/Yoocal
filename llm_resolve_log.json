@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-10T04:56:16.525601",
+  "generated_at": "2026-06-10T19:02:36.957321",
   "attempted": 2,
   "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "JH Downhill Championships Race #2 (Dirty Harry)",
+      "title": "Jackson Hole Farmers Market",
       "type": "title_truncated",
-      "link": "https://www.jacksonhole.com/events/jh-downhill-championships-race-2-dirty-harry",
+      "link": "https://dishingjh.com/event/jackson-hole-farmers-market-7/2026-07-25/",
       "resolution": {
         "confidence": "high",
-        "new_title": "JH Downhill Championships Race #2 (Dirty Harry)",
-        "reasoning": "The source page text shows the exact same title 'JH Downhill Championships Race #2 (Dirty Harry)' in the Event Details section, confirming it is the complete title and not truncated."
+        "new_title": "Jackson Hole Farmers Market",
+        "reasoning": "The source page clearly shows 'Jackson Hole Farmers Market' as the complete title in the header and the 'All Events' section, with no additional information that would extend the title."
       },
       "applied": true,
-      "note": "title: 'JH Downhill Championships Race #2 (Dirty Harry)' \u2192 'JH Downhill Championships Race #2 (Dirty Harry)'"
+      "note": "title: 'Jackson Hole Farmers Market' \u2192 'Jackson Hole Farmers Market'"
     },
     {
       "city": "jackson",
-      "title": "Snow King Hill Climb",
+      "title": "Sunday Fundays, Concert on the Commons Series",
       "type": "title_truncated",
-      "link": "https://www.runningintheusa.com/details/125411",
+      "link": "https://dishingjh.com/event/sunday-fundays-concert-on-the-commons-series/2026-07-26/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Snow King Hill Climb",
-        "reasoning": "The source page clearly shows 'Snow King Hill Climb' as the complete race title multiple times throughout the page, indicating this is the full official title and not truncated."
+        "new_title": "Sunday Fundays, Concert on the Commons Series",
+        "reasoning": "The source page confirms this is the complete title as it appears in both the page header and the main event heading, with no additional text truncated."
       },
       "applied": true,
-      "note": "title: 'Snow King Hill Climb' \u2192 'Snow King Hill Climb'"
+      "note": "title: 'Sunday Fundays, Concert on the Commons Series' \u2192 'Sunday Fundays, Concert on the Commons Series'"
     }
   ]
 }

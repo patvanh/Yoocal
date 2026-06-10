@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-10T04:56:02.251932",
-  "audit_date": "2026-06-09",
+  "generated_at": "2026-06-10T19:02:22.899917",
+  "audit_date": "2026-06-10",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1892,
+      "before_count": 1871,
       "passes": {
         "past_dates": {
           "fixed": 2,
@@ -20,27 +20,23 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 6,
+          "fixed": 4,
           "examples": [
-            {
-              "title": "(Re)sounding: Art Exhibition",
-              "had_span": 98
-            },
             {
               "title": "Fascia Rolling Class",
               "had_span": 181
             },
             {
+              "title": "Group Fitness Classes",
+              "had_span": 181
+            },
+            {
               "title": "Old Town walking tour",
-              "had_span": 65
+              "had_span": 64
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
-            },
-            {
-              "title": "Group Fitness Classes",
-              "had_span": 181
             }
           ]
         },
@@ -91,7 +87,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 8,
+          "fixed": 7,
           "examples": [
             {
               "title": "HOMETOWN SHOW Jessie Ritter @ Jackson MO City Park Rock Garden",
@@ -118,30 +114,16 @@
               "duration_hours": 3
             },
             {
-              "title": "2026 Deer Valley Music Festival: Chicago the Musical In Concert",
-              "start_time": "7:30 PM",
-              "new_end_time": "10:30 PM",
+              "title": "Concerts on the Slopes",
+              "start_time": "7:00 PM",
+              "new_end_time": "10:00 PM",
               "duration_hours": 3
             }
           ]
         },
         "classification": {
-          "fixed": 394,
+          "fixed": 389,
           "examples": [
-            {
-              "title": "(Re)sounding: Art Exhibition",
-              "before": [],
-              "after": [
-                "Arts"
-              ]
-            },
-            {
-              "title": "Art Summer Camps 2026",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
             {
               "title": "Employer Committee (Disability Hiring)",
               "before": [],
@@ -150,24 +132,41 @@
               ]
             },
             {
-              "title": "Group Fitness Classes",
-              "before": [],
-              "after": [
-                "Government"
-              ]
-            },
-            {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
               "before": [],
               "after": [
                 "Food & Drink"
               ]
+            },
+            {
+              "title": "Newcomers Coffee Social & Speaker Event",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Food & Drink"
+              ]
+            },
+            {
+              "title": "Progressive Art Experience",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Summer Garden Camps",
+              "before": [],
+              "after": [
+                "Community"
+              ]
             }
           ]
         }
       },
-      "after_count": 1898,
-      "total_fixes": 417
+      "after_count": 1877,
+      "total_fixes": 409
     },
     {
       "city": "elkhart-lake",
@@ -226,7 +225,7 @@
     },
     {
       "city": "heber",
-      "before_count": 226,
+      "before_count": 237,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -268,12 +267,18 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 5,
+          "fixed": 6,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
               "start_time": "8:00 AM",
               "new_end_time": "9:00 AM",
+              "duration_hours": 1
+            },
+            {
+              "title": "Yoga in the Park",
+              "start_time": "10:45 AM",
+              "new_end_time": "11:45 AM",
               "duration_hours": 1
             },
             {
@@ -292,12 +297,6 @@
               "title": "Wilderness Circuit Finals Rodeo Friday Nov. 6th at 7:30 pm",
               "start_time": "7:30 PM",
               "new_end_time": "9:30 PM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Wilderness Circuit Finals Rodeo Saturday Nov 7th Matinee 1:00 pm",
-              "start_time": "1:00 PM",
-              "new_end_time": "3:00 PM",
               "duration_hours": 2
             }
           ]
@@ -363,12 +362,12 @@
           ]
         }
       },
-      "after_count": 229,
-      "total_fixes": 22
+      "after_count": 240,
+      "total_fixes": 23
     },
     {
       "city": "jackson",
-      "before_count": 803,
+      "before_count": 828,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -441,19 +440,13 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 13,
+          "fixed": 12,
           "examples": [
             {
               "title": "Karaoke at The Virginian Saloon",
               "start_time": "8:00 PM",
               "new_end_time": "11:00 PM",
               "duration_hours": 3
-            },
-            {
-              "title": "Little Wings Story Time",
-              "start_time": "11:00 AM",
-              "new_end_time": "11:30 AM",
-              "duration_hours": 0.5
             },
             {
               "title": "The Center Presents: Nitty Gritty Dirt Band \u2013 The Farewell Tour",
@@ -472,6 +465,12 @@
               "start_time": "6:00 PM",
               "new_end_time": "8:00 PM",
               "duration_hours": 2
+            },
+            {
+              "title": "Red, White and Tunes Sunday Show",
+              "start_time": "5:00 PM",
+              "new_end_time": "7:00 PM",
+              "duration_hours": 2
             }
           ]
         },
@@ -480,8 +479,8 @@
           "examples": []
         }
       },
-      "after_count": 816,
-      "total_fixes": 20
+      "after_count": 841,
+      "total_fixes": 19
     }
   ]
 }
