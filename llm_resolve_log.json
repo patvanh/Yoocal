@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-10T19:02:36.957321",
+  "generated_at": "2026-06-10T19:17:59.238633",
   "attempted": 2,
-  "applied": 2,
+  "applied": 0,
   "log": [
     {
       "city": "jackson",
-      "title": "Jackson Hole Farmers Market",
+      "title": "On the Road at St. John\u2019s Episcopal Church",
       "type": "title_truncated",
-      "link": "https://dishingjh.com/event/jackson-hole-farmers-market-7/2026-07-25/",
+      "link": "https://www.jacksonholechamber.com/event/on-the-road-at-st-john%e2%80%99s-episcopal-church/3496/",
       "resolution": {
-        "confidence": "high",
-        "new_title": "Jackson Hole Farmers Market",
-        "reasoning": "The source page clearly shows 'Jackson Hole Farmers Market' as the complete title in the header and the 'All Events' section, with no additional information that would extend the title."
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only shows 'On the Road at St. John's Episcopal Church' as the title with no additional information that would indicate a more complete version."
       },
-      "applied": true,
-      "note": "title: 'Jackson Hole Farmers Market' \u2192 'Jackson Hole Farmers Market'"
+      "applied": false,
+      "note": "confidence=low, not applying"
     },
     {
       "city": "jackson",
-      "title": "Sunday Fundays, Concert on the Commons Series",
+      "title": "Country DJ Steady Jake",
       "type": "title_truncated",
-      "link": "https://dishingjh.com/event/sunday-fundays-concert-on-the-commons-series/2026-07-26/",
+      "link": "https://www.milliondollarcowboybar.com/events/country-dj-steady-jake-12-0",
       "resolution": {
-        "confidence": "high",
-        "new_title": "Sunday Fundays, Concert on the Commons Series",
-        "reasoning": "The source page confirms this is the complete title as it appears in both the page header and the main event heading, with no additional text truncated."
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source text only contains a promotional description for 'Country DJ Steady Jake' as a service provider but does not provide any additional event title information beyond what was already given."
       },
-      "applied": true,
-      "note": "title: 'Sunday Fundays, Concert on the Commons Series' \u2192 'Sunday Fundays, Concert on the Commons Series'"
+      "applied": false,
+      "note": "confidence=low, not applying"
     }
   ]
 }

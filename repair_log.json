@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-10T19:02:22.899917",
+  "generated_at": "2026-06-10T19:17:51.092245",
   "audit_date": "2026-06-10",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1871,
+      "before_count": 1869,
       "passes": {
         "past_dates": {
           "fixed": 2,
@@ -165,7 +165,7 @@
           ]
         }
       },
-      "after_count": 1877,
+      "after_count": 1875,
       "total_fixes": 409
     },
     {
@@ -367,7 +367,7 @@
     },
     {
       "city": "jackson",
-      "before_count": 828,
+      "before_count": 822,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -479,7 +479,7 @@
           "examples": []
         }
       },
-      "after_count": 841,
+      "after_count": 835,
       "total_fixes": 19
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-10T13:02:37.359069-06:00",
+  "checked_at": "2026-06-10T13:17:59.648312-06:00",
   "today": "2026-06-10",
   "cities": {
     "park-city": [
@@ -21,11 +21,11 @@
       },
       {
         "source": "Mountain Town Music",
-        "actual": 267,
+        "actual": 265,
         "baseline": 267.1,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=267, baseline=267"
+        "message": "actual=265, baseline=267"
       },
       {
         "source": "Visit Park City",
@@ -299,11 +299,11 @@
       },
       {
         "source": "Dishing Jackson Hole",
-        "actual": 104,
+        "actual": 98,
         "baseline": 92,
         "floor": null,
         "severity": "OK",
-        "message": "actual=104, baseline=92"
+        "message": "actual=98, baseline=92"
       },
       {
         "source": "Grand Teton Music Festival",

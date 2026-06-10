@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-10T13:05:59.609669-06:00",
+  "checked_at": "2026-06-10T13:20:40.741035-06:00",
   "total_sources": 43,
   "sources_checked": 14,
   "sources_flagged": 0,
@@ -18,7 +18,13 @@
     },
     {
       "source": "Mountain Town Music",
-      "our_count": 267,
+      "our_count": 265,
+      "status": "skipped_no_url",
+      "url": null
+    },
+    {
+      "source": "Jackson Hole Mountain Resort",
+      "our_count": 176,
       "status": "skipped_no_url",
       "url": null
     },
@@ -36,7 +42,7 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "The page has empty event containers and placeholders; all actual event content is rendered via JavaScript and not visible in static HTML."
+      "notes": "Page requires JavaScript execution to render event listings; raw HTML shows only empty placeholder containers and navigation."
     },
     {
       "source": "Elkhart Lake Tourism",
@@ -52,7 +58,7 @@
       "llm_count_on_page": 1,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page uses Vue.js to render events dynamically; only one static event card visible in raw HTML, rest loaded via JavaScript."
+      "notes": "Page uses Vue.js templates with v-for loops to render events; static HTML shows only one template card and empty containers, actual event data is rendered by JavaScript."
     },
     {
       "source": "The Cloudveil",
@@ -74,7 +80,7 @@
       "llm_count_on_page": 31,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 31 distinct events across June 2026 through February 2027; cumulative database count of 99 is plausible across multiple scrapes."
+      "notes": "Page displays 33 distinct events across June 2026 through February 2027; cumulative database count of 99 is plausibly correct given multiple scrapes over time."
     },
     {
       "source": "Visit Park City",
@@ -84,7 +90,13 @@
       "llm_count_on_page": 12,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page has empty dropdown menus and event cards that require JavaScript to populate; static HTML shows only 1 fully-rendered event card, making assessment impossible."
+      "notes": "Page relies heavily on JavaScript to render event cards; static HTML shows only 1 event card fully visible with empty dropdown menus and placeholder divs throughout."
+    },
+    {
+      "source": "Dishing Jackson Hole",
+      "our_count": 98,
+      "status": "skipped_no_url",
+      "url": null
     },
     {
       "source": "Grand Teton Music Festival",
@@ -98,19 +110,19 @@
       "url": "https://osthoff.com/events/",
       "status": "checked",
       "llm_count_on_page": 12,
-      "page_status": "healthy",
-      "judgment": "scraper_likely_missing_events",
-      "notes": "Page shows 12 upcoming events in the Smart Slider carousel (June 2026), but database has 92 total events cumulative across many scrapes, suggesting scraper captures events from calendar/listing pages not fully visible here."
+      "page_status": "javascript_required",
+      "judgment": "cannot_assess",
+      "notes": "Page uses Smart Slider 3 carousel with JavaScript to render event slides; static HTML shows only 12 visible slide templates, but actual event count depends on JS execution and calendar filtering."
     },
     {
       "source": "Deer Valley Resort",
       "our_count": 69,
       "url": "https://www.deervalley.com/things-to-do/events",
       "status": "checked",
-      "llm_count_on_page": 32,
+      "llm_count_on_page": 31,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "The JSON variable contains 32 complete event objects with full details; our database count of 69 is plausibly the cumulative total across many scrapes since the page shows only current/upcoming events."
+      "notes": "Page contains 31 visible event entries in JSON data; cumulative DB count of 69 across many scrapes is plausibly correct given recurring weekly events and historical accumulation."
     },
     {
       "source": "KPCW Community Calendar",
@@ -138,7 +150,7 @@
       "llm_count_on_page": 13,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 13 events on first page with pagination indicating multiple pages total; 51 cumulative events across many scrapes is plausible given pagination and recurring events like 'Summer People's Market'."
+      "notes": "Page shows 14 events on first pagination page of 5 total pages; 51 cumulative events across many scrapes is plausible for the full dataset."
     },
     {
       "source": "TownLift",
@@ -160,17 +172,17 @@
       "llm_count_on_page": 14,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 14 upcoming events in June-July 2026; cumulative database count of 35 across multiple scrapes is plausibly correct given pagination and past events."
+      "notes": "Page shows 14 distinct event cards with complete details; database count of 35 across multiple scrapes is plausibly consistent with pagination and historical accumulation."
     },
     {
       "source": "Visit Park City (sitemap)",
       "our_count": 23,
       "url": "https://www.visitparkcity.com/events/",
       "status": "checked",
-      "llm_count_on_page": 10,
+      "llm_count_on_page": 1,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page shows empty event card containers and relies on JavaScript to populate event data; static HTML contains only 1 visible event card with no event details loaded."
+      "notes": "Page has empty event card containers that require JavaScript execution to populate with actual event data; only featured event links in textbox are visible in static HTML."
     },
     {
       "source": "Snow King Mountain",
@@ -186,7 +198,7 @@
       "llm_count_on_page": 10,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 10 blog posts about farmers market events; database count of 20 across multiple scrapes is plausible given pagination and historical accumulation."
+      "notes": "Page shows 10 blog posts about farmers market events; database count of 20 cumulative from multiple scrapes is plausible given the site's post history and pagination."
     },
     {
       "source": "Heber Valley Life",
@@ -202,7 +214,7 @@
       "llm_count_on_page": 15,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 15 distinct concert events with full details, dates, and ticket buttons; counts align with database total."
+      "notes": "Page displays 15 distinct concert events with full details, matching the database total of 15 events."
     },
     {
       "source": "RunningInTheUSA Jackson",
@@ -230,7 +242,7 @@
       "llm_count_on_page": 10,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 10 distinct upcoming/current events in static HTML; database count of 13 is plausibly higher due to cumulative tracking across multiple scrapes including past events and season pass/calendar entries."
+      "notes": "Page displays 10 distinct upcoming/featured events plus Season Pass and Event Calendar links; database count of 13 likely includes past events and variations from previous scrapes."
     },
     {
       "source": "Mountain Trails Foundation",
@@ -240,7 +252,7 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page content is heavily encoded/obfuscated with CSS and requires JavaScript execution to render events; static HTML shows only navigation and empty containers."
+      "notes": "The page HTML shows only navigation and hero section; actual event content is not present in the raw HTML, indicating JavaScript rendering is required to display events."
     },
     {
       "source": "Park Silly Sunday Market",
@@ -316,7 +328,7 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Events calendar uses The Events Calendar plugin with JavaScript rendering; static HTML shows empty containers and 'no upcoming events' message, so actual event count cannot be determined from raw HTML."
+      "notes": "Page uses JavaScript to render events; static HTML shows empty calendar table and 'no upcoming events' message, with only 3 past events visible in latest-past section."
     }
   ],
   "flagged": []
