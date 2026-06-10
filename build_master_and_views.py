@@ -1392,6 +1392,15 @@ def main():
     # the last-good events so a partial scrape doesn't silently gut the site.
     # Self-heals on recovery; accepts a persistent drop after a few runs.
     try:
+        # Rename generic "Concerts on the Commons" records to the real band name
+        # (fetched from jacksonhole.com schedule). Runs before dedup so distinct
+        # titles flow through and the cross-source dup false-positives clear.
+        try:
+            from concerts_commons_enricher import enrich_concerts_on_the_commons
+            all_events = enrich_concerts_on_the_commons(all_events)
+        except Exception as _ce:
+            print(f"  WARN: concerts-on-the-commons enrich skipped: {_ce}")
+
         from scrape_resilience import apply_resilience_guard, format_report
         _before_guard = len(all_events)
         all_events, _guard_report = apply_resilience_guard(all_events, today_iso)
