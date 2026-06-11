@@ -171,7 +171,7 @@ def is_useful_candidate(url):
 
     if domain in BLACKLIST_DOMAINS:
         return False, "blacklisted"
-    if domain in ALREADY_KNOWN_DOMAINS:
+    if domain in ALREADY_KNOWN_DOMAINS and os.environ.get("INCLUDE_KNOWN") != "1":
         return False, "already-known"
 
     # Skip Eventbrite city pages (eventbrite.com/d/...)
