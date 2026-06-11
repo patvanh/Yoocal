@@ -1027,6 +1027,7 @@ def _suppress_aggregator_dupes(events: list, window_days: int = 7) -> list:
     def _suppress_key(title):
         t = _normalize_title(title or "")
         t = _sup_re.sub(r"^(hebers|heber|park city|jacksons|jackson|midway|kamas|oakley)\b\s*", "", t)
+        t = _sup_re.sub(r"^s\s+", "", t)
         return t.strip()
     high_trust_by_title = _dd(list)
     for e in events:
