@@ -1409,6 +1409,18 @@ def main():
         except Exception as _ce:
             print(f"  WARN: concerts-on-the-commons enrich skipped: {_ce}")
 
+        # Universal primary-source enrichment: for any event whose link points at
+        # a registry-known primary source (chamber/venue), pull authoritative
+        # dates/times/venue from that page (cascade: cache/jsonld/deterministic/
+        # direct/firecrawl/llm). Replaces weak aggregator details with correct
+        # data. Fully guarded: any failure leaves events un-enriched, never breaks
+        # the build. Date-safe: never moves an event into the past.
+        try:
+            from primary_source_enricher import enrich_primary_sources
+            all_events = enrich_primary_sources(all_events)
+        except Exception as _pe:
+            print(f"  WARN: primary-source enrich skipped: {_pe}")
+
         from scrape_resilience import apply_resilience_guard, format_report
         _before_guard = len(all_events)
         all_events, _guard_report = apply_resilience_guard(all_events, today_iso)

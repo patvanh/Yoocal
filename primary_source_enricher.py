@@ -63,7 +63,15 @@ _UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
        "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
 # Per-run Firecrawl spend cap (number of pages). Tune per budget.
-FIRECRAWL_BUDGET = int(os.environ.get("FIRECRAWL_BUDGET", "120"))
+FIRECRAWL_BUDGET = int(os.environ.get("FIRECRAWL_BUDGET", "300"))
+
+# How long to trust an LLM-extracted result before re-fetching. Event details
+# (lineups, times, prices) rarely change daily; weekly refresh keeps Firecrawl
+# spend low while still self-healing. Override via env for testing.
+LLM_CACHE_DAYS = int(os.environ.get("LLM_CACHE_DAYS", "7"))
+
+# How long to remember a fetch failure before retrying (dead/blocking links).
+FAIL_RETRY_DAYS = int(os.environ.get("FAIL_RETRY_DAYS", "3"))
 
 
 # ---------------------------------------------------------------------------
@@ -311,10 +319,34 @@ def _llm_extract(text, title_hint, current_year, timeout=90):
 # ---------------------------------------------------------------------------
 def _resolve_url(url, title_hint, cache, budget):
     """Run the cascade for one URL. Returns (fields_dict_or_None, status, budget)."""
-    # 1. cache: trust deterministic/jsonld; re-fetch llm/empty/failed
+    # 1. cache:
+    #    - deterministic/jsonld: trusted permanently (structured, exact).
+    #    - llm: trusted for LLM_CACHE_DAYS (event details rarely change daily;
+    #      re-fetching every run is the main recurring Firecrawl cost). Re-fetch
+    #      only once it goes stale, so it self-heals weekly instead of daily.
     cached = cache.get(url)
-    if cached and cached.get("status") in ("deterministic", "jsonld"):
-        return cached, "cache", budget
+    if cached:
+        st = cached.get("status")
+        if st in ("deterministic", "jsonld"):
+            return cached, "cache", budget
+        if st == "llm":
+            ts = cached.get("_cached_at", "")
+            try:
+                age = (date.today() - date.fromisoformat(ts[:10])).days
+            except Exception:
+                age = 999
+            if age < LLM_CACHE_DAYS:
+                return cached, "cache", budget
+        if st in ("fetch_failed", "no_data"):
+            # Don't retry a known failure every run (wastes budget). Re-check
+            # after a few days in case the page comes back.
+            ts = cached.get("_cached_at", "")
+            try:
+                age = (date.today() - date.fromisoformat(ts[:10])).days
+            except Exception:
+                age = 999
+            if age < FAIL_RETRY_DAYS:
+                return None, "cache", budget
 
     cfg = _registry_for(url) or {"render": "auto"}
     html = None
@@ -333,7 +365,7 @@ def _resolve_url(url, title_hint, cache, budget):
             budget -= 1
 
     if not html:
-        cache[url] = {"status": "fetch_failed"}
+        cache[url] = {"status": "fetch_failed", "_cached_at": date.today().isoformat()}
         return None, "fetch_failed", budget
 
     # 2. JSON-LD (free, exact)
@@ -359,11 +391,11 @@ def _resolve_url(url, title_hint, cache, budget):
     # 6. LLM extract (paid, cheap) — last resort
     llm = _llm_extract(text, title_hint, date.today().year)
     if llm:
-        rec = {**llm, "status": "llm"}
-        cache[url] = rec  # cached but re-fetched next run (not trusted-permanent)
+        rec = {**llm, "status": "llm", "_cached_at": date.today().isoformat()}
+        cache[url] = rec  # cached with a TTL; re-fetched weekly, not daily
         return rec, "llm", budget
 
-    cache[url] = {"status": "no_data"}
+    cache[url] = {"status": "no_data", "_cached_at": date.today().isoformat()}
     return None, "no_data", budget
 
 
@@ -372,13 +404,26 @@ def _resolve_url(url, title_hint, cache, budget):
 # ---------------------------------------------------------------------------
 def _apply_fields(e, fields):
     """Write authoritative fields onto an event. Times/venue/dates from a primary
-    source OVERWRITE weak aggregator data; only fill price/address if missing."""
-    if fields.get("occurrence_dates"):
-        e["occurrence_dates"] = fields["occurrence_dates"]
-        # advance start date if the primary source starts earlier
-        first = fields["occurrence_dates"][0]
-        if first and first < (e.get("date") or "9999"):
-            e["date"] = first
+    source OVERWRITE weak aggregator data; only fill price/address if missing.
+
+    Date safety: occurrence_dates are filtered to today-or-future, and the
+    event's start date is NEVER moved earlier than max(today, its current date).
+    A primary page often lists past occurrences of a series; those must not drag
+    the event backward into the past.
+    """
+    today = date.today().isoformat()
+    occ = fields.get("occurrence_dates")
+    if occ:
+        future = [d for d in occ if d and d[:10] >= today]
+        if future:
+            e["occurrence_dates"] = future
+            earliest = future[0]
+            cur = e.get("date") or ""
+            # only ADVANCE forward to the earliest future occurrence if the
+            # current date is itself past/empty; never move earlier than today.
+            if not cur or cur[:10] < today:
+                e["date"] = earliest
+        # if every listed occurrence is past, leave the event's dates untouched
     if fields.get("recurrence_text"):
         e["recurrence_text"] = fields["recurrence_text"]
     if fields.get("start_time"):
