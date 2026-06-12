@@ -38,15 +38,34 @@ _EVENT_URL_RE = re.compile(
 _DATE_IN_PATH_RE = re.compile(r"/20\d{2}[-/]\d{1,2}[-/]\d{1,2}")
 
 
-def _looks_like_event_url(u: str) -> bool:
-    path = urlparse(u).path
+_SOCIAL_DOMAINS = ("facebook.com", "twitter.com", "x.com", "instagram.com",
+                   "linkedin.com", "pinterest.com", "youtube.com", "t.co",
+                   "reddit.com", "sharer", "/share")
+import datetime as _dt
+_OLD_YEAR_CUT = _dt.date.today().year - 1  # reject article URLs dated before last year
+
+
+def _looks_like_event_url(u: str, base_netloc: str = None) -> bool:
+    parsed = urlparse(u)
+    path = parsed.path
+    # reject off-domain links (share buttons, external embeds) — only same-site
+    if base_netloc and parsed.netloc and parsed.netloc.replace("www.", "") != base_netloc.replace("www.", ""):
+        return False
+    # reject social/share URLs outright
+    low = u.lower()
+    if any(s in low for s in _SOCIAL_DOMAINS):
+        return False
     if not path or path.endswith("/events/") or path.endswith("/calendar/"):
         return False
+    # reject clearly-old dated URLs (news archives: /2009/11/10/...). A date in
+    # the path older than last year is an archived article, not an upcoming event.
+    ym = re.search(r"/(20\d{2})/(\d{1,2})/", path)
+    if ym and int(ym.group(1)) < _OLD_YEAR_CUT:
+        return False
     if _EVENT_URL_RE.search(path) or _DATE_IN_PATH_RE.search(path):
-        # exclude obvious non-event paths
         if any(bad in path.lower() for bad in
                ("/tag/", "/category/", "/author/", "/page/", "/feed", ".xml",
-                "/search", "/login", "/wp-")):
+                "/search", "/login", "/wp-", "/sharer")):
             return False
         return True
     return False
@@ -78,18 +97,21 @@ def _fetch(url, timeout=20, want="text"):
 
 
 def _sitemap_urls(base, verbose=True):
-    """Find event URLs via sitemap. Recurses into sitemap indexes."""
+    """Find event URLs via sitemap. Recurses into sitemap indexes. Returns a
+    dict {url: lastmod_or_empty} so callers can sort by recency rather than
+    alphabetically (alphabetical first-N on a huge sitemap returns permalink
+    dupes, not current events)."""
     root = f"{urlparse(base).scheme}://{urlparse(base).netloc}"
     candidates = [f"{root}/sitemap.xml", f"{root}/sitemap_index.xml"]
-    # robots.txt may name sitemaps
     robots = _fetch(f"{root}/robots.txt")
     if robots:
         for m in re.findall(r"(?i)sitemap:\s*(\S+)", robots):
             candidates.append(m.strip())
 
-    found, seen_sm, queue = set(), set(), list(dict.fromkeys(candidates))
+    base_netloc = urlparse(base).netloc
+    found, seen_sm, queue = {}, set(), list(dict.fromkeys(candidates))
     depth = 0
-    while queue and depth < 50:
+    while queue and depth < 60:
         sm = queue.pop(0)
         if sm in seen_sm:
             continue
@@ -98,14 +120,27 @@ def _sitemap_urls(base, verbose=True):
         body = _fetch(sm)
         if not body:
             continue
-        locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", body, re.I)
-        if not locs:  # maybe a plain-text or HTML sitemap
-            locs = re.findall(r"https?://[^\s<>\"']+", body)
-        for u in locs:
-            if u.lower().endswith(".xml") or "sitemap" in u.lower():
-                queue.append(u)            # nested sitemap
-            elif _looks_like_event_url(u):
-                found.add(u)
+        # parse <url><loc>..</loc><lastmod>..</lastmod></url> blocks to keep dates
+        blocks = re.findall(r"<(?:url|sitemap)>(.*?)</(?:url|sitemap)>", body, re.S | re.I)
+        if blocks:
+            for b in blocks:
+                loc_m = re.search(r"<loc>\s*([^<\s]+)\s*</loc>", b, re.I)
+                if not loc_m:
+                    continue
+                u = loc_m.group(1)
+                lm = re.search(r"<lastmod>\s*([^<\s]+)\s*</lastmod>", b, re.I)
+                lastmod = lm.group(1) if lm else ""
+                if u.lower().endswith(".xml") or "sitemap" in u.lower():
+                    queue.append(u)
+                elif _looks_like_event_url(u, base_netloc):
+                    found[u] = lastmod
+        else:
+            # plain-text / HTML sitemap: just URLs, no dates
+            for u in re.findall(r"https?://[^\s<>\"']+", body):
+                if u.lower().endswith(".xml") or "sitemap" in u.lower():
+                    queue.append(u)
+                elif _looks_like_event_url(u, base_netloc):
+                    found.setdefault(u, "")
     if verbose and found:
         print(f"    sitemap: {len(found)} event URLs")
     return found
@@ -120,22 +155,62 @@ def _crawl_links(page_url, verbose=True):
     found = set()
     for h in hrefs:
         u = urljoin(page_url, h)
-        if urlparse(u).netloc == urlparse(page_url).netloc and _looks_like_event_url(u):
+        if _looks_like_event_url(u, urlparse(page_url).netloc):
             found.add(u)
     if verbose and found:
         print(f"    link-crawl: {len(found)} event URLs")
     return found
 
 
+def _dedup_permalink_variants(urls):
+    """Collapse near-duplicate permalink variants that differ only by a trailing
+    -N (e.g. /show/foo-2/, /show/foo-3/ ... are the same event re-published).
+    Keeps the base slug once. Generic — helps any WordPress-style site whose
+    sitemap accumulates numbered duplicates."""
+    by_base = {}
+    for u in urls:
+        base = re.sub(r"-\d+/?$", "", u.rstrip("/"))
+        # keep the shortest (usually the canonical) URL for each base slug
+        if base not in by_base or len(u) < len(by_base[base]):
+            by_base[base] = u
+    return list(by_base.values())
+
+
 def discover_event_urls(source_url, max_urls=300, verbose=True):
-    """Return a list of individual event-page URLs for a source, via sitemap
-    first then link-crawl. Capped at max_urls."""
-    urls = _sitemap_urls(source_url, verbose=verbose)
-    if len(urls) < 5:  # sitemap thin/absent -> also crawl the page
-        urls |= _crawl_links(source_url, verbose=verbose)
-    out = sorted(urls)[:max_urls]
+    """Return individual event-page URLs for a source.
+
+    Strategy (all generic, no per-site code):
+      1. crawl the listing page itself — its links are the CURRENT events.
+      2. read the sitemap, keeping lastmod dates.
+      3. dedup permalink variants (-2,-3.. suffixes).
+      4. rank by recency (lastmod desc) so a huge sitemap yields recently-updated
+         (i.e. upcoming) events, NOT the alphabetical-first chunk.
+    Listing-page links are prioritized since they reflect what's live now."""
+    sitemap = _sitemap_urls(source_url, verbose=verbose)          # {url: lastmod}
+    crawl = _crawl_links(source_url, verbose=verbose)             # set
+    # also crawl a few common listing paths generically
+    root = f"{urlparse(source_url).scheme}://{urlparse(source_url).netloc}"
+    for path in ("/events/", "/shows/", "/calendar/", "/event/", "/whats-on/"):
+        if len(crawl) < 20:
+            crawl |= _crawl_links(root + path, verbose=False)
+
+    # listing-page links first (current), then sitemap by recency
+    ranked = []
+    seen = set()
+    for u in crawl:                         # current/live events first
+        if u not in seen:
+            seen.add(u); ranked.append(u)
+    # sitemap URLs sorted by lastmod descending (recent first); blanks last
+    sm_sorted = sorted(sitemap.items(), key=lambda kv: kv[1] or "", reverse=True)
+    for u, _lm in sm_sorted:
+        if u not in seen:
+            seen.add(u); ranked.append(u)
+
+    ranked = _dedup_permalink_variants(ranked)
+    out = ranked[:max_urls]
     if verbose:
-        print(f"    => {len(out)} event URLs discovered for {urlparse(source_url).netloc}")
+        print(f"    => {len(out)} event URLs for {urlparse(source_url).netloc} "
+              f"(crawl {len(crawl)}, sitemap {len(sitemap)}, after dedup {len(ranked)})")
     return out
 
 
