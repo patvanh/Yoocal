@@ -139,10 +139,19 @@ def extract_source(url, tech_types, city, lat, lng, categories=None, verbose=Tru
         widget_events = _render_calendar_page(
             url, source_name, city, lat, lng, categories, verbose=verbose)
 
-    # 3. UNION crawl + widget, dedup
-    if crawl_events or widget_events:
+    # 2.5 EVENT-API CAPTURE — many JS calendars fetch events from an internal
+    #     JSON API that is FAR more complete than the sitemap (VPC: 129 recurring
+    #     definitions via API vs 148 flat URLs via sitemap, and the API carries
+    #     recurrence rules we expand into the full dated calendar). General: we
+    #     detect the API by request shape during a render, replay it with limits
+    #     widened, then expand recurrences. One capture per domain per run.
+    api_events = _capture_api_events(
+        url, source_name, city, lat, lng, categories, verbose=verbose) if deep else []
+
+    # 3. UNION crawl + widget + api, dedup
+    if crawl_events or widget_events or api_events:
         merged, seen = [], set()
-        for e in crawl_events + widget_events:
+        for e in crawl_events + widget_events + api_events:
             k = ((e.get("title") or "").strip().lower(), (e.get("date") or "")[:10])
             if k not in seen:
                 seen.add(k)
@@ -190,6 +199,108 @@ def _render_calendar_page(url, source_name, city, lat, lng, categories, verbose=
 
 
 _PW_RENDER_CACHE = {}  # domain -> rendered events, once per run
+
+_API_CAPTURE_CACHE = {}  # domain -> expanded api events, once per run
+
+
+def _html_unescape(s):
+    try:
+        import html
+        return html.unescape(s or "")
+    except Exception:
+        return s or ""
+
+
+def _map_api_record(rec, source_name, url, city, default_lat, default_lng,
+                    categories):
+    """Map a raw event-API record (VPC/simpleview-style) into our event dict.
+    Tolerant of key variations — only needs a title + a start date."""
+    title = (rec.get("title") or rec.get("name") or rec.get("eventName")
+             or rec.get("headline") or "").strip()
+    title = _html_unescape(title)
+    start = (rec.get("startDate") or rec.get("start_date") or rec.get("start")
+             or rec.get("date") or rec.get("begin") or "")
+    if not title or not start:
+        return None
+    end = (rec.get("endDate") or rec.get("end_date") or rec.get("end") or "")
+    loc = (rec.get("location") or rec.get("venue") or rec.get("venue_name")
+           or rec.get("address") or city or "")
+    loc = _html_unescape(str(loc)).strip()
+    try:
+        elat = float(rec.get("latitude") or rec.get("lat") or 0) or (default_lat or 0)
+        elng = float(rec.get("longitude") or rec.get("lng")
+                     or rec.get("lon") or 0) or (default_lng or 0)
+    except (TypeError, ValueError):
+        elat, elng = (default_lat or 0), (default_lng or 0)
+    link = rec.get("url") or rec.get("link") or url
+    if isinstance(link, str) and link.startswith("/"):
+        link = f"{urlparse(url).scheme}://{urlparse(url).netloc}{link}"
+    return {
+        "title": title,
+        "date": str(start)[:10],
+        "startDate": start, "endDate": end or start,
+        "end_date": str(end or start)[:10],
+        "recurrence": rec.get("recurrence") or "",
+        "recurType": rec.get("recurType"),
+        "location": loc, "venue_name": "",
+        "link": link, "start_time": None, "end_time": None,
+        "source": source_name, "source_url": url,
+        "lat": elat, "lng": elng,
+        "city": city or "", "categories": categories or [],
+    }
+
+
+def _capture_api_events(url, source_name, city, lat, lng, categories, verbose=True):
+    """Capture a source's internal event API, replay it with widened limits, map
+    records to our event shape, and expand recurrences into dated occurrences.
+    Returns events (possibly empty). One capture per domain per run.
+
+    GENERAL: no per-site URLs. The API is detected by request shape; recurrences
+    are read from each record's stated pattern. Works for any site whose calendar
+    is backed by a JSON events API."""
+    global _budget_spent
+    if source_name in _API_CAPTURE_CACHE:
+        return _API_CAPTURE_CACHE[source_name]
+    out = []
+    try:
+        from playwright_render import capture_event_api, replay_event_api
+        from recurrence_expand import expand_event
+        # capture on the source's calendar page — the event API typically only
+        # fires on the actual /calendar/ view, not the /events/ landing page.
+        root = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
+        candidates = []
+        if re.search(r"/calendar/?$", url):
+            candidates.append(url)
+        else:
+            candidates.append(root + "/events/calendar/")
+            candidates.append(root + "/calendar/")
+            candidates.append(url)
+        recs, api_url = [], None
+        for cand in candidates:
+            recs, api_url = capture_event_api(cand, verbose=verbose)
+            if api_url or recs:
+                break
+        if api_url:
+            full = replay_event_api(api_url, verbose=verbose) or recs or []
+        else:
+            full = recs or []
+        if full:
+            mapped = []
+            for r in full:
+                m = _map_api_record(r, source_name, url, city, lat, lng, categories)
+                if m:
+                    mapped.append(m)
+            # expand recurrences into dated occurrences (bounded + capped inside)
+            for m in mapped:
+                out.extend(expand_event(m))
+            if verbose:
+                print(f"    api-capture: {len(full)} defs -> {len(mapped)} mapped "
+                      f"-> {len(out)} dated events")
+    except Exception as ex:
+        if verbose:
+            print(f"    api-capture error: {str(ex)[:70]}")
+    _API_CAPTURE_CACHE[source_name] = out
+    return out
 
 
 _PW_DECISION_CACHE = {}  # domain -> bool, decided once per run
