@@ -6,7 +6,7 @@
     "lng": -110.7624
   },
   "radius_mi": 25,
-  "generated_at": "2026-06-13T06:23:18.582253-06:00",
+  "generated_at": "2026-06-13T07:30:53.908943-06:00",
   "today": "2026-06-13",
   "event_count": 1369,
   "events": [
@@ -8542,8 +8542,9 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "Weekly",
+      "recurrence_text": "weekly",
       "end_time": "7:00 PM",
+      "is_free": true,
       "end_date": null,
       "series_end": "2026-07-02",
       "filter_categories": [
@@ -9770,7 +9771,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "Weekly event",
+      "recurrence_text": "Weekly",
       "end_time": "7:00 PM",
       "end_date": null,
       "series_end": "2026-07-09",
@@ -10972,7 +10973,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "Weekly",
+      "recurrence_text": "weekly",
       "end_time": "7:00 PM",
       "end_date": null,
       "series_end": "2026-07-16",
@@ -11001,7 +11002,7 @@
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "9:30 AM",
       "end_time": "10:30 AM",
-      "recurrence_text": "Every Tuesday, Thursday, and Saturday morning",
+      "recurrence_text": "every Tuesday, Thursday, and Saturday morning",
       "end_date": null,
       "series_end": "2026-07-16",
       "filter_categories": [
@@ -11625,10 +11626,6 @@
       ],
       "start_time": "8:00 AM",
       "end_time": "12:00 PM",
-      "venue_name": "Farmer&#8217;t Market Town Square",
-      "address": "Jackson Hole Town Square",
-      "end_date": null,
-      "series_end": "2026-07-18",
       "filter_categories": [
         "Food & Drink"
       ],
@@ -11651,10 +11648,6 @@
       ],
       "start_time": "5:00 PM",
       "end_time": "7:00 PM",
-      "venue_name": "Healthy Being Juicery",
-      "address": "165 E. Broadway",
-      "end_date": null,
-      "series_end": "2026-07-18",
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -11871,7 +11864,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "5:00 PM",
-      "recurrence_text": "free, all-summer series",
+      "recurrence_text": "Free, all-summer series",
       "end_time": "8:00 PM",
       "is_free": true,
       "end_date": null,
@@ -12433,7 +12426,7 @@
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "9:30 AM",
       "end_time": "10:30 AM",
-      "recurrence_text": "Every Tuesday, Thursday, and Saturday morning",
+      "recurrence_text": "every Tuesday, Thursday, and Saturday morning",
       "end_date": null,
       "series_end": "2026-07-23",
       "filter_categories": [
@@ -13193,7 +13186,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "5:00 PM",
-      "recurrence_text": "all-summer series",
+      "recurrence_text": "free, all-summer series",
       "end_time": "8:00 PM",
       "is_free": true,
       "end_date": null,
@@ -14842,7 +14835,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "Weekly",
+      "recurrence_text": "weekly",
       "end_time": "7:00 PM",
       "end_date": null,
       "series_end": "2026-08-06",
@@ -14900,7 +14893,6 @@
       "facets": [
         "Paid"
       ],
-      "_resolved_from": "Parcels + Night Tapes at Snow King",
       "address": "Snow King Mountain, 402 E. Snow King Ave, Jackson, WY",
       "venue_name": "Snow King Mountain Resort",
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/IMG_0967_0A85917C-B589-93BC-594292BABA07B961_0a91a1f8-c353-5645-8cfb8f8398eaec6b.jpg",
@@ -15170,7 +15162,7 @@
       "_distance_mi": 8.1
     },
     {
-      "title": "Open Rehearsal: Barry, Korngold & Beethoven's Pastoral Symphony",
+      "title": "Open Rehearsal: Beethoven & Korngold",
       "date": "2026-08-07",
       "description": "Enjoy a behind-the-scenes look as Sir Donald Runnicles and the orchestra rehearse for the weekend Festival Orchestra concerts. This week, GTMF Concertmaster Madeline Adkins performs Korngold\u2019s lush, film-inspired Violin Concerto before the Festival Orchestra concludes the program with Beethoven\u2019s eternal and appropriately cinematic ode to nature, the \u201cPastoral\u201d Symphony No. 6. program Barry: Themes from Out of Africa and Dances With Wolves Korngold: Violin Concerto Beethoven: Symphony No. 6, \u201cPastoral\u201d Sir Donald Runnicles, conductor Madeline Adkins, violin meaghan on deck During the break, join Stoner Family Education Curator Meaghan Heinrich and special guests in the Jackson Hole High School Auditorium Lobby for a casual opportunity for attendees to ask questions about the music....",
       "location": "Jackson Hole High School Auditorium, 1910 High School Rd, Jackson, WY",
@@ -15186,7 +15178,6 @@
       "start_time": "10:00 AM",
       "end_time": "12:30 PM",
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Open-Rehearsal-Aug-7.png",
-      "_resolved_from": "Open Rehearsal: Beethoven & Korngold",
       "address": "Jackson Hole High School Auditorium, 1910 High School Rd, Jackson, WY",
       "is_free": false,
       "filter_categories": [
@@ -15433,7 +15424,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "5:00 PM",
-      "recurrence_text": "all-summer series",
+      "recurrence_text": "Free, all-summer series",
       "end_time": "8:00 PM",
       "is_free": true,
       "end_date": null,
@@ -16634,7 +16625,7 @@
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "9:30 AM",
       "end_time": "10:30 AM",
-      "recurrence_text": "Every Tuesday, Thursday, and Saturday morning",
+      "recurrence_text": "every Tuesday, Thursday, and Saturday morning",
       "end_date": null,
       "series_end": "2026-08-15",
       "filter_categories": [
@@ -17779,7 +17770,7 @@
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "9:30 AM",
       "end_time": "10:30 AM",
-      "recurrence_text": "Every Tuesday, Thursday, and Saturday morning",
+      "recurrence_text": "every Tuesday, Thursday, and Saturday morning",
       "end_date": null,
       "series_end": "2026-08-27",
       "filter_categories": [
@@ -18152,9 +18143,9 @@
       "facets": [
         "Paid"
       ],
+      "is_free": false,
       "end_date": null,
       "series_end": "2026-08-29",
-      "is_free": false,
       "filter_categories": [
         "Outdoors"
       ],
@@ -22926,6 +22917,7 @@
       "venue_name": "Outlaw Partners LLC",
       "start_time": "7:00 AM",
       "end_time": "12:00 PM",
+      "_resolved_from": "2nd Annual | Running of the Bulls Trail Race - Big Sky, Montana",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -23517,7 +23509,6 @@
       "facets": [
         "Paid"
       ],
-      "price": "$20",
       "is_free": false,
       "end_date": null,
       "series_end": "2026-07-26",
@@ -23747,7 +23738,6 @@
       "facets": [
         "Paid"
       ],
-      "price": "$20",
       "is_free": false,
       "end_date": null,
       "series_end": "2026-08-02",
@@ -24587,10 +24577,9 @@
       "facets": [
         "Paid"
       ],
-      "price": "$20",
-      "is_free": false,
       "end_date": null,
       "series_end": "2026-09-06",
+      "is_free": false,
       "filter_categories": [
         "Music",
         "Outdoors"
@@ -29096,7 +29085,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "5:00 PM",
-      "recurrence_text": "free, all-summer series",
+      "recurrence_text": "all-summer series",
       "end_time": "8:00 PM",
       "is_free": true,
       "end_date": null,
@@ -29695,7 +29684,7 @@
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "9:30 AM",
       "end_time": "10:30 AM",
-      "recurrence_text": "Every Tuesday, Thursday, and Saturday morning",
+      "recurrence_text": "every Tuesday, Thursday, and Saturday morning",
       "end_date": null,
       "series_end": "2026-06-30",
       "filter_categories": [
@@ -30104,7 +30093,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "Weekly",
+      "recurrence_text": "weekly",
       "end_time": "7:00 PM",
       "end_date": null,
       "series_end": "2026-07-01",
@@ -30673,7 +30662,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "Weekly",
+      "recurrence_text": "weekly",
       "end_time": "7:00 PM",
       "end_date": null,
       "series_end": "2026-07-08",
@@ -30955,7 +30944,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "5:00 PM",
-      "recurrence_text": "free, all-summer series",
+      "recurrence_text": "all-summer series",
       "end_time": "8:00 PM",
       "is_free": true,
       "end_date": null,
@@ -30986,7 +30975,7 @@
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "9:30 AM",
       "end_time": "10:30 AM",
-      "recurrence_text": "Every Tuesday, Thursday, and Saturday morning",
+      "recurrence_text": "every Tuesday, Thursday, and Saturday morning",
       "end_date": null,
       "series_end": "2026-07-14",
       "filter_categories": [
@@ -31613,7 +31602,7 @@
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "9:30 AM",
       "end_time": "10:30 AM",
-      "recurrence_text": "every Tuesday, Thursday, and Saturday morning",
+      "recurrence_text": "Every Tuesday, Thursday, and Saturday morning",
       "end_date": null,
       "series_end": "2026-07-21",
       "filter_categories": [
@@ -32124,7 +32113,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "weekly",
+      "recurrence_text": "Weekly",
       "end_time": "7:00 PM",
       "end_date": null,
       "series_end": "2026-07-22",
@@ -32380,7 +32369,7 @@
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "9:30 AM",
       "end_time": "10:30 AM",
-      "recurrence_text": "Every Tuesday, Thursday, and Saturday morning",
+      "recurrence_text": "every Tuesday, Thursday, and Saturday morning",
       "end_date": null,
       "series_end": "2026-07-28",
       "filter_categories": [
@@ -32683,7 +32672,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "Weekly",
+      "recurrence_text": "weekly",
       "end_time": "7:00 PM",
       "end_date": null,
       "series_end": "2026-07-29",
@@ -33222,7 +33211,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "Weekly",
+      "recurrence_text": "weekly",
       "end_time": "7:00 PM",
       "end_date": null,
       "series_end": "2026-08-05",
@@ -33823,7 +33812,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Teton Village Commons",
       "start_time": "4:00 PM",
-      "recurrence_text": "weekly",
+      "recurrence_text": "Weekly",
       "end_time": "7:00 PM",
       "end_date": null,
       "series_end": "2026-08-19",
@@ -36016,7 +36005,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "5:00 PM",
-      "recurrence_text": "free, all-summer series",
+      "recurrence_text": "all-summer series",
       "end_time": "8:00 PM",
       "is_free": true,
       "end_date": null,
@@ -36127,7 +36116,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "5:00 PM",
-      "recurrence_text": "all-summer series",
+      "recurrence_text": "free, all-summer series",
       "end_time": "8:00 PM",
       "is_free": true,
       "end_date": null,
@@ -36158,7 +36147,7 @@
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "9:30 AM",
       "end_time": "10:30 AM",
-      "recurrence_text": "Every Tuesday, Thursday, and Saturday morning",
+      "recurrence_text": "every Tuesday, Thursday, and Saturday morning",
       "end_date": null,
       "series_end": "2026-08-25",
       "filter_categories": [
@@ -36261,7 +36250,7 @@
       "address": "Teton Village, WY, 83025",
       "venue_name": "Top of the Bridger Gondola",
       "start_time": "5:00 PM",
-      "recurrence_text": "free, all-summer series",
+      "recurrence_text": "This free, all-summer series features a rotating lineup of artists",
       "end_time": "8:00 PM",
       "is_free": true,
       "end_date": null,

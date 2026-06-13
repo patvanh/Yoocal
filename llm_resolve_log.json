@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-13T12:06:52.193967",
+  "generated_at": "2026-06-13T13:13:38.418742",
   "attempted": 2,
-  "applied": 2,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "Parcels + Night Tapes at Snow King",
+      "title": "2nd Annual | Running of the Bulls Trail Race - Big",
       "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/king-concerts-2023/2026-08-06",
+      "link": "https://www.jacksonholechamber.com/event/2nd-annual-%7c-running-of-the-bulls-trail-race-big-sky-montana/3126/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Parcels + Night Tapes at Snow King Mountain",
-        "reasoning": "The source text shows 'August 6: Parcels + Night Tapes' in the lineup, and the venue is consistently referred to as 'Snow King Mountain' throughout the page, so the complete title should include 'Mountain' rather than just 'Snow King'."
+        "new_title": "2nd Annual | Running of the Bulls Trail Race - Big Sky, Montana",
+        "reasoning": "The source page text contains the exact same title as the current title, confirming it is complete and not truncated."
       },
       "applied": true,
-      "note": "title: 'Parcels + Night Tapes at Snow King' \u2192 'Parcels + Night Tapes at Snow King Mountain'"
+      "note": "title: '2nd Annual | Running of the Bulls Trail Race - Big Sky, Montana' \u2192 '2nd Annual | Running of the Bulls Trail Race - Big Sky, Montana'"
     },
     {
       "city": "jackson",
-      "title": "Open Rehearsal: Beethoven & Korngold",
+      "title": "U-Foria",
       "type": "title_truncated",
-      "link": "https://gtmf.org/events/open-rehearsal-beethoven-korngold",
+      "link": "https://www.milliondollarcowboybar.com/events/u-foria-0-1-0-0-0",
       "resolution": {
-        "confidence": "high",
-        "new_title": "Open Rehearsal: Barry, Korngold & Beethoven's Pastoral Symphony",
-        "reasoning": "The full program includes Barry's 'Themes from Out of Africa and Dances With Wolves', Korngold's Violin Concerto, and Beethoven's Symphony No. 6 'Pastoral', making the complete title more accurate than the truncated version that omits Barry and the specific Beethoven symphony."
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only contains 'U-Foria' with no additional context or complete title information available."
       },
-      "applied": true,
-      "note": "title: 'Open Rehearsal: Beethoven & Korngold' \u2192 \"Open Rehearsal: Barry, Korngold & Beethoven's Pastoral Symphony\""
+      "applied": false,
+      "note": "confidence=low, not applying"
     }
   ]
 }

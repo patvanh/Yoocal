@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-13T06:06:52.589582-06:00",
+  "checked_at": "2026-06-13T07:13:38.811702-06:00",
   "today": "2026-06-13",
   "cities": {
     "park-city": [
@@ -21,11 +21,11 @@
       },
       {
         "source": "Mountain Town Music",
-        "actual": 255,
+        "actual": 253,
         "baseline": 265,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=255, baseline=265"
+        "message": "actual=253, baseline=265"
       },
       {
         "source": "Visit Park City",
@@ -42,6 +42,14 @@
         "floor": 20,
         "severity": "OK",
         "message": "actual=69, baseline=68"
+      },
+      {
+        "source": "KPCW Community Calendar",
+        "actual": 47,
+        "baseline": 48.8,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=47, baseline=49"
       },
       {
         "source": "Visit Park City (sitemap)",
@@ -193,11 +201,11 @@
       },
       {
         "source": "TownLift",
-        "actual": 23,
+        "actual": 22,
         "baseline": 25.2,
         "floor": null,
         "severity": "OK",
-        "message": "actual=23, baseline=25"
+        "message": "actual=22, baseline=25"
       },
       {
         "source": "Heber Valley Life",
@@ -217,19 +225,19 @@
       },
       {
         "source": "Eventbrite",
-        "actual": 10,
+        "actual": 8,
         "baseline": 8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=10, baseline=8"
+        "message": "actual=8, baseline=8"
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 3,
+        "actual": 6,
         "baseline": 5.2,
         "floor": null,
-        "severity": "DEGRADED",
-        "message": "actual=3, baseline=5 (58% of normal)"
+        "severity": "OK",
+        "message": "actual=6, baseline=5"
       },
       {
         "source": "RunSignup",

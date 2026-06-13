@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-13T12:06:43.734611",
+  "generated_at": "2026-06-13T13:13:32.212462",
   "audit_date": "2026-06-13",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1818,
+      "before_count": 1863,
       "passes": {
         "past_dates": {
           "fixed": 2,
@@ -126,7 +126,7 @@
           ]
         },
         "classification": {
-          "fixed": 407,
+          "fixed": 396,
           "examples": [
             {
               "title": "A Spirited Paint Party with Artist Briar West",
@@ -170,8 +170,8 @@
           ]
         }
       },
-      "after_count": 1824,
-      "total_fixes": 428
+      "after_count": 1869,
+      "total_fixes": 417
     },
     {
       "city": "elkhart-lake",
@@ -230,19 +230,11 @@
     },
     {
       "city": "heber",
-      "before_count": 240,
+      "before_count": 238,
       "passes": {
         "past_dates": {
-          "fixed": 3,
+          "fixed": 1,
           "examples": [
-            {
-              "title": "Gateway to Summer at the Kamas City Event Center - June 12 & 13, 2026",
-              "date": "2026-06-12"
-            },
-            {
-              "title": "Applications Open for the Wasatch County Library Board",
-              "date": "2026-06-12"
-            },
             {
               "title": "Wine Dinner @ Midway Mercantile",
               "date": "2026-06-11"
@@ -272,7 +264,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 7,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -281,8 +273,14 @@
               "duration_hours": 1
             },
             {
+              "title": "Road To The Million Championship Concert",
+              "start_time": "11:00 pm",
+              "new_end_time": "2:00 AM",
+              "duration_hours": 3
+            },
+            {
               "title": "Yoga in the Park",
-              "start_time": "10:45 AM",
+              "start_time": "10:45 am",
               "new_end_time": "11:45 AM",
               "duration_hours": 1
             },
@@ -294,12 +292,6 @@
             },
             {
               "title": "Mountain Valley Stampede Rodeo",
-              "start_time": "7:30 PM",
-              "new_end_time": "9:30 PM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Wilderness Circuit Finals Rodeo Friday Nov. 6th at 7:30 pm",
               "start_time": "7:30 PM",
               "new_end_time": "9:30 PM",
               "duration_hours": 2
@@ -368,7 +360,7 @@
         }
       },
       "after_count": 238,
-      "total_fixes": 24
+      "total_fixes": 23
     },
     {
       "city": "jackson",

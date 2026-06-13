@@ -1,4 +1,18 @@
 {
-  "generated_at": "2026-06-13T12:06:52.194145",
-  "uncertain": []
+  "generated_at": "2026-06-13T13:13:38.418928",
+  "uncertain": [
+    {
+      "city": "jackson",
+      "title": "U-Foria",
+      "type": "title_truncated",
+      "link": "https://www.milliondollarcowboybar.com/events/u-foria-0-1-0-0-0",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only contains 'U-Foria' with no additional context or complete title information available."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    }
+  ]
 }
