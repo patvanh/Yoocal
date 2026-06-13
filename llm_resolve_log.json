@@ -1,17 +1,33 @@
 {
-  "generated_at": "2026-06-10T21:42:26.781542",
+  "generated_at": "2026-06-13T12:06:52.193967",
   "attempted": 2,
-  "applied": 0,
+  "applied": 2,
   "log": [
     {
       "city": "jackson",
+      "title": "Parcels + Night Tapes at Snow King",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://thecloudveil.com/event/king-concerts-2023/2026-08-06",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Parcels + Night Tapes at Snow King Mountain",
+        "reasoning": "The source text shows 'August 6: Parcels + Night Tapes' in the lineup, and the venue is consistently referred to as 'Snow King Mountain' throughout the page, so the complete title should include 'Mountain' rather than just 'Snow King'."
+      },
+      "applied": true,
+      "note": "title: 'Parcels + Night Tapes at Snow King' \u2192 'Parcels + Night Tapes at Snow King Mountain'"
     },
     {
       "city": "jackson",
+      "title": "Open Rehearsal: Beethoven & Korngold",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://gtmf.org/events/open-rehearsal-beethoven-korngold",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Open Rehearsal: Barry, Korngold & Beethoven's Pastoral Symphony",
+        "reasoning": "The full program includes Barry's 'Themes from Out of Africa and Dances With Wolves', Korngold's Violin Concerto, and Beethoven's Symphony No. 6 'Pastoral', making the complete title more accurate than the truncated version that omits Barry and the specific Beethoven symphony."
+      },
+      "applied": true,
+      "note": "title: 'Open Rehearsal: Beethoven & Korngold' \u2192 \"Open Rehearsal: Barry, Korngold & Beethoven's Pastoral Symphony\""
     }
   ]
 }

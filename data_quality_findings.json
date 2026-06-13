@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-10",
+  "generated_at": "2026-06-13",
   "cities": {
     "all": {
-      "events": 4707,
+      "events": 4968,
       "findings": [
         {
           "code": "C1",
@@ -13,7 +13,7 @@
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-10",
+              "only_date": "2026-06-13",
               "why": "recurrence-field",
               "source": "Visit Park City"
             },
@@ -37,14 +37,14 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 22,
+          "count": 13,
           "examples": [
             {
-              "date": "2026-06-13",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-08-07",
+              "title_a": "Lonestar",
+              "src_a": "Visit Park City",
+              "title_b": "Country Weekend - Lonestar",
+              "src_b": "Park City Institute",
               "sim": 0.85
             },
             {
@@ -98,28 +98,11 @@
       ]
     },
     "elkhartlake": {
-      "events": 258,
-      "findings": [
-        {
-          "code": "C5",
-          "name": "CROSS-SOURCE-DUP",
-          "severity": "MED",
-          "count": 1,
-          "examples": [
-            {
-              "date": "2026-09-19",
-              "title_a": "Siebkens Live Music: Boo! The Band (Elktoberfest)",
-              "src_a": "Siebkens Resort",
-              "title_b": "Elktoberfest",
-              "src_b": "Elkhart Lake Tourism",
-              "sim": 0.85
-            }
-          ]
-        }
-      ]
+      "events": 500,
+      "findings": []
     },
     "heber": {
-      "events": 1112,
+      "events": 1276,
       "findings": [
         {
           "code": "C1",
@@ -144,27 +127,17 @@
           ]
         },
         {
-          "code": "C5",
-          "name": "CROSS-SOURCE-DUP",
-          "severity": "MED",
-          "count": 1,
-          "examples": [
-            {
-              "date": "2026-06-13",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            }
-          ]
-        },
-        {
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 1,
+          "count": 2,
           "examples": [
+            {
+              "source": "The Park Record",
+              "was": 69,
+              "now": 28,
+              "lost": 41
+            },
             {
               "source": "Google Events",
               "was": 13,
@@ -176,58 +149,9 @@
       ]
     },
     "jackson": {
-      "events": 1362,
-      "findings": [
-        {
-          "code": "C5",
-          "name": "CROSS-SOURCE-DUP",
-          "severity": "MED",
-          "count": 7,
-          "examples": [
-            {
-              "date": "2026-07-05",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-12",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-19",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-26",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-02",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            }
-          ]
-        }
-      ]
+      "events": 1369,
+      "findings": []
     }
   },
-  "high_total": 7
+  "high_total": 8
 }
