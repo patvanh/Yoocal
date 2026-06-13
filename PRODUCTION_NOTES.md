@@ -38,17 +38,10 @@ Diagnosis:
   primary; replaces weak fields like start_time). It just needs the official
   link to follow, which we don't currently capture.
 
-NEXT-SESSION PLAN (well-scoped):
-  A. Add parkcityfilm.org as a direct source (clean showtimes page, states
-     times plainly: "Saturday, June 27th at 4pm"). Either a small dedicated
-     scraper like other venue scrapers, or add to universal scraper sources.
-     Then add parkcityfilm.org to enricher REGISTRY as trust=1 so its 4pm
-     overwrites VPC's 7pm on dedup/enrich.
-  B. (Bigger, general) Capture the "VISIT WEBSITE" link from VPC event pages
-     and feed it to the enricher so ANY aggregator event can be verified
-     against its primary source. Expensive (render per event) — evaluate.
-
-IMMEDIATE: optional event_overrides.py entry to force Remaining Native -> 4pm.
+STATUS (2026-06-13): Plan A DONE. parkcityfilm_scraper.py built + wired;
+enricher REGISTRY has parkcityfilm.org trust=1. Remaining Native now resolves
+to 4pm (see section 5). Plan B (follow VISIT WEBSITE links from aggregator
+pages) NOT done — still open, see TO-DO #B1 below.
 
 ## 5. CONFLICT SURFACING — backend + card DONE, modal render REMAINING
 Goal (Patrick's spec): when sources disagree on time/date/venue/price, surface
@@ -70,19 +63,95 @@ DONE + TESTED:
   both string-template cards emit data-conflicts/data-source-links/
   data-time-uncertain (URL-encoded JSON). tsc clean.
 
-REMAINING (next session — modal render only):
-- TWO modal systems exist:
-  (a) React EventModal.tsx — fed by handleEventClick (CalendarClient ~1451)
-  (b) inline string-template modal built around CalendarClient ~2714
-      (meta.push HTML, reads card.dataset.*)
-  Determine which fires on card click (likely the inline one for grid cards),
-  render in the correct one(s):
-  1. EventModalData type: add conflicts?, sourceLinks? (EventModal.tsx ~18)
-  2. handleEventClick (~1451): pass ev._conflicts -> conflicts, ev._source_links
-  3. inline modal (~2714): parse card.dataset.conflicts (decodeURIComponent +
-     JSON.parse), render flag block after the time row
-  4. Render: conflict flag = disclaimer showing each value+source
-     ("Park City Film: 4:00 PM • Visit Park City: 7:00 PM — confirm with venue")
-     + dual source links when sourceLinks present.
-- Test in browser on Remaining Native (Jun 27): should show 4pm (not hidden,
-  PCF is direct), a flag noting VPC says 7pm, and both links.
+MODAL RENDER — DONE (2026-06-13):
+- The INLINE string-template modal (CalendarClient ~2742, fires on grid-card
+  click) now parses card.dataset.conflicts + card.dataset.sourceLinks
+  (decodeURIComponent + JSON.parse, wrapped in try/catch) and renders:
+  * amber conflict flag row per conflicting field ("<Field> varies by source:
+    Park City Film: 4:00 PM • Visit Park City: 7:00 PM. Please confirm with
+    the venue.") — class ye-conflict-flag
+  * dual source-link row when _source_links has 2+ entries
+- VERIFIED end-to-end via a full build_master_and_views.py run: Remaining
+  Native -> start_time 4:00 PM, link=parkcityfilm.eventive.org,
+  _time_uncertain False, _conflicts {time:[PCF 4pm, VPC 7pm]}, 2 source_links.
+- NOT done: the React EventModal.tsx path (handleEventClick ~1451) was NOT
+  updated — it doesn't render the flag. Only matters if that modal ever fires
+  for grid cards; the inline one is what fires today. See TO-DO #F1.
+- Shipped in commit a57fd34.
+
+
+================================================================================
+# OPEN TO-DO  (consolidated 2026-06-13 end of session)
+================================================================================
+
+## Verify / watch (low effort, do soon)
+- [ ] V1. Watch the NEXT daily GitHub Action run. Confirm parkcityfilm_scraper.py
+      runs clean in CI (it's continue-on-error:true, so a failure is silent —
+      check it actually emits ~13 events, not 0). This is the first unattended
+      run of the new scraper.
+- [ ] V2. Confirm the Remaining Native 4pm correction is LIVE on the site after
+      that run (the local build proved it; production updates on next cron +
+      rebuild). Click the event, confirm 4pm + amber flag + both source links.
+
+## Data accuracy / scraper correctness
+- [ ] D1. park_record_cityspark_scraper.py month-loop (section 2): month=2026-06
+      logged +1111 then +0 for all later months. Verify the month iteration
+      actually works or simplify to the single call that returns the full set.
+- [ ] D2. Far-town leakage in CitySpark feed (section 3): confirm Big Cottonwood
+      / SLC-area events are dropped in production. Consider sharing the universal
+      scraper's geo_validate._named_city_far with the PRODUCTION path (today it
+      only runs in the universal/staging path).
+- [ ] D3. Mountain Town Music depth: universal scraper gets ~96-108 vs live 215.
+      Investigate the gap.
+- [ ] D4. Park Record cityspark API mapping in the UNIVERSAL scraper: returns
+      records the mapper doesn't parse -> 0 mapped. Add a mapper for that shape.
+
+## Universal scraper (still staging-only — STAGE_MODE="review")
+- [ ] U1. Discovery venue-query expansion: QUERY_TEMPLATES in discover_sources.py
+      is still the old ~8 generic queries. Add theater / performing-arts /
+      gallery / museum / opera / library / radio venue-type queries so discovery
+      finds Egyptian Theatre, KPCW, Park City Institute (it never found them).
+      NOTE: this edit was written earlier in a prior session then LOST (never
+      persisted). Needs to be redone from scratch.
+- [ ] U2. THE big validation we've never done: run the universal scraper against
+      a GENUINELY NEW city (zero ground truth, no hand-built scraper) to see if
+      it can bootstrap a city. This is its actual purpose. All the hardening
+      (API capture, recurrence, timeouts, guards, geo) is in place; it has only
+      ever been tested on Park City where we already have tuned scrapers.
+- [ ] U3. Universal scraper is NOT wired to production by design. Decide if/when
+      it ever feeds live (currently writes review_queue/ only). For an
+      already-covered city it's a downgrade (~777 vs 1,942); its value is NEW
+      cities (U2).
+
+## Conflict-surfacing follow-ups (feature shipped; these are extensions)
+- [ ] F1. React EventModal.tsx does NOT render the conflict flag (only the inline
+      modal does). Add it there too for safety in case that path ever fires:
+      EventModalData type += conflicts?/sourceLinks?; handleEventClick (~1451)
+      passes them; render flag + dual links in the component.
+- [ ] B1. (Was section 4 Plan B — the powerful general fix) Capture the "VISIT
+      WEBSITE" link from aggregator event PAGES (VPC's is JS-rendered, only in
+      the page not the API record) and feed it to primary_source_enricher so
+      ANY aggregator event can be verified against its true source — not just
+      venues we hand-add as scrapers. Expensive (render per event); evaluate
+      cost vs. just adding more direct venue scrapers.
+
+## Suggestions raised today (not yet scoped into tasks)
+- [ ] S1. News-article event extraction: the Offset Biergarten existed only in a
+      TownLift ARTICLE, not in any calendar feed, so no scraper caught it (had to
+      add it by hand to pc_recurring_locals.py). A "phase 2" LLM pass over local
+      news for events-not-in-calendars would catch these. Real but messy —
+      deferred.
+- [ ] S2. As more direct venue scrapers get added (like parkcityfilm), more
+      aggregator/venue time conflicts will surface automatically via the new
+      conflict system — good, but watch that the flag doesn't get noisy. If many
+      events show flags, consider tightening (e.g. only flag when the gap is
+      material, or suppress when one source is a known-bad time).
+
+## Monetization plumbing (deferred — summer is the window)
+- [ ] M1. /go click-redirect route + affiliate link wrapping.
+- [ ] M2. Stripe payment links (Featured $0.99/day, Partner $9.99/day).
+- [ ] M3. Featured-placement sales flow.
+- [ ] M4. Sponsor outreach + first newsletter.
+
+## New venue scrapers discussed (candidates)
+- [ ] N1. The Cabin, The Spur, Snake River Brewing (Jackson) — were on the radar.
