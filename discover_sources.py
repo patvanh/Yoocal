@@ -65,6 +65,19 @@ BLACKLIST_DOMAINS = {
     "thingstodopost.com", "tripsavvy.com", "afar.com",
 }
 
+# Domain KEYWORD patterns for business types that don't host their own events —
+# they embed someone else's calendar (e.g. a realtor embedding Visit Park City's
+# widget), which causes double-counting under the wrong source. We can't list
+# every realtor/lodge by name, so match on these substrings in the domain.
+# General — applies to any city.
+EXCLUDE_DOMAIN_KEYWORDS = (
+    "realestate", "realtor", "realty", "homes", "properties", "property",
+    "remax", "kw.com", "kellerwilliams", "sothebys", "coldwellbanker",
+    "compass.com", "redfin", "zillow", "trulia",
+    "rentals", "vacationrental", "lodging", "condos", "propertymanagement",
+    "forsale", "mls",
+)
+
 # Calendar tech detection markers
 # Format: (pattern, calendar_type, signal_strength_score)
 TECH_MARKERS = [
@@ -101,14 +114,37 @@ SCHEMA_EVENT_PATTERN = re.compile(
 # --------------------------------------------------------------
 
 QUERY_TEMPLATES = [
+    # --- aggregator / calendar queries (find the big multi-event sites) ---
     '"{city}" events calendar',
     '"{city}" upcoming events',
     '"{city}" things to do this weekend',
+    '"{city}" community calendar',
+    '"{city}" arts and culture events',
+    # --- event-type queries ---
     '"{city}" concerts',
     '"{city}" festivals',
     '"{city}" races',
-    '"{city}" community calendar',
-    '"{city}" arts and culture events',
+    '"{city}" live music',
+    '"{city}" farmers market',
+    # --- VENUE-TYPE queries (surface individual venues that generic event
+    #     searches miss: a theater doesn't rank for "{city} events" but does
+    #     for "{city} theater"). These are what was missing Egyptian Theatre,
+    #     Park City Institute, galleries, etc. Generalizes to any city. ---
+    '"{city}" theater events',
+    '"{city}" theatre performances',
+    '"{city}" performing arts center',
+    '"{city}" concert venue schedule',
+    '"{city}" playhouse',
+    '"{city}" art gallery events',
+    '"{city}" museum events',
+    '"{city}" opera',
+    '"{city}" symphony',
+    '"{city}" library events',
+    '"{city}" community radio calendar',
+    '"{city}" public events',
+    '"{city}" resort events',
+    '"{city}" brewery events',
+    '"{city}" nightlife live music',
 ]
 
 
@@ -171,6 +207,9 @@ def is_useful_candidate(url):
 
     if domain in BLACKLIST_DOMAINS:
         return False, "blacklisted"
+    # business types that embed others' calendars (realtors, lodging, rentals)
+    if any(kw in domain for kw in EXCLUDE_DOMAIN_KEYWORDS):
+        return False, "non-event-business"
     if domain in ALREADY_KNOWN_DOMAINS and os.environ.get("INCLUDE_KNOWN") != "1":
         return False, "already-known"
 

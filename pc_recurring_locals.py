@@ -308,6 +308,32 @@ _RECURRING_INSTITUTIONS = [
         "lat": 40.6514,
         "lng": -111.5076,
     },
+    {
+        "title": "Offset Bier Summer Biergarten",
+        "dates": [
+            "2026-06-12", "2026-07-10", "2026-08-15", "2026-09-11",
+        ],
+        "start_time": "3:00 PM",
+        "end_time": "9:00 PM",
+        "description": (
+            "Offset Bier's all-ages summer Biergarten series at City Park. "
+            "$5 entry and $5 beer, with a DJ and live music at the South "
+            "Pavilion. Food vendors include Red Bicycle Bread, Argentina's "
+            "Cafe, Kwai Thai Kitchen, and The Pretzel Connection. Kids and "
+            "dogs welcome; outside alcohol not allowed. Limited parking due "
+            "to City Park construction \u2014 transit, biking, or carpooling "
+            "encouraged."
+        ),
+        "location": "City Park, Park City, UT",
+        "venue_name": "City Park \u2014 South Pavilion",
+        "address": "1300 Sullivan Rd, Park City, UT 84060",
+        "link": "https://offsetbier.com/",
+        "source": "Park City Annual Events",
+        "source_url": "https://townlift.com/2026/06/offset-biergarten-returns-june-12-for-2026-summer-season/",
+        "categories": ["Community", "Music", "Food & Drink", "Family"],
+        "lat": PARK_CITY_LAT,
+        "lng": PARK_CITY_LNG,
+    },
 ]
 
 

@@ -140,7 +140,7 @@ def replay_event_api(api_url, verbose=True):
     raises them, widens any date range, then fetches the JSON directly.
 
     Returns the largest event-record list found, or []."""
-    import urllib.parse, urllib.request, json as _json, re as _re3
+    import urllib.parse, urllib.request, urllib.error, json as _json, re as _re3
     from datetime import date, timedelta
 
     def _records(obj):
@@ -207,12 +207,30 @@ def replay_event_api(api_url, verbose=True):
 
         new_q = urllib.parse.urlencode(params, doseq=True)
         full = urllib.parse.urlunparse(parsed._replace(query=new_q))
-        req = urllib.request.Request(full, headers={
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                          "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
-            "Accept": "application/json, text/plain, */*",
-        })
-        data = _json.load(urllib.request.urlopen(req, timeout=30))
+        ua = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+              "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+
+        def _fetch(method):
+            if method == "GET":
+                r = urllib.request.Request(full, headers={
+                    "User-Agent": ua,
+                    "Accept": "application/json, text/plain, */*"})
+                return _json.load(urllib.request.urlopen(r, timeout=30))
+            # POST: some APIs (cityspark) only accept POST; send query as JSON body
+            body = _json.dumps({k: (v[0] if len(v) == 1 else v)
+                                for k, v in params.items()}).encode()
+            r = urllib.request.Request(full.split("?")[0], data=body, headers={
+                "User-Agent": ua, "Content-Type": "application/json",
+                "Accept": "application/json, text/plain, */*"})
+            return _json.load(urllib.request.urlopen(r, timeout=30))
+
+        try:
+            data = _fetch("GET")
+        except urllib.error.HTTPError as he:
+            if he.code in (405, 400, 411):   # method/shape not allowed -> try POST
+                data = _fetch("POST")
+            else:
+                raise
         recs = _records(data)
         if verbose:
             print(f"      [api-replay] {len(recs)} records (limit bumped)")

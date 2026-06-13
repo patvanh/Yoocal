@@ -57,6 +57,48 @@ STAGE_MODE = os.environ.get("STAGE_MODE", "review")  # "review" | "push"
 FIRECRAWL_BUDGET = int(os.environ.get("SCRAPER_FIRECRAWL_BUDGET", "1500"))
 _budget_spent = 0
 
+# Hard ceiling per source (seconds). A single stuck render must never hang an
+# unattended run. Override with SCRAPER_SOURCE_TIMEOUT. 6 min is generous —
+# even a slow source with crawl + render + api-capture finishes well under it.
+SOURCE_TIMEOUT_S = int(os.environ.get("SCRAPER_SOURCE_TIMEOUT", "360"))
+
+# Business types that embed others' calendars rather than hosting their own
+# events (realtors, lodging, rentals). Skipped at scrape time so existing source
+# lists don't pull them in. Mirrors discover_sources.EXCLUDE_DOMAIN_KEYWORDS.
+_NON_EVENT_BIZ_KEYWORDS = (
+    "realestate", "realtor", "realty", "homes", "properties", "property",
+    "remax", "kellerwilliams", "sothebys", "coldwellbanker", "redfin",
+    "zillow", "trulia", "vacationrental", "propertymanagement", "forsale",
+)
+
+import signal as _signal
+from contextlib import contextmanager
+
+
+class _SourceTimeout(Exception):
+    pass
+
+
+@contextmanager
+def _source_timeout(seconds):
+    """Raise _SourceTimeout if the wrapped block exceeds `seconds`. Uses SIGALRM
+    (main thread only; the scraper runs single-threaded so this is fine). On
+    platforms without SIGALRM it becomes a no-op so the run still proceeds."""
+    if not hasattr(_signal, "SIGALRM"):
+        yield
+        return
+
+    def _handler(signum, frame):
+        raise _SourceTimeout()
+
+    old = _signal.signal(_signal.SIGALRM, _handler)
+    _signal.alarm(int(seconds))
+    try:
+        yield
+    finally:
+        _signal.alarm(0)
+        _signal.signal(_signal.SIGALRM, old)
+
 # Tech types (from discover_sources.py) that scrape_schema_org_events handles well.
 SCHEMA_TECHS = {"schema-org-event", "data-attributes", "fullcalendar",
                 "wordpress-tribe", "events-list-class"}
@@ -145,8 +187,15 @@ def extract_source(url, tech_types, city, lat, lng, categories=None, verbose=Tru
     #     recurrence rules we expand into the full dated calendar). General: we
     #     detect the API by request shape during a render, replay it with limits
     #     widened, then expand recurrences. One capture per domain per run.
-    api_events = _capture_api_events(
-        url, source_name, city, lat, lng, categories, verbose=verbose) if deep else []
+    #
+    #     GATE: only attempt this when the calendar render actually produced
+    #     events — that's the signal the source HAS a JS calendar backed by an
+    #     API. Static lodge/info sites that render 0 events have no API to find,
+    #     so we skip the extra browser load and keep full runs fast.
+    api_events = []
+    if deep and widget_events:
+        api_events = _capture_api_events(
+            url, source_name, city, lat, lng, categories, verbose=verbose)
 
     # 3. UNION crawl + widget + api, dedup
     if crawl_events or widget_events or api_events:
@@ -280,6 +329,21 @@ def _capture_api_events(url, source_name, city, lat, lng, categories, verbose=Tr
             recs, api_url = capture_event_api(cand, verbose=verbose)
             if api_url or recs:
                 break
+        # SAME-ORIGIN GUARD: a source may embed a THIRD-PARTY calendar widget
+        # (e.g. a real-estate site embedding Visit Park City's calendar). If the
+        # captured API's host doesn't match the source's host, those events
+        # belong to the other source — capturing them here double-counts them
+        # under the wrong name. Reject cross-domain captures.
+        if api_url:
+            src_host = urlparse(url).netloc.replace("www.", "")
+            api_host = urlparse(api_url).netloc.replace("www.", "")
+            if src_host and api_host and src_host not in api_host \
+                    and api_host not in src_host:
+                if verbose:
+                    print(f"    api-capture: skipped cross-domain API "
+                          f"({api_host} != {src_host})")
+                _API_CAPTURE_CACHE[source_name] = []
+                return []
         if api_url:
             full = replay_event_api(api_url, verbose=verbose) or recs or []
         else:
@@ -651,13 +715,21 @@ def scrape_city(city, lat, lng, radius_mi=25, pending_path="pending_sources.json
     # dedup by domain — discovery often returns several pages of the same site
     # (VPC appeared 4x); crawling each repeats the same sitemap/geocoding work.
     # Keep the first (usually the events/ landing) URL per domain.
-    _seen_dom, _deduped = set(), []
+    _seen_dom, _deduped, _skipped_biz = set(), [], 0
     for url, techs in sources:
         dom = _domain(url)
         if dom in _seen_dom:
             continue
+        # skip business types that embed others' calendars (realtors, lodging,
+        # rentals) — they don't host their own events and cause double-counting.
+        if any(kw in dom for kw in _NON_EVENT_BIZ_KEYWORDS):
+            _skipped_biz += 1
+            continue
         _seen_dom.add(dom)
         _deduped.append((url, techs))
+    if verbose and _skipped_biz:
+        print(f"  (skipped {_skipped_biz} non-event-business sources: "
+              f"realtor/lodging/rental)")
     if verbose and len(_deduped) < len(sources):
         print(f"  (deduped {len(sources)} sources -> {len(_deduped)} unique domains)")
     sources = _deduped
@@ -669,7 +741,21 @@ def scrape_city(city, lat, lng, radius_mi=25, pending_path="pending_sources.json
     per_source = []
     for i, (url, techs) in enumerate(sources, 1):
         print(f"[{i}/{len(sources)}] {_domain(url)} | tech={techs or ['none']}")
-        evs = extract_source(url, techs, city, lat, lng, categories=categories, verbose=verbose)
+        # HARD PER-SOURCE TIMEOUT — no single source may hang the whole run
+        # (a stuck browser render once froze a run for 10h). If a source exceeds
+        # the ceiling, abandon it and move on. Essential for unattended runs.
+        evs = []
+        try:
+            with _source_timeout(SOURCE_TIMEOUT_S):
+                evs = extract_source(url, techs, city, lat, lng,
+                                     categories=categories, verbose=verbose)
+        except _SourceTimeout:
+            print(f"    [{_domain(url)}] TIMED OUT after {SOURCE_TIMEOUT_S}s "
+                  f"-> skipping source")
+            evs = []
+        except Exception as _ee:
+            print(f"    [{_domain(url)}] error: {str(_ee)[:70]} -> skipping")
+            evs = []
         kept = normalize_and_filter(evs, city, lat, lng, radius_mi, verbose=verbose)
         try:
             from geo_validate import geo_validate
