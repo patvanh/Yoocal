@@ -55,6 +55,7 @@ INPUT_FILES = [
     "public/raw/events-jackson.json",
     "public/raw/events-elkhartlake.json",
     "public/raw/events-egyptian.json",
+    "public/raw/events-parkcityfilm.json",
 ]
 
 from category_normalizer import filter_categories_for
@@ -877,6 +878,7 @@ SOURCE_PRIORITY = {
     "Park City Song Summit": 1, "Park City Farmers Market": 1,
     "Mountain Trails Foundation": 1, "Village of Elkhart Lake": 1,
     "Egyptian Theatre": 1,
+    "Park City Film": 1,
     "Wasatch County Parks & Rec": 1,
     # Tier 2: trusted aggregator / tourism board / local newspaper
     "The Park Record": 2, "Park City Annual Events": 2,
@@ -930,6 +932,57 @@ def merge_events(records: list[dict]) -> dict:
         srcs.add(r.get("source", ""))
         srcs.discard("")
         base["_all_sources"] = sorted(srcs)
+
+    # --- cross-source conflict detection -------------------------------
+    # When sources disagree on a user-facing field, we surface the conflict
+    # rather than silently trusting one. Record each distinct value with its
+    # source so the modal can show "Source A: X / Source B: Y".
+    def _src_priority(rec):
+        return SOURCE_PRIORITY.get(rec.get("source", ""), DEFAULT_PRIORITY)
+
+    def _collect(field):
+        vals = {}
+        for r in records:
+            v = r.get(field)
+            v = (str(v).strip() if v is not None else "")
+            if v:
+                vals.setdefault(v, r.get("source", "?"))
+        return vals  # value -> first source that reported it
+
+    _conflicts = {}
+    for field, label in (("start_time", "time"), ("date", "date"),
+                         ("venue_name", "venue"), ("price", "price")):
+        vals = _collect(field)
+        if len(vals) > 1:
+            _conflicts[label] = [{"value": v, "source": src}
+                                 for v, src in vals.items()]
+
+    # price conflict also covers free-vs-paid disagreement
+    _free_vals = {bool(r.get("is_free")) for r in records if "is_free" in r}
+    if len(_free_vals) > 1 and "price" not in _conflicts:
+        _conflicts["price"] = [
+            {"value": ("Free" if r.get("is_free") else (r.get("price") or "Paid")),
+             "source": r.get("source", "?")}
+            for r in records if "is_free" in r or r.get("price")]
+
+    if _conflicts:
+        base["_conflicts"] = _conflicts
+        # TIME certainty: certain if a Tier-1 (direct/venue) source gave a time,
+        # even if an aggregator disagrees. Otherwise (only aggregators, and they
+        # conflict) the time is uncertain -> frontend hides it on the card.
+        if "time" in _conflicts:
+            tier1_has_time = any(
+                _src_priority(r) == 1 and (r.get("start_time") or "").strip()
+                for r in records)
+            base["_time_uncertain"] = not tier1_has_time
+            # when time conflicts, keep BOTH links so user can verify each source
+            links = []
+            for r in sorted(records, key=_src_priority):
+                lk = r.get("link")
+                if lk and lk not in [x["url"] for x in links]:
+                    links.append({"url": lk, "source": r.get("source", "?")})
+            if len(links) > 1:
+                base["_source_links"] = links
 
     base = _sanitize_span(_infer_pricing(_derive_address(_apply_single_venue_lookup(_backfill_venue(base)))))
     base["title"] = _strip_title_year(_clean_display_text(_best_display_title(records) or base.get("title", "")))

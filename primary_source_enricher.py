@@ -85,6 +85,7 @@ REGISTRY = {
     "jacksonhole.com":      {"trust": 1, "render": "auto"},
     "dishingjh.com":        {"trust": 2, "render": "auto"},
     "visitparkcity.com":    {"trust": 1, "render": "auto"},
+    "parkcityfilm.org":      {"trust": 1, "render": "auto"},
     "parkcity.org":         {"trust": 1, "render": "auto"},
     "elkhartlake.com":      {"trust": 1, "render": "auto"},
     "roadamerica.com":      {"trust": 1, "render": "auto"},

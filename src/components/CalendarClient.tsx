@@ -18,6 +18,9 @@ interface V2YocEvent {
   end_date?: string
   start_time?: string
   end_time?: string
+  _time_uncertain?: boolean
+  _conflicts?: Record<string, { value: string; source: string }[]>
+  _source_links?: { url: string; source: string }[]
   description?: string
   venue_name?: string
   location?: string
@@ -536,7 +539,7 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
         {thru && (
           <span style={{ fontSize: 9, color: 'rgba(175,169,236,0.85)', fontWeight: 600, lineHeight: 1, marginTop: 1 }}>{thru}</span>
         )}
-        {event.start_time && (
+        {event.start_time && !event._time_uncertain && (
           <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)', fontWeight: 700, lineHeight: 1, marginTop: 2 }}>
             {time.hour}{time.period.toLowerCase()}
           </span>
@@ -2353,7 +2356,7 @@ export default function CalendarClient() {
       const featured = isFeaturedEvent(event)
       const startStr = startDate || ''
       const endStr = endDate || startStr
-      return `<div class="cal-event${featured?' featured':''}" data-categories="${cats}" data-start="${startStr}" data-end="${endStr}" data-recurrence="${event.recurrence||''}" data-recurrence-day="${event.recurrence_day||''}" data-recurrence-days="${event.recurrence_days||''}" data-lat="${event.lat||''}" data-lng="${event.lng||''}" data-title="${(event.title||'').replace(/"/g,'&quot;')}" data-location="${(event.location||'').replace(/"/g,'&quot;')}" data-address="${(event.address||'').replace(/"/g,'&quot;')}" data-venue-name="${(event.venue_name||'').replace(/"/g,'&quot;')}" data-date="${event.date||''}" data-end-date="${event.end_date||''}" data-link="${event.link||''}" data-description="${(event.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}" data-source="${sourceShort}" data-start-time="${event.start_time||''}" data-end-time="${event.end_time||''}" onclick="openEventModal(this)" style="cursor:pointer"><div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time?`<div style="font-size:9px;color:white;margin-top:3px;white-space:nowrap">${event.start_time}${event.end_time?"–"+event.end_time:""}</div>`:''}</div><div class="cal-event-info"><h4>${event.title}</h4><p>${(event.description||'').slice(0,120)||'See website for details.'}</p><div class="cal-tags">${tagHTML}<span class="cal-source">via ${sourceShort}${distLabel}</span></div></div><div class="cal-event-actions"><button class="atc-btn" title="Add to calendar" onclick="openAtcDropdown(event,this)">📅</button></div></div>`
+      return `<div class="cal-event${featured?' featured':''}" data-categories="${cats}" data-start="${startStr}" data-end="${endStr}" data-recurrence="${event.recurrence||''}" data-recurrence-day="${event.recurrence_day||''}" data-recurrence-days="${event.recurrence_days||''}" data-lat="${event.lat||''}" data-lng="${event.lng||''}" data-title="${(event.title||'').replace(/"/g,'&quot;')}" data-location="${(event.location||'').replace(/"/g,'&quot;')}" data-address="${(event.address||'').replace(/"/g,'&quot;')}" data-venue-name="${(event.venue_name||'').replace(/"/g,'&quot;')}" data-date="${event.date||''}" data-end-date="${event.end_date||''}" data-link="${event.link||''}" data-description="${(event.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}" data-source="${sourceShort}" data-start-time="${event.start_time||''}" data-time-uncertain="${event._time_uncertain?'1':''}" data-conflicts="${event._conflicts?encodeURIComponent(JSON.stringify(event._conflicts)):''}" data-source-links="${event._source_links?encodeURIComponent(JSON.stringify(event._source_links)):''}" data-end-time="${event.end_time||''}" onclick="openEventModal(this)" style="cursor:pointer"><div class="cal-event-time"><div class="h">${displayMonth}</div><div class="ap">${displayDay}</div>${event.start_time?`<div style="font-size:9px;color:white;margin-top:3px;white-space:nowrap">${event.start_time}${event.end_time?"–"+event.end_time:""}</div>`:''}</div><div class="cal-event-info"><h4>${event.title}</h4><p>${(event.description||'').slice(0,120)||'See website for details.'}</p><div class="cal-tags">${tagHTML}<span class="cal-source">via ${sourceShort}${distLabel}</span></div></div><div class="cal-event-actions"><button class="atc-btn" title="Add to calendar" onclick="openAtcDropdown(event,this)">📅</button></div></div>`
     }
 
     function applyFilters() {
@@ -2414,7 +2417,7 @@ export default function CalendarClient() {
           const labels: Record<string,string> = {music:'Music',outdoor:'Outdoor',food:'Food & Drink',arts:'Arts',sports:'Sports',family:'Family',wellness:'Wellness',community:'Community',free:'Free',paid:'Paid'}
           const tagHTML = cats.slice(0,3).map((c:string) => `<span class="cal-tag ${tagMap[c]||''}">${labels[c]||c}</span>`).join('')
           const src = (e.source||'').replace('The Park Record','Park Record').replace('Visit Park City','visitparkcity.com').replace('Google Events','Google')
-          return `<div class="featured-band-card" onclick="openEventModal(this)" data-title="${(e.title||'').replace(/"/g,'&quot;')}" data-date="${e.date||''}" data-end-date="${e.end_date||''}" data-location="${(e.location||'').replace(/"/g,'&quot;')}" data-link="${e.link||''}" data-description="${(e.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}" data-source="${(e.source||'').replace(/"/g,'&quot;')}" data-categories="${cats.join(' ')}" data-start-time="${e.start_time||''}" data-end-time="${e.end_time||''}" style="cursor:pointer"><div class="fbc-time"><div class="h">${month}</div><div class="ap">${day}</div>${e.start_time?`<div style="font-size:9px;color:white;margin-top:3px;white-space:nowrap">${e.start_time}${e.end_time?"–"+e.end_time:""}</div>`:''}</div><div class="fbc-info"><h4>${e.title}</h4><p>${(e.description||'').slice(0,100)||(e.location?'📍 '+e.location:'')}</p><div class="cal-tags" style="margin-top:6px">${tagHTML}<span class="cal-source">via ${src}</span></div></div></div>`
+          return `<div class="featured-band-card" onclick="openEventModal(this)" data-title="${(e.title||'').replace(/"/g,'&quot;')}" data-date="${e.date||''}" data-end-date="${e.end_date||''}" data-location="${(e.location||'').replace(/"/g,'&quot;')}" data-link="${e.link||''}" data-description="${(e.description||'').replace(/"/g,'&quot;').replace(/\n/g,' ')}" data-source="${(e.source||'').replace(/"/g,'&quot;')}" data-categories="${cats.join(' ')}" data-start-time="${e.start_time||''}" data-time-uncertain="${e._time_uncertain?'1':''}" data-conflicts="${e._conflicts?encodeURIComponent(JSON.stringify(e._conflicts)):''}" data-source-links="${e._source_links?encodeURIComponent(JSON.stringify(e._source_links)):''}" data-end-time="${e.end_time||''}" style="cursor:pointer"><div class="fbc-time"><div class="h">${month}</div><div class="ap">${day}</div>${e.start_time?`<div style="font-size:9px;color:white;margin-top:3px;white-space:nowrap">${e.start_time}${e.end_time?"–"+e.end_time:""}</div>`:''}</div><div class="fbc-info"><h4>${e.title}</h4><p>${(e.description||'').slice(0,100)||(e.location?'📍 '+e.location:'')}</p><div class="cal-tags" style="margin-top:6px">${tagHTML}<span class="cal-source">via ${src}</span></div></div></div>`
         }).join('')
       } else if (band) {
         band.style.display = 'none'
@@ -2736,6 +2739,29 @@ export default function CalendarClient() {
         meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7)"><span style="font-size:16px">📍</span>${location}</div>`)
       }
       if (source) meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.4)"><span style="font-size:16px">🔗</span>via ${source}</div>`)
+      // --- source-conflict flag: when sources disagree on a field, surface it
+      // rather than silently trusting one. Show each value with its source.
+      try {
+        const rawC = card.dataset.conflicts || ''
+        if (rawC) {
+          const conflicts = JSON.parse(decodeURIComponent(rawC)) as Record<string, {value:string;source:string}[]>
+          const labelMap: Record<string,string> = { time:'Time', date:'Date', venue:'Venue', price:'Price' }
+          for (const field of Object.keys(conflicts)) {
+            const vals = conflicts[field] || []
+            if (vals.length < 2) continue
+            const detail = vals.map(v => `${v.source}: ${v.value}`).join(' &bull; ')
+            meta.push(`<div class="ye-conflict-flag" style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#F0C674;background:rgba(240,198,116,0.10);border:1px solid rgba(240,198,116,0.25);border-radius:8px;padding:8px 10px;margin-top:4px"><span style="font-size:15px">&#9888;</span><span><strong>${labelMap[field]||field} varies by source:</strong> ${detail}. Please confirm with the venue.</span></div>`)
+          }
+        }
+        const rawL = card.dataset.sourceLinks || ''
+        if (rawL) {
+          const links = JSON.parse(decodeURIComponent(rawL)) as {url:string;source:string}[]
+          if (links.length > 1) {
+            const linkHtml = links.map(l => `<a href="${l.url}" target="_blank" rel="noopener noreferrer" style="color:#AFA9EC;text-decoration:underline">${l.source} &#8599;</a>`).join('<span style="color:rgba(255,255,255,0.3)"> &nbsp;|&nbsp; </span>')
+            meta.push(`<div style="display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.6);margin-top:2px"><span style="font-size:15px">&#128279;</span><span>Sources: ${linkHtml}</span></div>`)
+          }
+        }
+      } catch (_e) { /* malformed conflict data — skip the flag, don't break modal */ }
       if (mMeta) mMeta.innerHTML = meta.join('')
       const overlay = document.getElementById('event-modal-overlay'), modal = document.getElementById('event-modal')
       if (overlay) overlay.style.display = 'block'

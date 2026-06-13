@@ -65,6 +65,10 @@ jobs:
           python -u egyptian_scraper.py
           echo "::endgroup::"
 
+          echo "::group::Park City Film scraper"
+          python -u parkcityfilm_scraper.py
+          echo "::endgroup::"
+
       - name: Scrape Heber Valley events
         id: scrape_heber
         continue-on-error: true
