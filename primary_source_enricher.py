@@ -477,6 +477,26 @@ def _apply_fields(e, fields):
         e["is_free"] = fields["is_free"]
 
 
+import re as _pse_re
+
+def _is_generic_listing_url(url):
+    """True if URL is a generic events-listing/calendar page (not a specific
+    per-event page). A listing page lists MANY events, so its dates must not be
+    applied to one event. Per-event pages (/event/<slug>, /events/details/<slug>)
+    are specific and return False."""
+    u = (url or "").rstrip("/").lower()
+    m = _pse_re.match(r'https?://[^/]+(/.*)?$', u)
+    path = (m.group(1) or "") if m else u
+    if path in ("", "/"):
+        return True
+    _LISTING = ("/events", "/event", "/calendar", "/whats-on", "/whatson",
+                "/happenings", "/shows", "/schedule")
+    for base in _LISTING:
+        if path == base or path == base + "/":
+            return True
+    return False
+
+
 def enrich_primary_sources(events, verbose=True):
     """For every event whose link points at a known primary source, replace its
     weak fields with authoritative data from that page. Mutates + returns events.
@@ -503,8 +523,17 @@ def enrich_primary_sources(events, verbose=True):
         fields, status, budget = _resolve_url(url, title_hint, cache, budget)
         stats[status] = stats.get(status, 0) + 1
         if fields:
+            _f = fields
+            if _is_generic_listing_url(url) and (fields.get("occurrence_dates")
+                                                 or fields.get("recurrence_text")):
+                # generic listing — do not apply series dates to individual events
+                _f = {k: v for k, v in fields.items()
+                      if k not in ("occurrence_dates", "recurrence_text")}
+                if verbose:
+                    print(f"    [primary-enrich] listing page {url} -> "
+                          f"NOT applying its dates to {len(group)} event(s)")
             for e in group:
-                _apply_fields(e, fields)
+                _apply_fields(e, _f)
 
     _save_cache(cache)
     if verbose:
