@@ -184,7 +184,7 @@ def _html_to_text(html):
 # ---------------------------------------------------------------------------
 # Extraction layers
 # ---------------------------------------------------------------------------
-def _extract_jsonld_events(html):
+def _extract_jsonld_events(html, title_hint=None):
     """Pull schema.org Event objects from <script type=ld+json> blocks.
 
     Returns a dict of normalized fields (start_time, end_time, occurrence_dates,
@@ -222,6 +222,42 @@ def _extract_jsonld_events(html):
         ap = "AM" if h < 12 else "PM"
         h12 = h % 12 or 12
         return f"{h12}:{mn:02d} {ap}"
+
+    # _TITLE_MATCH_NARROW: if the page lists MULTIPLE distinct events (e.g. a
+    # band page that embeds the whole concert-series schedule in JSON-LD), keep
+    # only the Event whose name best matches the event we're enriching. Without
+    # this, every sibling event's startDate is collected and the event explodes
+    # across the whole series (Siebkens: 13 bands x 13 dates = 255 phantom rows).
+    if len(events) > 1 and title_hint:
+        import difflib as _dl
+        def _norm(x):
+            return re.sub(r"[^a-z0-9 ]", "", (x or "").lower()).strip()
+        th = _norm(title_hint)
+        # strip common venue/series prefixes from the hint to focus on the act name
+        for _pre in ("siebkens live music by ", "siebkens summer concert ",
+                     "siebkens downtown night live music ", "live music by ",
+                     "live music ", "siebkens "):
+            if th.startswith(_pre):
+                th = th[len(_pre):]
+                break
+        best, best_score = None, 0.0
+        for ev in events:
+            nm = _norm(ev.get("name"))
+            if not nm:
+                continue
+            # score by substring containment or fuzzy ratio
+            if th and (th in nm or nm in th):
+                score = 0.95
+            else:
+                score = _dl.SequenceMatcher(None, th, nm).ratio()
+            if score > best_score:
+                best, best_score = ev, score
+        if best is not None and best_score >= 0.6:
+            events = [best]  # confident match -> use only this event
+        else:
+            # no confident match: keep just the first event's date, never the
+            # whole series, so a single event can't fan out across the series.
+            events = [events[0]]
 
     occ, start_time, end_time, venue, street, price, is_free = [], None, None, None, None, None, None
     for ev in events:
@@ -370,7 +406,7 @@ def _resolve_url(url, title_hint, cache, budget):
         return None, "fetch_failed", budget
 
     # 2. JSON-LD (free, exact)
-    jl = _extract_jsonld_events(html)
+    jl = _extract_jsonld_events(html, title_hint)
     if jl and jl.get("occurrence_dates"):
         rec = {**jl, "status": "jsonld"}
         cache[url] = rec
