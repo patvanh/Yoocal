@@ -241,17 +241,30 @@ def fetch_page(skip: int = 0, search: str = "", timeout: int = 20,
         "defFilter": None,
         "skip": skip,
     }
-    try:
-        r = requests.post(CITYSPARK_URL, json=body, headers=HEADERS, timeout=timeout)
-        r.raise_for_status()
-        data = r.json()
-    except Exception as ex:
-        print(f"  [Park Record/CitySpark] fetch failed (skip={skip}): {ex}")
-        return []
-    if not data.get("Success"):
-        print(f"  [Park Record/CitySpark] API error: {data.get('ErrorMessage')}")
-        return []
-    return data.get("Value") or []
+    # Retry transient failures with backoff. The whole scrape depends on the
+    # first call (skip=0) returning the full set; one flaky timeout/throttle
+    # there otherwise produces a partial scrape that trips the C6 coverage gate.
+    _MAX_RETRIES = 3
+    last_err = None
+    for attempt in range(_MAX_RETRIES):
+        try:
+            r = requests.post(CITYSPARK_URL, json=body, headers=HEADERS, timeout=timeout)
+            r.raise_for_status()
+            data = r.json()
+            if not data.get("Success"):
+                last_err = f"API error: {data.get('ErrorMessage')}"
+            else:
+                return data.get("Value") or []
+        except Exception as ex:
+            last_err = str(ex)
+        if attempt < _MAX_RETRIES - 1:
+            wait = 2 * (2 ** attempt)  # 2s, 4s, 8s
+            print(f"  [Park Record/CitySpark] fetch failed (skip={skip}, "
+                  f"attempt {attempt+1}/{_MAX_RETRIES}): {last_err} — retrying in {wait}s")
+            time.sleep(wait)
+    print(f"  [Park Record/CitySpark] fetch failed (skip={skip}) after "
+          f"{_MAX_RETRIES} attempts: {last_err}")
+    return []
 
 
 def _crawl_targeted(search: str, start_iso: str, max_pages: int, seen_pids: set,
