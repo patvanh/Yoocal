@@ -94,9 +94,27 @@ MODAL RENDER — DONE (2026-06-13):
       rebuild). Click the event, confirm 4pm + amber flag + both source links.
 
 ## Data accuracy / scraper correctness
-- [ ] D1. park_record_cityspark_scraper.py month-loop (section 2): month=2026-06
-      logged +1111 then +0 for all later months. Verify the month iteration
-      actually works or simplify to the single call that returns the full set.
+- [x] D1. park_record_cityspark_scraper.py month-loop — RESOLVED 2026-06-15.
+      NOT a bug: the first call (month=2026-06) returns ALL ~1118 future events;
+      later months legitimately add 0 (already in set). The loop is a harmless
+      future-proof safety net (kept). REAL issue was fragility: the whole scrape
+      hinged on that one first call, so a transient timeout gave a partial scrape
+      (24 events) and tripped C6. FIXED: fetch_page now retries 3x w/ 2/4/8s
+      backoff (commit f9b00de). Healthy path unchanged (~1118).
+- [x] D0. DAILY RUNS FAILING EVERY DAY — RESOLVED 2026-06-15. Root cause: C1
+      (RECURRING-DROPPED) was in the gate's GATEABLE_CODES but is a heuristic
+      guess, not a verifiable defect. It false-positived daily on window-edge
+      events (single occurrence dated today/tomorrow) and title-split variants
+      ('Midway Farmers Market' vs 'Saturday Midway Farmers Market' — 18 real
+      occurrences seen as a drop). Removed C1 from GATEABLE_CODES (commit
+      9d080d3); now gates only on C2/C5/C7. C1 still reported as HIGH in digest.
+      NOTE: the data always SHIPPED fine — the gate runs after the commit/push,
+      so it only reddened the run as an alarm; the site was never broken.
+- [ ] D5. Google Events (SerpApi) C6 cliff: saw 16 -> 0 (and 13 -> 0 earlier).
+      Same single-call fragility as Park Record but much smaller stakes (16 vs
+      1118 events). No longer gates (C6 non-gateable) but periodically loses
+      those events. Give it the same retry-with-backoff treatment as
+      park_record fetch_page (commit f9b00de pattern).
 - [ ] D2. Far-town leakage in CitySpark feed (section 3): confirm Big Cottonwood
       / SLC-area events are dropped in production. Consider sharing the universal
       scraper's geo_validate._named_city_far with the PRODUCTION path (today it
