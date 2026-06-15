@@ -69,6 +69,11 @@ _NON_EVENT_BIZ_KEYWORDS = (
     "realestate", "realtor", "realty", "homes", "properties", "property",
     "remax", "kellerwilliams", "sothebys", "coldwellbanker", "redfin",
     "zillow", "trulia", "vacationrental", "propertymanagement", "forsale",
+    # Statewide/regional tourism aggregators — list events across an entire
+    # state, so they're mostly geo-noise for one town (travelwisconsin returned
+    # 252 events, 206 dropped as out-of-area) and expensive to deep-crawl.
+    "travelwisconsin", "travelutah", "visitutah", "wisconsin.gov",
+    "travel.wisconsin", "industry.travelwisconsin",
 )
 
 import signal as _signal
@@ -112,7 +117,7 @@ def _domain(url):
 # Extraction: route a source to the best method, cascade on empty
 # ---------------------------------------------------------------------------
 def extract_source(url, tech_types, city, lat, lng, categories=None, verbose=True,
-                   deep=True, max_event_urls=200):
+                   deep=True, max_event_urls=40):
     """Extract events from one source.
 
     deep=True: first discover all individual event-page URLs (generic sitemap /
@@ -122,6 +127,15 @@ def extract_source(url, tech_types, city, lat, lng, categories=None, verbose=Tru
     extraction when no event URLs are discovered."""
     source_name = _domain(url)
     widget_events = []  # events from rendering a JS calendar page (if any)
+
+    # ChamberMaster/GrowthZone sources are authoritative LOCAL calendars that
+    # legitimately list ~200 events via month-pagination. The default low cap
+    # (which exists to stop statewide-aggregator cost bombs) would truncate them,
+    # so raise it here. Locality is the distinction: cap statewide noise hard,
+    # let a local chamber run full. (chambermaster cap)
+    _tt = " ".join(tech_types or []) if isinstance(tech_types, (list, tuple)) else str(tech_types or "")
+    if "chambermaster" in _tt.lower() or "/events/calendar" in url.lower():
+        max_event_urls = max(max_event_urls, 250)
 
     # 1. DEEP: discover individual event URLs and extract each. We do this FIRST
     #    (it's mostly cached/cheap), then only fall back to a Playwright widget
@@ -135,6 +149,23 @@ def extract_source(url, tech_types, city, lat, lng, categories=None, verbose=Tru
         except Exception as ex:
             if verbose:
                 print(f"    link-discovery error: {str(ex)[:80]}")
+            event_urls = []
+        # Giant-sitemap guard: a source offering far more event URLs than a
+        # single town could plausibly have is a statewide/regional aggregator
+        # (e.g. travelwisconsin.com returned 4600). Deep-crawling it costs
+        # hundreds of paid renders for events that mostly geo-fail. Skip the
+        # per-URL deep crawl; the calendar-page render below still runs.
+        _DEEP_URL_HARD_CAP = 60
+        # EXEMPT chambermaster: a local chamber legitimately has hundreds of real
+        # event URLs via month-pagination — that's authoritative local data, not
+        # an aggregator. The guard is only meant to catch statewide aggregators
+        # like travelwisconsin (4600 URLs, non-chambermaster).
+        _is_cm = ("chambermaster" in _tt.lower() or "/events/calendar" in url.lower())
+        if len(event_urls) > _DEEP_URL_HARD_CAP and not _is_cm:
+            if verbose:
+                print(f"    deep: {len(event_urls)} urls exceeds cap "
+                      f"({_DEEP_URL_HARD_CAP}) — likely a regional aggregator; "
+                      f"skipping per-URL deep crawl (calendar render still runs)")
             event_urls = []
         if event_urls:
             try:

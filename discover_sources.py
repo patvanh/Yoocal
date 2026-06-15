@@ -90,6 +90,13 @@ TECH_MARKERS = [
     (r"showpass-embed", "showpass-embed", 7),
     (r"wp-json/tribe/events", "wordpress-tribe", 9),
     (r"tribe-events-calendar", "wordpress-tribe", 7),
+    # ChamberMaster / GrowthZone — the dominant US chamber-of-commerce platform
+    # (thousands of town chambers/tourism boards). Events live in plain HTML as
+    # /events/details/<slug>-<id> links; static-fetchable. High-value primary
+    # sources that previously scored ~0 because the platform wasn't recognized.
+    (r"chambermaster\.com", "chambermaster", 9),
+    (r"growthzone", "growthzone", 8),
+    (r"/events/details/", "event-detail-links", 7),
 
     # Medium signals — common calendar libraries
     (r"fullcalendar", "fullcalendar", 6),
@@ -258,6 +265,39 @@ def fetch_and_detect(url, timeout=15):
     future_dates = set(re.findall(future_year_pattern, text))
     if future_dates:
         total_score += min(len(future_dates), 5)  # cap bonus at 5
+
+    # Event-link DENSITY — count links to individual event-detail pages. This is
+    # platform-agnostic: a page with many /events/details/, /event/<slug>, or
+    # /events/<id> links is an event source regardless of whether we recognize
+    # its calendar software. This is the catch-all that stops rich calendars on
+    # unknown platforms from scoring 0 (the Green Lake chamber had 105 such
+    # links yet scored ~1 under tech+ISO-date scoring alone).
+    event_link_patterns = [
+        r'/events?/details?/',
+        r'/event/[a-z0-9\-]{4,}',
+        r'/events/index/\d{4}-\d{2}-\d{2}',
+        r'/calendar/event/\d+',
+    ]
+    event_link_count = 0
+    for pat in event_link_patterns:
+        event_link_count += len(re.findall(pat, text_lower))
+    if event_link_count >= 3:
+        # 3-9 links: +3 ; 10-29: +6 ; 30+: +9 (a dense calendar)
+        if event_link_count >= 30:
+            total_score += 9
+        elif event_link_count >= 10:
+            total_score += 6
+        else:
+            total_score += 3
+
+    # Broader date detection — many calendars don't use ISO. Catch "Jun. 19",
+    # "July 4", "Aug. 8-9" style so text calendars register as having events.
+    if not future_dates:
+        month_date = re.findall(
+            r'\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}\b',
+            text_lower)
+        if len(month_date) >= 3:
+            total_score += min(len(month_date) // 3, 4)  # modest, capped at 4
 
     # Sample events — Schema.org JSON-LD is the cleanest
     samples = []

@@ -176,6 +176,63 @@ def _dedup_permalink_variants(urls):
     return list(by_base.values())
 
 
+import re as _re_cm
+from datetime import date as _date_cm
+
+def _is_chambermaster(url, html=None):
+    """ChamberMaster/GrowthZone signature: chambermaster.com host/assets,
+    growthzone, or the /events/calendar URL pattern these sites use."""
+    u = (url or "").lower()
+    if "chambermaster.com" in u:
+        return True
+    if "/events/calendar" in u or "/events/details/" in u:
+        return True
+    if html and ("chambermaster.com" in html.lower() or "growthzone" in html.lower()):
+        return True
+    return False
+
+def _chambermaster_month_urls(source_url, months_ahead=8, verbose=True):
+    """Walk a ChamberMaster calendar forward month-by-month, collecting every
+    /events/details/<slug>-<id> link. These sites paginate one month per page at
+    {base}/events/calendar/YYYY-MM-01. ~8 cheap HTML fetches enumerate the whole
+    season (no per-URL firecrawl needed — links are in the HTML). Bounded: stops
+    after 2 consecutive empty months."""
+    from urllib.parse import urlparse as _up
+    pr = _up(source_url)
+    base = f"{pr.scheme}://{pr.netloc}"
+    detail_re = _re_cm.compile(r'(?:https?://[^"/]+)?(/events/details/[^"#?\s]+)', _re_cm.I)
+    found, seen = [], set()
+    today = _date_cm.today()
+    y, m = today.year, today.month
+    empty_streak = 0
+    for i in range(months_ahead + 1):
+        mm = (m - 1 + i) % 12 + 1
+        yy = y + (m - 1 + i) // 12
+        month_url = f"{base}/events/calendar/{yy:04d}-{mm:02d}-01"
+        html = _fetch(month_url, want="text")
+        if not html:
+            empty_streak += 1
+            if empty_streak >= 2:
+                break
+            continue
+        n_before = len(found)
+        for mch in detail_re.finditer(html):
+            path = mch.group(1).split("?")[0]  # strip ?calendarMonth=... dup param
+            full = base + path
+            if full not in seen:
+                seen.add(full)
+                found.append(full)
+        if len(found) == n_before:
+            empty_streak += 1
+            if empty_streak >= 2:
+                break
+        else:
+            empty_streak = 0
+    if verbose:
+        print(f"    chambermaster: walked {i+1} months -> {len(found)} event URLs")
+    return found
+
+
 def discover_event_urls(source_url, max_urls=300, verbose=True):
     """Return individual event-page URLs for a source.
 
@@ -186,6 +243,14 @@ def discover_event_urls(source_url, max_urls=300, verbose=True):
       4. rank by recency (lastmod desc) so a huge sitemap yields recently-updated
          (i.e. upcoming) events, NOT the alphabetical-first chunk.
     Listing-page links are prioritized since they reflect what's live now."""
+    # ChamberMaster/GrowthZone: month-walk is the authoritative enumeration
+    # (the generic sitemap/crawl only catches the first month). Try it first;
+    # if it yields events, those ARE the complete set. (chambermaster month-walk)
+    if _is_chambermaster(source_url):
+        cm_urls = _chambermaster_month_urls(source_url, verbose=verbose)
+        if len(cm_urls) >= 10:
+            return _dedup_permalink_variants(cm_urls)[:max_urls]
+
     sitemap = _sitemap_urls(source_url, verbose=verbose)          # {url: lastmod}
     crawl = _crawl_links(source_url, verbose=verbose)             # set
     # also crawl a few common listing paths generically
