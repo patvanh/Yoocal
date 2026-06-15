@@ -604,7 +604,11 @@ def main():
 
     high_total = 0
     gateable_high = 0
-    GATEABLE_CODES = {"C1", "C2", "C5", "C7"}  # real data bugs; NOT C6 (transient)
+    GATEABLE_CODES = {"C2", "C5", "C7"}  # verifiable data defects only.
+    # C1 (RECURRING-DROPPED) intentionally NOT gateable: it is a heuristic
+    # guess ("looks recurring but appears once") that false-positives on
+    # window-edge events and title-split variants. Still reported as HIGH in
+    # the digest for visibility; just does not redden the run. NOT C6 (transient).
     new_baseline = {}
     findings_out = {"generated_at": TODAY_ISO, "cities": {}}
 
