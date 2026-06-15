@@ -116,6 +116,71 @@ def _domain(url):
 # ---------------------------------------------------------------------------
 # Extraction: route a source to the best method, cascade on empty
 # ---------------------------------------------------------------------------
+def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=None):
+    """Free fallback: build an event from schema.org MICRODATA itemprop tags on a
+    detail page whose JSON-LD lacks an Event (ChamberMaster/GrowthZone pattern).
+    Matches double-quoted itemprop/content attrs in either order. Returns a single
+    event dict or None."""
+    import re as _md_re
+    if not html:
+        return None
+
+    def _itemprop(prop):
+        pats = [
+            '<[^>]+itemprop="' + prop + '"[^>]*content="([^"]+)"',
+            '<[^>]+content="([^"]+)"[^>]*itemprop="' + prop + '"',
+        ]
+        for pat in pats:
+            m = _md_re.search(pat, html, _md_re.I)
+            if m:
+                return m.group(1).strip()
+        return None
+
+    name = _itemprop("name")
+    start = _itemprop("startDate")
+    end = _itemprop("endDate")
+    if not start:
+        return None
+
+    if not name:
+        tm = _md_re.search("<title>(.*?)</title>", html, _md_re.S | _md_re.I)
+        if tm:
+            name = _md_re.split(r"\s+-\s+", tm.group(1).strip())[0].strip()
+    if not name:
+        return None
+
+    def _date_part(iso):
+        m = _md_re.match(r"(\d{4}-\d{2}-\d{2})", iso or "")
+        return m.group(1) if m else None
+
+    def _time_part(iso):
+        m = _md_re.search(r"T(\d{2}):(\d{2})", iso or "")
+        if not m:
+            return None
+        h, mn = int(m.group(1)), int(m.group(2))
+        ap = "AM" if h < 12 else "PM"
+        return "%d:%02d %s" % (h % 12 or 12, mn, ap)
+
+    date = _date_part(start)
+    if not date:
+        return None
+    end_date = _date_part(end)
+    ev = {
+        "title": name,
+        "date": date,
+        "start_time": _time_part(start),
+        "end_time": _time_part(end),
+        "link": url,
+        "source": source_name,
+        "lat": lat,
+        "lng": lng,
+        "location": city,
+    }
+    if end_date and end_date != date:
+        ev["end_date"] = end_date
+    return ev
+
+
 def extract_source(url, tech_types, city, lat, lng, categories=None, verbose=True,
                    deep=True, max_event_urls=40):
     """Extract events from one source.
@@ -575,6 +640,27 @@ def _extract_one(url, source_name, city, lat, lng, categories=None, verbose=True
                     print(f"      [free] direct json-ld -> {len(raw)} blocks")
     except Exception:
         pass
+
+    # free microdata itemprop fallback (ChamberMaster/GrowthZone: JSON-LD is a
+    # WebPage blob, but the Event is in <meta/span itemprop> tags). Reuses the
+    # html already fetched above. Prevents both paid firecrawl AND budget-drop.
+    if not found:
+        try:
+            _md_html = None
+            try:
+                _md_html = html
+            except NameError:
+                _md_html = None
+            if not _md_html:
+                from schema_org_scraper import _fetch as _sos_fetch2
+                _md_html = _sos_fetch2(url)
+            md_ev = _extract_microdata_event(_md_html, url, source_name, city, lat, lng, categories or [])
+            if md_ev:
+                found.append(md_ev)
+                if verbose:
+                    print("      [free] microdata itemprop -> 1")
+        except Exception:
+            pass
 
     found = _dedup_events(found)
     if found:
