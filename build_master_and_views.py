@@ -41,6 +41,10 @@ CITIES = {
         "lat": 43.8330, "lng": -88.0426, "radius_mi": 15,
         "out_file": "public/events-elkhartlake.json",
     },
+    "green-lake": {
+        "lat": 43.8408, "lng": -88.9576, "radius_mi": 25,
+        "out_file": "public/events-greenlake.json",
+    },
 }
 
 # Source files to read (current per-city files act as INPUT until we migrate scrapers)
@@ -56,6 +60,7 @@ INPUT_FILES = [
     "public/raw/events-elkhartlake.json",
     "public/raw/events-egyptian.json",
     "public/raw/events-parkcityfilm.json",
+    "public/raw/events-green-lake-wisconsin.json",
 ]
 
 from category_normalizer import filter_categories_for

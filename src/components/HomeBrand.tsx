@@ -22,7 +22,7 @@ const CITIES: City[] = [
     image: "/cities/parkcity.jpg",
     name: "Park City",
     region: "Utah",
-    emoji: "⛷️",
+    emoji: "",
     blurb: "Concerts, festivals, races, outdoor adventures and more.",
     founder: true,
   },
@@ -31,7 +31,7 @@ const CITIES: City[] = [
     image: "/cities/jackson.jpg",
     name: "Jackson Hole",
     region: "Wyoming",
-    emoji: "🦌",
+    emoji: "",
     blurb: "Music festivals, chamber events, and Teton County happenings.",
   },
   {
@@ -39,7 +39,7 @@ const CITIES: City[] = [
     image: "/cities/heber.jpg",
     name: "Heber Valley",
     region: "Utah",
-    emoji: "🏞️",
+    emoji: "",
     blurb: "Rodeos, fairs, train rides and small-town events across the Wasatch Back.",
   },
   {
@@ -47,7 +47,7 @@ const CITIES: City[] = [
     image: "/cities/elkhartlake.jpg",
     name: "Elkhart Lake",
     region: "Wisconsin",
-    emoji: "🏁",
+    emoji: "",
     blurb: "Racing, lakeside events and everything around Road America.",
   },
 ]
@@ -216,7 +216,7 @@ export default function HomeBrand() {
 
       <div className="hb-hero">
         <div className="hb-hero-inner">
-          <div className="hb-eyebrow">✦ yoocal</div>
+          <div className="hb-eyebrow">yoocal</div>
           <h1 className="hb-title">
             Your local,
             <br />
@@ -229,7 +229,7 @@ export default function HomeBrand() {
 
           <div className="hb-search-wrap" ref={wrapRef}>
             <form className="hb-search" onSubmit={handleSearch}>
-              <span className="hb-search-icon">🔍</span>
+              
               <input
                 type="text"
                 placeholder="Search a city, town, or ZIP — try 'Park City' or '84060'"
@@ -263,7 +263,7 @@ export default function HomeBrand() {
                   >
                     {opt.kind === "city" ? (
                       <>
-                        <span className="hb-suggest-emoji">{opt.city.emoji}</span>
+                        
                         <span className="hb-suggest-name">{opt.city.name}</span>
                         <span className="hb-suggest-region">{opt.city.region}</span>
                       </>
@@ -300,7 +300,7 @@ export default function HomeBrand() {
               className="hb-card"
               style={c.image ? { backgroundImage: `linear-gradient(to top, rgba(15,12,35,0.85) 0%, rgba(15,12,35,0.3) 42%, rgba(15,12,35,0) 70%), url(${c.image})` } : undefined}
             >
-              {!c.image && <span className="hb-card-fallback">{c.emoji}</span>}
+              
               <div className="hb-card-info">
                 <h3>
                   {c.name}

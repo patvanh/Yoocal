@@ -85,6 +85,14 @@ jobs:
           python elkhart_scraper.py
           echo "::endgroup::"
 
+      - name: Scrape Green Lake events
+        id: scrape_greenlake
+        continue-on-error: true
+        run: |
+          echo "::group::Green Lake scraper (universal, push mode)"
+          STAGE_MODE=push python -u generic_city_scraper.py --city "green lake wisconsin" --lat 43.8408 --lng -88.9576 --radius 25
+          echo "::endgroup::"
+
       - name: Scrape Jackson Hole events
         id: scrape_jackson
         continue-on-error: true

@@ -84,7 +84,7 @@ function RequestTownInner() {
             </div>
           </div>
 
-          <div className="rt-eyebrow">✦ Request a town</div>
+          <div className="rt-eyebrow">Request a town</div>
           <h1>Tell us where you live.</h1>
           <p className="rt-sub">
             We&apos;ll start pulling local events for your community and let

@@ -23,7 +23,7 @@ export default function AboutYoocalPage() {
 
       <div className="hero">
         <div className="hero-content">
-          <div className="hero-eyebrow">✦ About Yoocal</div>
+          <div className="hero-eyebrow">About Yoocal</div>
           <h1>
             Your local,
             <br />
@@ -52,7 +52,7 @@ export default function AboutYoocalPage() {
 
         <div className="how-grid">
           <div className="how-card">
-            <div className="how-icon">🔍</div>
+            <div className="how-accent" aria-hidden="true"></div>
             <h3>We do the searching</h3>
             <p>
               Our scrapers check dozens of local sources every day — event
@@ -61,7 +61,7 @@ export default function AboutYoocalPage() {
             </p>
           </div>
           <div className="how-card">
-            <div className="how-icon">✨</div>
+            <div className="how-accent" aria-hidden="true"></div>
             <h3>We clean it up</h3>
             <p>
               Duplicates removed, categories applied, distances calculated.
@@ -70,7 +70,7 @@ export default function AboutYoocalPage() {
             </p>
           </div>
           <div className="how-card">
-            <div className="how-icon">🆓</div>
+            <div className="how-accent" aria-hidden="true"></div>
             <h3>Always free</h3>
             <p>
               Free for everyone, forever. We&apos;re supported by local
@@ -89,7 +89,7 @@ export default function AboutYoocalPage() {
           </p>
           <div className="cities-grid">
             <a href="/park-city" className="city-card">
-              <div className="city-emoji">⛷️</div>
+              <div className="city-accent" aria-hidden="true"></div>
               <div className="city-info">
                 <h3>Park City, Utah</h3>
                 <p>
@@ -100,7 +100,7 @@ export default function AboutYoocalPage() {
               <span className="city-badge live">Live</span>
             </a>
             <a href="/jackson-hole" className="city-card">
-              <div className="city-emoji">🦌</div>
+              <div className="city-accent" aria-hidden="true"></div>
               <div className="city-info">
                 <h3>Jackson Hole, Wyoming</h3>
                 <p>
@@ -111,7 +111,7 @@ export default function AboutYoocalPage() {
               <span className="city-badge live">Live</span>
             </a>
             <a href="/heber" className="city-card">
-              <div className="city-emoji">🏞️</div>
+              <div className="city-accent" aria-hidden="true"></div>
               <div className="city-info">
                 <h3>Heber Valley, Utah</h3>
                 <p>
@@ -122,7 +122,7 @@ export default function AboutYoocalPage() {
               <span className="city-badge live">Live</span>
             </a>
             <a href="/elkhart-lake" className="city-card">
-              <div className="city-emoji">🏁</div>
+              <div className="city-accent" aria-hidden="true"></div>
               <div className="city-info">
                 <h3>Elkhart Lake, Wisconsin</h3>
                 <p>
@@ -133,7 +133,7 @@ export default function AboutYoocalPage() {
               <span className="city-badge live">Live</span>
             </a>
             <div className="city-card coming-soon">
-              <div className="city-emoji">🏔️</div>
+              <div className="city-accent" aria-hidden="true"></div>
               <div className="city-info">
                 <h3>Aspen, Colorado</h3>
                 <p>Coming soon.</p>
@@ -148,7 +148,7 @@ export default function AboutYoocalPage() {
         </div>
         <div className="values">
           <div className="value">
-            <div className="value-icon">🏘️</div>
+            <div className="value-accent" aria-hidden="true"></div>
             <h3>Hyper-local first</h3>
             <p>
               We go deep on one city at a time. No generic national event
@@ -157,7 +157,7 @@ export default function AboutYoocalPage() {
             </p>
           </div>
           <div className="value">
-            <div className="value-icon">🔓</div>
+            <div className="value-accent" aria-hidden="true"></div>
             <h3>Open to everyone</h3>
             <p>
               Locals and visitors alike. Whether you&apos;ve lived here 20
@@ -165,7 +165,7 @@ export default function AboutYoocalPage() {
             </p>
           </div>
           <div className="value">
-            <div className="value-icon">📰</div>
+            <div className="value-accent" aria-hidden="true"></div>
             <h3>Supporting local media</h3>
             <p>
               We surface events from local newspapers and community sources,
@@ -173,7 +173,7 @@ export default function AboutYoocalPage() {
             </p>
           </div>
           <div className="value">
-            <div className="value-icon">💜</div>
+            <div className="value-accent" aria-hidden="true"></div>
             <h3>Built for small towns</h3>
             <p>
               Big cities have plenty of event guides. We focus on the
@@ -277,7 +277,7 @@ export default function AboutYoocalPage() {
           border-color: var(--purple); transform: translateY(-3px);
           box-shadow: 0 12px 32px rgba(83,74,183,0.08);
         }
-        .how-icon { font-size: 36px; margin-bottom: 16px; }
+        .how-accent { width: 40px; height: 3px; background: var(--purple); margin-bottom: 16px; }
         .how-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
         .how-card p { font-size: 14px; color: var(--muted); line-height: 1.75; }
 
@@ -306,7 +306,7 @@ export default function AboutYoocalPage() {
         .city-card.coming-soon:hover {
           transform: none; box-shadow: none; border-color: var(--border);
         }
-        .city-emoji { font-size: 40px; flex-shrink: 0; }
+        .city-accent { width: 40px; height: 3px; background: var(--purple); margin-bottom: 12px; }
         .city-info h3 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
         .city-info p { font-size: 13px; color: var(--muted); }
         .city-badge {
@@ -324,7 +324,7 @@ export default function AboutYoocalPage() {
           padding: 32px; border-radius: 20px;
           background: white; border: 1px solid var(--border);
         }
-        .value-icon { font-size: 28px; margin-bottom: 14px; }
+        .value-accent { width: 40px; height: 3px; background: var(--purple); margin-bottom: 14px; }
         .value h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
         .value p { font-size: 14px; color: var(--muted); line-height: 1.75; }
 

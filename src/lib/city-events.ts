@@ -85,22 +85,22 @@ export const CITY_CONFIG: Record<
 > = {
   parkcity: {
     label: "Park City",
-    emoji: "⛷️",
+    emoji: "",
     jsonFile: "events.json",
   },
   elkhartlake: {
     label: "Elkhart Lake",
-    emoji: "🏁",
+    emoji: "",
     jsonFile: "events-elkhartlake.json",
   },
   heber: {
     label: "Heber Valley",
-    emoji: "🚂",
+    emoji: "",
     jsonFile: "events-heber.json",
   },
   jackson: {
     label: "Jackson Hole",
-    emoji: "🏔️",
+    emoji: "",
     jsonFile: "events-jackson.json",
   },
 };

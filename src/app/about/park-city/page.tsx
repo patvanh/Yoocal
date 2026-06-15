@@ -23,7 +23,7 @@ export default function AboutParkCityPage() {
 
       <div className="hero">
         <div className="hero-content">
-          <div className="hero-eyebrow">🏔 Park City, Utah · 84060</div>
+          <div className="hero-eyebrow">Park City, Utah · 84060</div>
           <h1>
             The mountain town that <em>never</em> stops.
           </h1>
@@ -85,7 +85,7 @@ export default function AboutParkCityPage() {
           </p>
           <div className="grid-3">
             <div className="card">
-              <div className="card-icon">⛷️</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Skiing & Snowboarding</h3>
               <p>
                 Home to Deer Valley Resort and Park City Mountain — two of
@@ -94,7 +94,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🎭</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Live Music & Arts</h3>
               <p>
                 The Egyptian Theatre, Spur Bar and Grill, and Eccles Center
@@ -103,7 +103,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🥾</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Hiking & Biking</h3>
               <p>
                 Over 400 miles of trails accessible directly from town. The
@@ -112,7 +112,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🍽️</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Dining & Drinks</h3>
               <p>
                 High West Distillery, Handle, Riverhorse, No Name Saloon —
@@ -121,7 +121,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🎪</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Festivals & Events</h3>
               <p>
                 Park Silly Sunday Market runs every Sunday in summer.
@@ -130,7 +130,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🛍️</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Shopping & Galleries</h3>
               <p>
                 Historic Main Street is lined with independent boutiques,
@@ -197,7 +197,7 @@ export default function AboutParkCityPage() {
           </p>
           <div className="season-grid">
             <div className="season">
-              <div className="season-icon">❄️</div>
+              <div className="season-accent" aria-hidden="true"></div>
               <h3>Winter (Dec–Mar)</h3>
               <p>
                 Peak ski season. Expect snow, crowds on weekends, and some of
@@ -206,7 +206,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="season">
-              <div className="season-icon">🌸</div>
+              <div className="season-accent" aria-hidden="true"></div>
               <h3>Spring (Apr–May)</h3>
               <p>
                 Shoulder season — fewer crowds, lower prices. Trails start
@@ -215,7 +215,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="season">
-              <div className="season-icon">☀️</div>
+              <div className="season-accent" aria-hidden="true"></div>
               <h3>Summer (Jun–Sep)</h3>
               <p>
                 Peak festival season. Park Silly Sunday Market, outdoor
@@ -224,7 +224,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="season">
-              <div className="season-icon">🍂</div>
+              <div className="season-accent" aria-hidden="true"></div>
               <h3>Fall (Oct–Nov)</h3>
               <p>
                 Stunning fall foliage. Quietest season — great deals on
@@ -243,7 +243,7 @@ export default function AboutParkCityPage() {
           </p>
           <div className="grid-2">
             <div className="card">
-              <div className="card-icon">✈️</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>By Air</h3>
               <p>
                 Salt Lake City International Airport (SLC) is just 35 miles
@@ -252,7 +252,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🚗</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>By Car</h3>
               <p>
                 Take I-80 East from Salt Lake City to exit 145. The drive
@@ -261,7 +261,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🚌</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>By Shuttle</h3>
               <p>
                 Several companies offer shared shuttle service from SLC
@@ -270,7 +270,7 @@ export default function AboutParkCityPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🚎</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Getting Around</h3>
               <p>
                 Free bus service (PC Transit) runs throughout town. Historic
@@ -398,7 +398,7 @@ export default function AboutParkCityPage() {
           background: white; border: 1px solid var(--border);
           border-radius: 16px; padding: 24px; text-align: center;
         }
-        .season-icon { font-size: 32px; margin-bottom: 12px; }
+        .season-accent { width: 40px; height: 3px; background: var(--purple); margin-bottom: 12px; }
         .season h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
         .season p { font-size: 13px; color: var(--muted); line-height: 1.6; }
 

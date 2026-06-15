@@ -73,7 +73,7 @@ export default function CitySearch({ placeholder, variant = "compact" }: Props) 
   return (
     <div className="cs-wrap" ref={wrapRef}>
       <form className="cs-form" onSubmit={handleSubmit}>
-        <span className="cs-icon">🔍</span>
+        
         <input
           className="v2-search-input cs-input"
           type="text"

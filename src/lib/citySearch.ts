@@ -12,13 +12,13 @@ export type City = {
 }
 
 export const CITIES: City[] = [
-  { key: "parkcity", name: "Park City", region: "Utah", emoji: "⛷️",
+  { key: "parkcity", name: "Park City", region: "Utah", emoji: "",
     blurb: "Concerts, festivals, races, outdoor adventures and more.", founder: true },
-  { key: "jackson", name: "Jackson Hole", region: "Wyoming", emoji: "🦌",
+  { key: "jackson", name: "Jackson Hole", region: "Wyoming", emoji: "",
     blurb: "Music festivals, chamber events, and Teton County happenings." },
-  { key: "heber", name: "Heber Valley", region: "Utah", emoji: "🏞️",
+  { key: "heber", name: "Heber Valley", region: "Utah", emoji: "",
     blurb: "Rodeos, fairs, train rides and small-town events across the Wasatch Back." },
-  { key: "elkhartlake", name: "Elkhart Lake", region: "Wisconsin", emoji: "🏁",
+  { key: "elkhartlake", name: "Elkhart Lake", region: "Wisconsin", emoji: "",
     blurb: "Racing, lakeside events and everything around Road America." },
 ]
 

@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { EventsV2Embedded } from "@/components/CalendarClient"
+import SiteNav from "@/components/SiteNav"
 
 const CITY_NAMES: Record<string, string> = {
   parkcity: "Park City",
@@ -17,35 +18,11 @@ const CITY_NAMES: Record<string, string> = {
  */
 export default function CityLanding({ citySlug, cityKey }: { citySlug: string; cityKey: string }) {
   const cityName = CITY_NAMES[cityKey] || "Local"
-  const quickLink: React.CSSProperties = {
-    display: "inline-block", padding: "9px 18px", borderRadius: "100px",
-    background: "#534AB7", border: "1px solid #6E64C9",
-    color: "#ffffff", fontSize: "14px", fontWeight: 600,
-    textDecoration: "none",
-  }
   return (
     <div style={{ background: '#1a1830', minHeight: '100vh' }}>
-      {/* NAV */}
-      <nav>
-        <a href="/" className="nav-logo"><div className="nav-dot" /> yoocal</a>
-        <div className="nav-links">
-          <a href="/about">About</a>
-          <a href="/for-businesses">For businesses</a>
-          <a href="https://forms.groupmail.info/subscribe/yoocal" target="_blank" rel="noopener noreferrer" className="nav-cta">Get notified</a>
-        </div>
-      </nav>
+      <SiteNav cityKey={cityKey as any} />
 
-      {/* BROWSE STRIP — quick links to the per-city intent landing pages.
-          These navigate to other pages (unlike the in-hero filter pills,
-          which filter the calendar in place), so they use the lighter
-          quickLink pill style to read as navigation, not filters. */}
-      <div style={{ position: "relative", zIndex: 2, maxWidth: 1100, margin: "0 auto", padding: "78px 16px 6px", display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center", alignItems: "center" }}>
-        <span style={{ color: "rgba(255,255,255,0.75)", fontSize: 13, fontWeight: 600, marginRight: 2 }}>Browse:</span>
-        <Link href={`/${citySlug}/this-weekend`} style={quickLink}>This weekend</Link>
-        <Link href={`/${citySlug}/free-events`} style={quickLink}>Free events</Link>
-        <Link href={`/${citySlug}/concerts`} style={quickLink}>Concerts</Link>
-        <Link href={`/${citySlug}/this-month`} style={quickLink}>This month</Link>
-      </div>
+
 
       {/* CALENDAR */}
       <section className="calendar-section" id="events" style={{ textAlign: "center" }}>

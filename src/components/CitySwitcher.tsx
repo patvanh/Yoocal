@@ -22,11 +22,11 @@ export default function CitySwitcher({
     router.push(`${pathname}?${sp.toString()}`);
   }
 
-  const tabs: { key: "parkcity" | "elkhartlake" | "heber" | "jackson"; label: string; emoji: string }[] = [
-    { key: "parkcity", label: "Park City", emoji: "⛷️" },
-    { key: "elkhartlake", label: "Elkhart Lake", emoji: "🏁" },
-    { key: "heber", label: "Heber Valley", emoji: "🚂" },
-    { key: "jackson", label: "Jackson Hole", emoji: "🏔️" },
+  const tabs: { key: "parkcity" | "elkhartlake" | "heber" | "jackson"; label: string }[] = [
+    { key: "parkcity", label: "Park City" },
+    { key: "elkhartlake", label: "Elkhart Lake" },
+    { key: "heber", label: "Heber Valley" },
+    { key: "jackson", label: "Jackson Hole" },
   ];
 
   return (
@@ -40,7 +40,7 @@ export default function CitySwitcher({
             className={active === t.key ? "active" : ""}
             onClick={() => switchTo(t.key)}
           >
-            <span className="emoji">{t.emoji}</span>
+            <span className="emoji"></span>
             {t.label}
           </button>
         ))}

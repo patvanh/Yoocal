@@ -23,7 +23,7 @@ export default function AboutJacksonHolePage() {
 
       <div className="hero">
         <div className="hero-content">
-          <div className="hero-eyebrow">🏔 Jackson Hole, Wyoming · 83001</div>
+          <div className="hero-eyebrow">Jackson Hole, Wyoming · 83001</div>
           <h1>
             Where the <em>mountains</em> meet the world.
           </h1>
@@ -90,7 +90,7 @@ export default function AboutJacksonHolePage() {
           </p>
           <div className="grid-3">
             <div className="card">
-              <div className="card-icon">🎻</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Festivals &amp; Music</h3>
               <p>
                 The Grand Teton Music Festival brings world-class orchestral
@@ -99,7 +99,7 @@ export default function AboutJacksonHolePage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🤠</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Rodeo &amp; Western Life</h3>
               <p>
                 The Jackson Hole Rodeo runs all summer at the fairgrounds.
@@ -108,7 +108,7 @@ export default function AboutJacksonHolePage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🏔️</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>National Parks</h3>
               <p>
                 Grand Teton National Park is minutes away and Yellowstone is
@@ -117,7 +117,7 @@ export default function AboutJacksonHolePage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">⛷️</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Skiing &amp; Snow</h3>
               <p>
                 Jackson Hole Mountain Resort, Snow King, and nearby Grand
@@ -126,7 +126,7 @@ export default function AboutJacksonHolePage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🦌</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Wildlife &amp; Winter</h3>
               <p>
                 The National Elk Refuge offers winter sleigh rides among
@@ -135,7 +135,7 @@ export default function AboutJacksonHolePage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🎨</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Arts &amp; Galleries</h3>
               <p>
                 The National Museum of Wildlife Art, the Center for the Arts,
@@ -154,7 +154,7 @@ export default function AboutJacksonHolePage() {
           </p>
           <div className="season-grid">
             <div className="season">
-              <div className="season-icon">❄️</div>
+              <div className="season-accent" aria-hidden="true"></div>
               <h3>Winter (Dec–Mar)</h3>
               <p>
                 Peak ski season and deep snow. Elk refuge sleigh rides, ice
@@ -163,7 +163,7 @@ export default function AboutJacksonHolePage() {
               </p>
             </div>
             <div className="season">
-              <div className="season-icon">🌸</div>
+              <div className="season-accent" aria-hidden="true"></div>
               <h3>Spring (Apr–May)</h3>
               <p>
                 Mud season — the quietest, cheapest window. Parks begin
@@ -171,7 +171,7 @@ export default function AboutJacksonHolePage() {
               </p>
             </div>
             <div className="season">
-              <div className="season-icon">☀️</div>
+              <div className="season-accent" aria-hidden="true"></div>
               <h3>Summer (Jun–Sep)</h3>
               <p>
                 Festival season. The Grand Teton Music Festival, the rodeo,
@@ -180,7 +180,7 @@ export default function AboutJacksonHolePage() {
               </p>
             </div>
             <div className="season">
-              <div className="season-icon">🍂</div>
+              <div className="season-accent" aria-hidden="true"></div>
               <h3>Fall (Oct–Nov)</h3>
               <p>
                 Golden aspens, the elk rut, and far fewer people. A
@@ -291,7 +291,7 @@ export default function AboutJacksonHolePage() {
           background: white; border: 1px solid var(--border);
           border-radius: 16px; padding: 24px; text-align: center;
         }
-        .season-icon { font-size: 32px; margin-bottom: 12px; }
+        .season-accent { width: 40px; height: 3px; background: var(--purple); margin-bottom: 12px; }
         .season h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
         .season p { font-size: 13px; color: var(--muted); line-height: 1.6; }
 

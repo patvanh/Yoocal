@@ -23,7 +23,7 @@ export default function AboutHeberPage() {
 
       <div className="hero">
         <div className="hero-content">
-          <div className="hero-eyebrow">🏔 Heber Valley, Utah · 84032</div>
+          <div className="hero-eyebrow">Heber Valley, Utah · 84032</div>
           <h1>
             The valley <em>just over</em> the pass.
           </h1>
@@ -89,7 +89,7 @@ export default function AboutHeberPage() {
           </p>
           <div className="grid-3">
             <div className="card">
-              <div className="card-icon">🚂</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Heber Valley Railroad</h3>
               <p>
                 Year-round historic train excursions through the valley.
@@ -99,7 +99,7 @@ export default function AboutHeberPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🎿</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Soldier Hollow</h3>
               <p>
                 2002 Olympic biathlon and cross-country venue. Tubing,
@@ -108,7 +108,7 @@ export default function AboutHeberPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🚣</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Deer Creek Reservoir</h3>
               <p>
                 Stunning state-park reservoir for boating, paddleboarding,
@@ -117,7 +117,7 @@ export default function AboutHeberPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🐄</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Dairy Farm Tours</h3>
               <p>
                 Working family dairies open their gates for tours, ice
@@ -126,7 +126,7 @@ export default function AboutHeberPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🥾</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Hiking & Mountain Biking</h3>
               <p>
                 The Wasatch Crest, Mill Hollow, and dozens of valley
@@ -135,7 +135,7 @@ export default function AboutHeberPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🍽️</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Midway Swiss Days & Dining</h3>
               <p>
                 Historic Midway hosts Swiss Days every Labor Day weekend.
@@ -155,7 +155,7 @@ export default function AboutHeberPage() {
           </p>
           <div className="grid-2">
             <div className="card">
-              <div className="card-icon">✈️</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>By Air</h3>
               <p>
                 Salt Lake City International Airport (SLC) is about 50
@@ -164,7 +164,7 @@ export default function AboutHeberPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🚗</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>From Park City</h3>
               <p>
                 Take US-40 South through the Jordanelle area. About 25
@@ -173,7 +173,7 @@ export default function AboutHeberPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🚙</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>From Salt Lake</h3>
               <p>
                 I-80 East to US-40 South. About 45 miles, 50–60 minutes
@@ -182,7 +182,7 @@ export default function AboutHeberPage() {
               </p>
             </div>
             <div className="card">
-              <div className="card-icon">🚎</div>
+              <div className="card-accent" aria-hidden="true"></div>
               <h3>Getting Around</h3>
               <p>
                 A car is essential — Heber Valley is spread out. Most

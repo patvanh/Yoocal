@@ -29,21 +29,21 @@ const RACES_2026 = [
 ];
 
 const VILLAGE_CARDS = [
-  { icon: "🍺", title: "Siebkens Resort", body: "The soul of Elkhart Lake since 1916. Lakeside tavern, live music most weekends, and a lively crowd that includes racing legends, locals, and everyone in between. The Stop-Inn Tavern opens in April." },
-  { icon: "🏨", title: "Osthoff Resort", body: "A premier lakefront resort with a full spa, cooking classes, fine dining, and year-round events. Perfect for a romantic getaway or a pre-race splurge. Overlooks the lake with stunning views." },
-  { icon: "🌾", title: "Farmers & Artisans Market", body: "Every Saturday morning in the Village Square from May through October. About 50 vendors with fresh vegetables, flowers, cheese, local arts, and specialty products. A true community tradition." },
-  { icon: "🚣", title: "Elkhart Lake", body: "The glacier-carved lake the village is named for. Crystal clear water perfect for swimming, kayaking, paddleboarding, and fishing. Several public access points and rentals available in summer." },
-  { icon: "🍽️", title: "The Paddock Club", body: "A favorite gathering spot in the village for food, drinks, and good company. Especially lively during race weekends when drivers, crew members, and fans all end up at the same tables." },
-  { icon: "🛍️", title: "Shop & Sip", body: "The annual Shop & Sip event brings together Elkhart Lake's downtown shops and restaurants for a day of shopping, tastings, and community fun. A favorite for locals and visitors alike." },
+  { icon: "", title: "Siebkens Resort", body: "The soul of Elkhart Lake since 1916. Lakeside tavern, live music most weekends, and a lively crowd that includes racing legends, locals, and everyone in between. The Stop-Inn Tavern opens in April." },
+  { icon: "", title: "Osthoff Resort", body: "A premier lakefront resort with a full spa, cooking classes, fine dining, and year-round events. Perfect for a romantic getaway or a pre-race splurge. Overlooks the lake with stunning views." },
+  { icon: "", title: "Farmers & Artisans Market", body: "Every Saturday morning in the Village Square from May through October. About 50 vendors with fresh vegetables, flowers, cheese, local arts, and specialty products. A true community tradition." },
+  { icon: "", title: "Elkhart Lake", body: "The glacier-carved lake the village is named for. Crystal clear water perfect for swimming, kayaking, paddleboarding, and fishing. Several public access points and rentals available in summer." },
+  { icon: "", title: "The Paddock Club", body: "A favorite gathering spot in the village for food, drinks, and good company. Especially lively during race weekends when drivers, crew members, and fans all end up at the same tables." },
+  { icon: "", title: "Shop & Sip", body: "The annual Shop & Sip event brings together Elkhart Lake's downtown shops and restaurants for a day of shopping, tastings, and community fun. A favorite for locals and visitors alike." },
 ];
 
 const TIPS = [
-  { icon: "🏁", title: "Book early for race weekends", body: "IndyCar (June), IMSA (July/August), and Vintage Weekend (July) fill up months in advance. Hotels within 30 miles sell out fast. Book as early as possible — seriously." },
-  { icon: "🌤️", title: "Best weather: June–August", body: "Wisconsin summers are warm and beautiful with low humidity compared to much of the midwest. Evenings cool down nicely — perfect for outdoor dining and lakeside drinks." },
-  { icon: "🚗", title: "You'll need a car", body: "Elkhart Lake is a 90-minute drive from Milwaukee and 2.5 hours from Chicago. There's no public transit — a car is essential. Road America is just 5 minutes from the village center." },
-  { icon: "🎟️", title: "General admission is great", body: "Unlike many venues, Road America's general admission tickets let you walk the entire track perimeter and get incredibly close to the action. You don't need the expensive seats to have an amazing time." },
-  { icon: "🍔", title: "The food scene is real", body: "Don't underestimate Elkhart Lake's restaurants. The Osthoff's Lola's on the Lake, Siebkens, and several village spots serve genuinely excellent food. Make reservations for race weekends." },
-  { icon: "📍", title: "Stay in the village if you can", body: "Staying in Elkhart Lake itself — rather than in Plymouth or Sheboygan — puts you in the center of the action. Walking to Siebkens after a race day is one of the great pleasures of visiting." },
+  { icon: "", title: "Book early for race weekends", body: "IndyCar (June), IMSA (July/August), and Vintage Weekend (July) fill up months in advance. Hotels within 30 miles sell out fast. Book as early as possible — seriously." },
+  { icon: "", title: "Best weather: June–August", body: "Wisconsin summers are warm and beautiful with low humidity compared to much of the midwest. Evenings cool down nicely — perfect for outdoor dining and lakeside drinks." },
+  { icon: "", title: "You'll need a car", body: "Elkhart Lake is a 90-minute drive from Milwaukee and 2.5 hours from Chicago. There's no public transit — a car is essential. Road America is just 5 minutes from the village center." },
+  { icon: "", title: "General admission is great", body: "Unlike many venues, Road America's general admission tickets let you walk the entire track perimeter and get incredibly close to the action. You don't need the expensive seats to have an amazing time." },
+  { icon: "", title: "The food scene is real", body: "Don't underestimate Elkhart Lake's restaurants. The Osthoff's Lola's on the Lake, Siebkens, and several village spots serve genuinely excellent food. Make reservations for race weekends." },
+  { icon: "", title: "Stay in the village if you can", body: "Staying in Elkhart Lake itself — rather than in Plymouth or Sheboygan — puts you in the center of the action. Walking to Siebkens after a race day is one of the great pleasures of visiting." },
 ];
 
 export default function AboutElkhartLakePage() {
@@ -54,7 +54,7 @@ export default function AboutElkhartLakePage() {
       <div className="hero">
         <div className="hero-inner">
           <div className="hero-content-wrap"><div className="hero-content">
-            <div className="hero-eyebrow">🏁 Elkhart Lake, Wisconsin</div>
+            <div className="hero-eyebrow">Elkhart Lake, Wisconsin</div>
             <h1>
               America&apos;s <em>hidden gem</em> of speed & serenity.
             </h1>
@@ -149,7 +149,7 @@ export default function AboutElkhartLakePage() {
           <div className="cards-grid">
             {VILLAGE_CARDS.map((c) => (
               <div key={c.title} className="card">
-                <div className="card-icon">{c.icon}</div>
+                <div className="card-accent" aria-hidden="true"></div>
                 <h3>{c.title}</h3>
                 <p>{c.body}</p>
               </div>
@@ -170,7 +170,6 @@ export default function AboutElkhartLakePage() {
           <div className="tips-grid">
             {TIPS.map((t) => (
               <div key={t.title} className="tip">
-                <div className="tip-icon">{t.icon}</div>
                 <h4>{t.title}</h4>
                 <p>{t.body}</p>
               </div>
@@ -283,7 +282,7 @@ export default function AboutElkhartLakePage() {
           border-color: var(--purple); transform: translateY(-3px);
           box-shadow: 0 12px 32px rgba(83,74,183,0.08);
         }
-        .card-icon { font-size: 32px; margin-bottom: 14px; }
+        .card-accent { width: 40px; height: 3px; background: var(--purple); border-radius: 0; margin-bottom: 16px; }
         .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
         .card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
@@ -328,7 +327,6 @@ export default function AboutElkhartLakePage() {
           background: white; border: 1px solid var(--border);
           border-radius: 16px; padding: 24px;
         }
-        .tip-icon { font-size: 24px; margin-bottom: 10px; }
         .tip h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
         .tip p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 

@@ -3242,7 +3242,7 @@ export default function CalendarClient() {
             <div className="biz-price">$0.99<span>/day</span></div>
             <div className="biz-name">Featured placement</div>
             <div className="biz-desc">Pin your events to the top of the calendar with a Featured badge on your event day.</div>
-            <ul className="biz-features"><li>Top-of-calendar placement</li><li>⭐ Featured badge on your events</li><li>Priority in newsletter</li><li>Cancel any time</li></ul>
+            <ul className="biz-features"><li>Top-of-calendar placement</li><li>Featured badge on your events</li><li>Priority in newsletter</li><li>Cancel any time</li></ul>
             <a href="mailto:hello@yoocal.com" className="biz-btn">Get featured →</a>
           </div>
           <div className="biz-card reveal">

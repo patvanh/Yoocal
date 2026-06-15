@@ -28,14 +28,14 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
   parkcity: [
     {
       name: "Egyptian Theatre",
-      emoji: "🎭",
+      emoji: "",
       address: "328 Main St, Park City, UT 84060",
       tags: ["arts", "music"],
       desc: "Park City's landmark 1926 theatre on Historic Main Street. Hosts world-class concerts, comedy shows, film screenings, and theatrical productions year-round. Home to the Sundance Film Festival.",
     },
     {
       name: "The Spur Bar and Grill",
-      emoji: "🎸",
+      emoji: "",
       address: "352 Main St, Park City, UT 84060",
       tags: ["music", "food"],
       desc: "Park City's premier live music bar on Main Street. Nightly live performances from local and touring acts, cold beers, and a lively crowd seven nights a week.",
@@ -43,7 +43,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Deer Valley Resort",
-      emoji: "⛷️",
+      emoji: "",
       address: "2250 Deer Valley Dr S, Park City, UT 84060",
       tags: ["outdoor", "music"],
       desc: "World-class ski resort hosting summer concerts, festivals, and outdoor events. The Snow Park Amphitheater draws major acts every summer season for outdoor performances under the stars.",
@@ -51,7 +51,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Kimball Arts Center",
-      emoji: "🖼️",
+      emoji: "",
       address: "638 Park Ave, Park City, UT 84060",
       tags: ["arts"],
       desc: "Park City's community arts hub. Home to galleries, studio spaces, classes, and the annual Kimball Arts Festival — one of Utah's premier outdoor arts events each August.",
@@ -59,7 +59,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "High West Distillery",
-      emoji: "🥃",
+      emoji: "",
       address: "703 Park Ave, Park City, UT 84060",
       tags: ["food"],
       desc: "America's first ski-in distillery. Award-winning whiskeys, a full restaurant, and regular tasting events and special releases. A Park City institution for whiskey lovers.",
@@ -67,14 +67,14 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Park City Library",
-      emoji: "📚",
+      emoji: "",
       address: "1255 Park Ave, Park City, UT 84060",
       tags: ["family", "arts"],
       desc: "More than a library — a community hub hosting lectures, film screenings, kids programming, author talks, and free community events throughout the year.",
     },
     {
       name: "Swaner EcoCenter",
-      emoji: "🌿",
+      emoji: "",
       address: "1258 Center Dr, Park City, UT 84098",
       tags: ["outdoor", "family"],
       desc: "Nature preserve and education center at Kimball Junction. Hosts nature programs, Sunday crafts, guided walks, and family-friendly activities in a stunning wetland setting.",
@@ -82,7 +82,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Park City Senior Center",
-      emoji: "🎵",
+      emoji: "",
       address: "1361 Woodside Ave, Park City, UT 84060",
       tags: ["community", "music"],
       desc: "Community center hosting Mountain Town Music free outdoor concerts on Wednesday afternoons throughout the summer. A local favorite for picnic-style live music.",
@@ -90,7 +90,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "The Downstairs",
-      emoji: "🎤",
+      emoji: "",
       address: "625 Main St, Park City, UT 84060",
       tags: ["music"],
       desc: "Underground live music venue on Historic Main Street. Hosts indie acts, local bands, and seasonal pop-up performances during community events like Savor the Summit.",
@@ -98,7 +98,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Red Barn",
-      emoji: "🎵",
+      emoji: "",
       address: "4300 UT-32, Oakley, UT 84055",
       tags: ["music", "community"],
       desc: "Historic Oakley barn venue along State Route 32, hosting Mountain Town Music summer concerts and community gatherings in a classic rural Utah setting.",
@@ -106,7 +106,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Snowbasin Resort",
-      emoji: "⛷️",
+      emoji: "",
       address: "3925 E Snowbasin Rd, Huntsville, UT 84317",
       tags: ["outdoor", "music"],
       desc: "Year-round mountain resort hosting summer concerts at the Earl's Lodge plaza and Cinnabar Lounge. Home to free Sunday concert series and seasonal events.",
@@ -114,7 +114,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Woodenshoe Park",
-      emoji: "🎵",
+      emoji: "",
       address: "4949 Woodenshoe Lane, Peoa, UT 84061",
       tags: ["music", "community"],
       desc: "Open-air park in Peoa hosting Mountain Town Music's free Friday-night concert series each summer. Bring a blanket, grab BBQ from Lush's, and enjoy live music in one of the Wasatch Back's most charming small towns.",
@@ -122,7 +122,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Silver Lake Lawn",
-      emoji: "🌲",
+      emoji: "",
       address: "7560 Royal St, Park City, UT 84060",
       tags: ["outdoor", "music"],
       desc: "Outdoor concert lawn at Silver Lake in Deer Valley. Hosts Mountain Town Music shows and resort events with the Wasatch peaks as a backdrop.",
@@ -130,7 +130,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Eccles Center for the Performing Arts",
-      emoji: "🎼",
+      emoji: "",
       address: "1750 Kearns Blvd, Park City, UT 84060",
       tags: ["arts", "music"],
       desc: "Park City's premier performing arts venue with a 1,100-seat main stage. Home to Park City Institute's world-class speaker and performance series, orchestra, and Broadway touring productions.",
@@ -138,14 +138,14 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "No Name Saloon",
-      emoji: "🍺",
+      emoji: "",
       address: "447 Main St, Park City, UT 84060",
       tags: ["food"],
       desc: "A legendary dive bar on Historic Main Street. Buffalo burgers, cold beers, and a rooftop deck with mountain views. No frills, no pretense — just good times on Main Street.",
     },
     {
       name: "Park City Mountain Resort",
-      emoji: "🏔️",
+      emoji: "",
       address: "1310 Lowell Ave, Park City, UT 84060",
       tags: ["outdoor", "sports"],
       desc: "Utah's largest ski resort with 7,300 acres of terrain. Summer brings lift-served mountain biking, hiking, concerts, and the mountain coaster. Year-round activities for all ages.",
@@ -153,7 +153,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Jordanelle State Park",
-      emoji: "🚣",
+      emoji: "",
       address: "UT-319, Heber City, UT 84032",
       tags: ["outdoor", "sports"],
       desc: "Stunning reservoir 15 minutes from Park City. Swimming, kayaking, paddleboarding, and camping in summer. Hosts open water swimming events and triathlon competitions.",
@@ -161,7 +161,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Park City Film Series",
-      emoji: "🎬",
+      emoji: "",
       address: "1255 Park Ave, Park City, UT 84060",
       tags: ["arts", "family"],
       desc: "Year-round independent and foreign film screenings. Weekly films, special screenings, and filmmaker Q&As in an intimate theater setting. Beloved by Park City's arts community.",
@@ -171,14 +171,14 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
   elkhartlake: [
     {
       name: "Road America",
-      emoji: "🏁",
+      emoji: "",
       address: "N7390 US-12, Elkhart Lake, WI 53020",
       tags: ["sports", "outdoor"],
       desc: "One of America's greatest road racing circuits. A 4-mile, 14-turn track set amid rolling Wisconsin countryside. Hosts IndyCar, NASCAR, IMSA, and MotoAmerica events drawing tens of thousands of fans each summer.",
     },
     {
       name: "Siebkens Resort",
-      emoji: "🍺",
+      emoji: "",
       address: "284 S Lake St, Elkhart Lake, WI 53020",
       tags: ["food", "music"],
       desc: "A legendary lakeside tavern and resort that has been the heart of Elkhart Lake's social scene since 1916. Live music, cold drinks, and a lively crowd especially during race weekends.",
@@ -186,7 +186,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Elkhart Lake Village Park",
-      emoji: "🌳",
+      emoji: "",
       address: "Village Park, Elkhart Lake, WI 53020",
       tags: ["outdoor", "family", "community"],
       desc: "The heart of the village. Hosts summer concerts, community events, festivals, and gatherings on the shores of Elkhart Lake. A gathering place for locals and visitors throughout the warm months.",
@@ -194,7 +194,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "The Paddock Club",
-      emoji: "🥂",
+      emoji: "",
       address: "Elkhart Lake, WI 53020",
       tags: ["food", "sports"],
       desc: "A classic Elkhart Lake dining spot popular with the racing crowd. Great food, local atmosphere, and a front-row seat to the race weekend energy that takes over the village each summer.",
@@ -202,7 +202,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Osthoff Resort",
-      emoji: "🏨",
+      emoji: "",
       address: "101 Osthoff Ave, Elkhart Lake, WI 53020",
       tags: ["outdoor", "family", "wellness"],
       desc: "A premier lakefront resort on Elkhart Lake offering cooking classes, spa services, outdoor activities, and year-round events. The area's top destination for leisure and special occasions.",
@@ -210,7 +210,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Quit Qui Oc Golf Course",
-      emoji: "⛳",
+      emoji: "",
       address: "700 County Rd P, Elkhart Lake, WI 53020",
       tags: ["sports", "outdoor"],
       desc: "A scenic public golf course in the heart of the Kettle Moraine. Hosts local tournaments, fundraisers, and community events throughout the golf season.",
@@ -220,7 +220,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
   heber: [
     {
       name: "Heber Valley Railroad",
-      emoji: "🚂",
+      emoji: "",
       address: "450 S 600 W, Heber City, UT 84032",
       tags: ["family", "community"],
       desc: "Historic train excursions through Heber Valley on a real steam railroad. Dinner trains, holiday rides, North Pole Express, and seasonal special events all year long.",
@@ -228,7 +228,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Soldier Hollow",
-      emoji: "🎿",
+      emoji: "",
       address: "1370 W Soldier Hollow Ln, Midway, UT 84049",
       tags: ["sports", "outdoor", "family"],
       desc: "2002 Olympic biathlon and cross-country venue. Tubing in winter, hiking and biking in summer, plus the famous Soldier Hollow Classic sheepdog championships every Labor Day weekend.",
@@ -236,7 +236,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Deer Creek Reservoir",
-      emoji: "🚣",
+      emoji: "",
       address: "Deer Creek State Park, UT-189, Heber City, UT 84032",
       tags: ["outdoor", "sports", "family"],
       desc: "Beautiful state-park reservoir between Heber and Provo Canyon. Boating, paddleboarding, swimming, kayaking, and fishing with Wasatch views — calmer than Jordanelle.",
@@ -244,7 +244,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Homestead Crater",
-      emoji: "🌋",
+      emoji: "",
       address: "700 Homestead Dr, Midway, UT 84049",
       tags: ["wellness", "family", "outdoor"],
       desc: "A geothermal hot spring inside a 55-foot limestone dome. Swimming, snorkeling, and SCUBA in 90°F mineral water year-round — one of the most unique experiences in Utah.",
@@ -252,7 +252,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Heber Valley Cheese & Dairy",
-      emoji: "🐄",
+      emoji: "",
       address: "920 N 1300 W, Heber City, UT 84032",
       tags: ["family", "food", "community"],
       desc: "Working family dairy offering daily farm tours, fresh ice cream, cheese tastings, and barn visits. A hands-on look at Heber Valley's farming heritage that kids especially love.",
@@ -260,7 +260,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Midway Town Hall",
-      emoji: "🏛️",
+      emoji: "",
       address: "75 N 100 W, Midway, UT 84049",
       tags: ["community", "arts", "family"],
       desc: "Heart of historic Midway, hosting community events, town meetings, Swiss Days celebrations every Labor Day weekend, and seasonal programs throughout the year.",
@@ -270,7 +270,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
   jackson: [
     {
       name: "307 Dance Hall",
-      emoji: "🤠",
+      emoji: "",
       address: "7705 Lupine Ln, Victor, ID 83455",
       tags: ["music", "community"],
       desc: "Western dance hall in Victor ID just over Teton Pass from Jackson. Live country music line dancing and authentic honkytonk nightlife.",
@@ -278,7 +278,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Grand Teton Music Festival",
-      emoji: "🎼",
+      emoji: "",
       address: "Walk Festival Hall, Teton Village, WY 83025",
       tags: ["music", "community"],
       desc: "World-class summer classical festival at the foot of the Tetons. Seven weeks of Festival Orchestra concerts, Gateway Series headliners (Punch Brothers, The King's Singers), Open Rehearsals, and free Musical Adventures programming around the valley.",
@@ -286,7 +286,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Center for the Arts",
-      emoji: "🎭",
+      emoji: "",
       address: "240 S Glenwood St, Jackson, WY 83001",
       tags: ["music", "community"],
       desc: "Jackson Hole's downtown arts hub. Theater, dance, concerts, films, and year-round community programming. Home stage for the Center Series and dozens of local arts groups.",
@@ -294,7 +294,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Snow King Mountain",
-      emoji: "🎿",
+      emoji: "",
       address: "402 E Snow King Ave, Jackson, WY 83001",
       tags: ["sports", "outdoor", "music"],
       desc: "Jackson's in-town mountain — affectionately the Town Hill. Skiing in winter, alpine slide and bike park in summer, plus the King Concerts series under the chairlifts on warm-weather nights.",
@@ -302,7 +302,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Jackson Hole Mountain Resort",
-      emoji: "🏔️",
+      emoji: "",
       address: "3395 Cody Ln, Teton Village, WY 83025",
       tags: ["sports", "outdoor", "food"],
       desc: "The big one — JHMR at Teton Village. World-renowned skiing in winter, gondola rides and hiking in summer, plus the Jackson Hole Food & Wine festival and special events throughout the year.",
@@ -310,7 +310,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Teton County Fairgrounds",
-      emoji: "🎪",
+      emoji: "",
       address: "305 W Snow King Ave, Jackson, WY 83001",
       tags: ["family", "community"],
       desc: "Home of the Teton County Fair every July plus the summer-long Jackson Hole Rodeo. Cowboy culture, livestock shows, demolition derby, and a midway that brings the whole valley together.",
@@ -318,7 +318,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Grand Teton National Park",
-      emoji: "🏕️",
+      emoji: "",
       address: "Moose, WY 83012",
       tags: ["outdoor", "family"],
       desc: "310,000 acres of glacial lakes, alpine meadows, and the most dramatic skyline in the lower 48. Hiking, climbing, wildlife viewing, and ranger programs right outside Jackson.",
@@ -326,7 +326,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "National Elk Refuge",
-      emoji: "🦌",
+      emoji: "",
       address: "532 N Cache St, Jackson, WY 83001",
       tags: ["outdoor", "family", "wellness"],
       desc: "Wintering ground for thousands of elk just north of town. Famous horse-drawn sleigh rides take visitors out into the herd December through March — a true Jackson Hole experience.",
@@ -334,7 +334,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
     },
     {
       name: "Murie Ranch",
-      emoji: "🌲",
+      emoji: "",
       address: "1 Murie Ranch Rd, Moose, WY 83012",
       tags: ["outdoor", "community"],
       desc: "Historic dude ranch turned conservation center inside Grand Teton National Park. Hosts intimate On the Road chamber concerts from the Grand Teton Music Festival, plus lectures and conservation programming.",
