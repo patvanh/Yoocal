@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-13T13:13:38.418742",
+  "generated_at": "2026-06-15T20:42:38.048700",
   "attempted": 2,
   "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "2nd Annual | Running of the Bulls Trail Race - Big",
+      "title": "Max McNown",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/2nd-annual-%7c-running-of-the-bulls-trail-race-big-sky-montana/3126/",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "2nd Annual | Running of the Bulls Trail Race - Big Sky, Montana",
-        "reasoning": "The source page text contains the exact same title as the current title, confirming it is complete and not truncated."
-      },
-      "applied": true,
-      "note": "title: '2nd Annual | Running of the Bulls Trail Race - Big Sky, Montana' \u2192 '2nd Annual | Running of the Bulls Trail Race - Big Sky, Montana'"
-    },
-    {
-      "city": "jackson",
-      "title": "U-Foria",
-      "type": "title_truncated",
-      "link": "https://www.milliondollarcowboybar.com/events/u-foria-0-1-0-0-0",
+      "link": "https://www.jacksonholechamber.com/event/max-mcnown/3252/",
       "resolution": {
         "confidence": "low",
         "new_title": "",
-        "reasoning": "The source page text only contains 'U-Foria' with no additional context or complete title information available."
+        "reasoning": "The source page text only contains 'Max McNown' as a heading with no additional context or complete title information available."
       },
       "applied": false,
       "note": "confidence=low, not applying"
+    },
+    {
+      "city": "jackson",
+      "title": "Teton House Concert: The Harp\u00e2\u0080\u0099s Voice",
+      "type": "title_truncated",
+      "link": "https://gtmf.org/events/the-harps-voice",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Teton House Concert: The Harp's Voice",
+        "reasoning": "The source page clearly shows the complete title as 'Teton House Concert: The Harp's Voice' with a proper apostrophe, not the garbled encoding in the current title."
+      },
+      "applied": true,
+      "note": "title: 'Teton House Concert: The Harp\u00e2\\x80\\x99s Voice' \u2192 \"Teton House Concert: The Harp's Voice\""
     }
   ]
 }

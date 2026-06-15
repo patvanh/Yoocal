@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-13T13:13:32.212462",
-  "audit_date": "2026-06-13",
+  "generated_at": "2026-06-15T20:42:31.167963",
+  "audit_date": "2026-06-15",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1863,
+      "before_count": 1861,
       "passes": {
         "past_dates": {
-          "fixed": 2,
+          "fixed": 3,
           "examples": [
             {
               "title": "Running with Ed 2026",
@@ -16,6 +16,10 @@
             {
               "title": "Park City Trail Series \u2014 5K",
               "date": "2026-06-06"
+            },
+            {
+              "title": "Triple Trail Challenge \u2014 Round Valley Rambler & Jupiter Peak",
+              "date": "2026-06-13"
             }
           ]
         },
@@ -23,29 +27,29 @@
           "fixed": 5,
           "examples": [
             {
-              "title": "Group Fitness Classes",
+              "title": "Fascia Rolling Class",
               "had_span": 181
             },
             {
-              "title": "Old Town walking tour",
-              "had_span": 64
+              "title": "Group Fitness Classes",
+              "had_span": 181
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
             },
             {
-              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 75
+              "title": "(Re)sounding: Art Exhibition",
+              "had_span": 91
             },
             {
-              "title": "Fascia Rolling Class",
-              "had_span": 181
+              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
+              "had_span": 73
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 7,
+          "fixed": 6,
           "examples": [
             {
               "title": "Michelin-Starred Chef Klemens Gold Returns to Goldener Hirsch for the Summer Solstice",
@@ -126,18 +130,8 @@
           ]
         },
         "classification": {
-          "fixed": 396,
+          "fixed": 409,
           "examples": [
-            {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Food & Drink"
-              ]
-            },
             {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
               "before": [],
@@ -153,29 +147,35 @@
               ]
             },
             {
-              "title": "Park Silly Sunday Market",
+              "title": "Summer Garden Camps",
               "before": [],
               "after": [
-                "Food & Drink",
-                "Outdoor"
+                "Community"
               ]
             },
             {
-              "title": "Stein's Famous Sunday Brunch",
+              "title": "Rise + Release: Block",
               "before": [],
               "after": [
-                "Food & Drink"
+                "Wellness"
+              ]
+            },
+            {
+              "title": "A Spirited Paint Party with Artist Briar West",
+              "before": [],
+              "after": [
+                "Community"
               ]
             }
           ]
         }
       },
-      "after_count": 1869,
-      "total_fixes": 417
+      "after_count": 1865,
+      "total_fixes": 430
     },
     {
       "city": "elkhart-lake",
-      "before_count": 239,
+      "before_count": 230,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -225,28 +225,23 @@
           "examples": []
         }
       },
-      "after_count": 244,
+      "after_count": 235,
       "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 238,
+      "before_count": 228,
       "passes": {
         "past_dates": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Wine Dinner @ Midway Mercantile",
-              "date": "2026-06-11"
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "absurd_spans": {
           "fixed": 1,
           "examples": [
             {
               "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
-              "had_span": 110
+              "had_span": 103
             }
           ]
         },
@@ -264,7 +259,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 7,
+          "fixed": 6,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -273,16 +268,10 @@
               "duration_hours": 1
             },
             {
-              "title": "Road To The Million Championship Concert",
-              "start_time": "11:00 pm",
-              "new_end_time": "2:00 AM",
-              "duration_hours": 3
-            },
-            {
-              "title": "Yoga in the Park",
-              "start_time": "10:45 am",
-              "new_end_time": "11:45 AM",
-              "duration_hours": 1
+              "title": "Demolition Derby and MVS Rodeo Tickets on Sale!",
+              "start_time": "9:00 AM",
+              "new_end_time": "11:00 AM",
+              "duration_hours": 2
             },
             {
               "title": "Mountain Valley Stampede Rodeo",
@@ -292,6 +281,12 @@
             },
             {
               "title": "Mountain Valley Stampede Rodeo",
+              "start_time": "7:30 PM",
+              "new_end_time": "9:30 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Wilderness Circuit Finals Rodeo Friday Nov. 6th at 7:30 pm",
               "start_time": "7:30 PM",
               "new_end_time": "9:30 PM",
               "duration_hours": 2
@@ -359,12 +354,12 @@
           ]
         }
       },
-      "after_count": 238,
-      "total_fixes": 23
+      "after_count": 229,
+      "total_fixes": 21
     },
     {
       "city": "jackson",
-      "before_count": 819,
+      "before_count": 822,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -375,11 +370,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 112
+              "had_span": 110
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 99
+              "had_span": 97
             }
           ]
         },
@@ -474,7 +469,7 @@
           "examples": []
         }
       },
-      "after_count": 842,
+      "after_count": 845,
       "total_fixes": 21
     }
   ]

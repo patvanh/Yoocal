@@ -1,68 +1,68 @@
 {
-  "checked_at": "2026-06-13T07:13:38.811702-06:00",
-  "today": "2026-06-13",
+  "checked_at": "2026-06-15T14:42:38.496427-06:00",
+  "today": "2026-06-15",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 866,
-        "baseline": 773,
+        "actual": 864,
+        "baseline": 834.5,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=866, baseline=773"
+        "message": "actual=864, baseline=834"
       },
       {
         "source": "Park City Annual Events",
         "actual": 401,
-        "baseline": 410.8,
+        "baseline": 406.8,
         "floor": 200,
         "severity": "OK",
-        "message": "actual=401, baseline=411"
+        "message": "actual=401, baseline=407"
       },
       {
         "source": "Mountain Town Music",
-        "actual": 253,
-        "baseline": 265,
+        "actual": 246,
+        "baseline": 260.8,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=253, baseline=265"
+        "message": "actual=246, baseline=261"
       },
       {
         "source": "Visit Park City",
-        "actual": 107,
-        "baseline": 93.8,
+        "actual": 108,
+        "baseline": 97.2,
         "floor": 15,
         "severity": "OK",
-        "message": "actual=107, baseline=94"
+        "message": "actual=108, baseline=97"
       },
       {
         "source": "Deer Valley Resort",
-        "actual": 69,
-        "baseline": 68.4,
+        "actual": 67,
+        "baseline": 68.8,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=69, baseline=68"
+        "message": "actual=67, baseline=69"
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 47,
-        "baseline": 48.8,
+        "actual": 55,
+        "baseline": 49.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=47, baseline=49"
+        "message": "actual=55, baseline=50"
       },
       {
         "source": "Visit Park City (sitemap)",
-        "actual": 28,
-        "baseline": 31,
+        "actual": 31,
+        "baseline": 30.2,
         "floor": 15,
         "severity": "OK",
-        "message": "actual=28, baseline=31"
+        "message": "actual=31, baseline=30"
       },
       {
         "source": "Park City Farmers Market",
         "actual": 19,
-        "baseline": 20,
+        "baseline": 19.8,
         "floor": 10,
         "severity": "OK",
         "message": "actual=19, baseline=20"
@@ -85,19 +85,19 @@
       },
       {
         "source": "Mountain Trails Foundation",
-        "actual": 12,
-        "baseline": 12.4,
+        "actual": 10,
+        "baseline": 12,
         "floor": null,
         "severity": "OK",
-        "message": "actual=12, baseline=12"
+        "message": "actual=10, baseline=12"
       },
       {
         "source": "Park Silly Sunday Market",
-        "actual": 10,
-        "baseline": 10.4,
+        "actual": 9,
+        "baseline": 10,
         "floor": null,
         "severity": "OK",
-        "message": "actual=10, baseline=10"
+        "message": "actual=9, baseline=10"
       },
       {
         "source": "Running in the USA",
@@ -108,20 +108,20 @@
         "message": "actual=8, baseline=9"
       },
       {
-        "source": "Salt Lake Running Co",
-        "actual": 8,
-        "baseline": 8.2,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=8, baseline=8"
-      },
-      {
         "source": "Park City Gallery Association",
         "actual": 7,
         "baseline": 7,
         "floor": null,
         "severity": "OK",
         "message": "actual=7, baseline=7"
+      },
+      {
+        "source": "Salt Lake Running Co",
+        "actual": 6,
+        "baseline": 8,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=6, baseline=8"
       },
       {
         "source": "Deer Valley Music Festival",
@@ -143,32 +143,32 @@
     "elkhart-lake": [
       {
         "source": "Elkhart Lake Tourism",
-        "actual": 136,
-        "baseline": 165.4,
+        "actual": 130,
+        "baseline": 138.5,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=136, baseline=165"
+        "message": "actual=130, baseline=138"
       },
       {
         "source": "The Osthoff Resort",
-        "actual": 69,
-        "baseline": 49.2,
+        "actual": 66,
+        "baseline": 70.5,
         "floor": null,
         "severity": "OK",
-        "message": "actual=69, baseline=49"
+        "message": "actual=66, baseline=70"
       },
       {
         "source": "Siebkens Resort",
         "actual": 25,
-        "baseline": 18,
+        "baseline": 25.8,
         "floor": null,
         "severity": "OK",
-        "message": "actual=25, baseline=18"
+        "message": "actual=25, baseline=26"
       },
       {
         "source": "Road America",
         "actual": 13,
-        "baseline": 13.4,
+        "baseline": 13,
         "floor": null,
         "severity": "OK",
         "message": "actual=13, baseline=13"
@@ -185,35 +185,35 @@
     "heber": [
       {
         "source": "Heber Valley Tourism",
-        "actual": 135,
-        "baseline": 122.2,
+        "actual": 134,
+        "baseline": 126.8,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=135, baseline=122"
+        "message": "actual=134, baseline=127"
       },
       {
         "source": "Wasatch County Parks & Rec",
-        "actual": 26,
+        "actual": 24,
         "baseline": 26,
         "floor": null,
         "severity": "OK",
-        "message": "actual=26, baseline=26"
+        "message": "actual=24, baseline=26"
       },
       {
         "source": "TownLift",
-        "actual": 22,
-        "baseline": 25.2,
+        "actual": 20,
+        "baseline": 24.5,
         "floor": null,
         "severity": "OK",
-        "message": "actual=22, baseline=25"
+        "message": "actual=20, baseline=24"
       },
       {
         "source": "Heber Valley Life",
-        "actual": 18,
-        "baseline": 16.6,
+        "actual": 16,
+        "baseline": 16.8,
         "floor": 10,
         "severity": "OK",
-        "message": "actual=18, baseline=17"
+        "message": "actual=16, baseline=17"
       },
       {
         "source": "Oakley City",
@@ -226,18 +226,18 @@
       {
         "source": "Eventbrite",
         "actual": 8,
-        "baseline": 8,
+        "baseline": 8.2,
         "floor": null,
         "severity": "OK",
         "message": "actual=8, baseline=8"
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 6,
-        "baseline": 5.2,
+        "actual": 4,
+        "baseline": 5.5,
         "floor": null,
         "severity": "OK",
-        "message": "actual=6, baseline=5"
+        "message": "actual=4, baseline=6"
       },
       {
         "source": "RunSignup",
@@ -258,7 +258,7 @@
       {
         "source": "RunningInTheUSA Heber",
         "actual": 2,
-        "baseline": 2.2,
+        "baseline": 2,
         "floor": null,
         "severity": "OK",
         "message": "actual=2, baseline=2"
@@ -276,71 +276,71 @@
       {
         "source": "Jackson Hole Chamber of Commerce",
         "actual": 186,
-        "baseline": 162.6,
+        "baseline": 170.2,
         "floor": 100,
         "severity": "OK",
-        "message": "actual=186, baseline=163"
+        "message": "actual=186, baseline=170"
       },
       {
         "source": "Jackson Hole Mountain Resort",
-        "actual": 179,
-        "baseline": 152.8,
+        "actual": 176,
+        "baseline": 162.2,
         "floor": null,
         "severity": "OK",
-        "message": "actual=179, baseline=153"
+        "message": "actual=176, baseline=162"
       },
       {
         "source": "The Cloudveil",
-        "actual": 117,
-        "baseline": 125.4,
+        "actual": 114,
+        "baseline": 122.2,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=117, baseline=125"
+        "message": "actual=114, baseline=122"
       },
       {
         "source": "Dishing Jackson Hole",
-        "actual": 95,
+        "actual": 93,
         "baseline": 95,
         "floor": null,
         "severity": "OK",
-        "message": "actual=95, baseline=95"
+        "message": "actual=93, baseline=95"
       },
       {
         "source": "Grand Teton Music Festival",
-        "actual": 80,
-        "baseline": 80.4,
+        "actual": 82,
+        "baseline": 80,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=80, baseline=80"
+        "message": "actual=82, baseline=80"
       },
       {
         "source": "National Museum of Wildlife Art",
-        "actual": 55,
-        "baseline": 57,
+        "actual": 66,
+        "baseline": 56.5,
         "floor": null,
         "severity": "OK",
-        "message": "actual=55, baseline=57"
-      },
-      {
-        "source": "Million Dollar Cowboy Bar",
-        "actual": 48,
-        "baseline": 52.8,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=48, baseline=53"
+        "message": "actual=66, baseline=56"
       },
       {
         "source": "Center for the Arts Jackson Hole",
         "actual": 48,
-        "baseline": 28.6,
+        "baseline": 41.2,
         "floor": 30,
-        "severity": "ELEVATED",
-        "message": "actual=48, baseline=29 (168% of normal)"
+        "severity": "OK",
+        "message": "actual=48, baseline=41"
+      },
+      {
+        "source": "Million Dollar Cowboy Bar",
+        "actual": 46,
+        "baseline": 50.8,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=46, baseline=51"
       },
       {
         "source": "Snow King Mountain",
         "actual": 20,
-        "baseline": 21,
+        "baseline": 20.7,
         "floor": null,
         "severity": "OK",
         "message": "actual=20, baseline=21"
@@ -348,7 +348,7 @@
       {
         "source": "RunningInTheUSA Jackson",
         "actual": 14,
-        "baseline": 13.8,
+        "baseline": 14,
         "floor": null,
         "severity": "OK",
         "message": "actual=14, baseline=14"

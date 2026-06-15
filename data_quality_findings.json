@@ -1,35 +1,21 @@
 {
-  "generated_at": "2026-06-13",
+  "generated_at": "2026-06-15",
   "cities": {
     "all": {
-      "events": 4969,
+      "events": 4737,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 3,
+          "count": 1,
           "examples": [
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-13",
+              "only_date": "2026-06-15",
               "why": "recurrence-field",
               "source": "Visit Park City"
-            },
-            {
-              "title": "Midway Farmers Market",
-              "venue": "midway town square",
-              "only_date": "2026-06-13",
-              "why": "strong-title",
-              "source": "Heber Valley Tourism"
-            },
-            {
-              "title": "Soulful Sundays @ Heber City Park",
-              "venue": "main street park heber city",
-              "only_date": "2026-06-14",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
             }
           ]
         },
@@ -37,24 +23,8 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 13,
+          "count": 12,
           "examples": [
-            {
-              "date": "2026-08-07",
-              "title_a": "Lonestar",
-              "src_a": "Visit Park City",
-              "title_b": "Country Weekend - Lonestar",
-              "src_b": "Park City Institute",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-06-14",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
             {
               "date": "2026-06-21",
               "title_a": "Stein's Famous Sunday Brunch",
@@ -78,6 +48,22 @@
               "title_b": "Sunday Brunch",
               "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
+            },
+            {
+              "date": "2026-07-12",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-19",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
             }
           ]
         },
@@ -88,70 +74,42 @@
           "count": 1,
           "examples": [
             {
-              "source": "Google Events",
-              "was": 16,
-              "now": 0,
-              "lost": 16
+              "source": "Siebkens Resort",
+              "was": 276,
+              "now": 24,
+              "lost": 252
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 500,
-      "findings": []
-    },
-    "heber": {
-      "events": 1275,
+      "events": 234,
       "findings": [
-        {
-          "code": "C1",
-          "name": "RECURRING-DROPPED",
-          "severity": "HIGH",
-          "count": 2,
-          "examples": [
-            {
-              "title": "Midway Farmers Market",
-              "venue": "midway town square",
-              "only_date": "2026-06-13",
-              "why": "strong-title",
-              "source": "Heber Valley Tourism"
-            },
-            {
-              "title": "Soulful Sundays @ Heber City Park",
-              "venue": "main street park heber city",
-              "only_date": "2026-06-14",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
-            }
-          ]
-        },
         {
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 2,
+          "count": 1,
           "examples": [
             {
-              "source": "The Park Record",
-              "was": 69,
-              "now": 28,
-              "lost": 41
-            },
-            {
-              "source": "Google Events",
-              "was": 13,
-              "now": 0,
-              "lost": 13
+              "source": "Siebkens Resort",
+              "was": 276,
+              "now": 24,
+              "lost": 252
             }
           ]
         }
       ]
     },
+    "heber": {
+      "events": 1326,
+      "findings": []
+    },
     "jackson": {
-      "events": 1369,
+      "events": 1294,
       "findings": []
     }
   },
-  "high_total": 8
+  "high_total": 3
 }
