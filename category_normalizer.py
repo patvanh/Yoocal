@@ -73,6 +73,33 @@ _VALID_BUCKETS_LOWER = {b.lower(): b for b in [
 ]}
 
 
+
+# Title-keyword inference for events whose source gave no usable category.
+# Ordered by specificity; an event can match multiple buckets. Case-insensitive.
+_TITLE_BUCKET_PATTERNS = [
+    ("Music", r"\b(live music|concert|band|acoustic|\bdj\b|symphony|orchestra|jazz|blues|open mic|singer|songwriter|bluegrass|karaoke|recital|musical)\b"),
+    ("Food & Drink", r"\b(happy hour|\bbbq\b|barbecue|dinner|brunch|breakfast|luncheon|\bwine\b|winery|\bbeer\b|brewing|brewery|tasting|cocktail|supper|sundae|ice cream|farmers? market|food truck|chili cook|pancake|fish fry|coffee)\b"),
+    ("Arts & Theater", r"\b(opera|theat(er|re)|\bart\b|arts|gallery|exhibit|painting|paint|pottery|\bglass\b|\bcraft|sculpture|museum|drawing|photography|quilt|knitting|author|book club|comedy|improv|magic show)\b"),
+    ("Outdoors", r"\b(hike|hiking|kayak|paddle|canoe|\bboat|sail|nature|trail|birding|garden|gardening|camp(ing)?|fishing|outdoor|stargaz)\b"),
+    ("Sports", r"\b(tournament|\bgolf|regatta|iceboat|pickleball|tennis|softball|baseball|basketball|disc golf|\b4 ?on ?4\b|bowling|cornhole)\b"),
+    ("Family & Kids", r"\b(kids?|children|family|story ?time|toddler|youth|baby|bilingual baby|teen|scouts?|playground|petting zoo|easter egg)\b"),
+    ("Wellness", r"\b(yoga|meditation|mindfulness|wellness|reiki|pilates|tai chi|breathwork|sound bath)\b"),
+    ("Education & Talks", r"\b(lecture|\btalk\b|class|seminar|workshop|library|\bhistory\b|historical|presentation|lesson|tutorial|cpr|first aid|genealogy|book sale)\b"),
+    ("Community", r"\b(meeting|fundraiser|blood drive|support group|clean ?up|mixer|\bfair\b|festival|parade|vigil|rummage|bake sale|volunteer|church|worship|mass|service)\b"),
+]
+import re as _re_cat
+_TITLE_BUCKET_RE = [(b, _re_cat.compile(p, _re_cat.I)) for b, p in _TITLE_BUCKET_PATTERNS]
+
+
+def _infer_buckets_from_title(title):
+    t = (title or "")
+    out = set()
+    for bucket, rx in _TITLE_BUCKET_RE:
+        if rx.search(t):
+            out.add(bucket)
+    return out
+
+
 def filter_categories_for(event):
     """Return sorted list of clean buckets for an event."""
     buckets = set()
@@ -89,6 +116,8 @@ def filter_categories_for(event):
     # title enrichment: footraces
     if _title_is_footrace(event.get("title")):
         buckets.add("Running & Races")
+    title_text = (event.get("title") or "") + " " + (event.get("description") or "")
+    buckets |= _infer_buckets_from_title(title_text)
     if not buckets:
         buckets.add("Community")  # default catch-all
     return sorted(buckets)
