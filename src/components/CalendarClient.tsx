@@ -244,6 +244,7 @@ const CITY_CENTERS: Record<string, { lat: number; lng: number }> = {
   heber: { lat: 40.5069, lng: -111.4133 },
   jackson: { lat: 43.4799, lng: -110.7624 },
   elkhartlake: { lat: 43.8336, lng: -87.9717 },
+  greenlake: { lat: 43.8408, lng: -88.9576 },
 }
 
 // Haversine distance in miles between two lat/lng points.
@@ -832,7 +833,7 @@ function MultiFilterDropdown({
 }
 
 export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {}) {
-  const cityLabel = ({ parkcity: 'Park City', heber: 'Heber Valley', jackson: 'Jackson Hole', elkhartlake: 'Elkhart Lake' } as Record<string, string>)[cityKeyProp || 'parkcity'] || 'your area'
+  const cityLabel = ({ parkcity: 'Park City', heber: 'Heber Valley', jackson: 'Jackson Hole', elkhartlake: 'Elkhart Lake', greenlake: 'Green Lake' } as Record<string, string>)[cityKeyProp || 'parkcity'] || 'your area'
   const [events, setEvents] = useState<V2YocEvent[]>([])
   // Events from cities OTHER than the current one. Used by cross-city search
   // (Model C): current city's events surface first, fallback to nearest from
@@ -962,6 +963,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       heber: '/events-heber.json',
       jackson: '/events-jackson.json',
       elkhartlake: '/events-elkhartlake.json',
+      greenlake: '/events-greenlake.json',
     }
     const file = fileMap[cityKeyLocal] || '/events.json'
     setLoading(true)
@@ -1737,16 +1739,17 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
               When/Vibe filter dropdowns exactly (custom popover, not a native
               <select>). City navigates; radius drives the radius filter state. */}
           <FilterDropdown
-            label={({ parkcity: 'Park City, UT', elkhartlake: 'Elkhart Lake, WI', heber: 'Heber Valley, UT', jackson: 'Jackson Hole, WY' } as Record<string, string>)[cityKeyProp || 'parkcity'] || 'Park City, UT'}
+            label={({ parkcity: 'Park City, UT', elkhartlake: 'Elkhart Lake, WI', heber: 'Heber Valley, UT', jackson: 'Jackson Hole, WY', greenlake: 'Green Lake, WI' } as Record<string, string>)[cityKeyProp || 'parkcity'] || 'Park City, UT'}
             value={cityKeyProp || 'parkcity'}
             options={[
               { value: 'parkcity', label: 'Park City, UT' },
               { value: 'elkhartlake', label: 'Elkhart Lake, WI' },
               { value: 'heber', label: 'Heber Valley, UT' },
               { value: 'jackson', label: 'Jackson Hole, WY' },
+              { value: 'greenlake', label: 'Green Lake, WI' },
             ]}
             onChange={(v) => {
-              const slug = ({ parkcity: 'park-city', elkhartlake: 'elkhart-lake', heber: 'heber', jackson: 'jackson-hole' } as Record<string, string>)[v]
+              const slug = ({ parkcity: 'park-city', elkhartlake: 'elkhart-lake', heber: 'heber', jackson: 'jackson-hole', greenlake: 'green-lake' } as Record<string, string>)[v]
               if (slug) window.location.href = '/' + slug
             }}
           />
@@ -2177,6 +2180,7 @@ export default function CalendarClient() {
       elkhartlake: { center: [43.8358, -88.0051], zoom: 13 },
       heber: { center: [40.5071, -111.4133], zoom: 12 },
       jackson: { center: [43.4799, -110.7624], zoom: 11 },
+      greenlake: { center: [43.8408, -88.9576], zoom: 11 },
     }
 
     const CITIES: Record<string, any> = {
@@ -2190,6 +2194,12 @@ export default function CalendarClient() {
         name: 'Elkhart Lake, WI', label: 'Elkhart Lake & Sheboygan County',
         file: 'events-elkhartlake.json',
         aboutLabel: 'About Elkhart Lake', aboutPage: '/about/elkhart-lake',
+        junk: ['previous month', 'next month'],
+      },
+      greenlake: {
+        name: 'Green Lake, WI', label: 'Green Lake Area',
+        file: 'events-greenlake.json',
+        aboutLabel: 'About Green Lake', aboutPage: '/about/green-lake',
         junk: ['previous month', 'next month'],
       },
       heber: {

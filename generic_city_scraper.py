@@ -354,7 +354,14 @@ _API_CAPTURE_CACHE = {}  # domain -> expanded api events, once per run
 def _html_unescape(s):
     try:
         import html
-        return html.unescape(s or "")
+        out = html.unescape(s or "")
+        # Some sources double-encode (e.g. &amp;#8217;). Unescape until stable.
+        for _ in range(3):
+            nxt = html.unescape(out)
+            if nxt == out:
+                break
+            out = nxt
+        return out
     except Exception:
         return s or ""
 

@@ -50,6 +50,14 @@ const CITIES: City[] = [
     emoji: "",
     blurb: "Racing, lakeside events and everything around Road America.",
   },
+  {
+    key: "greenlake",
+    image: "/cities/greenlake.jpg",
+    name: "Green Lake",
+    region: "Wisconsin",
+    emoji: "",
+    blurb: "Golf, boating, summer concerts and small-town events on Wisconsin’s deepest lake.",
+  },
 ]
 
 // ZIP -> city key. Small static map for the 4 live cities; expand as we grow.
@@ -116,7 +124,7 @@ export default function HomeBrand() {
     } catch {
       // ignore
     }
-    router.push(`/${({parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole"} as Record<string,string>)[key] || ""}`)
+    router.push(`/${({parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole",greenlake:"green-lake"} as Record<string,string>)[key] || ""}`)
   }
 
   // Strip ", UT" or ", Wyoming" and similar suffixes for cleaner matching
