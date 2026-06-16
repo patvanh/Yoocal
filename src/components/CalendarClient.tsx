@@ -947,7 +947,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   // Effective end of the picked range: clamp to start when end is unset/invalid,
   // so a single-day pick keeps its current behavior.
   const pickedRangeEnd = (pickedEndDate && pickedEndDate >= pickedDate) ? pickedEndDate : pickedDate
-  const [radius, setRadius] = useState<number>(10)
+  const [radius, setRadius] = useState<number>(25)
   const [locationMode, setLocationMode] = useState<'city' | 'mylocation' | 'zip'>('city')
   const [zipCode, setZipCode] = useState<string>('')
   const [userCoords, setUserCoords] = useState<{ lat: number; lng: number } | null>(null)
@@ -1757,10 +1757,10 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             label={`Within ${radius} mi`}
             value={String(radius)}
             options={[
+              { value: '5', label: 'Within 5 mi' },
               { value: '10', label: 'Within 10 mi' },
               { value: '25', label: 'Within 25 mi' },
               { value: '50', label: 'Within 50 mi' },
-              { value: '100', label: 'Within 100 mi' },
             ]}
             onChange={(v) => setRadius(Number(v))}
           />
