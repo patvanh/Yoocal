@@ -54,8 +54,11 @@ STAGE_MODE = os.environ.get("STAGE_MODE", "review")  # "review" | "push"
 
 # Hard cap on event-detail fetches per run (cache hits don't count). Protects
 # against a runaway full crawl. Override via env for big first-fill runs.
-FIRECRAWL_BUDGET = int(os.environ.get("SCRAPER_FIRECRAWL_BUDGET", "1500"))
+FIRECRAWL_BUDGET = int(os.environ.get("SCRAPER_FIRECRAWL_BUDGET", "200"))
 _budget_spent = 0
+# Per-source paid-call ceiling — stops one bad source draining the budget.
+SRC_FIRECRAWL_CAP = int(os.environ.get("SCRAPER_SRC_FIRECRAWL_CAP", "6"))
+_src_paid = {}
 
 # Hard ceiling per source (seconds). A single stuck render must never hang an
 # unattended run. Override with SCRAPER_SOURCE_TIMEOUT. 6 min is generous —
@@ -667,13 +670,21 @@ def _extract_one(url, source_name, city, lat, lng, categories=None, verbose=True
         return found  # free tier produced events; don't pay
 
     # ---- PAID strategies (only when free found nothing) ----
-    if extract_events_from_url and _budget_spent < FIRECRAWL_BUDGET:
+    from urllib.parse import urlparse as _up_cost
+    _src_host = _up_cost(url).netloc
+    try:
+        from schema_org_scraper import _SSL_BROKEN_HOSTS as _sslbroken
+    except Exception:
+        _sslbroken = set()
+    _paid_ok = (_src_host not in _sslbroken) and (_src_paid.get(source_name, 0) < SRC_FIRECRAWL_CAP)
+    if extract_events_from_url and _budget_spent < FIRECRAWL_BUDGET and _paid_ok:
         # 3. Firecrawl standard render + LLM extract
         try:
             evs = extract_events_from_url(
                 url, source_name, default_lat=lat, default_lng=lng,
                 default_categories=categories or []) or []
             _budget_spent += 1
+            _src_paid[source_name] = _src_paid.get(source_name, 0) + 1
             if evs:
                 if verbose:
                     print(f"      [paid] firecrawl render -> {len(evs)}")
@@ -689,6 +700,7 @@ def _extract_one(url, source_name, city, lat, lng, categories=None, verbose=True
                     url, source_name, default_lat=lat, default_lng=lng,
                     default_categories=categories or [], proxy="enhanced") or []
                 _budget_spent += 1
+                _src_paid[source_name] = _src_paid.get(source_name, 0) + 1
                 if evs:
                     if verbose:
                         print(f"      [paid] firecrawl enhanced -> {len(evs)}")
