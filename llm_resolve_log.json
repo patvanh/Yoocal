@@ -1,33 +1,26 @@
 {
-  "generated_at": "2026-06-15T20:42:38.048700",
+  "generated_at": "2026-06-16T15:08:55.943070",
   "attempted": 2,
   "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "Max McNown",
+      "title": "Paris Opera Junior Ballet",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/max-mcnown/3252/",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source page text only contains 'Max McNown' as a heading with no additional context or complete title information available."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "skipped": "[fetch failed: 415 Client Error: Unsupported Media Type for url: https://www.jhcenterforthearts.org/event/paris-opera-junior-ballet-dw/]"
     },
     {
       "city": "jackson",
-      "title": "Teton House Concert: The Harp\u00e2\u0080\u0099s Voice",
+      "title": "Jackson Hole Farmers Market",
       "type": "title_truncated",
-      "link": "https://gtmf.org/events/the-harps-voice",
+      "link": "https://dishingjh.com/event/jackson-hole-farmers-market-7/2026-07-25/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Teton House Concert: The Harp's Voice",
-        "reasoning": "The source page clearly shows the complete title as 'Teton House Concert: The Harp's Voice' with a proper apostrophe, not the garbled encoding in the current title."
+        "new_title": "Jackson Hole Farmers Market",
+        "reasoning": "The source page clearly shows 'Jackson Hole Farmers Market' as the complete event title in the heading, and there is no evidence of truncation or additional title information in the page text."
       },
       "applied": true,
-      "note": "title: 'Teton House Concert: The Harp\u00e2\\x80\\x99s Voice' \u2192 \"Teton House Concert: The Harp's Voice\""
+      "note": "title: 'Jackson Hole Farmers Market' \u2192 'Jackson Hole Farmers Market'"
     }
   ]
 }

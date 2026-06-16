@@ -1,36 +1,36 @@
 {
-  "checked_at": "2026-06-15T15:03:18.403646-06:00",
+  "checked_at": "2026-06-16T09:12:07.515741-06:00",
   "total_sources": 42,
   "sources_checked": 13,
   "sources_flagged": 0,
   "results": [
     {
       "source": "The Park Record",
-      "our_count": 864,
+      "our_count": 857,
       "status": "skipped_no_url",
       "url": null
     },
     {
       "source": "Park City Annual Events",
-      "our_count": 401,
+      "our_count": 398,
       "status": "skipped_no_url",
       "url": null
     },
     {
       "source": "Mountain Town Music",
-      "our_count": 246,
+      "our_count": 248,
       "status": "skipped_no_url",
       "url": null
     },
     {
       "source": "Jackson Hole Chamber of Commerce",
-      "our_count": 186,
+      "our_count": 185,
       "url": "https://www.jacksonholechamber.com/events/",
       "status": "checked",
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page relies on JavaScript to render events; the static HTML shows only placeholder cards and an empty events list container."
+      "notes": "The events list is dynamically rendered via JavaScript in a layoutjs container with no static HTML content visible in the raw source."
     },
     {
       "source": "Jackson Hole Mountain Resort",
@@ -40,23 +40,23 @@
     },
     {
       "source": "Heber Valley Tourism",
-      "our_count": 134,
+      "our_count": 129,
       "url": "https://www.gohebervalley.com/events/",
       "status": "checked",
       "llm_count_on_page": 1,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page uses Vue.js to render events dynamically; static HTML shows only template structure with no actual event data populated."
+      "notes": "Page uses Vue.js templates with v-for loops; event data is rendered dynamically via JavaScript and not visible in static HTML."
     },
     {
       "source": "Elkhart Lake Tourism",
-      "our_count": 130,
+      "our_count": 129,
       "url": "https://www.elkhartlake.com/events/",
       "status": "fetch_failed"
     },
     {
       "source": "The Cloudveil",
-      "our_count": 114,
+      "our_count": 113,
       "status": "skipped_no_url",
       "url": null
     },
@@ -68,17 +68,17 @@
       "llm_count_on_page": 12,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page has empty dropdown menus and slider content that requires JavaScript execution to populate; visible HTML shows only 8 featured events in cards + 4 in text list, but dynamic content containers are empty."
+      "notes": "Page requires JavaScript execution to render event cards; static HTML shows empty dropdown menus and slideshow containers without populated event content."
     },
     {
       "source": "Egyptian Theatre",
-      "our_count": 99,
+      "our_count": 100,
       "url": "https://parkcityshows.com/shows-ticketing/upcoming-shows",
       "status": "checked",
-      "llm_count_on_page": 32,
+      "llm_count_on_page": 35,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 32 distinct events across June 2026 through February 2027; database total of 99 is plausible given multiple scraping runs capturing past events no longer visible on the current page."
+      "notes": "Page shows 35 distinct events across June 2026 through February 2027; database count of 100 is plausible as cumulative total from multiple scrapes over time."
     },
     {
       "source": "Dishing Jackson Hole",
@@ -100,7 +100,7 @@
       "llm_count_on_page": 61,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 61 events in visible JSON data; cumulative database count of 67 across many scrapes is plausibly consistent with ongoing event additions."
+      "notes": "Page shows 61 events in the results counter; database count of 67 likely represents cumulative scrapes across multiple runs including past events."
     },
     {
       "source": "National Museum of Wildlife Art",
@@ -112,11 +112,15 @@
       "source": "The Osthoff Resort",
       "our_count": 87,
       "url": "https://osthoff.com/events/",
-      "status": "fetch_failed"
+      "status": "checked",
+      "llm_count_on_page": 12,
+      "page_status": "healthy",
+      "judgment": "scraper_likely_missing_events",
+      "notes": "Page shows 12 upcoming music events in a Smart Slider carousel (June-July 2026), but database has 87 total which may represent accumulated events across multiple scrape runs and categories beyond live music."
     },
     {
       "source": "KPCW Community Calendar",
-      "our_count": 59,
+      "our_count": 61,
       "url": "https://www.kpcw.org/community-calendar",
       "status": "fetch_failed"
     },
@@ -124,15 +128,11 @@
       "source": "Center for the Arts Jackson Hole",
       "our_count": 48,
       "url": "https://www.jhcenterforthearts.org/calendar-events/",
-      "status": "checked",
-      "llm_count_on_page": 14,
-      "page_status": "healthy",
-      "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 14 events on first page with pagination indicating multiple pages (up to page 5), consistent with cumulative count of 48 across many scrapes."
+      "status": "fetch_failed"
     },
     {
       "source": "Million Dollar Cowboy Bar",
-      "our_count": 46,
+      "our_count": 45,
       "status": "skipped_no_url",
       "url": null
     },
@@ -141,30 +141,30 @@
       "our_count": 31,
       "url": "https://www.visitparkcity.com/events/",
       "status": "checked",
-      "llm_count_on_page": 12,
+      "llm_count_on_page": 9,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page contains empty dropdown menus and slider containers with 'opacity: 0' that require JavaScript to populate event content."
+      "notes": "Page requires JavaScript execution to render event cards; static HTML shows empty containers and only 8 featured events in text list plus 1 partial card visible."
+    },
+    {
+      "source": "TownLift",
+      "our_count": 28,
+      "status": "skipped_no_url",
+      "url": null
     },
     {
       "source": "Siebkens Resort",
       "our_count": 34,
       "url": "https://www.siebkens.com/events/",
       "status": "checked",
-      "llm_count_on_page": 15,
+      "llm_count_on_page": 14,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 15 distinct upcoming events in June-July 2026; database count of 34 across all historical scrapes is plausibly consistent with pagination showing only first page of results."
+      "notes": "Page shows 14 visible events in June-July 2026; database count of 34 likely includes past events and multiple scrapes over time."
     },
     {
       "source": "Wasatch County Parks & Rec",
-      "our_count": 24,
-      "status": "skipped_no_url",
-      "url": null
-    },
-    {
-      "source": "TownLift",
-      "our_count": 20,
+      "our_count": 23,
       "status": "skipped_no_url",
       "url": null
     },
@@ -182,13 +182,7 @@
       "llm_count_on_page": 10,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page shows 10 blog posts about farmers market events/announcements; database count of 19 is plausibly correct as cumulative across many scrapes over time."
-    },
-    {
-      "source": "Heber Valley Life",
-      "our_count": 16,
-      "status": "skipped_no_url",
-      "url": null
+      "notes": "Page shows 10 blog posts with event/market announcements; database count of 19 across many scrapes is plausibly higher due to cumulative collection over time."
     },
     {
       "source": "Park City Institute",
@@ -198,7 +192,13 @@
       "llm_count_on_page": 15,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 15 distinct upcoming concert events for summer 2026 with full details, images, and ticket purchase buttons for each."
+      "notes": "Page displays 15 distinct concert events with full details, dates, and ticket buttons matching the database count of 15 events."
+    },
+    {
+      "source": "Heber Valley Life",
+      "our_count": 15,
+      "status": "skipped_no_url",
+      "url": null
     },
     {
       "source": "RunningInTheUSA Jackson",
@@ -226,7 +226,7 @@
       "llm_count_on_page": 10,
       "page_status": "healthy",
       "judgment": "scraper_count_seems_correct",
-      "notes": "Page displays 10 distinct upcoming/current events in static HTML; database count of 13 likely includes past events and cumulative historical data."
+      "notes": "Page shows 10 distinct upcoming/current events in static HTML; database count of 13 is reasonable when accounting for past events and multiple scrape runs."
     },
     {
       "source": "Mountain Trails Foundation",
@@ -236,7 +236,13 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "Page HTML contains only empty containers and encoded styles; all event content appears to be rendered via JavaScript after page load."
+      "notes": "The page HTML shows empty containers and encoded style blocks, indicating events are rendered via JavaScript and not visible in static HTML."
+    },
+    {
+      "source": "Eventbrite",
+      "our_count": 10,
+      "status": "skipped_no_url",
+      "url": null
     },
     {
       "source": "Park Silly Sunday Market",
@@ -252,12 +258,6 @@
     },
     {
       "source": "Salt Lake Running Co",
-      "our_count": 8,
-      "status": "skipped_no_url",
-      "url": null
-    },
-    {
-      "source": "Eventbrite",
       "our_count": 8,
       "status": "skipped_no_url",
       "url": null
@@ -306,7 +306,7 @@
       "llm_count_on_page": 0,
       "page_status": "javascript_required",
       "judgment": "cannot_assess",
-      "notes": "The calendar view is empty in static HTML with a message 'There are no upcoming events' and a loader indicating events are loaded dynamically via JavaScript."
+      "notes": "Page uses The Events Calendar plugin with JavaScript-rendered events; static HTML shows empty month grid and 'no upcoming events' message, but loader indicates 35 events exist server-side."
     }
   ],
   "flagged": []

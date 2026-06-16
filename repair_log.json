@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-15T20:42:31.167963",
-  "audit_date": "2026-06-15",
+  "generated_at": "2026-06-16T15:08:49.209002",
+  "audit_date": "2026-06-16",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1861,
+      "before_count": 1855,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -24,12 +24,8 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 5,
+          "fixed": 4,
           "examples": [
-            {
-              "title": "Fascia Rolling Class",
-              "had_span": 181
-            },
             {
               "title": "Group Fitness Classes",
               "had_span": 181
@@ -39,12 +35,12 @@
               "had_span": 57
             },
             {
-              "title": "(Re)sounding: Art Exhibition",
-              "had_span": 91
+              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
+              "had_span": 72
             },
             {
-              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 73
+              "title": "Fascia Rolling Class",
+              "had_span": 181
             }
           ]
         },
@@ -130,13 +126,20 @@
           ]
         },
         "classification": {
-          "fixed": 409,
+          "fixed": 405,
           "examples": [
             {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
               "before": [],
               "after": [
                 "Food & Drink"
+              ]
+            },
+            {
+              "title": "Play With Tenacity Lacrosse Camp",
+              "before": [],
+              "after": [
+                "Community"
               ]
             },
             {
@@ -154,28 +157,21 @@
               ]
             },
             {
-              "title": "Rise + Release: Block",
+              "title": "Fascia Rolling Class",
               "before": [],
               "after": [
                 "Wellness"
-              ]
-            },
-            {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [],
-              "after": [
-                "Community"
               ]
             }
           ]
         }
       },
-      "after_count": 1865,
-      "total_fixes": 430
+      "after_count": 1859,
+      "total_fixes": 425
     },
     {
       "city": "elkhart-lake",
-      "before_count": 230,
+      "before_count": 229,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -225,16 +221,37 @@
           "examples": []
         }
       },
-      "after_count": 235,
+      "after_count": 234,
       "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 228,
+      "before_count": 236,
       "passes": {
         "past_dates": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 5,
+          "examples": [
+            {
+              "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
+              "date": "2026-06-15"
+            },
+            {
+              "title": "Meet the Cows - Dairy Farm Tour",
+              "date": "2026-06-15"
+            },
+            {
+              "title": "Yoga in the Lavender Field @ Blue Canyon Lavender Farm",
+              "date": "2026-06-15"
+            },
+            {
+              "title": "Monday Night Train @ Heber Valley Railroad",
+              "date": "2026-06-15"
+            },
+            {
+              "title": "Midway America250 Celebrations",
+              "date": "2026-06-15"
+            }
+          ]
         },
         "absurd_spans": {
           "fixed": 1,
@@ -259,19 +276,13 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 5,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
               "start_time": "8:00 AM",
               "new_end_time": "9:00 AM",
               "duration_hours": 1
-            },
-            {
-              "title": "Demolition Derby and MVS Rodeo Tickets on Sale!",
-              "start_time": "9:00 AM",
-              "new_end_time": "11:00 AM",
-              "duration_hours": 2
             },
             {
               "title": "Mountain Valley Stampede Rodeo",
@@ -289,6 +300,12 @@
               "title": "Wilderness Circuit Finals Rodeo Friday Nov. 6th at 7:30 pm",
               "start_time": "7:30 PM",
               "new_end_time": "9:30 PM",
+              "duration_hours": 2
+            },
+            {
+              "title": "Wilderness Circuit Finals Rodeo Saturday Nov 7th Matinee 1:00 pm",
+              "start_time": "1:00 PM",
+              "new_end_time": "3:00 PM",
               "duration_hours": 2
             }
           ]
@@ -354,12 +371,12 @@
           ]
         }
       },
-      "after_count": 229,
-      "total_fixes": 21
+      "after_count": 232,
+      "total_fixes": 25
     },
     {
       "city": "jackson",
-      "before_count": 822,
+      "before_count": 819,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -370,11 +387,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 110
+              "had_span": 109
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 97
+              "had_span": 96
             }
           ]
         },
@@ -469,7 +486,7 @@
           "examples": []
         }
       },
-      "after_count": 845,
+      "after_count": 842,
       "total_fixes": 21
     }
   ]
