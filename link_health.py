@@ -53,7 +53,11 @@ def _verified_fallback(url):
 def _classify(url):
     try:
         r = requests.head(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
-        if r.status_code in (403, 405) or r.status_code >= 500:
+        # Many servers (e.g. ChamberMaster/GrowthZone) mis-handle HEAD and return
+        # 403/404/405/5xx for pages that GET returns 200 for. Always verify a
+        # non-200 HEAD with a real GET before trusting it — otherwise we wrongly
+        # mark live detail pages "dead" and downgrade them to a generic listing.
+        if r.status_code != 200:
             r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
         code = r.status_code
         if code == 403:

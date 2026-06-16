@@ -120,31 +120,37 @@ def _domain(url):
 # Extraction: route a source to the best method, cascade on empty
 # ---------------------------------------------------------------------------
 def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=None):
-    """Free fallback: build an event from schema.org MICRODATA itemprop tags on a
-    detail page whose JSON-LD lacks an Event (ChamberMaster/GrowthZone pattern).
-    Matches double-quoted itemprop/content attrs in either order. Returns a single
-    event dict or None."""
+    """Free fallback: build a FULL event from schema.org MICRODATA on a detail
+    page whose JSON-LD lacks an Event (ChamberMaster/GrowthZone pattern).
+    Captures title, dates/times, venue (nested location>name), description
+    (about), and uses the detail-page URL as the link. Returns event dict or None."""
     import re as _md_re
+    import html as _md_htmlmod
     if not html:
         return None
 
-    def _itemprop(prop):
-        pats = [
-            '<[^>]+itemprop="' + prop + '"[^>]*content="([^"]+)"',
-            '<[^>]+content="([^"]+)"[^>]*itemprop="' + prop + '"',
-        ]
-        for pat in pats:
+    def _unescape(s):
+        out = _md_htmlmod.unescape(s or "")
+        for _ in range(3):
+            nxt = _md_htmlmod.unescape(out)
+            if nxt == out:
+                break
+            out = nxt
+        return out
+
+    def _itemprop_content(prop):
+        for pat in ['<[^>]+itemprop="' + prop + '"[^>]*content="([^"]+)"',
+                    '<[^>]+content="([^"]+)"[^>]*itemprop="' + prop + '"']:
             m = _md_re.search(pat, html, _md_re.I)
             if m:
-                return m.group(1).strip()
+                return _unescape(m.group(1).strip())
         return None
 
-    name = _itemprop("name")
-    start = _itemprop("startDate")
-    end = _itemprop("endDate")
+    name = _itemprop_content("name")
+    start = _itemprop_content("startDate")
+    end = _itemprop_content("endDate")
     if not start:
         return None
-
     if not name:
         tm = _md_re.search("<title>(.*?)</title>", html, _md_re.S | _md_re.I)
         if tm:
@@ -168,16 +174,39 @@ def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=
     if not date:
         return None
     end_date = _date_part(end)
+
+    # Venue: itemprop="location" is a Place; grab the first nested itemprop="name".
+    venue = None
+    li = _md_re.search(r'itemprop="location"', html, _md_re.I)
+    if li:
+        after = html[li.end():li.end() + 900]
+        vm = _md_re.search(r'itemprop="name"[^>]*>(.*?)</span>', after, _md_re.I | _md_re.S)
+        if vm:
+            v = _md_re.sub(r'<[^>]+>', '', vm.group(1)).strip()
+            venue = _unescape(v) or None
+
+    # Description: itemprop="about" inner text.
+    description = None
+    am = _md_re.search(r'itemprop="about"[^>]*>(.*?)</div>\s*</div>', html, _md_re.I | _md_re.S)
+    if not am:
+        am = _md_re.search(r'itemprop="about"[^>]*>(.*?)</div>', html, _md_re.I | _md_re.S)
+    if am:
+        txt = _md_re.sub(r'<[^>]+>', ' ', am.group(1))
+        txt = _md_re.sub(r'\s+', ' ', txt).strip()
+        description = _unescape(txt) or None
+
     ev = {
         "title": name,
         "date": date,
         "start_time": _time_part(start),
         "end_time": _time_part(end),
-        "link": url,
+        "link": url,                       # the detail-page URL (correct event link)
         "source": source_name,
         "lat": lat,
         "lng": lng,
-        "location": city,
+        "location": venue or city,         # real venue when present, city fallback
+        "venue_name": venue or "",
+        "description": description or "",
     }
     if end_date and end_date != date:
         ev["end_date"] = end_date
