@@ -1713,6 +1713,20 @@ def main():
                 "elkhart lake, wi": (43.8330, -88.0426),
                 "plymouth, wi": (43.7491, -87.9728),
                 "sheboygan, wi": (43.7508, -87.7145),
+                "green lake, wi": (43.8408, -88.9576),
+                "ripon, wi": (43.8422, -88.8359),
+                "princeton, wi": (43.8497, -89.1290),
+                "berlin, wi": (43.9678, -88.9434),
+                "markesan, wi": (43.7064, -88.9817),
+                "oshkosh, wi": (44.0247, -88.5426),
+                "stevens point, wi": (44.5236, -89.5746),
+                "stevens point": (44.5236, -89.5746),
+                "appleton, wi": (44.2619, -88.4154),
+                "madison, wi": (43.0731, -89.4012),
+                "milwaukee, wi": (43.0389, -87.9065),
+                "green bay, wi": (44.5133, -88.0133),
+                "wausau, wi": (44.9591, -89.6301),
+                "fond du lac, wi": (43.7730, -88.4470),
             }
             _addr_text = ((e.get("location") or "") + " " + (e.get("address") or "")).lower()
             addr_match = None
