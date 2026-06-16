@@ -20,6 +20,8 @@ export const CITIES: City[] = [
     blurb: "Rodeos, fairs, train rides and small-town events across the Wasatch Back." },
   { key: "elkhartlake", name: "Elkhart Lake", region: "Wisconsin", emoji: "",
     blurb: "Racing, lakeside events and everything around Road America." },
+  { key: "greenlake", name: "Green Lake", region: "Wisconsin", emoji: "",
+    blurb: "Golf, boating, summer concerts and small-town events on Wisconsin’s deepest lake." },
 ]
 
 // ZIP -> city key. Small static map for the 4 live cities; expand as we grow.
@@ -28,6 +30,7 @@ export const ZIP_TO_CITY: Record<string, string> = {
   "83001": "jackson", "83002": "jackson", "83014": "jackson", "83025": "jackson",
   "84032": "heber", "84049": "heber",
   "53020": "elkhartlake",
+  "54941": "greenlake", "54971": "greenlake", "54968": "greenlake",
 }
 
 // Aliases — typing these resolves to the matching city
@@ -36,6 +39,7 @@ export const ALIASES: Record<string, string> = {
   "jh": "jackson", "jackson wy": "jackson",
   "midway": "heber", "wasatch back": "heber",
   "road america": "elkhartlake",
+  "green lake wi": "greenlake", "lawsonia": "greenlake", "princeton wi": "greenlake",
 }
 
 export type SearchOption =

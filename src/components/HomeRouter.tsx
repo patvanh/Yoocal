@@ -22,6 +22,7 @@ export default function HomeRouter() {
     elkhartlake: "elkhart-lake",
     heber: "heber",
     jackson: "jackson-hole",
+    greenlake: "green-lake",
   }
 
   useEffect(() => {

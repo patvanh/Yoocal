@@ -9,24 +9,25 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 export default function CitySwitcher({
   active,
 }: {
-  active: "parkcity" | "elkhartlake" | "heber" | "jackson";
+  active: "parkcity" | "elkhartlake" | "heber" | "jackson" | "greenlake";
 }) {
   const router = useRouter();
   const params = useSearchParams();
   const pathname = usePathname();
 
-  function switchTo(city: "parkcity" | "elkhartlake" | "heber" | "jackson") {
+  function switchTo(city: "parkcity" | "elkhartlake" | "heber" | "jackson" | "greenlake") {
     if (city === active) return;
     const sp = new URLSearchParams(params.toString());
     sp.set("city", city);
     router.push(`${pathname}?${sp.toString()}`);
   }
 
-  const tabs: { key: "parkcity" | "elkhartlake" | "heber" | "jackson"; label: string }[] = [
+  const tabs: { key: "parkcity" | "elkhartlake" | "heber" | "jackson" | "greenlake"; label: string }[] = [
     { key: "parkcity", label: "Park City" },
     { key: "elkhartlake", label: "Elkhart Lake" },
     { key: "heber", label: "Heber Valley" },
     { key: "jackson", label: "Jackson Hole" },
+    { key: "greenlake", label: "Green Lake" },
   ];
 
   return (

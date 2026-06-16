@@ -24,7 +24,7 @@ export type Venue = {
   matchAliases?: string[];
 };
 
-export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jackson", Venue[]> = {
+export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jackson" | "greenlake", Venue[]> = {
   parkcity: [
     {
       name: "Egyptian Theatre",
@@ -341,6 +341,7 @@ export const VENUES_BY_CITY: Record<"parkcity" | "elkhartlake" | "heber" | "jack
       matchAliases: ["Murie Ranch", "Murie Center"],
     },
   ],
+  greenlake: [],
 };
 
 /** Human-readable label for a tag. */

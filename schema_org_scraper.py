@@ -302,6 +302,9 @@ def scrape_schema_org_sources(sources_config):
 # Internals
 # --------------------------------------------------------------
 
+from urllib.parse import urlparse as _urlparse_ssl
+_SSL_BROKEN_HOSTS = set()
+
 def _fetch(url, timeout=20, _max_attempts=3):
     """Fetch a page via the shared resilient session.
 
@@ -310,6 +313,9 @@ def _fetch(url, timeout=20, _max_attempts=3):
     adapter may surface as exceptions, with jittered sleeps so a burst of
     page fetches doesn't hammer the origin in lockstep. A genuine 404 still
     raises promptly (not in the retry status list)."""
+    _host = _urlparse_ssl(url).netloc
+    if _host in _SSL_BROKEN_HOSTS:
+        raise requests.exceptions.SSLError(f"host {_host} previously failed TLS; skipping")
     last_exc = None
     for attempt in range(1, _max_attempts + 1):
         try:
@@ -322,6 +328,9 @@ def _fetch(url, timeout=20, _max_attempts=3):
         except requests.HTTPError:
             # status error that survived the adapter's retries (e.g. real 404,
             # or 429 past the retry budget) — don't keep hammering; re-raise.
+            raise
+        except requests.exceptions.SSLError:
+            _SSL_BROKEN_HOSTS.add(_host)
             raise
         except requests.RequestException as e:
             last_exc = e

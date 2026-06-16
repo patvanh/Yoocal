@@ -40,7 +40,7 @@ export interface EventsFile {
   events: YoocalEvent[]
 }
 
-export type CityKey = 'parkcity' | 'elkhartlake' | 'heber' | 'jackson'
+export type CityKey = 'parkcity' | 'elkhartlake' | 'heber' | 'jackson' | 'greenlake'
 
 // Precise coordinates for known venues
 export const VENUE_COORDS: Record<string, [number, number]> = {
@@ -135,6 +135,16 @@ export const CITY_CONFIG: Record<CityKey, {
     junk: ['previous month', 'next month'],
     aboutPage: '/about/elkhart-lake',
   },
+  greenlake: {
+    name: 'Green Lake, WI',
+    label: 'Green Lake Area',
+    slug: 'green-lake',
+    file: 'events-greenlake.json',
+    center: [43.8408, -88.9576],
+    zoom: 12,
+    junk: ['previous month', 'next month'],
+    aboutPage: '/about/green-lake',
+  },
   heber: {
     name: 'Heber Valley, UT',
     label: 'Heber Valley',
@@ -181,6 +191,7 @@ export function cityKeyFromSlug(slug: string): CityKey | null {
     'elkhart-lake': 'elkhartlake',
     'heber': 'heber',
     'jackson-hole': 'jackson',
+    'green-lake': 'greenlake',
   }
   return map[slug] || null
 }

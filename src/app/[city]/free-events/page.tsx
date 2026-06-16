@@ -10,7 +10,7 @@ import { CITY_CONFIG, loadCityEvents, formatLocalISODate } from "@/lib/city-even
 export const revalidate = 3600;
 export const dynamicParams = false;
 
-const CITY_SLUGS = ["park-city", "elkhart-lake", "heber", "jackson-hole"] as const;
+const CITY_SLUGS = ["park-city", "elkhart-lake", "heber", "jackson-hole", "green-lake"] as const;
 
 export function generateStaticParams() {
   return CITY_SLUGS.map((city) => ({ city }));

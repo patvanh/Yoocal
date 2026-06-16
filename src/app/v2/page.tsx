@@ -12,6 +12,7 @@ const CITY_NAMES: Record<string, string> = {
   heber: 'Heber Valley, UT',
   jackson: 'Jackson Hole, WY',
   elkhartlake: 'Elkhart Lake, WI',
+  greenlake: 'Green Lake, WI',
 }
 
 const CITY_FILES: Record<string, string> = {
@@ -19,6 +20,7 @@ const CITY_FILES: Record<string, string> = {
   heber: '/events-heber.json',
   jackson: '/events-jackson.json',
   elkhartlake: '/events-elkhartlake.json',
+  greenlake: '/events-greenlake.json',
 }
 
 export default function V2Page() {

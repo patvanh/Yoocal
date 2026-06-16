@@ -10,7 +10,7 @@
  *                undefined → shows only "About" (no city-specific links)
  */
 
-type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson";
+type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson" | "greenlake";
 type ActiveKey = "about" | "weekend" | "free" | "concerts" | "month" | "venues" | "business" | null;
 
 export default function SiteNav({
@@ -28,7 +28,9 @@ export default function SiteNav({
         ? "/about/elkhart-lake"
         : cityKey === "heber"
           ? "/about/heber"
-          : "/about";
+          : cityKey === "greenlake"
+            ? "/about/green-lake"
+            : "/about";
   const aboutLabel =
     cityKey === "parkcity"
       ? "About Park City"
@@ -36,9 +38,11 @@ export default function SiteNav({
         ? "About Elkhart Lake"
         : cityKey === "heber"
           ? "About Heber"
-          : "About";
+          : cityKey === "greenlake"
+            ? "About Green Lake"
+            : "About";
 
-  const KEY_TO_SLUG: Record<string,string> = {parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole"};
+  const KEY_TO_SLUG: Record<string,string> = {parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole",greenlake:"green-lake"};
   const weekendHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/this-weekend` : "/this-weekend";
   const freeHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/free-events` : "/park-city/free-events";
   const concertsHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/concerts` : "/park-city/concerts";

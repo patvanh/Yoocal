@@ -77,7 +77,7 @@ export type YoocalEvent = {
   [key: string]: unknown;
 };
 
-export type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson";
+export type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson" | "greenlake";
 
 export const CITY_CONFIG: Record<
   CityKey,
@@ -102,6 +102,11 @@ export const CITY_CONFIG: Record<
     label: "Jackson Hole",
     emoji: "",
     jsonFile: "events-jackson.json",
+  },
+  greenlake: {
+    label: "Green Lake",
+    emoji: "",
+    jsonFile: "events-greenlake.json",
   },
 };
 
