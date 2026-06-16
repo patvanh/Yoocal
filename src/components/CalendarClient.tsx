@@ -1482,7 +1482,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           directly on the hero photo. position+zIndex stay so the results
           dropdown still paints above the event cards below. */}
       <div style={{
-        position: 'relative', zIndex: 1000, marginBottom: 18,
+        position: 'relative', zIndex: 100, marginBottom: 18,
       }}>
         <div style={{ position: 'relative', margin: '0 auto 16px', maxWidth: 560 }}>
           <input

@@ -129,7 +129,7 @@ export default function SiteNav({
           top: 0;
           left: 0;
           right: 0;
-          z-index: 100;
+          z-index: 1000;
           display: flex;
           align-items: center;
           justify-content: space-between;
