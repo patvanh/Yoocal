@@ -1348,9 +1348,13 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     // dayFilter === 'today' keeps rangeStart = rangeEnd = todayStr.
 
     const richness = (e: any) => (e.categories?.length || 0) + (e.hook ? 2 : 0)
-    const QUALITY_BAR = ({ parkcity: 2, jackson: 2, heber: 1, elkhartlake: 1 } as Record<string, number>)[cityKey] ?? 2  // multiple categories, or a hook — a genuine standout
+    const QUALITY_BAR = ({ parkcity: 2, jackson: 2, heber: 1, elkhartlake: 1, greenlake: 1 } as Record<string, number>)[cityKey] ?? 2  // multiple categories, or a hook — a genuine standout
 
-    const windowEvents = events.filter((e: any) => occursInRange(e, rangeStart, rangeEnd) && !!e.image_url && /^https?:\/\//.test(e.image_url))
+    const FEATURED_RADIUS = 10
+    const windowEvents = events.filter((e: any) =>
+      occursInRange(e, rangeStart, rangeEnd)
+      && !!e.image_url && /^https?:\/\//.test(e.image_url)
+      && (typeof e._distance_mi !== 'number' || e._distance_mi <= FEATURED_RADIUS))
 
     // Cap scales with how busy the window is: a quiet day shouldn't fill the
     // strip, a packed window can show more. This is a MAXIMUM — we still only
