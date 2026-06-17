@@ -159,8 +159,19 @@ function matchesQuery(e: V2YocEvent, qLower: string): boolean {
 function isFreeEvent(e: V2YocEvent): boolean {
   if (e.is_free === true) return true
   if (e.is_free === false) return false
-  const text = `${e.title || ''} ${e.description || ''} ${e.price || ''}`.toLowerCase()
-  return /\bfree\b/.test(text) || /\$0\b/.test(text) || /\bno charge\b/.test(text) || /\bno cost\b/.test(text)
+  // is_free unknown: infer carefully. A real price ALWAYS wins (overrides any
+  // stray "free" wording). A bare "free" in the description is unreliable —
+  // wellness/yoga copy is full of "free your mind", "stress-free",
+  // "judgment-free" — so we do NOT match it. Only an explicit free price field,
+  // a "free" in the TITLE, or a tight free phrase counts.
+  const price = (e.price || '').trim().toLowerCase()
+  if (['free', '$0', '0', 'no charge', 'no cost', 'free admission', 'free entry'].includes(price)) return true
+  if (/\$|\d/.test(price)) return false
+  if (/\bfree\b/.test((e.title || '').toLowerCase())) return true
+  const desc = (e.description || '').toLowerCase()
+  if (/\bfree (admission|entry|event|to attend|and open|to the public)\b/.test(desc)) return true
+  if (/\bno (charge|cost|admission fee)\b/.test(desc)) return true
+  return false
 }
 
 type ChipId = 'weekend' | 'today' | 'free' | 'pickdate' | 'tomorrow' | 'next7' | 'music' | 'outdoors' | 'food' | 'family' | 'arts' | 'sports' | 'kids' | 'wellness' | 'education' | 'festivals'
@@ -453,13 +464,20 @@ function V2FeaturedCard({ event, onClick, viewedDay }: { event: V2YocEvent; onCl
       cursor: 'pointer', padding: 0, fontFamily: "'DM Sans', sans-serif",
       boxShadow: '0 2px 12px rgba(26,24,48,0.06)',
     }}>
-      <div style={{ height: 136, position: 'relative',
-        background: hasImg ? `center/cover no-repeat url(${event.image_url})` : st.grad }}>
-        <span style={{ position: 'absolute', top: 11, left: 11, background: 'rgba(26,24,48,0.82)',
-          color: '#ffd27a', fontSize: 10, fontWeight: 700, padding: '5px 10px', borderRadius: 100,
-          letterSpacing: 0.3 }}>★ Featured</span>
-      </div>
+      {hasImg && (
+        <div style={{ height: 136, position: 'relative',
+          background: `center/cover no-repeat url(${event.image_url})` }}>
+          <span style={{ position: 'absolute', top: 11, left: 11, background: 'rgba(26,24,48,0.82)',
+            color: '#ffd27a', fontSize: 10, fontWeight: 700, padding: '5px 10px', borderRadius: 100,
+            letterSpacing: 0.3 }}>★ Featured</span>
+        </div>
+      )}
       <div style={{ padding: '12px 14px 14px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+        {!hasImg && (
+          <span style={{ alignSelf: 'flex-start', marginBottom: 10, background: 'rgba(26,24,48,0.82)',
+            color: '#ffd27a', fontSize: 10, fontWeight: 700, padding: '5px 10px', borderRadius: 100,
+            letterSpacing: 0.3 }}>★ Featured</span>
+        )}
         <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
           <div style={{ flexShrink: 0, width: 48, textAlign: 'center', background: '#f4f3f9',
             borderRadius: 10, padding: '7px 0 8px', lineHeight: 1 }}>
@@ -576,7 +594,7 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
             </div>
           )}
           <div style={{ display: 'flex', gap: 4, flexShrink: 0 }}>
-            {(event.categories || []).slice(0, 2).map(c => <V2CategoryPill key={c} name={c} role="category" />)}
+            {((event.filter_categories && event.filter_categories.length ? event.filter_categories : (event.categories || [])).slice(0, 2)).map(c => <V2CategoryPill key={c} name={c} role="category" />)}
           </div>
         </div>
       </div>
@@ -888,6 +906,15 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   // createPortal -> document.body, which doesn't exist during SSR).
   const [mounted, setMounted] = useState(false)
   useEffect(() => { setMounted(true) }, [])
+  // Track narrow viewports so the header can stack vertically on mobile
+  // (the 3-column desktop layout crushes the title into 4 lines on a phone).
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 640)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   const dropdownRef = useRef<HTMLDivElement | null>(null)
   useEffect(() => {
@@ -1347,7 +1374,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     }
     // dayFilter === 'today' keeps rangeStart = rangeEnd = todayStr.
 
-    const richness = (e: any) => (e.categories?.length || 0) + (e.hook ? 2 : 0)
+    const richness = (e: any) => ((e.filter_categories?.length || e.categories?.length || 0)) + (e.hook ? 2 : 0)
     const QUALITY_BAR = ({ parkcity: 2, jackson: 2, heber: 1, elkhartlake: 1, greenlake: 1 } as Record<string, number>)[cityKey] ?? 2  // multiple categories, or a hook — a genuine standout
 
     // Green Lake: chamber/VGL events almost never carry images, so the
@@ -1357,10 +1384,11 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     // support groups, board/committee meetings). No image required — the card's
     // category-gradient fallback handles display.
     if (cityKey === 'greenlake') {
-      const NOISE = /\b(AA and|Al-Anon|support group|board meeting|committee|caregiver|staff meeting|book club|narcotics anonymous|overeaters|grief)\b/i
+      const NOISE = /\b(AA and|Al-Anon|support group|board meeting|committee|caregiver|staff meeting|book club|narcotics anonymous|overeaters|grief|CPR|first aid|blood drive|class|workshop|training|meeting|orientation|tutoring|office hours)\b/i
       const pool = events
         .filter((e: any) => occursInRange(e, rangeStart, rangeEnd))
         .filter((e: any) => /chamber\.visitgreenlake\.com/.test(e.link || ''))
+        .filter((e: any) => typeof e._distance_mi !== 'number' || e._distance_mi <= 10)
         .filter((e: any) => !NOISE.test(e.title || ''))
         .sort((a: any, b: any) => (a.title || '').localeCompare(b.title || ''))
       if (!pool.length) return []
@@ -1478,7 +1506,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       start_time: ev.start_time, end_time: ev.end_time,
       location: ev.venue_name || ev.location,
       description: ev.description, link: ev.link, source: ev.source,
-      is_free: ev.is_free, price: ev.price, categories: ev.categories,
+      is_free: ev.is_free, price: ev.price, categories: (ev.filter_categories && ev.filter_categories.length ? ev.filter_categories : ev.categories),
       image_url: ev.image_url,
     })
   }
@@ -1790,13 +1818,17 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         </div>
       </div>
       <div style={{
-        // 3-column grid (1fr auto 1fr) so the date label is centered on the
-        // page regardless of the side items' widths. space-between left it
-        // off-center because "Today in …" and the event count differ in width.
-        display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center',
-        gap: 12, margin: '4px 0 18px',
+        // Desktop: 3-column grid (1fr auto 1fr) centers the date label
+        // regardless of side widths. Mobile: stack vertically + center so the
+        // title doesn't wrap to 4 lines and eat the screen.
+        display: isMobile ? 'flex' : 'grid',
+        flexDirection: isMobile ? 'column' : undefined,
+        gridTemplateColumns: isMobile ? undefined : '1fr auto 1fr',
+        alignItems: 'center',
+        gap: isMobile ? 8 : 12, margin: '4px 0 18px',
+        textAlign: isMobile ? 'center' : undefined,
       }}>
-        <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: 24, color: '#fff', justifySelf: 'start' }}>Today in {cityLabel}</div>
+        <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: isMobile ? 19 : 24, color: '#fff', justifySelf: isMobile ? 'center' : 'start' }}>Today in {cityLabel}</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, justifyContent: 'center', justifySelf: 'center' }}>
           <button onClick={shiftDay(-1)} style={{
             background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)',
@@ -1804,7 +1836,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             fontSize: 18, cursor: 'pointer', lineHeight: 1, flexShrink: 0,
           }} title="Previous day">‹</button>
           <div style={{
-            fontSize: 22, fontWeight: 600, color: '#fff',
+            fontSize: isMobile ? 16 : 22, fontWeight: 600, color: '#fff',
             fontFamily: "'DM Serif Display', serif", textAlign: 'center',
           }}>
             {dateRangeLabel}
@@ -1816,8 +1848,8 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           }} title="Next day">›</button>
         </div>
         <div style={{
-          fontFamily: "'DM Serif Display', serif", fontSize: 24, color: '#fff',
-          whiteSpace: 'nowrap', justifySelf: 'end',
+          fontFamily: "'DM Serif Display', serif", fontSize: isMobile ? 17 : 24, color: '#fff',
+          whiteSpace: 'nowrap', justifySelf: isMobile ? 'center' : 'end',
         }}>
           {loading ? '' : `${filteredEvents.length} event${filteredEvents.length !== 1 ? 's' : ''}`}
         </div>
@@ -1839,7 +1871,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       {featuredEvents.length > 0 && (
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(265px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(265px, 340px))',
           gap: 18,
           alignItems: 'stretch',
           margin: '0 0 28px',
