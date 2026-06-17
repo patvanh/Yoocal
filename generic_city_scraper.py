@@ -35,7 +35,12 @@ import json
 import math
 import os
 import re
-from datetime import date
+from datetime import date, datetime, timezone, timedelta
+try:
+    from zoneinfo import ZoneInfo
+    _HAS_ZONEINFO = True
+except ImportError:
+    _HAS_ZONEINFO = False
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -119,6 +124,55 @@ def _domain(url):
 # ---------------------------------------------------------------------------
 # Extraction: route a source to the best method, cascade on empty
 # ---------------------------------------------------------------------------
+def _local_tz_for_lng(lng):
+    """Derive a US timezone from longitude. Boundaries approximate but exact for
+    all current cities (Central ~-88, Mountain ~-110/-111; the real Central/
+    Mountain line runs ~-102 to -104). Falls back to Mountain."""
+    try:
+        lng = float(lng)
+    except (ValueError, TypeError):
+        lng = -100.0
+    if lng >= -87.5:
+        name = "America/New_York"
+    elif lng >= -102.0:
+        name = "America/Chicago"
+    elif lng >= -114.5:
+        name = "America/Denver"
+    else:
+        name = "America/Los_Angeles"
+    if _HAS_ZONEINFO:
+        try:
+            return ZoneInfo(name)
+        except Exception:
+            pass
+    _off = {"America/New_York": -4, "America/Chicago": -5,
+            "America/Denver": -6, "America/Los_Angeles": -7}
+    return timezone(timedelta(hours=_off.get(name, -6)))
+
+
+def _local_date_time(iso, lng):
+    """Parse an ISO datetime and return (date_str, time_str) in LOCAL time.
+    If the input is UTC-marked (Z or +00:00), convert to the city's zone
+    (from longitude). Non-UTC inputs are treated as already-local and pass
+    through unshifted. Returns (date_or_None, time_or_None)."""
+    import re as _r
+    if not iso:
+        return None, None
+    txt = str(iso).strip()
+    is_utc = txt.endswith("Z") or "+00:00" in txt
+    m = _r.match(r"(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})", txt)
+    if not m:
+        dm = _r.match(r"(\d{4}-\d{2}-\d{2})", txt)
+        return (dm.group(1) if dm else None), None
+    yr, mo, dy, hh, mn = (int(x) for x in m.groups())
+    if is_utc:
+        dt = datetime(yr, mo, dy, hh, mn, tzinfo=timezone.utc).astimezone(_local_tz_for_lng(lng))
+    else:
+        dt = datetime(yr, mo, dy, hh, mn)
+    ap = "AM" if dt.hour < 12 else "PM"
+    return dt.strftime("%Y-%m-%d"), "%d:%02d %s" % (dt.hour % 12 or 12, dt.minute, ap)
+
+
 def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=None):
     """Free fallback: build a FULL event from schema.org MICRODATA on a detail
     page whose JSON-LD lacks an Event (ChamberMaster/GrowthZone pattern).
@@ -158,22 +212,14 @@ def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=
     if not name:
         return None
 
-    def _date_part(iso):
-        m = _md_re.match(r"(\d{4}-\d{2}-\d{2})", iso or "")
-        return m.group(1) if m else None
-
-    def _time_part(iso):
-        m = _md_re.search(r"T(\d{2}):(\d{2})", iso or "")
-        if not m:
-            return None
-        h, mn = int(m.group(1)), int(m.group(2))
-        ap = "AM" if h < 12 else "PM"
-        return "%d:%02d %s" % (h % 12 or 12, mn, ap)
-
-    date = _date_part(start)
+    # Timezone-aware: ChamberMaster/microdata sources emit UTC (Z-suffixed)
+    # datetimes. Convert to the city's local zone (from lng) before splitting
+    # into date + time, so times are correct and late-evening UTC events don't
+    # roll onto the wrong local day. Local-time inputs pass through unshifted.
+    date, _start_time = _local_date_time(start, lng)
     if not date:
         return None
-    end_date = _date_part(end)
+    end_date, _end_time = _local_date_time(end, lng)
 
     # Venue: itemprop="location" is a Place; grab the first nested itemprop="name".
     venue = None
@@ -198,8 +244,8 @@ def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=
     ev = {
         "title": name,
         "date": date,
-        "start_time": _time_part(start),
-        "end_time": _time_part(end),
+        "start_time": _start_time,
+        "end_time": _end_time,
         "link": url,                       # the detail-page URL (correct event link)
         "source": source_name,
         "lat": lat,
