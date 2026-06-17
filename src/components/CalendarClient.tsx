@@ -1350,6 +1350,25 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     const richness = (e: any) => (e.categories?.length || 0) + (e.hook ? 2 : 0)
     const QUALITY_BAR = ({ parkcity: 2, jackson: 2, heber: 1, elkhartlake: 1, greenlake: 1 } as Record<string, number>)[cityKey] ?? 2  // multiple categories, or a hook — a genuine standout
 
+    // Green Lake: chamber/VGL events almost never carry images, so the
+    // image-gated logic below yields an empty strip. Instead feature ONE genuine
+    // VGL public event per day, rotated deterministically by day-of-year (stable
+    // within a day, rotates daily). Excludes non-public noise (recovery meetings,
+    // support groups, board/committee meetings). No image required — the card's
+    // category-gradient fallback handles display.
+    if (cityKey === 'greenlake') {
+      const NOISE = /\b(AA and|Al-Anon|support group|board meeting|committee|caregiver|staff meeting|book club|narcotics anonymous|overeaters|grief)\b/i
+      const pool = events
+        .filter((e: any) => occursInRange(e, rangeStart, rangeEnd))
+        .filter((e: any) => /chamber\.visitgreenlake\.com/.test(e.link || ''))
+        .filter((e: any) => !NOISE.test(e.title || ''))
+        .sort((a: any, b: any) => (a.title || '').localeCompare(b.title || ''))
+      if (!pool.length) return []
+      const _start = new Date(today.getFullYear(), 0, 0)
+      const _doy = Math.floor((today.getTime() - _start.getTime()) / 86400000)
+      return [pool[_doy % pool.length]]
+    }
+
     const FEATURED_RADIUS = 10
     const windowEvents = events.filter((e: any) =>
       occursInRange(e, rangeStart, rangeEnd)

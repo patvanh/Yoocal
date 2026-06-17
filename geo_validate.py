@@ -96,7 +96,15 @@ _FAR_TOWN_RE = _re.compile(
     r"cottonwood heights|millcreek|holladay|taylorsville|magna|"
     r"huntsville|snowbasin|eden, ut|morgan, ut|"
     r"big cottonwood|little cottonwood|brighton|snowbird|alta|solitude|"
-    r"bears ears|uinta|beaver|hawaii|nevada|idaho|wyoming|colorado)\b", _re.I)
+    r"bears ears|uinta|beaver|hawaii|nevada|idaho|wyoming|colorado|"
+    # Far Wisconsin towns (for the Green Lake / Elkhart Lake views). Local towns
+    # — green lake, ripon, princeton, berlin, markesan, oshkosh, fond du lac —
+    # are deliberately NOT listed so they pass as local.
+    r"madison|milwaukee|spring green|mercer|platteville|greenbush|lake geneva|"
+    r"stevens point|appleton|green bay|wausau|eau claire|la crosse|kenosha|"
+    r"racine|manitowoc|janesville|waukesha|west allis|wauwatosa|sun prairie|"
+    r"capitol square|wisconsin dells|baraboo|portage|beaver dam|watertown|"
+    r"stoughton|verona|middleton|sheboygan falls|plymouth, wi)\b", _re.I)
 
 
 def _text_location_ok(e, allow_tokens):
@@ -178,6 +186,47 @@ def _place_query(e, city):
     return None
 
 
+
+def _address_city_far(e, city, target_lat, target_lng, radius_mi, cache):
+    """Most reliable far-location check: pull the real city/town from the event's
+    ADDRESS (or location) field, geocode THAT city, and reject if it's beyond the
+    radius. Cities geocode reliably (unlike venue names), and the address field
+    carries the true town even when the scraper appended the target city elsewhere.
+    Returns True (drop), False (keep/local), or None (couldn't determine)."""
+    import html as _h
+    addr = _h.unescape(_h.unescape(str(e.get("address") or "")))
+    loc = _h.unescape(_h.unescape(str(e.get("location") or "")))
+    txt = (addr or loc).strip()
+    if not txt:
+        return None
+    city_low = city.lower().strip()
+    txt = _re.sub(r"[,\s]+" + _re.escape(city_low) + r"\s*$", "", txt, flags=_re.I).strip(" ,")
+    parts = [p.strip() for p in txt.split(",") if p.strip()]
+    if not parts:
+        return None
+    while parts and _re.fullmatch(r"(wisconsin|wi|utah|ut|wyoming|wy|\d{5}(?:-\d{4})?)", parts[-1], _re.I):
+        parts.pop()
+    if not parts:
+        return None
+    cand = parts[-1]
+    if _re.search(r"\d|\b(st|rd|ave|blvd|hwy|dr|street|road|lane|ln|ct|court|drive|way|circle|cir)\b", cand, _re.I):
+        cand = parts[0] if (parts and not _re.search(r"\d", parts[0])) else None
+    if not cand or len(cand) < 3:
+        return None
+    _name_tokens = [t for t in _re.split(r"[ ,]+", city_low)
+                    if len(t) > 2 and t not in ("wisconsin", "utah", "wyoming",
+                                                "city", "the", "wi", "ut", "wy")]
+    if _name_tokens:
+        _phrase = r"\b" + r"\s+".join(_re.escape(t) for t in _name_tokens) + r"\b"
+        if _re.search(_phrase, cand.lower()):
+            return False
+    geo = geocode(cand + ", WI", cache)
+    if not geo:
+        return None
+    d = _haversine_mi(target_lat, target_lng, geo[0], geo[1])
+    return d > radius_mi
+
+
 def geo_validate(events, city, lat, lng, radius_mi, verbose=True):
     """Geocode coordinate-less events, then drop those outside the radius or
     clearly in another town. Returns kept list."""
@@ -191,6 +240,15 @@ def geo_validate(events, city, lat, lng, radius_mi, verbose=True):
         # Catches events whose text names a far city but whose coordinates were
         # mis-geocoded into the radius (e.g. SLC concerts from aggregators).
         if _named_city_far(e, city, lat, lng, radius_mi, cache):
+            n_dropped_named += 1
+            continue
+
+        # Address-city far check: the most reliable signal. Geocode the real city
+        # from the address field and drop if beyond radius (catches statewide
+        # aggregators like WPR whose events carry a true far-town address but get
+        # stamped at city-center).
+        _acf = _address_city_far(e, city, lat, lng, radius_mi, cache)
+        if _acf is True:
             n_dropped_named += 1
             continue
 
