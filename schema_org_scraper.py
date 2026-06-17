@@ -148,6 +148,7 @@ def scrape_schema_org_events(
     default_lng=None,
     default_categories=None,
     default_city=None,
+    is_aggregator=False,
     max_events=200,
     timeout=20,
 ):
@@ -203,6 +204,7 @@ def scrape_schema_org_events(
             default_lng=default_lng,
             default_categories=default_categories or ["Event"],
             default_city=default_city,
+            is_aggregator=is_aggregator,
         )
         if not parsed:
             dropped_unparseable += 1
@@ -293,6 +295,7 @@ def scrape_schema_org_sources(sources_config):
             default_lng=cfg.get("default_lng"),
             default_categories=cfg.get("default_categories"),
             default_city=cfg.get("default_city"),
+            is_aggregator=cfg.get("is_aggregator", False),
         )
         all_events.extend(events)
     return all_events
@@ -523,8 +526,34 @@ def _normalize_time(s):
     return s if re.match(r"^\d{1,2}:\d{2} [AP]M$", s) else None
 
 
+# Known statewide/national AGGREGATOR hosts. Events from these sources that
+# have no venue/address must NOT be stamped with the target city (doing so
+# fakes a local location -> the Platteville-class leak). Such events fall
+# through to 'Location TBD' and geo_validate holds them in the review queue
+# (held, never deleted). Single-source/local hosts are absent here on purpose
+# so they keep the city-stamp fallback.
+_AGGREGATOR_HOSTS = frozenset({
+    "wpr.org",
+    "jambase.com",
+    "expedia.com",
+    "yelp.com",
+    "localharvest.org",
+})
+
+
+def is_aggregator_source(url):
+    """True if the URL's host is (or is a subdomain of) a known aggregator."""
+    try:
+        host = urlparse(url).netloc.lower().split(":")[0]
+    except Exception:
+        return False
+    if host.startswith("www."):
+        host = host[4:]
+    return any(host == h or host.endswith("." + h) for h in _AGGREGATOR_HOSTS)
+
+
 def _parse_event(raw, source_name, source_url, default_lat, default_lng,
-                 default_categories, default_city):
+                 default_categories, default_city, is_aggregator=False):
     """Convert one Schema.org Event dict to a yoocal event dict."""
     try:
         # Title
@@ -581,9 +610,12 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
             location = f"{venue_name}, {default_city}" if default_city else venue_name
         elif venue_address:
             location = venue_address
-        elif default_city:
+        elif default_city and not is_aggregator:
             location = default_city
         else:
+            # Aggregator events with no venue/address are NOT stamped with the
+            # target city (that faked a local location -> Platteville-class leak).
+            # Left as TBD so geo_validate holds them in the review queue.
             location = "Location TBD"
 
         # Description — decode HTML entities, strip tags

@@ -187,7 +187,7 @@ def _local_date_time(iso, lng):
     return dt.strftime("%Y-%m-%d"), "%d:%02d %s" % (dt.hour % 12 or 12, dt.minute, ap)
 
 
-def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=None):
+def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=None, is_aggregator=False):
     """Free fallback: build a FULL event from schema.org MICRODATA on a detail
     page whose JSON-LD lacks an Event (ChamberMaster/GrowthZone pattern).
     Captures title, dates/times, venue (nested location>name), description
@@ -264,7 +264,9 @@ def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=
         "source": source_name,
         "lat": lat,
         "lng": lng,
-        "location": venue or city,         # real venue when present, city fallback
+        # real venue when present; for aggregators with no venue, DO NOT stamp
+        # the city (Platteville-class leak) -> leave TBD so geo_validate holds it.
+        "location": venue or ("Location TBD" if is_aggregator else city),
         "venue_name": venue or "",
         "description": description or "",
     }
@@ -707,9 +709,11 @@ def _extract_one(url, source_name, city, lat, lng, categories=None, verbose=True
     # 1. schema.org / JSON-LD on the page
     if scrape_schema_org_events:
         try:
+            from schema_org_scraper import is_aggregator_source as _is_agg_src
             evs = scrape_schema_org_events(
                 url, source_name=source_name, default_lat=lat, default_lng=lng,
-                default_categories=categories or [], default_city=city) or []
+                default_categories=categories or [], default_city=city,
+                is_aggregator=_is_agg_src(url)) or []
             if evs:
                 found += evs
                 if verbose:
@@ -726,11 +730,13 @@ def _extract_one(url, source_name, city, lat, lng, categories=None, verbose=True
             raw = _extract_schema_events(html) or []
             if raw:
                 # these are schema blocks; reuse the same parser the module uses
-                from schema_org_scraper import _parse_event
+                from schema_org_scraper import _parse_event, is_aggregator_source
+                _is_agg = is_aggregator_source(url)
                 for blk in raw:
                     try:
                         ev = _parse_event(blk, source_name, url, lat, lng,
-                                          categories or [], city)
+                                          categories or [], city,
+                                          is_aggregator=_is_agg)
                         if ev:
                             found.append(ev)
                     except Exception:
@@ -753,7 +759,9 @@ def _extract_one(url, source_name, city, lat, lng, categories=None, verbose=True
             if not _md_html:
                 from schema_org_scraper import _fetch as _sos_fetch2
                 _md_html = _sos_fetch2(url)
-            md_ev = _extract_microdata_event(_md_html, url, source_name, city, lat, lng, categories or [])
+            from schema_org_scraper import is_aggregator_source as _is_agg_md
+            md_ev = _extract_microdata_event(_md_html, url, source_name, city, lat, lng, categories or [],
+                                             is_aggregator=_is_agg_md(url))
             if md_ev:
                 found.append(md_ev)
                 if verbose:
