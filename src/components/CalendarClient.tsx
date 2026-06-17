@@ -5,7 +5,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useSearchParams } from 'next/navigation'
 import EventModal, { type EventModalData } from './EventModal'
-import { Music, UtensilsCrossed, Drama, Trees, Trophy, Users } from 'lucide-react'
+import { Music, UtensilsCrossed, Drama, Trees, Trophy, Users, MoreHorizontal, CalendarDays } from 'lucide-react'
+import MoreTile from '@/components/MoreTile'
 
 // ===== V2 EVENTS WIDGET =====
 // Modern chips + cards UI with React state. Replaces the imperative DOM
@@ -1761,127 +1762,78 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           )}
           
         </div>
-        {/* Category tiles: surfaced, tappable category selection (mockup layout).
-            Each toggles the EXACT activeCategories value used by the filter at
-            line ~1078. Same shared state as the When/Free/More row below. */}
+        {/* Filter panel (mockup layout): one white card with a row of category
+            tiles on top and flat quick-filter pills below. visibility (not
+            display:none) keeps height reserved when the search dropdown is open. */}
         <div style={{
           visibility: dropdownOpen ? 'hidden' : 'visible',
           background: '#fff', borderRadius: 16, padding: '12px 12px',
           maxWidth: 520, marginBottom: 12, marginLeft: 'auto', marginRight: 'auto',
           boxShadow: '0 6px 24px rgba(0,0,0,0.18)',
-          display: 'flex', gap: 6, justifyContent: 'center',
+          display: 'flex', flexDirection: 'column', gap: 10,
         }}>
-          {V2_CATEGORY_TILES.map(({ label, value, Icon }) => {
-            const on = activeCategories.has(value)
+          <div style={{ display: 'flex', gap: 6, justifyContent: 'center' }}>
+            {V2_CATEGORY_TILES.map(({ label, value, Icon }) => {
+              const on = activeCategories.has(value)
+              return (
+                <button key={value} type="button"
+                  onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has(value)) n.delete(value); else n.add(value); return n })}
+                  style={{
+                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4,
+                    flex: '1 1 0', minWidth: 0, maxWidth: 76, padding: '9px 2px', borderRadius: 12, cursor: 'pointer',
+                    fontFamily: 'inherit', fontSize: 10.5, fontWeight: 600, lineHeight: 1.15, textAlign: 'center',
+                    color: on ? '#fff' : '#3a3550',
+                    background: on ? '#7c5cff' : 'transparent',
+                    border: on ? '1px solid #7c5cff' : '1px solid rgba(26,24,48,0.12)',
+                    boxShadow: on ? '0 4px 14px rgba(124,92,255,0.35)' : 'none',
+                    transition: 'background 0.15s, color 0.15s',
+                  }}>
+                  <Icon size={18} strokeWidth={1.75} />
+                  <span>{label}</span>
+                </button>
+              )
+            })}
+            {(() => {
+              const overflow = V2_ALL_CATEGORIES.filter(c => !V2_CATEGORY_TILES.some(t => t.value === c))
+              const anyOn = overflow.some(c => activeCategories.has(c))
+              return (
+                <MoreTile label="More" Icon={MoreHorizontal} active={anyOn}
+                  options={overflow.map(c => ({
+                    label: c,
+                    selected: activeCategories.has(c),
+                    onClick: () => setActiveCategories(prev => { const n = new Set(prev); if (n.has(c)) n.delete(c); else n.add(c); return n }),
+                  }))}
+                />
+              )
+            })()}
+          </div>
+          {(() => {
+            const pill = (sel: boolean) => ({
+              padding: '6px 14px', borderRadius: 999, cursor: 'pointer',
+              fontFamily: 'inherit', fontSize: 12.5, fontWeight: 600, whiteSpace: 'nowrap' as const,
+              color: sel ? '#fff' : '#3a3550',
+              background: sel ? '#7c5cff' : 'transparent',
+              border: sel ? '1px solid #7c5cff' : '1px solid rgba(26,24,48,0.12)',
+              transition: 'background 0.15s, color 0.15s',
+            })
             return (
-              <button key={value} type="button"
-                onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has(value)) n.delete(value); else n.add(value); return n })}
-                style={{
-                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4,
-                  flex: '1 1 0', minWidth: 0, maxWidth: 76, padding: '9px 2px', borderRadius: 12, cursor: 'pointer',
-                  fontFamily: 'inherit', fontSize: 10.5, fontWeight: 600, lineHeight: 1.15, textAlign: 'center',
-                  color: on ? '#fff' : '#3a3550',
-                  background: on ? '#7c5cff' : 'transparent',
-                  border: on ? '1px solid #7c5cff' : '1px solid rgba(26,24,48,0.12)',
-                  boxShadow: on ? '0 4px 14px rgba(124,92,255,0.35)' : 'none',
-                  transition: 'background 0.15s, color 0.15s',
-                }}>
-                <Icon size={18} strokeWidth={1.75} />
-                <span>{label}</span>
-              </button>
+              <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+                <button type="button" style={pill(freeOnly)} onClick={() => setFreeOnly(v => !v)}>Free</button>
+                <button type="button" style={pill(dayFilter === 'today')} onClick={() => { setPickedEndDate(''); setDayFilter('today') }}>Today</button>
+                <button type="button" style={pill(dayFilter === 'weekend')} onClick={() => { setPickedEndDate(''); setDayFilter('weekend') }}>This Weekend</button>
+                <MoreTile label="More" Icon={CalendarDays}
+                  active={['tomorrow','7days','all','pickdate'].includes(dayFilter)}
+                  options={[
+                    { label: 'Tomorrow', selected: dayFilter === 'tomorrow', onClick: () => { setPickedEndDate(''); setDayFilter('tomorrow') } },
+                    { label: 'Next 7 days', selected: dayFilter === '7days', onClick: () => { setPickedEndDate(''); setDayFilter('7days') } },
+                    { label: 'All upcoming', selected: dayFilter === 'all', onClick: () => { setPickedEndDate(''); setDayFilter('all') } },
+                  ]}
+                />
+              </div>
             )
-          })}
-        </div>
-        {/* Keep this row in the layout while the search dropdown is open so the
-            hero doesn't collapse on focus — hide it with visibility (which
-            reserves its height) instead of display:none (which removes it). */}
-        <div style={{ display: 'flex', visibility: dropdownOpen ? 'hidden' : 'visible', gap: 10, marginBottom: 12, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-          {/* Single date pill: From/To range picker, always visible.
-              Default From=To=today shows today first; editing either field
-              switches to pickdate mode and filters by the [From, To] range.
-              Today / All upcoming presets live in the popover. */}
-          <DateRangeDropdown
-            label={'When: ' + (dayFilter === 'pickdate' ? dateRangeLabel : (({all:'All upcoming',today:'Today · '+todayDow,tomorrow:'Tomorrow',weekend:'This weekend','7days':'Next 7 days'} as Record<string,string>)[dayFilter] || 'All upcoming'))}
-            from={pickedDate}
-            to={dayFilter === 'pickdate' ? pickedEndDate : ''}
-            onFrom={(v) => { setPickedDate(v); setDayFilter('pickdate') }}
-            onTo={(v) => { setPickedEndDate(v); setDayFilter('pickdate') }}
-            onToday={() => { setPickedDate(v2DateToStr(v2TodayMountain())); setPickedEndDate(''); setDayFilter('today') }}
-            onTomorrow={() => { setPickedEndDate(''); setDayFilter('tomorrow') }}
-            onWeekend={() => { setPickedEndDate(''); setDayFilter('weekend') }}
-            onNext7={() => { setPickedEndDate(''); setDayFilter('7days') }}
-            onAllUpcoming={() => { setPickedEndDate(''); setDayFilter('all') }}
-          />
-          {/* Categories now live in the tile row above; Vibe dropdown + the
-              Music/Food&Drink quick-chips were removed as redundant. Free stays
-              (it's a price filter, not a category), and More holds the overflow
-              categories that don't have a tile. */}
-          <V2Chip active={freeOnly} onClick={() => setFreeOnly(v => !v)}>Free</V2Chip>
-          {/* More: remaining category vibes in a dropdown popover (like the When
-              dropdown). Using a popover instead of inline pills means opening it
-              doesn't reflow the row and shift the hero. */}
-          <MultiFilterDropdown
-            label="More"
-            minWidth={0}
-            selected={new Set(Array.from(activeCategories).filter(c => !V2_CATEGORY_TILES.some(t => t.value === c)))}
-            options={V2_ALL_CATEGORIES.filter(c => !V2_CATEGORY_TILES.some(t => t.value === c)).map(cat => ({ value: cat, label: cat }))}
-            onToggle={(v) => setActiveCategories(prev => { const n = new Set(prev); if (n.has(v)) n.delete(v); else n.add(v); return n })}
-            onClear={() => setActiveCategories(prev => { const n = new Set(prev); for (const c of V2_ALL_CATEGORIES) if (!V2_CATEGORY_TILES.some(t => t.value === c)) n.delete(c); return n })}
-          />
-          {(dayFilter !== 'today' || timeFilter !== 'any' || activeCategories.size > 0 || freeOnly || searchQuery.trim()) && (
-            <button type="button"
-              onClick={() => {
-                setSearchQuery('')
-                setDayFilter('today')
-                setTimeFilter('any')
-                setActiveCategories(new Set())
-                setFreeOnly(false)
-                setPickedEndDate('')
-                setShowMoreFilters(false)
-              }}
-              style={{
-                background: 'rgba(26,24,48,0.5)',
-                color: '#fff',
-                border: '1px solid rgba(255,255,255,0.18)',
-                borderRadius: 999, padding: '7px 14px', fontSize: 13,
-                fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap',
-                fontFamily: 'inherit',
-              }}
-            >Clear</button>
-          )}
+          })()}
         </div>
       </div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 10, marginTop: 16, flexWrap: 'wrap' }}>
-          {/* City + radius pickers — reuse FilterDropdown so they match the
-              When/Vibe filter dropdowns exactly (custom popover, not a native
-              <select>). City navigates; radius drives the radius filter state. */}
-          <FilterDropdown
-            label={({ parkcity: 'Park City, UT', elkhartlake: 'Elkhart Lake, WI', heber: 'Heber Valley, UT', jackson: 'Jackson Hole, WY', greenlake: 'Green Lake, WI' } as Record<string, string>)[cityKeyProp || 'parkcity'] || 'Park City, UT'}
-            value={cityKeyProp || 'parkcity'}
-            options={[
-              { value: 'parkcity', label: 'Park City, UT' },
-              { value: 'elkhartlake', label: 'Elkhart Lake, WI' },
-              { value: 'heber', label: 'Heber Valley, UT' },
-              { value: 'jackson', label: 'Jackson Hole, WY' },
-              { value: 'greenlake', label: 'Green Lake, WI' },
-            ]}
-            onChange={(v) => {
-              const slug = ({ parkcity: 'park-city', elkhartlake: 'elkhart-lake', heber: 'heber', jackson: 'jackson-hole', greenlake: 'green-lake' } as Record<string, string>)[v]
-              if (slug) window.location.href = '/' + slug
-            }}
-          />
-          <FilterDropdown
-            label={`Within ${radius} mi`}
-            value={String(radius)}
-            options={[
-              { value: '5', label: 'Within 5 mi' },
-              { value: '10', label: 'Within 10 mi' },
-              { value: '25', label: 'Within 25 mi' },
-              { value: '50', label: 'Within 50 mi' },
-            ]}
-            onChange={(v) => applyRadius(Number(v))}
-          />
-        </div>
       </div>
       <div style={{
         // Desktop: 3-column grid (1fr auto 1fr) centers the date label
