@@ -42,6 +42,7 @@ export default function CitySearch({ placeholder, variant = "compact" }: Props) 
     elkhartlake: "elkhart-lake",
     heber: "heber",
     jackson: "jackson-hole",
+    greenlake: "green-lake",
   }
 
   function pickCity(key: string) {

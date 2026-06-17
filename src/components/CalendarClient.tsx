@@ -986,7 +986,36 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   // Effective end of the picked range: clamp to start when end is unset/invalid,
   // so a single-day pick keeps its current behavior.
   const pickedRangeEnd = (pickedEndDate && pickedEndDate >= pickedDate) ? pickedEndDate : pickedDate
+  // Radius ALWAYS initializes to 25 so server and client render identically
+  // (no hydration mismatch). The mount effect below reads the ?radius= URL
+  // param and corrects the value right after hydration — that's what makes
+  // radius survive refresh/share and stay drivable by the nav RadiusPicker.
   const [radius, setRadius] = useState<number>(25)
+  // Set radius + sync the URL (no navigation/reload) + notify the nav pill.
+  // Shared by the hero radius dropdown and the nav RadiusPicker so both stay
+  // in lockstep regardless of which one the user touches.
+  const applyRadius = (n: number) => {
+    setRadius(n)
+    if (typeof window !== 'undefined') {
+      const u = new URL(window.location.href)
+      u.searchParams.set('radius', String(n))
+      window.history.replaceState(null, '', u.toString())
+      window.dispatchEvent(new CustomEvent('yoocal:radius', { detail: n }))
+    }
+  }
+  // Listen for radius changes fired by the nav RadiusPicker (separate
+  // component, no shared parent) and sync local state. Also re-reads the URL
+  // param on mount to settle any SSR/client hydration difference.
+  useEffect(() => {
+    const onRadius = (e: Event) => {
+      const n = (e as CustomEvent).detail
+      if ([5, 10, 25, 50].includes(n)) setRadius(n)
+    }
+    window.addEventListener('yoocal:radius', onRadius)
+    const r = Number(new URLSearchParams(window.location.search).get('radius'))
+    if ([5, 10, 25, 50].includes(r)) setRadius(r)
+    return () => window.removeEventListener('yoocal:radius', onRadius)
+  }, [])
   const [locationMode, setLocationMode] = useState<'city' | 'mylocation' | 'zip'>('city')
   const [zipCode, setZipCode] = useState<string>('')
   const [userCoords, setUserCoords] = useState<{ lat: number; lng: number } | null>(null)
@@ -1850,7 +1879,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
               { value: '25', label: 'Within 25 mi' },
               { value: '50', label: 'Within 50 mi' },
             ]}
-            onChange={(v) => setRadius(Number(v))}
+            onChange={(v) => applyRadius(Number(v))}
           />
         </div>
       </div>

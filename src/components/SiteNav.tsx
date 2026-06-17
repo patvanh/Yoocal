@@ -10,6 +10,9 @@
  *                undefined → shows only "About" (no city-specific links)
  */
 
+import CityPicker from "@/components/CityPicker";
+import RadiusPicker from "@/components/RadiusPicker";
+
 type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson" | "greenlake";
 type ActiveKey = "about" | "weekend" | "free" | "concerts" | "month" | "venues" | "business" | null;
 
@@ -99,7 +102,6 @@ export default function SiteNav({
               </a>
             </>
           )}
-          <a href="/submit" className="yc-nav-secondary">Submit event</a>
           <a href="/#business">For businesses</a>
           <a
             href="https://forms.groupmail.info/subscribe/yoocal"
@@ -109,6 +111,14 @@ export default function SiteNav({
           >
             Get notified
           </a>
+        </div>
+        {/* Tight right-cluster: city + radius + Submit, grouped with a small
+            gap on the right (matches the mockup). Sits outside yc-nav-links so
+            its wide 32px gap doesn't spread these apart. */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          {cityKey && <CityPicker cityKey={cityKey} />}
+          {cityKey && <RadiusPicker />}
+          <a href="/submit" className="yc-nav-secondary">Submit event</a>
         </div>
       </nav>
 
@@ -172,16 +182,18 @@ export default function SiteNav({
         .yc-nav-links a.active {
           color: var(--purple);
         }
-        .yc-nav-links a.yc-nav-secondary {
+        a.yc-nav-secondary {
           background: transparent;
           border: 1.5px solid var(--purple);
           color: var(--purple) !important;
-          padding: 7px 16px;
+          padding: 5px 10px;
           border-radius: 100px;
-          font-size: 13px;
+          font-size: 11.5px;
           font-weight: 600;
+          white-space: nowrap;
+          text-decoration: none;
         }
-        .yc-nav-links a.yc-nav-secondary:hover {
+        a.yc-nav-secondary:hover {
           background: var(--purple-pale);
         }
         .yc-nav-links a.yc-nav-cta {
@@ -196,8 +208,11 @@ export default function SiteNav({
           background: var(--purple-light);
         }
         @media (max-width: 768px) {
-          .yc-nav { padding: 0 20px; }
-          .yc-nav-links a:not(.yc-nav-cta):not(.yc-nav-secondary) { display: none; }
+          .yc-nav { padding: 0 14px; }
+          /* Mobile nav matches the mockup: logo + city pill + Submit event only.
+             Hide every link except Submit event (Get notified + For businesses
+             drop off; the city pill is not a .yc-nav-links child so it stays). */
+          .yc-nav-links a:not(.yc-nav-secondary) { display: none; }
         }
       `}</style>
     </>
