@@ -1287,3 +1287,6 @@
 
   /* V2 search input placeholder color */
   .v2-search-input::placeholder { color: rgba(255,255,255,0.5); }
+  /* Hero pill sits on a white background -> dark placeholder for legibility.
+     Scoped with .on-light so CitySearch's dark-bg input keeps its white one. */
+  .v2-search-input.on-light::placeholder { color: #6b6880; }

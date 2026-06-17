@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useSearchParams } from 'next/navigation'
 import EventModal, { type EventModalData } from './EventModal'
+import { Music, UtensilsCrossed, Drama, Trees, Trophy, Users } from 'lucide-react'
 
 // ===== V2 EVENTS WIDGET =====
 // Modern chips + cards UI with React state. Replaces the imperative DOM
@@ -280,6 +281,17 @@ const V2_ALL_CATEGORIES = [
   'Running & Races', 'Family & Kids', 'Wellness', 'Education & Talks', 'Community',
 ]
 const V2_PRIMARY_CATEGORIES = ['Music', 'Food & Drink', 'Outdoor', 'Family']
+// Hero category tiles: display label + the EXACT filter_categories value that
+// drives activeCategories filtering (see line ~1078). 'Family' shows short but
+// filters on 'Family & Kids'. Icons from lucide-react.
+const V2_CATEGORY_TILES: Array<{ label: string; value: string; Icon: any }> = [
+  { label: 'Music',        value: 'Music',         Icon: Music },
+  { label: 'Food & Drink', value: 'Food & Drink',  Icon: UtensilsCrossed },
+  { label: 'Arts & Theater', value: 'Arts & Theater', Icon: Drama },
+  { label: 'Outdoors',     value: 'Outdoors',      Icon: Trees },
+  { label: 'Sports',       value: 'Sports',        Icon: Trophy },
+  { label: 'Family',       value: 'Family & Kids', Icon: Users },
+]
 
 const V2_CATEGORY_COLORS: Record<string, { bg: string; fg: string }> = {
   Music:          { bg: '#EEEDFE', fg: '#534AB7' },
@@ -1521,7 +1533,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         position: 'relative', overflow: 'visible',
         margin: '0 0 28px', padding: '96px 28px 40px',
         marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
-        background: "linear-gradient(180deg, rgba(26,24,48,0.5), rgba(26,24,48,0.8)), url('/hero.jpg') center/cover no-repeat",
+        background: "linear-gradient(180deg, rgba(26,24,48,0.35), rgba(26,24,48,0.62)), url('/hero.jpg') center/cover no-repeat",
       }}>
         <div style={{ textAlign: 'center', marginBottom: 22 }}>
           <h1 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 'clamp(44px, 6vw, 76px)', color: '#fff', lineHeight: 1.08, margin: 0 }}>
@@ -1552,13 +1564,14 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             }}
             onFocus={() => setDropdownOpen(true)}
             style={{
-              width: '100%', padding: '11px 18px', fontSize: 14,
-              border: '1px solid rgba(255,255,255,0.18)', borderRadius: 999,
-              color: '#fff', boxSizing: 'border-box',
-              background: 'rgba(255,255,255,0.06)',
+              width: '100%', padding: '14px 20px', fontSize: 15,
+              border: '1px solid rgba(0,0,0,0.06)', borderRadius: 999,
+              color: '#1a1830', boxSizing: 'border-box',
+              background: '#fff',
+              boxShadow: '0 6px 24px rgba(0,0,0,0.18)',
               outline: 'none',
             }}
-            className="v2-search-input"
+            className="v2-search-input on-light"
           />
           {dropdownOpen && (
             <div ref={dropdownRef} style={{
@@ -1719,6 +1732,37 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           )}
           
         </div>
+        {/* Category tiles: surfaced, tappable category selection (mockup layout).
+            Each toggles the EXACT activeCategories value used by the filter at
+            line ~1078. Same shared state as the When/Free/More row below. */}
+        <div style={{
+          visibility: dropdownOpen ? 'hidden' : 'visible',
+          background: '#fff', borderRadius: 16, padding: '12px 12px',
+          maxWidth: 520, marginBottom: 12, marginLeft: 'auto', marginRight: 'auto',
+          boxShadow: '0 6px 24px rgba(0,0,0,0.18)',
+          display: 'flex', gap: 6, justifyContent: 'center',
+        }}>
+          {V2_CATEGORY_TILES.map(({ label, value, Icon }) => {
+            const on = activeCategories.has(value)
+            return (
+              <button key={value} type="button"
+                onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has(value)) n.delete(value); else n.add(value); return n })}
+                style={{
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4,
+                  flex: '1 1 0', minWidth: 0, maxWidth: 76, padding: '9px 2px', borderRadius: 12, cursor: 'pointer',
+                  fontFamily: 'inherit', fontSize: 10.5, fontWeight: 600, lineHeight: 1.15, textAlign: 'center',
+                  color: on ? '#fff' : '#3a3550',
+                  background: on ? '#7c5cff' : 'transparent',
+                  border: on ? '1px solid #7c5cff' : '1px solid rgba(26,24,48,0.12)',
+                  boxShadow: on ? '0 4px 14px rgba(124,92,255,0.35)' : 'none',
+                  transition: 'background 0.15s, color 0.15s',
+                }}>
+                <Icon size={18} strokeWidth={1.75} />
+                <span>{label}</span>
+              </button>
+            )
+          })}
+        </div>
         {/* Keep this row in the layout while the search dropdown is open so the
             hero doesn't collapse on focus — hide it with visibility (which
             reserves its height) instead of display:none (which removes it). */}
@@ -1739,28 +1783,21 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             onNext7={() => { setPickedEndDate(''); setDayFilter('7days') }}
             onAllUpcoming={() => { setPickedEndDate(''); setDayFilter('all') }}
           />
-          <MultiFilterDropdown
-            label={'Vibe: ' + (activeCategories.size === 0 ? 'All categories' : activeCategories.size === 1 ? Array.from(activeCategories)[0] : activeCategories.size + ' selected')}
-            selected={activeCategories}
-            options={V2_ALL_CATEGORIES.map(cat => ({ value: cat, label: cat }))}
-            onToggle={(v) => setActiveCategories(prev => { const n = new Set(prev); if (n.has(v)) n.delete(v); else n.add(v); return n })}
-            onClear={() => setActiveCategories(new Set())}
-          />
-          {/* Quick pills: shortcuts to the most common filters. They drive the
-              same shared state as the dropdowns, so selections stay in sync. */}
+          {/* Categories now live in the tile row above; Vibe dropdown + the
+              Music/Food&Drink quick-chips were removed as redundant. Free stays
+              (it's a price filter, not a category), and More holds the overflow
+              categories that don't have a tile. */}
           <V2Chip active={freeOnly} onClick={() => setFreeOnly(v => !v)}>Free</V2Chip>
-          <V2Chip active={activeCategories.has('Music')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Music')) n.delete('Music'); else n.add('Music'); return n })}>Music</V2Chip>
-          <V2Chip active={activeCategories.has('Food & Drink')} onClick={() => setActiveCategories(prev => { const n = new Set(prev); if (n.has('Food & Drink')) n.delete('Food & Drink'); else n.add('Food & Drink'); return n })}>Food & Drink</V2Chip>
           {/* More: remaining category vibes in a dropdown popover (like the When
               dropdown). Using a popover instead of inline pills means opening it
               doesn't reflow the row and shift the hero. */}
           <MultiFilterDropdown
             label="More"
             minWidth={0}
-            selected={new Set(Array.from(activeCategories).filter(c => c !== 'Music' && c !== 'Food & Drink'))}
-            options={V2_ALL_CATEGORIES.filter(c => c !== 'Music' && c !== 'Food & Drink').map(cat => ({ value: cat, label: cat }))}
+            selected={new Set(Array.from(activeCategories).filter(c => !V2_CATEGORY_TILES.some(t => t.value === c)))}
+            options={V2_ALL_CATEGORIES.filter(c => !V2_CATEGORY_TILES.some(t => t.value === c)).map(cat => ({ value: cat, label: cat }))}
             onToggle={(v) => setActiveCategories(prev => { const n = new Set(prev); if (n.has(v)) n.delete(v); else n.add(v); return n })}
-            onClear={() => setActiveCategories(prev => { const n = new Set(prev); for (const c of V2_ALL_CATEGORIES) if (c !== 'Music' && c !== 'Food & Drink') n.delete(c); return n })}
+            onClear={() => setActiveCategories(prev => { const n = new Set(prev); for (const c of V2_ALL_CATEGORIES) if (!V2_CATEGORY_TILES.some(t => t.value === c)) n.delete(c); return n })}
           />
           {(dayFilter !== 'today' || timeFilter !== 'any' || activeCategories.size > 0 || freeOnly || searchQuery.trim()) && (
             <button type="button"
