@@ -1,26 +1,33 @@
 {
-  "generated_at": "2026-06-16T15:08:55.943070",
+  "generated_at": "2026-06-17T13:36:29.546543",
   "attempted": 2,
-  "applied": 1,
+  "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "Paris Opera Junior Ballet",
+      "title": "David Jeremy Higdon Live on The Deck",
       "type": "title_truncated",
-      "skipped": "[fetch failed: 415 Client Error: Unsupported Media Type for url: https://www.jhcenterforthearts.org/event/paris-opera-junior-ballet-dw/]"
+      "link": "https://www.jacksonhole.com/events/musiconthedeck-07-14-26",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "David Jeremy Higdon Live on The Deck",
+        "reasoning": "The source text confirms the complete title is 'David Jeremy Higdon Live on The Deck' which matches the current title exactly, so no truncation has occurred."
+      },
+      "applied": true,
+      "note": "title: 'David Jeremy Higdon Live on The Deck' \u2192 'David Jeremy Higdon Live on The Deck'"
     },
     {
       "city": "jackson",
-      "title": "Jackson Hole Farmers Market",
+      "title": "Benoliel Chamber Music Series: Brahms & Dvo\u00c5\u0099\u00c3\u00a1k",
       "type": "title_truncated",
-      "link": "https://dishingjh.com/event/jackson-hole-farmers-market-7/2026-07-25/",
+      "link": "https://gtmf.org/events/brahms-dvorak",
       "resolution": {
         "confidence": "high",
-        "new_title": "Jackson Hole Farmers Market",
-        "reasoning": "The source page clearly shows 'Jackson Hole Farmers Market' as the complete event title in the heading, and there is no evidence of truncation or additional title information in the page text."
+        "new_title": "Benoliel Chamber Music Series: Brahms & Dvo\u0159\u00e1k",
+        "reasoning": "The source page shows the title with proper encoding as 'Benoliel Chamber Music Series: Brahms & Dvo\u0159\u00e1k' at the top of the page, where the character encoding issue in the original title is resolved to show the correct Czech character '\u0159' in Dvo\u0159\u00e1k."
       },
       "applied": true,
-      "note": "title: 'Jackson Hole Farmers Market' \u2192 'Jackson Hole Farmers Market'"
+      "note": "title: 'Benoliel Chamber Music Series: Brahms & Dvo\u00c5\\x99\u00c3\u00a1k' \u2192 'Benoliel Chamber Music Series: Brahms & Dvo\u0159\u00e1k'"
     }
   ]
 }
