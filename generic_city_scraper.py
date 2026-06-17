@@ -54,6 +54,20 @@ try:
 except Exception:
     extract_events_from_url = None
 
+# --- SSL sanity check -------------------------------------------------------
+# macOS system Python 3.9 ships LibreSSL 2.8.3, which cannot negotiate TLS with
+# some sources (e.g. nortonsgreenlake.com) and drops them SILENTLY (no error,
+# just missing events/times). Warn loudly so a forgotten venv is obvious. The
+# fix is the project venv: `source .venv/bin/activate` (Python 3.11 / OpenSSL 3).
+import ssl as _ssl_check
+if "LibreSSL" in _ssl_check.OPENSSL_VERSION or _ssl_check.OPENSSL_VERSION_INFO < (1, 1, 1):
+    print("\n" + "=" * 64)
+    print("  WARNING: weak SSL -> %s" % _ssl_check.OPENSSL_VERSION)
+    print("  TLS-strict sources (e.g. nortonsgreenlake.com) will FAIL SILENTLY.")
+    print("  Activate the project venv first:  source .venv/bin/activate")
+    print("=" * 64 + "\n")
+
+
 REVIEW_DIR = Path("review_queue")
 STAGE_MODE = os.environ.get("STAGE_MODE", "review")  # "review" | "push"
 
