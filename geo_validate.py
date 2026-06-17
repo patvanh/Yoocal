@@ -204,7 +204,13 @@ def _address_city_far(e, city, target_lat, target_lng, radius_mi, cache):
     parts = [p.strip() for p in txt.split(",") if p.strip()]
     if not parts:
         return None
-    while parts and _re.fullmatch(r"(wisconsin|wi|utah|ut|wyoming|wy|\d{5}(?:-\d{4})?)", parts[-1], _re.I):
+    # Pop trailing state and/or zip segments. Handles them split across commas
+    # ("..., WI, 54968") AND combined in one segment ("..., WI 54968") — the
+    # latter is common from ChamberMaster address strings and otherwise leaves
+    # "WI 54968" as the candidate, forcing a fallback to the (ungeocodable)
+    # venue name and wrongly holding a local event.
+    _state_zip = r"(wisconsin|wi|utah|ut|wyoming|wy)?\s*\d{5}(?:-\d{4})?|(wisconsin|wi|utah|ut|wyoming|wy)"
+    while parts and _re.fullmatch(_state_zip, parts[-1].strip(), _re.I):
         parts.pop()
     if not parts:
         return None
@@ -224,7 +230,15 @@ def _address_city_far(e, city, target_lat, target_lng, radius_mi, cache):
     if not geo:
         return None
     d = _haversine_mi(target_lat, target_lng, geo[0], geo[1])
-    return d > radius_mi
+    if d > radius_mi:
+        return True   # far -> drop
+    # Local. We just geocoded the real city reliably (venue strings don't
+    # geocode, but cities do). Stamp those coords onto the event so the main
+    # loop sees has_real=True and PUBLISHES it, instead of discarding this
+    # result, re-trying geocode on the un-parseable venue string, failing,
+    # and holding a confirmed-local event in the review queue.
+    e["lat"], e["lng"] = geo
+    return False  # local -> keep (now with real coords)
 
 
 def geo_validate(events, city, lat, lng, radius_mi, verbose=True):
