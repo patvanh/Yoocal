@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-17T13:36:21.189250",
-  "audit_date": "2026-06-17",
+  "generated_at": "2026-06-18T13:18:41.468060",
+  "audit_date": "2026-06-18",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1864,
+      "before_count": 1847,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -24,23 +24,27 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 5,
           "examples": [
-            {
-              "title": "Fascia Rolling Class",
-              "had_span": 181
-            },
             {
               "title": "Group Fitness Classes",
               "had_span": 181
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 60
+              "had_span": 59
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
+            },
+            {
+              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
+              "had_span": 70
+            },
+            {
+              "title": "Fascia Rolling Class",
+              "had_span": 181
             }
           ]
         },
@@ -126,10 +130,27 @@
           ]
         },
         "classification": {
-          "fixed": 410,
+          "fixed": 406,
           "examples": [
             {
+              "title": "A Spirited Paint Party with Artist Briar West",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Food & Drink"
+              ]
+            },
+            {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
+              "before": [],
+              "after": [
+                "Food & Drink"
+              ]
+            },
+            {
+              "title": "MegaMind PubQuiz",
               "before": [],
               "after": [
                 "Food & Drink"
@@ -148,30 +169,16 @@
               "after": [
                 "Community"
               ]
-            },
-            {
-              "title": "Progressive Art Experience",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Summer Garden Camps",
-              "before": [],
-              "after": [
-                "Community"
-              ]
             }
           ]
         }
       },
-      "after_count": 1868,
-      "total_fixes": 430
+      "after_count": 1851,
+      "total_fixes": 427
     },
     {
       "city": "elkhart-lake",
-      "before_count": 229,
+      "before_count": 227,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -221,18 +228,22 @@
           "examples": []
         }
       },
-      "after_count": 234,
+      "after_count": 232,
       "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 244,
+      "before_count": 248,
       "passes": {
         "past_dates": {
-          "fixed": 8,
+          "fixed": 15,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
+              "date": "2026-06-15"
+            },
+            {
+              "title": "Flag Quilt-Making Camp @ USU Extension - Wasatch",
               "date": "2026-06-15"
             },
             {
@@ -246,10 +257,6 @@
             {
               "title": "Monday Night Train @ Heber Valley Railroad",
               "date": "2026-06-15"
-            },
-            {
-              "title": "Cornhole @ Wallsburg Town Hall",
-              "date": "2026-06-16"
             }
           ]
         },
@@ -371,12 +378,12 @@
           ]
         }
       },
-      "after_count": 237,
-      "total_fixes": 28
+      "after_count": 234,
+      "total_fixes": 35
     },
     {
       "city": "jackson",
-      "before_count": 831,
+      "before_count": 762,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -387,26 +394,17 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 108
+              "had_span": 107
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 95
+              "had_span": 94
             }
           ]
         },
         "multi_day_splits": {
           "fixed": 8,
           "examples": [
-            {
-              "title": "Teton Mudpots Summer Sale",
-              "original_span": "2026-06-17 to 2026-06-19",
-              "split_into": [
-                "2026-06-17",
-                "2026-06-18",
-                "2026-06-19"
-              ]
-            },
             {
               "title": "Rodeo Tent Sale",
               "original_span": "2026-06-25 to 2026-06-27",
@@ -442,6 +440,17 @@
                 "2026-07-17",
                 "2026-07-18",
                 "2026-07-19"
+              ]
+            },
+            {
+              "title": "Kids Yoga & Mindfulness Summer Camp",
+              "original_span": "2026-08-10 to 2026-08-14",
+              "split_into": [
+                "2026-08-10",
+                "2026-08-11",
+                "2026-08-12",
+                "2026-08-13",
+                "2026-08-14"
               ]
             }
           ]
@@ -486,7 +495,7 @@
           "examples": []
         }
       },
-      "after_count": 854,
+      "after_count": 794,
       "total_fixes": 21
     }
   ]
