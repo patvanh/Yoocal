@@ -19,7 +19,7 @@ const CITY_NAMES: Record<string, string> = {
 export default function CityLanding({ citySlug, cityKey }: { citySlug: string; cityKey: string }) {
   const cityName = CITY_NAMES[cityKey] || "Local"
   return (
-    <div style={{ background: '#1a1830', minHeight: '100vh' }}>
+    <div style={{ background: '#faf9ff', minHeight: '100vh' }}>
       <SiteNav cityKey={cityKey as any} />
 
 

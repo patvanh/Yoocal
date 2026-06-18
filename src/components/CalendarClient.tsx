@@ -538,9 +538,9 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
       onClick={onClick}
       style={{
         width: '100%', textAlign: 'left',
-        background: featured ? 'rgba(45, 40, 83, 0.85)' : 'rgba(255,255,255,0.06)',
-        border: featured ? '1px solid rgba(175,169,236,0.2)' : '1px solid rgba(255,255,255,0.10)',
-        backdropFilter: 'blur(8px)',
+        background: featured ? 'rgba(45, 40, 83, 0.85)' : '#fff',
+        border: featured ? '1px solid rgba(175,169,236,0.2)' : '1px solid rgba(26,24,48,0.08)',
+        boxShadow: featured ? 'none' : '0 1px 4px rgba(26,24,48,0.06)',
         borderRadius: 10, padding: '12px 14px',
         display: 'flex', gap: 14, alignItems: 'flex-start',
         marginBottom: 0, cursor: 'pointer',
@@ -551,12 +551,12 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
         WebkitAppearance: 'none',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = 'rgba(175,169,236,0.4)'
-        if (!featured) e.currentTarget.style.background = 'rgba(255,255,255,0.10)'
+        e.currentTarget.style.borderColor = featured ? 'rgba(175,169,236,0.4)' : 'rgba(124,92,255,0.35)'
+        if (!featured) e.currentTarget.style.background = '#faf9ff'
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = featured ? 'rgba(175,169,236,0.2)' : 'rgba(255,255,255,0.10)'
-        if (!featured) e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+        e.currentTarget.style.borderColor = featured ? 'rgba(175,169,236,0.2)' : 'rgba(26,24,48,0.08)'
+        if (!featured) e.currentTarget.style.background = '#fff'
       }}
     >
       {/* Stacked date pill: MON DD / DAY / TIME */}
@@ -566,13 +566,13 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
         padding: '10px 8px', minWidth: 70, flexShrink: 0, gap: 2,
         border: '1px solid rgba(175,169,236,0.25)',
       }}>
-        <span style={{ fontSize: 15, fontWeight: 700, color: '#fff', lineHeight: 1.1 }}>{monthDay}</span>
+        <span style={{ fontSize: 15, fontWeight: 700, color: '#534AB7', lineHeight: 1.1 }}>{monthDay}</span>
         <span style={{ fontSize: 10, color: '#AFA9EC', fontWeight: 600, letterSpacing: 0.5, lineHeight: 1 }}>{dayOfWeek}</span>
         {thru && (
           <span style={{ fontSize: 9, color: 'rgba(175,169,236,0.85)', fontWeight: 600, lineHeight: 1, marginTop: 1 }}>{thru}</span>
         )}
         {event.start_time && !event._time_uncertain && (
-          <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)', fontWeight: 700, lineHeight: 1, marginTop: 2 }}>
+          <span style={{ fontSize: 12, color: '#6b21a8', fontWeight: 700, lineHeight: 1, marginTop: 2 }}>
             {time.hour}{time.period.toLowerCase()}
           </span>
         )}
@@ -581,7 +581,7 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
       {/* Title + venue + pills, wraps if needed */}
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{
-          fontWeight: 600, fontSize: 14, color: '#fff',
+          fontWeight: 600, fontSize: 14, color: '#1e1b3a',
           lineHeight: 1.3, marginBottom: 4,
           display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical',
           overflow: 'hidden',
@@ -589,7 +589,7 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
           {event.title}
         </div>
         {(event.venue_name || event.location) && (
-          <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginBottom: 4, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          <div style={{ fontSize: 12, color: 'rgba(30,27,58,0.6)', marginBottom: 4, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {event.venue_name || event.location}
             {event.price && <span style={{ color: (event.price || '').toLowerCase() === 'free' ? '#10b981' : '#EF9F27', marginLeft: 8, fontWeight: 600 }}>· {event.price}</span>}
             {event.is_free === true && !event.price && <span style={{ color: '#10b981', marginLeft: 8, fontWeight: 600 }}>· Free</span>}
@@ -599,7 +599,7 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           {event.description && (
             <div style={{
-              fontSize: 12, color: 'rgba(255,255,255,0.45)', lineHeight: 1.4,
+              fontSize: 12, color: 'rgba(30,27,58,0.5)', lineHeight: 1.4,
               whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
               flex: 1, minWidth: 0,
             }}>
@@ -1762,13 +1762,16 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           )}
           
         </div>
+      </div>
+      </div>
         {/* Filter panel (mockup layout): one white card with a row of category
             tiles on top and flat quick-filter pills below. visibility (not
             display:none) keeps height reserved when the search dropdown is open. */}
         <div style={{
           visibility: dropdownOpen ? 'hidden' : 'visible',
           background: '#fff', borderRadius: 16, padding: '12px 12px',
-          maxWidth: 520, marginBottom: 12, marginLeft: 'auto', marginRight: 'auto',
+          marginBottom: 0, marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
+          borderRadius: 0,
           boxShadow: '0 6px 24px rgba(0,0,0,0.18)',
           display: 'flex', flexDirection: 'column', gap: 10,
         }}>
@@ -1833,8 +1836,6 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             )
           })()}
         </div>
-      </div>
-      </div>
       <div style={{
         // Desktop: 3-column grid (1fr auto 1fr) centers the date label
         // regardless of side widths. Mobile: stack vertically + center so the
@@ -1846,27 +1847,27 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         gap: isMobile ? 8 : 12, margin: '4px 0 18px',
         textAlign: isMobile ? 'center' : undefined,
       }}>
-        <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: isMobile ? 19 : 24, color: '#fff', justifySelf: isMobile ? 'center' : 'start' }}>Today in {cityLabel}</div>
+        <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: isMobile ? 19 : 24, color: '#1e1b3a', justifySelf: isMobile ? 'center' : 'start' }}>Today in {cityLabel}</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, justifyContent: 'center', justifySelf: 'center' }}>
           <button onClick={shiftDay(-1)} style={{
-            background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)',
-            color: '#fff', width: 36, height: 36, borderRadius: '50%',
+            background: 'rgba(26,24,48,0.04)', border: '1px solid rgba(26,24,48,0.15)',
+            color: '#534AB7', width: 36, height: 36, borderRadius: '50%',
             fontSize: 18, cursor: 'pointer', lineHeight: 1, flexShrink: 0,
           }} title="Previous day">‹</button>
           <div style={{
-            fontSize: isMobile ? 16 : 22, fontWeight: 600, color: '#fff',
+            fontSize: isMobile ? 16 : 22, fontWeight: 600, color: '#1e1b3a',
             fontFamily: "'DM Serif Display', serif", textAlign: 'center',
           }}>
             {dateRangeLabel}
           </div>
           <button onClick={shiftDay(1)} style={{
-            background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.18)',
-            color: '#fff', width: 36, height: 36, borderRadius: '50%',
+            background: 'rgba(26,24,48,0.04)', border: '1px solid rgba(26,24,48,0.15)',
+            color: '#534AB7', width: 36, height: 36, borderRadius: '50%',
             fontSize: 18, cursor: 'pointer', lineHeight: 1, flexShrink: 0,
           }} title="Next day">›</button>
         </div>
         <div style={{
-          fontFamily: "'DM Serif Display', serif", fontSize: isMobile ? 17 : 24, color: '#fff',
+          fontFamily: "'DM Serif Display', serif", fontSize: isMobile ? 17 : 24, color: '#1e1b3a',
           whiteSpace: 'nowrap', justifySelf: isMobile ? 'center' : 'end',
         }}>
           {loading ? '' : `${filteredEvents.length} event${filteredEvents.length !== 1 ? 's' : ''}`}
