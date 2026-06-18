@@ -1102,6 +1102,53 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     return result
   }, [events, dayFilter, timeFilter, activeCategories, freeOnly, pickedDate, pickedRangeEnd, radius, userCoords, cityKey])
 
+  // Group the filtered events by occurrence day for RANGE views (weekend / 7days
+  // / all / a multi-day picked range). Returns null for single-day modes (today
+  // / tomorrow / single-date pick), where the flat list is rendered as before.
+  // A multi-day or recurring event appears under EACH day it occurs, so the
+  // weekend reads as an itinerary (Fri, then Sat, then Sun) rather than dups.
+  const groupedByDay = useMemo(() => {
+    const isRange =
+      dayFilter === 'weekend' || dayFilter === '7days' || dayFilter === 'all' ||
+      (dayFilter === 'pickdate' && pickedDate !== pickedRangeEnd)
+    if (!isRange) return null
+    if (filteredEvents.length === 0) return null
+
+    // Distinct occurrence days actually present among the filtered events.
+    const dayset = new Set<string>()
+    for (const e of filteredEvents) {
+      const s = (e.date || '').slice(0, 10)
+      const en = (e.end_date || s).slice(0, 10)
+      if (!s) continue
+      // walk s..en (cap at 14 days to avoid pathological ranges)
+      let cur = s, guard = 0
+      while (cur <= en && guard < 14) {
+        dayset.add(cur)
+        const [y, m, d] = cur.split('-').map(Number)
+        const nx = new Date(y, m - 1, d + 1)
+        cur = `${nx.getFullYear()}-${String(nx.getMonth()+1).padStart(2,'0')}-${String(nx.getDate()).padStart(2,'0')}`
+        guard++
+      }
+    }
+    const days = Array.from(dayset).sort()
+
+    const DOWF = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+    const MONF = ['January','February','March','April','May','June','July','August','September','October','November','December']
+    const timeMin = (e: V2YocEvent) => {
+      const t = v2ParseTime12h(e.start_time)
+      return t === null ? 24 * 60 + 1 : t
+    }
+    return days.map(dateStr => {
+      const [y, m, d] = dateStr.split('-').map(Number)
+      const dt = new Date(y, m - 1, d)
+      const label = `${DOWF[dt.getDay()]}, ${MONF[dt.getMonth()]} ${dt.getDate()}`
+      const evs = filteredEvents
+        .filter(e => occursOn(e, dateStr))
+        .sort((a, b) => timeMin(a) - timeMin(b))
+      return { dateStr, label, events: evs }
+    }).filter(g => g.events.length > 0)
+  }, [filteredEvents, dayFilter, pickedDate, pickedRangeEnd])
+
   // Empty-day fall-forward: if the chosen window has nothing matching, find the
   // soonest FUTURE day (after the window) whose events still pass the other
   // active filters, so a quiet day points the user forward instead of dead-ending.
@@ -1888,6 +1935,28 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
             No events match your filters. Try widening the time range or clearing search.
           </div>
         )
+      ) : groupedByDay ? (
+        // Range view: events grouped under a day header (Fri, then Sat, ...).
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
+          {groupedByDay.map(group => (
+            <div key={group.dateStr}>
+              <div style={{
+                fontFamily: "'DM Serif Display', serif", fontSize: 16, color: '#fff',
+                margin: '0 0 10px', paddingBottom: 6,
+                borderBottom: '1px solid rgba(255,255,255,0.12)',
+              }}>{group.label}</div>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(min(440px, 100%), 1fr))',
+                gap: 8,
+              }}>
+                {group.events.map((ev, i) => (
+                  <V2EventCard key={`${group.dateStr}-${ev.title}-${i}`} event={ev} onClick={() => handleEventClick(ev)} viewedDay={group.dateStr} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       ) : (
         <div style={{
           display: 'grid',
