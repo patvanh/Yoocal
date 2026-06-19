@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-18",
+  "generated_at": "2026-06-19",
   "cities": {
     "all": {
-      "events": 4767,
+      "events": 4705,
       "findings": [
         {
           "code": "C1",
@@ -13,7 +13,7 @@
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-18",
+              "only_date": "2026-06-19",
               "why": "recurrence-field",
               "source": "Visit Park City"
             },
@@ -50,16 +50,16 @@
               "date": "2026-06-27",
               "title_a": "SAVOR",
               "src_a": "Deer Valley Resort",
-              "title_b": "Jackson Hole Food & Wine | Savor",
-              "src_b": "Jackson Hole Mountain Resort",
+              "title_b": "JH Food & Wine\u2019s Savor",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             },
             {
               "date": "2026-06-27",
               "title_a": "SAVOR",
               "src_a": "Deer Valley Resort",
-              "title_b": "JH Food & Wine\u2019s Savor",
-              "src_b": "Dishing Jackson Hole",
+              "title_b": "Jackson Hole Food & Wine | Savor",
+              "src_b": "Jackson Hole Mountain Resort",
               "sim": 0.85
             },
             {
@@ -97,15 +97,15 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 23,
-              "lost": 253
+              "now": 22,
+              "lost": 254
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 231,
+      "events": 226,
       "findings": [
         {
           "code": "C6",
@@ -116,19 +116,19 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 23,
-              "lost": 253
+              "now": 22,
+              "lost": 254
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 401,
+      "events": 377,
       "findings": []
     },
     "heber": {
-      "events": 908,
+      "events": 864,
       "findings": [
         {
           "code": "C1",
@@ -162,7 +162,7 @@
       ]
     },
     "jackson": {
-      "events": 1386,
+      "events": 1371,
       "findings": []
     }
   },

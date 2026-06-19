@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-18T13:18:49.674660",
+  "generated_at": "2026-06-19T13:37:34.995097",
   "attempted": 2,
   "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "Nathan Dean & the Damn Band",
+      "title": "The Center Presents: Dawes",
       "type": "title_truncated",
-      "link": "https://www.milliondollarcowboybar.com/events/nathan-dean-the-damn-band-0-1-0-0-0-0-0-1-1-1",
+      "link": "https://www.jacksonholechamber.com/event/the-center-presents%3a-dawes/3362/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Nathan Dean & the Damn Band",
-        "reasoning": "The source text confirms the band name is 'Nathan Dean and the Damn Band' (with 'and' instead of '&'), but the current title already contains the complete and correct information with standard formatting using '&'."
+        "new_title": "The Center Presents: Dawes",
+        "reasoning": "The source page text shows 'The Center Presents: Dawes' as the complete title with no additional text indicating truncation."
       },
       "applied": true,
-      "note": "title: 'Nathan Dean & the Damn Band' \u2192 'Nathan Dean & the Damn Band'"
+      "note": "title: 'The Center Presents: Dawes' \u2192 'The Center Presents: Dawes'"
     },
     {
       "city": "jackson",
-      "title": "Nathan Dean & the Damn Band",
+      "title": "Music Series: Tom Georges",
       "type": "title_truncated",
-      "link": "https://www.milliondollarcowboybar.com/events/nathan-dean-the-damn-band-0-1-0-0-0-0-0-1-1-3",
+      "link": "https://thecloudveil.com/event/music-series/2026-07-15",
       "resolution": {
         "confidence": "high",
-        "new_title": "Nathan Dean & the Damn Band",
-        "reasoning": "The source page text confirms the full band name is 'Nathan Dean & the Damn Band' (also written as 'Nathan Dean and the Damn Band'), which matches the current title exactly, indicating it is not truncated."
+        "new_title": "Music Series: Tom Georges",
+        "reasoning": "The source page confirms 'Music Series: Tom Georges' is the complete title, with the description clarifying he is a local acoustic guitarist and musician performing in the lobby."
       },
       "applied": true,
-      "note": "title: 'Nathan Dean & the Damn Band' \u2192 'Nathan Dean & the Damn Band'"
+      "note": "title: 'Music Series: Tom Georges' \u2192 'Music Series: Tom Georges'"
     }
   ]
 }

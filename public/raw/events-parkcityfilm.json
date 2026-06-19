@@ -1,23 +1,6 @@
 {
   "events": [
     {
-      "title": "Zootopia 2 (Coalville)",
-      "date": "2026-06-18",
-      "start_time": "7:00 PM",
-      "description": null,
-      "venue_name": "Jim Santy Auditorium",
-      "address": "1255 Park Avenue, Park City, UT 84060",
-      "lat": 40.6507,
-      "lng": -111.5054,
-      "link": "https://parkcityfilm.eventive.org/films/6a1516c299963eae9131e390",
-      "image_url": "https://parkcityfilm.org/wp-content/uploads/2026/05/Zootopia-2-1000x400-1-e1779767431418.jpg",
-      "source": "Park City Film",
-      "source_url": "https://parkcityfilm.org/film/zootopia-2-coalville/",
-      "categories": [
-        "Film"
-      ]
-    },
-    {
       "title": "Tuner",
       "date": "2026-06-19",
       "start_time": "7:00 PM",
@@ -188,6 +171,23 @@
       ]
     },
     {
+      "title": "Sundance Film Festival Local Lens",
+      "date": "2026-07-19",
+      "start_time": "1:00 PM",
+      "description": null,
+      "venue_name": "Jim Santy Auditorium",
+      "address": "1255 Park Avenue, Park City, UT 84060",
+      "lat": 40.6507,
+      "lng": -111.5054,
+      "link": "https://sfflocallens2026.eventive.org/films",
+      "image_url": "https://parkcityfilm.org/wp-content/uploads/2026/06/FY25_SFF_LL_Logo_Black-1-e1781648778539.png",
+      "source": "Park City Film",
+      "source_url": "https://parkcityfilm.org/film/sundance-film-festival-local-lens/",
+      "categories": [
+        "Film"
+      ]
+    },
+    {
       "title": "Hoppers (Library Patio)",
       "date": "2026-07-23",
       "start_time": "8:45 PM",
@@ -239,5 +239,5 @@
       ]
     }
   ],
-  "scraped_at": "2026-06-18T06:57:17.183728-06:00"
+  "scraped_at": "2026-06-19T07:17:57.988678-06:00"
 }

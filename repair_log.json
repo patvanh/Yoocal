@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-18T13:18:41.468060",
-  "audit_date": "2026-06-18",
+  "generated_at": "2026-06-19T13:37:28.064976",
+  "audit_date": "2026-06-19",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1847,
+      "before_count": 1845,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -32,7 +32,7 @@
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 59
+              "had_span": 58
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
@@ -40,7 +40,7 @@
             },
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 70
+              "had_span": 69
             },
             {
               "title": "Fascia Rolling Class",
@@ -130,7 +130,7 @@
           ]
         },
         "classification": {
-          "fixed": 406,
+          "fixed": 404,
           "examples": [
             {
               "title": "A Spirited Paint Party with Artist Briar West",
@@ -143,14 +143,14 @@
               ]
             },
             {
-              "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
+              "title": "Challenge Accepted!",
               "before": [],
               "after": [
-                "Food & Drink"
+                "Community"
               ]
             },
             {
-              "title": "MegaMind PubQuiz",
+              "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
               "before": [],
               "after": [
                 "Food & Drink"
@@ -164,7 +164,7 @@
               ]
             },
             {
-              "title": "Play With Tenacity Lacrosse Camp",
+              "title": "Progressive Art Experience",
               "before": [],
               "after": [
                 "Community"
@@ -173,12 +173,12 @@
           ]
         }
       },
-      "after_count": 1851,
-      "total_fixes": 427
+      "after_count": 1849,
+      "total_fixes": 425
     },
     {
       "city": "elkhart-lake",
-      "before_count": 227,
+      "before_count": 223,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -228,22 +228,18 @@
           "examples": []
         }
       },
-      "after_count": 232,
+      "after_count": 228,
       "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 248,
+      "before_count": 241,
       "passes": {
         "past_dates": {
-          "fixed": 15,
+          "fixed": 17,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
-              "date": "2026-06-15"
-            },
-            {
-              "title": "Flag Quilt-Making Camp @ USU Extension - Wasatch",
               "date": "2026-06-15"
             },
             {
@@ -257,6 +253,10 @@
             {
               "title": "Monday Night Train @ Heber Valley Railroad",
               "date": "2026-06-15"
+            },
+            {
+              "title": "Cornhole @ Wallsburg Town Hall",
+              "date": "2026-06-16"
             }
           ]
         },
@@ -378,12 +378,12 @@
           ]
         }
       },
-      "after_count": 234,
-      "total_fixes": 35
+      "after_count": 225,
+      "total_fixes": 37
     },
     {
       "city": "jackson",
-      "before_count": 762,
+      "before_count": 829,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -394,11 +394,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 107
+              "had_span": 106
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 94
+              "had_span": 93
             }
           ]
         },
@@ -495,7 +495,7 @@
           "examples": []
         }
       },
-      "after_count": 794,
+      "after_count": 861,
       "total_fixes": 21
     }
   ]
