@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-19T13:37:34.995097",
+  "generated_at": "2026-06-20T12:08:00.343599",
   "attempted": 2,
   "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "The Center Presents: Dawes",
+      "title": "Summer Evenings at The Rooftop Bar",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/the-center-presents%3a-dawes/3362/",
+      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-07-12",
       "resolution": {
         "confidence": "high",
-        "new_title": "The Center Presents: Dawes",
-        "reasoning": "The source page text shows 'The Center Presents: Dawes' as the complete title with no additional text indicating truncation."
+        "new_title": "Summer Evenings at The Rooftop Bar",
+        "reasoning": "The source page shows this is the complete title as it appears in the page header and event description, with no additional text or truncation evident."
       },
       "applied": true,
-      "note": "title: 'The Center Presents: Dawes' \u2192 'The Center Presents: Dawes'"
+      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
     },
     {
       "city": "jackson",
-      "title": "Music Series: Tom Georges",
+      "title": "Grazing Rights Food Truck Series",
       "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/music-series/2026-07-15",
+      "link": "https://dishingjh.com/event/grazing-rights-food-truck-series/2026-07-13/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Music Series: Tom Georges",
-        "reasoning": "The source page confirms 'Music Series: Tom Georges' is the complete title, with the description clarifying he is a local acoustic guitarist and musician performing in the lobby."
+        "new_title": "Grazing Rights Food Truck Series",
+        "reasoning": "The source page confirms 'Grazing Rights Food Truck Series' is the complete official title of the event, appearing consistently in the header and throughout the page content."
       },
       "applied": true,
-      "note": "title: 'Music Series: Tom Georges' \u2192 'Music Series: Tom Georges'"
+      "note": "title: 'Grazing Rights Food Truck Series' \u2192 'Grazing Rights Food Truck Series'"
     }
   ]
 }

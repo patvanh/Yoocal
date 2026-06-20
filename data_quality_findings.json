@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-19",
+  "generated_at": "2026-06-20",
   "cities": {
     "all": {
-      "events": 4705,
+      "events": 4546,
       "findings": [
         {
           "code": "C1",
@@ -13,7 +13,7 @@
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-19",
+              "only_date": "2026-06-20",
               "why": "recurrence-field",
               "source": "Visit Park City"
             },
@@ -44,7 +44,7 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 14,
+          "count": 15,
           "examples": [
             {
               "date": "2026-06-27",
@@ -71,15 +71,15 @@
               "sim": 0.85
             },
             {
-              "date": "2026-06-21",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
+              "date": "2026-08-14",
+              "title_a": "Kimball Art Summer Camps 2026: Registration Open Now",
+              "src_a": "KPCW Community Calendar",
+              "title_b": "Art Summer Camps 2026",
+              "src_b": "Visit Park City",
               "sim": 0.85
             },
             {
-              "date": "2026-06-28",
+              "date": "2026-06-21",
               "title_a": "Stein's Famous Sunday Brunch",
               "src_a": "Visit Park City",
               "title_b": "Sunday Brunch",
@@ -92,20 +92,26 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 1,
+          "count": 2,
           "examples": [
+            {
+              "source": "Heber Valley Tourism",
+              "was": 1040,
+              "now": 385,
+              "lost": 655
+            },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 22,
-              "lost": 254
+              "now": 21,
+              "lost": 255
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 226,
+      "events": 222,
       "findings": [
         {
           "code": "C6",
@@ -116,19 +122,19 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 22,
-              "lost": 254
+              "now": 21,
+              "lost": 255
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 377,
+      "events": 368,
       "findings": []
     },
     "heber": {
-      "events": 864,
+      "events": 667,
       "findings": [
         {
           "code": "C1",
@@ -158,13 +164,27 @@
               "source": "Heber Valley Tourism"
             }
           ]
+        },
+        {
+          "code": "C6",
+          "name": "COVERAGE-CLIFF",
+          "severity": "HIGH",
+          "count": 1,
+          "examples": [
+            {
+              "source": "Heber Valley Tourism",
+              "was": 1033,
+              "now": 380,
+              "lost": 653
+            }
+          ]
         }
       ]
     },
     "jackson": {
-      "events": 1371,
+      "events": 1364,
       "findings": []
     }
   },
-  "high_total": 9
+  "high_total": 11
 }
