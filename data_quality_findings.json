@@ -1,35 +1,21 @@
 {
-  "generated_at": "2026-06-20",
+  "generated_at": "2026-06-21",
   "cities": {
     "all": {
-      "events": 4546,
+      "events": 4424,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 4,
+          "count": 2,
           "examples": [
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-20",
+              "only_date": "2026-06-21",
               "why": "recurrence-field",
               "source": "Visit Park City"
-            },
-            {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-06-20",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
-            },
-            {
-              "title": "Midway Farmers Market",
-              "venue": "midway town square",
-              "only_date": "2026-06-20",
-              "why": "strong-title",
-              "source": "Heber Valley Tourism"
             },
             {
               "title": "Soulful Sundays @ Heber City Park",
@@ -47,39 +33,39 @@
           "count": 15,
           "examples": [
             {
-              "date": "2026-06-27",
-              "title_a": "SAVOR",
-              "src_a": "Deer Valley Resort",
-              "title_b": "JH Food & Wine\u2019s Savor",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-06-27",
-              "title_a": "SAVOR",
-              "src_a": "Deer Valley Resort",
-              "title_b": "Jackson Hole Food & Wine | Savor",
-              "src_b": "Jackson Hole Mountain Resort",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-07",
-              "title_a": "Lonestar",
-              "src_a": "Visit Park City",
-              "title_b": "Country Weekend - Lonestar",
-              "src_b": "Park City Institute",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-14",
-              "title_a": "Kimball Art Summer Camps 2026: Registration Open Now",
-              "src_a": "KPCW Community Calendar",
-              "title_b": "Art Summer Camps 2026",
-              "src_b": "Visit Park City",
-              "sim": 0.85
-            },
-            {
               "date": "2026-06-21",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-06-28",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-05",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-12",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-19",
               "title_a": "Stein's Famous Sunday Brunch",
               "src_a": "Visit Park City",
               "title_b": "Sunday Brunch",
@@ -97,21 +83,21 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 385,
-              "lost": 655
+              "now": 313,
+              "lost": 727
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 21,
-              "lost": 255
+              "now": 20,
+              "lost": 256
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 222,
+      "events": 216,
       "findings": [
         {
           "code": "C6",
@@ -122,40 +108,26 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 21,
-              "lost": 255
+              "now": 20,
+              "lost": 256
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 368,
+      "events": 354,
       "findings": []
     },
     "heber": {
-      "events": 667,
+      "events": 566,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 3,
+          "count": 1,
           "examples": [
-            {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-06-20",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
-            },
-            {
-              "title": "Midway Farmers Market",
-              "venue": "midway town square",
-              "only_date": "2026-06-20",
-              "why": "strong-title",
-              "source": "Heber Valley Tourism"
-            },
             {
               "title": "Soulful Sundays @ Heber City Park",
               "venue": "main street park heber city",
@@ -174,17 +146,17 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 380,
-              "lost": 653
+              "now": 307,
+              "lost": 726
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1364,
+      "events": 1353,
       "findings": []
     }
   },
-  "high_total": 11
+  "high_total": 7
 }

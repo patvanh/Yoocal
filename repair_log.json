@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-20T12:07:46.080296",
-  "audit_date": "2026-06-20",
+  "generated_at": "2026-06-21T12:34:45.833450",
+  "audit_date": "2026-06-21",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1859,
+      "before_count": 1835,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -32,7 +32,7 @@
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 57
+              "had_span": 56
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
@@ -40,7 +40,7 @@
             },
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 68
+              "had_span": 67
             },
             {
               "title": "Fascia Rolling Class",
@@ -49,16 +49,8 @@
           ]
         },
         "multi_day_splits": {
-          "fixed": 6,
+          "fixed": 5,
           "examples": [
-            {
-              "title": "Michelin-Starred Chef Klemens Gold Returns to Goldener Hirsch for the Summer Solstice",
-              "original_span": "2026-06-20 to 2026-06-21",
-              "split_into": [
-                "2026-06-20",
-                "2026-06-21"
-              ]
-            },
             {
               "title": "Fox US Open of Mountain Biking",
               "original_span": "2026-09-11 to 2026-09-13",
@@ -90,6 +82,14 @@
               "split_into": [
                 "2026-08-01",
                 "2026-08-02"
+              ]
+            },
+            {
+              "title": "Chef Ryan Arensdorf Weekend",
+              "original_span": "2026-08-08 to 2026-08-09",
+              "split_into": [
+                "2026-08-08",
+                "2026-08-09"
               ]
             }
           ]
@@ -130,20 +130,17 @@
           ]
         },
         "classification": {
-          "fixed": 407,
+          "fixed": 397,
           "examples": [
             {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [
-                "Community"
-              ],
+              "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
+              "before": [],
               "after": [
-                "Community",
                 "Food & Drink"
               ]
             },
             {
-              "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
+              "title": "Michelin-Starred Chef Klemens Gold Returns to Goldener Hirsch for the Summer Solstice",
               "before": [],
               "after": [
                 "Food & Drink"
@@ -169,22 +166,25 @@
               ]
             },
             {
-              "title": "Park Silly Sunday Market",
-              "before": [],
+              "title": "Sunday Craft",
+              "before": [
+                "Community"
+              ],
               "after": [
-                "Food & Drink",
-                "Outdoor"
+                "Community",
+                "Kids",
+                "Family"
               ]
             }
           ]
         }
       },
-      "after_count": 1863,
-      "total_fixes": 429
+      "after_count": 1838,
+      "total_fixes": 418
     },
     {
       "city": "elkhart-lake",
-      "before_count": 220,
+      "before_count": 215,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -234,35 +234,35 @@
           "examples": []
         }
       },
-      "after_count": 225,
+      "after_count": 220,
       "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 239,
+      "before_count": 233,
       "passes": {
         "past_dates": {
-          "fixed": 24,
+          "fixed": 28,
           "examples": [
-            {
-              "title": "Midway Art Gallery Open House",
-              "date": "2026-06-19"
-            },
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Meet the Cows - Dairy Farm Tour",
-              "date": "2026-06-15"
-            },
-            {
-              "title": "Ritual Chocolate Public Tour and Mini Tasting",
-              "date": "2026-06-19"
-            },
-            {
               "title": "Live Music @ Caf\u00e9 Galleria",
               "date": "2026-06-19"
+            },
+            {
+              "title": "Commemorative Air Force Museum Tours",
+              "date": "2026-06-20"
+            },
+            {
+              "title": "Live Music @ Back 40 Restaurant",
+              "date": "2026-06-20"
+            },
+            {
+              "title": "Yoga in the Lavender Field @ Blue Canyon Lavender Farm",
+              "date": "2026-06-15"
             }
           ]
         },
@@ -384,12 +384,12 @@
           ]
         }
       },
-      "after_count": 216,
-      "total_fixes": 44
+      "after_count": 206,
+      "total_fixes": 48
     },
     {
       "city": "jackson",
-      "before_count": 836,
+      "before_count": 726,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -400,11 +400,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 105
+              "had_span": 104
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 92
+              "had_span": 91
             }
           ]
         },
@@ -501,7 +501,7 @@
           "examples": []
         }
       },
-      "after_count": 868,
+      "after_count": 758,
       "total_fixes": 21
     }
   ]

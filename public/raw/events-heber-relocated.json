@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-20T11:47:21.120058",
-  "total": 195,
+  "updated_at": "2026-06-21T12:15:57.774385",
+  "total": 199,
   "events": [
     {
       "title": "Deer Creek Express",
@@ -3993,6 +3993,87 @@
       "venue_name": "Heber Valley Railroad",
       "start_time": "1:00 PM",
       "end_time": "2:30 PM"
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-22",
+      "description": "",
+      "location": "Heber Valley Railroad",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "is_free": null,
+      "price": "",
+      "scraped_at": "2026-06-21T12:01:13.513409",
+      "lat": 40.5026478,
+      "lng": -111.423766,
+      "end_date": "2026-11-01",
+      "venue_name": "Heber Valley Railroad",
+      "recurrence": "weekly_multiple",
+      "recurrence_day": "",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM"
+    },
+    {
+      "title": "Princess and Pirate Train",
+      "date": "2026-06-21",
+      "description": "",
+      "location": "Heber Valley Railroad",
+      "link": "https://www.visitparkcity.com/event/princess-and-pirate-train/28762/",
+      "source": "Visit Park City",
+      "source_url": "https://www.visitparkcity.com/events/",
+      "is_free": null,
+      "price": "",
+      "scraped_at": "2026-06-21T12:01:38.013024",
+      "lat": 40.5026478,
+      "lng": -111.423766,
+      "end_date": "2026-08-15",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "1:00 PM",
+      "end_time": "2:30 PM"
+    },
+    {
+      "title": "Deer Creek Express",
+      "date": "2026-06-21",
+      "description": "This scenic 90 minute trip offers incredible views of the Wasatch Back Mountains, the wide-open vistas of Deer Creek Reservoir, and the beautiful...",
+      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT, 84032",
+      "link": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "source": "Visit Park City (sitemap)",
+      "source_url": "https://www.visitparkcity.com/event/deer-creek-express/27887/",
+      "lat": 40.6461,
+      "lng": -111.498,
+      "categories": [
+        "Education"
+      ],
+      "end_date": "2026-10-31",
+      "image_url": "https://assets.simpleviewinc.com/sv-park-city/image/fetch/c_fill,h_396,q_75,w_704/https://assets.simpleviewinc.com/simpleview/image/upload/crm/parkcity/54906345341_9434874437_b_EAC31456-E5AA-42DC-A44C3FDD28E2F45E_721b1966-f486-43df-9e598f5bfc57cd84.jpg",
+      "address": "450 S 600 W, Heber City, UT, 84032",
+      "venue_name": "Heber Valley Railroad",
+      "start_time": "3:30 PM",
+      "end_time": "5:00 PM",
+      "recurrence": "weekly",
+      "recurrence_days": "Monday,Thursday,Friday,Saturday"
+    },
+    {
+      "title": "Heber's Saturday Sunset Music Series",
+      "date": "2026-09-12",
+      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
+      "location": "Main Street Park, Heber City, UT",
+      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
+      "lat": 40.50751038958987,
+      "lng": -111.41342375396567,
+      "categories": [
+        "Music"
+      ],
+      "start_time": "5:00 PM",
+      "end_time": "8:30 PM",
+      "scraped_at": "2026-06-21T12:15:01.789829",
+      "venue_name": "Main Street Park",
+      "address": "200 S Main Street",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png"
     }
   ]
 }

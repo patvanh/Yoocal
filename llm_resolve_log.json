@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-20T12:08:00.343599",
+  "generated_at": "2026-06-21T12:34:52.832719",
   "attempted": 2,
   "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "Summer Evenings at The Rooftop Bar",
+      "title": "Walk-Up Wednesdays",
       "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-07-12",
+      "link": "https://www.wildlifeart.org/events/walk-up-wednesdays-33",
       "resolution": {
         "confidence": "high",
-        "new_title": "Summer Evenings at The Rooftop Bar",
-        "reasoning": "The source page shows this is the complete title as it appears in the page header and event description, with no additional text or truncation evident."
+        "new_title": "Walk-Up Wednesdays",
+        "reasoning": "The source text consistently uses 'Walk-Up Wednesdays' as the complete event title throughout the page, with no indication of truncation or additional title information."
       },
       "applied": true,
-      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
+      "note": "title: 'Walk-Up Wednesdays' \u2192 'Walk-Up Wednesdays'"
     },
     {
       "city": "jackson",
-      "title": "Grazing Rights Food Truck Series",
+      "title": "Big Sky PBR | July 16-18, 2026",
       "type": "title_truncated",
-      "link": "https://dishingjh.com/event/grazing-rights-food-truck-series/2026-07-13/",
+      "link": "https://www.jacksonholechamber.com/event/big-sky-pbr-%7c-july-16-18-2026/2935/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Grazing Rights Food Truck Series",
-        "reasoning": "The source page confirms 'Grazing Rights Food Truck Series' is the complete official title of the event, appearing consistently in the header and throughout the page content."
+        "new_title": "Big Sky PBR | July 16-18, 2026",
+        "reasoning": "The source page text shows the exact same title 'Big Sky PBR | July 16-18, 2026' which appears to be complete and not truncated, as it includes the event name, location reference, and full date range."
       },
       "applied": true,
-      "note": "title: 'Grazing Rights Food Truck Series' \u2192 'Grazing Rights Food Truck Series'"
+      "note": "title: 'Big Sky PBR | July 16-18, 2026' \u2192 'Big Sky PBR | July 16-18, 2026'"
     }
   ]
 }
