@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-21T12:34:52.832719",
+  "generated_at": "2026-06-22T15:44:09.941633",
   "attempted": 2,
   "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "Walk-Up Wednesdays",
+      "title": "Jackson Hole Farmers Market",
       "type": "title_truncated",
-      "link": "https://www.wildlifeart.org/events/walk-up-wednesdays-33",
+      "link": "https://dishingjh.com/event/jackson-hole-farmers-market-7/2026-07-25/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Walk-Up Wednesdays",
-        "reasoning": "The source text consistently uses 'Walk-Up Wednesdays' as the complete event title throughout the page, with no indication of truncation or additional title information."
+        "new_title": "Jackson Hole Farmers Market",
+        "reasoning": "The source page confirms 'Jackson Hole Farmers Market' is the complete title as shown in both the page header and the event heading, with no additional information that would extend the title."
       },
       "applied": true,
-      "note": "title: 'Walk-Up Wednesdays' \u2192 'Walk-Up Wednesdays'"
+      "note": "title: 'Jackson Hole Farmers Market' \u2192 'Jackson Hole Farmers Market'"
     },
     {
       "city": "jackson",
-      "title": "Big Sky PBR | July 16-18, 2026",
+      "title": "Sunday Fundays, Concert on the Commons Series",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/big-sky-pbr-%7c-july-16-18-2026/2935/",
+      "link": "https://dishingjh.com/event/sunday-fundays-concert-on-the-commons-series/2026-07-26/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Big Sky PBR | July 16-18, 2026",
-        "reasoning": "The source page text shows the exact same title 'Big Sky PBR | July 16-18, 2026' which appears to be complete and not truncated, as it includes the event name, location reference, and full date range."
+        "new_title": "Sunday Fundays, Concert on the Commons Series",
+        "reasoning": "The source page confirms this is the complete official title as shown in the page heading and event details, with no additional text truncated."
       },
       "applied": true,
-      "note": "title: 'Big Sky PBR | July 16-18, 2026' \u2192 'Big Sky PBR | July 16-18, 2026'"
+      "note": "title: 'Sunday Fundays, Concert on the Commons Series' \u2192 'Sunday Fundays, Concert on the Commons Series'"
     }
   ]
 }
