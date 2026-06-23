@@ -1,21 +1,42 @@
 {
-  "generated_at": "2026-06-22",
+  "generated_at": "2026-06-23",
   "cities": {
     "all": {
-      "events": 4403,
+      "events": 4347,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 1,
+          "count": 4,
           "examples": [
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-22",
+              "only_date": "2026-06-23",
               "why": "recurrence-field",
               "source": "Visit Park City"
+            },
+            {
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-06-27",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            },
+            {
+              "title": "Midway Farmers Market",
+              "venue": "midway town square",
+              "only_date": "2026-06-27",
+              "why": "strong-title",
+              "source": "Heber Valley Life"
+            },
+            {
+              "title": "Soulful Sundays @ Heber City Park",
+              "venue": "main street park heber city",
+              "only_date": "2026-06-28",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
             }
           ]
         },
@@ -90,7 +111,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 213,
+      "events": 212,
       "findings": [
         {
           "code": "C6",
@@ -109,12 +130,41 @@
       ]
     },
     "greenlake": {
-      "events": 349,
+      "events": 345,
       "findings": []
     },
     "heber": {
-      "events": 595,
+      "events": 605,
       "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 3,
+          "examples": [
+            {
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-06-27",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            },
+            {
+              "title": "Midway Farmers Market",
+              "venue": "midway town square",
+              "only_date": "2026-06-27",
+              "why": "strong-title",
+              "source": "Heber Valley Life"
+            },
+            {
+              "title": "Soulful Sundays @ Heber City Park",
+              "venue": "main street park heber city",
+              "only_date": "2026-06-28",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            }
+          ]
+        },
         {
           "code": "C6",
           "name": "COVERAGE-CLIFF",
@@ -132,9 +182,9 @@
       ]
     },
     "jackson": {
-      "events": 1348,
+      "events": 1349,
       "findings": []
     }
   },
-  "high_total": 5
+  "high_total": 11
 }

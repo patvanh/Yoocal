@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-22T15:44:09.941633",
+  "generated_at": "2026-06-23T13:14:24.811405",
   "attempted": 2,
   "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "Jackson Hole Farmers Market",
+      "title": "Francis Ambrose Live on The Deck",
       "type": "title_truncated",
-      "link": "https://dishingjh.com/event/jackson-hole-farmers-market-7/2026-07-25/",
+      "link": "https://www.jacksonhole.com/events/musiconthedeck-07-13-26",
       "resolution": {
         "confidence": "high",
-        "new_title": "Jackson Hole Farmers Market",
-        "reasoning": "The source page confirms 'Jackson Hole Farmers Market' is the complete title as shown in both the page header and the event heading, with no additional information that would extend the title."
+        "new_title": "Francis Ambrose Live on The Deck",
+        "reasoning": "The source page text shows the exact same title 'Francis Ambrose Live on The Deck' in the Event Details section, confirming this is the complete title and not truncated."
       },
       "applied": true,
-      "note": "title: 'Jackson Hole Farmers Market' \u2192 'Jackson Hole Farmers Market'"
+      "note": "title: 'Francis Ambrose Live on The Deck' \u2192 'Francis Ambrose Live on The Deck'"
     },
     {
       "city": "jackson",
-      "title": "Sunday Fundays, Concert on the Commons Series",
+      "title": "Music Series: Tom Georges",
       "type": "title_truncated",
-      "link": "https://dishingjh.com/event/sunday-fundays-concert-on-the-commons-series/2026-07-26/",
+      "link": "https://thecloudveil.com/event/music-series/2026-07-15",
       "resolution": {
         "confidence": "high",
-        "new_title": "Sunday Fundays, Concert on the Commons Series",
-        "reasoning": "The source page confirms this is the complete official title as shown in the page heading and event details, with no additional text truncated."
+        "new_title": "Music Series: Tom Georges",
+        "reasoning": "The source page confirms this is the complete title, with the description clarifying that Tom Georges is a local acoustic guitarist and musician performing in the lobby."
       },
       "applied": true,
-      "note": "title: 'Sunday Fundays, Concert on the Commons Series' \u2192 'Sunday Fundays, Concert on the Commons Series'"
+      "note": "title: 'Music Series: Tom Georges' \u2192 'Music Series: Tom Georges'"
     }
   ]
 }
