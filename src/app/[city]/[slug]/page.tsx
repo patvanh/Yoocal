@@ -218,6 +218,14 @@ export default async function EventPage({ params }: Props) {
     ],
   }
 
+  // city.name is stored as "Park City, UT" (locality + region together),
+  // which is a malformed addressLocality. Split it so PostalAddress carries a
+  // clean addressLocality and a separate addressRegion (required for Google
+  // event rich results).
+  const _cityParts = city.name.split(",").map((p) => p.trim())
+  const cityLocality = _cityParts[0] || city.name
+  const cityRegion = _cityParts[1] || undefined
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -242,16 +250,18 @@ export default async function EventPage({ params }: Props) {
           name: event.location,
           address: {
             "@type": "PostalAddress",
-            addressLocality: city.name,
+            addressLocality: cityLocality,
+            ...(cityRegion ? { addressRegion: cityRegion } : {}),
             addressCountry: "US",
           },
         }
       : {
           "@type": "Place",
-          name: city.name,
+          name: cityLocality,
           address: {
             "@type": "PostalAddress",
-            addressLocality: city.name,
+            addressLocality: cityLocality,
+            ...(cityRegion ? { addressRegion: cityRegion } : {}),
             addressCountry: "US",
           },
         },
@@ -259,10 +269,6 @@ export default async function EventPage({ params }: Props) {
       "@type": "Organization",
       name: event.source || "Yoocal",
       url: event.source_url || `https://www.yoocal.com/${citySlug}`,
-    },
-    performer: {
-      "@type": "PerformingGroup",
-      name: event.title,
     },
     // Only assert an Offer when we actually know the price (explicitly free, or a
     // parseable amount). Emitting price:"0" for unknown prices would wrongly tell
