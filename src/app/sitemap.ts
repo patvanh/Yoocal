@@ -28,6 +28,8 @@ function loadEvents(filename: string): any[] {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date().toISOString().slice(0, 10);
+  // Real content-modification time for sitemap lastmod (data rebuilds nightly).
+  const buildDate = new Date();
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -96,16 +98,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       if (seenSlugs.has(url)) continue;
       seenSlugs.add(url);
 
-      // Guard against malformed dates that would crash toISOString
-      let lastMod: Date | undefined;
-      const d = new Date(date);
-      if (!isNaN(d.getTime())) lastMod = d;
-
+      // lastModified is when the PAGE/content last changed, not the (future)
+      // event date. Event data regenerates nightly via the scraper cron, so
+      // the build/generation time is the honest modification time. Using the
+      // future event date here was semantically invalid (a lastmod can't be
+      // in the future) and gave crawlers a misleading freshness signal.
       eventPages.push({
         url,
-        changeFrequency: 'weekly',
+        lastModified: buildDate,
+        changeFrequency: 'daily',
         priority: 0.7,
-        ...(lastMod ? { lastModified: lastMod } : {}),
       });
     }
   }
