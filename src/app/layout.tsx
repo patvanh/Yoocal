@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.yoocal.com/#org","name":"Yoocal","url":"https://www.yoocal.com","logo":"https://www.yoocal.com/og-image.png","description":"Local events for scenic resort towns — one free calendar updated daily."},{"@type":"WebSite","@id":"https://www.yoocal.com/#website","url":"https://www.yoocal.com","name":"Yoocal","publisher":{"@id":"https://www.yoocal.com/#org"}}]}' }}
+          dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.yoocal.com/#org","name":"Yoocal","url":"https://www.yoocal.com","logo":"https://www.yoocal.com/icons/icon-512.png","description":"Local events for scenic resort towns — one free calendar updated daily."},{"@type":"WebSite","@id":"https://www.yoocal.com/#website","url":"https://www.yoocal.com","name":"Yoocal","publisher":{"@id":"https://www.yoocal.com/#org"}}]}' }}
         />
         <ServiceWorkerRegister />{children}<Analytics />
       </body>
