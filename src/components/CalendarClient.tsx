@@ -1608,9 +1608,9 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         background: "linear-gradient(180deg, rgba(26,24,48,0.35), rgba(26,24,48,0.62)), url('/hero.jpg') center/cover no-repeat",
       }}>
         <div style={{ textAlign: 'center', marginBottom: 22 }}>
-          <h1 style={{ fontFamily: "'DM Serif Display', serif", fontSize: 'clamp(44px, 6vw, 76px)', color: '#fff', lineHeight: 1.08, margin: 0 }}>
+          <div role="presentation" style={{ fontFamily: "'DM Serif Display', serif", fontSize: 'clamp(44px, 6vw, 76px)', color: '#fff', lineHeight: 1.08, margin: 0 }}>
             Things to do in <em style={{ color: '#b9aef5' }}>{cityLabel}</em>
-          </h1>
+          </div>
           <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: 16, margin: '8px 0 0' }}>Discover the best events, live music, food, and more.</p>
         </div>
       {/* Search + filter chips — no card/box: the search bar and filters sit

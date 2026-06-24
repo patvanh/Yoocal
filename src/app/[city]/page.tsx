@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { CITY_CONFIG, cityKeyFromSlug, getEventsForCity, slugify, type CityKey } from '@/lib/events'
 import CityLanding from '@/components/CityLanding'
+import CityHubServer from '@/components/CityHubServer'
 
 interface Props {
   params: Promise<{ city: string }>
@@ -78,6 +79,7 @@ export default async function CityPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
         />
       )}
+      <CityHubServer cityKey={cityKey} />
       <CityLanding citySlug={city} cityKey={cityKey} />
     </>
   )
