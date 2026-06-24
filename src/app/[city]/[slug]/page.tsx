@@ -50,8 +50,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityKey = cityKeyFromSlug(city)
   if (!cityKey) return {}
 
+  // Mirror the page's not-found handling: an unresolvable slug must not
+  // generate successful metadata, or Next prerenders a 200 even though the
+  // page calls notFound(). Returning noindex metadata here keeps the route's
+  // not-found handling consistent. (The page component still calls
+  // notFound() for the actual 404 response.)
   const event = findEvent(cityKey, slug)
-  if (!event) return {}
+  if (!event) return { title: 'Event not found — Yoocal', robots: { index: false, follow: true } }
 
   const cityConfig = CITY_CONFIG[cityKey]
   const dateStr = formatDate(event.date)
