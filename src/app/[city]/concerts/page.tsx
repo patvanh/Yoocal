@@ -78,8 +78,28 @@ export default async function CityConcertsPage(
     detailSlug: eventSlug(e),
   }));
 
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Concerts and live music in ${cfg.label}`,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: Math.min(shows.length, 50),
+    itemListElement: shows.slice(0, 50).map((e, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://www.yoocal.com/${city}/${eventSlug(e)}`,
+      name: e.title || 'Event',
+    })),
+  };
+
   return (
     <>
+      {shows.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+      )}
       <SiteNav activeKey="concerts" cityKey={cityKey} />
       <div className="hero">
         <div className="hero-content">

@@ -68,8 +68,28 @@ export default async function CityFreeEventsPage(
     detailSlug: eventSlug(e),
   }));
 
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Free events in ${cfg.label}`,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: Math.min(free.length, 50),
+    itemListElement: free.slice(0, 50).map((e, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://www.yoocal.com/${city}/${eventSlug(e)}`,
+      name: e.title || 'Event',
+    })),
+  };
+
   return (
     <>
+      {free.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+      )}
       <SiteNav activeKey="free" cityKey={cityKey} />
       <div className="hero">
         <div className="hero-content">

@@ -82,8 +82,28 @@ export default async function CityThisMonthPage(
     detailSlug: eventSlug(e),
   }));
 
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Events in ${cfg.label} — ${label}`,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: Math.min(inMonth.length, 50),
+    itemListElement: inMonth.slice(0, 50).map((e, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://www.yoocal.com/${city}/${eventSlug(e)}`,
+      name: e.title || 'Event',
+    })),
+  };
+
   return (
     <>
+      {inMonth.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+      )}
       <SiteNav cityKey={cityKey} />
       <div className="hero">
         <div className="hero-content">
