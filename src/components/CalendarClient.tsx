@@ -474,26 +474,17 @@ function V2FeaturedCard({ event, onClick, viewedDay }: { event: V2YocEvent; onCl
   return (
     <button onClick={onClick} style={{
       display: 'flex', flexDirection: 'column', textAlign: 'left', width: '100%',
-      background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.14)', borderRadius: 16, overflow: 'hidden',
+      background: 'rgba(255,255,255,0.06)', border: '2px solid #e0a83a', borderRadius: 16, overflow: 'hidden',
       cursor: 'pointer', padding: 0, fontFamily: "'DM Sans', sans-serif",
       boxShadow: 'none',
     }}>
       {hasImg && (
         <div style={{ aspectRatio: '3 / 2', position: 'relative',
-          background: `center/cover no-repeat url(${event.image_url})` }}>
-          <span style={{ position: 'absolute', top: 11, left: 11, background: 'rgba(26,24,48,0.82)',
-            color: '#ffd27a', fontSize: 10, fontWeight: 700, padding: '5px 10px', borderRadius: 100,
-            letterSpacing: 0.3 }}>★ Featured</span>
-        </div>
+          background: `center/cover no-repeat url(${event.image_url})` }} />
       )}
       <div style={{ padding: '12px 14px 14px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-        {!hasImg && (
-          <span style={{ alignSelf: 'flex-start', marginBottom: 10, background: 'rgba(26,24,48,0.82)',
-            color: '#ffd27a', fontSize: 10, fontWeight: 700, padding: '5px 10px', borderRadius: 100,
-            letterSpacing: 0.3 }}>★ Featured</span>
-        )}
         <div style={{ minWidth: 0 }}>
-          <div style={{ fontSize: 11, fontWeight: 700, color: '#7c5cff' }}>{time.hour}{time.period ? ' ' + time.period : ''}</div>
+          <div style={{ fontSize: 11, fontWeight: 700, color: '#b9aef5' }}>{dow}{(time.hour || time.period) ? ' \u00b7 ' : ''}{time.hour}{time.period ? ' ' + time.period : ''}</div>
           <h3 style={{ fontSize: 13, fontWeight: 700, lineHeight: 1.25, margin: '2px 0 3px', color: '#fff',
             display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{event.title}</h3>
           {event.location && <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 500,
@@ -1449,20 +1440,66 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
       && !!e.image_url && /^https?:\/\//.test(e.image_url)
       && (typeof e._distance_mi !== 'number' || e._distance_mi <= FEATURED_RADIUS))
 
+    // WEEKEND: feature up to 2 events PER DAY (Fri, Sat, Sun) = up to 6 total,
+    // deduped by title across the whole weekend (a Fri+Sat event is used once,
+    // on its earliest day). Other modes fall through to the generic logic below.
+    if (dayFilter === 'weekend') {
+      const { start } = v2WeekendDates()
+      const dayList: string[] = []
+      for (let i = 0; i < 3; i++) {
+        const dd = new Date(start); dd.setDate(start.getDate() + i)
+        dayList.push(v2DateToStr(dd))
+      }
+      const rich = (e: any) => ((e.filter_categories?.length || e.categories?.length || 0)) + (e.hook ? 2 : 0)
+      const rankDay = (arr: any[]) => arr.slice().sort((a, b) =>
+        (b.featured === true ? 1 : 0) - (a.featured === true ? 1 : 0) ||
+        rich(b) - rich(a) ||
+        (a.start_time || '').localeCompare(b.start_time || ''))
+      const usedTitles = new Set<string>()
+      const picks: any[] = []
+      for (const day of dayList) {
+        const onDay = rankDay(windowEvents.filter((e: any) => occursOn(e, day)))
+        let added = 0
+        for (const e of onDay) {
+          if (added >= 2) break
+          const key = (e.title || '').trim().toLowerCase()
+          if (key && usedTitles.has(key)) continue
+          if (key) usedTitles.add(key)
+          picks.push({ ...e, _featuredDay: day })
+          added++
+        }
+      }
+      return picks
+    }
+
     // Cap scales with how busy the window is: a quiet day shouldn't fill the
     // strip, a packed window can show more. This is a MAXIMUM — we still only
     // show genuine standouts up to it (never pad with filler).
-    const n = windowEvents.length
+    // Dedupe by title so a multi-day / multi-session event (e.g. a festival
+    // running Fri+Sat) shows only ONE featured card. Sort earliest-first,
+    // then keep the first occurrence per normalized title.
+    const _seenTitles = new Set<string>()
+    const _byDate = (e: any) => (e.date || '').slice(0, 10)
+    const windowEventsDeduped = [...windowEvents]
+      .sort((a, b) => _byDate(a).localeCompare(_byDate(b)) || (a.start_time || '').localeCompare(b.start_time || ''))
+      .filter((e: any) => {
+        const key = (e.title || '').trim().toLowerCase()
+        if (!key) return true
+        if (_seenTitles.has(key)) return false
+        _seenTitles.add(key)
+        return true
+      })
+    const n = windowEventsDeduped.length
     const MAX = n >= 11 ? 5 : n >= 5 ? 3 : 1
 
     // Manually-flagged events always lead (still capped by the tier).
-    const manual = windowEvents.filter((e: any) => e.featured === true)
+    const manual = windowEventsDeduped.filter((e: any) => e.featured === true)
     if (manual.length >= MAX) return manual.slice(0, MAX)
 
     // Fill remaining slots with the window's genuine standouts: richest first,
     // soonest on ties (don't pad to MAX).
     const dstr = (e: any) => (e.date || '').slice(0, 10)
-    const ranked = windowEvents
+    const ranked = windowEventsDeduped
       .filter((e: any) => e.featured !== true)
       .sort((a, b) =>
         richness(b) - richness(a) ||
@@ -1901,19 +1938,44 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           : 'Featured Today'
         }</div>
       )}
-      {featuredEvents.length > 0 && (
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 6,
-          alignItems: 'stretch',
-          margin: '0 0 28px',
-        }}>
-          {featuredEvents.map((ev, i) => (
-            <V2FeaturedCard key={`featured-${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} viewedDay={viewedDayStr} />
-          ))}
-        </div>
-      )}
+      {featuredEvents.length > 0 && (() => {
+        const wk = (featuredEvents as any[]).filter(e => e._featuredDay)
+        const isWeekend = wk.length > 0
+        // Column-major day layout for weekend: order days, render a header
+        // row + a grid that fills DOWN each day-column (gridAutoFlow: column).
+        const DOWF = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+        const days = isWeekend ? Array.from(new Set(wk.map(e => e._featuredDay))).sort() : []
+        const ordered = isWeekend
+          ? days.flatMap(day => (featuredEvents as any[]).filter(e => e._featuredDay === day))
+          : (featuredEvents as any[])
+        const maxPerDay = isWeekend ? Math.max(...days.map(day => (featuredEvents as any[]).filter(e => e._featuredDay === day).length)) : 0
+        return (
+          <div style={{ margin: '0 0 28px' }}>
+            {isWeekend && (
+              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${days.length}, 1fr)`, gap: 6, marginBottom: 8 }}>
+                {days.map(day => {
+                  const [y, m, d] = day.split('-').map(Number)
+                  const dn = new Date(y, m - 1, d)
+                  const full = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][dn.getDay()]
+                  return <div key={day} style={{ fontSize: 13, fontWeight: 700, color: '#fff', textAlign: 'center' }}>{full}</div>
+                })}
+              </div>
+            )}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: isWeekend ? `repeat(${days.length}, 1fr)` : 'repeat(3, 1fr)',
+              gridTemplateRows: isWeekend ? `repeat(${maxPerDay}, auto)` : undefined,
+              gridAutoFlow: isWeekend ? 'column' : 'row',
+              gap: 6,
+              alignItems: 'stretch',
+            }}>
+              {ordered.map((ev, i) => (
+                <V2FeaturedCard key={`featured-${ev.title}-${ev.date}-${i}`} event={ev} onClick={() => handleEventClick(ev)} viewedDay={ev._featuredDay || viewedDayStr} />
+              ))}
+            </div>
+          </div>
+        )
+      })()}
       
       {loading ? (
         <div style={{ textAlign: 'center', padding: 60, color: 'rgba(255,255,255,0.4)' }}>Loading events…</div>
