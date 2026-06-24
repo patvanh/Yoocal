@@ -37,6 +37,12 @@ export default function SiteFooter({ cityLabel }: { cityLabel?: string }) {
             <a href="/for-businesses">For businesses</a>
             <a href="/submit">Submit event</a>
           </div>
+          <div className="yc-foot-col">
+            <span className="yc-foot-h">Legal</span>
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/contact">Contact</a>
+          </div>
         </div>
         <div className="yc-footer-bottom">
           <span>© 2026 Yoocal{cityLabel ? ` · ${cityLabel}` : ""}</span>
