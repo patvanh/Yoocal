@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-23T13:14:17.082073",
-  "audit_date": "2026-06-23",
+  "generated_at": "2026-06-24T12:45:08.671274",
+  "audit_date": "2026-06-24",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1763,
+      "before_count": 1786,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -27,20 +27,20 @@
           "fixed": 4,
           "examples": [
             {
+              "title": "Fascia Rolling Class",
+              "had_span": 181
+            },
+            {
               "title": "Group Fitness Classes",
               "had_span": 181
             },
             {
+              "title": "Old Town walking tour",
+              "had_span": 53
+            },
+            {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
-            },
-            {
-              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 65
-            },
-            {
-              "title": "Fascia Rolling Class",
-              "had_span": 181
             }
           ]
         },
@@ -126,7 +126,7 @@
           ]
         },
         "classification": {
-          "fixed": 401,
+          "fixed": 396,
           "examples": [
             {
               "title": "Challenge Accepted!",
@@ -157,21 +157,21 @@
               ]
             },
             {
-              "title": "Fascia Rolling Class",
+              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [],
               "after": [
-                "Wellness"
+                "Community"
               ]
             }
           ]
         }
       },
-      "after_count": 1766,
-      "total_fixes": 419
+      "after_count": 1789,
+      "total_fixes": 414
     },
     {
       "city": "elkhart-lake",
-      "before_count": 183,
+      "before_count": 214,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -221,34 +221,34 @@
           "examples": []
         }
       },
-      "after_count": 188,
+      "after_count": 219,
       "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 242,
+      "before_count": 233,
       "passes": {
         "past_dates": {
-          "fixed": 28,
+          "fixed": 30,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Meet the Cows - Dairy Farm Tour",
-              "date": "2026-06-15"
-            },
-            {
-              "title": "Cornhole @ Wallsburg Town Hall",
-              "date": "2026-06-16"
-            },
-            {
               "title": "Wednesday Morning Storytime @ Folklore Bookshop",
               "date": "2026-06-17"
             },
             {
+              "title": "Meet the Cows - Dairy Farm Tour",
+              "date": "2026-06-15"
+            },
+            {
               "title": "Heber Midday Wednesday Ride @ Southfield Park",
+              "date": "2026-06-17"
+            },
+            {
+              "title": "Reading with Therapy Dogs @ Wasatch County Library",
               "date": "2026-06-17"
             }
           ]
@@ -276,7 +276,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 5,
+          "fixed": 6,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
@@ -371,12 +371,12 @@
           ]
         }
       },
-      "after_count": 215,
-      "total_fixes": 48
+      "after_count": 204,
+      "total_fixes": 51
     },
     {
       "city": "jackson",
-      "before_count": 813,
+      "before_count": 811,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -387,11 +387,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 102
+              "had_span": 101
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 89
+              "had_span": 88
             }
           ]
         },
@@ -488,7 +488,7 @@
           "examples": []
         }
       },
-      "after_count": 845,
+      "after_count": 843,
       "total_fixes": 21
     }
   ]
