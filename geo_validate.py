@@ -209,8 +209,18 @@ def _address_city_far(e, city, target_lat, target_lng, radius_mi, cache):
     # latter is common from ChamberMaster address strings and otherwise leaves
     # "WI 54968" as the candidate, forcing a fallback to the (ungeocodable)
     # venue name and wrongly holding a local event.
-    _state_zip = r"(wisconsin|wi|utah|ut|wyoming|wy)?\s*\d{5}(?:-\d{4})?|(wisconsin|wi|utah|ut|wyoming|wy)"
+    # Pop a trailing state/zip segment. Matches: a US state name/abbrev with
+    # optional zip ("WI 54968"), a bare 5-digit zip, OR any bare 2-letter
+    # region code (US state or Canadian province like "MB"/"ON") — the last
+    # case catches foreign/far addresses whose city sits one segment in.
+    _state_zip = r"(wisconsin|wi|utah|ut|wyoming|wy)?\s*\d{5}(?:-\d{4})?|(wisconsin|wi|utah|ut|wyoming|wy)|[a-z]{2}"
+    _region = "WI"  # region to geocode the candidate city within; updated if
+                    # a non-local 2-letter region code (e.g. "MB") is popped.
     while parts and _re.fullmatch(_state_zip, parts[-1].strip(), _re.I):
+        _seg = parts[-1].strip()
+        _m2 = _re.fullmatch(r"[a-z]{2}", _seg, _re.I)
+        if _m2 and _seg.upper() not in ("WI", "UT", "WY"):
+            _region = _seg.upper()  # foreign/far region — geocode the city there
         parts.pop()
     if not parts:
         return None
@@ -226,7 +236,7 @@ def _address_city_far(e, city, target_lat, target_lng, radius_mi, cache):
         _phrase = r"\b" + r"\s+".join(_re.escape(t) for t in _name_tokens) + r"\b"
         if _re.search(_phrase, cand.lower()):
             return False
-    geo = geocode(cand + ", WI", cache)
+    geo = geocode(cand + ", " + _region, cache)
     if not geo:
         return None
     d = _haversine_mi(target_lat, target_lng, geo[0], geo[1])
