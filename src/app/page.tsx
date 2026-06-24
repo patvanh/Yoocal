@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import HomeRouter from '@/components/HomeRouter'
+import HomeServer from '@/components/HomeServer'
 
-// HomeRouter reads query params and localStorage to decide which view
-// to render; can't be statically prerendered.
-export const dynamic = 'force-dynamic'
+// HomeRouter (client) still handles the interactive brand view and the
+// legacy ?city= redirect; it's wrapped in Suspense for useSearchParams.
+// HomeServer renders the canonical brand/city content into the HTML so the
+// homepage isn't a client-only shell to crawlers.
 
 export const metadata: Metadata = {
   title: 'Yoocal — Local events in scenic towns across the US',
@@ -20,5 +23,12 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return <HomeRouter />
+  return (
+    <>
+      <Suspense fallback={null}>
+        <HomeRouter />
+      </Suspense>
+      <HomeServer />
+    </>
+  )
 }
