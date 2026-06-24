@@ -90,8 +90,33 @@ export default async function VenuesPage(
     0,
   );
 
+  // ItemList of venues (each a Place with name + address) so this list page
+  // is machine-readable to crawlers. Venues have no detail pages, so items
+  // carry the venue's PostalAddress rather than a url.
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Venues in ${cfg.label}`,
+    numberOfItems: venuesWithEvents.length,
+    itemListElement: venuesWithEvents.map((v, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Place',
+        name: v.venue.name,
+        ...(v.venue.address ? { address: v.venue.address } : {}),
+      },
+    })),
+  };
+
   return (
     <>
+      {venuesWithEvents.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+      )}
       <SiteNav activeKey="venues" cityKey={cityKey} />
 
       <div className="hero">
