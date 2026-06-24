@@ -1898,7 +1898,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         gap: isMobile ? 8 : 12, margin: '4px 0 18px',
         textAlign: isMobile ? 'center' : undefined,
       }}>
-        <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: isMobile ? 19 : 24, color: '#fff', justifySelf: isMobile ? 'center' : 'start' }}>Today in {cityLabel}</div>
+        <div style={{ fontFamily: "'DM Serif Display', serif", fontSize: isMobile ? 19 : 24, color: '#fff', justifySelf: isMobile ? 'center' : 'start' }}>{({ today: 'Today in ', tomorrow: 'Tomorrow in ', weekend: 'This Weekend in ', '7days': 'This Week in ', all: 'Upcoming in ', pickdate: 'Events in ' } as Record<string, string>)[dayFilter] || 'Today in '}{cityLabel}</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 14, justifyContent: 'center', justifySelf: 'center' }}>
           <button onClick={shiftDay(-1)} style={{
             background: 'rgba(255,255,255,0.10)', border: '1px solid rgba(255,255,255,0.25)',
