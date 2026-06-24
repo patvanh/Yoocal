@@ -39,7 +39,7 @@ export default function CityHubServer({ cityKey }: { cityKey: CityKey }) {
   return (
     <section className="hub-server" aria-label={`Upcoming events in ${cityName}`}>
       <div className="hub-server-inner">
-        <h1 className="hub-server-h1">Things to do in {cityName}</h1>
+        <h1 className="hub-server-h1">{cityName} events calendar</h1>
         <p className="hub-server-summary">
           {next30} {next30 === 1 ? "event" : "events"} in {cfg.label} over the next 30 days —
           concerts, festivals, races, food, and family events, updated daily. Browse the full
@@ -63,7 +63,7 @@ export default function CityHubServer({ cityKey }: { cityKey: CityKey }) {
       </div>
 
       <style>{`
-        .hub-server { background: #faf9ff; padding: 96px 16px 16px; }
+        .hub-server { background: #faf9ff; padding: 8px 16px 48px; }
         .hub-server-inner { max-width: 1100px; margin: 0 auto; }
         .hub-server-h1 { font-family: 'DM Serif Display', serif; font-size: 30px; line-height: 1.12; color: #1e1b3a; margin: 0 0 10px; }
         .hub-server-summary { font-size: 15px; line-height: 1.6; color: #5b5676; margin: 0 0 18px; max-width: 720px; }
@@ -73,7 +73,7 @@ export default function CityHubServer({ cityKey }: { cityKey: CityKey }) {
         .hub-server-date { font-size: 11px; font-weight: 700; color: #7b5cff; }
         .hub-server-title { font-size: 14px; font-weight: 600; color: #1e1b3a; line-height: 1.25; }
         .hub-server-venue { font-size: 12px; color: #8a85a6; }
-        @media (max-width: 640px) { .hub-server { padding: 84px 16px 12px; } .hub-server-h1 { font-size: 25px; } }
+        @media (max-width: 640px) { .hub-server { padding: 8px 16px 36px; } .hub-server-h1 { font-size: 25px; } }
       `}</style>
     </section>
   )
