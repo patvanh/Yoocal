@@ -55,8 +55,31 @@ export default async function CityWeekendPage(
   const grouped = groupEventsByDay(allEvents, weekendWindow);
   const total = grouped.reduce((sum, g) => sum + g.events.length, 0);
 
+  // ItemList schema of the weekend's events (matches what the page renders),
+  // so this list page is machine-readable to crawlers.
+  const flatEvents = grouped.flatMap((b) => b.events);
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `This weekend in ${cfg.label}`,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: Math.min(flatEvents.length, 50),
+    itemListElement: flatEvents.slice(0, 50).map((e, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://www.yoocal.com/${city}/${eventSlug(e)}`,
+      name: e.title || 'Event',
+    })),
+  };
+
   return (
     <>
+      {flatEvents.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+      )}
       <SiteNav activeKey="weekend" cityKey={cityKey} />
       <div className="hero">
         <div className="hero-content">
