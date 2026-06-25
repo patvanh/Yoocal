@@ -202,6 +202,7 @@ jobs:
           HEBER="${{ steps.scrape_heber.outcome }}"
           ELKHART="${{ steps.scrape_elkhart.outcome }}"
           JACKSON="${{ steps.scrape_jackson.outcome }}"
+          GREENLAKE="${{ steps.scrape_greenlake.outcome }}"
           REPAIR="${{ steps.auto_repair.outcome }}"
           AUDIT="${{ steps.audit.outcome }}"
 
@@ -214,6 +215,7 @@ jobs:
             echo "| Heber Valley | ${HEBER} |"
             echo "| Elkhart Lake | ${ELKHART} |"
             echo "| Jackson Hole | ${JACKSON} |"
+            echo "| Green Lake | ${GREENLAKE} |"
             echo "| Auto-repair | ${REPAIR} |"
             echo "| Quality audit | ${AUDIT} |"
             echo ""
@@ -233,6 +235,9 @@ jobs:
             fi
             if [ -f public/events-jackson.json ]; then
               echo "- Jackson Hole events in JSON: $(python -c "import json; d=json.load(open('public/events-jackson.json')); print(len(d.get('events', d) if isinstance(d, dict) else d))")"
+            fi
+            if [ -f public/events-greenlake.json ]; then
+              echo "- Green Lake events in JSON: $(python -c "import json; d=json.load(open('public/events-greenlake.json')); print(len(d.get('events', d) if isinstance(d, dict) else d))")"
             fi
           } >> "$GITHUB_STEP_SUMMARY"
 
