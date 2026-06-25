@@ -386,7 +386,7 @@ export default function HomeBrand() {
           overflow-x: hidden;
         }
         .hb-hero {
-          background: var(--dark);
+          background: linear-gradient(180deg, rgba(26,24,48,0.55), rgba(26,24,48,0.70)), url('/home-hero.jpg') center/cover no-repeat;
           padding: 92px 80px 72px;
           position: relative;
           overflow: visible;        /* let the search dropdown escape the hero */
