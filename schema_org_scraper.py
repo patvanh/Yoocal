@@ -238,13 +238,25 @@ def scrape_schema_org_events(
             # filter; truly-past single events were already dropped above.
             pass
 
-        # If JSON-LD didn't supply start_time, try to extract from visible HTML
+        # If JSON-LD didn't supply start_time, try to extract from visible HTML.
         if not parsed.get("start_time"):
             st, et = _extract_time_from_html(html_text)
             if st:
                 parsed["start_time"] = st
                 if et:
                     parsed["end_time"] = et
+        else:
+            # JSON-LD DID supply a time, but some sources (e.g. WordPress MEC)
+            # emit a buggy startDate in their JSON-LD while showing the correct
+            # time to humans in the page body. If the visible HTML contains an
+            # explicit time RANGE ("10:00 am to 1:00 pm") that disagrees with the
+            # JSON-LD start_time, trust the human-visible range. Only a clear
+            # range overrides (a lone time is too weak a signal); matching times
+            # and range-less pages leave the JSON-LD time untouched.
+            html_st, html_et = _extract_time_from_html(html_text)
+            if html_st and html_et and html_st != parsed.get("start_time"):
+                parsed["start_time"] = html_st
+                parsed["end_time"] = html_et
 
         # Stamp weekly recurrence (if the page declared it) so the build
         # fan-out expands this into one event per matching weekday in range.
