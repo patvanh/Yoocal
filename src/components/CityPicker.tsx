@@ -39,7 +39,17 @@ export default function CityPicker({ cityKey }: { cityKey?: string }) {
     setOpen(false)
     if (c.key === current.key) return
     try { window.localStorage.setItem("yoocal.lastCity", c.key) } catch {}
-    router.push(`/${c.slug}`)
+    // Context-aware: keep the user on the same page type, just swap the city.
+    const slugs = CITIES.map((x) => x.slug)
+    const path = window.location.pathname
+    const parts = path.split("/").filter(Boolean)
+    const idx = parts.findIndex((p) => slugs.includes(p))
+    if (idx !== -1) {
+      parts[idx] = c.slug
+      router.push("/" + parts.join("/"))
+    } else {
+      router.push(`/${c.slug}`)
+    }
   }
 
   return (
