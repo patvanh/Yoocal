@@ -22,16 +22,19 @@ export default function AboutJacksonHolePage() {
       <SiteNav activeKey="about" cityKey="jackson" />
 
       <div className="hero">
-        <div className="hero-content">
-          <div className="hero-eyebrow">Jackson Hole, Wyoming · 83001</div>
-          <h1>
-            Where the <em>mountains</em> meet the world.
-          </h1>
-          <p>
-            6,237 feet in the shadow of the Tetons. World-class festivals,
-            a working rodeo, deep snow in winter, and the doorway to Grand
-            Teton and Yellowstone National Parks.
-          </p>
+        <div className="hero-inner-jh">
+          <div className="hero-content-jh">
+            <div className="hero-place-title-jh">Jackson Hole, Wyoming</div>
+            <h1>
+              Where the <em>mountains</em> meet the world.
+            </h1>
+            <p>
+              6,237 feet in the shadow of the Tetons. World-class festivals,
+              a working rodeo, deep snow in winter, and the doorway to Grand
+              Teton and Yellowstone National Parks.
+            </p>
+          </div>
+          <div className="hero-image-jh"><img src="/jackson.jpg" alt="Jackson Hole, Wyoming valley at sunset" /></div>
         </div>
       </div>
 
@@ -220,7 +223,17 @@ export default function AboutJacksonHolePage() {
           content: ''; position: absolute; inset: 0;
           background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(83,74,183,0.4) 0%, transparent 70%);
         }
-        .hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .hero-inner-jh { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-start; gap: 60px; }
+        .hero-content-jh { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 440px; }
+        .hero-image-jh { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
+        .hero-image-jh img { width: 100%; height: 440px; object-fit: cover; display: block; }
+        .hero-place-title-jh {
+          font-family: 'DM Serif Display', serif;
+          color: var(--purple-light);
+          font-size: clamp(52px, 7vw, 84px);
+          font-weight: 400; line-height: 1.04;
+          margin-bottom: 44px; display: block;
+        }
         .hero-eyebrow {
           display: inline-flex; align-items: center; gap: 8px;
           background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9);
@@ -231,13 +244,14 @@ export default function AboutJacksonHolePage() {
         }
         .hero h1 {
           font-family: 'DM Serif Display', serif;
-          font-size: clamp(40px, 6vw, 72px);
-          color: white; line-height: 1.05; margin-bottom: 20px;
+          font-size: clamp(26px, 3.2vw, 40px);
+          color: white; line-height: 1.12; margin-bottom: 28px;
         }
         .hero h1 em { font-style: italic; color: var(--purple-light); }
         .hero p {
           font-size: 18px; color: rgba(255,255,255,0.6);
           line-height: 1.7; font-weight: 300; max-width: 560px;
+          margin-top: auto;
         }
 
         .content { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
@@ -312,8 +326,15 @@ export default function AboutJacksonHolePage() {
         }
         .cta-btn:hover { background: var(--purple-light); }
 
+        @media (max-width: 1100px) {
+          .hero-inner-jh { flex-direction: column; gap: 24px; align-items: stretch; }
+          .hero-content-jh { min-height: 0; }
+          .hero p { margin-top: 16px; }
+          .hero-image-jh img { height: 320px; }
+        }
         @media (max-width: 768px) {
           .hero { padding: 100px 24px 60px; }
+          .hero-image-jh img { height: 240px; }
           .content { padding: 48px 24px; }
           .intro { grid-template-columns: 1fr; gap: 40px; }
           .grid-3, .season-grid { grid-template-columns: 1fr 1fr; }

@@ -33,7 +33,9 @@ export default function SiteNav({
           ? "/about/heber"
           : cityKey === "greenlake"
             ? "/about/green-lake"
-            : "/about";
+            : cityKey === "jackson"
+              ? "/about/jackson-hole"
+              : "/about";
   const aboutLabel =
     cityKey === "parkcity"
       ? "About Park City"
@@ -43,7 +45,9 @@ export default function SiteNav({
           ? "About Heber"
           : cityKey === "greenlake"
             ? "About Green Lake"
-            : "About";
+            : cityKey === "jackson"
+              ? "About Jackson Hole"
+              : "About";
 
   const KEY_TO_SLUG: Record<string,string> = {parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole",greenlake:"green-lake"};
   const weekendHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/this-weekend` : "/this-weekend";
@@ -103,6 +107,7 @@ export default function SiteNav({
             </>
           )}
           <a href="/#business">For businesses</a>
+          {cityKey && <span className="yc-nav-pickers" style={{ display: 'flex', alignItems: 'center', marginLeft: 'auto' }}><CityPicker cityKey={cityKey} /></span>}
           <a
             href="https://forms.groupmail.info/subscribe/yoocal"
             target="_blank"
@@ -115,15 +120,7 @@ export default function SiteNav({
         {/* Tight right-cluster: city + radius + Submit, grouped with a small
             gap on the right (matches the mockup). Sits outside yc-nav-links so
             its wide 32px gap doesn't spread these apart. */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          {/* Pickers: header placement is MOBILE-ONLY. On desktop they
-              render under the filter pills in CalendarClient instead.
-              CSS .yc-nav-pickers hides this at >=769px (matches the
-              768px breakpoint used for the inline desktop placement). */}
-          <span className="yc-nav-pickers" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            {cityKey && <CityPicker cityKey={cityKey} />}
-            {cityKey && <RadiusPicker />}
-          </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 16 }}>
           <a href="/submit" className="yc-nav-secondary">Submit event</a>
         </div>
       </nav>
@@ -175,7 +172,9 @@ export default function SiteNav({
         .yc-nav-links {
           display: flex;
           align-items: center;
-          gap: 32px;
+          gap: 28px;
+          flex: 1;
+          margin-left: 40px;
         }
         .yc-nav-links a {
           font-size: 14px;
@@ -193,9 +192,9 @@ export default function SiteNav({
           background: transparent;
           border: 1.5px solid var(--purple);
           color: var(--purple) !important;
-          padding: 5px 10px;
+          padding: 7px 14px;
           border-radius: 100px;
-          font-size: 11.5px;
+          font-size: 12px;
           font-weight: 600;
           white-space: nowrap;
           text-decoration: none;
@@ -206,24 +205,21 @@ export default function SiteNav({
         .yc-nav-links a.yc-nav-cta {
           background: var(--purple);
           color: white !important;
-          padding: 8px 20px;
+          padding: 7px 14px;
           border-radius: 100px;
-          font-size: 13px;
+          font-size: 12px;
           font-weight: 600;
           white-space: nowrap;
         }
         .yc-nav-links a.yc-nav-cta:hover {
           background: var(--purple-light);
         }
-        /* Header pickers: hidden on desktop (shown under the filter
-           pills instead); revealed on mobile in the media query below. */
-        .yc-nav-pickers { display: none !important; }
-        @media (max-width: 1150px) {
-          .yc-nav-pickers { display: flex !important; }
+        /* City picker lives in the header at all widths. */
+        .yc-nav-pickers { display: flex !important; }
+        @media (max-width: 860px) {
           .yc-nav { padding: 0 14px; }
-          /* Mobile nav matches the mockup: logo + city pill + Submit event only.
-             Hide every link except Submit event (Get notified + For businesses
-             drop off; the city pill is not a .yc-nav-links child so it stays). */
+          /* True mobile: logo + city pill + Submit event only. Hide the main
+             nav links and Get-notified; keep Submit event and the city pill. */
           .yc-nav-links a:not(.yc-nav-secondary) { display: none; }
         }
       `}</style>

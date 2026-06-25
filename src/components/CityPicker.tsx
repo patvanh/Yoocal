@@ -50,8 +50,8 @@ export default function CityPicker({ cityKey }: { cityKey?: string }) {
         style={{
           display: "flex", alignItems: "center", gap: 4,
           background: "#fff", border: "1.5px solid rgba(83,74,183,0.25)",
-          borderRadius: 100, padding: "5px 10px", cursor: "pointer",
-          fontFamily: "inherit", fontSize: 11.5, fontWeight: 600, color: "#3a3550",
+          borderRadius: 100, padding: "7px 14px", cursor: "pointer",
+          fontFamily: "inherit", fontSize: 12, fontWeight: 600, color: "#3a3550",
           whiteSpace: "nowrap",
         }}
         aria-haspopup="listbox"
