@@ -116,8 +116,14 @@ export default function SiteNav({
             gap on the right (matches the mockup). Sits outside yc-nav-links so
             its wide 32px gap doesn't spread these apart. */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          {cityKey && <CityPicker cityKey={cityKey} />}
-          {cityKey && <RadiusPicker />}
+          {/* Pickers: header placement is MOBILE-ONLY. On desktop they
+              render under the filter pills in CalendarClient instead.
+              CSS .yc-nav-pickers hides this at >=769px (matches the
+              768px breakpoint used for the inline desktop placement). */}
+          <span className="yc-nav-pickers" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {cityKey && <CityPicker cityKey={cityKey} />}
+            {cityKey && <RadiusPicker />}
+          </span>
           <a href="/submit" className="yc-nav-secondary">Submit event</a>
         </div>
       </nav>
@@ -207,7 +213,11 @@ export default function SiteNav({
         .yc-nav-links a.yc-nav-cta:hover {
           background: var(--purple-light);
         }
+        /* Header pickers: hidden on desktop (shown under the filter
+           pills instead); revealed on mobile in the media query below. */
+        .yc-nav-pickers { display: none !important; }
         @media (max-width: 768px) {
+          .yc-nav-pickers { display: flex !important; }
           .yc-nav { padding: 0 14px; }
           /* Mobile nav matches the mockup: logo + city pill + Submit event only.
              Hide every link except Submit event (Get notified + For businesses

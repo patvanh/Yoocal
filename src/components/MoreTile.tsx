@@ -49,9 +49,9 @@ export default function MoreTile({
           width: "100%", padding: "9px 2px", borderRadius: 12, cursor: "pointer",
           fontFamily: "inherit", fontSize: 10.5, fontWeight: 600, lineHeight: 1.15, textAlign: "center",
           color: active ? "#fff" : "#3a3550",
-          background: active ? "#7c5cff" : "transparent",
-          border: active ? "1px solid #7c5cff" : "1px solid rgba(26,24,48,0.12)",
-          boxShadow: active ? "0 4px 14px rgba(124,92,255,0.35)" : "none",
+          background: active ? "#7c5cff" : "#fff",
+          border: active ? "1px solid #7c5cff" : "1px solid rgba(255,255,255,0.85)",
+          boxShadow: active ? "0 4px 14px rgba(124,92,255,0.35)" : "0 2px 10px rgba(0,0,0,0.18)",
           transition: "background 0.15s, color 0.15s",
         }}
         aria-haspopup="listbox"

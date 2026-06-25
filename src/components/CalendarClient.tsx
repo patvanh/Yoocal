@@ -1,6 +1,8 @@
 'use client'
 
 import CitySearch from "@/components/CitySearch"
+import CityPicker from "@/components/CityPicker"
+import RadiusPicker from "@/components/RadiusPicker"
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useSearchParams } from 'next/navigation'
@@ -1604,7 +1606,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         position: 'relative', overflow: 'visible',
         margin: 0, padding: '96px 28px 24px',
         marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
-        borderRadius: 20,
+        borderRadius: '20px 20px 0 0',
         background: "linear-gradient(180deg, rgba(26,24,48,0.35), rgba(26,24,48,0.62)), url('/hero.jpg') center/cover no-repeat",
       }}>
         <div style={{ textAlign: 'center', marginBottom: 22 }}>
@@ -1805,16 +1807,14 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
           
         </div>
       </div>
-      </div>
         {/* Filter panel (mockup layout): one white card with a row of category
             tiles on top and flat quick-filter pills below. visibility (not
             display:none) keeps height reserved when the search dropdown is open. */}
         <div style={{
           visibility: dropdownOpen ? 'hidden' : 'visible',
-          background: '#fff', padding: '16px 14px',
+          background: 'transparent', padding: '4px 14px 28px',
           marginBottom: 0, marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
-          borderRadius: 20,
-          boxShadow: '0 6px 24px rgba(0,0,0,0.10)',
+          borderRadius: 0,
           display: 'flex', flexDirection: 'column', gap: 10,
         }}>
           <div style={{ display: 'flex', gap: 6, justifyContent: 'center' }}>
@@ -1828,9 +1828,9 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                     flex: '1 1 0', minWidth: 0, maxWidth: 76, padding: '9px 2px', borderRadius: 12, cursor: 'pointer',
                     fontFamily: 'inherit', fontSize: 10.5, fontWeight: 600, lineHeight: 1.15, textAlign: 'center',
                     color: on ? '#fff' : '#3a3550',
-                    background: on ? '#7c5cff' : 'transparent',
-                    border: on ? '1px solid #7c5cff' : '1px solid rgba(26,24,48,0.12)',
-                    boxShadow: on ? '0 4px 14px rgba(124,92,255,0.35)' : 'none',
+                    background: on ? '#7c5cff' : '#fff',
+                    border: on ? '1px solid #7c5cff' : '1px solid rgba(255,255,255,0.85)',
+                    boxShadow: on ? '0 4px 14px rgba(124,92,255,0.35)' : '0 2px 10px rgba(0,0,0,0.18)',
                     transition: 'background 0.15s, color 0.15s',
                   }}>
                   <Icon size={18} strokeWidth={1.75} />
@@ -1857,8 +1857,8 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
               padding: '6px 14px', borderRadius: 999, cursor: 'pointer',
               fontFamily: 'inherit', fontSize: 12.5, fontWeight: 600, whiteSpace: 'nowrap' as const,
               color: sel ? '#fff' : '#3a3550',
-              background: sel ? '#7c5cff' : 'transparent',
-              border: sel ? '1px solid #7c5cff' : '1px solid rgba(26,24,48,0.12)',
+              background: sel ? '#7c5cff' : '#fff',
+              border: sel ? '1px solid #7c5cff' : '1px solid rgba(255,255,255,0.85)',
               transition: 'background 0.15s, color 0.15s',
             })
             return (
@@ -1877,12 +1877,25 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
               </div>
             )
           })()}
+          {/* City + radius pickers: DESKTOP placement (under the filter
+              pills). On mobile these live in the SiteNav header instead;
+              .yc-inline-pickers is hidden <=768px to match SiteNav's
+              768px breakpoint so they appear in exactly one place. */}
+          <div className="yc-inline-pickers" style={{ display: 'flex', gap: 8, justifyContent: 'center', alignItems: 'center', marginTop: 4 }}>
+            <CityPicker cityKey={cityKey} />
+            <RadiusPicker />
+          </div>
+          <style>{`
+            .yc-inline-pickers { display: flex; }
+            @media (max-width: 768px) { .yc-inline-pickers { display: none !important; } }
+          `}</style>
         </div>
+      </div>
       {/* Purple band behind the events region (date header + featured +
           list). Full-bleed so it spans the page; cards sit on top. */}
       <div style={{
         background: '#2d2853',
-        borderRadius: 20,
+        borderRadius: '0 0 20px 20px',
         marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
         marginTop: 0, padding: '24px 14px 28px', boxSizing: 'border-box',
       }}>

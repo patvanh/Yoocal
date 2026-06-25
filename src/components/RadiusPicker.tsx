@@ -55,7 +55,7 @@ export default function RadiusPicker() {
           display: "flex", alignItems: "center", gap: 4,
           background: "#fff", border: "1.5px solid rgba(83,74,183,0.25)",
           borderRadius: 100, padding: "5px 10px", cursor: "pointer",
-          fontFamily: "inherit", fontSize: 11.5, fontWeight: 600, color: "#534AB7",
+          fontFamily: "inherit", fontSize: 11.5, fontWeight: 600, color: "#3a3550",
           whiteSpace: "nowrap",
         }}
         aria-haspopup="listbox"
