@@ -150,15 +150,37 @@ def _scrape_tribe_api(base_url: str, label: str, source_name: str,
 
     while pages < max_pages:
         params["page"] = pages + 1
-        try:
-            r = requests.get(base_url, headers=HEADERS, params=params, timeout=20)
-            if r.status_code == 400:
-                # Tribe returns 400 when page > available pages — normal exit
+        # Fetch with retry. A transient error (timeout, 5xx, connection
+        # reset) must NOT be treated as end-of-pages: bailing on page 1
+        # returns 0 events, which makes the caller fall through to the
+        # legacy browser fallback (and silently under-deliver). Retry the
+        # same page up to 3x with backoff. A 400 is the REAL end signal
+        # (Tribe returns it past the last page) and exits immediately.
+        data = None
+        _end_of_pages = False
+        for _attempt in range(3):
+            try:
+                r = requests.get(base_url, headers=HEADERS, params=params, timeout=20)
+                if r.status_code == 400:
+                    _end_of_pages = True
+                    break
+                r.raise_for_status()
+                data = r.json()
                 break
-            r.raise_for_status()
-            data = r.json()
-        except Exception as ex:
-            print(f"  [Elkhart/Tribe] fetch failed on page {pages + 1}: {ex}")
+            except Exception as ex:
+                if _attempt < 2:
+                    import time as _time
+                    _wait = 2 * (_attempt + 1)
+                    print(f"  [{label}] page {pages + 1} attempt {_attempt + 1} "
+                          f"failed ({ex}); retrying in {_wait}s")
+                    _time.sleep(_wait)
+                else:
+                    print(f"  [{label}] page {pages + 1} failed after 3 attempts: {ex}")
+        if _end_of_pages:
+            break
+        if data is None:
+            # All retries exhausted on a transient error. Exit with what we
+            # have rather than spin; caller still gets the pages that worked.
             break
 
         page_events = data.get("events") or []
