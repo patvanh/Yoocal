@@ -23,7 +23,7 @@ export default function AboutParkCityPage() {
 
       <div className="hero">
         <div className="hero-content">
-          <div className="hero-eyebrow">Park City, Utah · 84060</div>
+          <div className="hero-eyebrow">Park City, Utah</div>
           <h1>
             The mountain town that <em>never</em> stops.
           </h1>
@@ -305,14 +305,13 @@ export default function AboutParkCityPage() {
         }
         .hero::before { content: ""; position: absolute; inset: 0; background: url(/hero.jpg) center 40% / cover no-repeat; opacity: 0.25; }
         .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,24,48,0.6) 0%, rgba(26,24,48,0.4) 50%, rgba(26,24,48,0.8) 100%); }
-        .hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; text-align: center; }
         .hero-eyebrow {
-          display: inline-flex; align-items: center; gap: 8px;
-          background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9);
-          font-size: 12px; font-weight: 600;
-          padding: 5px 14px; border-radius: 100px;
-          margin-bottom: 24px; letter-spacing: 0.5px;
-          border: 1px solid rgba(255,255,255,0.15);
+          font-family: 'DM Serif Display', serif;
+          color: var(--purple-light);
+          font-size: clamp(48px, 7vw, 80px);
+          font-weight: 400; line-height: 1.05;
+          margin-bottom: 20px; display: block;
         }
         .hero h1 {
           font-family: 'DM Serif Display', serif;
