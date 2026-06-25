@@ -1246,7 +1246,7 @@ def _cross_source_fuzzy_merge(events: list) -> list:
     import re as _re
     _RACE_NUM = _re.compile(r"^(\d+\s*k|\d+\s*mile|half|marathon|\d{2,4})$")
 
-    def _compatible(t1, t2):
+    def _compatible(t1, t2, same_venue=False):
         n1, n2 = _normalize_title(t1 or ""), _normalize_title(t2 or "")
         if not n1 or not n2:
             return False
@@ -1282,6 +1282,23 @@ def _cross_source_fuzzy_merge(events: list) -> list:
         sd_small = small - _DOW
         if sd_small and sd_small.issubset(big - _DOW) and len(sd_small - _STOP) >= 2:
             return True
+        # (c) character-level near-identity: catches one-word typos
+        # ('Tournament'/'Tounament'), curly-quote/plural variants ('Slow
+        # Food'/'Slow Foods'), and preposition swaps ('from'/'of Little
+        # Feat') that token-set Jaccard misses. High ratio only (>=0.90).
+        # Guards: never bridge a cohort marker (men's vs women's, junior
+        # vs senior) -- genuinely DIFFERENT events with near-identical
+        # strings. Race/number diffs already rejected at top of _compatible.
+        # Caller additionally restricts this to SAME-VENUE pairs.
+        import difflib as _difflib
+        _DISTINCT = {"men", "mens", "women", "womens", "boys", "girls",
+                     "junior", "juniors", "senior", "seniors", "adult",
+                     "adults", "kids", "youth", "beginner", "advanced",
+                     "intermediate"}
+        _diff = s1 ^ s2
+        if same_venue and not (_diff & _DISTINCT) and \
+                _difflib.SequenceMatcher(None, n1, n2).ratio() >= 0.90:
+            return True
         return False
 
     by_date = _dd(list)
@@ -1297,7 +1314,11 @@ def _cross_source_fuzzy_merge(events: list) -> list:
             for j in range(i + 1, len(group)):
                 if dropped[j] or group[i].get("source") == group[j].get("source"):
                     continue
-                if _compatible(group[i].get("title"), group[j].get("title")):
+                _vi = _normalize_venue(group[i].get("venue_name") or group[i].get("location") or "")
+                _vj = _normalize_venue(group[j].get("venue_name") or group[j].get("location") or "")
+                _same_venue = bool(_vi) and _vi == _vj
+                if _compatible(group[i].get("title"), group[j].get("title"),
+                               same_venue=_same_venue):
                     group[i] = merge_events([group[i], group[j]])
                     dropped[j] = True
                     merged += 1
