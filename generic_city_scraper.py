@@ -187,6 +187,25 @@ def _local_date_time(iso, lng):
     return dt.strftime("%Y-%m-%d"), "%d:%02d %s" % (dt.hour % 12 or 12, dt.minute, ap)
 
 
+def _is_all_day_span(start_str, end_str):
+    """True if start/end look like an all-day event encoded as a ~23h59m
+    midnight-crossing span (e.g. startDate 2026-09-12T05:00:00Z,
+    endDate 2026-09-13T04:59:00Z) — no meaningful clock time, single day."""
+    if not start_str or not end_str:
+        return False
+    try:
+        from datetime import datetime as _dt
+        def _p(x):
+            return _dt.fromisoformat(x.strip().replace("Z", "+00:00"))
+        a, b = _p(start_str), _p(end_str)
+    except Exception:
+        return False
+    delta = (b - a).total_seconds()
+    if not (86100 <= delta <= 86700):
+        return False
+    return a.minute == 0 and b.minute == 59
+
+
 def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=None, is_aggregator=False):
     """Free fallback: build a FULL event from schema.org MICRODATA on a detail
     page whose JSON-LD lacks an Event (ChamberMaster/GrowthZone pattern).
@@ -234,6 +253,17 @@ def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=
     if not date:
         return None
     end_date, _end_time = _local_date_time(end, lng)
+
+    # All-day detection (ChamberMaster/GrowthZone): an all-day event is encoded
+    # midnight-to-midnight, surfacing as start ~T05:00Z and end ~next-day
+    # T04:59Z (a ~23h59m span crossing midnight). That is NOT a 5 AM start nor a
+    # 2-day event. Detect from the RAW UTC strings (before tz conversion) and
+    # drop the bogus time + collapse the spurious next-day end so it stays a
+    # single all-day event and does not fan out.
+    if _is_all_day_span(start, end):
+        _start_time = None
+        _end_time = None
+        end_date = None
 
     # Venue: itemprop="location" is a Place; grab the first nested itemprop="name".
     venue = None

@@ -595,7 +595,18 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
         # End
         end_str = (raw.get("endDate") or "").strip() if isinstance(raw.get("endDate"), str) else ""
         end_date_iso, end_time = _parse_iso_datetime(end_str) if end_str else (None, None)
-        if end_date_iso == date_iso:
+
+        # All-day detection. Chamber/GrowthZone calendars encode an all-day
+        # event as midnight-to-midnight, which surfaces as start ~T05:00Z and
+        # end ~next-day T04:59Z (a ~23h59m span crossing midnight). That is NOT
+        # a 5 AM start nor a 2-day event; it is a single all-day event. Detect
+        # the signature from the raw strings and: (a) drop the bogus time, and
+        # (b) collapse the spurious next-day end so it does not fan out.
+        if _is_all_day_span(start_str, end_str):
+            start_time = None
+            end_time = None
+            end_date_iso = None
+        elif end_date_iso == date_iso:
             end_date_iso = None  # same day, not a multi-day event
 
         # Location
@@ -709,6 +720,32 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
 
     except Exception:
         return None
+
+
+def _is_all_day_span(start_str, end_str):
+    """True if start/end look like an all-day event encoded as a ~23h59m
+    midnight-crossing span (e.g. startDate 2026-09-12T05:00:00Z,
+    endDate 2026-09-13T04:59:00Z). Such events have no meaningful clock time
+    and are a single day, not multi-day."""
+    if not start_str or not end_str:
+        return False
+    try:
+        from datetime import datetime as _dt
+        def _parse(x):
+            x = x.strip().replace("Z", "+00:00")
+            return _dt.fromisoformat(x)
+        a = _parse(start_str)
+        b = _parse(end_str)
+    except Exception:
+        return False
+    delta = (b - a).total_seconds()
+    # 23h55m..24h05m span = all-day signature.
+    if not (86100 <= delta <= 86700):
+        return False
+    # And the start should sit at/near a midnight boundary in some tz:
+    # minutes-past-hour ~0 and the end ~59. Keeps real ~24h timed events
+    # (rare) from being misclassified.
+    return a.minute == 0 and b.minute == 59
 
 
 def _parse_iso_datetime(s):
