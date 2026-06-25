@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-24T12:45:08.671274",
-  "audit_date": "2026-06-24",
+  "generated_at": "2026-06-25T12:38:59.215329",
+  "audit_date": "2026-06-25",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1786,
+      "before_count": 1765,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -24,23 +24,27 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 5,
           "examples": [
-            {
-              "title": "Fascia Rolling Class",
-              "had_span": 181
-            },
             {
               "title": "Group Fitness Classes",
               "had_span": 181
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 53
+              "had_span": 52
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
               "had_span": 57
+            },
+            {
+              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
+              "had_span": 63
+            },
+            {
+              "title": "Fascia Rolling Class",
+              "had_span": 181
             }
           ]
         },
@@ -126,8 +130,18 @@
           ]
         },
         "classification": {
-          "fixed": 396,
+          "fixed": 392,
           "examples": [
+            {
+              "title": "A Spirited Paint Party with Artist Briar West",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Food & Drink"
+              ]
+            },
             {
               "title": "Challenge Accepted!",
               "before": [],
@@ -143,21 +157,14 @@
               ]
             },
             {
+              "title": "Old Town walking tour",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
               "title": "Progressive Art Experience",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Summer Garden Camps",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [],
               "after": [
                 "Community"
@@ -166,12 +173,12 @@
           ]
         }
       },
-      "after_count": 1789,
-      "total_fixes": 414
+      "after_count": 1768,
+      "total_fixes": 411
     },
     {
       "city": "elkhart-lake",
-      "before_count": 214,
+      "before_count": 123,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -182,28 +189,8 @@
           "examples": []
         },
         "multi_day_splits": {
-          "fixed": 2,
-          "examples": [
-            {
-              "title": "WeatherTech Vintage Weekend with Brian Redman",
-              "original_span": "2026-07-16 to 2026-07-19",
-              "split_into": [
-                "2026-07-16",
-                "2026-07-17",
-                "2026-07-18",
-                "2026-07-19"
-              ]
-            },
-            {
-              "title": "GT World Challenge America",
-              "original_span": "2026-08-28 to 2026-08-30",
-              "split_into": [
-                "2026-08-28",
-                "2026-08-29",
-                "2026-08-30"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "missing_end_times": {
           "fixed": 1,
@@ -221,35 +208,35 @@
           "examples": []
         }
       },
-      "after_count": 219,
-      "total_fixes": 3
+      "after_count": 123,
+      "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 233,
+      "before_count": 237,
       "passes": {
         "past_dates": {
-          "fixed": 30,
+          "fixed": 29,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
-              "date": "2026-06-17"
+              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
+              "date": "2026-06-18"
             },
             {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Heber Midday Wednesday Ride @ Southfield Park",
-              "date": "2026-06-17"
+              "title": "Swing & Line Dancing Lessons & Community Dance",
+              "date": "2026-06-18"
             },
             {
-              "title": "Reading with Therapy Dogs @ Wasatch County Library",
-              "date": "2026-06-17"
+              "title": "Midway Art Gallery Open House",
+              "date": "2026-06-19"
             }
           ]
         },
@@ -263,7 +250,7 @@
           ]
         },
         "multi_day_splits": {
-          "fixed": 1,
+          "fixed": 2,
           "examples": [
             {
               "title": "American Indian Services Native Market Days",
@@ -271,6 +258,14 @@
               "split_into": [
                 "2026-07-10",
                 "2026-07-11"
+              ]
+            },
+            {
+              "title": "2-Day Throwing Large Forms on the Wheel",
+              "original_span": "2026-07-18 to 2026-07-19",
+              "split_into": [
+                "2026-07-18",
+                "2026-07-19"
               ]
             }
           ]
@@ -371,12 +366,12 @@
           ]
         }
       },
-      "after_count": 204,
+      "after_count": 210,
       "total_fixes": 51
     },
     {
       "city": "jackson",
-      "before_count": 811,
+      "before_count": 804,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -387,26 +382,17 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 101
+              "had_span": 100
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 88
+              "had_span": 87
             }
           ]
         },
         "multi_day_splits": {
           "fixed": 8,
           "examples": [
-            {
-              "title": "Rodeo Tent Sale",
-              "original_span": "2026-06-25 to 2026-06-27",
-              "split_into": [
-                "2026-06-25",
-                "2026-06-26",
-                "2026-06-27"
-              ]
-            },
             {
               "title": "Teton Mountain Runs 50K, 30K, 15K",
               "original_span": "2026-07-11 to 2026-07-12",
@@ -433,6 +419,14 @@
                 "2026-07-17",
                 "2026-07-18",
                 "2026-07-19"
+              ]
+            },
+            {
+              "title": "Rodeo Tent Sale",
+              "original_span": "2026-07-24 to 2026-07-26",
+              "split_into": [
+                "2026-07-25",
+                "2026-07-26"
               ]
             },
             {
@@ -488,7 +482,7 @@
           "examples": []
         }
       },
-      "after_count": 843,
+      "after_count": 835,
       "total_fixes": 21
     }
   ]

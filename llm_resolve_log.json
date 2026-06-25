@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-06-24T12:45:19.837492",
+  "generated_at": "2026-06-25T12:39:06.427639",
   "attempted": 2,
   "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "Live Music on The Deck",
+      "title": "Talon Tuesdays",
       "type": "title_truncated",
-      "link": "https://dishingjh.com/event/live-music-on-the-deck/2026-07-14/",
+      "link": "https://www.jacksonhole.com/events/talon-tuesdays-july14",
       "resolution": {
         "confidence": "high",
-        "new_title": "Live Music on The Deck",
-        "reasoning": "The source page shows 'Live Music on The Deck' as the complete title in the heading, and there is no evidence of truncation as this matches both the page title and the event heading exactly."
+        "new_title": "Talon Tuesdays",
+        "reasoning": "The source page confirms 'Talon Tuesdays' is the complete official title as shown in the Event Details section, not a truncation."
       },
       "applied": true,
-      "note": "title: 'Live Music on The Deck' \u2192 'Live Music on The Deck'"
+      "note": "title: 'Talon Tuesdays' \u2192 'Talon Tuesdays'"
     },
     {
       "city": "jackson",
-      "title": "Slow Foods in the Teton\u2019s People\u2019s Market",
+      "title": "Western Wednesdays",
       "type": "title_truncated",
-      "link": "https://dishingjh.com/event/slow-foods-in-the-tetons-peoples-market-3/2026-07-15/",
+      "link": "https://www.jacksonhole.com/events/western-wednesday-jul15",
       "resolution": {
         "confidence": "high",
-        "new_title": "Slow Foods in the Teton's People's Market",
-        "reasoning": "The source page text shows the exact same title 'Slow Foods in the Teton's People's Market' as a standalone heading, indicating this is the complete title and not truncated."
+        "new_title": "Western Wednesdays at Teton Village's Alive @ Five",
+        "reasoning": "The source text explicitly states 'Western Wednesdays at Teton Village's Alive @ Five series' in the event description, indicating this is the complete title of the event series."
       },
       "applied": true,
-      "note": "title: 'Slow Foods in the Teton\u2019s People\u2019s Market' \u2192 \"Slow Foods in the Teton's People's Market\""
+      "note": "title: 'Western Wednesdays' \u2192 \"Western Wednesdays at Teton Village's Alive @ Five\""
     }
   ]
 }

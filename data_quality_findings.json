@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-24",
+  "generated_at": "2026-06-25",
   "cities": {
     "all": {
-      "events": 4310,
+      "events": 4315,
       "findings": [
         {
           "code": "C1",
@@ -13,7 +13,7 @@
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-24",
+              "only_date": "2026-06-25",
               "why": "recurrence-field",
               "source": "Visit Park City"
             },
@@ -63,6 +63,14 @@
               "sim": 0.85
             },
             {
+              "date": "2026-08-07",
+              "title_a": "Lonestar",
+              "src_a": "Visit Park City",
+              "title_b": "Country Weekend - Lonestar",
+              "src_b": "Park City Institute",
+              "sim": 0.85
+            },
+            {
               "date": "2026-06-28",
               "title_a": "Stein's Famous Sunday Brunch",
               "src_a": "Visit Park City",
@@ -72,14 +80,6 @@
             },
             {
               "date": "2026-07-05",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-12",
               "title_a": "Stein's Famous Sunday Brunch",
               "src_a": "Visit Park City",
               "title_b": "Sunday Brunch",
@@ -97,21 +97,21 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 283,
-              "lost": 757
+              "now": 290,
+              "lost": 750
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 20,
-              "lost": 256
+              "now": 19,
+              "lost": 257
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 215,
+      "events": 222,
       "findings": [
         {
           "code": "C6",
@@ -122,19 +122,19 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 20,
-              "lost": 256
+              "now": 19,
+              "lost": 257
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 343,
+      "events": 332,
       "findings": []
     },
     "heber": {
-      "events": 572,
+      "events": 573,
       "findings": [
         {
           "code": "C1",
@@ -174,15 +174,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 277,
-              "lost": 756
+              "now": 284,
+              "lost": 749
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1350,
+      "events": 1340,
       "findings": []
     }
   },
