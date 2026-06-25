@@ -52,9 +52,9 @@ export default function AboutElkhartLakePage() {
       <SiteNav activeKey="about" cityKey="elkhartlake" />
 
       <div className="hero">
-        <div className="hero-inner">
-          <div className="hero-content-wrap"><div className="hero-content">
-            <div className="hero-eyebrow">Elkhart Lake, Wisconsin</div>
+        <div className="hero-inner-el">
+          <div className="hero-content-el">
+            <div className="hero-place-title-el">Elkhart Lake, Wisconsin</div>
             <h1>
               America&apos;s <em>hidden gem</em> of speed & serenity.
             </h1>
@@ -63,7 +63,8 @@ export default function AboutElkhartLakePage() {
               thousands every summer for world-class racing, live music on
               the water, and a pace of life that feels like a different era.
             </p>
-          </div></div><div className="hero-image"><img src="/roadamericaradical.webp" alt="Racing at Road America, Elkhart Lake Wisconsin" /></div></div></div>
+          </div>
+          <div className="hero-image-el"><img src="/roadamericaradical.webp" alt="Racing at Road America, Elkhart Lake Wisconsin" /></div></div></div>
 
       <div className="content">
         <div className="intro">
@@ -206,10 +207,17 @@ export default function AboutElkhartLakePage() {
           content: ''; position: absolute; inset: 0;
           background: radial-gradient(ellipse 80% 60% at 20% 80%, rgba(83,74,183,0.25) 0%, transparent 70%);
         }
-        .hero-inner { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 60px; }
-        .hero-content { max-width: 720px; }
-        .hero-image { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
-        .hero-image img { width: 100%; height: 380px; object-fit: cover; display: block; }
+        .hero-inner-el { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-start; gap: 60px; }
+        .hero-content-el { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 460px; }
+        .hero-image-el { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
+        .hero-image-el img { width: 100%; height: 460px; object-fit: cover; display: block; }
+        .hero-place-title-el {
+          font-family: 'DM Serif Display', serif;
+          color: var(--purple-light);
+          font-size: clamp(52px, 7vw, 84px);
+          font-weight: 400; line-height: 1.04;
+          margin-bottom: 44px; display: block;
+        }
         .hero-eyebrow {
           display: inline-flex; align-items: center; gap: 8px;
           background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9);
@@ -220,13 +228,14 @@ export default function AboutElkhartLakePage() {
         }
         .hero h1 {
           font-family: 'DM Serif Display', serif;
-          font-size: clamp(40px, 6vw, 72px);
-          color: white; line-height: 1.05; margin-bottom: 20px;
+          font-size: clamp(26px, 3.2vw, 40px);
+          color: white; line-height: 1.12; margin-bottom: 28px;
         }
         .hero h1 em { font-style: italic; color: var(--purple-light); }
         .hero p {
           font-size: 18px; color: rgba(255,255,255,0.6);
           line-height: 1.7; font-weight: 300; max-width: 560px;
+          margin-top: auto;
         }
 
         .content { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
@@ -349,10 +358,15 @@ export default function AboutElkhartLakePage() {
         }
         .cta-btn:hover { background: var(--purple-light); }
 
+        @media (max-width: 1100px) {
+          .hero-inner-el { flex-direction: column; gap: 24px; align-items: stretch; }
+          .hero-content-el { min-height: 0; }
+          .hero p { margin-top: 16px; }
+          .hero-image-el img { height: 300px; }
+        }
         @media (max-width: 768px) {
           .hero { padding: 100px 24px 60px; }
-          .hero-inner { flex-direction: column; gap: 32px; }
-          .hero-image img { height: 220px; }
+          .hero-image-el img { height: 240px; }
           .content { padding: 48px 24px; }
           .intro { grid-template-columns: 1fr; gap: 40px; }
           .tips-grid { grid-template-columns: 1fr; }
