@@ -52,10 +52,10 @@ export default function RadiusPicker() {
         type="button"
         onClick={() => setOpen((o) => !o)}
         style={{
-          display: "flex", alignItems: "center", gap: 4,
-          background: "#fff", border: "1.5px solid rgba(83,74,183,0.25)",
-          borderRadius: 100, padding: "5px 10px", cursor: "pointer",
-          fontFamily: "inherit", fontSize: 11.5, fontWeight: 600, color: "#3a3550",
+          display: "flex", alignItems: "center", gap: 6,
+          background: "#fff", border: "1px solid rgba(255,255,255,0.85)",
+          borderRadius: 999, padding: "6px 14px", cursor: "pointer",
+          fontFamily: "inherit", fontSize: 12.5, fontWeight: 600, color: "#3a3550",
           whiteSpace: "nowrap",
         }}
         aria-haspopup="listbox"

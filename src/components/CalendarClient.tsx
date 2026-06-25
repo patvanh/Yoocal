@@ -1873,18 +1873,11 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                     { label: 'All upcoming', selected: dayFilter === 'all', onClick: () => { setPickedEndDate(''); setDayFilter('all') } },
                   ]}
                 />
+                <RadiusPicker />
               </div>
             )
           })()}
-          {/* Radius picker under the filter pills. The city picker now lives
-              permanently in the SiteNav header, so it is not duplicated here. */}
-          <div className="yc-inline-pickers" style={{ display: 'flex', gap: 8, justifyContent: 'center', alignItems: 'center', marginTop: 4 }}>
-            <RadiusPicker />
-          </div>
-          <style>{`
-            .yc-inline-pickers { display: flex; }
-            @media (max-width: 768px) { .yc-inline-pickers { display: none !important; } }
-          `}</style>
+
         </div>
       </div>
       {/* Purple band behind the events region (date header + featured +
