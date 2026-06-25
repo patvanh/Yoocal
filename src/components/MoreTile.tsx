@@ -22,11 +22,13 @@ export default function MoreTile({
   Icon,
   active = false,
   options,
+  variant = "tile",
 }: {
   label: string
   Icon: any
   active?: boolean
   options: Option[]
+  variant?: "tile" | "pill"
 }) {
   const [open, setOpen] = useState(false)
   const wrapRef = useRef<HTMLDivElement>(null)
@@ -40,11 +42,19 @@ export default function MoreTile({
   }, [])
 
   return (
-    <div ref={wrapRef} style={{ position: "relative", display: "flex", flex: "1 1 0", minWidth: 0, maxWidth: 76 }}>
+    <div ref={wrapRef} style={{ position: "relative", display: "flex", ...(variant === "pill" ? {} : { flex: "1 1 0", minWidth: 0, maxWidth: 76 }) }}>
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        style={{
+        style={variant === "pill" ? {
+          display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6,
+          padding: "6px 14px", borderRadius: 999, cursor: "pointer", whiteSpace: "nowrap",
+          fontFamily: "inherit", fontSize: 12.5, fontWeight: 600,
+          color: active ? "#fff" : "#3a3550",
+          background: active ? "#7c5cff" : "#fff",
+          border: active ? "1px solid #7c5cff" : "1px solid rgba(255,255,255,0.85)",
+          transition: "background 0.15s, color 0.15s",
+        } : {
           display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 4,
           width: "100%", padding: "9px 2px", borderRadius: 12, cursor: "pointer",
           fontFamily: "inherit", fontSize: 10.5, fontWeight: 600, lineHeight: 1.15, textAlign: "center",
@@ -57,7 +67,7 @@ export default function MoreTile({
         aria-haspopup="listbox"
         aria-expanded={open}
       >
-        <Icon size={18} strokeWidth={1.75} />
+        {variant !== "pill" && <Icon size={18} strokeWidth={1.75} />}
         <span>{label}</span>
       </button>
       {open && (

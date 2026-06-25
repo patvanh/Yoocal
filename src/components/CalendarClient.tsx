@@ -1,7 +1,6 @@
 'use client'
 
 import CitySearch from "@/components/CitySearch"
-import CityPicker from "@/components/CityPicker"
 import RadiusPicker from "@/components/RadiusPicker"
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
@@ -1866,7 +1865,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
                 <button type="button" style={pill(freeOnly)} onClick={() => setFreeOnly(v => !v)}>Free</button>
                 <button type="button" style={pill(dayFilter === 'today')} onClick={() => { setPickedEndDate(''); setDayFilter('today') }}>Today</button>
                 <button type="button" style={pill(dayFilter === 'weekend')} onClick={() => { setPickedEndDate(''); setDayFilter('weekend') }}>This Weekend</button>
-                <MoreTile label="More" Icon={CalendarDays}
+                <MoreTile label="More" Icon={CalendarDays} variant="pill"
                   active={['tomorrow','7days','all','pickdate'].includes(dayFilter)}
                   options={[
                     { label: 'Tomorrow', selected: dayFilter === 'tomorrow', onClick: () => { setPickedEndDate(''); setDayFilter('tomorrow') } },
@@ -1877,12 +1876,9 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
               </div>
             )
           })()}
-          {/* City + radius pickers: DESKTOP placement (under the filter
-              pills). On mobile these live in the SiteNav header instead;
-              .yc-inline-pickers is hidden <=768px to match SiteNav's
-              768px breakpoint so they appear in exactly one place. */}
+          {/* Radius picker under the filter pills. The city picker now lives
+              permanently in the SiteNav header, so it is not duplicated here. */}
           <div className="yc-inline-pickers" style={{ display: 'flex', gap: 8, justifyContent: 'center', alignItems: 'center', marginTop: 4 }}>
-            <CityPicker cityKey={cityKey} />
             <RadiusPicker />
           </div>
           <style>{`
