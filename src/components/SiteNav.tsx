@@ -12,6 +12,7 @@
 
 import CityPicker from "@/components/CityPicker";
 import RadiusPicker from "@/components/RadiusPicker";
+import NavMenu from "@/components/NavMenu";
 
 type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson" | "greenlake";
 type ActiveKey = "about" | "weekend" | "free" | "concerts" | "month" | "venues" | "business" | null;
@@ -58,6 +59,19 @@ export default function SiteNav({
 
   // Only show city-specific This Weekend / Venues links when we're in a city context
   const showCityLinks = !!cityKey;
+
+  // Link list for the mobile hamburger menu (same hrefs/labels as the bar).
+  const menuLinks: { href: string; label: string; active?: boolean; external?: boolean }[] = [
+    { href: aboutHref, label: aboutLabel, active: activeKey === "about" },
+    ...(showCityLinks ? [
+      { href: weekendHref, label: "This Weekend", active: activeKey === "weekend" },
+      { href: concertsHref, label: "Concerts", active: activeKey === "concerts" },
+      { href: freeHref, label: "Free Events", active: activeKey === "free" },
+      { href: monthHref, label: "This Month", active: activeKey === "month" },
+      { href: venuesHref, label: "Venues", active: activeKey === "venues" },
+    ] : []),
+    { href: "/#business", label: "For businesses" },
+  ];
 
   return (
     <>
@@ -123,6 +137,7 @@ export default function SiteNav({
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 16 }}>
           <a href="/submit" className="yc-nav-secondary">Submit event</a>
         </div>
+        <div style={{ marginLeft: 12 }}><NavMenu links={menuLinks} /></div>
       </nav>
 
       <style>{`
@@ -216,11 +231,14 @@ export default function SiteNav({
         }
         /* City picker lives in the header at all widths. */
         .yc-nav-pickers { display: flex !important; }
-        @media (max-width: 860px) {
+        /* Hamburger: hidden on desktop (full nav shows), revealed below breakpoint. */
+        .yc-hamburger { display: none; }
+        @media (max-width: 1300px) {
           .yc-nav { padding: 0 14px; }
-          /* True mobile: logo + city pill + Submit event only. Hide the main
-             nav links and Get-notified; keep Submit event and the city pill. */
-          .yc-nav-links a:not(.yc-nav-secondary) { display: none; }
+          /* Below breakpoint: hide the nav links into the hamburger, but KEEP
+             both CTA buttons (Get notified + Submit) and the city pill visible. */
+          .yc-nav-links a:not(.yc-nav-secondary):not(.yc-nav-cta) { display: none; }
+          .yc-hamburger { display: block; }
         }
       `}</style>
     </>
