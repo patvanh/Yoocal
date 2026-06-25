@@ -17,13 +17,24 @@ const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID
 export default function MetaPixel() {
   const pathname = usePathname()
 
+  // Known city slugs — used to fire a CityView custom event so ad reporting
+  // can break engaged visits down by city.
+  const CITY_SLUGS = ['park-city', 'jackson-hole', 'heber', 'elkhart-lake', 'green-lake']
+
   // Fire PageView on each client-side navigation (the initial PageView is
-  // fired in the init script below).
+  // fired in the init script below). Also fire a CityView custom event when
+  // the visitor lands on a city hub page (e.g. /park-city), so Meta reporting
+  // shows which cities the ads actually drive visits to.
   useEffect(() => {
     if (!PIXEL_ID) return
     if (typeof window === "undefined") return
     const fbq = (window as any).fbq
-    if (typeof fbq === "function") fbq("track", "PageView")
+    if (typeof fbq !== "function") return
+    fbq("track", "PageView")
+    const seg = (pathname || "").split("/").filter(Boolean)
+    if (seg.length === 1 && CITY_SLUGS.includes(seg[0])) {
+      fbq("trackCustom", "CityView", { city: seg[0] })
+    }
   }, [pathname])
 
   if (!PIXEL_ID) return null
