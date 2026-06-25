@@ -51,6 +51,7 @@ export default function SiteNav({
               : "About";
 
   const KEY_TO_SLUG: Record<string,string> = {parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole",greenlake:"green-lake"};
+  const calendarHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}` : "/";
   const weekendHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/this-weekend` : "/this-weekend";
   const freeHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/free-events` : "/park-city/free-events";
   const concertsHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/concerts` : "/park-city/concerts";
@@ -122,11 +123,12 @@ export default function SiteNav({
           )}
           <a href="/#business">For businesses</a>
           {cityKey && <span className="yc-nav-pickers" style={{ display: 'flex', alignItems: 'center', marginLeft: 'auto' }}><CityPicker cityKey={cityKey} /></span>}
+          {cityKey && <span className="yc-nav-pickers" style={{ display: 'flex', alignItems: 'center' }}><a href={calendarHref} className="yc-nav-cta">Calendar</a></span>}
           <a
             href="https://forms.groupmail.info/subscribe/yoocal"
             target="_blank"
             rel="noopener noreferrer"
-            className="yc-nav-cta"
+            className="yc-nav-secondary"
           >
             Get notified
           </a>
