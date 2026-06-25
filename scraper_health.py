@@ -27,6 +27,7 @@ CITY_FILES = {
     "elkhart-lake": "public/raw/events-elkhartlake.json",
     "heber": "public/raw/events-heber.json",
     "jackson": "public/raw/events-jackson.json",
+    "green-lake": "public/raw/events-green-lake-wisconsin.json",
 }
 
 BASELINES_FILE = "scraper_baselines.json"
@@ -59,6 +60,13 @@ HEALTH_FLOORS = {
     ("jackson", "The Cloudveil"): 20,
     ("jackson", "Grand Teton Music Festival"): 30,
     ("elkhart-lake", "Elkhart Lake Tourism"): 50,
+    # Green Lake (universal scraper). Floors below normal counts so
+    # they only trip on a real collapse. nortonsgreenlake.com is the
+    # TLS-strict WordPress source that silently drops on weak SSL.
+    ("green-lake", "chamber.visitgreenlake.com"): 80,
+    ("green-lake", "thrasheroperahouse.com"): 12,
+    ("green-lake", "thenorthwestern.com"): 10,
+    ("green-lake", "nortonsgreenlake.com"): 6,
 }
 
 
