@@ -22,17 +22,20 @@ export default function AboutHeberPage() {
       <SiteNav activeKey="about" cityKey="heber" />
 
       <div className="hero">
-        <div className="hero-content">
-          <div className="hero-eyebrow">Heber Valley, Utah · 84032</div>
-          <h1>
-            The valley <em>just over</em> the pass.
-          </h1>
-          <p>
-            5,600 feet above sea level. Working dairy farms, the Heber
-            Valley Railroad, Soldier Hollow Olympic venue, Deer Creek
-            Reservoir, and the Utah you came west to find — 25 minutes from
-            Park City.
-          </p>
+        <div className="hero-inner-hv">
+          <div className="hero-content-hv">
+            <div className="hero-place-title-hv">Heber Valley, Utah</div>
+            <h1>
+              The valley <em>just over</em> the pass.
+            </h1>
+            <p>
+              5,600 feet above sea level. Working dairy farms, the Heber
+              Valley Railroad, Soldier Hollow Olympic venue, Deer Creek
+              Reservoir, and the Utah you came west to find — 25 minutes from
+              Park City.
+            </p>
+          </div>
+          <div className="hero-image-hv"><img src="/heber.jpg" alt="Heber Valley, Utah — historic barn with Mount Timpanogos behind" /></div>
         </div>
       </div>
 
@@ -224,7 +227,17 @@ export default function AboutHeberPage() {
           content: ''; position: absolute; inset: 0;
           background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(83,74,183,0.4) 0%, transparent 70%);
         }
-        .hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .hero-inner-hv { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-start; gap: 60px; }
+        .hero-content-hv { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 440px; }
+        .hero-image-hv { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
+        .hero-image-hv img { width: 100%; height: 440px; object-fit: cover; display: block; }
+        .hero-place-title-hv {
+          font-family: 'DM Serif Display', serif;
+          color: var(--purple-light);
+          font-size: clamp(52px, 7vw, 84px);
+          font-weight: 400; line-height: 1.04;
+          margin-bottom: 44px; display: block;
+        }
         .hero-eyebrow {
           display: inline-flex; align-items: center; gap: 8px;
           background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9);
@@ -235,13 +248,14 @@ export default function AboutHeberPage() {
         }
         .hero h1 {
           font-family: 'DM Serif Display', serif;
-          font-size: clamp(40px, 6vw, 72px);
-          color: white; line-height: 1.05; margin-bottom: 20px;
+          font-size: clamp(26px, 3.2vw, 40px);
+          color: white; line-height: 1.12; margin-bottom: 28px;
         }
         .hero h1 em { font-style: italic; color: var(--purple-light); }
         .hero p {
           font-size: 18px; color: rgba(255,255,255,0.6);
           line-height: 1.7; font-weight: 300; max-width: 560px;
+          margin-top: auto;
         }
 
         .content { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
@@ -314,8 +328,15 @@ export default function AboutHeberPage() {
         }
         .cta-btn:hover { background: var(--purple-light); }
 
+        @media (max-width: 1100px) {
+          .hero-inner-hv { flex-direction: column; gap: 24px; align-items: stretch; }
+          .hero-content-hv { min-height: 0; }
+          .hero p { margin-top: 16px; }
+          .hero-image-hv img { height: 320px; }
+        }
         @media (max-width: 768px) {
           .hero { padding: 100px 24px 60px; }
+          .hero-image-hv img { height: 240px; }
           .content { padding: 48px 24px; }
           .intro { grid-template-columns: 1fr; gap: 40px; }
           .grid-3 { grid-template-columns: 1fr 1fr; }
