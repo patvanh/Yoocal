@@ -309,9 +309,9 @@ export default function AboutParkCityPage() {
         .hero::before { content: ""; position: absolute; inset: 0; background: url(/hero.jpg) center 40% / cover no-repeat; opacity: 0.25; }
         .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,24,48,0.6) 0%, rgba(26,24,48,0.4) 50%, rgba(26,24,48,0.8) 100%); }
         .hero-inner-pc { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-start; gap: 60px; }
-        .hero-content-pc { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 380px; }
+        .hero-content-pc { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 440px; }
         .hero-image-pc { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
-        .hero-image-pc img { width: 100%; height: 380px; object-fit: cover; display: block; }
+        .hero-image-pc img { width: 100%; height: 440px; object-fit: cover; display: block; }
         @media (max-width: 1100px) {
           .hero-inner-pc { flex-direction: column; gap: 24px; align-items: stretch; }
           .hero-content-pc { min-height: 0; text-align: left; }

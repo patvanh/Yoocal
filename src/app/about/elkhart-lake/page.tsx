@@ -208,9 +208,9 @@ export default function AboutElkhartLakePage() {
           background: radial-gradient(ellipse 80% 60% at 20% 80%, rgba(83,74,183,0.25) 0%, transparent 70%);
         }
         .hero-inner-el { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-start; gap: 60px; }
-        .hero-content-el { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 460px; }
+        .hero-content-el { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 440px; }
         .hero-image-el { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
-        .hero-image-el img { width: 100%; height: 460px; object-fit: cover; display: block; }
+        .hero-image-el img { width: 100%; height: 440px; object-fit: cover; display: block; }
         .hero-place-title-el {
           font-family: 'DM Serif Display', serif;
           color: var(--purple-light);

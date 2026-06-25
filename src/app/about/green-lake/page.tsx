@@ -49,20 +49,20 @@ export default function AboutGreenLakePage() {
       <SiteNav activeKey="about" cityKey="greenlake" />
 
       <div className="hero">
-        <div className="hero-inner">
-          <div className="hero-content-wrap"><div className="hero-content">
-            <div className="hero-eyebrow">Green Lake, Wisconsin</div>
+        <div className="hero-inner-gl">
+          <div className="hero-content-gl">
+            <div className="hero-place-title-gl">Green Lake, Wisconsin</div>
             <h1>
               The Midwest&apos;s <em>original</em> lake escape.
             </h1>
             <p>
-              On the shores of Wisconsin&apos;s deepest natural lake sits a
-              town that&apos;s been drawing summer visitors since the 1860s —
-              the first resort community west of Niagara Falls. Championship
-              golf, jade-colored water, and concerts in the park, all at a
-              gentler pace.
+              On the shores of Wisconsin&apos;s deepest natural lake — the
+              first resort community west of Niagara Falls. Championship golf,
+              jade-colored water, and concerts in the park, all at a gentler
+              pace.
             </p>
-          </div></div><div className="hero-image"><img src="/green-lake-hero.webp" alt="Aerial view of Green Lake, Wisconsin" /></div></div></div>
+          </div>
+          <div className="hero-image-gl"><img src="/green-lake-hero.webp" alt="Aerial view of Green Lake, Wisconsin" /></div></div></div>
 
       <div className="content">
         <div className="intro">
@@ -207,10 +207,17 @@ export default function AboutGreenLakePage() {
           content: ''; position: absolute; inset: 0;
           background: radial-gradient(ellipse 80% 60% at 20% 80%, rgba(83,74,183,0.25) 0%, transparent 70%);
         }
-        .hero-inner { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 60px; }
-        .hero-content { max-width: 720px; }
-        .hero-image { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
-        .hero-image img { width: 100%; height: 380px; object-fit: cover; display: block; }
+        .hero-inner-gl { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-start; gap: 60px; }
+        .hero-content-gl { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 440px; }
+        .hero-image-gl { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.5); }
+        .hero-image-gl img { width: 100%; height: 440px; object-fit: cover; display: block; }
+        .hero-place-title-gl {
+          font-family: 'DM Serif Display', serif;
+          color: var(--purple-light);
+          font-size: clamp(52px, 7vw, 84px);
+          font-weight: 400; line-height: 1.04;
+          margin-bottom: 44px; display: block;
+        }
         .hero-eyebrow {
           display: inline-flex; align-items: center; gap: 8px;
           background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9);
@@ -221,13 +228,14 @@ export default function AboutGreenLakePage() {
         }
         .hero h1 {
           font-family: 'DM Serif Display', serif;
-          font-size: clamp(40px, 6vw, 72px);
-          color: white; line-height: 1.05; margin-bottom: 20px;
+          font-size: clamp(26px, 3.2vw, 40px);
+          color: white; line-height: 1.12; margin-bottom: 28px;
         }
         .hero h1 em { font-style: italic; color: var(--purple-light); }
         .hero p {
           font-size: 18px; color: rgba(255,255,255,0.6);
           line-height: 1.7; font-weight: 300; max-width: 560px;
+          margin-top: auto;
         }
 
         .content { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
@@ -350,10 +358,15 @@ export default function AboutGreenLakePage() {
         }
         .cta-btn:hover { background: var(--purple-light); }
 
+        @media (max-width: 1100px) {
+          .hero-inner-gl { flex-direction: column; gap: 24px; align-items: stretch; }
+          .hero-content-gl { min-height: 0; }
+          .hero p { margin-top: 16px; }
+          .hero-image-gl img { height: 320px; }
+        }
         @media (max-width: 768px) {
           .hero { padding: 100px 24px 60px; }
-          .hero-inner { flex-direction: column; gap: 32px; }
-          .hero-image img { height: 220px; }
+          .hero-image-gl img { height: 240px; }
           .content { padding: 48px 24px; }
           .intro { grid-template-columns: 1fr; gap: 40px; }
           .tips-grid { grid-template-columns: 1fr; }
