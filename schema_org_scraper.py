@@ -39,6 +39,7 @@ import requests
 
 # Event types we recognize as actual events
 from recurrence_parser import parse_weekly_recurrence
+from recurrence_llm import extract_recurrence_llm
 
 EVENT_TYPES = {
     "Event", "MusicEvent", "TheaterEvent", "SportsEvent", "BusinessEvent",
@@ -209,13 +210,34 @@ def scrape_schema_org_events(
         if not parsed:
             dropped_unparseable += 1
             continue
+        # Per-event natural-language recurrence (LLM). The page-level regex
+        # (page_recurrence) only catches "Recurring weekly on <day>" markup.
+        # Prose like "held every Saturday from June through October" lives in
+        # the event description and slips past it. Only fire when the page
+        # declared no recurrence AND there's a real description (line ~654
+        # sets description=title when empty; a title-only string invites a
+        # hallucinated cadence). Result merges into the same downstream path
+        # as page_recurrence: recurrence + recurrence_days, optional end_date.
+        ev_recurrence = page_recurrence
+        if not ev_recurrence:
+            _desc = parsed.get("description") or ""
+            if _desc and _desc != parsed.get("title"):
+                _llm_rec = extract_recurrence_llm(
+                    parsed.get("title"), _desc, parsed.get("date")
+                )
+                if _llm_rec:
+                    parsed["recurrence"] = _llm_rec["recurrence"]
+                    parsed["recurrence_days"] = _llm_rec["recurrence_days"]
+                    if _llm_rec.get("end_date"):
+                        parsed["end_date"] = _llm_rec["end_date"]
+                    ev_recurrence = _llm_rec
         # Recurring events (page declares "Recurring weekly on <day>") describe an
         # ONGOING schedule, so a past start date does NOT mean the event is over —
         # e.g. weekly karaoke that started in January is still happening now. For
         # these, give the build fan-out a forward window: bump the start to today
         # and ensure an end_date exists so the engine expands future occurrences.
         # MUST run before the past-drop below, or these get killed prematurely.
-        if page_recurrence:
+        if ev_recurrence:
             if parsed["date"] < today_iso:
                 parsed["date"] = today_iso
             if not parsed.get("end_date") or parsed["end_date"] < today_iso:
