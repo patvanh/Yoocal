@@ -1603,7 +1603,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         // inside this hero and would be clipped at the hero's bottom edge by
         // overflow:hidden, cutting off a tall results list.
         position: 'relative', overflow: 'visible',
-        margin: 0, padding: '96px 28px 24px',
+        margin: 0, padding: '96px 28px 8px',
         marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
         borderRadius: '20px 20px 0 0',
         background: "linear-gradient(180deg, rgba(26,24,48,0.35), rgba(26,24,48,0.62)), url('/hero.jpg') center/cover no-repeat",
@@ -1886,7 +1886,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         background: '#2d2853',
         borderRadius: '0 0 20px 20px',
         marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
-        marginTop: 0, padding: '24px 14px 28px', boxSizing: 'border-box',
+        marginTop: 0, padding: '14px 14px 28px', boxSizing: 'border-box',
       }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
       <div style={{
