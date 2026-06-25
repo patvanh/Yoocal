@@ -183,6 +183,7 @@ export default function SiteNav({
           text-decoration: none;
           font-weight: 500;
           transition: color 0.2s;
+          white-space: nowrap;
         }
         .yc-nav-links a:hover,
         .yc-nav-links a.active {
@@ -209,6 +210,7 @@ export default function SiteNav({
           border-radius: 100px;
           font-size: 13px;
           font-weight: 600;
+          white-space: nowrap;
         }
         .yc-nav-links a.yc-nav-cta:hover {
           background: var(--purple-light);
@@ -216,7 +218,7 @@ export default function SiteNav({
         /* Header pickers: hidden on desktop (shown under the filter
            pills instead); revealed on mobile in the media query below. */
         .yc-nav-pickers { display: none !important; }
-        @media (max-width: 768px) {
+        @media (max-width: 1150px) {
           .yc-nav-pickers { display: flex !important; }
           .yc-nav { padding: 0 14px; }
           /* Mobile nav matches the mockup: logo + city pill + Submit event only.
