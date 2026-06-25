@@ -22,7 +22,7 @@ export default function AboutParkCityPage() {
       <SiteNav activeKey="about" cityKey="parkcity" />
 
       <div className="hero">
-        <div className="hero-content">
+        <div className="hero-content-pc">
           <div className="hero-place-title">Park City, Utah</div>
           <h1>
             The mountain town that <em>never</em> stops.
@@ -305,7 +305,7 @@ export default function AboutParkCityPage() {
         }
         .hero::before { content: ""; position: absolute; inset: 0; background: url(/hero.jpg) center 40% / cover no-repeat; opacity: 0.25; }
         .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,24,48,0.6) 0%, rgba(26,24,48,0.4) 50%, rgba(26,24,48,0.8) 100%); }
-        .hero-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; text-align: center; }
+        .hero-content-pc { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; text-align: center; }
         .hero-place-title {
           font-family: 'DM Serif Display', serif;
           color: var(--purple-light);
