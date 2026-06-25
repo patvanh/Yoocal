@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister'
+import MetaPixel from '@/components/MetaPixel'
 import { DM_Sans, DM_Serif_Display } from 'next/font/google'
 
 const dmSans = DM_Sans({
@@ -52,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: '{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.yoocal.com/#org","name":"Yoocal","url":"https://www.yoocal.com","logo":"https://www.yoocal.com/icons/icon-512.png","description":"Local events for scenic resort towns — one free calendar updated daily."},{"@type":"WebSite","@id":"https://www.yoocal.com/#website","url":"https://www.yoocal.com","name":"Yoocal","publisher":{"@id":"https://www.yoocal.com/#org"}}]}' }}
         />
-        <ServiceWorkerRegister />{children}<Analytics />
+        <ServiceWorkerRegister /><MetaPixel />{children}<Analytics />
       </body>
     </html>
   )
