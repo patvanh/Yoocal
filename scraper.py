@@ -1963,7 +1963,7 @@ def main():
         all_events += scrape_mountain_town_music()
     except Exception as ex:
         print(f"  [MTM] scraper failed: {ex}")
-    all_events += scrape_eventbrite()
+    # all_events += scrape_eventbrite()  # retired: low-trust aggregator the build drops; SerpApi call was wasted quota
     all_events += scrape_running_in_the_usa()
     # Park Record: use the CitySpark API (the data source behind
     # parkrecord.com/calendar/). The old HTML-walker is kept as a fallback

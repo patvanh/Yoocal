@@ -924,7 +924,7 @@ def main():
 
     all_events += hv_events
     # all_events += scrape_google_events()  # retired: Google Events echoes official sources with wrong dates
-    all_events += scrape_eventbrite()
+    # all_events += scrape_eventbrite()  # retired: Eventbrite is a low-trust aggregator the build drops; the SerpApi call was wasted quota
     all_events += scrape_runsignup()
     all_events += scrape_running_in_the_usa_heber()
     all_events += scrape_wasatch_parks_rec()

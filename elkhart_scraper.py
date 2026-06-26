@@ -1350,7 +1350,7 @@ def main():
         all_events += scrape_osthoff_calendar()
     all_events += scrape_village_calendar()
     # all_events += scrape_google_events()  # retired: Google Events echoes official sources with wrong dates
-    all_events += scrape_eventbrite()
+    # all_events += scrape_eventbrite()  # retired: low-trust aggregator the build drops; SerpApi call was wasted quota
     all_events += scrape_allevents()
 
     print(f"\nTotal raw events: {len(all_events)}")
