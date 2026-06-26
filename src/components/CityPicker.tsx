@@ -28,7 +28,7 @@ export default function CityPicker({ cityKey }: { cityKey?: string }) {
     return () => document.removeEventListener("mousedown", handler)
   }, [])
 
-  function pick(c: City) {
+  function pick(c: (typeof CITIES)[number]) {
     setOpen(false)
     if (c.key === current.key) return
     try { window.localStorage.setItem("yoocal.lastCity", c.key) } catch {}

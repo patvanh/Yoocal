@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import SiteNav from "@/components/SiteNav"
 import SiteFooter from "@/components/SiteFooter"
-import { buildCityOptions } from "@/lib/citySearch"
+import { buildCityOptions, type SearchOption } from "@/lib/citySearch"
 
 import { CITIES_ORDERED } from "@/lib/cities"
 
@@ -41,10 +41,6 @@ const ALIASES: Record<string, string> = {
   "wasatch back": "heber",
   "road america": "elkhartlake",
 }
-
-type SearchOption =
-  | { kind: "city"; city: City }
-  | { kind: "request"; rawQuery: string }
 
 export default function HomeBrand() {
   const router = useRouter()
@@ -87,42 +83,6 @@ export default function HomeBrand() {
       .trim()
       .replace(/,\s*[a-z .]+$/, "") // drop trailing state suffix
       .replace(/\s+/g, " ")
-  }
-
-  function buildOptions(raw: string): SearchOption[] {
-    const trimmed = raw.trim()
-    if (!trimmed) return []
-
-    // ZIP shortcut: 5-digit -> direct city
-    const zipOnly = trimmed.match(/^\d{5}$/)
-    if (zipOnly) {
-      const k = ZIP_TO_CITY[trimmed]
-      if (k) {
-        const c = CITIES.find((x) => x.key === k)
-        if (c) return [{ kind: "city", city: c }]
-      }
-      // Unknown ZIP -> request
-      return [{ kind: "request", rawQuery: trimmed }]
-    }
-
-    const q = normalizeQuery(trimmed)
-
-    // Alias direct hit
-    if (ALIASES[q]) {
-      const c = CITIES.find((x) => x.key === ALIASES[q])
-      if (c) return [{ kind: "city", city: c }]
-    }
-
-    // Substring match against name + region + key
-    const matches = CITIES.filter((c) => {
-      const hay = `${c.name} ${c.region} ${c.key}`.toLowerCase()
-      return hay.includes(q)
-    })
-
-    const opts: SearchOption[] = matches.map((c) => ({ kind: "city", city: c }))
-    // Always offer a request fallback at the end so unknown queries route correctly
-    opts.push({ kind: "request", rawQuery: trimmed })
-    return opts
   }
 
   const options = buildCityOptions(query)
