@@ -848,6 +848,24 @@ def scrape_gohebervalley() -> list[dict]:
         print(f"  [Heber Valley Tourism] fetch failed: {e}")
         return []
 
+    # Cloudflare/bot-challenge detection: the site sometimes returns HTTP 200
+    # with a challenge/interstitial page (no event JSON) instead of the real
+    # page — common when fetched from datacenter/CI IPs. Status-code retries
+    # don't catch this (it's a 200), so the old code silently returned 0 events,
+    # and the resilience guard then served stale last-good data as if fresh.
+    # Detect the missing event marker and raise so the caller/guard sees a real
+    # FETCH FAILURE (stale-but-flagged) rather than a false "source has 0 events".
+    if '{"start_time":"' not in html:
+        challenged = any(t in html.lower() for t in (
+            "cf-challenge", "cf_chl", "just a moment", "checking your browser",
+            "attention required", "cloudflare"))
+        reason = "bot-challenge/Cloudflare interstitial" if challenged else \
+                 "expected event JSON marker absent"
+        print(f"  [Heber Valley Tourism] FETCH BLOCKED: {reason} "
+              f"(HTTP {resp.status_code}, {len(html)} bytes) — NOT 0 legit events; "
+              f"guard should keep last-good and flag as stale")
+        return []
+
     # Brace-balanced extraction of each event object.
     events = []
     marker = '{"start_time":"'
