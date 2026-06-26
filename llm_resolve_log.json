@@ -1,33 +1,26 @@
 {
-  "generated_at": "2026-06-25T12:39:06.427639",
+  "generated_at": "2026-06-26T12:42:26.227127",
   "attempted": 2,
-  "applied": 2,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "Talon Tuesdays",
+      "title": "Yoga on The Deck",
       "type": "title_truncated",
-      "link": "https://www.jacksonhole.com/events/talon-tuesdays-july14",
+      "link": "https://www.jacksonhole.com/events/yoga-on-the-deck-7-14-26",
       "resolution": {
         "confidence": "high",
-        "new_title": "Talon Tuesdays",
-        "reasoning": "The source page confirms 'Talon Tuesdays' is the complete official title as shown in the Event Details section, not a truncation."
+        "new_title": "Yoga on The Deck",
+        "reasoning": "The source page shows 'Yoga on The Deck' as the complete title in the Event Details section, matching the current title exactly with no truncation."
       },
       "applied": true,
-      "note": "title: 'Talon Tuesdays' \u2192 'Talon Tuesdays'"
+      "note": "title: 'Yoga on The Deck' \u2192 'Yoga on The Deck'"
     },
     {
       "city": "jackson",
-      "title": "Western Wednesdays",
+      "title": "Summer People's Market 2026",
       "type": "title_truncated",
-      "link": "https://www.jacksonhole.com/events/western-wednesday-jul15",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Western Wednesdays at Teton Village's Alive @ Five",
-        "reasoning": "The source text explicitly states 'Western Wednesdays at Teton Village's Alive @ Five series' in the event description, indicating this is the complete title of the event series."
-      },
-      "applied": true,
-      "note": "title: 'Western Wednesdays' \u2192 \"Western Wednesdays at Teton Village's Alive @ Five\""
+      "skipped": "[fetch failed: 415 Client Error: Unsupported Media Type for url: https://www.jhcenterforthearts.org/event/summer-peoples-market-2026-7/]"
     }
   ]
 }

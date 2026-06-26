@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-25T12:38:59.215329",
-  "audit_date": "2026-06-25",
+  "generated_at": "2026-06-26T12:42:22.920957",
+  "audit_date": "2026-06-26",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1765,
+      "before_count": 1818,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -32,7 +32,7 @@
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 52
+              "had_span": 51
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
@@ -40,7 +40,7 @@
             },
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 63
+              "had_span": 62
             },
             {
               "title": "Fascia Rolling Class",
@@ -130,7 +130,7 @@
           ]
         },
         "classification": {
-          "fixed": 392,
+          "fixed": 413,
           "examples": [
             {
               "title": "A Spirited Paint Party with Artist Briar West",
@@ -157,28 +157,35 @@
               ]
             },
             {
-              "title": "Old Town walking tour",
-              "before": [],
-              "after": [
+              "title": "MARC Movie Night - The Little Mermaid",
+              "before": [
                 "Community"
+              ],
+              "after": [
+                "Community",
+                "Government",
+                "Film"
               ]
             },
             {
-              "title": "Progressive Art Experience",
-              "before": [],
-              "after": [
+              "title": "Mystic Mermaids Pool Party",
+              "before": [
                 "Community"
+              ],
+              "after": [
+                "Community",
+                "Government"
               ]
             }
           ]
         }
       },
-      "after_count": 1768,
-      "total_fixes": 411
+      "after_count": 1821,
+      "total_fixes": 432
     },
     {
       "city": "elkhart-lake",
-      "before_count": 123,
+      "before_count": 212,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -189,8 +196,28 @@
           "examples": []
         },
         "multi_day_splits": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 2,
+          "examples": [
+            {
+              "title": "WeatherTech Vintage Weekend with Brian Redman",
+              "original_span": "2026-07-16 to 2026-07-19",
+              "split_into": [
+                "2026-07-16",
+                "2026-07-17",
+                "2026-07-18",
+                "2026-07-19"
+              ]
+            },
+            {
+              "title": "GT World Challenge America",
+              "original_span": "2026-08-28 to 2026-08-30",
+              "split_into": [
+                "2026-08-28",
+                "2026-08-29",
+                "2026-08-30"
+              ]
+            }
+          ]
         },
         "missing_end_times": {
           "fixed": 1,
@@ -208,44 +235,48 @@
           "examples": []
         }
       },
-      "after_count": 123,
-      "total_fixes": 1
+      "after_count": 217,
+      "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 237,
+      "before_count": 233,
       "passes": {
         "past_dates": {
-          "fixed": 29,
+          "fixed": 28,
           "examples": [
+            {
+              "title": "Midway Art Gallery Open House",
+              "date": "2026-06-19"
+            },
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
-              "date": "2026-06-18"
+              "title": "Ritual Chocolate Public Tour and Mini Tasting",
+              "date": "2026-06-19"
             },
             {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Swing & Line Dancing Lessons & Community Dance",
-              "date": "2026-06-18"
-            },
-            {
-              "title": "Midway Art Gallery Open House",
+              "title": "Live Music @ Caf\u00e9 Galleria",
               "date": "2026-06-19"
             }
           ]
         },
         "absurd_spans": {
-          "fixed": 1,
+          "fixed": 2,
           "examples": [
             {
               "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
               "had_span": 103
+            },
+            {
+              "title": "Saturday Sunset Music Series",
+              "had_span": 180
             }
           ]
         },
@@ -366,12 +397,12 @@
           ]
         }
       },
-      "after_count": 210,
+      "after_count": 207,
       "total_fixes": 51
     },
     {
       "city": "jackson",
-      "before_count": 804,
+      "before_count": 790,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -382,11 +413,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 100
+              "had_span": 99
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 87
+              "had_span": 86
             }
           ]
         },
@@ -443,13 +474,19 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 11,
+          "fixed": 13,
           "examples": [
             {
               "title": "Karaoke at The Virginian Saloon",
               "start_time": "8:00 PM",
               "new_end_time": "11:00 PM",
               "duration_hours": 3
+            },
+            {
+              "title": "Little Wings Story Time",
+              "start_time": "11:00 AM",
+              "new_end_time": "11:30 AM",
+              "duration_hours": 0.5
             },
             {
               "title": "Red, White and Tunes Friday Show",
@@ -468,12 +505,6 @@
               "start_time": "5:00 PM",
               "new_end_time": "7:00 PM",
               "duration_hours": 2
-            },
-            {
-              "title": "Concerts on the Commons",
-              "start_time": "5:00 PM",
-              "new_end_time": "8:00 PM",
-              "duration_hours": 3
             }
           ]
         },
@@ -482,8 +513,8 @@
           "examples": []
         }
       },
-      "after_count": 835,
-      "total_fixes": 21
+      "after_count": 821,
+      "total_fixes": 23
     }
   ]
 }

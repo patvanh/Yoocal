@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-25",
+  "generated_at": "2026-06-26",
   "cities": {
     "all": {
-      "events": 4315,
+      "events": 4799,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 4,
+          "count": 2,
           "examples": [
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-25",
+              "only_date": "2026-06-26",
               "why": "recurrence-field",
               "source": "Visit Park City"
             },
@@ -23,20 +23,6 @@
               "only_date": "2026-06-27",
               "why": "recurrence-field",
               "source": "Heber Valley Tourism"
-            },
-            {
-              "title": "Midway Farmers Market",
-              "venue": "midway town square",
-              "only_date": "2026-06-27",
-              "why": "strong-title",
-              "source": "Heber Valley Life"
-            },
-            {
-              "title": "Soulful Sundays @ Heber City Park",
-              "venue": "main street park heber city",
-              "only_date": "2026-06-28",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
             }
           ]
         },
@@ -44,8 +30,16 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 13,
+          "count": 28,
           "examples": [
+            {
+              "date": "2026-06-26",
+              "title_a": "Ice Skating Glide In Movies",
+              "src_a": "Heber Valley Life",
+              "title_b": "Glide in Movies",
+              "src_b": "TownLift",
+              "sim": 0.85
+            },
             {
               "date": "2026-06-27",
               "title_a": "SAVOR",
@@ -63,27 +57,19 @@
               "sim": 0.85
             },
             {
-              "date": "2026-08-07",
-              "title_a": "Lonestar",
-              "src_a": "Visit Park City",
-              "title_b": "Country Weekend - Lonestar",
-              "src_b": "Park City Institute",
+              "date": "2026-06-27",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
               "sim": 0.85
             },
             {
-              "date": "2026-06-28",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-05",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
+              "date": "2026-07-04",
+              "title_a": "Grand Targhee Wildflower Run",
+              "src_a": "RunningInTheUSA Jackson",
+              "title_b": "Wildflower Run",
+              "src_b": "Grand Targhee Resort",
               "sim": 0.85
             }
           ]
@@ -97,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 290,
-              "lost": 750
+              "now": 291,
+              "lost": 749
             },
             {
               "source": "Siebkens Resort",
@@ -111,7 +97,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 222,
+      "events": 216,
       "findings": [
         {
           "code": "C6",
@@ -130,17 +116,17 @@
       ]
     },
     "greenlake": {
-      "events": 332,
+      "events": 329,
       "findings": []
     },
     "heber": {
-      "events": 573,
+      "events": 720,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 3,
+          "count": 1,
           "examples": [
             {
               "title": "Guided Hike + Forest Bathing",
@@ -148,20 +134,54 @@
               "only_date": "2026-06-27",
               "why": "recurrence-field",
               "source": "Heber Valley Tourism"
+            }
+          ]
+        },
+        {
+          "code": "C5",
+          "name": "CROSS-SOURCE-DUP",
+          "severity": "MED",
+          "count": 12,
+          "examples": [
+            {
+              "date": "2026-06-27",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
             },
             {
-              "title": "Midway Farmers Market",
-              "venue": "midway town square",
-              "only_date": "2026-06-27",
-              "why": "strong-title",
-              "source": "Heber Valley Life"
+              "date": "2026-07-04",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
             },
             {
-              "title": "Soulful Sundays @ Heber City Park",
-              "venue": "main street park heber city",
-              "only_date": "2026-06-28",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
+              "date": "2026-07-11",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-18",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-08",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
             }
           ]
         },
@@ -174,17 +194,42 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 284,
-              "lost": 749
+              "now": 285,
+              "lost": 748
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1340,
-      "findings": []
+      "events": 1602,
+      "findings": [
+        {
+          "code": "C5",
+          "name": "CROSS-SOURCE-DUP",
+          "severity": "MED",
+          "count": 2,
+          "examples": [
+            {
+              "date": "2026-07-04",
+              "title_a": "Grand Targhee Wildflower Run",
+              "src_a": "RunningInTheUSA Jackson",
+              "title_b": "Wildflower Run",
+              "src_b": "Grand Targhee Resort",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-05",
+              "title_a": "Grand Targhee Wildflower Run",
+              "src_a": "RunningInTheUSA Jackson",
+              "title_b": "Wildflower Run",
+              "src_b": "Grand Targhee Resort",
+              "sim": 0.85
+            }
+          ]
+        }
+      ]
     }
   },
-  "high_total": 11
+  "high_total": 7
 }
