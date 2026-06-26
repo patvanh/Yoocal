@@ -1,4 +1,3 @@
-import { CITY_CONFIG, type CityKey } from "@/lib/events"
 
 /**
  * HomeServer — server-rendered canonical content for the homepage.
@@ -11,13 +10,6 @@ import { CITY_CONFIG, type CityKey } from "@/lib/events"
  * render tree from the client app — no hydration coupling.
  */
 
-const CITIES: Array<{ slug: string; name: string; region: string; blurb: string }> = [
-  { slug: "park-city", name: "Park City", region: "Utah", blurb: "Concerts, festivals, races, outdoor adventures and more." },
-  { slug: "jackson-hole", name: "Jackson Hole", region: "Wyoming", blurb: "Music festivals, chamber events, and Teton County happenings." },
-  { slug: "heber", name: "Heber Valley", region: "Utah", blurb: "Rodeos, fairs, train rides and small-town events across the Wasatch Back." },
-  { slug: "elkhart-lake", name: "Elkhart Lake", region: "Wisconsin", blurb: "Racing, lakeside events and everything around Road America." },
-  { slug: "green-lake", name: "Green Lake", region: "Wisconsin", blurb: "Golf, boating, summer concerts and small-town events on Wisconsin's deepest lake." },
-]
 
 export default function HomeServer() {
   return (
