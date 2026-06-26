@@ -133,11 +133,26 @@ def scrape_sitemap_events(
         print(f"[sitemap] {source_name}: sitemap fetch failed: {e}")
         return []
 
-    if r.status_code != 200:
-        print(f"[sitemap] {source_name}: sitemap HTTP {r.status_code}")
+    # Get the sitemap text. If the direct fetch was blocked (non-200, or a
+    # Cloudflare challenge with no <loc> entries — common from the CI datacenter
+    # IP), fall back to Firecrawl via the canonical helper. This is ONE fetch per
+    # source (just the sitemap), so it's budget-safe; the per-event detail pages
+    # fetched below go through schema_org._fetch, which has its own fallback.
+    _sitemap_text = r.text if r.status_code == 200 else ""
+    if "<loc>" not in _sitemap_text:
+        try:
+            from firecrawl_extractor import fetch_html as _fh
+            _fc = _fh(sitemap_url, marker="<loc>")
+            if _fc and "<loc>" in _fc:
+                print(f"[sitemap] {source_name}: recovered sitemap via Firecrawl")
+                _sitemap_text = _fc
+        except Exception as _fce:
+            print(f"[sitemap] {source_name}: Firecrawl sitemap fallback failed: {str(_fce)[:80]}")
+    if "<loc>" not in _sitemap_text:
+        print(f"[sitemap] {source_name}: sitemap blocked/empty (HTTP {r.status_code})")
         return []
 
-    all_urls = re.findall(r"<loc>([^<]+)</loc>", r.text)
+    all_urls = re.findall(r"<loc>([^<]+)</loc>", _sitemap_text)
     urls = [u for u in all_urls if re.search(url_pattern, u)]
 
     # Optional crawl-efficiency filter: WordPress/MEC sitemaps list every event

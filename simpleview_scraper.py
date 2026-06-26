@@ -172,18 +172,19 @@ def scrape_simpleview(
     )
 
     print(f"[simpleview] {source_name}: fetching {api_url[:100]}...")
-    try:
-        r = requests.get(api_url, headers=_browser_headers(base_url), timeout=timeout)
-    except Exception as e:
-        print(f"[simpleview] {source_name}: request failed: {e}")
+    # Fetch via the canonical helper: direct first, auto-fallback to Firecrawl
+    # if Cloudflare blocks the CI IP. Simpleview returns JSON; a valid payload
+    # always contains the "docs" key, so that's the block marker. fetch_html
+    # returns the body as text, which we parse with json.loads.
+    import json as _json
+    from firecrawl_extractor import fetch_html as _fetch_html
+    body = _fetch_html(api_url, marker='"docs"', headers=_browser_headers(base_url))
+    if not body:
+        print(f"[simpleview] {source_name}: fetch blocked (direct + Firecrawl)")
         return []
 
-    if r.status_code != 200:
-        print(f"[simpleview] {source_name}: HTTP {r.status_code}, body: {r.text[:200]}")
-        return []
-
     try:
-        data = r.json()
+        data = _json.loads(body)
     except Exception as e:
         print(f"[simpleview] {source_name}: JSON parse failed: {e}")
         return []
