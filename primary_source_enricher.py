@@ -518,7 +518,22 @@ def enrich_primary_sources(events, verbose=True):
             continue
         by_url.setdefault(url, []).append(e)
 
+    # Wall-clock budget: each _resolve_url may fetch + firecrawl + LLM (up to
+    # ~90s worst case). With many URLs the pass can balloon and delay the whole
+    # nightly build. Cap total enrichment time; un-enriched events keep their
+    # as-scraped fields (enrichment is polish, not correctness). Configurable via
+    # env so the cron can tune it.
+    import time as _time
+    _enrich_deadline = _time.monotonic() + float(os.environ.get("ENRICH_TIME_BUDGET", "180"))
+    _enriched = 0
     for url, group in by_url.items():
+        if _time.monotonic() > _enrich_deadline:
+            if verbose:
+                _remaining = len(by_url) - _enriched
+                print(f"  [primary-enrich] time budget hit — stopping with "
+                      f"{_remaining} url(s) un-enriched (kept as-scraped)")
+            break
+        _enriched += 1
         title_hint = (group[0].get("title") or "")[:80]
         fields, status, budget = _resolve_url(url, title_hint, cache, budget)
         stats[status] = stats.get(status, 0) + 1
