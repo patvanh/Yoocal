@@ -2,13 +2,9 @@
  * SiteFooter — designed footer with a site-wide internal link mesh
  * (cities + intent hubs + key pages) for discovery/SEO, in the dark hero style.
  */
-const CITIES: Array<{ slug: string; name: string }> = [
-  { slug: "park-city", name: "Park City" },
-  { slug: "heber", name: "Heber Valley" },
-  { slug: "jackson-hole", name: "Jackson Hole" },
-  { slug: "elkhart-lake", name: "Elkhart Lake" },
-  { slug: "green-lake", name: "Green Lake" },
-];
+import { CITIES_ORDERED } from "@/lib/cities";
+
+const CITIES = CITIES_ORDERED.map((c) => ({ slug: c.slug, name: c.shortName }));
 const HUBS: Array<{ seg: string; label: string }> = [
   { seg: "this-weekend", label: "This weekend" },
   { seg: "concerts", label: "Concerts" },
