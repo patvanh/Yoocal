@@ -189,10 +189,20 @@ def fetch_html(url, marker=None, timeout=30, headers=None):
         return direct  # direct fetch good — no firecrawl cost
 
     # Blocked (challenge page, missing marker, or direct failed) -> Firecrawl.
+    # Budget governor: every firecrawl call across all scrapers passes through
+    # here, so the spend cap is enforced in ONE place. When exhausted, we stop
+    # calling firecrawl and return the direct result (possibly None) so a runaway
+    # can never silently burn the whole plan — the caller degrades to last-good.
+    if not _fc_budget_available():
+        print(f"  [fetch_html] firecrawl budget exhausted "
+              f"({FETCH_HTML_FIRECRAWL_CAP} cap) — skipping {url[:50]}, using direct")
+        return direct
     print(f"  [fetch_html] direct blocked/insufficient for {url[:60]} -> Firecrawl")
+    _spent = _fc_budget_consume()
     fc = _firecrawl_rawhtml(url, timeout=max(timeout, 60))
     if fc and not _looks_blocked(fc, marker):
-        print(f"  [fetch_html] Firecrawl recovered {url[:60]} ({len(fc)} bytes)")
+        print(f"  [fetch_html] Firecrawl recovered {url[:60]} "
+              f"({len(fc)} bytes) [budget {_spent}/{FETCH_HTML_FIRECRAWL_CAP}]")
         return fc
     print(f"  [fetch_html] BLOCKED: both direct and Firecrawl failed for {url[:60]}")
     return direct  # return whatever we got (may be None) so caller can decide
