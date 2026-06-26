@@ -174,15 +174,51 @@ def _named_city_far(e, city, target_lat, target_lng, radius_mi, cache):
 
 
 def _place_query(e, city):
-    """Build the best geocode query string from an event's fields."""
+    """Build the best geocode query string from an event's fields.
+
+    Chamber/ChamberMaster sources jam venue name + street + city/state/zip into
+    one field separated by literal CR/LF (e.g. "Knuth Brewing Co.\r\n230 Watson
+    St.\r\nRipon, WI 54971"). Nominatim chokes on the venue-name-led blob and
+    the event gets wrongly held as unverified — even though it's a real local
+    event in a surrounding resort town well inside the radius. Normalize the
+    separators and, when a reliable "City, ST ZIP" tail is present, prefer
+    geocoding that (cities/zips geocode reliably; venue names do not)."""
+    import re as _q_re
+
+    def _clean(v):
+        # CR/LF (literal or escaped) and stray whitespace -> comma separators.
+        s = _q_re.sub(r"[\r\n]+", ", ", str(v))
+        s = _q_re.sub(r"\s*,\s*(,\s*)+", ", ", s)   # collapse doubled commas
+        s = _q_re.sub(r"\s+", " ", s).strip(" ,")
+        return s
+
     for key in ("address", "venue_name", "location", "venue"):
         v = e.get(key)
-        if v and len(str(v)) > 3:
-            # append city/state if the value looks like a bare venue name
-            s = str(v)
-            if "," not in s:
-                s = f"{s}, {city}"
-            return s
+        if not (v and len(str(v)) > 3):
+            continue
+        s = _clean(v)
+        if not s:
+            continue
+        # If a "City, ST ZIP" (or "City, ST") tail is present, geocode the
+        # street+city+state portion, dropping the leading venue-name segment
+        # that breaks geocoding. Match the LAST such occurrence.
+        m = None
+        for m in _q_re.finditer(r"([A-Za-z .'-]+),\s*([A-Z]{2})\b\s*(\d{5})?", s):
+            pass  # keep the last match
+        if m:
+            # Take from the segment just before the city through the zip: this
+            # yields "230 Watson St., Ripon, WI 54971" from the full blob.
+            tail = s[:m.end()]
+            segs = [p.strip() for p in tail.split(",") if p.strip()]
+            # Keep at most the last 3 comma-segments (street, city, state+zip)
+            # to avoid leading the query with the venue name.
+            if len(segs) > 3:
+                segs = segs[-3:]
+            return ", ".join(segs)
+        # No city/state tail -> bare venue name: append target city/state.
+        if "," not in s:
+            s = f"{s}, {city}"
+        return s
     return None
 
 
@@ -251,6 +287,73 @@ def _address_city_far(e, city, target_lat, target_lng, radius_mi, cache):
     return False  # local -> keep (now with real coords)
 
 
+# Sources that cover ONLY one locale — anything they list is in that area by
+# definition. Used as a fallback ONLY when geocoding fails: a venue-name-only
+# event from a town's own chamber/library/visitor/venue site is local even when
+# Nominatim can't resolve the venue name. Aggregators (findarace, jambase,
+# runguides, etc.) are deliberately NOT here, so their un-geocodable events stay
+# held for review. Geocoding still runs first, so a real far coordinate always
+# overrides this fallback.
+_LOCAL_SOURCE_EXTRA = frozenset({
+    # local sources whose host does NOT contain the city name
+    "bananasentertainment.com", "nortonsgreenlake.com", "thrasheroperahouse.com",
+    "greenlaketownsquare.org", "siebkens.com", "roadamerica.com", "osthoff.com",
+    "egyptiantheatrecompany.org", "parkcityfilm.org",
+})
+
+
+def _source_host(e):
+    """Best-effort host for an event's source (source field is usually already a
+    bare host; fall back to parsing source_url/link)."""
+    src = (e.get("source") or "").strip().lower()
+    if src and "." in src and " " not in src and "/" not in src:
+        return src.lstrip("www.")
+    for key in ("source_url", "link"):
+        u = e.get(key)
+        if u:
+            try:
+                h = urllib.parse.urlparse(str(u)).netloc.lower()
+                if h:
+                    return h[4:] if h.startswith("www.") else h
+            except Exception:
+                pass
+    return ""
+
+
+def _is_local_source(e, city):
+    """True if the event's source covers only the target locale (so a venue we
+    couldn't geocode is still safely in-area)."""
+    host = _source_host(e)
+    if not host:
+        return False
+    if host in _LOCAL_SOURCE_EXTRA:
+        return True
+    # Name-match: the host contains the city's distinctive compact name
+    # (e.g. "greenlake" in "chamber.visitgreenlake.com"). Drop a trailing state
+    # name/abbrev so "green lake wisconsin" -> "greenlake" (NOT
+    # "greenlakewisconsin", which no host contains). Require >= 6 chars so short
+    # city names don't false-match unrelated hosts.
+    _STATE_WORDS = {
+        "wisconsin", "wi", "utah", "ut", "wyoming", "wy", "alabama", "alaska",
+        "arizona", "arkansas", "california", "ca", "colorado", "co",
+        "connecticut", "ct", "delaware", "florida", "fl", "georgia", "ga",
+        "hawaii", "idaho", "illinois", "il", "indiana", "in", "iowa", "ia",
+        "kansas", "ks", "kentucky", "ky", "louisiana", "la", "maine", "maryland",
+        "md", "massachusetts", "ma", "michigan", "mi", "minnesota", "mn",
+        "mississippi", "ms", "missouri", "mo", "montana", "mt", "nebraska", "ne",
+        "nevada", "nv", "ohio", "oh", "oklahoma", "ok", "oregon", "or",
+        "pennsylvania", "pa", "tennessee", "tn", "texas", "tx", "vermont", "vt",
+        "virginia", "va", "washington", "wa",
+    }
+    words = [w for w in _re.split(r"[ ,]+", city.lower()) if w]
+    locale_words = [w for w in words if w not in _STATE_WORDS]
+    city_compact = _re.sub(r"[^a-z]", "", "".join(locale_words))
+    host_compact = _re.sub(r"[^a-z]", "", host)
+    if len(city_compact) >= 6 and city_compact in host_compact:
+        return True
+    return False
+
+
 def geo_validate(events, city, lat, lng, radius_mi, verbose=True):
     """Geocode coordinate-less events, then drop those outside the radius or
     clearly in another town. Returns kept list."""
@@ -295,6 +398,7 @@ def geo_validate(events, city, lat, lng, radius_mi, verbose=True):
                 if dist > radius_mi:
                     n_dropped_far += 1
                     continue
+                e.pop("_geo_unverified", None)  # confirmed in-radius: un-hold
             except (TypeError, ValueError):
                 pass
         else:
@@ -303,8 +407,19 @@ def geo_validate(events, city, lat, lng, radius_mi, verbose=True):
                 n_dropped_text += 1
                 continue
             if verdict is None:
-                e["_geo_unverified"] = True
-                n_unverified += 1
+                # Geocoding failed and the text names nothing. If the source is a
+                # known single-locale local source (the town's own chamber/
+                # library/venue site), the event IS local even though we couldn't
+                # pin the venue — stamp the city centroid and publish rather than
+                # hold. Aggregators are excluded, so their un-geocodable events
+                # (e.g. findarace UK races) still go to review.
+                if _is_local_source(e, city):
+                    e["lat"], e["lng"] = lat, lng
+                    e["_geo_local_fallback"] = True
+                    e.pop("_geo_unverified", None)  # un-hold if re-validated
+                else:
+                    e["_geo_unverified"] = True
+                    n_unverified += 1
         kept.append(e)
 
     _save_cache(cache)
