@@ -30,16 +30,6 @@ export default function HomeServer() {
           from local sources — venues, chambers of commerce, and public calendars — so you can
           find everything happening near you in one place. Browse a city:
         </p>
-        <ul className="home-server-cities">
-          {CITIES.map((c) => (
-            <li key={c.slug} className="home-server-city">
-              <a href={`/${c.slug}`}>
-                <span className="home-server-city-name">{c.name}, {c.region}</span>
-                <span className="home-server-city-blurb">{c.blurb}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
         <p className="home-server-foot">
           For each city, browse <a href="/park-city/this-weekend">this weekend</a>,{" "}
           <a href="/park-city/free-events">free events</a>, <a href="/park-city/concerts">concerts</a>,
@@ -49,19 +39,19 @@ export default function HomeServer() {
       </div>
 
       <style>{`
-        .home-server { background: #faf9ff; padding: 16px 16px 56px; }
+        .home-server { background: #1a1830; padding: 44px 16px 48px; border-top: 1px solid rgba(255,255,255,0.06); }
         .home-server-inner { max-width: 1100px; margin: 0 auto; }
-        .home-server-h1 { font-family: 'DM Serif Display', serif; font-size: 30px; line-height: 1.14; color: #1e1b3a; margin: 0 0 12px; max-width: 760px; }
-        .home-server-lede { font-size: 15px; line-height: 1.65; color: #5b5676; margin: 0 0 22px; max-width: 760px; }
-        .home-server-cities { list-style: none; padding: 0; margin: 0 0 22px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
-        .home-server-city a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; background: #fff; border: 1px solid #ece8fa; border-radius: 12px; text-decoration: none; transition: border-color 0.15s; height: 100%; }
-        .home-server-city a:hover { border-color: #b9aef5; }
-        .home-server-city-name { font-size: 15px; font-weight: 700; color: #1e1b3a; }
-        .home-server-city-blurb { font-size: 13px; line-height: 1.45; color: #8a85a6; }
-        .home-server-foot { font-size: 14px; line-height: 1.6; color: #5b5676; max-width: 760px; }
-        .home-server-foot a { color: #7b5cff; text-decoration: none; border-bottom: 1px solid rgba(123,92,255,0.3); }
-        .home-server-foot a:hover { border-bottom-color: #7b5cff; }
-        @media (max-width: 640px) { .home-server-h1 { font-size: 25px; } }
+        .home-server-h1 { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; line-height: 1.3; color: #b9aef5; margin: 0 0 10px; max-width: 760px; }
+        .home-server-lede { font-size: 13.5px; line-height: 1.6; color: rgba(255,255,255,0.5); margin: 0 0 20px; max-width: 720px; }
+        .home-server-cities { list-style: none; padding: 0; margin: 0 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+        .home-server-city a { display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; text-decoration: none; transition: background 0.15s, border-color 0.15s; height: 100%; }
+        .home-server-city a:hover { background: rgba(255,255,255,0.07); border-color: rgba(185,174,245,0.4); }
+        .home-server-city-name { font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.92); }
+        .home-server-city-blurb { font-size: 12px; line-height: 1.4; color: rgba(255,255,255,0.45); }
+        .home-server-foot { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.5); max-width: 760px; margin: 0; }
+        .home-server-foot a { color: #b9aef5; text-decoration: none; border-bottom: 1px solid rgba(185,174,245,0.3); }
+        .home-server-foot a:hover { border-bottom-color: #b9aef5; }
+        @media (max-width: 640px) { .home-server-h1 { font-size: 12px; } }
       `}</style>
     </section>
   )
