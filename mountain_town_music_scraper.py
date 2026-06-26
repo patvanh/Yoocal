@@ -192,6 +192,18 @@ def _parse_show(url):
                 address = full_addr
             venue_name = scraped_venue
 
+    # Artist/show photo: MTM show pages expose an og:image meta tag. Pull it so
+    # cards render a real image instead of the category-gradient fallback.
+    # Handles both attribute orders (property-then-content and vice versa).
+    img_m = re.search(
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+        decoded, re.IGNORECASE,
+    ) or re.search(
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+        decoded, re.IGNORECASE,
+    )
+    image_url = img_m.group(1).strip() if img_m else None
+
     is_free = "FREE SHOW" in text
 
     return {
@@ -211,6 +223,7 @@ def _parse_show(url):
         "end_time": end_time,
         "address": address,
         "venue_name": venue_name,
+        "image_url": image_url,
         "scraped_at": datetime.now().isoformat(),
     }
 
