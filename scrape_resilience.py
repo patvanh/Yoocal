@@ -105,12 +105,32 @@ def apply_resilience_guard(all_events, today_iso=None, state_path=STATE_FILE):
 
         good = snap.get("count", 0)
         if incoming >= RETAIN_FRACTION * good:
-            # Healthy: use incoming, refresh snapshot.
-            out.extend(evs)
-            state[source] = {"count": incoming, "date": today_iso,
-                             "low_streak": 0, "events": evs}
+            # Healthy: refresh the snapshot — but UNION with stored events so the
+            # store never SHRINKS. A scrape can be healthy (above the retain
+            # threshold) yet still smaller than what we already know, e.g. when an
+            # incremental-maintained source has a complete 238-event store but the
+            # nightly full scrape is rate-limited to 160. Replacing outright would
+            # discard the extra known events (and undo incremental's work every
+            # night). Unioning keeps the larger, complete set. Dedup by
+            # (normalized title, date); incoming wins on tie (freshest fields).
+            _stored = _future_only(snap.get("events") or [], today_iso)
+            def _k(e):
+                t = "".join((e.get("title") or "").lower().split())
+                return (t, (e.get("date") or "")[:10])
+            _seen = set()
+            _union = []
+            for e in evs + _stored:  # incoming first -> fresher fields win on tie
+                k = _k(e)
+                if k in _seen:
+                    continue
+                _seen.add(k)
+                _union.append(e)
+            out.extend(_union)
+            state[source] = {"count": len(_union), "date": today_iso,
+                             "low_streak": 0, "events": _union}
             report.append({"source": source, "status": "ok",
-                           "incoming": incoming, "good": good})
+                           "incoming": incoming, "good": good,
+                           "unioned": len(_union)})
         else:
             streak = snap.get("low_streak", 0) + 1
             catastrophic = incoming < CATASTROPHIC_FRACTION * good

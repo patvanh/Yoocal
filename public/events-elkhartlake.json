@@ -6,7 +6,7 @@
     "lng": -88.0426
   },
   "radius_mi": 15,
-  "generated_at": "2026-06-26T15:28:54.433436-06:00",
+  "generated_at": "2026-06-26T15:38:52.280136-06:00",
   "today": "2026-06-26",
   "event_count": 219,
   "events": [
@@ -31,6 +31,32 @@
       "filter_categories": [
         "Community",
         "Family & Kids"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Old World Christmas Market",
+      "date": "2026-12-04",
+      "end_date": null,
+      "location": "The Osthoff Resort, Elkhart Lake, WI",
+      "venue_name": "The Osthoff Resort",
+      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
+      "categories": [
+        "Festival",
+        "Family",
+        "Food & Drink"
+      ],
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-26T12:45:07.789905",
+      "series_end": "2026-12-13",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Family & Kids",
+        "Food & Drink"
       ],
       "_distance_mi": 0.0
     },
@@ -631,19 +657,6 @@
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "8:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "11:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
       "filter_categories": [
         "Arts & Theater",
         "Food & Drink",
@@ -3308,11 +3321,8 @@
       "_geo_source": "default",
       "categories": [
         "Community",
-        "Family",
         "Festival",
-        "Food & Drink",
-        "Music",
-        "Outdoor"
+        "Food & Drink"
       ],
       "facets": [
         "21+"
@@ -3322,25 +3332,10 @@
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "Vintage Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
       "filter_categories": [
         "Arts & Theater",
         "Community",
-        "Family & Kids",
-        "Food & Drink",
-        "Music",
-        "Outdoors"
+        "Food & Drink"
       ],
       "_distance_mi": 0.0
     },
@@ -5121,52 +5116,6 @@
       "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Old World Christmas Market",
-      "date": "2026-12-04",
-      "end_date": null,
-      "location": "The Osthoff Resort, Elkhart Lake, WI",
-      "venue_name": "The Osthoff Resort",
-      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
-      "categories": [
-        "Family",
-        "Festival",
-        "Food & Drink",
-        "Wellness"
-      ],
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-26T12:45:07.789905",
-      "series_end": "2026-12-13",
-      "start_time": "10:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "_all_sources": [
-        "Elkhart Lake Tourism"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "The Osthoff Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Osthoff Resort &#038; Spa",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Family & Kids",
-        "Food & Drink",
-        "Wellness"
       ],
       "_distance_mi": 0.0
     },

@@ -103,6 +103,12 @@ jobs:
           python -u jackson_scraper.py
           echo "::endgroup::"
 
+      - name: Incremental store update (cut-over sources)
+        run: |
+          echo "::group::Incremental store update"
+          python incremental_cron.py
+          echo "::endgroup::"
+
       - name: Apply event overrides
         id: overrides
         continue-on-error: true
