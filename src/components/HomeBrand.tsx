@@ -315,24 +315,6 @@ export default function HomeBrand() {
 
       <div className="hb-content">
 
-        <div className="hb-how">
-          <div className="hb-how-item">
-            <div className="hb-how-num">1</div>
-            <h3>Pick your town</h3>
-            <p>Four mountain &amp; lake towns live now, with more on the way.</p>
-          </div>
-          <div className="hb-how-item">
-            <div className="hb-how-num">2</div>
-            <h3>See everything happening</h3>
-            <p>Concerts, festivals, races and more &mdash; every source in one place, refreshed daily.</p>
-          </div>
-          <div className="hb-how-item">
-            <div className="hb-how-num">3</div>
-            <h3>Never miss out</h3>
-            <p>Always free. Get the week&apos;s best events in your inbox.</p>
-          </div>
-        </div>
-
         <div className="hb-duo">
         <div className="hb-news">
           <h2>Get the week&apos;s best events in your inbox</h2>
@@ -471,7 +453,7 @@ export default function HomeBrand() {
           font-size: 12px; color: var(--muted);
         }
 
-        .hb-content { max-width: 1100px; margin: 0 auto; padding: 24px 40px 40px; }
+        .hb-content { max-width: 1100px; margin: 0 auto; padding: 0; }
         .hb-section-label {
           font-size: 12px; font-weight: 700; text-transform: uppercase;
           letter-spacing: 1px; color: var(--amber);
@@ -556,7 +538,15 @@ export default function HomeBrand() {
         .hb-how-num { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: var(--purple); background: rgba(83,74,183,0.1); margin-bottom: 14px; }
         .hb-how-item h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--dark); }
         .hb-how-item p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-        .hb-duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 0; align-items: stretch; }
+        .hb-duo {
+          display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 20px; align-items: stretch;
+          background: var(--purple-pale);
+          margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
+          width: 100vw; box-sizing: border-box;
+          padding: 48px calc(50vw - 540px);
+          margin-bottom: 0;
+        }
         .hb-news { background: var(--dark); border-radius: 24px; padding: clamp(36px, 5vw, 56px) clamp(24px, 5vw, 48px); text-align: center; display: flex; flex-direction: column; justify-content: center; }
         .hb-news h2 { font-family: 'DM Serif Display', serif; font-size: clamp(24px, 3vw, 34px); color: #fff; margin-bottom: 10px; }
         .hb-news > p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 26px; }
