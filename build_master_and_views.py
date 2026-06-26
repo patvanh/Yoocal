@@ -908,6 +908,22 @@ SOURCE_PRIORITY = {
 DEFAULT_PRIORITY = 3  # unknown source -> assume community calendar tier
 
 
+def _venue_consistent_with_address(venue: str, location: str, address: str) -> bool:
+    """True if venue_name plausibly matches the event's own location/address text.
+    Used to reject a merged venue_name that contradicts the event's real place
+    (e.g. venue 'Park City Mountain' on an event whose address is 'Main Street')."""
+    if not venue:
+        return True
+    v = _normalize_venue(venue)
+    if not v:
+        return True
+    hay = _normalize_venue(((location or "") + " " + (address or "")))
+    if v in hay:
+        return True
+    # Or a meaningful (len>4) token of the venue appears in the location/address.
+    return any(tok in hay for tok in v.split() if len(tok) > 4)
+
+
 def merge_events(records: list[dict]) -> dict:
     """When multiple records dedupe to the same key, pick the best fields."""
     if len(records) == 1:
@@ -991,6 +1007,22 @@ def merge_events(records: list[dict]) -> dict:
                     links.append({"url": lk, "source": r.get("source", "?")})
             if len(links) > 1:
                 base["_source_links"] = links
+
+    # Venue sanity: the priority source's venue_name can contradict the event's
+    # own address (same event reported by multiple sources; one mis-tags the
+    # venue, e.g. 'Park City Mountain' on a Main Street event). If the chosen
+    # venue_name appears nowhere in the merged location/address, prefer a
+    # conflicting venue value that IS consistent; if none, clear it so display
+    # falls back to the (correct) location. Only fires on contradictions, so
+    # events whose venue matches their address are untouched.
+    _bv = base.get("venue_name")
+    if _bv and not _venue_consistent_with_address(_bv, base.get("location"), base.get("address")):
+        _alt = None
+        for _v in _collect("venue_name"):
+            if _venue_consistent_with_address(_v, base.get("location"), base.get("address")):
+                _alt = _v
+                break
+        base["venue_name"] = _alt  # consistent alternative, or None to fall back to location
 
     base = _sanitize_span(_infer_pricing(_derive_address(_apply_single_venue_lookup(_backfill_venue(base)))))
     base["title"] = _strip_title_year(_clean_display_text(_best_display_title(records) or base.get("title", "")))
