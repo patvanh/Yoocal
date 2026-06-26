@@ -1349,6 +1349,21 @@ def _cross_source_fuzzy_merge(events: list) -> list:
             for j in range(i + 1, len(group)):
                 if dropped[j] or group[i].get("source") == group[j].get("source"):
                     continue
+                # Geographic guard: two events far apart are NOT the same event,
+                # no matter how similar their titles. Without this, generic-word
+                # title overlap merges genuinely different events in different
+                # cities (e.g. Park City's "Summer Yoga Festival" was absorbed
+                # into Jackson's "Summer Festival" 200mi away). Only applies when
+                # BOTH have coordinates; missing coords -> fall through to the
+                # title check (preserves old behavior for coordless records).
+                _la, _lna = group[i].get("lat"), group[i].get("lng")
+                _lb, _lnb = group[j].get("lat"), group[j].get("lng")
+                if all(v is not None for v in (_la, _lna, _lb, _lnb)):
+                    try:
+                        if haversine_miles(float(_la), float(_lna), float(_lb), float(_lnb)) > 15:
+                            continue
+                    except (ValueError, TypeError):
+                        pass
                 _vi = _normalize_venue(group[i].get("venue_name") or group[i].get("location") or "")
                 _vj = _normalize_venue(group[j].get("venue_name") or group[j].get("location") or "")
                 _same_venue = bool(_vi) and _vi == _vj
