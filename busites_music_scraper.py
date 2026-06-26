@@ -48,7 +48,8 @@ def scrape_busites_music(
     """Return future yoocal events from a busites embedded-JSON listing page."""
     today = datetime.now().strftime("%Y-%m-%d")
     try:
-        text = requests.get(url, headers=_HEADERS, timeout=timeout).text
+        from firecrawl_extractor import fetch_html as _fh
+        text = _fh(url, headers=_HEADERS) or ""
     except Exception as ex:
         print(f"  [{source_name}] fetch failed: {ex}")
         return []

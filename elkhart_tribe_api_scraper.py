@@ -165,7 +165,20 @@ def _scrape_tribe_api(base_url: str, label: str, source_name: str,
                     _end_of_pages = True
                     break
                 r.raise_for_status()
-                data = r.json()
+                _body = r.text
+                # CI datacenter-IP block: a Cloudflare challenge arrives as 200
+                # with no JSON. If the body isn't the expected Tribe JSON (no
+                # "events" key), refetch the full URL (params encoded) through
+                # Firecrawl. One fallback per page; pagination still bounded.
+                if '"events"' not in _body:
+                    import urllib.parse as _up
+                    _full = base_url + "?" + _up.urlencode(params)
+                    from firecrawl_extractor import fetch_html as _fh
+                    _fc = _fh(_full, marker='"events"')
+                    if _fc and '"events"' in _fc:
+                        _body = _fc
+                import json as _json
+                data = _json.loads(_body)
                 break
             except Exception as ex:
                 if _attempt < 2:

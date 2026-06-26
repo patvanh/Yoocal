@@ -35,19 +35,11 @@ _DATE_PAT = re.compile(
 def fetch_lineup(year: int = 2026, timeout: int = 20) -> Dict[str, str]:
     """Return {YYYY-MM-DD: band_name} from snowkingmountain.com lineup page."""
     try:
-        r = requests.get(
-            LINEUP_URL,
-            headers={
-                "User-Agent": (
-                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) "
-                    "Chrome/120.0 Safari/537.36"
-                )
-            },
-            timeout=timeout,
-        )
-        r.raise_for_status()
-        html = r.text
+        from firecrawl_extractor import fetch_html as _fh
+        html = _fh(LINEUP_URL)
+        if not html:
+            print(f"  [Snow King lineup] fetch failed (direct + Firecrawl)")
+            return {}
     except Exception as e:
         print(f"  [Snow King lineup] fetch failed: {e}")
         return {}
