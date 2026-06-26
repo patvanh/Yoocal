@@ -16,6 +16,7 @@ on BOTH calendars without duplication.
 from __future__ import annotations
 
 import json
+import os
 from venue_lookup import lookup_venue_by_address
 import math
 from datetime import datetime, timezone, timedelta
@@ -1033,6 +1034,25 @@ def merge_events(records: list[dict]) -> dict:
     return base
 
 
+def _too_far_to_merge(a: dict, b: dict, max_miles: float = 15.0) -> bool:
+    """True if a and b have coordinates and are more than max_miles apart.
+
+    Distance is a hard veto on merging: two events that far apart are not the
+    same event no matter how similar their titles. Used by every merge pass
+    (prefix, fuzzy, link) so a cross-city title collision (e.g. Park City
+    "Savor the Summit" vs a Jackson event titled "Savor", 200mi apart) can
+    never collapse into one record through ANY path. Missing coords -> returns
+    False (can't prove distance; preserves old behavior for coordless records).
+    """
+    la, lna, lb, lnb = a.get("lat"), a.get("lng"), b.get("lat"), b.get("lng")
+    if all(v is not None for v in (la, lna, lb, lnb)):
+        try:
+            return haversine_miles(float(la), float(lna), float(lb), float(lnb)) > max_miles
+        except (ValueError, TypeError):
+            return False
+    return False
+
+
 def _prefix_merge(events: list[dict]) -> list[dict]:
     """Second-pass dedup for suffix-variant dupes the (title,date) key misses.
 
@@ -1081,6 +1101,8 @@ def _prefix_merge(events: list[dict]) -> list[dict]:
                 # b is a strict string-prefix of a, and b is not itself a race
                 # listing -> b is the terser duplicate, merge it in.
                 if a != b and a.startswith(b + " ") and not _b_is_race:
+                    if _too_far_to_merge(group[i], group[j]):
+                        continue  # different cities -> not the same event
                     group[i] = merge_events([group[i], group[j]])
                     norms[i] = _normalize_title(group[i].get("title") or "")
                     dropped[j] = True
@@ -1260,6 +1282,8 @@ def _link_merge(events: list) -> list:
                 if used[j]:
                     continue
                 if _mergeable(cur, group[j]):
+                    if _too_far_to_merge(cur, group[j]):
+                        continue  # same link but far apart -> not the same event
                     cur = merge_events([cur, group[j]])
                     used[j] = True
                     merged += 1
@@ -1534,8 +1558,11 @@ def main():
         # (fetched from jacksonhole.com schedule). Runs before dedup so distinct
         # titles flow through and the cross-source dup false-positives clear.
         try:
-            from concerts_commons_enricher import enrich_concerts_on_the_commons
-            all_events = enrich_concerts_on_the_commons(all_events)
+            if os.environ.get("SKIP_ENRICH"):
+                print("  SKIP_ENRICH set — skipping concerts-on-the-commons enrich")
+            else:
+                from concerts_commons_enricher import enrich_concerts_on_the_commons
+                all_events = enrich_concerts_on_the_commons(all_events)
         except Exception as _ce:
             print(f"  WARN: concerts-on-the-commons enrich skipped: {_ce}")
 
@@ -1546,8 +1573,11 @@ def main():
         # data. Fully guarded: any failure leaves events un-enriched, never breaks
         # the build. Date-safe: never moves an event into the past.
         try:
-            from primary_source_enricher import enrich_primary_sources
-            all_events = enrich_primary_sources(all_events)
+            if os.environ.get("SKIP_ENRICH"):
+                print("  SKIP_ENRICH set — skipping primary-source enrich")
+            else:
+                from primary_source_enricher import enrich_primary_sources
+                all_events = enrich_primary_sources(all_events)
         except Exception as _pe:
             print(f"  WARN: primary-source enrich skipped: {_pe}")
 
