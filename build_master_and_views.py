@@ -1305,7 +1305,7 @@ def _cross_source_fuzzy_merge(events: list) -> list:
     import re as _re
     _RACE_NUM = _re.compile(r"^(\d+\s*k|\d+\s*mile|half|marathon|\d{2,4})$")
 
-    def _compatible(t1, t2, same_venue=False):
+    def _compatible(t1, t2, same_venue=False, same_location=False):
         n1, n2 = _normalize_title(t1 or ""), _normalize_title(t2 or "")
         if not n1 or not n2:
             return False
@@ -1331,6 +1331,16 @@ def _cross_source_fuzzy_merge(events: list) -> list:
                  "music", "event", "events", "series", "with", "to", "for"}
         small, big = (s1, s2) if len(s1) <= len(s2) else (s2, s1)
         if small.issubset(big) and len(small - _STOP) >= 2:
+            return True
+        # (b2) same PRECISE location (<0.5mi, set by caller) + subset: when two
+        # records sit at essentially the same coordinates on the same date and
+        # one title's tokens subset the other's, they are the same event even if
+        # only ONE distinctive token remains after stopwords. The tight location
+        # match is the guard here (replacing the >=2-token rule that protects the
+        # title-only case), so e.g. "Saturday Sunset Music Series" and "Heber's
+        # Saturday Sunset Music Series" at the same park on the same date merge,
+        # while generic-word collisions in DIFFERENT places never reach this branch.
+        if same_location and small.issubset(big) and len(small - _STOP) >= 1:
             return True
         # Day-of-week words get stripped asymmetrically by _normalize_title
         # (leading day removed, mid-title day kept), so retry the subset test
@@ -1391,8 +1401,16 @@ def _cross_source_fuzzy_merge(events: list) -> list:
                 _vi = _normalize_venue(group[i].get("venue_name") or group[i].get("location") or "")
                 _vj = _normalize_venue(group[j].get("venue_name") or group[j].get("location") or "")
                 _same_venue = bool(_vi) and _vi == _vj
+                # Precise co-location (<0.5mi): a strong same-event signal that
+                # lets _compatible relax its distinctive-token requirement safely.
+                _same_location = False
+                if all(v is not None for v in (_la, _lna, _lb, _lnb)):
+                    try:
+                        _same_location = haversine_miles(float(_la), float(_lna), float(_lb), float(_lnb)) <= 0.5
+                    except (ValueError, TypeError):
+                        pass
                 if _compatible(group[i].get("title"), group[j].get("title"),
-                               same_venue=_same_venue):
+                               same_venue=_same_venue, same_location=_same_location):
                     group[i] = merge_events([group[i], group[j]])
                     dropped[j] = True
                     merged += 1

@@ -6,9 +6,9 @@
     "lng": -111.4133
   },
   "radius_mi": 10,
-  "generated_at": "2026-06-26T14:58:59.671629-06:00",
+  "generated_at": "2026-06-26T15:11:44.980538-06:00",
   "today": "2026-06-26",
-  "event_count": 1395,
+  "event_count": 1384,
   "events": [
     {
       "title": "RMSB Firecracker Tournament",
@@ -1628,6 +1628,78 @@
       "_distance_mi": 10.0
     },
     {
+      "title": "Saturday Sunset Music Series",
+      "date": "2026-06-27",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community",
+        "Family",
+        "Music"
+      ],
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
+      "filter_categories": [
+        "Community",
+        "Family & Kids",
+        "Music"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Soldier Hollow Bike Fest",
       "date": "2026-06-27",
       "description": "SoHo Bike Fest @ Soldier Hollow in Heber Valley.",
@@ -2432,44 +2504,6 @@
         "Food & Drink"
       ],
       "_distance_mi": 8.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-06-27",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
-        "Music"
-      ],
-      "_distance_mi": 0.0
     },
     {
       "title": "Dark Sky Stargazing Party @ Rock Cliff Nature Center",
@@ -3487,24 +3521,70 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-07-04",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-03T03:38:06.453726",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -3885,44 +3965,6 @@
       "end_date": null,
       "series_end": "2026-08-30",
       "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-07-04",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -5197,24 +5239,70 @@
       "_distance_mi": 3.2
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-07-11",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-03T03:38:08.822980",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -5572,44 +5660,6 @@
       "end_date": null,
       "series_end": "2026-08-30",
       "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-07-11",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -6606,24 +6656,70 @@
       "_distance_mi": 0.6
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-07-18",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-03T03:38:11.094671",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -6955,44 +7051,6 @@
       "end_date": null,
       "series_end": "2026-08-30",
       "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-07-18",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -8010,24 +8068,70 @@
       "_distance_mi": 0.6
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-07-25",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-03T03:38:13.571957",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -8358,44 +8462,6 @@
       "end_date": null,
       "series_end": "2026-08-30",
       "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-07-25",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -9481,24 +9547,70 @@
       "_distance_mi": 3.2
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-08-01",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-03T03:38:16.780971",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -9852,44 +9964,6 @@
         "Community",
         "Family & Kids",
         "Food & Drink",
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-08-01",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -10586,24 +10660,70 @@
       "_distance_mi": 0.6
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-08-08",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-03T03:38:18.257601",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -10954,44 +11074,6 @@
       "end_date": null,
       "series_end": "2026-08-30",
       "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-08-08",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -11914,24 +11996,70 @@
       "_distance_mi": 0.6
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-08-15",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-03T03:38:20.534556",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -12210,44 +12338,6 @@
       "end_date": null,
       "series_end": "2026-08-30",
       "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-08-15",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -12976,24 +13066,70 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-08-22",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-03T03:38:22.165400",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -13325,44 +13461,6 @@
       "end_date": null,
       "series_end": "2026-08-30",
       "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-08-22",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -14221,24 +14319,70 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-08-29",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-07T15:28:38.345195",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -14572,44 +14716,6 @@
       "end_date": null,
       "series_end": "2026-08-30",
       "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-08-29",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
         "Music"
       ],
       "_distance_mi": 0.0
@@ -15234,24 +15340,70 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-09-05",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-15T20:21:00.584029",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -15448,44 +15600,6 @@
       "filter_categories": [
         "Community",
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-09-05",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
-        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -16121,24 +16235,70 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Heber's Saturday Sunset Music Series",
+      "title": "Saturday Sunset Music Series",
       "date": "2026-09-12",
-      "description": "There's no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00-8:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley and surrounding communities. From acoustic singer-songwriters to upbeat crowd favorites, performances are thoughtfully curated to appeal to a wide range of ages and musical tastes. Whether you're bringing kids, meeting friends, or enjoying a casual date night, Saturday Sunset offers something for everyone. Food Trucks & Music 5-9 PM, LIVE Music 7-8:30 PM...",
-      "location": "Main Street Park, Heber City, UT",
-      "link": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
+        "Family",
         "Music"
       ],
-      "start_time": "5:00 PM",
+      "scraped_at": "2026-06-26T11:46:49.504226",
+      "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "scraped_at": "2026-06-21T12:15:01.789829",
-      "venue_name": "Main Street Park",
-      "address": "200 S Main Street",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/d99aa4b8-a542-4fbb-8cb9-edff552fb121.large.png",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "series_end": "2026-09-30",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "_all_sources": [
+        "Heber Valley Life",
+        "Heber Valley Tourism",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "The Park Record"
+          }
+        ],
+        "venue": [
+          {
+            "value": "Heber City Main Street",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park",
+            "source": "The Park Record"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+          "source": "Heber Valley Tourism"
+        },
+        {
+          "url": "https://nowplayingutah.com/event/hebers-saturday-sunset-music-series/",
+          "source": "The Park Record"
+        }
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -16309,44 +16469,6 @@
       "series_end": "2026-09-13",
       "filter_categories": [
         "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Saturday Sunset Music Series",
-      "date": "2026-09-12",
-      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family",
-        "Music"
-      ],
-      "scraped_at": "2026-06-26T11:46:49.504226",
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=26-11-49",
-      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Saturday",
-      "end_date": null,
-      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
-      "series_end": "2026-09-30",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
-        "Music"
       ],
       "_distance_mi": 0.0
     },

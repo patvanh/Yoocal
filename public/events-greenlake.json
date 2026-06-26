@@ -6,9 +6,9 @@
     "lng": -88.9576
   },
   "radius_mi": 25,
-  "generated_at": "2026-06-26T14:58:59.771179-06:00",
+  "generated_at": "2026-06-26T15:11:45.078816-06:00",
   "today": "2026-06-26",
-  "event_count": 388,
+  "event_count": 387,
   "events": [
     {
       "title": "Tree-Ripe Peach Stop Truck - Ripon",
@@ -1011,27 +1011,6 @@
         "Running & Races"
       ],
       "_distance_mi": 6.1
-    },
-    {
-      "title": "13dot1",
-      "date": "2026-09-05",
-      "end_date": "2026-09-05",
-      "location": "Town Square Terrace",
-      "venue_name": "",
-      "link": "https://visitgreenlake.com/",
-      "start_time": null,
-      "end_time": null,
-      "source": "visitgreenlake.com",
-      "source_url": "https://visitgreenlake.com/",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "city": "green lake wisconsin",
-      "categories": [],
-      "_geo_local_fallback": true,
-      "filter_categories": [
-        "Community"
-      ],
-      "_distance_mi": 0.0
     },
     {
       "title": "Creation Care 5k (Virtual)",
@@ -5580,6 +5559,32 @@
       "_distance_mi": 24.2
     },
     {
+      "title": "13dot1",
+      "date": "2026-09-05",
+      "end_date": "2026-09-05",
+      "location": "Town Square Terrace",
+      "venue_name": "Town Square Terrace",
+      "link": "https://visitgreenlake.com/",
+      "start_time": "12:30 PM",
+      "end_time": "5:00 PM",
+      "source": "visitgreenlake.com",
+      "source_url": "https://visitgreenlake.com/",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "city": "green lake wisconsin",
+      "categories": [],
+      "_geo_local_fallback": true,
+      "description": "Green Lake Area 13dot1 Races \u2013 Half Marathon, 10K & 5K Kick off Labor Day Weekend in scenic Green Lake with your choice of a Half Marathon, 10K, or 5K \u2014all starting and finishing at the Town Square Community Center Terrace. Our race courses wind through historic downtown, past local shops and parks, and along the breathtaking shoreline of Big Green Lake. Runners will enjoy a mix of charming neighborhoods, lakefront vistas, and wooded pathways, with the Half Marathon featuring an extended tour through the beautiful Green Lake Conference Center grounds. All routes offer family-friendly fun, community spirit, and memorable views, ending back at Town Square for post-race celebrations.",
+      "_all_sources": [
+        "chamber.visitgreenlake.com",
+        "visitgreenlake.com"
+      ],
+      "filter_categories": [
+        "Family & Kids"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
       "title": "LakeApalooza",
       "date": "2026-09-05",
       "start_time": "10:00 PM",
@@ -5598,24 +5603,6 @@
         "Arts & Theater",
         "Family & Kids",
         "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "GLA 13dot1 Races",
-      "date": "2026-09-05",
-      "start_time": "12:30 PM",
-      "end_time": "5:00 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/gla-13dot1-races-840561",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "location": "Town Square Terrace",
-      "venue_name": "Town Square Terrace",
-      "description": "Green Lake Area 13dot1 Races \u2013 Half Marathon, 10K & 5K Kick off Labor Day Weekend in scenic Green Lake with your choice of a Half Marathon, 10K, or 5K \u2014all starting and finishing at the Town Square Community Center Terrace. Our race courses wind through historic downtown, past local shops and parks, and along the breathtaking shoreline of Big Green Lake. Runners will enjoy a mix of charming neighborhoods, lakefront vistas, and wooded pathways, with the Half Marathon featuring an extended tour through the beautiful Green Lake Conference Center grounds. All routes offer family-friendly fun, community spirit, and memorable views, ending back at Town Square for post-race celebrations.",
-      "city": "green lake wisconsin",
-      "filter_categories": [
-        "Family & Kids"
       ],
       "_distance_mi": 0.0
     },
