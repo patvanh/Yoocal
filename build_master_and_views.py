@@ -151,6 +151,9 @@ _JUNK_TITLES = {
     "view all events", "see all events", "calendar of events",
     "events search and views navigation", "list", "month", "day", "today",
     "previous events", "next events", "previous day", "next day",
+    # Section headers scraped as events from listing pages (not real events).
+    "what’s on this season", "what's on this season", "whats on this season",
+    "what’s on", "what's on",
 }
 
 
