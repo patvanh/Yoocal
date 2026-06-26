@@ -6,9 +6,9 @@
     "lng": -110.7624
   },
   "radius_mi": 25,
-  "generated_at": "2026-06-26T15:38:52.240137-06:00",
+  "generated_at": "2026-06-26T15:45:04.131673-06:00",
   "today": "2026-06-26",
-  "event_count": 1658,
+  "event_count": 1659,
   "events": [
     {
       "title": "Summer Festival",
@@ -31,6 +31,23 @@
       "_first_seen": "2026-06-26",
       "_last_seen": "2026-06-26",
       "series_end": "2026-06-27",
+      "address": "Jackson Hole, WY, 83001",
+      "_all_sources": [
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "Jackson Hole, Wyoming",
+            "source": "Jackson Hole Chamber of Commerce"
+          },
+          {
+            "value": "Jackson Hole, WY",
+            "source": "Jackson Hole Mountain Resort"
+          }
+        ]
+      },
       "filter_categories": [
         "Community"
       ],
@@ -80,6 +97,23 @@
       "_first_seen": "2026-06-26",
       "_last_seen": "2026-06-26",
       "series_end": "2026-06-27",
+      "address": "Jackson Hole, WY, 83001",
+      "_all_sources": [
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "Jackson Hole, Wyoming",
+            "source": "Jackson Hole Chamber of Commerce"
+          },
+          {
+            "value": "Jackson Hole, WY",
+            "source": "Jackson Hole Mountain Resort"
+          }
+        ]
+      },
       "filter_categories": [
         "Community"
       ],
@@ -7533,6 +7567,34 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Jackson Hole Food & Wine | Dinner Series | Chef Gavin Kaysen + Hirsch Vineyards",
+      "date": "2026-06-26",
+      "description": "Get Tickets Here: Summer Festival \u00e2\u0080\u0094 Jackson Hole Food & Wine For one night only, just 40 guests will gather at the spectacular Teton home of Nancy & Rolf Engh for an intimate culinary experience featuring two-time James Beard Award\u00e2\u0080\u0093winning chef Gavin Kaysen of Spoon and Stable . Against a backdrop of sweeping mountain views, Chef Kaysen will create an elegant multi-course dinner showcasing his signature style \u00e2\u0080\u0094 refined French technique paired with the vibrant spirit of seasonal American ingredients. Each course will be accompanied by exceptional wines from the iconic Hirsch Vineyards , one of the Sonoma Coast\u00e2\u0080\u0099s most revered producers, known for its beautifully expressive Pinot Noir and Chardonnay. Hosted in a breathtaking private residence, this intimate evening offers a rare opportunity to experience world-class cuisine and extraordinary wines. Please Note: Must be 21 or older to attend any Jackson Hole Food & Wine event No ticket refunds or exchanges In order for us to allow our participating chefs full creativity, our dinners do not cater to those with strict dietary restrictions or allergies. If you have any questions, please email haynes@jhfoodandwine.com If an event is delayed, but not cancelled due to unforeseen circumstances, we will not offer refunds.",
+      "location": "Nancy & Rolf Engh, Teton Village, WY, 83025",
+      "link": "https://www.jacksonhole.com/events/jackson-hole-food-and-wine-dinner-series-06-26-26-2",
+      "source": "Jackson Hole Mountain Resort",
+      "source_url": "https://www.jacksonhole.com/events/jackson-hole-food-and-wine-dinner-series-06-26-26-2",
+      "lat": 43.5875,
+      "lng": -110.8275,
+      "categories": [
+        "Event"
+      ],
+      "image_url": "https://www.datocms-assets.com/50871/1781287555-20240621lrphoto_68.webp?fit=crop&h=450&w=800",
+      "address": "Teton Village, WY, 83025",
+      "venue_name": "Nancy & Rolf Engh",
+      "start_time": "9:30 PM",
+      "_id": "url:https://www.jacksonhole.com/events/jackson-hole-food-and-wine-dinner-series-06-26-26-2|jackson hole food & wine | dinner series | chef gavin kaysen + hirsch vineyards|2026-06-26",
+      "_content_hash": "68388812476cafb1",
+      "_first_seen": "2026-06-26",
+      "_last_seen": "2026-06-26",
+      "filter_categories": [
+        "Community",
+        "Education & Talks",
+        "Food & Drink"
+      ],
+      "_distance_mi": 8.1
+    },
+    {
       "title": "Brian Brooks and Sundown Rising",
       "date": "2026-06-26",
       "end_date": null,
@@ -8509,7 +8571,8 @@
       ],
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -10144,7 +10207,8 @@
       "address": "1910 High School Road, Jackson, WY, 83001",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -10540,11 +10604,12 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Tanner-Jorden-Headshot-1-scaled-e1781538847183.jpg",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
-      "is_free": false,
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
+      "is_free": false,
       "filter_categories": [
         "Arts & Theater",
         "Community",
@@ -11615,7 +11680,8 @@
       "address": "1910 High School Road, Jackson, WY, 83001",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -12170,11 +12236,12 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/2-2.png",
       "venue_name": "Jackson Hole High School Auditorium",
       "address": "1910 High School Road, Jackson, WY, 83001",
-      "is_free": false,
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
+      "is_free": false,
       "filter_categories": [
         "Community",
         "Education & Talks",
@@ -13847,7 +13914,8 @@
       ],
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -15035,7 +15103,8 @@
       "address": "1910 High School Road, Jackson, WY, 83001",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -15583,7 +15652,8 @@
       "address": "1910 High School Road, Jackson, WY, 83001",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -16052,12 +16122,17 @@
       "lng": -110.8275,
       "categories": [
         "Community",
+        "Event",
         "Outdoor"
       ],
       "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/-SShelesky_JHMR_Summer25_HillClimb-4.jpg-1-_C491C728-FC22-4647-99445F358324FE62_c4960943-f3e0-bb8d-56ccbefc5198e719.jpg",
       "address": "3395 Cody Lane, Teton Village, WY, 83025-0",
       "venue_name": "Jackson Hole Mountain Resort",
       "start_time": "8:30 AM",
+      "_all_sources": [
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
+      ],
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -16784,7 +16859,8 @@
       "address": "1910 High School Road, Jackson, WY, 83001",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -17168,7 +17244,8 @@
       "address": "1910 High School Road, Jackson, WY, 83001",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -18191,7 +18268,8 @@
       "address": "1910 High School Road, Jackson, WY, 83001",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -18573,7 +18651,8 @@
       "address": "1910 High School Road, Jackson, WY, 83001",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -28607,17 +28686,13 @@
     {
       "title": "The King's Singers",
       "date": "2026-07-06",
-      "end_date": "2026-07-06",
-      "location": "Center for the Arts Jackson Hole",
-      "venue_name": "Center for the Arts Theater",
-      "start_time": "7:00 PM",
-      "end_time": "9:00 PM",
-      "link": "https://www.jhcenterforthearts.org/event/the-kings-singers/",
-      "source": "Center for the Arts Jackson Hole",
-      "source_url": "https://www.jhcenterforthearts.org/calendar-events/?sf_paged=1",
+      "description": "The King\u2019s Singers have set the gold standard in a cappella singing on the world\u2019s greatest stages for over 55 years. Renowned for their unrivaled technique, musicianship and versatility, the GRAMMY\u00ae and Emmy award-winning ensemble performs a diverse program ranging from The Beatles and Disney favorites to choral standards. Patrick Dunachie, first countertenor Edward Button, second countertenor Julian Gregory, tenor Christopher Bruerton, first baritone Nick Ashby, second baritone Piers Connor Kennedy. $45 \u2013 $85 children/students $5. Buy Tickets",
+      "location": "Center for the Arts Theater, 265 S Cache Street, Jackson, WY, 83001",
+      "link": "https://gtmf.org/events/kings-singers",
+      "source": "Grand Teton Music Festival",
+      "source_url": "https://gtmf.org",
       "lat": 43.4799,
       "lng": -110.7624,
-      "city": "Jackson, WY",
       "categories": [
         "Arts",
         "Community",
@@ -28626,17 +28701,25 @@
         "Music",
         "Outdoor"
       ],
-      "description": "The King\u2019s Singers have set the gold standard in a cappella singing on the world\u2019s greatest stages for over 55 years. Renowned for their unrivaled...",
+      "start_time": "7:00 PM",
+      "end_time": "9:00 PM",
+      "image_url": "https://gtmf.org/wp-content/uploads/2026/04/280-colour-small-The-Kings-Singers-January-2026-e1779815367883.jpg",
+      "venue_name": "Center for the Arts Theater",
       "address": "265 S Cache Street, Jackson, WY, 83001",
-      "image_url": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_396,q_75,w_704/v1/crm/jacksonholewy/The-King-s-Singers_B7F26D7B-CB72-8589-AF77D38D8468EFB6_b7fd1701-d796-6c55-b31912c7eb9496f5.png",
+      "facets": [
+        "Paid"
+      ],
       "_all_sources": [
         "Center for the Arts Jackson Hole",
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
+      "is_free": false,
       "filter_categories": [
         "Arts & Theater",
         "Community",
+        "Family & Kids",
         "Music",
         "Outdoors"
       ],
@@ -29590,7 +29673,8 @@
       "address": "Teton Village, WY, 83025",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -31330,11 +31414,12 @@
       "image_url": "https://gtmf.org/wp-content/uploads/2026/04/Teton-House-Concert-The-Harps-Voice-2.png",
       "venue_name": "Private Home, John Dodge Road",
       "address": "Wilson, WY, 83014",
-      "is_free": false,
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
+      "is_free": false,
       "filter_categories": [
         "Arts & Theater",
         "Community",
@@ -34859,7 +34944,8 @@
       "address": "Wilson, WY, 83014",
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -36224,7 +36310,8 @@
       "_all_sources": [
         "Center for the Arts Jackson Hole",
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
@@ -37033,7 +37120,8 @@
       ],
       "_all_sources": [
         "Grand Teton Music Festival",
-        "Jackson Hole Chamber of Commerce"
+        "Jackson Hole Chamber of Commerce",
+        "Jackson Hole Mountain Resort"
       ],
       "is_free": false,
       "filter_categories": [
