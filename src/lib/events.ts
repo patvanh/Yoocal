@@ -113,6 +113,11 @@ export const CITY_CONFIG: Record<CityKey, {
   zoom: number
   junk: string[]
   aboutPage: string
+  shortName: string
+  region: string
+  image: string
+  blurb: string
+  founder?: boolean
 }> = {
   parkcity: {
     name: 'Park City, UT',
@@ -124,6 +129,11 @@ export const CITY_CONFIG: Record<CityKey, {
     zoom: 12,
     junk: ['not just a ski town', 'summer hiking', 'treat yourself', 'shopping', 'previous month', 'next month'],
     aboutPage: '/about/park-city',
+    shortName: 'Park City',
+    region: 'Utah',
+    image: '/cities/parkcity.jpg',
+    blurb: 'Concerts, festivals, races, outdoor adventures and more.',
+    founder: true,
   },
   elkhartlake: {
     name: 'Elkhart Lake, WI',
@@ -134,6 +144,10 @@ export const CITY_CONFIG: Record<CityKey, {
     zoom: 13,
     junk: ['previous month', 'next month'],
     aboutPage: '/about/elkhart-lake',
+    shortName: 'Elkhart Lake',
+    region: 'Wisconsin',
+    image: '/cities/elkhartlake.jpg',
+    blurb: 'Racing, lakeside events and everything around Road America.',
   },
   greenlake: {
     name: 'Green Lake, WI',
@@ -144,6 +158,10 @@ export const CITY_CONFIG: Record<CityKey, {
     zoom: 12,
     junk: ['previous month', 'next month'],
     aboutPage: '/about/green-lake',
+    shortName: 'Green Lake',
+    region: 'Wisconsin',
+    image: '/cities/greenlake.jpg',
+    blurb: "Golf, boating, summer concerts and small-town events on Wisconsin's deepest lake.",
   },
   heber: {
     name: 'Heber Valley, UT',
@@ -154,6 +172,10 @@ export const CITY_CONFIG: Record<CityKey, {
     zoom: 12,
     junk: ['previous month', 'next month'],
     aboutPage: '/about/heber',
+    shortName: 'Heber Valley',
+    region: 'Utah',
+    image: '/cities/heber.jpg',
+    blurb: 'Rodeos, fairs, train rides and small-town events across the Wasatch Back.',
   },
   jackson: {
     name: 'Jackson Hole, WY',
@@ -164,6 +186,10 @@ export const CITY_CONFIG: Record<CityKey, {
     zoom: 11,
     junk: ['previous month', 'next month'],
     aboutPage: '/about/jackson-hole',
+    shortName: 'Jackson Hole',
+    region: 'Wyoming',
+    image: '/cities/jackson.jpg',
+    blurb: 'Music festivals, chamber events, and Teton County happenings.',
   },
 }
 
