@@ -290,17 +290,8 @@ export default function HomeBrand() {
             )}
           </div>
         </div>
-      </div>
-
-      <div className="hb-content">
-        <div className="hb-section-label">Featured destinations</div>
-        <h2 className="hb-section-title">Pick a town to explore</h2>
-        <p className="hb-section-sub">
-          More cities coming. Don&apos;t see yours? Search above and we&apos;ll
-          start tracking it.
-        </p>
-
-        <div className="hb-grid">
+        <div className="hb-hero-cities">
+          <div className="hb-grid">
           {CITIES.map((c) => (
             <button
               key={c.key}
@@ -315,10 +306,15 @@ export default function HomeBrand() {
                   {c.founder && <span className="hb-founder">Where it all began</span>}
                 </h3>
                 <p className="hb-region">{c.region}</p>
+                <span className="hb-explore">Explore →</span>
               </div>
             </button>
           ))}
+          </div>
         </div>
+      </div>
+
+      <div className="hb-content">
 
         <div className="hb-how">
           <div className="hb-how-item">
@@ -476,7 +472,7 @@ export default function HomeBrand() {
           font-size: 12px; color: var(--muted);
         }
 
-        .hb-content { max-width: 1100px; margin: 0 auto; padding: 40px 40px 40px; }
+        .hb-content { max-width: 1100px; margin: 0 auto; padding: 24px 40px 40px; }
         .hb-section-label {
           font-size: 12px; font-weight: 700; text-transform: uppercase;
           letter-spacing: 1px; color: var(--amber);
@@ -496,17 +492,24 @@ export default function HomeBrand() {
 
         .hb-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-          margin-bottom: 80px;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 12px;
+          margin-bottom: 48px;
         }
+        .hb-hero-cities {
+          max-width: 900px;
+          margin: 48px auto 0;
+          position: relative;
+          z-index: 2;
+        }
+        .hb-hero-cities .hb-grid { margin-bottom: 0; gap: 20px; }
         .hb-card {
           position: relative;
           display: flex; flex-direction: column; justify-content: flex-end;
-          aspect-ratio: 16 / 9;
+          aspect-ratio: 4 / 5;
           background-color: #2a2545; background-size: cover; background-position: center;
           border: 1px solid var(--border);
-          border-radius: 20px; padding: 22px;
+          border-radius: 14px; padding: 12px;
           text-align: left;
           cursor: pointer;
           font-family: inherit;
@@ -515,9 +518,11 @@ export default function HomeBrand() {
           transition: transform 0.2s, box-shadow 0.2s;
         }
         .hb-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 16px 40px rgba(83,74,183,0.18);
+          transform: translateY(-6px);
+          box-shadow: 0 20px 48px rgba(83,74,183,0.45);
+          border-color: var(--purple-light);
         }
+        .hb-card:hover .hb-explore { background: var(--purple); color: #fff; }
         .hb-card-fallback {
           position: absolute; inset: 0;
           display: flex; align-items: center; justify-content: center;
@@ -537,6 +542,14 @@ export default function HomeBrand() {
           border-radius: 100px;
         }
         .hb-region { font-size: 13px; color: rgba(255,255,255,0.8); margin-bottom: 0; }
+        .hb-explore {
+          display: inline-block; margin-top: 10px;
+          padding: 5px 12px; border-radius: 100px;
+          background: rgba(255,255,255,0.18); color: #fff;
+          font-size: 12px; font-weight: 600;
+          backdrop-filter: blur(4px);
+          transition: background 0.2s, color 0.2s;
+        }
 
         .hb-how { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; margin: 4px 0 56px; }
         .hb-how-item { text-align: left; }
