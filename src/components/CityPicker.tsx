@@ -6,19 +6,12 @@ import { useRouter } from "next/navigation"
 /**
  * CityPicker — compact "Current City ▾" pill for the nav bar. Opens a short
  * list of cities; choosing one navigates to that city's calendar via Next
- * routing (same mechanism as CitySearch). Self-contained city list for now;
- * can be consolidated into a shared cities module later.
+ * routing. City list derived from the shared lib/cities.ts module.
  */
 
-type City = { key: string; slug: string; label: string }
+import { CITIES_ORDERED } from "@/lib/cities"
 
-const CITIES: City[] = [
-  { key: "parkcity",    slug: "park-city",    label: "Park City, UT" },
-  { key: "heber",       slug: "heber",        label: "Heber Valley, UT" },
-  { key: "jackson",     slug: "jackson-hole", label: "Jackson Hole, WY" },
-  { key: "elkhartlake", slug: "elkhart-lake", label: "Elkhart Lake, WI" },
-  { key: "greenlake",   slug: "green-lake",   label: "Green Lake, WI" },
-]
+const CITIES = CITIES_ORDERED.map((c) => ({ key: c.key, slug: c.slug, label: c.name }))
 
 export default function CityPicker({ cityKey }: { cityKey?: string }) {
   const router = useRouter()
