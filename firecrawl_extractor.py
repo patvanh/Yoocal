@@ -61,6 +61,51 @@ def _firecrawl_markdown(url, timeout=60, proxy=None, retries=2):
     return None
 
 
+def _firecrawl_rawhtml(url, timeout=60, proxy="enhanced", retries=2):
+    """Fetch a URL via Firecrawl and return RAW HTML (or None).
+
+    Same as _firecrawl_markdown but requests the rawHtml format — needed for
+    scrapers that parse embedded JSON / specific markup the markdown conversion
+    would strip (e.g. gohebervalley's earthdiver JSON blob). Defaults to the
+    'enhanced' anti-bot proxy because this path exists specifically to get past
+    Cloudflare challenges that block our datacenter/CI IP."""
+    import time
+    body = {"url": url, "formats": ["rawHtml"]}
+    if proxy:
+        body["proxy"] = proxy
+        body["waitFor"] = 6000
+    last_err = None
+    for attempt in range(retries + 1):
+        req = urllib.request.Request(
+            "https://api.firecrawl.dev/v1/scrape",
+            data=json.dumps(body).encode(),
+            headers={"Authorization": f"Bearer {FIRECRAWL_KEY}",
+                     "Content-Type": "application/json"},
+        )
+        try:
+            r = json.load(urllib.request.urlopen(req, timeout=timeout))
+            if not r.get("success"):
+                print(f"  [firecrawl-raw] not success: {str(r)[:120]}")
+                return None
+            data = r.get("data", {}) or {}
+            return data.get("rawHtml") or data.get("html") or ""
+        except urllib.error.HTTPError as e:
+            last_err = e
+            if 400 <= e.code < 500:
+                print(f"  [firecrawl-raw] fetch error: {str(e)[:120]}")
+                return None
+            if attempt < retries:
+                time.sleep(1.5 * (attempt + 1))
+                continue
+        except Exception as e:
+            last_err = e
+            if attempt < retries:
+                time.sleep(1.5 * (attempt + 1))
+                continue
+    print(f"  [firecrawl-raw] fetch error after {retries+1} tries: {str(last_err)[:100]}")
+    return None
+
+
 def _claude_extract(markdown, source_hint, current_year, timeout=90):
     """Ask Claude to pull structured events from markdown. Returns list of dicts."""
     # Strip nav chrome (link-only list items, month/day filter menus) so the

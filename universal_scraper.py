@@ -856,15 +856,26 @@ def scrape_gohebervalley() -> list[dict]:
     # Detect the missing event marker and raise so the caller/guard sees a real
     # FETCH FAILURE (stale-but-flagged) rather than a false "source has 0 events".
     if '{"start_time":"' not in html:
-        challenged = any(t in html.lower() for t in (
-            "cf-challenge", "cf_chl", "just a moment", "checking your browser",
-            "attention required", "cloudflare"))
-        reason = "bot-challenge/Cloudflare interstitial" if challenged else \
-                 "expected event JSON marker absent"
-        print(f"  [Heber Valley Tourism] FETCH BLOCKED: {reason} "
-              f"(HTTP {resp.status_code}, {len(html)} bytes) — NOT 0 legit events; "
-              f"guard should keep last-good and flag as stale")
-        return []
+        # Direct fetch was blocked (Cloudflare challenge from CI/datacenter IP).
+        # Retry through Firecrawl's enhanced anti-bot proxy, which returns the
+        # real rendered HTML with the embedded event JSON. Costs credits, so only
+        # invoked on the blocked path (direct fetch is free and works locally).
+        print(f"  [Heber Valley Tourism] direct fetch blocked "
+              f"(HTTP {resp.status_code}, {len(html)} bytes) — retrying via Firecrawl")
+        try:
+            from firecrawl_extractor import _firecrawl_rawhtml
+            fc_html = _firecrawl_rawhtml(URL)
+        except Exception as _fce:
+            fc_html = None
+            print(f"  [Heber Valley Tourism] firecrawl import/call failed: {_fce}")
+        if fc_html and '{"start_time":"' in fc_html:
+            html = fc_html
+            print(f"  [Heber Valley Tourism] Firecrawl recovered "
+                  f"{html.count(chr(123)+chr(34)+'start_time'+chr(34)+chr(58)+chr(34))} event objects")
+        else:
+            print(f"  [Heber Valley Tourism] FETCH BLOCKED: Firecrawl fallback "
+                  f"also failed — keeping last-good (stale), not 0 legit events")
+            return []
 
     # Brace-balanced extraction of each event object.
     events = []
