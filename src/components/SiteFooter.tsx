@@ -7,6 +7,7 @@ const CITIES: Array<{ slug: string; name: string }> = [
   { slug: "heber", name: "Heber Valley" },
   { slug: "jackson-hole", name: "Jackson Hole" },
   { slug: "elkhart-lake", name: "Elkhart Lake" },
+  { slug: "green-lake", name: "Green Lake" },
 ];
 const HUBS: Array<{ seg: string; label: string }> = [
   { seg: "this-weekend", label: "This weekend" },
