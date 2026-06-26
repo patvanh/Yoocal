@@ -1,17 +1,14 @@
 import type { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
-import { slugify } from '@/lib/events';
+import { slugify, CITY_CONFIG } from '@/lib/events';
+import { CITY_ORDER } from '@/lib/cities';
 
 const BASE = 'https://www.yoocal.com';
 
-const CITY_FILES: Array<{ slug: string; file: string }> = [
-  { slug: 'park-city', file: 'events.json' },
-  { slug: 'elkhart-lake', file: 'events-elkhartlake.json' },
-  { slug: 'heber', file: 'events-heber.json' },
-  { slug: 'jackson-hole', file: 'events-jackson.json' },
-  { slug: 'green-lake', file: 'events-greenlake.json' },
-];
+// City slug + event file, derived from the shared CITY_CONFIG in display order.
+const CITY_FILES: Array<{ slug: string; file: string }> =
+  CITY_ORDER.map((k) => ({ slug: CITY_CONFIG[k].slug, file: CITY_CONFIG[k].file }));
 
 function loadEvents(filename: string): any[] {
   try {
@@ -31,40 +28,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Real content-modification time for sitemap lastmod (data rebuilds nightly).
   const buildDate = new Date();
 
-  // Static pages
+  // Per-city URLs, generated from the shared city list so a new city is never
+  // silently missing from the sitemap (an SEO hole). Hub + about + intent hubs.
+  const INTENT_HUBS: Array<{ seg: string; priority: number }> = [
+    { seg: 'this-weekend', priority: 0.8 },
+    { seg: 'free-events', priority: 0.7 },
+    { seg: 'concerts', priority: 0.7 },
+    { seg: 'this-month', priority: 0.7 },
+  ];
+  const citySlugs = CITY_ORDER.map((k) => CITY_CONFIG[k].slug);
+  const cityPages: MetadataRoute.Sitemap = [
+    ...citySlugs.map((slug) => ({
+      url: `${BASE}/${slug}`, changeFrequency: 'daily' as const, priority: 0.95,
+    })),
+    ...citySlugs.map((slug) => ({
+      url: `${BASE}/about/${slug}`, changeFrequency: 'weekly' as const, priority: 0.7,
+    })),
+    ...INTENT_HUBS.flatMap((h) =>
+      citySlugs.map((slug) => ({
+        url: `${BASE}/${slug}/${h.seg}`, changeFrequency: 'daily' as const, priority: h.priority,
+      })),
+    ),
+  ];
+
+  // Static (non-city) pages
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, changeFrequency: 'daily', priority: 1.0 },
-    { url: `${BASE}/park-city`, changeFrequency: 'daily', priority: 0.95 },
-    { url: `${BASE}/elkhart-lake`, changeFrequency: 'daily', priority: 0.95 },
-    { url: `${BASE}/heber`, changeFrequency: 'daily', priority: 0.95 },
-    { url: `${BASE}/jackson-hole`, changeFrequency: 'daily', priority: 0.95 },
-    { url: `${BASE}/green-lake`, changeFrequency: 'daily', priority: 0.95 },
     { url: `${BASE}/about`, changeFrequency: 'weekly', priority: 0.6 },
-    { url: `${BASE}/about/park-city`, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE}/about/elkhart-lake`, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE}/about/heber`, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE}/about/jackson-hole`, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE}/about/green-lake`, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE}/park-city/this-weekend`, changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE}/jackson-hole/this-weekend`, changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE}/heber/this-weekend`, changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE}/elkhart-lake/this-weekend`, changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE}/green-lake/this-weekend`, changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE}/park-city/free-events`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/jackson-hole/free-events`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/heber/free-events`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/elkhart-lake/free-events`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/green-lake/free-events`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/park-city/concerts`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/jackson-hole/concerts`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/heber/concerts`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/elkhart-lake/concerts`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/green-lake/concerts`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/park-city/this-month`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/jackson-hole/this-month`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/heber/this-month`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/elkhart-lake/this-month`, changeFrequency: 'daily', priority: 0.7 },
-    { url: `${BASE}/green-lake/this-month`, changeFrequency: 'daily', priority: 0.7 },
+    ...cityPages,
     { url: `${BASE}/venues`, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${BASE}/for-businesses`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/submit`, changeFrequency: 'monthly', priority: 0.5 },
