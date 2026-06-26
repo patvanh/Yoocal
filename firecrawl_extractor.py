@@ -10,6 +10,32 @@ import os, json, re, urllib.request, urllib.error
 from datetime import datetime, date
 
 FIRECRAWL_KEY = os.environ.get("FIRECRAWL_API_KEY")
+
+# --- Firecrawl budget governor -----------------------------------------------
+# Every firecrawl call across ALL scrapers goes through fetch_html, so the spend
+# cap and counter live here in ONE place (the per-city generic scraper has its
+# own separate cap; this governs the fetch_html path). Default is conservative;
+# raise via env once the plan's monthly credit allowance is known. When the cap
+# is hit, fetch_html stops calling firecrawl and degrades to the direct result,
+# so a runaway never silently burns the whole plan.
+import threading as _threading
+FETCH_HTML_FIRECRAWL_CAP = int(os.environ.get("FETCH_HTML_FIRECRAWL_CAP", "120"))
+_fc_spent = 0
+_fc_lock = _threading.Lock()
+
+def firecrawl_budget_status():
+    """(_spent, cap) — call at end of a run to log spend."""
+    return _fc_spent, FETCH_HTML_FIRECRAWL_CAP
+
+def _fc_budget_available():
+    with _fc_lock:
+        return _fc_spent < FETCH_HTML_FIRECRAWL_CAP
+
+def _fc_budget_consume():
+    global _fc_spent
+    with _fc_lock:
+        _fc_spent += 1
+        return _fc_spent
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY")
 EXTRACT_MODEL = "claude-haiku-4-5-20251001"
 
