@@ -840,42 +840,15 @@ def scrape_gohebervalley() -> list[dict]:
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                       "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     }
-    try:
-        resp = _resilient_session().get(URL, headers=HEADERS, timeout=30)
-        resp.raise_for_status()
-        html = resp.text
-    except Exception as e:
-        print(f"  [Heber Valley Tourism] fetch failed: {e}")
+    # Fetch through the canonical helper: direct first, auto-fallback to
+    # Firecrawl if Cloudflare blocks the CI IP. marker= the embedded event-JSON
+    # key, so a challenge page (which lacks it) triggers the fallback.
+    from firecrawl_extractor import fetch_html
+    html = fetch_html(URL, marker='{"start_time":"', headers=HEADERS)
+    if not html or '{"start_time":"' not in html:
+        print(f"  [Heber Valley Tourism] FETCH BLOCKED (direct + Firecrawl) — "
+              f"keeping last-good (stale), not 0 legit events")
         return []
-
-    # Cloudflare/bot-challenge detection: the site sometimes returns HTTP 200
-    # with a challenge/interstitial page (no event JSON) instead of the real
-    # page — common when fetched from datacenter/CI IPs. Status-code retries
-    # don't catch this (it's a 200), so the old code silently returned 0 events,
-    # and the resilience guard then served stale last-good data as if fresh.
-    # Detect the missing event marker and raise so the caller/guard sees a real
-    # FETCH FAILURE (stale-but-flagged) rather than a false "source has 0 events".
-    if '{"start_time":"' not in html:
-        # Direct fetch was blocked (Cloudflare challenge from CI/datacenter IP).
-        # Retry through Firecrawl's enhanced anti-bot proxy, which returns the
-        # real rendered HTML with the embedded event JSON. Costs credits, so only
-        # invoked on the blocked path (direct fetch is free and works locally).
-        print(f"  [Heber Valley Tourism] direct fetch blocked "
-              f"(HTTP {resp.status_code}, {len(html)} bytes) — retrying via Firecrawl")
-        try:
-            from firecrawl_extractor import _firecrawl_rawhtml
-            fc_html = _firecrawl_rawhtml(URL)
-        except Exception as _fce:
-            fc_html = None
-            print(f"  [Heber Valley Tourism] firecrawl import/call failed: {_fce}")
-        if fc_html and '{"start_time":"' in fc_html:
-            html = fc_html
-            print(f"  [Heber Valley Tourism] Firecrawl recovered "
-                  f"{html.count(chr(123)+chr(34)+'start_time'+chr(34)+chr(58)+chr(34))} event objects")
-        else:
-            print(f"  [Heber Valley Tourism] FETCH BLOCKED: Firecrawl fallback "
-                  f"also failed — keeping last-good (stale), not 0 legit events")
-            return []
 
     # Brace-balanced extraction of each event object.
     events = []

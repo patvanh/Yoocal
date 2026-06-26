@@ -361,7 +361,23 @@ def _fetch(url, timeout=20, _max_attempts=3):
                 _time.sleep(_random.uniform(0.0, 0.25))
             r = _SESSION.get(url, timeout=timeout, allow_redirects=True)
             r.raise_for_status()
-            return r.text
+            _html = r.text
+            # If Cloudflare served a challenge (200 + tiny interstitial), route
+            # through the canonical fetch_html helper, which falls back to
+            # Firecrawl. Only the blocked path pays; good direct fetches return
+            # immediately.
+            _low = _html.lower()
+            if len(_html) < 2000 and any(t in _low for t in (
+                    "just a moment", "checking your browser", "cf-challenge",
+                    "cf_chl", "attention required", "enable javascript and cookies")):
+                try:
+                    from firecrawl_extractor import fetch_html as _fh
+                    _fc = _fh(url)
+                    if _fc and len(_fc) > len(_html):
+                        return _fc
+                except Exception as _fce:
+                    print(f"  [schema_org _fetch] firecrawl fallback failed: {str(_fce)[:80]}")
+            return _html
         except requests.HTTPError:
             # status error that survived the adapter's retries (e.g. real 404,
             # or 429 past the retry budget) — don't keep hammering; re-raise.

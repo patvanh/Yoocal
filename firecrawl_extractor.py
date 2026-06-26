@@ -106,6 +106,72 @@ def _firecrawl_rawhtml(url, timeout=60, proxy="enhanced", retries=2):
     return None
 
 
+# --- Canonical page fetch with automatic Cloudflare fallback -----------------
+# ONE place every scraper should fetch through. Tries a normal direct request
+# first (free, works from residential IPs). If that comes back blocked — a
+# Cloudflare/bot challenge, which arrives as HTTP 200 + a tiny interstitial page
+# so status-code retries never catch it — it transparently refetches through
+# Firecrawl's enhanced anti-bot proxy and returns the real rendered HTML.
+#
+# Scrapers pass an optional `marker`: a substring that MUST appear in a good
+# response (e.g. the embedded-JSON key a parser needs, or '<urlset' for a
+# sitemap). If the marker is given and absent from the direct fetch, that counts
+# as blocked too — this catches silent blocks that don't show obvious challenge
+# text. Returns the HTML string, or None if both paths fail.
+import requests as _rq
+
+_CHALLENGE_MARKERS = (
+    "just a moment", "checking your browser", "cf-challenge", "cf_chl",
+    "attention required", "enable javascript and cookies",
+)
+
+def _looks_blocked(html, marker=None):
+    if not html:
+        return True
+    low = html.lower()
+    if any(t in low for t in _CHALLENGE_MARKERS) and len(html) < 5000:
+        return True
+    if marker and marker not in html:
+        return True
+    return False
+
+def fetch_html(url, marker=None, timeout=30, headers=None):
+    """Fetch a page, transparently falling back to Firecrawl when blocked.
+
+    url     : page to fetch
+    marker  : optional substring that must be present in a valid response;
+              if absent, the direct fetch is treated as blocked and Firecrawl
+              is tried (covers silent Cloudflare blocks with no challenge text).
+    Returns the HTML string or None.
+    """
+    hdrs = headers or {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) "
+                      "Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+    direct = None
+    try:
+        r = _rq.get(url, headers=hdrs, timeout=timeout, allow_redirects=True)
+        if r.status_code == 200:
+            direct = r.text
+    except Exception as e:
+        print(f"  [fetch_html] direct fetch error {url[:60]}: {str(e)[:80]}")
+
+    if direct is not None and not _looks_blocked(direct, marker):
+        return direct  # direct fetch good — no firecrawl cost
+
+    # Blocked (challenge page, missing marker, or direct failed) -> Firecrawl.
+    print(f"  [fetch_html] direct blocked/insufficient for {url[:60]} -> Firecrawl")
+    fc = _firecrawl_rawhtml(url, timeout=max(timeout, 60))
+    if fc and not _looks_blocked(fc, marker):
+        print(f"  [fetch_html] Firecrawl recovered {url[:60]} ({len(fc)} bytes)")
+        return fc
+    print(f"  [fetch_html] BLOCKED: both direct and Firecrawl failed for {url[:60]}")
+    return direct  # return whatever we got (may be None) so caller can decide
+
+
 def _claude_extract(markdown, source_hint, current_year, timeout=90):
     """Ask Claude to pull structured events from markdown. Returns list of dicts."""
     # Strip nav chrome (link-only list items, month/day filter menus) so the
