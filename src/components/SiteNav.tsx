@@ -13,8 +13,8 @@
 import CityPicker from "@/components/CityPicker";
 import RadiusPicker from "@/components/RadiusPicker";
 import NavMenu from "@/components/NavMenu";
+import { CITIES, type CityKey } from "@/lib/cities";
 
-type CityKey = "parkcity" | "elkhartlake" | "heber" | "jackson" | "greenlake";
 type ActiveKey = "about" | "weekend" | "free" | "concerts" | "month" | "venues" | "business" | null;
 
 export default function SiteNav({
@@ -24,38 +24,17 @@ export default function SiteNav({
   activeKey?: ActiveKey;
   cityKey?: CityKey;
 }) {
-  // Build the About link/label based on context
-  const aboutHref =
-    cityKey === "parkcity"
-      ? "/about/park-city"
-      : cityKey === "elkhartlake"
-        ? "/about/elkhart-lake"
-        : cityKey === "heber"
-          ? "/about/heber"
-          : cityKey === "greenlake"
-            ? "/about/green-lake"
-            : cityKey === "jackson"
-              ? "/about/jackson-hole"
-              : "/about";
-  const aboutLabel =
-    cityKey === "parkcity"
-      ? "About Park City"
-      : cityKey === "elkhartlake"
-        ? "About Elkhart Lake"
-        : cityKey === "heber"
-          ? "About Heber"
-          : cityKey === "greenlake"
-            ? "About Green Lake"
-            : cityKey === "jackson"
-              ? "About Jackson Hole"
-              : "About";
+  // About link/label + per-city hrefs, derived from the shared city config.
+  const city = cityKey ? CITIES[cityKey] : null;
+  const aboutHref = city ? city.aboutPage : "/about";
+  const aboutLabel = city ? `About ${city.shortName}` : "About";
 
-  const KEY_TO_SLUG: Record<string,string> = {parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole",greenlake:"green-lake"};
-  const calendarHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}` : "/";
-  const weekendHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/this-weekend` : "/this-weekend";
-  const freeHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/free-events` : "/park-city/free-events";
-  const concertsHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/concerts` : "/park-city/concerts";
-  const monthHref = cityKey ? `/${KEY_TO_SLUG[cityKey] || "park-city"}/this-month` : "/park-city/this-month";
+  const slug = city ? city.slug : "park-city";
+  const calendarHref = cityKey ? `/${slug}` : "/";
+  const weekendHref = cityKey ? `/${slug}/this-weekend` : "/this-weekend";
+  const freeHref = cityKey ? `/${slug}/free-events` : "/park-city/free-events";
+  const concertsHref = cityKey ? `/${slug}/concerts` : "/park-city/concerts";
+  const monthHref = cityKey ? `/${slug}/this-month` : "/park-city/this-month";
   const venuesHref = cityKey ? `/venues?city=${cityKey}` : "/venues";
 
   // Only show city-specific This Weekend / Venues links when we're in a city context
