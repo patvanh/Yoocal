@@ -224,7 +224,6 @@ export default function HomeBrand() {
 
       <div className="hb-hero">
         <div className="hb-hero-inner">
-          <div className="hb-eyebrow">yoocal</div>
           <h1 className="hb-title">
             Your local,
             <br />
@@ -290,7 +289,7 @@ export default function HomeBrand() {
             )}
           </div>
         </div>
-        <div className="hb-hero-cities">
+        <div className="hb-hero-cities" id="cities">
           <div className="hb-grid">
           {CITIES.map((c) => (
             <button
@@ -501,6 +500,7 @@ export default function HomeBrand() {
           margin: 48px auto 0;
           position: relative;
           z-index: 2;
+          scroll-margin-top: 90px;
         }
         .hb-hero-cities .hb-grid { margin-bottom: 0; gap: 20px; }
         .hb-card {

@@ -71,12 +71,13 @@ export default function SiteNav({
       { href: monthHref, label: "This Month", active: activeKey === "month" },
       { href: venuesHref, label: "Venues", active: activeKey === "venues" },
     ] : []),
+    ...(!showCityLinks ? [{ href: "/#cities", label: "Browse cities" }] : []),
     { href: "/#business", label: "For businesses" },
   ];
 
   return (
     <>
-      <nav className="yc-nav">
+      <nav className={cityKey ? "yc-nav" : "yc-nav yc-nav-home"}>
         <a href="/" className="yc-nav-logo">
           <span className="yc-nav-dot" /> yoocal
         </a>
@@ -87,6 +88,9 @@ export default function SiteNav({
           >
             {aboutLabel}
           </a>
+          {!cityKey && (
+            <a href="/#cities">Browse cities</a>
+          )}
           {showCityLinks && (
             <>
               <a
@@ -124,6 +128,11 @@ export default function SiteNav({
           <a href="/#business">For businesses</a>
           {cityKey && <span className="yc-nav-pickers" style={{ display: 'flex', alignItems: 'center', marginLeft: 'auto' }}><CityPicker cityKey={cityKey} /></span>}
           {cityKey && <span className="yc-nav-pickers" style={{ display: 'flex', alignItems: 'center' }}><a href={calendarHref} className="yc-nav-cta">Calendar</a></span>}
+        </div>
+        {/* Tight right-cluster: city + radius + Submit, grouped with a small
+            gap on the right (matches the mockup). Sits outside yc-nav-links so
+            its wide 32px gap doesn't spread these apart. */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 16 }}>
           <a
             href="https://forms.groupmail.info/subscribe/yoocal"
             target="_blank"
@@ -132,11 +141,6 @@ export default function SiteNav({
           >
             Get notified
           </a>
-        </div>
-        {/* Tight right-cluster: city + radius + Submit, grouped with a small
-            gap on the right (matches the mockup). Sits outside yc-nav-links so
-            its wide 32px gap doesn't spread these apart. */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 16 }}>
           <a href="/submit" className="yc-nav-secondary">Submit event</a>
         </div>
         <div style={{ marginLeft: 12 }}><NavMenu links={menuLinks} /></div>
@@ -239,8 +243,8 @@ export default function SiteNav({
           .yc-nav { padding: 0 14px; }
           /* Below breakpoint: hide the nav links into the hamburger, but KEEP
              both CTA buttons (Get notified + Submit) and the city pill visible. */
-          .yc-nav-links a:not(.yc-nav-secondary):not(.yc-nav-cta) { display: none; }
-          .yc-hamburger { display: block; }
+          .yc-nav:not(.yc-nav-home) .yc-nav-links a:not(.yc-nav-secondary):not(.yc-nav-cta) { display: none; }
+          .yc-nav:not(.yc-nav-home) .yc-hamburger { display: block; }
         }
       `}</style>
     </>
