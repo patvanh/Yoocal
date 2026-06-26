@@ -6,59 +6,12 @@ import SiteNav from "@/components/SiteNav"
 import SiteFooter from "@/components/SiteFooter"
 import { buildCityOptions } from "@/lib/citySearch"
 
-type City = {
-  key: string
-  name: string
-  region: string
-  emoji: string
-  image?: string
-  blurb: string
-  founder?: boolean
-}
+import { CITIES_ORDERED } from "@/lib/cities"
 
-const CITIES: City[] = [
-  {
-    key: "parkcity",
-    image: "/cities/parkcity.jpg",
-    name: "Park City",
-    region: "Utah",
-    emoji: "",
-    blurb: "Concerts, festivals, races, outdoor adventures and more.",
-    founder: true,
-  },
-  {
-    key: "jackson",
-    image: "/cities/jackson.jpg",
-    name: "Jackson Hole",
-    region: "Wyoming",
-    emoji: "",
-    blurb: "Music festivals, chamber events, and Teton County happenings.",
-  },
-  {
-    key: "heber",
-    image: "/cities/heber.jpg",
-    name: "Heber Valley",
-    region: "Utah",
-    emoji: "",
-    blurb: "Rodeos, fairs, train rides and small-town events across the Wasatch Back.",
-  },
-  {
-    key: "elkhartlake",
-    image: "/cities/elkhartlake.jpg",
-    name: "Elkhart Lake",
-    region: "Wisconsin",
-    emoji: "",
-    blurb: "Racing, lakeside events and everything around Road America.",
-  },
-  {
-    key: "greenlake",
-    image: "/cities/greenlake.jpg",
-    name: "Green Lake",
-    region: "Wisconsin",
-    emoji: "",
-    blurb: "Golf, boating, summer concerts and small-town events on Wisconsin’s deepest lake.",
-  },
-]
+const CITIES = CITIES_ORDERED.map((c) => ({
+  key: c.key, image: c.image, name: c.shortName, region: c.region,
+  blurb: c.blurb, founder: c.founder,
+}))
 
 // ZIP -> city key. Small static map for the 4 live cities; expand as we grow.
 const ZIP_TO_CITY: Record<string, string> = {
@@ -124,7 +77,7 @@ export default function HomeBrand() {
     } catch {
       // ignore
     }
-    router.push(`/${({parkcity:"park-city",elkhartlake:"elkhart-lake",heber:"heber",jackson:"jackson-hole",greenlake:"green-lake"} as Record<string,string>)[key] || ""}`)
+    router.push(`/${CITIES_ORDERED.find((c) => c.key === key)?.slug || ""}`)
   }
 
   // Strip ", UT" or ", Wyoming" and similar suffixes for cleaner matching
