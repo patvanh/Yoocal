@@ -18,8 +18,8 @@ from __future__ import annotations
 import json, os, time
 from pathlib import Path
 
-from incremental_store import (load_store, event_id, today_iso, stamp_freshness,
-                               content_hash)
+from incremental_store import (load_store, save_store, event_id, today_iso,
+                               stamp_freshness, content_hash)
 from shadow_incremental import listing_urls_from_sitemap, _norm_url
 from firecrawl_extractor import firecrawl_budget_status
 
@@ -104,6 +104,54 @@ def incremental_update_schema_source(source_name, sitemap_url, url_pattern,
     if verbose:
         print(f"  shadow store -> {out}")
     return updated, report
+
+
+def commit_to_store(source_name, updated_events, *, dry_run=True, verbose=True):
+    """Write the incremental updated set into last_good_sources.json for one
+    source — the store the resilience guard already unions into every build.
+
+    Safety gate (abort + keep old store if any fails):
+      - updated set is non-empty
+      - updated set is not drastically smaller than the current store (>=80%);
+        a big shrink signals a bad listing fetch, not real removals
+      - count is within a sane absolute band (not 10x the old count)
+    dry_run=True reports what it WOULD write without touching the file.
+    """
+    store = load_store()
+    old = store.get(source_name, {}).get("events", [])
+    old_n, new_n = len(old), len(updated_events)
+
+    # Gate
+    problems = []
+    if new_n == 0:
+        problems.append("updated set is empty")
+    if old_n >= 10 and new_n < 0.8 * old_n:
+        problems.append(f"updated set shrank too much ({old_n} -> {new_n}, <80%)")
+    if old_n >= 10 and new_n > 10 * old_n:
+        problems.append(f"updated set ballooned ({old_n} -> {new_n}, >10x)")
+    if problems:
+        if verbose:
+            print(f"  [commit] ABORT for {source_name}: {'; '.join(problems)}")
+        return False
+
+    if dry_run:
+        if verbose:
+            print(f"  [commit] DRY-RUN {source_name}: would write {new_n} events "
+                  f"(was {old_n}) — gate passed")
+        return True
+
+    # Write: preserve the guard's metadata shape, refresh count+date, reset streak.
+    store[source_name] = {
+        "count": new_n,
+        "date": today_iso(),
+        "low_streak": 0,
+        "events": updated_events,
+    }
+    save_store(store)
+    if verbose:
+        print(f"  [commit] WROTE {source_name}: {new_n} events (was {old_n}) "
+              f"-> last_good_sources.json")
+    return True
 
 
 if __name__ == "__main__":
