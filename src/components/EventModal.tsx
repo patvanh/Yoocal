@@ -530,11 +530,6 @@ export default function EventModal({
         }
 
         @media (max-width: 520px) {
-          .ye-modal {
-            padding: 20px 18px;
-            width: 94vw;
-            max-height: 90vh;
-          }
           .ye-title {
             font-size: 22px;
           }
