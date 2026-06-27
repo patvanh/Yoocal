@@ -299,9 +299,7 @@ export default function EventModal({
       <style>{`
         .ye-overlay {
           position: fixed; inset: 0;
-          background: rgba(10,8,30,0.75);
-          backdrop-filter: blur(4px);
-          -webkit-backdrop-filter: blur(4px);
+          background: rgba(10,8,30,0.7);
           z-index: 10000;
           animation: ye-fade 0.18s ease-out;
         }
@@ -322,10 +320,9 @@ export default function EventModal({
         }
         @media (max-width: 640px) {
           .ye-modal {
-            width: min(400px, 88vw);
-            height: 42dvh;
-            max-height: 42dvh;
-            overflow: hidden;
+            width: min(400px, 90vw);
+            max-height: 85dvh;
+            overflow-y: auto;
             border-radius: 18px;
             padding: 22px 20px calc(20px + env(safe-area-inset-bottom));
             -webkit-overflow-scrolling: touch;
