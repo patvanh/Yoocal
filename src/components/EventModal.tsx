@@ -320,6 +320,31 @@ export default function EventModal({
           color: white;
           animation: ye-pop 0.2s ease-out;
         }
+        @media (max-width: 640px) {
+          .ye-modal {
+            top: 0; left: 0;
+            transform: none;
+            width: 100vw;
+            max-width: 100vw;
+            max-height: 100dvh;
+            height: 100dvh;
+            border-radius: 0;
+            border: none;
+            padding: 16px 18px calc(24px + env(safe-area-inset-bottom));
+            padding-top: calc(16px + env(safe-area-inset-top));
+            animation: ye-fade 0.18s ease-out;
+            -webkit-overflow-scrolling: touch;
+          }
+          .ye-modal-head {
+            position: sticky;
+            top: 0;
+            background: #1e1b3a;
+            padding-top: 4px;
+            margin: -4px -2px 14px;
+            padding-bottom: 8px;
+            z-index: 2;
+          }
+        }
         @keyframes ye-fade {
           from { opacity: 0; }
           to { opacity: 1; }
