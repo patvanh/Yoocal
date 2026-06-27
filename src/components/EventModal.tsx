@@ -146,10 +146,8 @@ export default function EventModal({
         {event.image_url && /^https?:\/\//.test(event.image_url) && (
           <div
             aria-hidden="true"
+            className="ye-img"
             style={{
-              margin: '-28px -28px 20px',
-              height: 200,
-              borderRadius: '20px 20px 0 0',
               background: `center/cover no-repeat url(${event.image_url})`,
             }}
           />
@@ -171,7 +169,9 @@ export default function EventModal({
           </button>
         </div>
 
-        <h2 id="ye-modal-title" className="ye-title">{event.title}</h2>
+        {event.title && event.title.trim() && (
+          <h2 id="ye-modal-title" className="ye-title">{event.title}</h2>
+        )}
 
         <div className="ye-meta">
           <div className="ye-meta-row">
@@ -314,7 +314,7 @@ export default function EventModal({
           max-height: 85vh; overflow-y: auto; overflow-x: visible;
           background: #1e1b3a;
           border-radius: 20px;
-          border: 1px solid rgba(255,255,255,0.1);
+          border: 2px solid #7c5cff;
           box-shadow: 0 24px 80px rgba(0,0,0,0.5);
           padding: 28px 28px 24px;
           color: white;
@@ -322,28 +322,43 @@ export default function EventModal({
         }
         @media (max-width: 640px) {
           .ye-modal {
-            top: 0; left: 0;
-            transform: none;
-            width: 100vw;
-            max-width: 100vw;
-            max-height: 100dvh;
-            height: 100dvh;
-            border-radius: 0;
-            border: none;
-            padding: 16px 18px calc(24px + env(safe-area-inset-bottom));
-            padding-top: calc(16px + env(safe-area-inset-top));
-            animation: ye-fade 0.18s ease-out;
+            width: min(400px, 88vw);
+            height: 42dvh;
+            max-height: 42dvh;
+            overflow: hidden;
+            border-radius: 18px;
+            padding: 22px 20px calc(20px + env(safe-area-inset-bottom));
             -webkit-overflow-scrolling: touch;
           }
-          .ye-modal-head {
+          .ye-modal .ye-modal-head {
             position: sticky;
             top: 0;
             background: #1e1b3a;
             padding-top: 4px;
-            margin: -4px -2px 14px;
-            padding-bottom: 8px;
+            margin: -4px -2px 2px;
+            padding-bottom: 6px;
             z-index: 2;
           }
+          .ye-modal .ye-img {
+            margin: -22px -20px 16px;
+            height: 110px;
+            border-radius: 18px 18px 0 0;
+          }
+          .ye-modal .ye-title { margin: 0 0 6px; font-size: 15px; }
+          .ye-modal .ye-meta { margin-bottom: 8px; gap: 3px; }
+          .ye-modal .ye-meta-row { font-size: 13px; line-height: 1.3; }
+          .ye-modal .ye-meta-row.muted { font-size: 11px; }
+          .ye-modal .ye-desc-wrap { display: none; }
+          .ye-modal .ye-desc { -webkit-line-clamp: 2; }
+          .ye-modal .ye-actions { gap: 8px; flex-direction: row; flex-wrap: wrap; }
+          .ye-modal .ye-actions > .ye-btn.primary { flex: 1 1 100%; }
+          .ye-modal .ye-actions .ye-btn-wrap { flex: 1 1 0; min-width: 0; }
+          .ye-modal .ye-actions .ye-btn-wrap .ye-btn { width: 100%; }
+          .ye-modal .ye-actions .ye-btn.primary { flex: 1 1 100%; }
+          .ye-modal .ye-actions .ye-btn-wrap { flex: 1 1 0; }
+          .ye-modal .ye-actions .ye-btn-wrap .ye-btn { width: 100%; }
+          .ye-modal .ye-btn { padding: 9px 16px; font-size: 13px; }
+          .ye-modal .ye-tag { font-size: 10px; padding: 3px 9px; }
         }
         @keyframes ye-fade {
           from { opacity: 0; }
@@ -406,10 +421,15 @@ export default function EventModal({
           }
         }
 
-        .ye-title {
+        .ye-img {
+          margin: -28px -28px 20px;
+          height: 200px;
+          border-radius: 20px 20px 0 0;
+        }
+        .ye-modal .ye-title {
           font-family: 'DM Serif Display', serif;
           font-size: clamp(22px, 4vw, 30px);
-          color: white;
+          color: #fff;
           line-height: 1.2;
           margin: 0 0 18px;
         }
@@ -534,10 +554,13 @@ export default function EventModal({
             font-size: 22px;
           }
           .ye-actions {
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
           }
           .ye-btn { width: 100%; justify-content: center; }
-          .ye-btn-wrap { width: 100%; }
+          .ye-actions > .ye-btn.primary { flex: 1 1 100%; }
+          .ye-btn-wrap { flex: 1 1 0; min-width: 0; }
+          .ye-btn-wrap .ye-btn { width: 100%; }
           .ye-dd { left: 0; right: 0; bottom: calc(100% + 6px); }
         }
       `}</style>
