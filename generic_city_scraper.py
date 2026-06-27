@@ -285,6 +285,29 @@ def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=
         txt = _md_re.sub(r'\s+', ' ', txt).strip()
         description = _unescape(txt) or None
 
+    # ChamberMaster uses single quotes (property='og:image'); the old
+    # double-quote-only regex missed them. Build quote classes at runtime
+    # so this source file has no colliding literal quote pair. Prefer the
+    # dedicated event photo (gz-event-img / EventPhotoFull), then og:image.
+    image_url = None
+    _dq = chr(34); _sq = chr(39)
+    _qc = '[' + _dq + _sq + ']'      # matches either quote
+    _nq = '[^' + _dq + _sq + ']'     # matches a non-quote char
+    _img_patterns = [
+        'class=' + _qc + _nq + '*gz-event-img' + _nq + '*' + _qc + '[^>]*src=' + _qc + '(' + _nq + '+)' + _qc,
+        'src=' + _qc + '(' + _nq + '+EventPhotoFull' + _nq + '+)' + _qc,
+        'property=' + _qc + 'og:image' + _qc + '[^>]*content=' + _qc + '(' + _nq + '+)' + _qc,
+        'content=' + _qc + '(' + _nq + '+)' + _qc + '[^>]*property=' + _qc + 'og:image' + _qc,
+        'name=' + _qc + 'twitter:image' + _qc + '[^>]*content=' + _qc + '(' + _nq + '+)' + _qc,
+    ]
+    for _img_pat in _img_patterns:
+        _im = _md_re.search(_img_pat, html, _md_re.I)
+        if _im:
+            _cand = _unescape(_im.group(1).strip())
+            if _cand and _cand.startswith(('http://', 'https://')):
+                image_url = _cand
+                break
+
     ev = {
         "title": name,
         "date": date,
@@ -294,6 +317,7 @@ def _extract_microdata_event(html, url, source_name, city, lat, lng, categories=
         "source": source_name,
         "lat": lat,
         "lng": lng,
+        "image_url": image_url or "",
         # real venue when present; for aggregators with no venue, DO NOT stamp
         # the city (Platteville-class leak) -> leave TBD so geo_validate holds it.
         "location": venue or ("Location TBD" if is_aggregator else city),

@@ -15,6 +15,37 @@ import { useEffect, useRef, useState } from "react";
  * (Google/Apple/Outlook dropdown), Share (copy link / Twitter / Facebook).
  */
 
+// Map a link's domain to a clean source label, so the "via" credit matches
+// where the link actually goes. Many aggregator sources (e.g. The Park Record)
+// republish events that link out to the true origin (library, venue, presenter);
+// showing "via The Park Record" while the link went to nowplayingutah.com was
+// misleading. We credit the real destination instead, falling back to the
+// scrape source for social/unknown domains (a raw instagram.com link is an odd
+// "source").
+const VIA_SOURCE_LABELS: Record<string, string> = {
+  'utaholympiclegacy.org': 'Utah Olympic Park',
+  'mountaintownmusic.org': 'Mountain Town Music',
+  'parkcity.events.mylibrary.digital': 'Park City Library',
+  'summit.events.mylibrary.digital': 'Summit County Library',
+  'altacommunity.org': 'Alta Community',
+  'tockify.com': 'Park City Calendar',
+  'bandsintown.com': 'Bandsintown',
+  'eventbrite.com': 'Eventbrite',
+  'parkcity.org': 'Visit Park City',
+  'swanerecocenter.org': 'Swaner EcoCenter',
+};
+const VIA_SOCIAL_DOMAINS = new Set([
+  'instagram.com', 'facebook.com', 'twitter.com', 'x.com', 'tiktok.com',
+]);
+
+function viaLabelFor(event: { link?: string; source?: string }): string {
+  const link = (event.link || '').trim();
+  let dom = '';
+  try { dom = new URL(link).hostname.replace(/^www\./, ''); } catch { return event.source || ''; }
+  if (!dom || VIA_SOCIAL_DOMAINS.has(dom)) return event.source || dom;
+  return VIA_SOURCE_LABELS[dom] || event.source || dom;
+}
+
 export type EventModalData = {
   title: string;
   date: string;             // ISO "YYYY-MM-DD"
@@ -165,7 +196,7 @@ export default function EventModal({
           {event.source && (
             <div className="ye-meta-row muted">
               <span className="ye-meta-icon" aria-hidden="true">🔗</span>
-              <span>via {event.source}</span>
+              <span>via {viaLabelFor(event)}</span>
             </div>
           )}
         </div>

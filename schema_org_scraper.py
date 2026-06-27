@@ -206,6 +206,7 @@ def scrape_schema_org_events(
             default_categories=default_categories or ["Event"],
             default_city=default_city,
             is_aggregator=is_aggregator,
+            page_html=html_text,
         )
         if not parsed:
             dropped_unparseable += 1
@@ -602,8 +603,40 @@ def is_aggregator_source(url):
     return any(host == h or host.endswith("." + h) for h in _AGGREGATOR_HOSTS)
 
 
+def _extract_page_image(html_text):
+    """Logo-safe page-image fallback for sources whose JSON-LD has no image
+    (e.g. WordPress/The Events Calendar like nortonsgreenlake.com). Tries
+    og:image, then a wp-image content image, EXCLUDING theme assets (logo,
+    favicon, svg, the Tribe loading spinner) so we get the event flyer, not
+    the site logo. Returns a URL or None."""
+    if not html_text:
+        return None
+    _BAD = ("logo", "favicon", "cropped-fav", "spinner", "tribe-loading")
+    # 1. og:image (clean when present); quotes may be single or double.
+    m = re.search(r'<meta[^>]*property=["\']og:image["\'][^>]*content=["\']([^"\']+)', html_text, re.I)
+    if not m:
+        m = re.search(r'<meta[^>]*content=["\']([^"\']+)["\'][^>]*property=["\']og:image["\']', html_text, re.I)
+    if m:
+        u = m.group(1).strip()
+        if u.startswith(("http://", "https://")) and not any(b in u.lower() for b in _BAD) and not u.lower().endswith(".svg"):
+            return u
+    # 2. wp-image content image (WordPress assigns wp-image-NNNN to uploaded
+    #    content images, not theme assets). Skip logo/favicon/svg/spinner.
+    for im in re.finditer(r'<img[^>]*class=["\'][^"\']*wp-image-\d+[^"\']*["\'][^>]*src=["\']([^"\']+)', html_text, re.I):
+        u = im.group(1).strip()
+        low = u.lower()
+        if low.endswith(".svg"):
+            continue
+        if any(b in low for b in _BAD):
+            continue
+        if "/wp-content/uploads/" in low and low.endswith((".png", ".jpg", ".jpeg", ".webp")):
+            return u
+    return None
+
+
 def _parse_event(raw, source_name, source_url, default_lat, default_lng,
-                 default_categories, default_city, is_aggregator=False):
+                 default_categories, default_city, is_aggregator=False,
+                 page_html=None):
     """Convert one Schema.org Event dict to a yoocal event dict."""
     try:
         # Title
@@ -704,6 +737,11 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
             image_url = image_url[0] if image_url else ""
         if isinstance(image_url, dict):
             image_url = image_url.get("url") or image_url.get("contentUrl") or ""
+        # Fallback: JSON-LD often omits the image (WordPress/Tribe sources like
+        # nortonsgreenlake.com). Pull a logo-safe page image so these events
+        # aren't imageless. Only when the schema image was empty.
+        if not image_url and page_html:
+            image_url = _extract_page_image(page_html) or ""
 
         # Categories — start with default, add type hints
         categories = list(default_categories) if default_categories else ["Event"]

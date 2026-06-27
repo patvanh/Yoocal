@@ -144,6 +144,8 @@ _TITLE_FILLERS = {
     "at",  # collapses "@ Venue" (punct stripped to space) with "at Venue"
 }
 
+import re  # for _JUNK_TITLE_RE pattern matching below
+
 _JUNK_TITLES = {
     # Scraped UI/navigation labels that aren't events (common from WordPress
     # Events Calendar / MEC month-view widgets). Exact-match after lowering.
@@ -158,9 +160,24 @@ _JUNK_TITLES = {
 }
 
 
+# Pattern junk: calendar-navigation text where part varies (a date, etc.), so
+# an exact-set match can't catch it. "Events for June 26, 2026" is a month-view
+# header scraped as an event, not a real event. No legit event is titled this way.
+_JUNK_TITLE_RE = re.compile(
+    r"^(events?\s+for\s+\w+|all\s+events?\b|upcoming\s+events?\s*$"
+    r"|view\s+all\s+events?|more\s+events?\s*$|calendar\s*$"
+    r"|this\s+(week|weekend|month)\s*$)",
+    re.I,
+)
+
+
 def _is_junk_title(title: str) -> bool:
     t = (title or "").strip().lower()
-    return t in _JUNK_TITLES
+    if t in _JUNK_TITLES:
+        return True
+    if _JUNK_TITLE_RE.search(t):
+        return True
+    return False
 
 
 def _normalize_title(title: str) -> str:
@@ -1342,6 +1359,26 @@ def _cross_source_fuzzy_merge(events: list) -> list:
         # while generic-word collisions in DIFFERENT places never reach this branch.
         if same_location and small.issubset(big) and len(small - _STOP) >= 1:
             return True
+        # (b3) same PRECISE location + enough shared distinctive tokens, NO
+        # subset required. Two records at essentially the same coordinates on the
+        # same date that share >= 2 distinctive (non-stopword) tokens are the
+        # same event even when NEITHER title subsets the other and Jaccard is
+        # low -- e.g. "Flying Ace All-Stars Freestyle Show" (Park Record) vs
+        # "Utah Olympic Park Freestyle Show Featuring The Flying Aces - Fridays
+        # and Saturdays" (KPCW): they share {flying, freestyle} as distinctive
+        # tokens, sit at identical coords, same date, but ace/aces + filler words
+        # block every subset/Jaccard branch. Coordinates are the reliable signal
+        # (different sources phrase the same show wildly differently); the >= 2
+        # distinctive-shared-token floor stops unrelated same-venue events from
+        # collapsing. Also strip day-of-week words so "Fridays and Saturdays"
+        # style filler doesn't count toward (or against) the shared set.
+        if same_location:
+            _DOW_b3 = {"monday", "tuesday", "wednesday", "thursday", "friday",
+                       "saturday", "sunday", "fridays", "saturdays", "sundays",
+                       "mondays", "tuesdays", "wednesdays", "thursdays"}
+            _shared_distinct = (s1 & s2) - _STOP - _DOW_b3
+            if len(_shared_distinct) >= 2:
+                return True
         # Day-of-week words get stripped asymmetrically by _normalize_title
         # (leading day removed, mid-title day kept), so retry the subset test
         # with day names removed from both sides. Date already disambiguates
@@ -1409,6 +1446,15 @@ def _cross_source_fuzzy_merge(events: list) -> list:
                         _same_location = haversine_miles(float(_la), float(_lna), float(_lb), float(_lnb)) <= 0.5
                     except (ValueError, TypeError):
                         pass
+                # Different start times at the same venue = DIFFERENT shows
+                # (e.g. a 2pm act and a 10:30pm act). The co-location relaxation
+                # must NOT merge these — it would collapse two real shows into one
+                # and mis-link them. Only suppress same_location when BOTH have a
+                # time AND they differ; missing times fall through (can't tell).
+                _ta = (group[i].get("start_time") or "").strip()
+                _tb = (group[j].get("start_time") or "").strip()
+                if _ta and _tb and _ta != _tb:
+                    _same_location = False
                 if _compatible(group[i].get("title"), group[j].get("title"),
                                same_venue=_same_venue, same_location=_same_location):
                     group[i] = merge_events([group[i], group[j]])

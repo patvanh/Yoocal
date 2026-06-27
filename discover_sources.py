@@ -60,6 +60,7 @@ BLACKLIST_DOMAINS = {
     "news.google.com", "msn.com", "bing.com",
     # Generic event marketplaces — usually wider than one town, and have their own APIs we'd integrate differently
     "eventbrite.com", "ticketmaster.com", "stubhub.com", "seatgeek.com",
+    "jambase.com", "bandsintown.com",  # low-trust music aggregators: wide-radius noise, Playwright-heavy (hung a Green Lake scrape), build drops them anyway
     "meetup.com",  # Meetup has an API; treat separately
     # SEO content farms
     "thingstodopost.com", "tripsavvy.com", "afar.com",

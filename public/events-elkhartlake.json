@@ -6,9 +6,9 @@
     "lng": -88.0426
   },
   "radius_mi": 15,
-  "generated_at": "2026-06-26T15:45:04.168703-06:00",
+  "generated_at": "2026-06-26T21:06:43.293571-06:00",
   "today": "2026-06-26",
-  "event_count": 219,
+  "event_count": 216,
   "events": [
     {
       "title": "Fireman's 4th of July Parade & Annual Picnic",
@@ -214,18 +214,17 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "The Osthoff Lake Deck Live Music by Mark Croft",
+      "title": "Mark Croft Band",
       "date": "2026-06-27",
       "start_time": "7:00 PM",
       "end_time": "11:00 PM",
-      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring Mark Croft. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
-      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-mark-croft-2/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-06-26T12:45:10.910064",
-      "venue_name": "Osthoff Lake Deck",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/mark-croft-music.avif",
+      "description": "Live Music at The Lake Deck \u2013 Saturday, June 27, 2026 Join us for an evening of live music and a laid-back summer atmosphere on the shores of Elkhart Lake. Relax with great tunes, cold drinks, and tasty concession favorites while you unwind by the water. Open to the public.",
+      "location": "The Osthoff Resort, Elkhart Lake, WI",
+      "link": "https://osthoff.com/event/mark-croft-band/",
+      "source": "The Osthoff Resort",
+      "source_url": "https://osthoff.com/calendar/",
+      "scraped_at": "2026-06-26T12:45:17.866579",
+      "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Mark-Croft-Band-scaled.png",
       "series": "The Osthoff Lake Deck",
       "lat": 43.833,
       "lng": -88.0426,
@@ -235,6 +234,23 @@
         "Outdoor"
       ],
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "venue_name": "The Osthoff Resort",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Osthoff Resort"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Osthoff Resort",
+            "source": "The Osthoff Resort"
+          },
+          {
+            "value": "Osthoff Lake Deck",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
       "filter_categories": [
         "Music",
         "Outdoors"
@@ -297,34 +313,6 @@
       "filter_categories": [
         "Education & Talks",
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Mark Croft Band",
-      "date": "2026-06-27",
-      "start_time": "7:00 PM",
-      "end_time": "11:00 PM",
-      "description": "Live Music at The Lake Deck \u2013 Saturday, June 27, 2026 Join us for an evening of live music and a laid-back summer atmosphere on the shores of Elkhart Lake. Relax with great tunes, cold drinks, and tasty concession favorites while you unwind by the water. Open to the public.",
-      "location": "The Osthoff Resort, Elkhart Lake, WI",
-      "link": "https://osthoff.com/event/mark-croft-band/",
-      "source": "The Osthoff Resort",
-      "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-06-26T12:45:17.866579",
-      "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Mark-Croft-Band-scaled.png",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "venue_name": "The Osthoff Resort",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
       ],
       "_distance_mi": 0.0
     },
@@ -1632,34 +1620,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "The Osthoff Lake Deck Live Music by Burgundy Ties Band",
-      "date": "2026-07-30",
-      "start_time": "6:00 PM",
-      "end_time": "10:00 PM",
-      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring Burgundy Ties Band. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
-      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-burgundy-ties-band/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-06-26T12:45:13.068185",
-      "venue_name": "Osthoff Lake Deck",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/burgundy-ties-siebkens.avif",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Burgundy Ties Duo",
       "date": "2026-07-30",
       "start_time": "6:00 PM",
@@ -1681,6 +1641,22 @@
       ],
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Osthoff Resort"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Osthoff Resort",
+            "source": "The Osthoff Resort"
+          },
+          {
+            "value": "Osthoff Lake Deck",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
       "filter_categories": [
         "Music",
         "Outdoors"
@@ -5671,34 +5647,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "The Osthoff Lake Deck Live Music by Wisco Daddy",
-      "date": "2026-08-16",
-      "start_time": "1:00 PM",
-      "end_time": "5:00 PM",
-      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring Wisco Daddy, AKA McManus Duo. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
-      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-wisco-daddy/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-06-26T12:45:13.069321",
-      "venue_name": "Osthoff Lake Deck",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/bob-connor-mcmanus.avif",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Wisco Daddy \u2013 aka McManus Duo",
       "date": "2026-08-16",
       "start_time": "1:00 PM",
@@ -5720,6 +5668,22 @@
       ],
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Osthoff Resort"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Osthoff Resort",
+            "source": "The Osthoff Resort"
+          },
+          {
+            "value": "Osthoff Lake Deck",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
       "filter_categories": [
         "Music",
         "Outdoors"

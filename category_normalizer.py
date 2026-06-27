@@ -37,6 +37,22 @@ for bucket, sources in BUCKET_FROM_SOURCE.items():
     for s in sources:
         _SOURCE_TO_BUCKET[s] = bucket
 
+# Domain -> bucket fallback for sources whose events have NO category signal in
+# the title (e.g. iceboat.org lists "DN Western Challenge" — opaque title, but
+# the source only does iceboat racing; raceentry/fleetfeet only list footraces).
+# Used as a last resort before the Community catch-all. Keyed on a substring of
+# the event's source field.
+_DOMAIN_BUCKET = {
+    "iceboat.org": "Sports",
+    "iceboat": "Sports",
+    "raceentry.com": "Running & Races",
+    "fleetfeet": "Running & Races",
+    "finishers.com": "Running & Races",
+    "runguides.com": "Running & Races",
+    "runsignup": "Running & Races",
+    "raceroster": "Running & Races",
+}
+
 # Title-enrichment: footrace signals (precise). Bare "race" only counts with a
 # running qualifier nearby.
 _RUN_PATTERNS = [
@@ -78,7 +94,7 @@ _VALID_BUCKETS_LOWER = {b.lower(): b for b in [
 # Ordered by specificity; an event can match multiple buckets. Case-insensitive.
 _TITLE_BUCKET_PATTERNS = [
     ("Music", r"\b(live music|concert|band|acoustic|\bdj\b|symphony|orchestra|jazz|blues|open mic|singer|songwriter|bluegrass|karaoke|recital|musical)\b"),
-    ("Food & Drink", r"\b(happy hour|\bbbq\b|barbecue|dinner|brunch|breakfast|luncheon|\bwine\b|winery|\bbeer\b|brewing|brewery|tasting|cocktail|supper|sundae|ice cream|farmers? market|food truck|chili cook|pancake|fish fry|coffee)\b"),
+    ("Food & Drink", r"\b(happy hour|\bbbq\b|barbecue|dinner|brunch|breakfast|luncheon|\bwine\b|winery|\bbeer\b|brewing|brewery|tasting|cocktail|supper|sundae|ice cream|farmers? market|food truck|pancake|fish fry|coffee|bake sale)\b|chili\s?cook|cook[\s-]?off|cook[\s-]?out"),
     ("Arts & Theater", r"\b(opera|theat(er|re)|\bart\b|arts|gallery|exhibit|painting|paint|pottery|\bglass\b|\bcraft|sculpture|museum|drawing|photography|quilt|knitting|author|book club|comedy|improv|magic show)\b"),
     ("Outdoors", r"\b(hike|hiking|kayak|paddle|canoe|\bboat|sail|nature|trail|birding|garden|gardening|camp(ing)?|fishing|outdoor|stargaz)\b"),
     ("Sports", r"\b(tournament|\bgolf|regatta|iceboat|pickleball|tennis|softball|baseball|basketball|disc golf|\b4 ?on ?4\b|bowling|cornhole)\b"),
@@ -118,6 +134,14 @@ def filter_categories_for(event):
         buckets.add("Running & Races")
     title_text = (event.get("title") or "") + " " + (event.get("description") or "")
     buckets |= _infer_buckets_from_title(title_text)
+    # Source-domain fallback: when title/category gave nothing, infer from the
+    # source domain (iceboat.org -> Sports, race sites -> Running & Races).
+    if not buckets:
+        src = (event.get("source") or "").lower() + " " + (event.get("link") or "").lower()
+        for frag, bucket in _DOMAIN_BUCKET.items():
+            if frag in src:
+                buckets.add(bucket)
+                break
     if not buckets:
         buckets.add("Community")  # default catch-all
     return sorted(buckets)

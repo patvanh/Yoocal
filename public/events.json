@@ -6,9 +6,9 @@
     "lng": -111.498
   },
   "radius_mi": 10,
-  "generated_at": "2026-06-26T15:45:04.053210-06:00",
+  "generated_at": "2026-06-26T21:06:43.176576-06:00",
   "today": "2026-06-26",
-  "event_count": 2038,
+  "event_count": 2032,
   "events": [
     {
       "title": "Challenge Accepted!",
@@ -245,30 +245,6 @@
       "price": "Free",
       "filter_categories": [
         "Arts & Theater",
-        "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Flying Ace All-Stars Freestyle Show",
-      "date": "2026-06-27",
-      "description": "The event is held on June 27, 2026 at Utah Olympic Park in Park City, UT.",
-      "location": "Utah Olympic Park, Park City, UT",
-      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-51/",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Community"
-      ],
-      "start_time": "",
-      "end_time": "",
-      "scraped_at": "2026-06-26T12:06:53.590098",
-      "venue_name": "Utah Olympic Park",
-      "address": "3419 Olympic Parkway",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/QY1i11QfZk2iAB8bSEYRhQ.large.png",
-      "filter_categories": [
         "Community"
       ],
       "_distance_mi": 0.0
@@ -4895,24 +4871,32 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Utah Olympic Park Freestyle Show Featuring The Flying Aces - Fridays and Saturdays",
+      "title": "Flying Ace All-Stars Freestyle Show",
       "date": "2026-06-27",
-      "description": "The Olympic Park is home to dozens of athletes who train at the Olympic venue, many of whom use the water ramps at the Freestyle Pool. These athletes also showc",
-      "location": "Utah Olympic Park, 3419 Olympic Pkwy, Park City, UT 84098, USA",
-      "link": "https://utaholympiclegacy.org/activity/flying-ace-all-stars-freestyle-shows/",
-      "source": "KPCW Community Calendar",
-      "source_url": "https://www.kpcw.org/kpcw-community-calendar",
-      "start_time": "8:00 AM",
-      "end_time": "8:00 PM",
+      "description": "The event is held on June 27, 2026 at Utah Olympic Park in Park City, UT.",
+      "location": "Utah Olympic Park, Park City, UT",
+      "link": "https://utaholympiclegacy.org/event/flying-ace-all-stars-freestyle-show-51/",
+      "source": "The Park Record",
+      "source_url": "https://www.parkrecord.com/calendar/",
       "lat": 40.6461,
       "lng": -111.498,
       "categories": [
+        "Community",
+        "Community-Outreach",
         "Family",
         "Kids",
-        "Community-Outreach",
         "Sports/Recreation"
       ],
-      "address": "Utah Olympic Park, 3419 Olympic Pkwy, Park City, UT 84098, USA",
+      "start_time": "8:00 AM",
+      "end_time": "8:00 PM",
+      "scraped_at": "2026-06-26T12:06:53.590098",
+      "venue_name": "Utah Olympic Park",
+      "address": "3419 Olympic Parkway",
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/QY1i11QfZk2iAB8bSEYRhQ.large.png",
+      "_all_sources": [
+        "KPCW Community Calendar",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -6678,7 +6662,9 @@
       "lat": 40.6461,
       "lng": -111.498,
       "categories": [
-        "Community"
+        "Community",
+        "Family",
+        "Free"
       ],
       "start_time": "11:00 AM",
       "end_time": "5:00 PM",
@@ -6687,12 +6673,26 @@
       "venue_name": "Historic Main Street & City Park",
       "address": "Park City, UT, 84060",
       "_all_sources": [
+        "Park City Annual Events",
         "The Park Record",
         "Visit Park City",
         "Visit Park City (sitemap)"
       ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "Historic Main Street & City Park",
+            "source": "Visit Park City"
+          },
+          {
+            "value": "Main Street",
+            "source": "Park City Annual Events"
+          }
+        ]
+      },
       "filter_categories": [
         "Community",
+        "Family & Kids",
         "Sports"
       ],
       "_distance_mi": 0.0
@@ -6760,33 +6760,6 @@
         "Food & Drink",
         "Music",
         "Outdoors"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Park City 4th of July Parade & Fireworks",
-      "date": "2026-07-04",
-      "start_time": "11:00 AM",
-      "description": "Annual Independence Day celebration. Morning parade down Main Street with floats, marching bands, and local groups. Evening fireworks over Park City. Family-friendly and free to attend.",
-      "location": "Main Street, Park City, UT",
-      "link": "https://www.visitparkcity.com/events",
-      "source": "Park City Annual Events",
-      "source_url": "https://www.visitparkcity.com/",
-      "categories": [
-        "Community",
-        "Family",
-        "Free"
-      ],
-      "venue_name": "Main Street",
-      "address": "Main Street, Park City, UT 84060",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "scraped_at": "2026-06-26T12:22:54.479583",
-      "is_free": true,
-      "price": "Free",
-      "filter_categories": [
-        "Community",
-        "Family & Kids"
       ],
       "_distance_mi": 0.0
     },
@@ -8422,8 +8395,24 @@
       "end_time": "4:00 PM",
       "address": "7560 Royal Street, Park City",
       "venue_name": "Silver Lake Lawn at Deer Valley",
-      "image_url": null,
+      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/PIVJcjzIXk-v1pydpox2yg.large.jpg",
       "scraped_at": "2026-06-26T12:06:21.641099",
+      "_all_sources": [
+        "Mountain Town Music",
+        "The Park Record"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "Silver Lake Lawn at Deer Valley",
+            "source": "Mountain Town Music"
+          },
+          {
+            "value": "Silver Lake - Deer Valley",
+            "source": "The Park Record"
+          }
+        ]
+      },
       "filter_categories": [
         "Music"
       ],
@@ -8554,30 +8543,6 @@
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/j0c8EWEO_EmxC1jEbgkZgA.large.png",
       "filter_categories": [
         "Community"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Liam Given at Silver Lake Concert Series",
-      "date": "2026-07-10",
-      "description": "Liam Given with Beckham White",
-      "location": "Silver Lake - Deer Valley, Park City, UT",
-      "link": "https://linktr.ee/Liamgiven",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Music"
-      ],
-      "start_time": "1:00 PM",
-      "end_time": "4:00 PM",
-      "scraped_at": "2026-06-26T12:07:00.376736",
-      "venue_name": "Silver Lake - Deer Valley",
-      "address": "7600 Royal Street, Park City, UT 84060",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/PIVJcjzIXk-v1pydpox2yg.large.jpg",
-      "filter_categories": [
-        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -27356,7 +27321,8 @@
       "lng": -111.498,
       "categories": [
         "Arts",
-        "Community"
+        "Community",
+        "Music"
       ],
       "start_time": "6:00 PM",
       "end_time": "9:00 PM",
@@ -27372,7 +27338,8 @@
       "price": "Free",
       "filter_categories": [
         "Arts & Theater",
-        "Community"
+        "Community",
+        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -27475,30 +27442,6 @@
         "Community"
       ],
       "_distance_mi": 6.7
-    },
-    {
-      "title": "Art & Music Gallery Stroll",
-      "date": "2026-09-25",
-      "description": "September 25, 2026 | Multiple Galleries | 6-9pm This special edition of the monthly Gallery Stroll features live music alongside new exhibitions. Visitors can explore Park City's art scene while enjoying performances in select galleries.",
-      "location": "Park City, UT",
-      "link": "https://tockify.com/pcscart/detail/2289/1790380800000",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Arts",
-        "Music"
-      ],
-      "start_time": "6:00 PM",
-      "end_time": "9:00 PM",
-      "scraped_at": "2026-06-26T12:22:30.581857",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/98aT4opO3Eyi21isG6belA.large.png",
-      "filter_categories": [
-        "Arts & Theater",
-        "Music"
-      ],
-      "_distance_mi": 0.0
     },
     {
       "title": "Midway Swiss Days",
@@ -31032,6 +30975,18 @@
         "The Park Record"
       ],
       "series_end": "2026-06-28",
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "Silver Lake",
+            "source": "Deer Valley Resort"
+          },
+          {
+            "value": "Inn At Silver Lake",
+            "source": "The Park Record"
+          }
+        ]
+      },
       "filter_categories": [
         "Food & Drink",
         "Music",
@@ -31110,24 +31065,8 @@
       "end_time": "4:00 PM",
       "address": "7560 Royal Street, Park City",
       "venue_name": "Silver Lake Lawn at Deer Valley",
-      "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/InD03XiuAUiRxkhxB64bKQ.large.png",
+      "image_url": null,
       "scraped_at": "2026-06-26T12:06:21.721314",
-      "_all_sources": [
-        "Mountain Town Music",
-        "The Park Record"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "Silver Lake Lawn at Deer Valley",
-            "source": "Mountain Town Music"
-          },
-          {
-            "value": "Inn At Silver Lake",
-            "source": "The Park Record"
-          }
-        ]
-      },
       "filter_categories": [
         "Music"
       ],
@@ -31144,7 +31083,9 @@
       "lat": 40.6461,
       "lng": -111.498,
       "categories": [
-        "Music"
+        "Food & Drink",
+        "Music",
+        "Outdoor"
       ],
       "is_free": true,
       "price": "Free",
@@ -31152,36 +31093,12 @@
       "end_time": "2:15 PM",
       "address": "9th and Main Street, Park City",
       "venue_name": "Park Silly Sunday Market",
-      "image_url": null,
-      "scraped_at": "2026-06-26T12:06:23.891230",
-      "filter_categories": [
-        "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Chris Baron Music",
-      "date": "2026-06-28",
-      "description": "SUN. 12:30p-2:15p. FREE. All Ages. Outdoors. Thanks to Mountain Town Music for getting us a musical spot at this honorable Market. The first person who recommended this to us was Jon Frailey and Cat Mountain. Check them out too! But Be Here on this Sunday!",
-      "location": "Park Silly Sunday Market, Park City, UT",
-      "link": "https://www.bandsintown.com/e/108311300?app_id=pkvts0on0m&came_from=287&utm_medium=api&utm_source=partner_api&utm_campaign=event",
-      "source": "The Park Record",
-      "source_url": "https://www.parkrecord.com/calendar/",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "Food & Drink",
-        "Music",
-        "Outdoor"
-      ],
-      "start_time": "12:30 PM",
-      "end_time": "",
-      "scraped_at": "2026-06-26T12:06:53.590282",
-      "venue_name": "Park Silly Sunday Market",
-      "address": "780  Main St",
       "image_url": "https://citysparkstorage.blob.core.windows.net/portalimages/portalimages/al8Svx6SLESSmQ2pLvxpCA.large.png",
-      "is_free": true,
-      "price": "Free",
+      "scraped_at": "2026-06-26T12:06:23.891230",
+      "_all_sources": [
+        "Mountain Town Music",
+        "The Park Record"
+      ],
       "filter_categories": [
         "Food & Drink",
         "Music",
@@ -32017,7 +31934,7 @@
     {
       "title": "Summer Garden Camps",
       "date": "2026-06-30",
-      "description": "",
+      "description": "Join this summer at Garden Camp \u2014 where children grow their connection to food, nature, and community. Located at Summit Community Gardens, campers are immersed",
       "location": "Summit Community Gardens and EATS",
       "link": "https://www.visitparkcity.com/event/summer-garden-camps/29060/",
       "source": "Visit Park City",
@@ -32025,17 +31942,30 @@
       "is_free": null,
       "price": "",
       "scraped_at": "2026-06-26T11:55:45.605658",
-      "lat": 40.6903085,
-      "lng": -111.5403772,
+      "lat": 40.6461,
+      "lng": -111.498,
       "end_date": null,
       "venue_name": "Summit Community Gardens and EATS",
       "start_time": "9:00 AM",
       "end_time": "1:00 PM",
       "series_end": "2026-08-08",
+      "address": "Summit Community Gardens, 4056 Shadow Mountain Drive, Park City, UT 84098, USA",
+      "categories": [
+        "Camps&Clinics",
+        "Education",
+        "Kids",
+        "garden"
+      ],
+      "_all_sources": [
+        "KPCW Community Calendar",
+        "Visit Park City"
+      ],
       "filter_categories": [
+        "Education & Talks",
+        "Family & Kids",
         "Outdoors"
       ],
-      "_distance_mi": 3.8
+      "_distance_mi": 0.0
     },
     {
       "title": "'Affordable Housing How-To June 30",
@@ -32666,32 +32596,6 @@
       "filter_categories": [
         "Family & Kids",
         "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Register Now for Summer Garden Camp at Summit Community Gardens - June 8th through August 7th",
-      "date": "2026-06-30",
-      "description": "Join this summer at Garden Camp \u2014 where children grow their connection to food, nature, and community. Located at Summit Community Gardens, campers are immersed",
-      "location": "Summit Community Gardens, 4056 Shadow Mountain Drive, Park City, UT 84098, USA",
-      "link": "https://www.summitcommunitygardens.org/elementary-garden-camps",
-      "source": "KPCW Community Calendar",
-      "source_url": "https://www.kpcw.org/kpcw-community-calendar",
-      "start_time": "9:00 AM",
-      "end_time": "1:00 PM",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "categories": [
-        "garden",
-        "Camps&Clinics",
-        "Education",
-        "Kids"
-      ],
-      "address": "Summit Community Gardens, 4056 Shadow Mountain Drive, Park City, UT 84098, USA",
-      "filter_categories": [
-        "Education & Talks",
-        "Family & Kids",
-        "Outdoors"
       ],
       "_distance_mi": 0.0
     },

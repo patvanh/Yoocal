@@ -448,6 +448,7 @@ const V2_CAT_STYLE: Record<string, { color: string; grad: string }> = {
   'Wellness':         { color: '#3aa39a', grad: 'linear-gradient(135deg,#1f5e58,#3aa39a)' },
   'Education & Talks':{ color: '#5566c4', grad: 'linear-gradient(135deg,#2e3670,#5566c4)' },
   'Community':        { color: '#6b61d6', grad: 'linear-gradient(135deg,#393379,#6b61d6)' },
+  'Nightlife':        { color: '#b8478f', grad: 'linear-gradient(135deg,#5e2349,#b8478f)' },
 }
 function v2CatStyleFor(ev: V2YocEvent) {
   const cats = [...(ev.filter_categories || []), ...(ev.categories || [])]
@@ -491,6 +492,11 @@ function V2FeaturedCard({ event, onClick, viewedDay }: { event: V2YocEvent; onCl
           {event.location && <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 500,
             whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{event.location}</div>}
           {priceTag && <div style={{ fontSize: 11, fontWeight: 700, color: isFree ? '#4ade80' : '#c4b5fd', marginTop: 3 }}>{priceTag}</div>}
+          <span style={{
+            display: 'inline-block', fontSize: 10, fontWeight: 700, letterSpacing: 0.2,
+            color: st.color, background: st.color + '22',
+            padding: '2px 8px', borderRadius: 999, marginTop: 5, width: 'fit-content',
+          }}>{st.bucket}</span>
         </div>
       </div>
     </button>
@@ -559,6 +565,11 @@ function V2EventCard({ event, onClick, featured = false, viewedDay }: { event: V
             {event.is_free === true && !event.price && <span style={{ color: '#4ade80', marginLeft: 8, fontWeight: 600 }}>· Free</span>}
           </div>
         )}
+        <span style={{
+          display: 'inline-block', fontSize: 10, fontWeight: 700, letterSpacing: 0.2,
+          color: cat.color, background: cat.color + '22',
+          padding: '2px 8px', borderRadius: 999, marginTop: 5, width: 'fit-content',
+        }}>{cat.bucket}</span>
       </div>
     </button>
   )
