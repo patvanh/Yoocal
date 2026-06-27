@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-26",
+  "generated_at": "2026-06-27",
   "cities": {
     "all": {
-      "events": 4799,
+      "events": 4984,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 2,
+          "count": 3,
           "examples": [
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-26",
+              "only_date": "2026-06-27",
               "why": "recurrence-field",
               "source": "Visit Park City"
             },
@@ -23,6 +23,13 @@
               "only_date": "2026-06-27",
               "why": "recurrence-field",
               "source": "Heber Valley Tourism"
+            },
+            {
+              "title": "Yoga in the Park",
+              "venue": "city park",
+              "only_date": "2026-08-30",
+              "why": "recurrence-field",
+              "source": "Visit Park City"
             }
           ]
         },
@@ -33,35 +40,19 @@
           "count": 28,
           "examples": [
             {
-              "date": "2026-06-26",
-              "title_a": "Ice Skating Glide In Movies",
-              "src_a": "Heber Valley Life",
-              "title_b": "Glide in Movies",
-              "src_b": "TownLift",
+              "date": "2026-06-27",
+              "title_a": "Savor the Summit",
+              "src_a": "Deer Valley Resort",
+              "title_b": "SAVOR",
+              "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             },
             {
               "date": "2026-06-27",
               "title_a": "SAVOR",
-              "src_a": "Deer Valley Resort",
-              "title_b": "JH Food & Wine\u2019s Savor",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-06-27",
-              "title_a": "SAVOR",
-              "src_a": "Deer Valley Resort",
+              "src_a": "Jackson Hole Chamber of Commerce",
               "title_b": "Jackson Hole Food & Wine | Savor",
               "src_b": "Jackson Hole Mountain Resort",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-06-27",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
               "sim": 0.85
             },
             {
@@ -70,6 +61,22 @@
               "src_a": "RunningInTheUSA Jackson",
               "title_b": "Wildflower Run",
               "src_b": "Grand Targhee Resort",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-04",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-11",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
               "sim": 0.85
             }
           ]
@@ -83,8 +90,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 291,
-              "lost": 749
+              "now": 301,
+              "lost": 739
             },
             {
               "source": "Siebkens Resort",
@@ -97,7 +104,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 216,
+      "events": 213,
       "findings": [
         {
           "code": "C6",
@@ -116,11 +123,11 @@
       ]
     },
     "greenlake": {
-      "events": 329,
+      "events": 386,
       "findings": []
     },
     "heber": {
-      "events": 720,
+      "events": 727,
       "findings": [
         {
           "code": "C1",
@@ -141,24 +148,8 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 12,
+          "count": 11,
           "examples": [
-            {
-              "date": "2026-06-27",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-04",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
             {
               "date": "2026-07-11",
               "title_a": "Heber's Saturday Sunset Music Series",
@@ -182,6 +173,22 @@
               "title_b": "Saturday Sunset Music Series",
               "src_b": "Heber Valley Tourism",
               "sim": 0.85
+            },
+            {
+              "date": "2026-08-15",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-04",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
             }
           ]
         },
@@ -194,22 +201,30 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 285,
-              "lost": 748
+              "now": 295,
+              "lost": 738
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1602,
+      "events": 1621,
       "findings": [
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 2,
+          "count": 4,
           "examples": [
+            {
+              "date": "2026-06-27",
+              "title_a": "SAVOR",
+              "src_a": "Jackson Hole Chamber of Commerce",
+              "title_b": "Jackson Hole Food & Wine | Savor",
+              "src_b": "Jackson Hole Mountain Resort",
+              "sim": 0.85
+            },
             {
               "date": "2026-07-04",
               "title_a": "Grand Targhee Wildflower Run",
@@ -225,11 +240,19 @@
               "title_b": "Wildflower Run",
               "src_b": "Grand Targhee Resort",
               "sim": 0.85
+            },
+            {
+              "date": "2026-07-26",
+              "title_a": "Old 97's \u2014 Concerts on the Commons",
+              "src_a": "Dishing Jackson Hole",
+              "title_b": "Concerts on the Commons",
+              "src_b": "Jackson Hole Mountain Resort",
+              "sim": 0.85
             }
           ]
         }
       ]
     }
   },
-  "high_total": 7
+  "high_total": 8
 }
