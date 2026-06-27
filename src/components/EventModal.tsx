@@ -173,6 +173,7 @@ export default function EventModal({
           <h2 id="ye-modal-title" className="ye-title">{event.title}</h2>
         )}
 
+        <div className="ye-body-row">
         <div className="ye-meta">
           <div className="ye-meta-row">
             <span className="ye-meta-icon" aria-hidden="true">📅</span>
@@ -294,9 +295,14 @@ export default function EventModal({
             )}
           </div>
         </div>
+        </div>
       </div>
 
       <style>{`
+        @keyframes ye-pop-mobile {
+          from { opacity: 0; transform: translate(-50%, -50%) scale(0.96); }
+          to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        }
         .ye-overlay {
           position: fixed; inset: 0;
           background: rgba(10,8,30,0.7);
@@ -320,8 +326,12 @@ export default function EventModal({
         }
         @media (max-width: 640px) {
           .ye-modal {
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            animation: ye-pop-mobile 0.2s ease-out;
             width: min(400px, 90vw);
-            max-height: 85dvh;
+            max-height: 88dvh;
             overflow-y: auto;
             border-radius: 18px;
             padding: 22px 20px calc(20px + env(safe-area-inset-bottom));
@@ -341,20 +351,19 @@ export default function EventModal({
             height: 110px;
             border-radius: 18px 18px 0 0;
           }
-          .ye-modal .ye-title { margin: 0 0 6px; font-size: 15px; }
+          .ye-modal .ye-title { margin: 0 auto 6px; font-size: 15px; text-align: center; width: 100%; padding-left: 0; padding-right: 0; }
           .ye-modal .ye-meta { margin-bottom: 8px; gap: 3px; }
           .ye-modal .ye-meta-row { font-size: 13px; line-height: 1.3; }
           .ye-modal .ye-meta-row.muted { font-size: 11px; }
           .ye-modal .ye-desc-wrap { display: none; }
           .ye-modal .ye-desc { -webkit-line-clamp: 2; }
-          .ye-modal .ye-actions { gap: 8px; flex-direction: row; flex-wrap: wrap; }
-          .ye-modal .ye-actions > .ye-btn.primary { flex: 1 1 100%; }
-          .ye-modal .ye-actions .ye-btn-wrap { flex: 1 1 0; min-width: 0; }
+          .ye-modal .ye-body-row { display: flex; gap: 14px; align-items: flex-start; }
+          .ye-modal .ye-body-row .ye-meta { flex: 1 1 auto; min-width: 0; }
+          .ye-modal .ye-actions { flex: 0 0 auto; gap: 8px; flex-direction: column; align-items: stretch; flex-wrap: nowrap; justify-content: flex-start; }
+          .ye-modal .ye-actions .ye-btn { width: 100%; white-space: nowrap; justify-content: center; }
+          .ye-modal .ye-actions .ye-btn-wrap { width: 100%; }
           .ye-modal .ye-actions .ye-btn-wrap .ye-btn { width: 100%; }
-          .ye-modal .ye-actions .ye-btn.primary { flex: 1 1 100%; }
-          .ye-modal .ye-actions .ye-btn-wrap { flex: 1 1 0; }
-          .ye-modal .ye-actions .ye-btn-wrap .ye-btn { width: 100%; }
-          .ye-modal .ye-btn { padding: 9px 16px; font-size: 13px; }
+          .ye-modal .ye-btn { padding: 7px 14px; font-size: 12px; }
           .ye-modal .ye-tag { font-size: 10px; padding: 3px 9px; }
         }
         @keyframes ye-fade {
@@ -424,6 +433,7 @@ export default function EventModal({
           border-radius: 20px 20px 0 0;
         }
         .ye-modal .ye-title {
+          text-align: center;
           font-family: 'DM Serif Display', serif;
           font-size: clamp(22px, 4vw, 30px);
           color: #fff;
@@ -554,10 +564,11 @@ export default function EventModal({
             flex-direction: row;
             flex-wrap: wrap;
           }
-          .ye-btn { width: 100%; justify-content: center; }
-          .ye-actions > .ye-btn.primary { flex: 1 1 100%; }
-          .ye-btn-wrap { flex: 1 1 0; min-width: 0; }
-          .ye-btn-wrap .ye-btn { width: 100%; }
+          .ye-modal .ye-actions { justify-content: center; }
+          .ye-modal .ye-btn { width: auto; justify-content: center; }
+          .ye-modal .ye-actions > .ye-btn.primary { flex: 0 0 auto; width: auto; }
+          .ye-modal .ye-btn-wrap { flex: 0 0 auto; min-width: 0; }
+          .ye-modal .ye-btn-wrap .ye-btn { width: auto; }
           .ye-dd { left: 0; right: 0; bottom: calc(100% + 6px); }
         }
       `}</style>
