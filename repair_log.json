@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-27T11:46:45.289619",
-  "audit_date": "2026-06-27",
+  "generated_at": "2026-06-28T11:57:08.156719",
+  "audit_date": "2026-06-28",
   "reports": [
     {
       "city": "park-city",
@@ -32,7 +32,7 @@
             },
             {
               "title": "Old Town walking tour",
-              "had_span": 50
+              "had_span": 49
             },
             {
               "title": "Moose on the Loose Kids Trail Series",
@@ -40,7 +40,7 @@
             },
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 61
+              "had_span": 60
             },
             {
               "title": "Fascia Rolling Class",
@@ -130,30 +130,13 @@
           ]
         },
         "classification": {
-          "fixed": 415,
+          "fixed": 440,
           "examples": [
-            {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Food & Drink"
-              ]
-            },
             {
               "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
               "before": [],
               "after": [
                 "Food & Drink"
-              ]
-            },
-            {
-              "title": "Progressive Art Experience",
-              "before": [],
-              "after": [
-                "Community"
               ]
             },
             {
@@ -167,25 +150,39 @@
               ]
             },
             {
-              "title": "Park Silly Sunday Market",
+              "title": "Progressive Art Experience",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Sunday Craft",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Food & Drink",
-                "Outdoor"
+                "Kids",
+                "Family"
+              ]
+            },
+            {
+              "title": "Art Summer Camps 2026",
+              "before": [],
+              "after": [
+                "Community"
               ]
             }
           ]
         }
       },
       "after_count": 1805,
-      "total_fixes": 434
+      "total_fixes": 459
     },
     {
       "city": "elkhart-lake",
-      "before_count": 213,
+      "before_count": 207,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -235,34 +232,34 @@
           "examples": []
         }
       },
-      "after_count": 218,
+      "after_count": 212,
       "total_fixes": 3
     },
     {
       "city": "heber",
-      "before_count": 225,
+      "before_count": 213,
       "passes": {
         "past_dates": {
-          "fixed": 33,
+          "fixed": 40,
           "examples": [
-            {
-              "title": "Midway Art Gallery Open House",
-              "date": "2026-06-19"
-            },
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Firecracker Baseball Tournament",
+              "title": "Erickson Museum Antique Power Show",
               "date": "2026-06-26"
             },
             {
-              "title": "Commemorative Air Force Museum Tours",
-              "date": "2026-06-20"
+              "title": "SoHo Bike Fest @ Soldier Hollow",
+              "date": "2026-06-26"
             },
             {
-              "title": "Saturday Midway Farmers Market",
+              "title": "Live Music @ Caf\u00e9 Galleria",
+              "date": "2026-06-19"
+            },
+            {
+              "title": "Commemorative Air Force Museum Tours",
               "date": "2026-06-20"
             }
           ]
@@ -337,7 +334,7 @@
           ]
         },
         "classification": {
-          "fixed": 12,
+          "fixed": 11,
           "examples": [
             {
               "title": "Oakley PRCA Rodeo",
@@ -397,12 +394,12 @@
           ]
         }
       },
-      "after_count": 194,
-      "total_fixes": 55
+      "after_count": 175,
+      "total_fixes": 61
     },
     {
       "city": "jackson",
-      "before_count": 779,
+      "before_count": 776,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -413,11 +410,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 98
+              "had_span": 97
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 85
+              "had_span": 84
             }
           ]
         },
@@ -513,7 +510,7 @@
           "examples": []
         }
       },
-      "after_count": 810,
+      "after_count": 807,
       "total_fixes": 23
     }
   ]

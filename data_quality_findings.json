@@ -1,28 +1,21 @@
 {
-  "generated_at": "2026-06-27",
+  "generated_at": "2026-06-28",
   "cities": {
     "all": {
-      "events": 4984,
+      "events": 4897,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 3,
+          "count": 2,
           "examples": [
             {
               "title": "Coffee & Calm: Designer Chats",
               "venue": "curated style collective",
-              "only_date": "2026-06-27",
+              "only_date": "2026-06-28",
               "why": "recurrence-field",
               "source": "Visit Park City"
-            },
-            {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-06-27",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
             },
             {
               "title": "Yoga in the Park",
@@ -37,26 +30,18 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 28,
+          "count": 31,
           "examples": [
             {
-              "date": "2026-06-27",
-              "title_a": "Savor the Summit",
-              "src_a": "Deer Valley Resort",
-              "title_b": "SAVOR",
+              "date": "2026-06-28",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City",
+              "title_b": "Sunday Brunch",
               "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             },
             {
-              "date": "2026-06-27",
-              "title_a": "SAVOR",
-              "src_a": "Jackson Hole Chamber of Commerce",
-              "title_b": "Jackson Hole Food & Wine | Savor",
-              "src_b": "Jackson Hole Mountain Resort",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-04",
+              "date": "2026-07-05",
               "title_a": "Grand Targhee Wildflower Run",
               "src_a": "RunningInTheUSA Jackson",
               "title_b": "Wildflower Run",
@@ -64,19 +49,27 @@
               "sim": 0.85
             },
             {
-              "date": "2026-07-04",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-07-05",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             },
             {
-              "date": "2026-07-11",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-07-12",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-12",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             }
           ]
@@ -90,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 301,
-              "lost": 739
+              "now": 247,
+              "lost": 793
             },
             {
               "source": "Siebkens Resort",
@@ -104,7 +97,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 213,
+      "events": 208,
       "findings": [
         {
           "code": "C6",
@@ -123,27 +116,12 @@
       ]
     },
     "greenlake": {
-      "events": 386,
+      "events": 377,
       "findings": []
     },
     "heber": {
-      "events": 727,
+      "events": 665,
       "findings": [
-        {
-          "code": "C1",
-          "name": "RECURRING-DROPPED",
-          "severity": "HIGH",
-          "count": 1,
-          "examples": [
-            {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-06-27",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
-            }
-          ]
-        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -183,7 +161,7 @@
               "sim": 0.85
             },
             {
-              "date": "2026-07-04",
+              "date": "2026-07-25",
               "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
               "title_b": "Saturday Sunset Music Series",
@@ -201,38 +179,22 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 295,
-              "lost": 738
+              "now": 242,
+              "lost": 791
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1621,
+      "events": 1607,
       "findings": [
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 4,
+          "count": 8,
           "examples": [
-            {
-              "date": "2026-06-27",
-              "title_a": "SAVOR",
-              "src_a": "Jackson Hole Chamber of Commerce",
-              "title_b": "Jackson Hole Food & Wine | Savor",
-              "src_b": "Jackson Hole Mountain Resort",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-04",
-              "title_a": "Grand Targhee Wildflower Run",
-              "src_a": "RunningInTheUSA Jackson",
-              "title_b": "Wildflower Run",
-              "src_b": "Grand Targhee Resort",
-              "sim": 0.85
-            },
             {
               "date": "2026-07-05",
               "title_a": "Grand Targhee Wildflower Run",
@@ -242,11 +204,35 @@
               "sim": 0.85
             },
             {
+              "date": "2026-07-12",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-19",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
               "date": "2026-07-26",
-              "title_a": "Old 97's \u2014 Concerts on the Commons",
-              "src_a": "Dishing Jackson Hole",
-              "title_b": "Concerts on the Commons",
-              "src_b": "Jackson Hole Mountain Resort",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-02",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             }
           ]
@@ -254,5 +240,5 @@
       ]
     }
   },
-  "high_total": 8
+  "high_total": 6
 }

@@ -1,21 +1,8 @@
 {
-  "generated_at": "2026-06-27T11:46:49.082008",
-  "attempted": 2,
-  "applied": 1,
+  "generated_at": "2026-06-28T11:57:08.507456",
+  "attempted": 1,
+  "applied": 0,
   "log": [
-    {
-      "city": "jackson",
-      "title": "Teton County Fair",
-      "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/teton-county-fair/2026-07-20",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "70th Annual Teton County Fair",
-        "reasoning": "The source text clearly states 'Celebrate the 70th Annual Teton County Fair from July 18 \u2013 26, 2026' which provides the complete title with the specific anniversary year."
-      },
-      "applied": true,
-      "note": "title: 'Teton County Fair' \u2192 '70th Annual Teton County Fair'"
-    },
     {
       "city": "jackson",
       "type": "title_truncated",
