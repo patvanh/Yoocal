@@ -233,6 +233,11 @@ export default function SiteNav({
           .yc-nav .yc-nav-links a:not(.yc-nav-cta) { display: none; }
           .yc-nav .yc-nav-secondary { display: none; }
           .yc-nav .yc-hamburger { display: block; }
+          .yc-nav { padding: 0 10px; }
+          .yc-nav-links { min-width: 0; flex: 1 1 auto; }
+          .yc-nav-pickers { min-width: 0; }
+          .yc-nav-links a.yc-nav-cta { padding: 7px 10px; }
+          .yc-nav > div:last-child { margin-left: 8px; flex: 0 0 auto; }
         }
       `}</style>
     </>
