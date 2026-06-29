@@ -1038,7 +1038,7 @@ export function EventsV2Embedded({ cityKeyProp, initialEvents }: { cityKeyProp?:
       setOtherCityEvents(others)
     }).catch(() => { /* fallback disabled if other cities fail to load */ })
   }, [cityKeyProp])
-  
+
   // A fresh visit to a city should open on what's happening now, not all
   // upcoming. Reset to "today" whenever the embedded calendar loads a city.
   useEffect(() => {

@@ -82,7 +82,7 @@ export default async function CityPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
         />
       )}
-      <CityLanding citySlug={city} cityKey={cityKey} initialEvents={getEventsForCity(cityKey)} />
+      <CityLanding citySlug={city} cityKey={cityKey} initialEvents={upcoming.slice(0, 30)} />
       <CityHubServer cityKey={cityKey} />
     </>
   )
