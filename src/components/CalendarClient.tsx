@@ -825,9 +825,13 @@ function MultiFilterDropdown({
   )
 }
 
-export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {}) {
+export function EventsV2Embedded({ cityKeyProp, initialEvents }: { cityKeyProp?: string; initialEvents?: V2YocEvent[] } = {}) {
   const cityLabel = ({ parkcity: 'Park City', heber: 'Heber Valley', jackson: 'Jackson Hole', elkhartlake: 'Elkhart Lake', greenlake: 'Green Lake' } as Record<string, string>)[cityKeyProp || 'parkcity'] || 'your area'
-  const [events, setEvents] = useState<V2YocEvent[]>([])
+  // Seed from server-provided events so the FIRST render (server-side) shows
+  // real cards instead of a "Loading…" spinner — this is what paints the LCP
+  // element fast. The client fetch below still runs to refresh + load other
+  // cities, but the initial paint no longer waits on it.
+  const [events, setEvents] = useState<V2YocEvent[]>(initialEvents || [])
   // Events from cities OTHER than the current one. Used by cross-city search
   // (Model C): current city's events surface first, fallback to nearest from
   // other cities when local results are sparse.
@@ -837,7 +841,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
   // pill to expand.
   type CityFilterValue = 'current' | 'all' | 'parkcity' | 'heber' | 'jackson' | 'elkhartlake'
   const [cityFilter, setCityFilter] = useState<CityFilterValue>('current')
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(!(initialEvents && initialEvents.length))
   const [dayFilter, setDayFilter] = useState<V2DayFilter>('today')
   const [timeFilter, setTimeFilter] = useState<V2TimeFilter>('any')
   const [activeCategories, setActiveCategories] = useState<Set<string>>(new Set())

@@ -16,7 +16,7 @@ const CITY_NAMES: Record<string, string> = {
  * layout for SEO: header, browse-by-city pills, then the calendar for this
  * specific city. Distinct from the legacy CalendarClient which reads ?city=.
  */
-export default function CityLanding({ citySlug, cityKey }: { citySlug: string; cityKey: string }) {
+export default function CityLanding({ citySlug, cityKey, initialEvents }: { citySlug: string; cityKey: string; initialEvents?: any[] }) {
   const cityName = CITY_NAMES[cityKey] || "Local"
   return (
     <div style={{ background: '#faf9ff', minHeight: '100vh' }}>
@@ -27,7 +27,7 @@ export default function CityLanding({ citySlug, cityKey }: { citySlug: string; c
       {/* CALENDAR */}
       <section className="calendar-section" id="events" style={{ textAlign: "center" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 16px", textAlign: "left" }}>
-          <EventsV2Embedded cityKeyProp={cityKey} />
+          <EventsV2Embedded cityKeyProp={cityKey} initialEvents={initialEvents} />
         </div>
       </section>
     </div>
