@@ -73,6 +73,9 @@ export default async function CityPage({ params }: Props) {
 
   return (
     <>
+      {/* Preload the city-page hero (CalendarClient bg) so the LCP element
+          isn't gated by late CSS-background discovery. City pages only. */}
+      <link rel="preload" as="image" href="/hero.webp" fetchPriority="high" />
       {upcoming.length > 0 && (
         <script
           type="application/ld+json"
