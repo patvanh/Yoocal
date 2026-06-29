@@ -29,8 +29,12 @@ export const dynamicParams = true  // allow on-demand rendering for non-prebuilt
 export async function generateStaticParams() {
   const allEvents = getAllEventsWithCity()
   const today = new Date().toISOString().slice(0, 10)
+  // Prebuild only the NEAR-term window (14 days). The other ~3000 future event
+  // pages render on-demand via dynamicParams=true on first request, then cache.
+  // Event detail pages are low-traffic deep links, so on-demand for the long
+  // tail is fine and it cuts build time dramatically (was prebuilding ~4000).
   const horizon = new Date()
-  horizon.setDate(horizon.getDate() + 90)  // match sitemap horizon so every listed URL is prebuilt
+  horizon.setDate(horizon.getDate() + 14)
   const horizonStr = horizon.toISOString().slice(0, 10)
 
   return allEvents
