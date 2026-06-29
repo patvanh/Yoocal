@@ -708,16 +708,19 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
         venue_name = ""
         venue_address = ""
         if isinstance(loc_obj, dict):
-            venue_name = (loc_obj.get("name") or "").strip()
+            venue_name = html.unescape((loc_obj.get("name") or "")).strip()
+            venue_name = re.sub(r"<[^>]+>", "", venue_name)
+            venue_name = re.sub(r"&#\d*;?", "", venue_name)  # drop stray/truncated numeric entities
+            venue_name = re.sub(r"\s+", " ", venue_name).strip()
             addr = loc_obj.get("address")
             if isinstance(addr, str):
-                venue_address = addr.strip()
+                venue_address = html.unescape(addr).strip()
             elif isinstance(addr, dict):
                 # Schema.org PostalAddress
                 parts = [addr.get(k, "") for k in ("streetAddress", "addressLocality", "addressRegion", "postalCode")]
                 venue_address = ", ".join(p for p in parts if p)
         elif isinstance(loc_obj, str):
-            venue_address = loc_obj.strip()
+            venue_address = html.unescape(loc_obj).strip()
 
         if venue_address and venue_name:
             location = f"{venue_name}, {venue_address}"
