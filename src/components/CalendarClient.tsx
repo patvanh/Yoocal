@@ -1617,7 +1617,7 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
         margin: 0, padding: '96px 28px 8px',
         marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
         borderRadius: '20px 20px 0 0',
-        background: "linear-gradient(180deg, rgba(26,24,48,0.35), rgba(26,24,48,0.62)), url('/hero.jpg') center/cover no-repeat",
+        background: "linear-gradient(180deg, rgba(26,24,48,0.35), rgba(26,24,48,0.62)), url('/hero.webp') center/cover no-repeat",
       }}>
         <div style={{ textAlign: 'center', marginBottom: 22 }}>
           <div role="presentation" style={{ fontFamily: "'DM Serif Display', serif", fontSize: 'clamp(44px, 6vw, 76px)', color: '#fff', lineHeight: 1.08, margin: 0 }}>

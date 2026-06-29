@@ -34,7 +34,7 @@ export default function AboutParkCityPage() {
               times its size.
             </p>
           </div>
-          <div className="hero-image-pc"><img src="/park-city.jpg" alt="Park City, Utah aerial view of Main Street and snowy mountains" /></div>
+          <div className="hero-image-pc"><img src="/park-city.webp" alt="Park City, Utah aerial view of Main Street and snowy mountains" /></div>
         </div>
       </div>
 
