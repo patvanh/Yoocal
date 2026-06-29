@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
-import CalendarClient from "@/components/CalendarClient"
+import CalendarClient from "@/components/CalendarClientLegacy"
 import CalendarClientV2 from "@/components/CalendarClientV2"
 import HomeBrand from "@/components/HomeBrand"
 
