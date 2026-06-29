@@ -510,8 +510,8 @@ export default function HomeBrand() {
           .hb-search input { font-size: 14px; padding: 12px; }
           .hb-search button { padding: 10px 18px; font-size: 13px; }
           .hb-content { padding: 50px 20px 80px; }
-          .hb-grid { grid-template-columns: 1fr; gap: 14px; }
-          .hb-card { padding: 22px; }
+          .hb-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+          .hb-card { padding: 12px; aspect-ratio: 1 / 1; }
           .hb-cta { padding: 44px 24px; }
         }
       `}</style>

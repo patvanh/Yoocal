@@ -52,6 +52,9 @@ export default function SiteNav({
     ] : []),
     ...(!showCityLinks ? [{ href: "/#cities", label: "Browse cities" }] : []),
     { href: "/#business", label: "For businesses" },
+    ...(cityKey ? [{ href: calendarHref, label: "Calendar" }] : []),
+    { href: "https://forms.groupmail.info/subscribe/yoocal", label: "Get notified", external: true },
+    { href: "/submit", label: "Submit event" },
   ];
 
   return (
@@ -224,6 +227,12 @@ export default function SiteNav({
              both CTA buttons (Get notified + Submit) and the city pill visible. */
           .yc-nav:not(.yc-nav-home) .yc-nav-links a:not(.yc-nav-secondary):not(.yc-nav-cta) { display: none; }
           .yc-nav:not(.yc-nav-home) .yc-hamburger { display: block; }
+        }
+        @media (max-width: 640px) {
+          /* Phone: keep only logo + city pill + hamburger; everything else moves into the menu. */
+          .yc-nav .yc-nav-links a:not(.yc-nav-cta) { display: none; }
+          .yc-nav .yc-nav-secondary { display: none; }
+          .yc-nav .yc-hamburger { display: block; }
         }
       `}</style>
     </>
