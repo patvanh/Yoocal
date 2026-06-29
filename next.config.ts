@@ -25,6 +25,14 @@ const nextConfig: NextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), payment=()' },
         ],
       },
+      {
+        // Long-cache static images/fonts in /public (NOT the nightly-changing
+        // events-*.json data files, which must stay fresh).
+        source: '/:path*.(webp|jpg|jpeg|png|svg|ico|woff|woff2)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
     ]
   },
 }
