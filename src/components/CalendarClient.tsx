@@ -5,7 +5,9 @@ import RadiusPicker from "@/components/RadiusPicker"
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useSearchParams } from 'next/navigation'
-import EventModal, { type EventModalData } from './EventModal'
+import dynamic from 'next/dynamic'
+import { type EventModalData } from './EventModal'
+const EventModal = dynamic(() => import('./EventModal'), { ssr: false })
 import { Music, UtensilsCrossed, Drama, Trees, Trophy, Users, MoreHorizontal, CalendarDays } from 'lucide-react'
 import MoreTile from '@/components/MoreTile'
 
