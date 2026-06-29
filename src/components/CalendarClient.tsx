@@ -1004,30 +1004,35 @@ export function EventsV2Embedded({ cityKeyProp }: { cityKeyProp?: string } = {})
     const otherFiles = Object.entries(fileMap)
       .filter(([k]) => k !== cityKeyLocal)
       .map(([k, f]) => ({ key: k, file: f }))
-    const mainFetch = fetch(file).then(r => r.json())
-    const otherFetches = otherFiles.map(({ key, file: f }) =>
-      fetch(f).then(r => r.json()).then(d => ({ key, events: (d.events || d) as V2YocEvent[] })).catch(() => ({ key, events: [] as V2YocEvent[] }))
-    )
-    Promise.all([mainFetch, ...otherFetches])
-      .then((results) => {
-        const mainData = results[0] as { events?: V2YocEvent[] } | V2YocEvent[]
-        const otherResults = results.slice(1) as Array<{ key: string; events: V2YocEvent[] }>
+    // Render the CURRENT city as soon as ITS file arrives — do NOT block first
+    // paint on the other cities' files (which total several MB and only power
+    // the sparse-results cross-city fallback). Other cities load in the
+    // background and merge in when ready.
+    fetch(file)
+      .then(r => r.json())
+      .then((mainData: { events?: V2YocEvent[] } | V2YocEvent[]) => {
         setEvents(((mainData as { events?: V2YocEvent[] }).events || mainData) as V2YocEvent[])
-        // Tag each other-city event with its source city key for later UI display.
-        const others: V2YocEvent[] = []
-        for (const { key, events: cityEvents } of otherResults) {
-          for (const ev of cityEvents) {
-            others.push({ ...ev, _sourceCity: key } as V2YocEvent)
-          }
-        }
-        setOtherCityEvents(others)
-        console.log('[cross-city] current:', cityKeyLocal, '| current events:', ((mainData as { events?: V2YocEvent[] }).events || mainData as V2YocEvent[]).length, '| other-city events:', others.length, '| breakdown:', otherResults.map(r => `${r.key}=${r.events.length}`).join(', '))
-        setLoading(false)
+        setLoading(false)  // current city is enough to render; unblock paint
       })
       .catch(e => {
-        console.error('V2: failed to load events', e)
+        console.error('V2: failed to load current-city events', e)
         setLoading(false)
       })
+    // Background: other-city events for the cross-city fallback. Not on the
+    // critical path; failures are silent and just disable the fallback.
+    Promise.all(
+      otherFiles.map(({ key, file: f }) =>
+        fetch(f).then(r => r.json()).then(d => ({ key, events: (d.events || d) as V2YocEvent[] })).catch(() => ({ key, events: [] as V2YocEvent[] }))
+      )
+    ).then((otherResults) => {
+      const others: V2YocEvent[] = []
+      for (const { key, events: cityEvents } of otherResults) {
+        for (const ev of cityEvents) {
+          others.push({ ...ev, _sourceCity: key } as V2YocEvent)
+        }
+      }
+      setOtherCityEvents(others)
+    }).catch(() => { /* fallback disabled if other cities fail to load */ })
   }, [cityKeyProp])
   
   // A fresh visit to a city should open on what's happening now, not all
