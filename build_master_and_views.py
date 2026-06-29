@@ -1653,6 +1653,20 @@ def main():
         except Exception as _pe:
             print(f"  WARN: primary-source enrich skipped: {_pe}")
 
+        # Detail-page LLM/domain-map enrichment: recover real venue / explicit
+        # dates / recurrence for thin events (bare-city location, no venue, or
+        # unparsed recurring). Fill-only and validated. OFF by default — only
+        # runs when ENABLE_DETAIL_ENRICH is set, so it can be tested manually
+        # before being turned on in cron. Fully guarded: any failure is a no-op.
+        try:
+            if not os.environ.get("ENABLE_DETAIL_ENRICH"):
+                pass
+            else:
+                from event_detail_llm_enricher import apply_enrichment
+                all_events = apply_enrichment(all_events)
+        except Exception as _de:
+            print(f"  WARN: detail-page enrich skipped: {_de}")
+
         from scrape_resilience import apply_resilience_guard, format_report
         _before_guard = len(all_events)
         all_events, _guard_report = apply_resilience_guard(all_events, today_iso)
