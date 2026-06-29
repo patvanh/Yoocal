@@ -347,9 +347,17 @@ def _fan_out_recurring(events):
         _title_lo = (e.get("title") or "").lower()
         _ONE_TIME = ("marathon", "half marathon", " 5k", " 10k", "10k ", "5k ",
                      " race", "race ", "fun run", " ultra", " triathlon")
+        # Opening/launch titles denote a single event; a "weekly" tag on
+        # them is a source mis-tag. Suppress fan-out REGARDLESS of end_date
+        # ("Dock Bar Opens!" had a bogus Dec-25 end_date that fanned 59 cards).
+        _ONE_TIME_OPENING = ("opens!", " opens ", "opens ", "grand opening", "ribbon cutting")
         if (rec in ("weekly", "weekly_multiple") and not e.get("end_date")
                 and any(p in _title_lo for p in _ONE_TIME)):
             rec = ""  # treat as non-recurring; falls through to single event
+        if (rec in ("weekly", "weekly_multiple")
+                and any(p in _title_lo for p in _ONE_TIME_OPENING)):
+            rec = ""
+            e["end_date"] = None  # clear the bogus end_date so range-fanout cannot fire either
         if rec in ("weekly", "weekly_multiple"):
             day_str = e.get("recurrence_day") or e.get("recurrence_days") or ""
             target_indices = set()
