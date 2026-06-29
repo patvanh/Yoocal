@@ -239,6 +239,11 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
         # Description — strip HTML
         desc = raw.get("description") or raw.get("excerpt") or ""
         desc = html.unescape(desc)
+        # Decode backslash string-escapes the WP feed sometimes emits
+        # (e.g. "Norton\\'s", "debut! \\n") that html.unescape leaves intact.
+        desc = desc.replace("\\n", " ").replace("\\t", " ")
+        desc = desc.replace("\\'", "'").replace('\\"', '"')
+        desc = desc.replace("\\", "")
         desc = re.sub(r"<[^>]+>", " ", desc)
         desc = re.sub(r"\s+", " ", desc).strip()
         if len(desc) > 600:
