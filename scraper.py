@@ -441,20 +441,44 @@ def scrape_visit_park_city():
                 # Smart-API doesn't return times for many events. If we have a
                 # detail-page URL and no start_time yet, fetch the page and
                 # extract from visible HTML (e.g. "Time: 9:00 AM to 10:30 AM").
-                if not event.get("start_time") and event.get("link", "").startswith("http"):
+                # The Smart API often omits both times AND the real occurrence
+                # dates (it returns the recurrence START, stamped to today, with a
+                # season-long end). The detail page's visible HTML carries both:
+                #   var dates = "7/3/2026, 8/7/2026, 9/4/2026";
+                # When present, these explicit dates are GROUND TRUTH — use them as
+                # occurrence_dates so the build fans out real cards instead of one
+                # phantom "today" record. One fetch covers time + dates.
+                _need_time = not event.get("start_time")
+                _need_dates = (event.get("date") == today_str and event.get("end_date")
+                               and not event.get("recurrence"))
+                if (_need_time or _need_dates) and event.get("link", "").startswith("http"):
                     try:
-                        page_resp = _get(
-                            event["link"],
-                            timeout=10,
-                        )
+                        page_resp = _get(event["link"], timeout=10)
                         if page_resp.status_code == 200:
-                            st, et = _extract_time_from_html(page_resp.text)
-                            if st:
-                                event["start_time"] = st
-                                if et:
-                                    event["end_time"] = et
+                            _phtml = page_resp.text
+                            if _need_time:
+                                st, et = _extract_time_from_html(_phtml)
+                                if st:
+                                    event["start_time"] = st
+                                    if et:
+                                        event["end_time"] = et
+                            if _need_dates:
+                                _m = re.search(r'var dates\s*=\s*"([^"]+)"', _phtml)
+                                if _m:
+                                    _iso = []
+                                    for _d in _m.group(1).split(","):
+                                        _d = _d.strip()
+                                        _dm = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", _d)
+                                        if _dm:
+                                            _mo, _da, _yr = _dm.groups()
+                                            _iso.append(f"{_yr}-{int(_mo):02d}-{int(_da):02d}")
+                                    _iso = sorted(set(_iso))
+                                    if _iso:
+                                        event["occurrence_dates"] = _iso
+                                        event["date"] = _iso[0]  # anchor on the first real date
+                                        event["end_date"] = None  # discrete dates, not a range
                     except Exception:
-                        pass  # fail silently — no time worse than crash
+                        pass  # fail silently — no enrichment worse than crash
 
                 events.append(event)
             except:
