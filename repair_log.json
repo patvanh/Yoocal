@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-28T11:57:08.156719",
-  "audit_date": "2026-06-28",
+  "generated_at": "2026-06-29T14:25:33.202077",
+  "audit_date": "2026-06-29",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1802,
+      "before_count": 1785,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -24,26 +24,26 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 5,
+          "fixed": 6,
           "examples": [
             {
-              "title": "Group Fitness Classes",
-              "had_span": 181
-            },
-            {
               "title": "Old Town walking tour",
-              "had_span": 49
+              "had_span": 47
             },
             {
-              "title": "Moose on the Loose Kids Trail Series",
-              "had_span": 57
+              "title": "(Re)sounding: Art Exhibition",
+              "had_span": 77
             },
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 60
+              "had_span": 59
             },
             {
               "title": "Fascia Rolling Class",
+              "had_span": 181
+            },
+            {
+              "title": "Group Fitness Classes",
               "had_span": 181
             }
           ]
@@ -130,59 +130,62 @@
           ]
         },
         "classification": {
-          "fixed": 440,
+          "fixed": 409,
           "examples": [
             {
-              "title": "Interactive Mixology Class for 4 \u2013 20 Guests",
-              "before": [],
-              "after": [
-                "Food & Drink"
-              ]
-            },
-            {
-              "title": "Move with the Moon - Yoga, Sound & Cacao",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Wellness"
-              ]
-            },
-            {
-              "title": "Progressive Art Experience",
+              "title": "Challenge Accepted!",
               "before": [],
               "after": [
                 "Community"
               ]
             },
             {
-              "title": "Sunday Craft",
+              "title": "Old Town walking tour",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Summer Garden Camps",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "(Re)sounding: Art Exhibition",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
+                "Arts"
+              ]
+            },
+            {
+              "title": "2026 Oakley Rodeo BBQ",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Food & Drink",
+                "Sports",
                 "Kids",
-                "Family"
-              ]
-            },
-            {
-              "title": "Art Summer Camps 2026",
-              "before": [],
-              "after": [
-                "Community"
+                "Family",
+                "Festival"
               ]
             }
           ]
         }
       },
-      "after_count": 1805,
-      "total_fixes": 459
+      "after_count": 1788,
+      "total_fixes": 429
     },
     {
       "city": "elkhart-lake",
-      "before_count": 207,
+      "before_count": 202,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -217,50 +220,43 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Cheese Capital Cup featuring Trans Am SpeedTour",
-              "start_time": "8:00 AM",
-              "new_end_time": "9:00 AM",
-              "duration_hours": 1
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "classification": {
           "fixed": 0,
           "examples": []
         }
       },
-      "after_count": 212,
-      "total_fixes": 3
+      "after_count": 207,
+      "total_fixes": 2
     },
     {
       "city": "heber",
-      "before_count": 213,
+      "before_count": 208,
       "passes": {
         "past_dates": {
-          "fixed": 40,
+          "fixed": 38,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Erickson Museum Antique Power Show",
+              "title": "Firecracker Baseball Tournament",
               "date": "2026-06-26"
             },
             {
-              "title": "SoHo Bike Fest @ Soldier Hollow",
-              "date": "2026-06-26"
+              "title": "Yoga in the Lavender Field @ Blue Canyon Lavender Farm",
+              "date": "2026-06-15"
             },
             {
-              "title": "Live Music @ Caf\u00e9 Galleria",
-              "date": "2026-06-19"
+              "title": "Meet the Cows - Dairy Farm Tour",
+              "date": "2026-06-15"
             },
             {
-              "title": "Commemorative Air Force Museum Tours",
-              "date": "2026-06-20"
+              "title": "Monday Night Train @ Heber Valley Railroad",
+              "date": "2026-06-15"
             }
           ]
         },
@@ -394,12 +390,12 @@
           ]
         }
       },
-      "after_count": 175,
-      "total_fixes": 61
+      "after_count": 172,
+      "total_fixes": 59
     },
     {
       "city": "jackson",
-      "before_count": 776,
+      "before_count": 756,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -410,11 +406,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 97
+              "had_span": 96
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 84
+              "had_span": 83
             }
           ]
         },
@@ -510,7 +506,7 @@
           "examples": []
         }
       },
-      "after_count": 807,
+      "after_count": 787,
       "total_fixes": 23
     }
   ]

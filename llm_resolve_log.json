@@ -1,12 +1,20 @@
 {
-  "generated_at": "2026-06-28T11:57:08.507456",
+  "generated_at": "2026-06-29T14:25:36.713727",
   "attempted": 1,
   "applied": 0,
   "log": [
     {
       "city": "jackson",
+      "title": "29th Annual Golf Benefit for Children and Families",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://www.jacksonholechamber.com/event/29th-annual-golf-benefit-for-children-and-families/3625/",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only contains the same title '29th Annual Golf Benefit for Children and Families' without any additional information to expand or complete it."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
     }
   ]
 }
