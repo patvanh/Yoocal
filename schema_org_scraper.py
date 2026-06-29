@@ -603,6 +603,27 @@ def is_aggregator_source(url):
     return any(host == h or host.endswith("." + h) for h in _AGGREGATOR_HOSTS)
 
 
+_DETAIL_IMG_CACHE = {}
+def _detail_page_image(link):
+    """Fetch an event's own detail page and pull a logo-safe image from it.
+    Cached per-URL so a recurring series referencing one detail page (e.g.
+    nortonsgreenlake.com fan-out) only costs one fetch. Failures cache as
+    empty so a dead page isn't retried for every sibling occurrence."""
+    if not link:
+        return ""
+    if link in _DETAIL_IMG_CACHE:
+        return _DETAIL_IMG_CACHE[link]
+    img = ""
+    try:
+        html = _fetch(link, timeout=20)
+        if html:
+            img = _extract_page_image(html) or ""
+    except Exception as _e:
+        print(f"  [detail-img] {link} failed: {str(_e)[:80]}")
+    _DETAIL_IMG_CACHE[link] = img
+    return img
+
+
 def _extract_page_image(html_text):
     """Logo-safe page-image fallback for sources whose JSON-LD has no image
     (e.g. WordPress/The Events Calendar like nortonsgreenlake.com). Tries
@@ -742,6 +763,13 @@ def _parse_event(raw, source_name, source_url, default_lat, default_lng,
         # aren't imageless. Only when the schema image was empty.
         if not image_url and page_html:
             image_url = _extract_page_image(page_html) or ""
+        # Still no image, but the event has its OWN detail page (link differs
+        # from the shared listing source_url)? Fetch it once (cached) and pull
+        # the image from there. Fixes WordPress/Tribe sources like Norton's
+        # where the listing only carries the site logo but each /event/<slug>/
+        # page has the real poster.
+        if not image_url and link and link != source_url and link.startswith("http"):
+            image_url = _detail_page_image(link) or ""
 
         # Categories — start with default, add type hints
         categories = list(default_categories) if default_categories else ["Event"]
