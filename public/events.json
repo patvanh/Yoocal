@@ -6,7 +6,7 @@
     "lng": -111.498
   },
   "radius_mi": 10,
-  "generated_at": "2026-06-28T05:57:14.665271-06:00",
+  "generated_at": "2026-06-28T20:11:35.546642-06:00",
   "today": "2026-06-28",
   "event_count": 2038,
   "events": [
@@ -6034,6 +6034,27 @@
       "filter_categories": [
         "Community",
         "Outdoors"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Made in Utah: Mid-Length 2026",
+      "date": "2026-07-19",
+      "start_time": "7:00 PM",
+      "description": null,
+      "venue_name": "Jim Santy Auditorium",
+      "address": "1255 Park Avenue, Park City, UT 84060",
+      "lat": 40.6461,
+      "lng": -111.498,
+      "link": "https://parkcityfilm.org/film/made-in-utah-midlength-2026/",
+      "image_url": "https://parkcityfilm.org/wp-content/uploads/2020/03/filmmakersshowcase2009.jpg",
+      "source": "Park City Film",
+      "source_url": "https://parkcityfilm.org/film/made-in-utah-midlength-2026/",
+      "categories": [
+        "Film"
+      ],
+      "filter_categories": [
+        "Arts & Theater"
       ],
       "_distance_mi": 0.0
     },
@@ -19522,8 +19543,7 @@
       "facets": [
         "21+"
       ],
-      "price": "$55 (food) / $100-$120 (wine)",
-      "is_free": false,
+      "recurrence_text": "Jun 11 & Jul 8, 6:00 PM",
       "end_date": null,
       "series_end": "2026-07-08",
       "filter_categories": [
@@ -53507,7 +53527,7 @@
         "Running & Races"
       ],
       "scraped_at": "2026-06-28T11:39:40.460694",
-      "start_time": "08:00 AM",
+      "start_time": "8:00 AM",
       "end_time": "12:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760251.jpg?decache=28-05-39",
       "venue_name": "Soldier Hollow",
@@ -54990,31 +55010,6 @@
         "Community",
         "Education & Talks",
         "Music"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Made in Utah: Mid-Length 2026",
-      "date": "2026-09-24",
-      "start_time": "7:00 PM",
-      "description": null,
-      "venue_name": "Jim Santy Auditorium",
-      "address": "1255 Park Avenue, Park City, UT 84060",
-      "lat": 40.6461,
-      "lng": -111.498,
-      "link": "https://parkcityfilm.org/film/made-in-utah-midlength-2026/",
-      "image_url": "https://parkcityfilm.org/wp-content/uploads/2020/03/filmmakersshowcase2009.jpg",
-      "source": "Park City Film",
-      "source_url": "https://parkcityfilm.org/film/made-in-utah-midlength-2026/",
-      "categories": [
-        "Film"
-      ],
-      "price": "FREE",
-      "is_free": true,
-      "end_date": null,
-      "series_end": "2026-09-24",
-      "filter_categories": [
-        "Arts & Theater"
       ],
       "_distance_mi": 0.0
     },

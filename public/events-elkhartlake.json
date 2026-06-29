@@ -6,10 +6,60 @@
     "lng": -88.0426
   },
   "radius_mi": 15,
-  "generated_at": "2026-06-28T05:57:14.904156-06:00",
+  "generated_at": "2026-06-28T20:11:35.661314-06:00",
   "today": "2026-06-28",
   "event_count": 208,
   "events": [
+    {
+      "title": "Fireman's 4th of July Parade & Annual Picnic",
+      "date": "2026-07-05",
+      "location": "Elkhart Lake & Fireman's Park, Elkhart Lake, WI",
+      "description": "Independence Day parade through downtown Elkhart Lake followed by the annual fireman's picnic at Fireman's Park.",
+      "categories": [
+        "Community",
+        "Family"
+      ],
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.183698",
+      "facets": [
+        "Free"
+      ],
+      "filter_categories": [
+        "Community",
+        "Family & Kids"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Old World Christmas Market",
+      "date": "2026-12-04",
+      "end_date": null,
+      "location": "The Osthoff Resort, Elkhart Lake, WI",
+      "venue_name": "The Osthoff Resort",
+      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
+      "categories": [
+        "Festival",
+        "Family",
+        "Food & Drink"
+      ],
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.183713",
+      "series_end": "2026-12-13",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Family & Kids",
+        "Food & Drink"
+      ],
+      "_distance_mi": 0.0
+    },
     {
       "title": "Cheese Capital Cup featuring Trans Am SpeedTour",
       "date": "2026-06-28",
@@ -21,41 +71,18 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182201",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
+      "end_time": "9:00 AM",
       "series_end": "2026-06-28",
+      "venue_name": "Road America",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
@@ -86,8 +113,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-06-28",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": true,
       "price": "Free",
@@ -117,8 +142,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-06-28",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "_all_sources": [
@@ -163,40 +186,10 @@
         "Music",
         "Outdoor"
       ],
-      "address": "276 Victorian Village Drive",
-      "end_date": null,
-      "series_end": "2026-06-28",
+      "address": "276 Victorian Village Drive, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
         "Outdoors"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Fireman's 4th of July Parade & Annual Picnic",
-      "date": "2026-07-05",
-      "location": "Elkhart Lake & Fireman's Park, Elkhart Lake, WI",
-      "description": "Independence Day parade through downtown Elkhart Lake followed by the annual fireman's picnic at Fireman's Park.",
-      "categories": [
-        "Community",
-        "Family"
-      ],
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.183698",
-      "facets": [
-        "Free"
-      ],
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "venue_name": "Road America",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Community",
-        "Family & Kids"
       ],
       "_distance_mi": 0.0
     },
@@ -221,9 +214,7 @@
         "Family",
         "Education"
       ],
-      "address": "80 Square Street",
-      "end_date": null,
-      "series_end": "2026-07-05",
+      "address": "80 Square Street, Elkhart Lake, WI",
       "filter_categories": [
         "Arts & Theater",
         "Community",
@@ -254,8 +245,6 @@
         "Music",
         "Family"
       ],
-      "end_date": null,
-      "series_end": "2026-07-05",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -283,9 +272,7 @@
         "Music",
         "Family"
       ],
-      "address": "411 S Lake Street",
-      "end_date": null,
-      "series_end": "2026-07-05",
+      "address": "411 S Lake Street, Elkhart Lake, WI",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -314,8 +301,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-05",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -343,8 +328,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-12",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "_all_sources": [
@@ -388,9 +371,7 @@
       "categories": [
         "Education"
       ],
-      "address": "80 Square Street",
-      "end_date": null,
-      "series_end": "2026-07-12",
+      "address": "80 Square Street, Elkhart Lake, WI",
       "filter_categories": [
         "Education & Talks"
       ],
@@ -417,38 +398,15 @@
         "Music",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "address": "Main Gate \u2013 Located off Hwy 67",
       "series_end": "2026-07-19",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "8:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/weathertech-vintage-weekend-brian-redman",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
@@ -477,9 +435,7 @@
       "categories": [
         "Education"
       ],
-      "address": "80 Square Street",
-      "end_date": null,
-      "series_end": "2026-07-19",
+      "address": "80 Square Street, Elkhart Lake, WI",
       "filter_categories": [
         "Arts & Theater",
         "Education & Talks"
@@ -507,8 +463,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-19",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -538,8 +492,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-26",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": true,
       "price": "Free",
@@ -569,9 +521,7 @@
         "Food & Drink",
         "Education"
       ],
-      "address": "80 Square Street",
-      "end_date": null,
-      "series_end": "2026-07-26",
+      "address": "80 Square Street, Elkhart Lake, WI",
       "filter_categories": [
         "Arts & Theater",
         "Education & Talks",
@@ -599,8 +549,6 @@
         "Sports",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-26",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
@@ -629,8 +577,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-26",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -649,46 +595,23 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182210",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Festival",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "is_free": false,
       "series_end": "2026-08-02",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
       "filter_categories": [
         "Sports"
       ],
@@ -715,8 +638,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-02",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -744,8 +665,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-09",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "_all_sources": [
@@ -789,9 +708,7 @@
       "categories": [
         "Education"
       ],
-      "address": "80 Square Street",
-      "end_date": null,
-      "series_end": "2026-08-09",
+      "address": "80 Square Street, Elkhart Lake, WI",
       "filter_categories": [
         "Arts & Theater",
         "Education & Talks"
@@ -818,8 +735,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-16",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "_all_sources": [
@@ -866,8 +781,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-23",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": true,
       "price": "Free",
@@ -897,9 +810,7 @@
         "Family",
         "Education"
       ],
-      "address": "80 Square Street",
-      "end_date": null,
-      "series_end": "2026-08-23",
+      "address": "80 Square Street, Elkhart Lake, WI",
       "filter_categories": [
         "Education & Talks",
         "Family & Kids"
@@ -927,8 +838,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-23",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -947,44 +856,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182215",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-08-30",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
       "filter_categories": [
         "Sports"
       ],
@@ -1011,8 +898,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-30",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -1040,8 +925,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-09-06",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "filter_categories": [
@@ -1061,45 +944,23 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182218",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Community",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-09-20",
+      "venue_name": "Road America",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/art-wheels-vintage-weekend-vscda",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "end_time": "11:59 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/ariens-art-on-wheels-road-america-1.avif",
       "filter_categories": [
         "Arts & Theater",
         "Community",
@@ -1119,43 +980,20 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182220",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Festival",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-10-04",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
@@ -1183,25 +1021,14 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "The Osthoff Resort",
@@ -1213,17 +1040,7 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-06/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Family & Kids",
         "Food & Drink",
@@ -1250,25 +1067,14 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "The Osthoff Resort",
@@ -1280,17 +1086,7 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-13/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Family & Kids",
         "Food & Drink",
@@ -1312,18 +1108,11 @@
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
-        "Outdoor",
-        "Sports"
+        "Sports",
+        "Outdoor"
       ],
-      "venue_name": "Road America",
-      "price": "$395-$425",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
-      "end_date": null,
-      "series_end": "2026-10-16",
-      "_all_sources": [
-        "Road America"
-      ],
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
         "Sports"
@@ -1340,7 +1129,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-06-26T12:45:07.788650",
+      "scraped_at": "2026-06-28T11:43:53.182228",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -1384,8 +1173,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-06-29",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -1407,7 +1194,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-06-26T12:45:07.788650",
+      "scraped_at": "2026-06-28T11:43:53.182228",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -1451,8 +1238,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-01",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -1483,8 +1268,6 @@
       "categories": [
         "Music"
       ],
-      "end_date": null,
-      "series_end": "2026-07-01",
       "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music"
@@ -1512,8 +1295,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-02",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -1542,23 +1323,13 @@
       "facets": [
         "Free"
       ],
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "9:00 PM",
+      "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/20230630_215319-1.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "9:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "Elkhart Lake Lakefront & Fireman's Park",
@@ -1570,17 +1341,6 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/elkhart-lake-fireworks/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -1607,8 +1367,6 @@
       "categories": [
         "Family"
       ],
-      "end_date": null,
-      "series_end": "2026-07-03",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -1636,9 +1394,7 @@
         "Music",
         "Family"
       ],
-      "address": "411 S Lake Street",
-      "end_date": null,
-      "series_end": "2026-07-03",
+      "address": "411 S Lake Street, Elkhart Lake, WI",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -1667,8 +1423,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-03",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -1687,55 +1441,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-07-04/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -1764,8 +1485,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-04",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -1783,7 +1502,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-06-26T12:45:07.788650",
+      "scraped_at": "2026-06-28T11:43:53.182228",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -1827,8 +1546,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-06",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -1850,7 +1567,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-06-26T12:45:07.788650",
+      "scraped_at": "2026-06-28T11:43:53.182228",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -1894,8 +1611,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-08",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -1926,8 +1641,6 @@
       "categories": [
         "Music"
       ],
-      "end_date": null,
-      "series_end": "2026-07-08",
       "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music"
@@ -1937,29 +1650,22 @@
     {
       "title": "Road America Track Day",
       "date": "2026-07-09",
-      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment on the full 4-mile circuit.",
+      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment.",
       "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "link": "https://www.roadamerica.com/track-days",
       "source": "Road America",
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182222",
+      "scraped_at": "2026-06-28T11:43:53.182224",
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
-        "Outdoor",
-        "Sports"
+        "Sports",
+        "Outdoor"
       ],
-      "venue_name": "Road America",
-      "price": "$395-$425",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
-      "end_date": null,
-      "series_end": "2026-10-16",
-      "_all_sources": [
-        "Road America"
-      ],
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
         "Sports"
@@ -1987,8 +1693,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-09",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -2017,8 +1721,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-10",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -2037,8 +1739,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -2047,37 +1749,14 @@
         "Food & Drink",
         "Music"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Lake Street Cafe",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-07-11/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -2105,9 +1784,7 @@
       "categories": [
         "Sports"
       ],
-      "address": "20 Victory Lane",
-      "end_date": null,
-      "series_end": "2026-07-11",
+      "address": "20 Victory Lane, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Education & Talks",
         "Family & Kids",
@@ -2136,8 +1813,6 @@
         "Sports",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-11",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
@@ -2166,8 +1841,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-11",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -2197,8 +1870,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-11",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -2219,8 +1890,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -2228,19 +1899,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -2279,8 +1950,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-13",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -2303,8 +1972,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -2312,19 +1981,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -2335,33 +2004,6 @@
       "filter_categories": [
         "Outdoors",
         "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Siebkens Live Music by Erin Krebs & Paul Sucherman",
-      "date": "2026-07-15",
-      "description": "Erin Krebs brings her signature blend of jazz, blues, and soul to the Siebkens Summer Concert Series, joined by acclaimed drummer Paul Sucherman. A Wisconsin-based vocalist known for her rich tone and timeless style, Erin pairs seamlessly with Paul\u2019s seasoned musicianship for a performance that\u2019s both refined and engaging. Catch them live on the bandstand outside the Stop-Inn Tavern for a night of music that sets the tone for a perfect summer evening.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-erin-krebs-and-paul-sucherman/",
-      "source": "Siebkens Resort",
-      "source_url": "https://www.siebkens.com/events/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182254",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/erin-krebs.avif",
-      "venue_name": "Siebkens Bandstand",
-      "series": "Siebkens Live Music",
-      "categories": [
-        "Music"
-      ],
-      "end_date": null,
-      "series_end": "2026-07-15",
-      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -2390,8 +2032,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-15",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -2400,6 +2040,31 @@
         "Family & Kids",
         "Sports",
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Siebkens Live Music by Erin Krebs & Paul Sucherman",
+      "date": "2026-07-15",
+      "description": "Erin Krebs brings her signature blend of jazz, blues, and soul to the Siebkens Summer Concert Series, joined by acclaimed drummer Paul Sucherman. A Wisconsin-based vocalist known for her rich tone and timeless style, Erin pairs seamlessly with Paul\u2019s seasoned musicianship for a performance that\u2019s both refined and engaging. Catch them live on the bandstand outside the Stop-Inn Tavern for a night of music that sets the tone for a perfect summer evening.",
+      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-erin-krebs-and-paul-sucherman/",
+      "source": "Siebkens Resort",
+      "source_url": "https://www.siebkens.com/events/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.182254",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/erin-krebs.avif",
+      "venue_name": "Siebkens Bandstand",
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ],
+      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -2424,38 +2089,15 @@
         "Music",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "address": "Main Gate \u2013 Located off Hwy 67",
       "series_end": "2026-07-19",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "8:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/weathertech-vintage-weekend-brian-redman",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
@@ -2486,8 +2128,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-16",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -2516,38 +2156,15 @@
         "Music",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "address": "Main Gate \u2013 Located off Hwy 67",
       "series_end": "2026-07-19",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "8:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/weathertech-vintage-weekend-brian-redman",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
@@ -2577,8 +2194,6 @@
       "categories": [
         "Music"
       ],
-      "end_date": null,
-      "series_end": "2026-07-17",
       "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music"
@@ -2609,10 +2224,10 @@
       "facets": [
         "Free"
       ],
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "is_free": true,
       "price": "Free",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-elkhart-lake-road-america-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
@@ -2658,8 +2273,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-17",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "_all_sources": [
@@ -2705,38 +2318,15 @@
         "Music",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "address": "Main Gate \u2013 Located off Hwy 67",
       "series_end": "2026-07-19",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vintage-road-america.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "8:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/weathertech-vintage-weekend-brian-redman",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
@@ -2757,55 +2347,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-07-18/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -2867,36 +2424,25 @@
     {
       "title": "VINTAGE WKND LIVE MUSIC: BOO! THE BAND",
       "date": "2026-07-18",
-      "description": "Live music at Siebkens Resort on the shores of Elkhart Lake. Outdoor bandstand outside the Stop-Inn Tavern. Free, family & dog friendly.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "description": "It's night two of Vintage Weekend, lets keep the party going with Boo! The Band.\\n",
+      "location": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
+      "venue_name": "Siebkens Bandstand",
       "link": "https://www.siebkens.com/event/vintage-wknd-live-music-boo-the-band/",
       "source": "Siebkens Resort",
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182276",
+      "scraped_at": "2026-06-28T11:44:15.155432",
       "start_time": "7:00 PM",
+      "end_time": "11:00 PM",
+      "image_url": "https://www.siebkens.com/wp-content/uploads/2026/03/16.jpg",
       "series": "Siebkens Live Music",
       "categories": [
-        "Food & Drink",
         "Music"
       ],
-      "end_time": "11:00 PM",
-      "venue_name": "Siebkens Bandstand",
-      "end_date": null,
-      "series_end": "2026-07-18",
-      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "is_free": true,
-      "price": "Free",
-      "image_url": "https://www.siebkens.com/wp-content/uploads/2026/03/16.jpg",
-      "_all_sources": [
-        "Siebkens Resort"
-      ],
+      "address": "Siebkens Resort, 284 S Lake St, Elkhart Lake, WI",
       "filter_categories": [
-        "Family & Kids",
-        "Food & Drink",
-        "Music",
-        "Outdoors"
+        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -2923,9 +2469,7 @@
         "Festival",
         "Community"
       ],
-      "address": "20 Victory Lane",
-      "end_date": null,
-      "series_end": "2026-07-18",
+      "address": "20 Victory Lane, Elkhart Lake, WI 53020",
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2956,9 +2500,7 @@
       "categories": [
         "Music"
       ],
-      "address": "284 S Lake Street",
-      "end_date": null,
-      "series_end": "2026-07-18",
+      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music"
       ],
@@ -2985,8 +2527,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-18",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -3016,8 +2556,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-18",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -3039,8 +2577,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -3048,19 +2586,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -3099,8 +2637,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-20",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -3123,8 +2659,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -3132,19 +2668,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -3155,33 +2691,6 @@
       "filter_categories": [
         "Outdoors",
         "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Siebkens Live Music by Katalysst",
-      "date": "2026-07-22",
-      "description": "Siebkens Summer Concert Series continues with Katalysst, a folk-rock duo known for their lush harmonies and thought-provoking lyrics. Enjoy an evening of soulful melodies and dynamic energy as they take the stage under the July night sky.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-katalysst-2/",
-      "source": "Siebkens Resort",
-      "source_url": "https://www.siebkens.com/events/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182257",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/katalysst.avif",
-      "venue_name": "Siebkens Bandstand",
-      "series": "Siebkens Live Music",
-      "categories": [
-        "Music"
-      ],
-      "end_date": null,
-      "series_end": "2026-07-22",
-      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -3210,8 +2719,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-22",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -3220,6 +2727,31 @@
         "Family & Kids",
         "Sports",
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Siebkens Live Music by Katalysst",
+      "date": "2026-07-22",
+      "description": "Siebkens Summer Concert Series continues with Katalysst, a folk-rock duo known for their lush harmonies and thought-provoking lyrics. Enjoy an evening of soulful melodies and dynamic energy as they take the stage under the July night sky.",
+      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-katalysst-2/",
+      "source": "Siebkens Resort",
+      "source_url": "https://www.siebkens.com/events/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.182257",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/katalysst.avif",
+      "venue_name": "Siebkens Bandstand",
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ],
+      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -3244,14 +2776,12 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-23",
-      "address": "101 Osthoff Avenue",
       "venue_name": "The Osthoff Resort&#8217;s Aspira Spa",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "The Osthoff Resort"
       ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
         "Wellness"
@@ -3279,8 +2809,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-23",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -3309,8 +2837,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-24",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -3341,8 +2867,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-24",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -3364,55 +2888,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-07-25/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -3441,8 +2932,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-25",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -3473,8 +2962,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-25",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -3496,8 +2983,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -3505,19 +2992,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -3556,8 +3043,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-27",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -3580,8 +3065,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -3589,19 +3074,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -3612,37 +3097,6 @@
       "filter_categories": [
         "Outdoors",
         "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Siebkens Summer Concert: Valley Fox",
-      "date": "2026-07-29",
-      "description": "Live music at Siebkens Resort on the shores of Elkhart Lake. Outdoor bandstand outside the Stop-Inn Tavern. Free, family & dog friendly.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-valley-fox-2/",
-      "source": "Siebkens Resort",
-      "source_url": "https://www.siebkens.com/events/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182259",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "image_url": "https://www.siebkens.com/wp-content/uploads/2026/03/18.jpg",
-      "venue_name": "Siebkens Bandstand",
-      "series": "Siebkens Live Music",
-      "categories": [
-        "Music"
-      ],
-      "end_date": null,
-      "series_end": "2026-07-29",
-      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "is_free": true,
-      "price": "Free",
-      "filter_categories": [
-        "Family & Kids",
-        "Music",
-        "Outdoors"
       ],
       "_distance_mi": 0.0
     },
@@ -3671,8 +3125,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-29",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -3681,6 +3133,35 @@
         "Family & Kids",
         "Sports",
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Siebkens Summer Concert: Valley Fox",
+      "date": "2026-07-29",
+      "description": "Live music at Siebkens Resort on the shores of Elkhart Lake. Outdoor bandstand outside the Stop-Inn Tavern. Free, family & dog friendly.",
+      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-valley-fox-2/",
+      "source": "Siebkens Resort",
+      "source_url": "https://www.siebkens.com/events/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.182259",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.siebkens.com/wp-content/uploads/2026/03/18.jpg",
+      "venue_name": "Siebkens Bandstand",
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ],
+      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Family & Kids",
+        "Music",
+        "Outdoors"
       ],
       "_distance_mi": 0.0
     },
@@ -3704,9 +3185,7 @@
       "categories": [
         "Music"
       ],
-      "address": "284 S Lake Street",
-      "end_date": null,
-      "series_end": "2026-07-29",
+      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music"
       ],
@@ -3723,46 +3202,23 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182210",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Festival",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "is_free": false,
       "series_end": "2026-08-02",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
       "filter_categories": [
         "Sports"
       ],
@@ -3779,7 +3235,7 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182260",
-      "start_time": "6:00 PM",
+      "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "featured": true,
       "series": "Siebkens Live Music",
@@ -3787,16 +3243,27 @@
         "Music",
         "Sports"
       ],
-      "venue_name": "Siebkens Bandstand",
-      "end_date": null,
-      "series_end": "2026-07-30",
       "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
       "is_free": true,
       "price": "Free",
+      "venue_name": "Siebkens Bandstand",
       "image_url": "https://www.siebkens.com/wp-content/uploads/2026/03/19.jpg",
       "_all_sources": [
         "Siebkens Resort"
       ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Siebkens Resort"
+          },
+          {
+            "value": "6:00 PM",
+            "source": "Siebkens Resort"
+          }
+        ]
+      },
+      "_time_uncertain": false,
       "filter_categories": [
         "Family & Kids",
         "Music",
@@ -3826,9 +3293,7 @@
         "Music",
         "Sports"
       ],
-      "address": "284 S Lake Street",
-      "end_date": null,
-      "series_end": "2026-07-30",
+      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
         "Outdoors",
@@ -3857,9 +3322,7 @@
         "Music",
         "Sports"
       ],
-      "address": "284 S Lake Street",
-      "end_date": null,
-      "series_end": "2026-07-30",
+      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
         "Sports"
@@ -3886,8 +3349,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-30",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "_all_sources": [
@@ -3923,46 +3384,23 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182210",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Festival",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "is_free": false,
       "series_end": "2026-08-02",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
       "filter_categories": [
         "Sports"
       ],
@@ -3980,7 +3418,7 @@
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182261",
       "start_time": "7:00 PM",
-      "end_time": "11:00 PM",
+      "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bowser-band.avif",
       "venue_name": "Siebkens Resort",
       "series": "Siebkens Live Music",
@@ -3988,8 +3426,6 @@
         "Music",
         "Sports"
       ],
-      "end_date": null,
-      "series_end": "2026-07-31",
       "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "_all_sources": [
         "Siebkens Resort"
@@ -4033,8 +3469,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-07-31",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -4064,8 +3498,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-07-31",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -4085,46 +3517,23 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182210",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Festival",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "is_free": false,
       "series_end": "2026-08-02",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
       "filter_categories": [
         "Sports"
       ],
@@ -4141,55 +3550,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market-2/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -4209,7 +3585,7 @@
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182263",
       "start_time": "7:00 PM",
-      "end_time": "11:00 PM",
+      "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/fd8cab_83382145273b49a9be40fc9b65c82b61mv2.avif",
       "venue_name": "Siebkens Bandstand",
       "series": "Siebkens Live Music",
@@ -4217,8 +3593,6 @@
         "Music",
         "Sports"
       ],
-      "end_date": null,
-      "series_end": "2026-08-01",
       "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -4247,8 +3621,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-01",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -4278,8 +3650,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-01",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -4299,8 +3669,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -4308,19 +3678,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -4359,8 +3729,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-03",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -4383,8 +3751,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -4392,19 +3760,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -4415,33 +3783,6 @@
       "filter_categories": [
         "Outdoors",
         "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Siebkens Live Music by Mike Brumm with Trust & Follow",
-      "date": "2026-08-05",
-      "description": "Spend a summer night at Siebkens Resort with live music from Mike Brumm with Trust & Follow during the Siebkens Summer Concert Series. Milwaukee native Mike Brumm brings a soulful, genre-blending sound shaped by years of performing around the world, creating the perfect soundtrack for a night in Elkhart Lake.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-mike-brumm-with-trust-follow/",
-      "source": "Siebkens Resort",
-      "source_url": "https://www.siebkens.com/events/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182266",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/mike-brumm-music-e1779215999327.avif",
-      "venue_name": "Siebkens Bandstand",
-      "series": "Siebkens Live Music",
-      "categories": [
-        "Music"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-05",
-      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -4470,8 +3811,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-05",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -4480,6 +3819,31 @@
         "Family & Kids",
         "Sports",
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Siebkens Live Music by Mike Brumm with Trust & Follow",
+      "date": "2026-08-05",
+      "description": "Spend a summer night at Siebkens Resort with live music from Mike Brumm with Trust & Follow during the Siebkens Summer Concert Series. Milwaukee native Mike Brumm brings a soulful, genre-blending sound shaped by years of performing around the world, creating the perfect soundtrack for a night in Elkhart Lake.",
+      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-mike-brumm-with-trust-follow/",
+      "source": "Siebkens Resort",
+      "source_url": "https://www.siebkens.com/events/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.182266",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/mike-brumm-music-e1779215999327.avif",
+      "venue_name": "Siebkens Bandstand",
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ],
+      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -4504,8 +3868,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-06",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -4534,8 +3896,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-07",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -4554,55 +3914,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-08-08/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -4629,9 +3956,7 @@
       "categories": [
         "Sports"
       ],
-      "address": "20 Victory Lane",
-      "end_date": null,
-      "series_end": "2026-08-08",
+      "address": "20 Victory Lane, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Education & Talks",
         "Family & Kids",
@@ -4660,8 +3985,6 @@
         "Sports",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-08",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
@@ -4690,8 +4013,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-08",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -4710,8 +4031,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -4719,19 +4040,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -4742,82 +4063,6 @@
       "filter_categories": [
         "Outdoors",
         "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Downtown Night",
-      "date": "2026-08-10",
-      "description": "Live music at Siebkens Resort on the shores of Elkhart Lake. Outdoor bandstand outside the Stop-Inn Tavern. Free, family & dog friendly.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "link": "https://www.siebkens.com/event/downtown-night-live-music-sister-winchester-3/",
-      "source": "Siebkens Resort",
-      "source_url": "https://www.siebkens.com/events/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182267",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "series": "Siebkens Live Music",
-      "categories": [
-        "Community",
-        "Family",
-        "Festival",
-        "Food & Drink",
-        "Kids",
-        "Music",
-        "Outdoor"
-      ],
-      "venue_name": "Siebkens Bandstand",
-      "end_date": null,
-      "series_end": "2026-08-10",
-      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "is_free": true,
-      "price": "Free",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/downtown-night-elkhart-lake.avif",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "Siebkens Resort"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 PM",
-            "source": "Siebkens Resort"
-          },
-          {
-            "value": "5:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Siebkens Bandstand",
-            "source": "Siebkens Resort"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.siebkens.com/event/downtown-night-live-music-sister-winchester-3/",
-          "source": "Siebkens Resort"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/downtown-night-a-taste-of-elkhart-lake/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
-      "filter_categories": [
-        "Community",
-        "Family & Kids",
-        "Food & Drink",
-        "Music",
-        "Outdoors"
       ],
       "_distance_mi": 0.0
     },
@@ -4846,8 +4091,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-10",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -4856,6 +4099,70 @@
         "Family & Kids",
         "Sports",
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Downtown Night",
+      "date": "2026-08-10",
+      "description": "Live music at Siebkens Resort on the shores of Elkhart Lake. Outdoor bandstand outside the Stop-Inn Tavern. Free, family & dog friendly.",
+      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "link": "https://www.siebkens.com/event/downtown-night-live-music-sister-winchester-3/",
+      "source": "Siebkens Resort",
+      "source_url": "https://www.siebkens.com/events/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.182267",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Community",
+        "Family",
+        "Festival",
+        "Food & Drink",
+        "Kids",
+        "Music",
+        "Outdoor"
+      ],
+      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "is_free": true,
+      "price": "Free",
+      "venue_name": "Siebkens Bandstand",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/downtown-night-elkhart-lake.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Siebkens Resort"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 PM",
+            "source": "Siebkens Resort"
+          },
+          {
+            "value": "5:00 PM",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.siebkens.com/event/downtown-night-live-music-sister-winchester-3/",
+          "source": "Siebkens Resort"
+        },
+        {
+          "url": "https://www.elkhartlake.com/event/downtown-night-a-taste-of-elkhart-lake/",
+          "source": "Elkhart Lake Tourism"
+        }
+      ],
+      "filter_categories": [
+        "Community",
+        "Family & Kids",
+        "Food & Drink",
+        "Music",
+        "Outdoors"
       ],
       "_distance_mi": 0.0
     },
@@ -4870,8 +4177,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -4879,19 +4186,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -4902,33 +4209,6 @@
       "filter_categories": [
         "Outdoors",
         "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Siebkens Live Music by Bob & Connor McManus",
-      "date": "2026-08-12",
-      "description": "Spend a summer night at Siebkens Resort with live music from duo, Bob & Connor McManus, during the Siebkens Summer Concert Series. This harmony filled duo will play a variety of music from the 60\u2019s to today, including a few original tunes.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-bob-connor-mcmanus/",
-      "source": "Siebkens Resort",
-      "source_url": "https://www.siebkens.com/events/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182268",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/bob-connor-mcmanus.avif",
-      "venue_name": "Siebkens Resort",
-      "series": "Siebkens Live Music",
-      "categories": [
-        "Music"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-12",
-      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -4957,8 +4237,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-12",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -4967,6 +4245,31 @@
         "Family & Kids",
         "Sports",
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Siebkens Live Music by Bob & Connor McManus",
+      "date": "2026-08-12",
+      "description": "Spend a summer night at Siebkens Resort with live music from duo, Bob & Connor McManus, during the Siebkens Summer Concert Series. This harmony filled duo will play a variety of music from the 60\u2019s to today, including a few original tunes.",
+      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-bob-connor-mcmanus/",
+      "source": "Siebkens Resort",
+      "source_url": "https://www.siebkens.com/events/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.182268",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/bob-connor-mcmanus.avif",
+      "venue_name": "Siebkens Resort",
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ],
+      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -4991,8 +4294,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-13",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -5021,8 +4322,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-14",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -5041,55 +4340,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-08-15/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -5118,8 +4384,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-15",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -5150,8 +4414,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-15",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -5172,8 +4434,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -5181,19 +4443,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -5232,8 +4494,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-17",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5270,8 +4530,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-24",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5308,8 +4566,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-31",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5346,8 +4602,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-07",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5379,8 +4633,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-09-07",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "filter_categories": [
@@ -5414,8 +4666,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-14",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5452,8 +4702,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-21",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5490,8 +4738,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-28",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5522,25 +4768,14 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "The Osthoff Resort",
@@ -5552,17 +4787,7 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-07/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Family & Kids",
         "Food & Drink",
@@ -5581,8 +4806,8 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182228",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
       "end_date": null,
       "recurrence": "weekly_multiple",
       "recurrence_days": "Monday,Wednesday",
@@ -5590,19 +4815,19 @@
         "Outdoor",
         "Sports"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-08-19",
+      "venue_name": "Road America",
       "_all_sources": [
         "Road America"
       ],
       "_conflicts": {
         "time": [
           {
-            "value": "5:30 PM",
+            "value": "6:00 PM",
             "source": "Road America"
           },
           {
-            "value": "6:00 PM",
+            "value": "5:30 PM",
             "source": "Road America"
           }
         ]
@@ -5613,33 +4838,6 @@
       "filter_categories": [
         "Outdoors",
         "Sports"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Siebkens Live Music by Pat McCurdy",
-      "date": "2026-08-19",
-      "description": "Pat McCurdy is back at Siebkens Resort for the Summer Concert Series. Get ready for a night of crowd-favorite songs, laughs and singalongs.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-pat-mccurdy-5/",
-      "source": "Siebkens Resort",
-      "source_url": "https://www.siebkens.com/events/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182270",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/Pat-McCurdy-hand.avif",
-      "venue_name": "Siebkens Resort",
-      "series": "Siebkens Live Music",
-      "categories": [
-        "Music"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-19",
-      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -5668,8 +4866,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-19",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5678,6 +4874,31 @@
         "Family & Kids",
         "Sports",
         "Wellness"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Siebkens Live Music by Pat McCurdy",
+      "date": "2026-08-19",
+      "description": "Pat McCurdy is back at Siebkens Resort for the Summer Concert Series. Get ready for a night of crowd-favorite songs, laughs and singalongs.",
+      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-pat-mccurdy-5/",
+      "source": "Siebkens Resort",
+      "source_url": "https://www.siebkens.com/events/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.182270",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/Pat-McCurdy-hand.avif",
+      "venue_name": "Siebkens Resort",
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ],
+      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music"
       ],
       "_distance_mi": 0.0
     },
@@ -5700,8 +4921,6 @@
       "categories": [
         "Music"
       ],
-      "end_date": null,
-      "series_end": "2026-08-26",
       "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music"
@@ -5733,8 +4952,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-26",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5765,8 +4982,6 @@
       "categories": [
         "Music"
       ],
-      "end_date": null,
-      "series_end": "2026-09-02",
       "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music"
@@ -5798,8 +5013,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-02",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5836,8 +5049,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-09",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5874,8 +5085,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-16",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5912,8 +5121,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-23",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5950,8 +5157,6 @@
       "facets": [
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-30",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
@@ -5982,25 +5187,14 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "The Osthoff Resort",
@@ -6012,17 +5206,7 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-09/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Family & Kids",
         "Food & Drink",
@@ -6033,29 +5217,22 @@
     {
       "title": "Road America Track Day",
       "date": "2026-08-20",
-      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment on the full 4-mile circuit.",
+      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment.",
       "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "link": "https://www.roadamerica.com/track-days",
       "source": "Road America",
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182222",
+      "scraped_at": "2026-06-28T11:43:53.182225",
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
-        "Outdoor",
-        "Sports"
+        "Sports",
+        "Outdoor"
       ],
-      "venue_name": "Road America",
-      "price": "$395-$425",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
-      "end_date": null,
-      "series_end": "2026-10-16",
-      "_all_sources": [
-        "Road America"
-      ],
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
         "Sports"
@@ -6082,8 +5259,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-20",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "_all_sources": [
@@ -6129,8 +5304,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-21",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -6160,8 +5333,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-08-21",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -6182,55 +5353,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-08-22/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -6258,8 +5396,6 @@
         "Sports",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-22",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
@@ -6288,9 +5424,7 @@
         "Music",
         "Outdoor"
       ],
-      "address": "101 Osthoff Avenue",
-      "end_date": null,
-      "series_end": "2026-08-22",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
         "Outdoors"
@@ -6316,8 +5450,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-22",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "filter_categories": [
@@ -6337,16 +5469,13 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182272",
-      "start_time": "5:00 PM",
+      "start_time": "6:00 PM",
       "end_time": "9:00 PM",
       "series": "Siebkens Live Music",
       "categories": [
         "Music",
         "Sports"
       ],
-      "venue_name": "Siebkens Bandstand",
-      "end_date": null,
-      "series_end": "2026-08-27",
       "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
       "is_free": true,
       "price": "Free",
@@ -6383,9 +5512,7 @@
       "facets": [
         "Free"
       ],
-      "address": "284 S Lake Street",
-      "end_date": null,
-      "series_end": "2026-08-27",
+      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -6415,9 +5542,7 @@
         "Music",
         "Sports"
       ],
-      "address": "284 S Lake Street",
-      "end_date": null,
-      "series_end": "2026-08-27",
+      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
         "Sports"
@@ -6445,8 +5570,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-27",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -6465,42 +5588,19 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182215",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-08-30",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
@@ -6521,7 +5621,7 @@
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182274",
       "start_time": "7:00 PM",
-      "end_time": "11:00 PM",
+      "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/second-hand-stereo.avif",
       "venue_name": "Siebkens Resort",
       "series": "Siebkens Live Music",
@@ -6529,8 +5629,6 @@
         "Music",
         "Sports"
       ],
-      "end_date": null,
-      "series_end": "2026-08-28",
       "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -6559,8 +5657,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-28",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -6579,44 +5675,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182215",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-08-30",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gt-world-challenge.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
       "filter_categories": [
         "Sports"
       ],
@@ -6633,55 +5707,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-08-29/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -6701,7 +5742,7 @@
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182275",
       "start_time": "7:00 PM",
-      "end_time": "11:00 PM",
+      "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/joseph-huber-music.avif",
       "venue_name": "Siebkens Resort",
       "series": "Siebkens Live Music",
@@ -6709,8 +5750,6 @@
         "Music",
         "Sports"
       ],
-      "end_date": null,
-      "series_end": "2026-08-29",
       "address": "284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -6739,8 +5778,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-08-29",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -6769,8 +5806,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-09-03",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -6799,8 +5834,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-09-04",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -6819,55 +5852,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-09-05/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -6896,8 +5896,6 @@
         "Music",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-09-05",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music",
@@ -6927,8 +5925,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-05",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -6950,55 +5946,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-09-12/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -7025,9 +5988,7 @@
       "categories": [
         "Sports"
       ],
-      "address": "20 Victory Lane",
-      "end_date": null,
-      "series_end": "2026-09-12",
+      "address": "20 Victory Lane, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Education & Talks",
         "Family & Kids",
@@ -7056,8 +6017,6 @@
         "Sports",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-09-12",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
@@ -7087,8 +6046,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-12",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -7110,45 +6067,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182218",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Community",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-09-20",
+      "venue_name": "Road America",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "12:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/art-wheels-vintage-weekend-vscda",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/art-on-wheels-vintage-weekend-with-vscda/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "end_time": "11:59 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/ariens-art-on-wheels-road-america-1.avif",
       "filter_categories": [
         "Arts & Theater",
@@ -7180,8 +6114,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-18",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -7203,45 +6135,23 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182218",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Community",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-09-20",
+      "venue_name": "Road America",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/art-wheels-vintage-weekend-vscda",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "end_time": "11:59 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/ariens-art-on-wheels-road-america-1.avif",
       "filter_categories": [
         "Arts & Theater",
         "Community",
@@ -7261,59 +6171,54 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
       ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-09-19/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
       "filter_categories": [
         "Arts & Theater",
         "Food & Drink"
+      ],
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Siebkens Live Music: Boo! The Band (Elktoberfest)",
+      "date": "2026-09-19",
+      "description": "Live music at Siebkens Resort on the shores of Elkhart Lake. Outdoor bandstand outside the Stop-Inn Tavern. Free, family & dog friendly.",
+      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "link": "https://www.siebkens.com/event/vintage-wknd-live-music-boo-the-band/",
+      "source": "Siebkens Resort",
+      "source_url": "https://www.siebkens.com/events/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-28T11:43:53.182276",
+      "start_time": "7:00 PM",
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music",
+        "Food & Drink"
+      ],
+      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Family & Kids",
+        "Food & Drink",
+        "Music",
+        "Outdoors"
       ],
       "_distance_mi": 0.0
     },
@@ -7341,45 +6246,10 @@
       "facets": [
         "21+"
       ],
-      "address": "100 East Rhine Street",
-      "end_date": null,
-      "series_end": "2026-09-19",
+      "address": "100 East Rhine Street, Elkhart Lake, WI 53020",
       "is_free": false,
       "_all_sources": [
         "Elkhart Lake Tourism"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "9:00 AM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Vintage Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "Road America",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/event/elktoberfest-wine-beer-run-5k/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -7410,8 +6280,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-19",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -7444,8 +6312,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-25",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -7466,55 +6332,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-09-26/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -7542,8 +6375,6 @@
         "Sports",
         "Outdoor"
       ],
-      "end_date": null,
-      "series_end": "2026-09-26",
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
@@ -7573,8 +6404,6 @@
         "Free",
         "Paid"
       ],
-      "end_date": null,
-      "series_end": "2026-09-26",
       "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "venue_name": "The Osthoff Resort",
       "is_free": false,
@@ -7595,43 +6424,20 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182220",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Festival",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-10-04",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
@@ -7651,43 +6457,20 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182220",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Festival",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-10-04",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
@@ -7707,43 +6490,20 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182220",
-      "start_time": "7:00 AM",
+      "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
       "categories": [
         "Festival",
         "Sports"
       ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
       "series_end": "2026-10-04",
+      "end_time": "11:59 PM",
+      "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
@@ -7763,55 +6523,22 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
+      "venue_name": null,
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/farmers-market-6.avif",
       "_all_sources": [
         "Elkhart Lake Tourism",
         "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "8:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "Road America",
-            "source": "Road America"
-          },
-          {
-            "value": "Elkhart Lake",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/farmers-artisans-market/2026-10-03/",
-          "source": "Elkhart Lake Tourism"
-        }
       ],
       "filter_categories": [
         "Arts & Theater",
@@ -7822,29 +6549,22 @@
     {
       "title": "Road America Track Day",
       "date": "2026-10-08",
-      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment on the full 4-mile circuit.",
+      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment.",
       "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "link": "https://www.roadamerica.com/track-days",
       "source": "Road America",
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182222",
+      "scraped_at": "2026-06-28T11:43:53.182227",
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
-        "Outdoor",
-        "Sports"
+        "Sports",
+        "Outdoor"
       ],
-      "venue_name": "Road America",
-      "price": "$395-$425",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
-      "end_date": null,
-      "series_end": "2026-10-16",
-      "_all_sources": [
-        "Road America"
-      ],
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Outdoors",
         "Sports"
@@ -7862,53 +6582,20 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
         "Food & Drink"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Road America Track Day",
-      "date": "2026-10-16",
-      "description": "Drive your own street performance or track-prepared car at Road America in a fun, safe, non-competitive environment on the full 4-mile circuit.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/track-days",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.182222",
-      "start_time": "7:30 AM",
-      "end_time": "5:00 PM",
-      "categories": [
-        "Outdoor",
-        "Sports"
-      ],
-      "venue_name": "Road America",
-      "price": "$395-$425",
-      "is_free": false,
-      "end_date": null,
-      "series_end": "2026-10-16",
-      "_all_sources": [
-        "Road America"
-      ],
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Outdoors",
-        "Sports"
       ],
       "_distance_mi": 0.0
     },
@@ -7923,17 +6610,16 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
@@ -7952,17 +6638,16 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
@@ -7981,48 +6666,19 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.182232",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
       "end_date": null,
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
       "categories": [
         "Food & Drink"
       ],
-      "venue_name": "Road America",
       "series_end": "2026-10-31",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "address": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
       "is_free": false,
       "filter_categories": [
         "Arts & Theater",
-        "Food & Drink"
-      ],
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Old World Christmas Market",
-      "date": "2026-12-04",
-      "end_date": null,
-      "location": "The Osthoff Resort, Elkhart Lake, WI",
-      "venue_name": "The Osthoff Resort",
-      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
-      "categories": [
-        "Festival",
-        "Family",
-        "Food & Drink"
-      ],
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Family & Kids",
         "Food & Drink"
       ],
       "_distance_mi": 0.0
@@ -8046,25 +6702,14 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "The Osthoff Resort",
@@ -8076,17 +6721,7 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-11/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Family & Kids",
         "Food & Drink",
@@ -8113,25 +6748,14 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "The Osthoff Resort",
@@ -8143,17 +6767,7 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-05/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Family & Kids",
         "Food & Drink",
@@ -8180,25 +6794,14 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "The Osthoff Resort",
@@ -8210,17 +6813,7 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-12/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Family & Kids",
         "Food & Drink",
@@ -8247,25 +6840,14 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "The Osthoff Resort",
@@ -8277,17 +6859,7 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-08/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Family & Kids",
         "Food & Drink",
@@ -8314,25 +6886,14 @@
       "lat": 43.833,
       "lng": -88.0426,
       "scraped_at": "2026-06-28T11:43:53.183713",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
       "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
       "_all_sources": [
         "Elkhart Lake Tourism"
       ],
       "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
         "venue": [
           {
             "value": "The Osthoff Resort",
@@ -8344,17 +6905,7 @@
           }
         ]
       },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-10/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Family & Kids",
         "Food & Drink",

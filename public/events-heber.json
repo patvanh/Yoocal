@@ -6,7 +6,7 @@
     "lng": -111.4133
   },
   "radius_mi": 10,
-  "generated_at": "2026-06-28T05:57:14.760435-06:00",
+  "generated_at": "2026-06-28T20:11:35.592477-06:00",
   "today": "2026-06-28",
   "event_count": 665,
   "events": [
@@ -3354,7 +3354,6 @@
       "date_label": "2:00 - 3:00 PM",
       "venue_name": "Wasatch County Library, Bowcott Room",
       "address": "465 East 1200 South, Heber City, UT, 84032",
-      "price": "Free",
       "is_free": true,
       "end_date": null,
       "series_end": "2026-06-29",
@@ -5428,8 +5427,7 @@
       "facets": [
         "21+"
       ],
-      "price": "$55 (food) / $100-$120 (wine)",
-      "is_free": false,
+      "recurrence_text": "Jun 11 & Jul 8, 6:00 PM",
       "end_date": null,
       "series_end": "2026-07-08",
       "filter_categories": [
@@ -8362,7 +8360,7 @@
       "date_label": "7:00 - 10:45 PM",
       "venue_name": "Heber Valley Railroad",
       "address": "450 South 600 West, Heber City, UT, 84032",
-      "recurrence_text": "Annual event celebrated on Pioneer Day (July 24th)",
+      "recurrence_text": "Annual event on Pioneer Day (July 24th)",
       "is_free": false,
       "end_date": null,
       "series_end": "2026-07-24",
@@ -11640,7 +11638,7 @@
       "end_time": "9:30 AM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=28-05-39",
       "date_label": "Heber Valley Visitor Center, 8:30 - 9:30 AM",
-      "recurrence_text": "every other month on the second Wednesday",
+      "recurrence_text": "Every other month on the second Wednesday",
       "venue_name": "Heber Valley Visitor Center",
       "address": "475 North Main Street, Heber City, UT, 84032",
       "is_free": true,
@@ -12092,7 +12090,7 @@
       "end_time": "4:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=28-05-39",
       "date_label": "Fri & Sat, 8:00 AM - 4:00 PM",
-      "recurrence_text": "Fri &amp; Sat, 8:00 AM - 4:00 PM",
+      "recurrence_text": "Fri & Sat, 8:00 AM - 4:00 PM",
       "end_date": null,
       "series_end": "2026-08-15",
       "filter_categories": [
@@ -12332,7 +12330,7 @@
       "end_time": "4:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=28-05-39",
       "date_label": "Fri & Sat, 8:00 AM - 4:00 PM",
-      "recurrence_text": "Fri &amp; Sat, 8:00 AM - 4:00 PM",
+      "recurrence_text": "Fri & Sat, 8:00 AM - 4:00 PM",
       "end_date": null,
       "series_end": "2026-08-15",
       "filter_categories": [
@@ -12360,6 +12358,7 @@
       "date_label": "7:00 - 10:00 PM",
       "venue_name": "Instructor's private residence",
       "address": "3 miles east of Heber's Main Street, Heber City, Utah 84032",
+      "is_free": false,
       "end_date": null,
       "series_end": "2026-08-15",
       "filter_categories": [
@@ -14524,13 +14523,25 @@
       "date_label": "Sep 4-5, 8:00 AM - 8:00 PM",
       "end_date": null,
       "recurrence_text": "Annual event, Friday and Saturday before Labor Day each year",
-      "address": "Midway, UT 84049",
-      "series_end": "2026-09-05",
       "venue_name": null,
+      "series_end": "2026-09-05",
+      "address": "200 W Main Street Midway, Utah 84049",
       "_all_sources": [
         "Heber Valley Life",
         "Heber Valley Tourism"
       ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "Midway",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Midway Town Square",
+            "source": "Heber Valley Life"
+          }
+        ]
+      },
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -14748,13 +14759,25 @@
       "date_label": "Sep 4-5, 8:00 AM - 8:00 PM",
       "end_date": null,
       "recurrence_text": "Annual event, Friday and Saturday before Labor Day each year",
-      "address": "Midway, UT 84049",
-      "series_end": "2026-09-05",
       "venue_name": null,
+      "series_end": "2026-09-05",
+      "address": "200 W Main Street Midway, Utah 84049",
       "_all_sources": [
         "Heber Valley Life",
         "Heber Valley Tourism"
       ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "Midway",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Midway Town Square",
+            "source": "Heber Valley Life"
+          }
+        ]
+      },
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -15414,7 +15437,7 @@
         "Running & Races"
       ],
       "scraped_at": "2026-06-28T11:39:40.460694",
-      "start_time": "08:00 AM",
+      "start_time": "8:00 AM",
       "end_time": "12:00 PM",
       "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760251.jpg?decache=28-05-39",
       "venue_name": "Soldier Hollow",
