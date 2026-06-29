@@ -428,32 +428,36 @@ export default function EventModal({
         }
 
         .ye-img {
-          margin: -28px -28px 20px;
-          height: 200px;
+          margin: -28px -28px 16px;
+          height: 260px;
           border-radius: 20px 20px 0 0;
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
+          background-position: center !important;
+          background-color: #15122b;
         }
         .ye-modal .ye-title {
           text-align: center;
           font-family: 'DM Serif Display', serif;
-          font-size: clamp(22px, 4vw, 30px);
+          font-size: clamp(18px, 3vw, 24px);
           color: #fff;
-          line-height: 1.2;
-          margin: 0 0 18px;
+          line-height: 1.15;
+          margin: 0 0 12px;
         }
 
         .ye-meta {
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          margin-bottom: 20px;
+          gap: 6px;
+          margin-bottom: 14px;
         }
         .ye-meta-row {
           display: flex;
           align-items: flex-start;
           gap: 10px;
-          font-size: 15px;
+          font-size: 13px;
           color: rgba(255,255,255,0.85);
-          line-height: 1.5;
+          line-height: 1.4;
         }
         .ye-meta-row.muted {
           color: rgba(255,255,255,0.5);
@@ -466,15 +470,15 @@ export default function EventModal({
           text-align: center;
         }
 
-        .ye-desc-wrap { margin: 0 0 24px; }
+        .ye-desc-wrap { margin: 0 0 16px; }
         .ye-desc {
-          font-size: 15px;
+          font-size: 13px;
           color: rgba(255,255,255,0.6);
-          line-height: 1.7;
+          line-height: 1.5;
           margin: 0;
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 4;
+          -webkit-line-clamp: 3;
           overflow: hidden;
         }
         .ye-desc.expanded {
