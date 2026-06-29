@@ -24,6 +24,7 @@ CITY_LABEL = {
     "park-city": "Park City", "parkcity": "Park City",
     "heber": "Heber Valley", "elkhart-lake": "Elkhart Lake",
     "elkhartlake": "Elkhart Lake", "jackson": "Jackson Hole",
+    "green-lake": "Green Lake", "greenlake": "Green Lake",
 }
 
 
