@@ -1267,6 +1267,21 @@ def _fill_default_geo(events):
 
 def save_events(events, filename="public/raw/events-elkhartlake.json"):
     events = _fill_default_geo(events)
+    # Single normalization pass: decode HTML entities and strip stray tags
+    # from text fields, for EVERY event regardless of source. Fixes
+    # 'Fireman&#8217;s Park' and similar across all hand-coded sources.
+    import html as _html_norm, re as _re_norm
+    def _clean(v):
+        if not isinstance(v, str):
+            return v
+        v = _html_norm.unescape(v)
+        v = _re_norm.sub(r"<[^>]+>", "", v)
+        v = _re_norm.sub(r"&#\d*;?", "", v)  # drop truncated numeric entities
+        return _re_norm.sub(r"\s+", " ", v).strip()
+    for _e in events:
+        for _k in ("title", "venue_name", "venue_address", "location"):
+            if _k in _e:
+                _e[_k] = _clean(_e[_k])
     # Drop records with non-ISO dates. These are usually UI chrome
     # ("Login", "Need help?") that fragile HTML scrapers grabbed as events,
     # or records where the date field couldn't be parsed (e.g. "See website").
