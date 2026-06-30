@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-29T14:25:36.713727",
+  "generated_at": "2026-06-30T12:37:08.248636",
   "attempted": 1,
-  "applied": 0,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "29th Annual Golf Benefit for Children and Families",
+      "title": "43rd Annual Fall Arts Festival 2027",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/29th-annual-golf-benefit-for-children-and-families/3625/",
+      "link": "https://www.jacksonholechamber.com/event/43rd-annual-fall-arts-festival-2027/3074/",
       "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source page text only contains the same title '29th Annual Golf Benefit for Children and Families' without any additional information to expand or complete it."
+        "confidence": "high",
+        "new_title": "43rd Annual Fall Arts Festival 2027",
+        "reasoning": "The source page text shows '43rd Annual Fall Arts Festival 2027' as the complete title with no additional text or truncation visible."
       },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "applied": true,
+      "note": "title: '43rd Annual Fall Arts Festival 2027' \u2192 '43rd Annual Fall Arts Festival 2027'"
     }
   ]
 }

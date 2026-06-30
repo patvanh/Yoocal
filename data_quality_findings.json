@@ -1,15 +1,22 @@
 {
-  "generated_at": "2026-06-29",
+  "generated_at": "2026-06-30",
   "cities": {
     "all": {
-      "events": 4984,
+      "events": 4806,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 1,
+          "count": 2,
           "examples": [
+            {
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-07-04",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            },
             {
               "title": "Yoga in the Park",
               "venue": "city park",
@@ -76,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 242,
-              "lost": 798
+              "now": 231,
+              "lost": 809
             },
             {
               "source": "Siebkens Resort",
@@ -90,7 +97,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 204,
+      "events": 200,
       "findings": [
         {
           "code": "C5",
@@ -125,12 +132,27 @@
       ]
     },
     "greenlake": {
-      "events": 377,
+      "events": 281,
       "findings": []
     },
     "heber": {
-      "events": 660,
+      "events": 654,
       "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 1,
+          "examples": [
+            {
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-07-04",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            }
+          ]
+        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -188,15 +210,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 236,
-              "lost": 797
+              "now": 226,
+              "lost": 807
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1604,
+      "events": 1555,
       "findings": [
         {
           "code": "C5",
@@ -233,5 +255,5 @@
       ]
     }
   },
-  "high_total": 5
+  "high_total": 7
 }
