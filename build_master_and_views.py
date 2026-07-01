@@ -62,6 +62,10 @@ INPUT_FILES = [
     "public/raw/events-egyptian.json",
     "public/raw/events-parkcityfilm.json",
     "public/raw/events-green-lake-wisconsin.json",
+    # Manually-curated events (e.g. The Tiki Bar Elkhart Lake live-music
+    # schedule). Only hand-edited; no scraper writes here, so nightly rebuilds
+    # can't clobber it. Routed to the correct city view by radius like any other.
+    "public/raw/events-manual-seed.json",
 ]
 
 from category_normalizer import filter_categories_for
