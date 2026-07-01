@@ -273,6 +273,97 @@ def event_key(e: dict) -> tuple:
     return (title, date)
 
 
+def stable_event_id(e: dict) -> str:
+    """Deterministic id that survives rebuilds, for admin overrides to key on.
+
+    Uses the SAME normalized (title, date) the dedup trusts, plus source, so an
+    id is stable exactly when dedup considers two records the same event. Source
+    disambiguates same-title/same-date events at different venues. 12 hex chars
+    of sha1 = ample collision resistance for a few thousand events."""
+    import hashlib
+    title = _normalize_title(e.get("title") or "")
+    date = (e.get("date") or "")[:10]
+    source = (e.get("source") or "").strip().lower()
+    basis = f"{title}|{date}|{source}"
+    return "e_" + hashlib.sha1(basis.encode("utf-8")).hexdigest()[:12]
+
+
+OVERRIDES_FILE = "public/raw/overrides.json"
+
+
+def apply_overrides(events: list[dict]) -> list[dict]:
+    """Apply admin overrides on the final, id-stamped event list.
+
+    overrides.json shape:
+      {
+        "overrides": { "<id>": {"action":"edit"|"delete",
+                                "fields": {...},
+                                "scraped_snapshot": {...},
+                                "updated_at": "...", "updated_by": "..."} },
+        "additions": [ {full event object, must include "id"} ]
+      }
+    Rules:
+      - edit  : shallow-merge `fields` over the event; overrides win.
+      - delete: drop the event.
+      - drift : if the event's CURRENT scraped values differ from the stored
+                `scraped_snapshot` (on the overridden fields), stamp _drift so the
+                admin can review — the override still applies (does not silently
+                revert), we just flag it.
+      - additions: appended as-is (hand-added events with no scraped counterpart).
+    Applied AFTER dedup/id-stamping, BEFORE master write, so overrides are final.
+    Missing/empty file = no-op (safe)."""
+    import io as _io, json as _json, os as _os
+    if not _os.path.exists(OVERRIDES_FILE):
+        return events
+    try:
+        data = _json.load(_io.open(OVERRIDES_FILE, encoding="utf-8"))
+    except Exception as ex:
+        print(f"[overrides] WARNING: could not read {OVERRIDES_FILE}: {ex} — skipping")
+        return events
+    ov = data.get("overrides", {}) or {}
+    adds = data.get("additions", []) or []
+
+    out = []
+    n_edit = n_del = n_drift = 0
+    for e in events:
+        rule = ov.get(e.get("id"))
+        if not rule:
+            out.append(e); continue
+        action = rule.get("action", "edit")
+        if action == "delete":
+            n_del += 1
+            continue
+        # edit: drift check first (compare snapshot vs current on overridden keys)
+        snap = rule.get("scraped_snapshot") or {}
+        fields = rule.get("fields") or {}
+        drift = {}
+        for k in fields.keys():
+            if k in snap and snap.get(k) != e.get(k):
+                drift[k] = {"snapshot": snap.get(k), "current_scraped": e.get(k)}
+        if drift:
+            e["_drift"] = True
+            e["_drift_detail"] = drift
+            n_drift += 1
+        # apply the override fields (overrides win)
+        for k, v in fields.items():
+            e[k] = v
+        e["_overridden"] = True
+        e["_overridden_at"] = rule.get("updated_at")
+        n_edit += 1
+        out.append(e)
+
+    # additions (hand-added; ensure they have an id)
+    n_add = 0
+    for a in adds:
+        if not a.get("id"):
+            a["id"] = stable_event_id(a)
+        a["_manual_added"] = True
+        out.append(a); n_add += 1
+
+    print(f"[overrides] applied: {n_edit} edits, {n_del} deletes, {n_add} additions, {n_drift} drift-flagged")
+    return out
+
+
 def _fan_out_recurring(events):
     """Expand multi-day and recurring events into one record per occurrence date.
 
@@ -1836,6 +1927,8 @@ def main():
     # on this field. See category_normalizer.py.
     for _e in future:
         _e["filter_categories"] = filter_categories_for(_e)
+        _e["id"] = stable_event_id(_e)
+    future = apply_overrides(future)
     print(f"Future events: {len(future)}")
     
     # Step 4: Write master file
