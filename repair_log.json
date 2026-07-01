@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-30T12:37:04.597070",
-  "audit_date": "2026-06-30",
+  "generated_at": "2026-07-01T12:57:31.683906",
+  "audit_date": "2026-07-01",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1790,
+      "before_count": 1793,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -27,8 +27,8 @@
           "fixed": 4,
           "examples": [
             {
-              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 58
+              "title": "Old Town walking tour",
+              "had_span": 45
             },
             {
               "title": "Fascia Rolling Class",
@@ -126,7 +126,7 @@
           ]
         },
         "classification": {
-          "fixed": 411,
+          "fixed": 410,
           "examples": [
             {
               "title": "Challenge Accepted!",
@@ -136,7 +136,15 @@
               ]
             },
             {
-              "title": "Summer Garden Camps",
+              "title": "Coffee & Calm: Designer Chats",
+              "before": [],
+              "after": [
+                "Wellness",
+                "Education"
+              ]
+            },
+            {
+              "title": "Old Town walking tour",
               "before": [],
               "after": [
                 "Community"
@@ -165,23 +173,12 @@
                 "Community",
                 "Food & Drink"
               ]
-            },
-            {
-              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Kids",
-                "Education"
-              ]
             }
           ]
         }
       },
-      "after_count": 1793,
-      "total_fixes": 429
+      "after_count": 1796,
+      "total_fixes": 428
     },
     {
       "city": "elkhart-lake",
@@ -233,29 +230,29 @@
     },
     {
       "city": "heber",
-      "before_count": 219,
+      "before_count": 226,
       "passes": {
         "past_dates": {
-          "fixed": 38,
+          "fixed": 40,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
+              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+              "date": "2026-06-17"
+            },
+            {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Cornhole @ Wallsburg Town Hall",
-              "date": "2026-06-16"
+              "title": "Heber Midday Wednesday Ride @ Southfield Park",
+              "date": "2026-06-17"
             },
             {
-              "title": "Full Moon Chairlift Rides @ Sundance Resort",
-              "date": "2026-06-29"
-            },
-            {
-              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+              "title": "Wasatch County Council Monthly Meetings",
               "date": "2026-06-17"
             }
           ]
@@ -269,7 +266,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 177
+              "had_span": 178
             }
           ]
         },
@@ -295,13 +292,19 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 7,
           "examples": [
             {
               "title": "Heber Valley Chamber Golf Tournament",
               "start_time": "8:00 AM",
               "new_end_time": "9:00 AM",
               "duration_hours": 1
+            },
+            {
+              "title": "Movie in  the Park",
+              "start_time": "9:30 PM",
+              "new_end_time": "11:30 PM",
+              "duration_hours": 2
             },
             {
               "title": "Mountain Valley Stampede Rodeo",
@@ -320,17 +323,11 @@
               "start_time": "7:30 PM",
               "new_end_time": "9:30 PM",
               "duration_hours": 2
-            },
-            {
-              "title": "Wilderness Circuit Finals Rodeo Saturday Nov 7th Matinee 1:00 pm",
-              "start_time": "1:00 PM",
-              "new_end_time": "3:00 PM",
-              "duration_hours": 2
             }
           ]
         },
         "classification": {
-          "fixed": 11,
+          "fixed": 9,
           "examples": [
             {
               "title": "Oakley PRCA Rodeo",
@@ -390,12 +387,12 @@
           ]
         }
       },
-      "after_count": 183,
-      "total_fixes": 59
+      "after_count": 188,
+      "total_fixes": 60
     },
     {
       "city": "jackson",
-      "before_count": 759,
+      "before_count": 749,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -406,11 +403,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 95
+              "had_span": 94
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 82
+              "had_span": 81
             }
           ]
         },
@@ -467,7 +464,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 13,
+          "fixed": 14,
           "examples": [
             {
               "title": "Karaoke at The Virginian Saloon",
@@ -506,8 +503,8 @@
           "examples": []
         }
       },
-      "after_count": 790,
-      "total_fixes": 23
+      "after_count": 780,
+      "total_fixes": 24
     }
   ]
 }

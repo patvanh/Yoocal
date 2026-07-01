@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-30",
+  "generated_at": "2026-07-01",
   "cities": {
     "all": {
-      "events": 4806,
+      "events": 4815,
       "findings": [
         {
           "code": "C1",
@@ -30,22 +30,22 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 26,
+          "count": 25,
           "examples": [
             {
               "date": "2026-07-04",
-              "title_a": "Grand Targhee Wildflower Run",
-              "src_a": "RunningInTheUSA Jackson",
-              "title_b": "Wildflower Run",
-              "src_b": "Grand Targhee Resort",
+              "title_a": "Wildflower Run",
+              "src_a": "Grand Targhee Resort",
+              "title_b": "Grand Targhee Wildflower Run",
+              "src_b": "RunningInTheUSA Jackson",
               "sim": 0.85
             },
             {
               "date": "2026-07-05",
-              "title_a": "Grand Targhee Wildflower Run",
-              "src_a": "RunningInTheUSA Jackson",
-              "title_b": "Wildflower Run",
-              "src_b": "Grand Targhee Resort",
+              "title_a": "Wildflower Run",
+              "src_a": "Grand Targhee Resort",
+              "title_b": "Grand Targhee Wildflower Run",
+              "src_b": "RunningInTheUSA Jackson",
               "sim": 0.85
             },
             {
@@ -83,38 +83,22 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 231,
-              "lost": 809
+              "now": 249,
+              "lost": 791
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 20,
-              "lost": 256
+              "now": 19,
+              "lost": 257
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 200,
+      "events": 201,
       "findings": [
-        {
-          "code": "C5",
-          "name": "CROSS-SOURCE-DUP",
-          "severity": "MED",
-          "count": 1,
-          "examples": [
-            {
-              "date": "2026-09-19",
-              "title_a": "Siebkens Live Music: Boo! The Band (Elktoberfest)",
-              "src_a": "Siebkens Resort",
-              "title_b": "Elktoberfest",
-              "src_b": "Elkhart Lake Tourism",
-              "sim": 0.85
-            }
-          ]
-        },
         {
           "code": "C6",
           "name": "COVERAGE-CLIFF",
@@ -124,19 +108,19 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 20,
-              "lost": 256
+              "now": 19,
+              "lost": 257
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 281,
+      "events": 279,
       "findings": []
     },
     "heber": {
-      "events": 654,
+      "events": 696,
       "findings": [
         {
           "code": "C1",
@@ -210,15 +194,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 226,
-              "lost": 807
+              "now": 244,
+              "lost": 789
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1555,
+      "events": 1544,
       "findings": [
         {
           "code": "C5",
@@ -228,18 +212,18 @@
           "examples": [
             {
               "date": "2026-07-04",
-              "title_a": "Grand Targhee Wildflower Run",
-              "src_a": "RunningInTheUSA Jackson",
-              "title_b": "Wildflower Run",
-              "src_b": "Grand Targhee Resort",
+              "title_a": "Wildflower Run",
+              "src_a": "Grand Targhee Resort",
+              "title_b": "Grand Targhee Wildflower Run",
+              "src_b": "RunningInTheUSA Jackson",
               "sim": 0.85
             },
             {
               "date": "2026-07-05",
-              "title_a": "Grand Targhee Wildflower Run",
-              "src_a": "RunningInTheUSA Jackson",
-              "title_b": "Wildflower Run",
-              "src_b": "Grand Targhee Resort",
+              "title_a": "Wildflower Run",
+              "src_a": "Grand Targhee Resort",
+              "title_b": "Grand Targhee Wildflower Run",
+              "src_b": "RunningInTheUSA Jackson",
               "sim": 0.85
             },
             {

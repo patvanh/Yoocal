@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-30T12:37:08.248636",
+  "generated_at": "2026-07-01T12:57:35.401753",
   "attempted": 1,
   "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "43rd Annual Fall Arts Festival 2027",
+      "title": "60th Annual Elkfest Antler Auction",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/43rd-annual-fall-arts-festival-2027/3074/",
+      "link": "https://www.jacksonholechamber.com/event/60th-annual-elkfest-antler-auction/3657/",
       "resolution": {
         "confidence": "high",
-        "new_title": "43rd Annual Fall Arts Festival 2027",
-        "reasoning": "The source page text shows '43rd Annual Fall Arts Festival 2027' as the complete title with no additional text or truncation visible."
+        "new_title": "60th Annual Elkfest Antler Auction",
+        "reasoning": "The source page text shows the exact same title '60th Annual Elkfest Antler Auction' with no additional text visible, confirming this is the complete title."
       },
       "applied": true,
-      "note": "title: '43rd Annual Fall Arts Festival 2027' \u2192 '43rd Annual Fall Arts Festival 2027'"
+      "note": "title: '60th Annual Elkfest Antler Auction' \u2192 '60th Annual Elkfest Antler Auction'"
     }
   ]
 }
