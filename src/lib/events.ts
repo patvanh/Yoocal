@@ -31,6 +31,12 @@ export interface YoocalEvent {
   recurrence_text?: string
   date_label?: string
   _distance_mi?: number
+  id?: string
+  _drift?: boolean
+  _drift_detail?: Record<string, { snapshot: unknown; current_scraped: unknown }>
+  _overridden?: boolean
+  _overridden_at?: string
+  _manual_added?: boolean
 }
 
 export interface EventsFile {
