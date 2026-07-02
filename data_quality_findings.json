@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-01",
+  "generated_at": "2026-07-02",
   "cities": {
     "all": {
-      "events": 4815,
+      "events": 4848,
       "findings": [
         {
           "code": "C1",
@@ -30,22 +30,22 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 25,
+          "count": 30,
           "examples": [
             {
               "date": "2026-07-04",
-              "title_a": "Wildflower Run",
-              "src_a": "Grand Targhee Resort",
-              "title_b": "Grand Targhee Wildflower Run",
-              "src_b": "RunningInTheUSA Jackson",
+              "title_a": "Grand Targhee Wildflower Run",
+              "src_a": "RunningInTheUSA Jackson",
+              "title_b": "Wildflower Run",
+              "src_b": "Grand Targhee Resort",
               "sim": 0.85
             },
             {
               "date": "2026-07-05",
-              "title_a": "Wildflower Run",
-              "src_a": "Grand Targhee Resort",
-              "title_b": "Grand Targhee Wildflower Run",
-              "src_b": "RunningInTheUSA Jackson",
+              "title_a": "Grand Targhee Wildflower Run",
+              "src_a": "RunningInTheUSA Jackson",
+              "title_b": "Wildflower Run",
+              "src_b": "Grand Targhee Resort",
               "sim": 0.85
             },
             {
@@ -83,21 +83,21 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 249,
-              "lost": 791
+              "now": 246,
+              "lost": 794
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 19,
-              "lost": 257
+              "now": 18,
+              "lost": 258
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 201,
+      "events": 246,
       "findings": [
         {
           "code": "C6",
@@ -108,19 +108,19 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 19,
-              "lost": 257
+              "now": 18,
+              "lost": 258
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 279,
+      "events": 273,
       "findings": []
     },
     "heber": {
-      "events": 696,
+      "events": 692,
       "findings": [
         {
           "code": "C1",
@@ -194,44 +194,60 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 244,
-              "lost": 789
+              "now": 240,
+              "lost": 793
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1544,
+      "events": 1550,
       "findings": [
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 3,
+          "count": 8,
           "examples": [
             {
               "date": "2026-07-04",
-              "title_a": "Wildflower Run",
-              "src_a": "Grand Targhee Resort",
-              "title_b": "Grand Targhee Wildflower Run",
-              "src_b": "RunningInTheUSA Jackson",
+              "title_a": "Grand Targhee Wildflower Run",
+              "src_a": "RunningInTheUSA Jackson",
+              "title_b": "Wildflower Run",
+              "src_b": "Grand Targhee Resort",
               "sim": 0.85
             },
             {
               "date": "2026-07-05",
-              "title_a": "Wildflower Run",
-              "src_a": "Grand Targhee Resort",
-              "title_b": "Grand Targhee Wildflower Run",
-              "src_b": "RunningInTheUSA Jackson",
+              "title_a": "Grand Targhee Wildflower Run",
+              "src_a": "RunningInTheUSA Jackson",
+              "title_b": "Wildflower Run",
+              "src_b": "Grand Targhee Resort",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-12",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-19",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             },
             {
               "date": "2026-07-26",
-              "title_a": "Old 97's \u2014 Concerts on the Commons",
-              "src_a": "Dishing Jackson Hole",
-              "title_b": "Concerts on the Commons",
-              "src_b": "Jackson Hole Mountain Resort",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             }
           ]

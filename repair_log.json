@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-01T12:57:31.683906",
-  "audit_date": "2026-07-01",
+  "generated_at": "2026-07-02T12:29:35.248462",
+  "audit_date": "2026-07-02",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1793,
+      "before_count": 1779,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -24,11 +24,15 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 5,
           "examples": [
             {
               "title": "Old Town walking tour",
-              "had_span": 45
+              "had_span": 44
+            },
+            {
+              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
+              "had_span": 56
             },
             {
               "title": "Fascia Rolling Class",
@@ -126,7 +130,7 @@
           ]
         },
         "classification": {
-          "fixed": 410,
+          "fixed": 408,
           "examples": [
             {
               "title": "Challenge Accepted!",
@@ -136,11 +140,13 @@
               ]
             },
             {
-              "title": "Coffee & Calm: Designer Chats",
-              "before": [],
+              "title": "Forum Fest at Canyons Village",
+              "before": [
+                "Community"
+              ],
               "after": [
-                "Wellness",
-                "Education"
+                "Community",
+                "Festival"
               ]
             },
             {
@@ -151,38 +157,32 @@
               ]
             },
             {
-              "title": "2026 Oakley Rodeo BBQ",
-              "before": [
-                "Community"
-              ],
+              "title": "Summer Garden Camps",
+              "before": [],
               "after": [
-                "Community",
-                "Food & Drink",
-                "Sports",
-                "Kids",
-                "Family",
-                "Festival"
+                "Community"
               ]
             },
             {
-              "title": "A Spirited Paint Party with Artist Briar West",
+              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Food & Drink"
+                "Kids",
+                "Education"
               ]
             }
           ]
         }
       },
-      "after_count": 1796,
-      "total_fixes": 428
+      "after_count": 1782,
+      "total_fixes": 427
     },
     {
       "city": "elkhart-lake",
-      "before_count": 198,
+      "before_count": 197,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -225,35 +225,35 @@
           "examples": []
         }
       },
-      "after_count": 203,
+      "after_count": 202,
       "total_fixes": 2
     },
     {
       "city": "heber",
-      "before_count": 226,
+      "before_count": 231,
       "passes": {
         "past_dates": {
-          "fixed": 40,
+          "fixed": 41,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
-              "date": "2026-06-17"
+              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
+              "date": "2026-06-18"
             },
             {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Heber Midday Wednesday Ride @ Southfield Park",
-              "date": "2026-06-17"
+              "title": "Midway Art Gallery Open House",
+              "date": "2026-06-19"
             },
             {
-              "title": "Wasatch County Council Monthly Meetings",
-              "date": "2026-06-17"
+              "title": "Ritual Chocolate Public Tour and Mini Tasting",
+              "date": "2026-06-19"
             }
           ]
         },
@@ -266,7 +266,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 178
+              "had_span": 179
             }
           ]
         },
@@ -327,20 +327,8 @@
           ]
         },
         "classification": {
-          "fixed": 9,
+          "fixed": 8,
           "examples": [
-            {
-              "title": "Oakley PRCA Rodeo",
-              "before": [],
-              "after": [
-                "Food & Drink",
-                "Sports",
-                "Kids",
-                "Family",
-                "Festival",
-                "Community"
-              ]
-            },
             {
               "title": "Oakley PRCA Rodeo",
               "before": [],
@@ -383,16 +371,23 @@
               "after": [
                 "Sports"
               ]
+            },
+            {
+              "title": "Oakley Kids Fun Run 1k & 5k",
+              "before": [],
+              "after": [
+                "Kids"
+              ]
             }
           ]
         }
       },
-      "after_count": 188,
+      "after_count": 192,
       "total_fixes": 60
     },
     {
       "city": "jackson",
-      "before_count": 749,
+      "before_count": 676,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -403,11 +398,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 94
+              "had_span": 93
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 81
+              "had_span": 80
             }
           ]
         },
@@ -503,7 +498,7 @@
           "examples": []
         }
       },
-      "after_count": 780,
+      "after_count": 707,
       "total_fixes": 24
     }
   ]

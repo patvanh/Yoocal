@@ -1,20 +1,12 @@
 {
-  "generated_at": "2026-07-01T12:57:35.401753",
+  "generated_at": "2026-07-02T12:29:35.648115",
   "attempted": 1,
-  "applied": 1,
+  "applied": 0,
   "log": [
     {
       "city": "jackson",
-      "title": "60th Annual Elkfest Antler Auction",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/60th-annual-elkfest-antler-auction/3657/",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "60th Annual Elkfest Antler Auction",
-        "reasoning": "The source page text shows the exact same title '60th Annual Elkfest Antler Auction' with no additional text visible, confirming this is the complete title."
-      },
-      "applied": true,
-      "note": "title: '60th Annual Elkfest Antler Auction' \u2192 '60th Annual Elkfest Antler Auction'"
+      "skipped": "no event_index"
     }
   ]
 }
