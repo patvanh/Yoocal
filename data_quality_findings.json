@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-02",
+  "generated_at": "2026-07-03",
   "cities": {
     "all": {
-      "events": 4848,
+      "events": 4778,
       "findings": [
         {
           "code": "C1",
@@ -83,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 246,
-              "lost": 794
+              "now": 243,
+              "lost": 797
             },
             {
               "source": "Siebkens Resort",
@@ -97,7 +97,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 246,
+      "events": 244,
       "findings": [
         {
           "code": "C6",
@@ -116,11 +116,11 @@
       ]
     },
     "greenlake": {
-      "events": 273,
+      "events": 270,
       "findings": []
     },
     "heber": {
-      "events": 692,
+      "events": 693,
       "findings": [
         {
           "code": "C1",
@@ -194,15 +194,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 240,
-              "lost": 793
+              "now": 238,
+              "lost": 795
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1550,
+      "events": 1522,
       "findings": [
         {
           "code": "C5",

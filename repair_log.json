@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-02T12:29:35.248462",
-  "audit_date": "2026-07-02",
+  "generated_at": "2026-07-03T12:26:48.324736",
+  "audit_date": "2026-07-03",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1779,
+      "before_count": 1793,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -24,15 +24,11 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 5,
+          "fixed": 4,
           "examples": [
             {
-              "title": "Old Town walking tour",
-              "had_span": 44
-            },
-            {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 56
+              "had_span": 55
             },
             {
               "title": "Fascia Rolling Class",
@@ -49,7 +45,7 @@
           ]
         },
         "multi_day_splits": {
-          "fixed": 5,
+          "fixed": 6,
           "examples": [
             {
               "title": "Fox US Open of Mountain Biking",
@@ -130,7 +126,7 @@
           ]
         },
         "classification": {
-          "fixed": 408,
+          "fixed": 402,
           "examples": [
             {
               "title": "Challenge Accepted!",
@@ -141,23 +137,13 @@
             },
             {
               "title": "Forum Fest at Canyons Village",
-              "before": [
-                "Community"
-              ],
+              "before": [],
               "after": [
-                "Community",
                 "Festival"
               ]
             },
             {
               "title": "Old Town walking tour",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Summer Garden Camps",
               "before": [],
               "after": [
                 "Community"
@@ -173,16 +159,26 @@
                 "Kids",
                 "Education"
               ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
             }
           ]
         }
       },
-      "after_count": 1782,
-      "total_fixes": 427
+      "after_count": 1797,
+      "total_fixes": 421
     },
     {
       "city": "elkhart-lake",
-      "before_count": 197,
+      "before_count": 196,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -225,7 +221,7 @@
           "examples": []
         }
       },
-      "after_count": 202,
+      "after_count": 201,
       "total_fixes": 2
     },
     {
@@ -233,27 +229,27 @@
       "before_count": 231,
       "passes": {
         "past_dates": {
-          "fixed": 41,
+          "fixed": 42,
           "examples": [
-            {
-              "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
-              "date": "2026-06-15"
-            },
-            {
-              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
-              "date": "2026-06-18"
-            },
-            {
-              "title": "Meet the Cows - Dairy Farm Tour",
-              "date": "2026-06-15"
-            },
             {
               "title": "Midway Art Gallery Open House",
               "date": "2026-06-19"
             },
             {
+              "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
+              "date": "2026-06-15"
+            },
+            {
               "title": "Ritual Chocolate Public Tour and Mini Tasting",
               "date": "2026-06-19"
+            },
+            {
+              "title": "Anna's European Antiques Pop-Up Event",
+              "date": "2026-06-26"
+            },
+            {
+              "title": "Meet the Cows - Dairy Farm Tour",
+              "date": "2026-06-15"
             }
           ]
         },
@@ -266,7 +262,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 179
+              "had_span": 180
             }
           ]
         },
@@ -327,20 +323,8 @@
           ]
         },
         "classification": {
-          "fixed": 8,
+          "fixed": 7,
           "examples": [
-            {
-              "title": "Oakley PRCA Rodeo",
-              "before": [],
-              "after": [
-                "Food & Drink",
-                "Sports",
-                "Kids",
-                "Family",
-                "Festival",
-                "Community"
-              ]
-            },
             {
               "title": "Oakley PRCA Rodeo",
               "before": [],
@@ -378,16 +362,23 @@
               "after": [
                 "Kids"
               ]
+            },
+            {
+              "title": "Oakley July 4th Parade",
+              "before": [],
+              "after": [
+                "Family"
+              ]
             }
           ]
         }
       },
-      "after_count": 192,
+      "after_count": 191,
       "total_fixes": 60
     },
     {
       "city": "jackson",
-      "before_count": 676,
+      "before_count": 674,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -398,11 +389,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 93
+              "had_span": 92
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 80
+              "had_span": 79
             }
           ]
         },
@@ -498,7 +489,7 @@
           "examples": []
         }
       },
-      "after_count": 707,
+      "after_count": 705,
       "total_fixes": 24
     }
   ]
