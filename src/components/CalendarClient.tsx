@@ -827,6 +827,9 @@ function MultiFilterDropdown({
 
 export function EventsV2Embedded({ cityKeyProp, initialEvents }: { cityKeyProp?: string; initialEvents?: V2YocEvent[] } = {}) {
   const cityLabel = ({ parkcity: 'Park City', heber: 'Heber Valley', jackson: 'Jackson Hole', elkhartlake: 'Elkhart Lake', greenlake: 'Green Lake' } as Record<string, string>)[cityKeyProp || 'parkcity'] || 'your area'
+  // Per-city hero image (falls back to the generic /hero.webp). Fixes the hero
+  // not matching the city — e.g. Green Lake was showing a Park City street scene.
+  const heroImg = ({ greenlake: '/green-lake-hero.webp' } as Record<string, string>)[cityKeyProp || ''] || '/hero.webp'
   // Seed from server-provided events so the FIRST render (server-side) shows
   // real cards instead of a "Loading…" spinner — this is what paints the LCP
   // element fast. The client fetch below still runs to refresh + load other
@@ -1628,7 +1631,7 @@ export function EventsV2Embedded({ cityKeyProp, initialEvents }: { cityKeyProp?:
         margin: 0, padding: '96px 28px 8px',
         marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)', width: '100vw',
         borderRadius: '20px 20px 0 0',
-        background: "linear-gradient(180deg, rgba(26,24,48,0.35), rgba(26,24,48,0.62)), url('/hero.webp') center/cover no-repeat",
+        background: `linear-gradient(180deg, rgba(26,24,48,0.35), rgba(26,24,48,0.62)), url('${heroImg}') center/cover no-repeat`,
       }}>
         <div style={{ textAlign: 'center', marginBottom: 22 }}>
           <div role="presentation" style={{ fontFamily: "'DM Serif Display', serif", fontSize: 'clamp(44px, 6vw, 76px)', color: '#fff', lineHeight: 1.08, margin: 0 }}>
