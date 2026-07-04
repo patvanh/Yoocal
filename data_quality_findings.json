@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-03",
+  "generated_at": "2026-07-04",
   "cities": {
     "all": {
-      "events": 4778,
+      "events": 4711,
       "findings": [
         {
           "code": "C1",
@@ -41,22 +41,6 @@
               "sim": 0.85
             },
             {
-              "date": "2026-07-05",
-              "title_a": "Grand Targhee Wildflower Run",
-              "src_a": "RunningInTheUSA Jackson",
-              "title_b": "Wildflower Run",
-              "src_b": "Grand Targhee Resort",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-05",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City (sitemap)",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
               "date": "2026-07-11",
               "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
@@ -65,11 +49,27 @@
               "sim": 0.85
             },
             {
-              "date": "2026-07-12",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City (sitemap)",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
+              "date": "2026-07-18",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-25",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-01",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
               "sim": 0.85
             }
           ]
@@ -78,26 +78,32 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 2,
+          "count": 3,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 243,
-              "lost": 797
+              "now": 233,
+              "lost": 807
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
               "now": 18,
               "lost": 258
+            },
+            {
+              "source": "Oakley City",
+              "was": 14,
+              "now": 6,
+              "lost": 8
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 244,
+      "events": 239,
       "findings": [
         {
           "code": "C6",
@@ -116,11 +122,11 @@
       ]
     },
     "greenlake": {
-      "events": 270,
+      "events": 262,
       "findings": []
     },
     "heber": {
-      "events": 693,
+      "events": 680,
       "findings": [
         {
           "code": "C1",
@@ -194,15 +200,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 238,
-              "lost": 795
+              "now": 227,
+              "lost": 806
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1522,
+      "events": 1509,
       "findings": [
         {
           "code": "C5",
@@ -255,5 +261,5 @@
       ]
     }
   },
-  "high_total": 7
+  "high_total": 8
 }
