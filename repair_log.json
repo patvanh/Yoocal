@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-04T11:42:49.455278",
-  "audit_date": "2026-07-04",
+  "generated_at": "2026-07-05T11:51:22.049151",
+  "audit_date": "2026-07-05",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1766,
+      "before_count": 1749,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -28,7 +28,7 @@
           "examples": [
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 54
+              "had_span": 53
             },
             {
               "title": "Fascia Rolling Class",
@@ -126,8 +126,15 @@
           ]
         },
         "classification": {
-          "fixed": 394,
+          "fixed": 386,
           "examples": [
+            {
+              "title": "Challenge Accepted!",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
             {
               "title": "Old Town walking tour",
               "before": [],
@@ -136,32 +143,23 @@
               ]
             },
             {
-              "title": "Coffee Chat with the CEO",
+              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Education"
+                "Food & Drink"
               ]
             },
             {
-              "title": "Coffee Chat with the CEO",
+              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Education"
-              ]
-            },
-            {
-              "title": "Coffee Chat with the CEO",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
+                "Kids",
                 "Education"
               ]
             },
@@ -178,12 +176,12 @@
           ]
         }
       },
-      "after_count": 1770,
-      "total_fixes": 413
+      "after_count": 1753,
+      "total_fixes": 405
     },
     {
       "city": "elkhart-lake",
-      "before_count": 191,
+      "before_count": 189,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -226,35 +224,35 @@
           "examples": []
         }
       },
-      "after_count": 196,
+      "after_count": 194,
       "total_fixes": 2
     },
     {
       "city": "heber",
-      "before_count": 233,
+      "before_count": 214,
       "passes": {
         "past_dates": {
-          "fixed": 46,
+          "fixed": 48,
           "examples": [
-            {
-              "title": "Midway Art Gallery Open House",
-              "date": "2026-06-19"
-            },
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Free Yoga @ Midway Town Square",
-              "date": "2026-06-27"
+              "title": "Live Music @ Caf\u00e9 Galleria",
+              "date": "2026-06-19"
             },
             {
               "title": "Commemorative Air Force Museum Tours",
               "date": "2026-06-20"
             },
             {
-              "title": "Saturday Midway Farmers Market",
+              "title": "Live Music @ Back 40 Restaurant",
               "date": "2026-06-20"
+            },
+            {
+              "title": "Yoga in the Lavender Field @ Blue Canyon Lavender Farm",
+              "date": "2026-06-15"
             }
           ]
         },
@@ -328,57 +326,24 @@
           ]
         },
         "classification": {
-          "fixed": 6,
+          "fixed": 1,
           "examples": [
-            {
-              "title": "Oakley PRCA Rodeo",
-              "before": [],
-              "after": [
-                "Food & Drink",
-                "Sports",
-                "Kids",
-                "Family",
-                "Festival",
-                "Community"
-              ]
-            },
             {
               "title": "Xtreme Bulls \u2014 Presented by Grade Tech",
               "before": [],
               "after": [
                 "Sports"
               ]
-            },
-            {
-              "title": "Oakley Kids Fun Run 1k & 5k",
-              "before": [],
-              "after": [
-                "Kids"
-              ]
-            },
-            {
-              "title": "Oakley July 4th Parade",
-              "before": [],
-              "after": [
-                "Family"
-              ]
-            },
-            {
-              "title": "Patriotic Program \u2014 Oakley Red Barn",
-              "before": [],
-              "after": [
-                "Community"
-              ]
             }
           ]
         }
       },
-      "after_count": 189,
-      "total_fixes": 63
+      "after_count": 168,
+      "total_fixes": 60
     },
     {
       "city": "jackson",
-      "before_count": 662,
+      "before_count": 647,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -389,11 +354,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 91
+              "had_span": 90
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 78
+              "had_span": 77
             }
           ]
         },
@@ -450,7 +415,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 13,
+          "fixed": 11,
           "examples": [
             {
               "title": "Karaoke at The Virginian Saloon",
@@ -465,19 +430,19 @@
               "duration_hours": 0.5
             },
             {
-              "title": "Red, White and Tunes Saturday Show",
-              "start_time": "6:00 PM",
-              "new_end_time": "8:00 PM",
-              "duration_hours": 2
-            },
-            {
-              "title": "Red, White and Tunes Sunday Show",
+              "title": "Rattlesnake Milk | Concerts on the Commons",
               "start_time": "5:00 PM",
-              "new_end_time": "7:00 PM",
-              "duration_hours": 2
+              "new_end_time": "8:00 PM",
+              "duration_hours": 3
             },
             {
-              "title": "Concerts on the Commons",
+              "title": "Teton Toss #11 Disc Golf Tournament",
+              "start_time": "9:00 AM",
+              "new_end_time": "10:00 AM",
+              "duration_hours": 1
+            },
+            {
+              "title": "Object Heavy | Concerts on the Commons",
               "start_time": "5:00 PM",
               "new_end_time": "8:00 PM",
               "duration_hours": 3
@@ -489,8 +454,8 @@
           "examples": []
         }
       },
-      "after_count": 693,
-      "total_fixes": 23
+      "after_count": 678,
+      "total_fixes": 21
     }
   ]
 }

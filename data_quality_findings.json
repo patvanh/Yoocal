@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-04",
+  "generated_at": "2026-07-05",
   "cities": {
     "all": {
-      "events": 4711,
+      "events": 4651,
       "findings": [
         {
           "code": "C1",
@@ -13,7 +13,7 @@
             {
               "title": "Guided Hike + Forest Bathing",
               "venue": "grand hyatt deer valley",
-              "only_date": "2026-07-04",
+              "only_date": "2026-07-11",
               "why": "recurrence-field",
               "source": "Heber Valley Tourism"
             },
@@ -33,7 +33,7 @@
           "count": 30,
           "examples": [
             {
-              "date": "2026-07-04",
+              "date": "2026-07-05",
               "title_a": "Grand Targhee Wildflower Run",
               "src_a": "RunningInTheUSA Jackson",
               "title_b": "Wildflower Run",
@@ -41,35 +41,35 @@
               "sim": 0.85
             },
             {
-              "date": "2026-07-11",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-07-05",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             },
             {
-              "date": "2026-07-18",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-07-05",
+              "title_a": "Red, White and Tunes",
+              "src_a": "Jackson Hole Chamber of Commerce",
+              "title_b": "Francis Ambrose Duo | Red, White and Tunes",
+              "src_b": "Jackson Hole Mountain Resort",
               "sim": 0.85
             },
             {
-              "date": "2026-07-25",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-07-05",
+              "title_a": "Red, White and Tunes",
+              "src_a": "Jackson Hole Chamber of Commerce",
+              "title_b": "DJ Scutty | Red, White and Tunes",
+              "src_b": "Jackson Hole Mountain Resort",
               "sim": 0.85
             },
             {
-              "date": "2026-08-01",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-07-12",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             }
           ]
@@ -83,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 233,
-              "lost": 807
+              "now": 220,
+              "lost": 820
             },
             {
               "source": "Siebkens Resort",
@@ -95,15 +95,15 @@
             {
               "source": "Oakley City",
               "was": 14,
-              "now": 6,
-              "lost": 8
+              "now": 1,
+              "lost": 13
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 239,
+      "events": 236,
       "findings": [
         {
           "code": "C6",
@@ -122,11 +122,11 @@
       ]
     },
     "greenlake": {
-      "events": 262,
+      "events": 254,
       "findings": []
     },
     "heber": {
-      "events": 680,
+      "events": 658,
       "findings": [
         {
           "code": "C1",
@@ -137,7 +137,7 @@
             {
               "title": "Guided Hike + Forest Bathing",
               "venue": "grand hyatt deer valley",
-              "only_date": "2026-07-04",
+              "only_date": "2026-07-11",
               "why": "recurrence-field",
               "source": "Heber Valley Tourism"
             }
@@ -147,16 +147,8 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 11,
+          "count": 10,
           "examples": [
-            {
-              "date": "2026-07-11",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
             {
               "date": "2026-07-18",
               "title_a": "Heber's Saturday Sunset Music Series",
@@ -188,6 +180,14 @@
               "title_b": "Saturday Sunset Music Series",
               "src_b": "Heber Valley Tourism",
               "sim": 0.85
+            },
+            {
+              "date": "2026-08-01",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
             }
           ]
         },
@@ -200,24 +200,24 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 227,
-              "lost": 806
+              "now": 215,
+              "lost": 818
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1509,
+      "events": 1487,
       "findings": [
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 8,
+          "count": 9,
           "examples": [
             {
-              "date": "2026-07-04",
+              "date": "2026-07-05",
               "title_a": "Grand Targhee Wildflower Run",
               "src_a": "RunningInTheUSA Jackson",
               "title_b": "Wildflower Run",
@@ -226,10 +226,18 @@
             },
             {
               "date": "2026-07-05",
-              "title_a": "Grand Targhee Wildflower Run",
-              "src_a": "RunningInTheUSA Jackson",
-              "title_b": "Wildflower Run",
-              "src_b": "Grand Targhee Resort",
+              "title_a": "Red, White and Tunes",
+              "src_a": "Jackson Hole Chamber of Commerce",
+              "title_b": "Francis Ambrose Duo | Red, White and Tunes",
+              "src_b": "Jackson Hole Mountain Resort",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-05",
+              "title_a": "Red, White and Tunes",
+              "src_a": "Jackson Hole Chamber of Commerce",
+              "title_b": "DJ Scutty | Red, White and Tunes",
+              "src_b": "Jackson Hole Mountain Resort",
               "sim": 0.85
             },
             {
@@ -242,14 +250,6 @@
             },
             {
               "date": "2026-07-19",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-26",
               "title_a": "Sunday Funday",
               "src_a": "Jackson Hole Mountain Resort",
               "title_b": "Sunday Fundays, Concert on the Commons Series",

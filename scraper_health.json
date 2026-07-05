@@ -1,68 +1,68 @@
 {
-  "checked_at": "2026-07-04T05:42:50.265777-06:00",
-  "today": "2026-07-04",
+  "checked_at": "2026-07-05T05:51:22.809013-06:00",
+  "today": "2026-07-05",
   "cities": {
     "park-city": [
       {
         "source": "The Park Record",
-        "actual": 892,
-        "baseline": 880.1,
+        "actual": 880,
+        "baseline": 884.3,
         "floor": 300,
         "severity": "OK",
-        "message": "actual=892, baseline=880"
+        "message": "actual=880, baseline=884"
       },
       {
         "source": "Park City Annual Events",
-        "actual": 362,
-        "baseline": 370.1,
+        "actual": 359,
+        "baseline": 368.1,
         "floor": 200,
         "severity": "OK",
-        "message": "actual=362, baseline=370"
+        "message": "actual=359, baseline=368"
       },
       {
         "source": "Mountain Town Music",
-        "actual": 194,
-        "baseline": 212.9,
+        "actual": 191,
+        "baseline": 208.3,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=194, baseline=213"
+        "message": "actual=191, baseline=208"
       },
       {
         "source": "Deer Valley Resort",
         "actual": 68,
-        "baseline": 67.6,
+        "baseline": 67.4,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=68, baseline=68"
+        "message": "actual=68, baseline=67"
       },
       {
         "source": "Visit Park City",
         "actual": 66,
-        "baseline": 82,
+        "baseline": 76.9,
         "floor": 15,
         "severity": "OK",
-        "message": "actual=66, baseline=82"
+        "message": "actual=66, baseline=77"
       },
       {
         "source": "Visit Park City (sitemap)",
-        "actual": 59,
-        "baseline": 49.6,
+        "actual": 60,
+        "baseline": 52.9,
         "floor": 15,
         "severity": "OK",
-        "message": "actual=59, baseline=50"
+        "message": "actual=60, baseline=53"
       },
       {
         "source": "KPCW Community Calendar",
-        "actual": 51,
-        "baseline": 48.3,
+        "actual": 47,
+        "baseline": 49.1,
         "floor": null,
         "severity": "OK",
-        "message": "actual=51, baseline=48"
+        "message": "actual=47, baseline=49"
       },
       {
         "source": "Park City Farmers Market",
         "actual": 16,
-        "baseline": 16.7,
+        "baseline": 16.6,
         "floor": 10,
         "severity": "OK",
         "message": "actual=16, baseline=17"
@@ -78,26 +78,34 @@
       {
         "source": "Park City Opera",
         "actual": 11,
-        "baseline": 11.7,
+        "baseline": 11.4,
         "floor": null,
         "severity": "OK",
-        "message": "actual=11, baseline=12"
+        "message": "actual=11, baseline=11"
       },
       {
         "source": "Mountain Trails Foundation",
         "actual": 8,
-        "baseline": 8.6,
+        "baseline": 8.4,
         "floor": null,
         "severity": "OK",
-        "message": "actual=8, baseline=9"
+        "message": "actual=8, baseline=8"
       },
       {
         "source": "Park Silly Sunday Market",
         "actual": 7,
-        "baseline": 7.3,
+        "baseline": 7.1,
         "floor": null,
         "severity": "OK",
         "message": "actual=7, baseline=7"
+      },
+      {
+        "source": "Running in the USA",
+        "actual": 6,
+        "baseline": 5.6,
+        "floor": null,
+        "severity": "OK",
+        "message": "actual=6, baseline=6"
       },
       {
         "source": "Deer Valley Music Festival",
@@ -124,14 +132,6 @@
         "message": "actual=6, baseline=6"
       },
       {
-        "source": "Running in the USA",
-        "actual": 2,
-        "baseline": 6.3,
-        "floor": null,
-        "severity": "DEGRADED",
-        "message": "actual=2, baseline=6 (32% of normal)"
-      },
-      {
         "source": "Park City Song Summit",
         "actual": 1,
         "baseline": 1,
@@ -143,24 +143,24 @@
     "elkhart-lake": [
       {
         "source": "Elkhart Lake Tourism",
-        "actual": 109,
-        "baseline": 116.1,
+        "actual": 108,
+        "baseline": 114.1,
         "floor": 50,
         "severity": "OK",
-        "message": "actual=109, baseline=116"
+        "message": "actual=108, baseline=114"
       },
       {
         "source": "The Osthoff Resort",
-        "actual": 54,
-        "baseline": 56.4,
+        "actual": 53,
+        "baseline": 55.7,
         "floor": null,
         "severity": "OK",
-        "message": "actual=54, baseline=56"
+        "message": "actual=53, baseline=56"
       },
       {
         "source": "Siebkens Resort",
         "actual": 22,
-        "baseline": 22.7,
+        "baseline": 22.6,
         "floor": null,
         "severity": "OK",
         "message": "actual=22, baseline=23"
@@ -168,10 +168,10 @@
       {
         "source": "Road America",
         "actual": 10,
-        "baseline": 10.7,
+        "baseline": 10.4,
         "floor": null,
         "severity": "OK",
-        "message": "actual=10, baseline=11"
+        "message": "actual=10, baseline=10"
       },
       {
         "source": "Village of Elkhart Lake",
@@ -185,24 +185,24 @@
     "heber": [
       {
         "source": "Heber Valley Tourism",
-        "actual": 81,
-        "baseline": 82.6,
+        "actual": 75,
+        "baseline": 80.9,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=81, baseline=83"
+        "message": "actual=75, baseline=81"
       },
       {
         "source": "Heber Valley Life",
-        "actual": 37,
-        "baseline": 28,
+        "actual": 31,
+        "baseline": 30.3,
         "floor": 10,
         "severity": "OK",
-        "message": "actual=37, baseline=28"
+        "message": "actual=31, baseline=30"
       },
       {
         "source": "TownLift",
         "actual": 28,
-        "baseline": 27.9,
+        "baseline": 27.6,
         "floor": null,
         "severity": "OK",
         "message": "actual=28, baseline=28"
@@ -210,26 +210,10 @@
       {
         "source": "Wasatch County Parks & Rec",
         "actual": 26,
-        "baseline": 24.9,
+        "baseline": 25.1,
         "floor": null,
         "severity": "OK",
         "message": "actual=26, baseline=25"
-      },
-      {
-        "source": "Oakley City",
-        "actual": 6,
-        "baseline": 9.9,
-        "floor": null,
-        "severity": "DEGRADED",
-        "message": "actual=6, baseline=10 (61% of normal)"
-      },
-      {
-        "source": "KPCW Community Calendar",
-        "actual": 4,
-        "baseline": 3.1,
-        "floor": null,
-        "severity": "OK",
-        "message": "actual=4, baseline=3"
       },
       {
         "source": "RunSignup",
@@ -240,125 +224,133 @@
         "message": "actual=3, baseline=3"
       },
       {
-        "source": "Salt Lake Running Co",
+        "source": "KPCW Community Calendar",
         "actual": 2,
-        "baseline": 2,
+        "baseline": 3.3,
         "floor": null,
-        "severity": "OK",
-        "message": "actual=2, baseline=2"
+        "severity": "DEGRADED",
+        "message": "actual=2, baseline=3 (61% of normal)"
       },
       {
-        "source": "RunningInTheUSA Heber",
+        "source": "Salt Lake Running Co",
         "actual": 1,
-        "baseline": 1.2,
+        "baseline": 2,
         "floor": null,
-        "severity": "OK",
-        "message": "actual=1, baseline=1"
+        "severity": "DEGRADED",
+        "message": "actual=1, baseline=2 (50% of normal)"
       },
       {
         "source": "The Dainty Pear Co.",
         "actual": 1,
-        "baseline": 2.7,
+        "baseline": 2.3,
         "floor": null,
         "severity": "DEGRADED",
-        "message": "actual=1, baseline=3 (37% of normal)"
+        "message": "actual=1, baseline=2 (44% of normal)"
+      },
+      {
+        "source": "Oakley City",
+        "actual": 1,
+        "baseline": 9,
+        "floor": null,
+        "severity": "SEVERE",
+        "message": "actual=1, baseline=9 (11% of normal)"
       }
     ],
     "jackson": [
       {
         "source": "Jackson Hole Chamber of Commerce",
-        "actual": 169,
-        "baseline": 173.7,
+        "actual": 164,
+        "baseline": 172.7,
         "floor": 100,
         "severity": "OK",
-        "message": "actual=169, baseline=174"
+        "message": "actual=164, baseline=173"
       },
       {
         "source": "Jackson Hole Mountain Resort",
-        "actual": 154,
-        "baseline": 161.1,
+        "actual": 150,
+        "baseline": 159,
         "floor": null,
         "severity": "OK",
-        "message": "actual=154, baseline=161"
+        "message": "actual=150, baseline=159"
       },
       {
         "source": "The Cloudveil",
-        "actual": 90,
-        "baseline": 97.1,
+        "actual": 89,
+        "baseline": 95.6,
         "floor": 20,
         "severity": "OK",
-        "message": "actual=90, baseline=97"
+        "message": "actual=89, baseline=96"
       },
       {
         "source": "Grand Teton Music Festival",
-        "actual": 76,
-        "baseline": 80.6,
+        "actual": 74,
+        "baseline": 79.7,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=76, baseline=81"
+        "message": "actual=74, baseline=80"
       },
       {
         "source": "National Museum of Wildlife Art",
         "actual": 61,
-        "baseline": 61.9,
+        "baseline": 61.7,
         "floor": null,
         "severity": "OK",
         "message": "actual=61, baseline=62"
       },
       {
         "source": "Million Dollar Cowboy Bar",
-        "actual": 59,
-        "baseline": 63,
+        "actual": 58,
+        "baseline": 62,
         "floor": null,
         "severity": "OK",
-        "message": "actual=59, baseline=63"
+        "message": "actual=58, baseline=62"
       },
       {
         "source": "Center for the Arts Jackson Hole",
         "actual": 43,
-        "baseline": 40.4,
+        "baseline": 40.7,
         "floor": 30,
         "severity": "OK",
-        "message": "actual=43, baseline=40"
+        "message": "actual=43, baseline=41"
       },
       {
-        "source": "RunningInTheUSA Jackson",
+        "source": "Snow King Mountain",
         "actual": 14,
-        "baseline": 14,
+        "baseline": 14.4,
         "floor": null,
         "severity": "OK",
         "message": "actual=14, baseline=14"
       },
       {
-        "source": "Snow King Mountain",
-        "actual": 14,
-        "baseline": 14.7,
+        "source": "RunningInTheUSA Jackson",
+        "actual": 13,
+        "baseline": 14,
         "floor": null,
         "severity": "OK",
-        "message": "actual=14, baseline=15"
+        "message": "actual=13, baseline=14"
       },
       {
         "source": "Grand Targhee Resort",
-        "actual": 13,
+        "actual": 12,
         "baseline": 13,
         "floor": null,
         "severity": "OK",
-        "message": "actual=13, baseline=13"
+        "message": "actual=12, baseline=13"
       }
     ],
     "green-lake": [
       {
         "source": "chamber.visitgreenlake.com",
         "actual": 123,
-        "baseline": 127,
+        "baseline": 125,
         "floor": 80,
         "severity": "OK",
-        "message": "actual=123, baseline=127"
+        "message": "actual=123, baseline=125"
       },
       {
         "source": "thrasheroperahouse.com",
         "actual": 30,
-        "baseline": 30.3,
+        "baseline": 30.1,
         "floor": 12,
         "severity": "OK",
         "message": "actual=30, baseline=30"
@@ -382,15 +374,15 @@
       {
         "source": "greenlaketownsquare.org",
         "actual": 5,
-        "baseline": 4.1,
+        "baseline": 4.6,
         "floor": null,
         "severity": "OK",
-        "message": "actual=5, baseline=4"
+        "message": "actual=5, baseline=5"
       },
       {
         "source": "thenorthwestern.com",
         "actual": 5,
-        "baseline": 3.9,
+        "baseline": 4.4,
         "floor": 10,
         "severity": "CRITICAL",
         "message": "actual=5, floor=10 (below catastrophic threshold)"
@@ -414,7 +406,7 @@
       {
         "source": "iceboat.org",
         "actual": 4,
-        "baseline": 4.3,
+        "baseline": 4.1,
         "floor": null,
         "severity": "OK",
         "message": "actual=4, baseline=4"
@@ -430,7 +422,7 @@
       {
         "source": "greenlakelibrary.org",
         "actual": 3,
-        "baseline": 3.3,
+        "baseline": 3.1,
         "floor": null,
         "severity": "OK",
         "message": "actual=3, baseline=3"
@@ -478,6 +470,12 @@
     ]
   },
   "critical_alerts": [
+    {
+      "city": "heber",
+      "source": "Oakley City",
+      "severity": "SEVERE",
+      "message": "actual=1, baseline=9 (11% of normal)"
+    },
     {
       "city": "green-lake",
       "source": "thenorthwestern.com",
