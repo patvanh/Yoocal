@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-05",
+  "generated_at": "2026-07-06",
   "cities": {
     "all": {
-      "events": 4651,
+      "events": 4717,
       "findings": [
         {
           "code": "C1",
@@ -30,46 +30,46 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 30,
+          "count": 26,
           "examples": [
-            {
-              "date": "2026-07-05",
-              "title_a": "Grand Targhee Wildflower Run",
-              "src_a": "RunningInTheUSA Jackson",
-              "title_b": "Wildflower Run",
-              "src_b": "Grand Targhee Resort",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-05",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City (sitemap)",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-05",
-              "title_a": "Red, White and Tunes",
-              "src_a": "Jackson Hole Chamber of Commerce",
-              "title_b": "Francis Ambrose Duo | Red, White and Tunes",
-              "src_b": "Jackson Hole Mountain Resort",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-05",
-              "title_a": "Red, White and Tunes",
-              "src_a": "Jackson Hole Chamber of Commerce",
-              "title_b": "DJ Scutty | Red, White and Tunes",
-              "src_b": "Jackson Hole Mountain Resort",
-              "sim": 0.85
-            },
             {
               "date": "2026-07-12",
               "title_a": "Stein's Famous Sunday Brunch",
               "src_a": "Visit Park City (sitemap)",
               "title_b": "Sunday Brunch",
               "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-12",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-18",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-19",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-19",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             }
           ]
@@ -78,19 +78,25 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 3,
+          "count": 4,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 220,
-              "lost": 820
+              "now": 211,
+              "lost": 829
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
               "now": 18,
               "lost": 258
+            },
+            {
+              "source": "Dishing Jackson Hole",
+              "was": 116,
+              "now": 57,
+              "lost": 59
             },
             {
               "source": "Oakley City",
@@ -103,7 +109,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 236,
+      "events": 230,
       "findings": [
         {
           "code": "C6",
@@ -122,11 +128,11 @@
       ]
     },
     "greenlake": {
-      "events": 254,
+      "events": 251,
       "findings": []
     },
     "heber": {
-      "events": 658,
+      "events": 650,
       "findings": [
         {
           "code": "C1",
@@ -200,46 +206,22 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 215,
-              "lost": 818
+              "now": 206,
+              "lost": 827
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1487,
+      "events": 1523,
       "findings": [
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 9,
+          "count": 6,
           "examples": [
-            {
-              "date": "2026-07-05",
-              "title_a": "Grand Targhee Wildflower Run",
-              "src_a": "RunningInTheUSA Jackson",
-              "title_b": "Wildflower Run",
-              "src_b": "Grand Targhee Resort",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-05",
-              "title_a": "Red, White and Tunes",
-              "src_a": "Jackson Hole Chamber of Commerce",
-              "title_b": "Francis Ambrose Duo | Red, White and Tunes",
-              "src_b": "Jackson Hole Mountain Resort",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-05",
-              "title_a": "Red, White and Tunes",
-              "src_a": "Jackson Hole Chamber of Commerce",
-              "title_b": "DJ Scutty | Red, White and Tunes",
-              "src_b": "Jackson Hole Mountain Resort",
-              "sim": 0.85
-            },
             {
               "date": "2026-07-12",
               "title_a": "Sunday Funday",
@@ -255,11 +237,49 @@
               "title_b": "Sunday Fundays, Concert on the Commons Series",
               "src_b": "Dishing Jackson Hole",
               "sim": 0.85
+            },
+            {
+              "date": "2026-07-26",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-02",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-09",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            }
+          ]
+        },
+        {
+          "code": "C6",
+          "name": "COVERAGE-CLIFF",
+          "severity": "HIGH",
+          "count": 1,
+          "examples": [
+            {
+              "source": "Dishing Jackson Hole",
+              "was": 116,
+              "now": 57,
+              "lost": 59
             }
           ]
         }
       ]
     }
   },
-  "high_total": 8
+  "high_total": 10
 }
