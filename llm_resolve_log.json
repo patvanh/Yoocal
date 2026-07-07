@@ -1,12 +1,33 @@
 {
-  "generated_at": "2026-07-06T13:42:33.683383",
-  "attempted": 1,
-  "applied": 0,
+  "generated_at": "2026-07-07T12:48:21.890477",
+  "attempted": 2,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
+      "title": "JH Elks Charity Classic Golf Tournament",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://www.jacksonholechamber.com/event/jh-elks-charity-classic-golf-tournament/3704/",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only contains 'JH Elks Charity Classic Golf Tournament' which matches the current title, with no additional information to expand it."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
+    },
+    {
+      "city": "jackson",
+      "title": "Western Visions\u00ae Show + Sale",
+      "type": "title_truncated",
+      "link": "https://www.jacksonholechamber.com/event/western-visions%c2%ae-show-%2b-sale/3085/",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Western Visions\u00ae Show + Sale",
+        "reasoning": "The source page text shows 'Western Visions\u00ae Show + Sale' as a complete standalone title with no additional text or truncation indicators present."
+      },
+      "applied": true,
+      "note": "title: 'Western Visions\u00ae Show + Sale' \u2192 'Western Visions\u00ae Show + Sale'"
     }
   ]
 }

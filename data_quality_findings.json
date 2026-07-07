@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-06",
+  "generated_at": "2026-07-07",
   "cities": {
     "all": {
-      "events": 4717,
+      "events": 4606,
       "findings": [
         {
           "code": "C1",
@@ -30,7 +30,7 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 26,
+          "count": 28,
           "examples": [
             {
               "date": "2026-07-12",
@@ -46,6 +46,14 @@
               "src_a": "Jackson Hole Mountain Resort",
               "title_b": "Sunday Fundays, Concert on the Commons Series",
               "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-13",
+              "title_a": "Puppet Sho",
+              "src_a": "The Park Record",
+              "title_b": "Puppet Show @ Wasatch County Library",
+              "src_b": "Heber Valley Tourism",
               "sim": 0.85
             },
             {
@@ -63,14 +71,6 @@
               "title_b": "Sunday Brunch",
               "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
-            },
-            {
-              "date": "2026-07-19",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
             }
           ]
         },
@@ -83,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 211,
-              "lost": 829
+              "now": 215,
+              "lost": 825
             },
             {
               "source": "Siebkens Resort",
@@ -95,21 +95,21 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 57,
-              "lost": 59
+              "now": 56,
+              "lost": 60
             },
             {
               "source": "Oakley City",
               "was": 14,
-              "now": 1,
-              "lost": 13
+              "now": 0,
+              "lost": 14
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 230,
+      "events": 228,
       "findings": [
         {
           "code": "C6",
@@ -128,11 +128,28 @@
       ]
     },
     "greenlake": {
-      "events": 251,
-      "findings": []
+      "events": 222,
+      "findings": [
+        {
+          "code": "C5",
+          "name": "CROSS-SOURCE-DUP",
+          "severity": "MED",
+          "count": 1,
+          "examples": [
+            {
+              "date": "2026-09-05",
+              "title_a": "Ultramarathon Green Lake Area 13dot1 Races - 2026",
+              "src_a": "fleetfeet.com",
+              "title_b": "13dot1",
+              "src_b": "visitgreenlake.com",
+              "sim": 0.85
+            }
+          ]
+        }
+      ]
     },
     "heber": {
-      "events": 650,
+      "events": 652,
       "findings": [
         {
           "code": "C1",
@@ -153,7 +170,7 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 10,
+          "count": 11,
           "examples": [
             {
               "date": "2026-07-18",
@@ -180,15 +197,15 @@
               "sim": 0.85
             },
             {
-              "date": "2026-07-25",
-              "title_a": "Heber's Saturday Sunset Music Series",
+              "date": "2026-07-13",
+              "title_a": "Puppet Sho",
               "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
+              "title_b": "Puppet Show @ Wasatch County Library",
               "src_b": "Heber Valley Tourism",
               "sim": 0.85
             },
             {
-              "date": "2026-08-01",
+              "date": "2026-07-25",
               "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
               "title_b": "Saturday Sunset Music Series",
@@ -206,15 +223,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 206,
-              "lost": 827
+              "now": 211,
+              "lost": 822
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1523,
+      "events": 1507,
       "findings": [
         {
           "code": "C5",
@@ -273,8 +290,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 57,
-              "lost": 59
+              "now": 56,
+              "lost": 60
             }
           ]
         }
