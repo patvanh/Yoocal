@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-07-07T12:48:21.890477",
+  "generated_at": "2026-07-08T11:58:59.163808",
   "attempted": 2,
-  "applied": 1,
+  "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "JH Elks Charity Classic Golf Tournament",
+      "title": "Parcels King Concert",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/jh-elks-charity-classic-golf-tournament/3704/",
+      "link": "https://snowkingmountain.com/event/parcels-king-concert/",
       "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source page text only contains 'JH Elks Charity Classic Golf Tournament' which matches the current title, with no additional information to expand it."
+        "confidence": "high",
+        "new_title": "Parcels King Concert - Snow King Mountain Resort",
+        "reasoning": "The source page text shows the complete title includes the venue 'Snow King Mountain Resort' which matches the location Jackson, WY where Snow King Mountain Resort is located."
       },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "applied": true,
+      "note": "title: 'Parcels King Concert' \u2192 'Parcels King Concert - Snow King Mountain Resort'"
     },
     {
       "city": "jackson",
-      "title": "Western Visions\u00ae Show + Sale",
+      "title": "High Noon Chili Cook-off: Old West Days",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/western-visions%c2%ae-show-%2b-sale/3085/",
+      "link": "https://www.jacksonholechamber.com/event/high-noon-chili-cook-off%3a-old-west-days/3656/",
       "resolution": {
         "confidence": "high",
-        "new_title": "Western Visions\u00ae Show + Sale",
-        "reasoning": "The source page text shows 'Western Visions\u00ae Show + Sale' as a complete standalone title with no additional text or truncation indicators present."
+        "new_title": "High Noon Chili Cook-off: Old West Days",
+        "reasoning": "The title appears complete in the source text and matches the current title exactly, with no evidence of truncation."
       },
       "applied": true,
-      "note": "title: 'Western Visions\u00ae Show + Sale' \u2192 'Western Visions\u00ae Show + Sale'"
+      "note": "title: 'High Noon Chili Cook-off: Old West Days' \u2192 'High Noon Chili Cook-off: Old West Days'"
     }
   ]
 }

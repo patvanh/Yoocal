@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-07T12:48:15.416271",
-  "audit_date": "2026-07-07",
+  "generated_at": "2026-07-08T11:58:53.079918",
+  "audit_date": "2026-07-08",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1734,
+      "before_count": 1739,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -27,8 +27,8 @@
           "fixed": 4,
           "examples": [
             {
-              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 51
+              "title": "Old Town walking tour",
+              "had_span": 38
             },
             {
               "title": "Fascia Rolling Class",
@@ -136,7 +136,7 @@
               ]
             },
             {
-              "title": "Summer Garden Camps",
+              "title": "Old Town walking tour",
               "before": [],
               "after": [
                 "Community"
@@ -176,12 +176,12 @@
           ]
         }
       },
-      "after_count": 1738,
+      "after_count": 1743,
       "total_fixes": 403
     },
     {
       "city": "elkhart-lake",
-      "before_count": 182,
+      "before_count": 183,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -224,35 +224,35 @@
           "examples": []
         }
       },
-      "after_count": 187,
+      "after_count": 188,
       "total_fixes": 2
     },
     {
       "city": "heber",
-      "before_count": 213,
+      "before_count": 214,
       "passes": {
         "past_dates": {
-          "fixed": 50,
+          "fixed": 52,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
+              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+              "date": "2026-06-17"
+            },
+            {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Heber City Council Monthly Meetings",
-              "date": "2026-06-16"
+              "title": "Heber Midday Wednesday Ride @ Southfield Park",
+              "date": "2026-06-17"
             },
             {
-              "title": "Midway City Council Monthly Meetings",
-              "date": "2026-06-16"
-            },
-            {
-              "title": "Heber's No Reading Book Club",
-              "date": "2026-06-23"
+              "title": "Open Art Studio Night @ Alchemy Art Studio",
+              "date": "2026-06-17"
             }
           ]
         },
@@ -265,7 +265,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 177
+              "had_span": 178
             }
           ]
         },
@@ -330,12 +330,12 @@
           "examples": []
         }
       },
-      "after_count": 165,
-      "total_fixes": 61
+      "after_count": 164,
+      "total_fixes": 63
     },
     {
       "city": "jackson",
-      "before_count": 635,
+      "before_count": 632,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -346,15 +346,15 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 88
+              "had_span": 87
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 75
+              "had_span": 74
             },
             {
               "title": "Take-a-Tour Tuesday",
-              "had_span": 160
+              "had_span": 161
             }
           ]
         },
@@ -450,7 +450,7 @@
           "examples": []
         }
       },
-      "after_count": 666,
+      "after_count": 663,
       "total_fixes": 22
     }
   ]

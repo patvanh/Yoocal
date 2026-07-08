@@ -1,18 +1,4 @@
 {
-  "generated_at": "2026-07-07T12:48:21.890642",
-  "uncertain": [
-    {
-      "city": "jackson",
-      "title": "JH Elks Charity Classic Golf Tournament",
-      "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/jh-elks-charity-classic-golf-tournament/3704/",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source page text only contains 'JH Elks Charity Classic Golf Tournament' which matches the current title, with no additional information to expand it."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
-    }
-  ]
+  "generated_at": "2026-07-08T11:58:59.163993",
+  "uncertain": []
 }

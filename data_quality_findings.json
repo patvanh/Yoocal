@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-07",
+  "generated_at": "2026-07-08",
   "cities": {
     "all": {
-      "events": 4606,
+      "events": 4520,
       "findings": [
         {
           "code": "C1",
@@ -83,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 215,
-              "lost": 825
+              "now": 190,
+              "lost": 850
             },
             {
               "source": "Siebkens Resort",
@@ -95,8 +95,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 56,
-              "lost": 60
+              "now": 55,
+              "lost": 61
             },
             {
               "source": "Oakley City",
@@ -128,7 +128,7 @@
       ]
     },
     "greenlake": {
-      "events": 222,
+      "events": 220,
       "findings": [
         {
           "code": "C5",
@@ -149,7 +149,7 @@
       ]
     },
     "heber": {
-      "events": 652,
+      "events": 622,
       "findings": [
         {
           "code": "C1",
@@ -223,15 +223,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 211,
-              "lost": 822
+              "now": 185,
+              "lost": 848
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1507,
+      "events": 1494,
       "findings": [
         {
           "code": "C5",
@@ -290,8 +290,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 56,
-              "lost": 60
+              "now": 55,
+              "lost": 61
             }
           ]
         }
