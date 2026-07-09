@@ -1,33 +1,25 @@
 {
-  "generated_at": "2026-07-08T11:58:59.163808",
+  "generated_at": "2026-07-09T12:55:10.593685",
   "attempted": 2,
-  "applied": 2,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "Parcels King Concert",
+      "title": "Benoliel Chamber Music Series: From the Heart",
       "type": "title_truncated",
-      "link": "https://snowkingmountain.com/event/parcels-king-concert/",
+      "link": "https://gtmf.org/events/from-the-heart",
       "resolution": {
         "confidence": "high",
-        "new_title": "Parcels King Concert - Snow King Mountain Resort",
-        "reasoning": "The source page text shows the complete title includes the venue 'Snow King Mountain Resort' which matches the location Jackson, WY where Snow King Mountain Resort is located."
+        "new_title": "Benoliel Chamber Music Series: From the Heart",
+        "reasoning": "The title 'Benoliel Chamber Music Series: From the Heart' appears complete in the source text and matches the current title exactly, indicating it was not truncated."
       },
       "applied": true,
-      "note": "title: 'Parcels King Concert' \u2192 'Parcels King Concert - Snow King Mountain Resort'"
+      "note": "title: 'Benoliel Chamber Music Series: From the Heart' \u2192 'Benoliel Chamber Music Series: From the Heart'"
     },
     {
       "city": "jackson",
-      "title": "High Noon Chili Cook-off: Old West Days",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/high-noon-chili-cook-off%3a-old-west-days/3656/",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "High Noon Chili Cook-off: Old West Days",
-        "reasoning": "The title appears complete in the source text and matches the current title exactly, with no evidence of truncation."
-      },
-      "applied": true,
-      "note": "title: 'High Noon Chili Cook-off: Old West Days' \u2192 'High Noon Chili Cook-off: Old West Days'"
+      "skipped": "no event_index"
     }
   ]
 }

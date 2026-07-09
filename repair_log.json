@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-08T11:58:53.079918",
-  "audit_date": "2026-07-08",
+  "generated_at": "2026-07-09T12:55:06.177529",
+  "audit_date": "2026-07-09",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1739,
+      "before_count": 1726,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -27,8 +27,8 @@
           "fixed": 4,
           "examples": [
             {
-              "title": "Old Town walking tour",
-              "had_span": 38
+              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
+              "had_span": 49
             },
             {
               "title": "Fascia Rolling Class",
@@ -126,10 +126,17 @@
           ]
         },
         "classification": {
-          "fixed": 384,
+          "fixed": 380,
           "examples": [
             {
               "title": "Challenge Accepted!",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Summer Garden Camps",
               "before": [],
               "after": [
                 "Community"
@@ -140,16 +147,6 @@
               "before": [],
               "after": [
                 "Community"
-              ]
-            },
-            {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Food & Drink"
               ]
             },
             {
@@ -176,12 +173,12 @@
           ]
         }
       },
-      "after_count": 1743,
-      "total_fixes": 403
+      "after_count": 1730,
+      "total_fixes": 399
     },
     {
       "city": "elkhart-lake",
-      "before_count": 183,
+      "before_count": 181,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -224,12 +221,12 @@
           "examples": []
         }
       },
-      "after_count": 188,
+      "after_count": 186,
       "total_fixes": 2
     },
     {
       "city": "heber",
-      "before_count": 214,
+      "before_count": 218,
       "passes": {
         "past_dates": {
           "fixed": 52,
@@ -239,20 +236,20 @@
               "date": "2026-06-15"
             },
             {
-              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
-              "date": "2026-06-17"
+              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
+              "date": "2026-06-18"
             },
             {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Heber Midday Wednesday Ride @ Southfield Park",
-              "date": "2026-06-17"
+              "title": "Midway Art Gallery Open House",
+              "date": "2026-06-19"
             },
             {
-              "title": "Open Art Studio Night @ Alchemy Art Studio",
-              "date": "2026-06-17"
+              "title": "Ritual Chocolate Public Tour and Mini Tasting",
+              "date": "2026-06-19"
             }
           ]
         },
@@ -265,12 +262,12 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 178
+              "had_span": 179
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 2,
+          "fixed": 3,
           "examples": [
             {
               "title": "American Indian Services Native Market Days",
@@ -286,6 +283,15 @@
               "split_into": [
                 "2026-07-18",
                 "2026-07-19"
+              ]
+            },
+            {
+              "title": "Kimball Arts Festival",
+              "original_span": "2026-08-07 to 2026-08-09",
+              "split_into": [
+                "2026-08-07",
+                "2026-08-08",
+                "2026-08-09"
               ]
             }
           ]
@@ -330,12 +336,12 @@
           "examples": []
         }
       },
-      "after_count": 164,
-      "total_fixes": 63
+      "after_count": 170,
+      "total_fixes": 64
     },
     {
       "city": "jackson",
-      "before_count": 632,
+      "before_count": 624,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -346,15 +352,15 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 87
+              "had_span": 86
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 74
+              "had_span": 73
             },
             {
               "title": "Take-a-Tour Tuesday",
-              "had_span": 161
+              "had_span": 162
             }
           ]
         },
@@ -450,7 +456,7 @@
           "examples": []
         }
       },
-      "after_count": 663,
+      "after_count": 655,
       "total_fixes": 22
     }
   ]
