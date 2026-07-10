@@ -1,25 +1,33 @@
 {
-  "generated_at": "2026-07-09T12:55:10.593685",
+  "generated_at": "2026-07-10T12:45:17.095645",
   "attempted": 2,
-  "applied": 1,
+  "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "Benoliel Chamber Music Series: From the Heart",
+      "title": "Summer Evenings at The Rooftop Bar",
       "type": "title_truncated",
-      "link": "https://gtmf.org/events/from-the-heart",
+      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-08-05",
       "resolution": {
         "confidence": "high",
-        "new_title": "Benoliel Chamber Music Series: From the Heart",
-        "reasoning": "The title 'Benoliel Chamber Music Series: From the Heart' appears complete in the source text and matches the current title exactly, indicating it was not truncated."
+        "new_title": "Summer Evenings at The Rooftop Bar",
+        "reasoning": "The title appears complete in the source page as 'Summer Evenings at The Rooftop Bar' and matches the current title exactly, indicating no truncation occurred."
       },
       "applied": true,
-      "note": "title: 'Benoliel Chamber Music Series: From the Heart' \u2192 'Benoliel Chamber Music Series: From the Heart'"
+      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
     },
     {
       "city": "jackson",
+      "title": "Old West Brewfest",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://www.jacksonholechamber.com/event/old-west-brewfest/3655/",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Old West Brewfest",
+        "reasoning": "The source page text shows 'Old West Brewfest' as the complete title with no additional text or truncation indicators present."
+      },
+      "applied": true,
+      "note": "title: 'Old West Brewfest' \u2192 'Old West Brewfest'"
     }
   ]
 }

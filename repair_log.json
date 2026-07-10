@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-09T12:55:06.177529",
-  "audit_date": "2026-07-09",
+  "generated_at": "2026-07-10T12:45:09.711897",
+  "audit_date": "2026-07-10",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1726,
+      "before_count": 1705,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -24,11 +24,15 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 5,
           "examples": [
             {
+              "title": "Old Town walking tour",
+              "had_span": 36
+            },
+            {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 49
+              "had_span": 48
             },
             {
               "title": "Fascia Rolling Class",
@@ -126,22 +130,8 @@
           ]
         },
         "classification": {
-          "fixed": 380,
+          "fixed": 377,
           "examples": [
-            {
-              "title": "Challenge Accepted!",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Summer Garden Camps",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
             {
               "title": "Old Town walking tour",
               "before": [],
@@ -169,16 +159,36 @@
                 "Community",
                 "Education"
               ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
             }
           ]
         }
       },
-      "after_count": 1730,
-      "total_fixes": 399
+      "after_count": 1709,
+      "total_fixes": 397
     },
     {
       "city": "elkhart-lake",
-      "before_count": 181,
+      "before_count": 221,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -221,35 +231,35 @@
           "examples": []
         }
       },
-      "after_count": 186,
+      "after_count": 226,
       "total_fixes": 2
     },
     {
       "city": "heber",
-      "before_count": 218,
+      "before_count": 221,
       "passes": {
         "past_dates": {
-          "fixed": 52,
+          "fixed": 54,
           "examples": [
-            {
-              "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
-              "date": "2026-06-15"
-            },
-            {
-              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
-              "date": "2026-06-18"
-            },
-            {
-              "title": "Meet the Cows - Dairy Farm Tour",
-              "date": "2026-06-15"
-            },
             {
               "title": "Midway Art Gallery Open House",
               "date": "2026-06-19"
             },
             {
+              "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
+              "date": "2026-06-15"
+            },
+            {
+              "title": "Baseball Tournament of Champions",
+              "date": "2026-07-09"
+            },
+            {
               "title": "Ritual Chocolate Public Tour and Mini Tasting",
               "date": "2026-06-19"
+            },
+            {
+              "title": "Anna's European Antiques Pop-Up Event",
+              "date": "2026-06-26"
             }
           ]
         },
@@ -262,7 +272,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 179
+              "had_span": 180
             }
           ]
         },
@@ -336,12 +346,12 @@
           "examples": []
         }
       },
-      "after_count": 170,
-      "total_fixes": 64
+      "after_count": 171,
+      "total_fixes": 66
     },
     {
       "city": "jackson",
-      "before_count": 624,
+      "before_count": 613,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -352,15 +362,15 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 86
+              "had_span": 85
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 73
+              "had_span": 72
             },
             {
               "title": "Take-a-Tour Tuesday",
-              "had_span": 162
+              "had_span": 163
             }
           ]
         },
@@ -456,7 +466,7 @@
           "examples": []
         }
       },
-      "after_count": 655,
+      "after_count": 644,
       "total_fixes": 22
     }
   ]
