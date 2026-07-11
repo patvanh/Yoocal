@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-10T12:45:09.711897",
-  "audit_date": "2026-07-10",
+  "generated_at": "2026-07-11T11:13:55.065027",
+  "audit_date": "2026-07-11",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1705,
+      "before_count": 1658,
       "passes": {
         "past_dates": {
           "fixed": 3,
@@ -24,42 +24,12 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 5,
-          "examples": [
-            {
-              "title": "Old Town walking tour",
-              "had_span": 36
-            },
-            {
-              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 48
-            },
-            {
-              "title": "Fascia Rolling Class",
-              "had_span": 181
-            },
-            {
-              "title": "Group Fitness Classes",
-              "had_span": 181
-            },
-            {
-              "title": "Moose on the Loose Kids Trail Series",
-              "had_span": 57
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "multi_day_splits": {
           "fixed": 6,
           "examples": [
-            {
-              "title": "Fox US Open of Mountain Biking",
-              "original_span": "2026-09-11 to 2026-09-13",
-              "split_into": [
-                "2026-09-11",
-                "2026-09-12",
-                "2026-09-13"
-              ]
-            },
             {
               "title": "Chef Sarah Glover Weekend",
               "original_span": "2026-07-11 to 2026-07-12",
@@ -90,6 +60,15 @@
               "split_into": [
                 "2026-08-08",
                 "2026-08-09"
+              ]
+            },
+            {
+              "title": "Fox US Open of Mountain Biking",
+              "original_span": "2026-09-11 to 2026-09-13",
+              "split_into": [
+                "2026-09-11",
+                "2026-09-12",
+                "2026-09-13"
               ]
             }
           ]
@@ -130,28 +109,10 @@
           ]
         },
         "classification": {
-          "fixed": 377,
+          "fixed": 369,
           "examples": [
             {
-              "title": "Old Town walking tour",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Kids",
-                "Education"
-              ]
-            },
-            {
-              "title": "Coffee Chat with the CEO",
+              "title": "Cirque Series",
               "before": [
                 "Community"
               ],
@@ -161,34 +122,54 @@
               ]
             },
             {
-              "title": "Coffee Chat with the CEO",
+              "title": "Sugarvan",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Education"
+                "Music"
               ]
             },
             {
-              "title": "Coffee Chat with the CEO",
+              "title": "Mountain Strings Bluegrass at  Silver Lake Lawn at Deer Valley",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Education"
+                "Music"
+              ]
+            },
+            {
+              "title": "Power Ballad",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Music"
+              ]
+            },
+            {
+              "title": "Daniel Torriente",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Music"
               ]
             }
           ]
         }
       },
-      "after_count": 1709,
-      "total_fixes": 397
+      "after_count": 1662,
+      "total_fixes": 384
     },
     {
       "city": "elkhart-lake",
-      "before_count": 221,
+      "before_count": 219,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -231,15 +212,15 @@
           "examples": []
         }
       },
-      "after_count": 226,
+      "after_count": 224,
       "total_fixes": 2
     },
     {
       "city": "heber",
-      "before_count": 221,
+      "before_count": 222,
       "passes": {
         "past_dates": {
-          "fixed": 54,
+          "fixed": 57,
           "examples": [
             {
               "title": "Midway Art Gallery Open House",
@@ -254,12 +235,12 @@
               "date": "2026-07-09"
             },
             {
-              "title": "Ritual Chocolate Public Tour and Mini Tasting",
-              "date": "2026-06-19"
+              "title": "Free Yoga @ Midway Town Square",
+              "date": "2026-06-27"
             },
             {
-              "title": "Anna's European Antiques Pop-Up Event",
-              "date": "2026-06-26"
+              "title": "Plein Air Workshop @ Grand Hyatt Deer Valley",
+              "date": "2026-06-27"
             }
           ]
         },
@@ -272,21 +253,13 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 180
+              "had_span": 181
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 3,
+          "fixed": 2,
           "examples": [
-            {
-              "title": "American Indian Services Native Market Days",
-              "original_span": "2026-07-10 to 2026-07-12",
-              "split_into": [
-                "2026-07-10",
-                "2026-07-11"
-              ]
-            },
             {
               "title": "2-Day Throwing Large Forms on the Wheel",
               "original_span": "2026-07-18 to 2026-07-19",
@@ -346,36 +319,23 @@
           "examples": []
         }
       },
-      "after_count": 171,
-      "total_fixes": 66
+      "after_count": 168,
+      "total_fixes": 68
     },
     {
       "city": "jackson",
-      "before_count": 613,
+      "before_count": 465,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 3,
-          "examples": [
-            {
-              "title": "Historic Downtown Walking Tour",
-              "had_span": 85
-            },
-            {
-              "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 72
-            },
-            {
-              "title": "Take-a-Tour Tuesday",
-              "had_span": 163
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "multi_day_splits": {
-          "fixed": 8,
+          "fixed": 4,
           "examples": [
             {
               "title": "Teton Mountain Runs 50K, 30K, 15K",
@@ -383,17 +343,6 @@
               "split_into": [
                 "2026-07-11",
                 "2026-07-12"
-              ]
-            },
-            {
-              "title": "Kids Yoga & Mindfulness Summer Camp",
-              "original_span": "2026-07-13 to 2026-07-17",
-              "split_into": [
-                "2026-07-13",
-                "2026-07-14",
-                "2026-07-15",
-                "2026-07-16",
-                "2026-07-17"
               ]
             },
             {
@@ -414,33 +363,23 @@
               ]
             },
             {
-              "title": "Kids Yoga & Mindfulness Summer Camp",
-              "original_span": "2026-08-10 to 2026-08-14",
+              "title": "Teton Village Restaurant Week",
+              "original_span": "2026-08-24 to 2026-08-30",
               "split_into": [
-                "2026-08-10",
-                "2026-08-11",
-                "2026-08-12",
-                "2026-08-13",
-                "2026-08-14"
+                "2026-08-24",
+                "2026-08-25",
+                "2026-08-26",
+                "2026-08-27",
+                "2026-08-28",
+                "2026-08-29",
+                "2026-08-30"
               ]
             }
           ]
         },
         "missing_end_times": {
-          "fixed": 11,
+          "fixed": 7,
           "examples": [
-            {
-              "title": "Karaoke at The Virginian Saloon",
-              "start_time": "8:00 PM",
-              "new_end_time": "11:00 PM",
-              "duration_hours": 3
-            },
-            {
-              "title": "Little Wings Story Time",
-              "start_time": "11:00 AM",
-              "new_end_time": "11:30 AM",
-              "duration_hours": 0.5
-            },
             {
               "title": "Rattlesnake Milk | Concerts on the Commons",
               "start_time": "5:00 PM",
@@ -458,6 +397,18 @@
               "start_time": "5:00 PM",
               "new_end_time": "8:00 PM",
               "duration_hours": 3
+            },
+            {
+              "title": "Old 97's | Concerts on the Commons",
+              "start_time": "5:00 PM",
+              "new_end_time": "8:00 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "Wreckless Strangers | Concerts on the Commons",
+              "start_time": "5:00 PM",
+              "new_end_time": "8:00 PM",
+              "duration_hours": 3
             }
           ]
         },
@@ -466,8 +417,8 @@
           "examples": []
         }
       },
-      "after_count": 644,
-      "total_fixes": 22
+      "after_count": 475,
+      "total_fixes": 11
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-10",
+  "generated_at": "2026-07-11",
   "cities": {
     "all": {
-      "events": 4451,
+      "events": 4315,
       "findings": [
         {
           "code": "C1",
@@ -30,8 +30,16 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 28,
+          "count": 27,
           "examples": [
+            {
+              "date": "2026-07-12",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
             {
               "date": "2026-07-18",
               "title_a": "Heber's Saturday Sunset Music Series",
@@ -63,14 +71,6 @@
               "title_b": "Country Weekend - Lonestar",
               "src_b": "Park City Institute",
               "sim": 0.85
-            },
-            {
-              "date": "2026-08-08",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
             }
           ]
         },
@@ -83,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 175,
-              "lost": 865
+              "now": 167,
+              "lost": 873
             },
             {
               "source": "Siebkens Resort",
@@ -109,7 +109,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 231,
+      "events": 228,
       "findings": [
         {
           "code": "C6",
@@ -128,7 +128,7 @@
       ]
     },
     "greenlake": {
-      "events": 213,
+      "events": 205,
       "findings": [
         {
           "code": "C5",
@@ -149,7 +149,7 @@
       ]
     },
     "heber": {
-      "events": 603,
+      "events": 588,
       "findings": [
         {
           "code": "C1",
@@ -223,15 +223,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 170,
-              "lost": 863
+              "now": 162,
+              "lost": 871
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1478,
+      "events": 1424,
       "findings": [
         {
           "code": "C5",

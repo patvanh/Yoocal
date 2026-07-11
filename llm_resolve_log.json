@@ -1,33 +1,25 @@
 {
-  "generated_at": "2026-07-10T12:45:17.095645",
+  "generated_at": "2026-07-11T11:13:58.944775",
   "attempted": 2,
-  "applied": 2,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "Summer Evenings at The Rooftop Bar",
+      "title": "First Sundays \u2013 Locals\u2019 Free Day at the Museum",
       "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-08-05",
+      "link": "https://www.wildlifeart.org/events/first-sundays-locals-free-day-at-the-museum-27/2026-12-06",
       "resolution": {
         "confidence": "high",
-        "new_title": "Summer Evenings at The Rooftop Bar",
-        "reasoning": "The title appears complete in the source page as 'Summer Evenings at The Rooftop Bar' and matches the current title exactly, indicating no truncation occurred."
+        "new_title": "First Sundays \u2013 Locals' Free Day at the Museum",
+        "reasoning": "The title appears complete in the source text and is not truncated, as it accurately describes the recurring monthly event where local residents receive free museum admission."
       },
       "applied": true,
-      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
+      "note": "title: 'First Sundays \u2013 Locals\u2019 Free Day at the Museum' \u2192 \"First Sundays \u2013 Locals' Free Day at the Museum\""
     },
     {
       "city": "jackson",
-      "title": "Old West Brewfest",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/old-west-brewfest/3655/",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Old West Brewfest",
-        "reasoning": "The source page text shows 'Old West Brewfest' as the complete title with no additional text or truncation indicators present."
-      },
-      "applied": true,
-      "note": "title: 'Old West Brewfest' \u2192 'Old West Brewfest'"
+      "skipped": "no event_index"
     }
   ]
 }
