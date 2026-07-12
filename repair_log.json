@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-11T11:13:55.065027",
-  "audit_date": "2026-07-11",
+  "generated_at": "2026-07-12T11:26:40.364576",
+  "audit_date": "2026-07-12",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1658,
+      "before_count": 1604,
       "passes": {
         "past_dates": {
-          "fixed": 3,
+          "fixed": 4,
           "examples": [
             {
               "title": "Running with Ed 2026",
@@ -16,6 +16,10 @@
             {
               "title": "Park City Trail Series \u2014 5K",
               "date": "2026-06-06"
+            },
+            {
+              "title": "Park City Trail Series \u2014 10K",
+              "date": "2026-07-11"
             },
             {
               "title": "Triple Trail Challenge \u2014 Round Valley Rambler & Jupiter Peak",
@@ -28,16 +32,8 @@
           "examples": []
         },
         "multi_day_splits": {
-          "fixed": 6,
+          "fixed": 5,
           "examples": [
-            {
-              "title": "Chef Sarah Glover Weekend",
-              "original_span": "2026-07-11 to 2026-07-12",
-              "split_into": [
-                "2026-07-11",
-                "2026-07-12"
-              ]
-            },
             {
               "title": "Matilda & Gozney Weekend",
               "original_span": "2026-07-18 to 2026-07-19",
@@ -69,6 +65,14 @@
                 "2026-09-11",
                 "2026-09-12",
                 "2026-09-13"
+              ]
+            },
+            {
+              "title": "Mountain Beer Festival",
+              "original_span": "2026-09-19 to 2026-09-20",
+              "split_into": [
+                "2026-09-19",
+                "2026-09-20"
               ]
             }
           ]
@@ -109,36 +113,33 @@
           ]
         },
         "classification": {
-          "fixed": 369,
+          "fixed": 363,
           "examples": [
             {
-              "title": "Cirque Series",
-              "before": [
-                "Community"
-              ],
+              "title": "Old Town walking tour",
+              "before": [],
               "after": [
-                "Community",
-                "Education"
+                "Community"
               ]
             },
             {
-              "title": "Sugarvan",
+              "title": "Survivors at the Summit",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Music"
+                "Wellness"
               ]
             },
             {
-              "title": "Mountain Strings Bluegrass at  Silver Lake Lawn at Deer Valley",
+              "title": "Gracie's Farm Dinner Series | High West",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Music"
+                "Food & Drink"
               ]
             },
             {
@@ -152,7 +153,7 @@
               ]
             },
             {
-              "title": "Daniel Torriente",
+              "title": "Casey Ryan",
               "before": [
                 "Community"
               ],
@@ -164,12 +165,12 @@
           ]
         }
       },
-      "after_count": 1662,
-      "total_fixes": 384
+      "after_count": 1606,
+      "total_fixes": 378
     },
     {
       "city": "elkhart-lake",
-      "before_count": 219,
+      "before_count": 211,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -212,35 +213,35 @@
           "examples": []
         }
       },
-      "after_count": 224,
+      "after_count": 216,
       "total_fixes": 2
     },
     {
       "city": "heber",
-      "before_count": 222,
+      "before_count": 208,
       "passes": {
         "past_dates": {
-          "fixed": 57,
+          "fixed": 56,
           "examples": [
-            {
-              "title": "Midway Art Gallery Open House",
-              "date": "2026-06-19"
-            },
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Baseball Tournament of Champions",
-              "date": "2026-07-09"
+              "title": "Live Music @ Caf\u00e9 Galleria",
+              "date": "2026-06-19"
             },
             {
-              "title": "Free Yoga @ Midway Town Square",
-              "date": "2026-06-27"
+              "title": "Commemorative Air Force Museum Tours",
+              "date": "2026-06-20"
             },
             {
-              "title": "Plein Air Workshop @ Grand Hyatt Deer Valley",
-              "date": "2026-06-27"
+              "title": "Live Music @ Back 40 Restaurant",
+              "date": "2026-06-20"
+            },
+            {
+              "title": "Yoga in the Lavender Field @ Blue Canyon Lavender Farm",
+              "date": "2026-06-15"
             }
           ]
         },
@@ -319,12 +320,12 @@
           "examples": []
         }
       },
-      "after_count": 168,
-      "total_fixes": 68
+      "after_count": 155,
+      "total_fixes": 67
     },
     {
       "city": "jackson",
-      "before_count": 465,
+      "before_count": 457,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -335,16 +336,8 @@
           "examples": []
         },
         "multi_day_splits": {
-          "fixed": 4,
+          "fixed": 3,
           "examples": [
-            {
-              "title": "Teton Mountain Runs 50K, 30K, 15K",
-              "original_span": "2026-07-11 to 2026-07-12",
-              "split_into": [
-                "2026-07-11",
-                "2026-07-12"
-              ]
-            },
             {
               "title": "Mata Ortiz Pop-Up Pottery Shop",
               "original_span": "2026-07-17 to 2026-07-19",
@@ -417,8 +410,8 @@
           "examples": []
         }
       },
-      "after_count": 475,
-      "total_fixes": 11
+      "after_count": 466,
+      "total_fixes": 10
     }
   ]
 }

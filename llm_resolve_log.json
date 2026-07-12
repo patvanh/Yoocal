@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-11T11:13:58.944775",
+  "generated_at": "2026-07-12T11:26:43.127861",
   "attempted": 2,
   "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "First Sundays \u2013 Locals\u2019 Free Day at the Museum",
+      "title": "Western Wednesdays",
       "type": "title_truncated",
-      "link": "https://www.wildlifeart.org/events/first-sundays-locals-free-day-at-the-museum-27/2026-12-06",
+      "link": "https://www.jacksonhole.com/events/western-wednesday-aug5",
       "resolution": {
         "confidence": "high",
-        "new_title": "First Sundays \u2013 Locals' Free Day at the Museum",
-        "reasoning": "The title appears complete in the source text and is not truncated, as it accurately describes the recurring monthly event where local residents receive free museum admission."
+        "new_title": "Western Wednesdays at Teton Village's Alive @ Five",
+        "reasoning": "The source text explicitly states 'Western Wednesdays at Teton Village's Alive @ Five series' in the event description, indicating this is the complete title of the event series."
       },
       "applied": true,
-      "note": "title: 'First Sundays \u2013 Locals\u2019 Free Day at the Museum' \u2192 \"First Sundays \u2013 Locals' Free Day at the Museum\""
+      "note": "title: 'Western Wednesdays' \u2192 \"Western Wednesdays at Teton Village's Alive @ Five\""
     },
     {
       "city": "jackson",

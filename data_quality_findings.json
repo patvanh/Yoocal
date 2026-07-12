@@ -1,22 +1,15 @@
 {
-  "generated_at": "2026-07-11",
+  "generated_at": "2026-07-12",
   "cities": {
     "all": {
-      "events": 4315,
+      "events": 4224,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 2,
+          "count": 1,
           "examples": [
-            {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-07-11",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
-            },
             {
               "title": "Yoga in the Park",
               "venue": "city park",
@@ -41,35 +34,35 @@
               "sim": 0.85
             },
             {
-              "date": "2026-07-18",
-              "title_a": "Heber's Saturday Sunset Music Series",
+              "date": "2026-07-19",
+              "title_a": "Stein's Famous Sunday Brunch",
               "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             },
             {
-              "date": "2026-07-25",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-07-19",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             },
             {
-              "date": "2026-08-01",
-              "title_a": "Heber's Saturday Sunset Music Series",
+              "date": "2026-07-26",
+              "title_a": "Stein's Famous Sunday Brunch",
               "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             },
             {
-              "date": "2026-08-07",
-              "title_a": "Lonestar",
-              "src_a": "Visit Park City",
-              "title_b": "Country Weekend - Lonestar",
-              "src_b": "Park City Institute",
+              "date": "2026-07-26",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             }
           ]
@@ -83,8 +76,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 167,
-              "lost": 873
+              "now": 161,
+              "lost": 879
             },
             {
               "source": "Siebkens Resort",
@@ -95,8 +88,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 54,
-              "lost": 62
+              "now": 52,
+              "lost": 64
             },
             {
               "source": "Oakley City",
@@ -109,7 +102,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 228,
+      "events": 222,
       "findings": [
         {
           "code": "C6",
@@ -128,7 +121,7 @@
       ]
     },
     "greenlake": {
-      "events": 205,
+      "events": 200,
       "findings": [
         {
           "code": "C5",
@@ -149,23 +142,8 @@
       ]
     },
     "heber": {
-      "events": 588,
+      "events": 574,
       "findings": [
-        {
-          "code": "C1",
-          "name": "RECURRING-DROPPED",
-          "severity": "HIGH",
-          "count": 1,
-          "examples": [
-            {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-07-11",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
-            }
-          ]
-        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -223,15 +201,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 162,
-              "lost": 871
+              "now": 157,
+              "lost": 876
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1424,
+      "events": 1404,
       "findings": [
         {
           "code": "C5",
@@ -290,13 +268,13 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 54,
-              "lost": 62
+              "now": 52,
+              "lost": 64
             }
           ]
         }
       ]
     }
   },
-  "high_total": 10
+  "high_total": 8
 }
