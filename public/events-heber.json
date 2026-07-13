@@ -6,9 +6,9 @@
     "lng": -111.4133
   },
   "radius_mi": 10,
-  "generated_at": "2026-07-12T05:27:55.424512-06:00",
-  "today": "2026-07-12",
-  "event_count": 574,
+  "generated_at": "2026-07-13T06:52:54.411336-06:00",
+  "today": "2026-07-13",
+  "event_count": 569,
   "events": [
     {
       "title": "RMSB Pioneer Days Tournament",
@@ -615,222 +615,6 @@
     },
     {
       "title": "Princess and Pirate Train",
-      "date": "2026-07-12",
-      "description": "",
-      "location": "Heber Valley Railroad",
-      "link": "https://www.visitparkcity.com/event/princess-and-pirate-train/28762/",
-      "source": "Visit Park City",
-      "source_url": "https://www.visitparkcity.com/events/",
-      "is_free": null,
-      "price": "",
-      "scraped_at": "2026-06-16T14:33:20.335995",
-      "lat": 40.5026478,
-      "lng": -111.423766,
-      "end_date": null,
-      "venue_name": "Heber Valley Railroad",
-      "start_time": "1:00 PM",
-      "end_time": "2:30 PM",
-      "address": "450 S 600 W",
-      "series_end": "2026-08-15",
-      "_all_sources": [
-        "Visit Park City"
-      ],
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_83f6828e599a",
-      "_distance_mi": 0.6
-    },
-    {
-      "title": "Free Yoga on the Lawn @ Heber City Park",
-      "date": "2026-07-12",
-      "description": "Free Yoga on the Lawn at Heber City Park in Heber Valley. Weekly Sunday sessions from 9:00 AM to 10:00 AM.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/heber-city-park-yoga-on-the-lawn",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Wellness"
-      ],
-      "scraped_at": "2026-07-12T11:12:55.021100",
-      "start_time": "9:00 AM",
-      "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=12-05-54",
-      "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
-      "recurrence": "weekly",
-      "recurrence_day": "Sunday",
-      "end_date": null,
-      "recurrence_text": "Sun, Jun - Aug, 9:00 - 10:00 AM",
-      "facets": [
-        "Free"
-      ],
-      "venue_name": "Heber City Park",
-      "category_llm": "Community",
-      "price": "Free",
-      "is_free": true,
-      "series_end": "2026-08-31",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "address": "Main Street Park, 200 S Main St., Heber City UT",
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "Heber City Park",
-            "source": "Heber Valley Tourism"
-          },
-          {
-            "value": "Main Street Park Heber City",
-            "source": "Heber Valley Life"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Community",
-        "Wellness"
-      ],
-      "id": "e_9eb1e72469a1",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Soulful Sundays @ Heber City Park",
-      "date": "2026-07-12",
-      "description": "Soulful Music Sundays @ Heber City Park in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/soulful-sundays-at-heber-city-park",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Music",
-        "Theater"
-      ],
-      "scraped_at": "2026-07-12T11:12:55.021452",
-      "start_time": "7:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=12-05-54",
-      "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
-      "recurrence": "weekly",
-      "recurrence_day": "Sunday",
-      "end_date": null,
-      "recurrence_text": "Sun, Jun - Aug, 7:00 - 8:00 PM",
-      "venue_name": "Heber City Park",
-      "category_llm": "Music",
-      "series_end": "2026-08-31",
-      "_all_sources": [
-        "Heber Valley Life",
-        "Heber Valley Tourism"
-      ],
-      "address": "Main Street Park, 200 S Main St., Heber City UT",
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "Heber City Park",
-            "source": "Heber Valley Tourism"
-          },
-          {
-            "value": "Main Street Park Heber City",
-            "source": "Heber Valley Life"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Arts & Theater",
-        "Community",
-        "Music"
-      ],
-      "id": "e_dab7b482eb32",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Summer Fest Pro Wakeboard Tour @ Jordanelle Reservoir",
-      "date": "2026-07-12",
-      "description": "Summer Fest Pro Wakeboard Tour @ Jordanelle Reservoir in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/pro-wakeboard-tour",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Festival"
-      ],
-      "scraped_at": "2026-07-06T13:22:26.248758",
-      "start_time": "12:00 PM",
-      "end_time": "7:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187148.jpg?decache=06-07-25",
-      "date_label": "Jul 11 - 12",
-      "end_date": null,
-      "recurrence_text": "Jul 11 - 12",
-      "venue_name": "Jordanelle Reservoir",
-      "category_llm": "Sports",
-      "series_end": "2026-07-12",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_724c110cfc16",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Carnival Vouchers on Sale July 6th",
-      "date": "2026-07-12",
-      "end_date": null,
-      "start_time": "9:00 AM",
-      "location": "Heber City, UT",
-      "venue_name": "Wasatch County Event Complex",
-      "description": "",
-      "link": "https://www.wasatchparksandrec.com/events/2026/carnival-vouchers-on-sale-july-10th",
-      "source": "Wasatch County Parks & Rec",
-      "source_url": "https://www.wasatchparksandrec.com/events",
-      "image_url": "https://cdn.saffire.com/images.ashx?t=ig&rid=WasatchCountyEventsCenter&i=wasatchcarnival2021(2).jpg&cb=5FFFD62C",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "city": "Heber City, UT",
-      "categories": [
-        "Community"
-      ],
-      "series_end": "2026-07-31",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_464140c35b1d",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Thrive | FREE Youth Well-Being Skills Summer Program",
-      "date": "2026-07-12",
-      "description": "Thrive is a FREE evidence-based program equipping Summit & Wasatch County students in grades 6-12 with vital life skills. Imagine our youth\u2026 Confidently managing stress amidst school pressures and social uncertainties. Nurturing positive relationships built on empathy and effective communication. Making healthy choices for their physical and mental well-being. Thrive empowers them with these skills and more! Students meet for one hour weekly on Zoom, with a cohort of up to ten peers and a Thrive facilitator, to learn, practice, and reflect on valuable well-being skills. Registration closes on 7/1 at 11:59 PM...",
-      "location": "Heber City, UT",
-      "link": "https://townlift.com/event/thrive-free-youth-well-being-skills-summer-program/",
-      "source": "TownLift",
-      "source_url": "https://www.townlift.com",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Kids"
-      ],
-      "start_time": "8:00 AM",
-      "end_time": "5:00 PM",
-      "end_date": null,
-      "image_url": "https://townlift.com/wp-content/uploads/2026/06/Thrive-Summer-2026-English.png",
-      "category_llm": "Family",
-      "series_end": "2026-08-14",
-      "filter_categories": [
-        "Community",
-        "Family & Kids"
-      ],
-      "id": "e_7055affe3639",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Princess and Pirate Train",
       "date": "2026-07-19",
       "description": "",
       "location": "Heber Valley Railroad",
@@ -858,6 +642,64 @@
       "_distance_mi": 0.6
     },
     {
+      "title": "TedFest Music Festival",
+      "date": "2026-07-19",
+      "description": "TedFest Music Festival in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/ted-fest",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Music",
+        "Festival"
+      ],
+      "scraped_at": "2026-07-13T12:36:04.713150",
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=13-06-04",
+      "date_label": "Jul 17 - 19",
+      "end_date": null,
+      "recurrence_text": "Jul 17 - 19",
+      "category_llm": "Music",
+      "series_end": "2026-07-19",
+      "filter_categories": [
+        "Community",
+        "Music"
+      ],
+      "id": "e_c8769225a80f",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Life Lessons Learned From Horses @ Liberty Sanctuary",
+      "date": "2026-07-19",
+      "description": "Life Lessons Learned From Horses @ Liberty Sanctuary in Heber Valley.",
+      "location": "Liberty Sanctuary, 585 South Little Pole Road, Heber City, UT",
+      "link": "https://www.gohebervalley.com/liberty-sanctuary-event",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-07-13T12:36:04.713796",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188577.jpg?decache=13-06-04",
+      "date_label": "6:00 - 8:00 PM",
+      "end_date": null,
+      "venue_name": "Liberty Sanctuary",
+      "address": "585 South Little Pole Road, Heber City, UT, 84032",
+      "series_end": "2026-07-19",
+      "filter_categories": [
+        "Community"
+      ],
+      "id": "e_b1f4e2c4bdf2",
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Free Yoga on the Lawn @ Heber City Park",
       "date": "2026-07-19",
       "description": "Free Yoga on the Lawn at Heber City Park in Heber Valley. Weekly Sunday sessions from 9:00 AM to 10:00 AM.",
@@ -868,12 +710,13 @@
       "lat": 40.5069,
       "lng": -111.4133,
       "categories": [
+        "Community",
         "Wellness"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021100",
+      "scraped_at": "2026-07-13T12:36:04.715979",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -888,9 +731,24 @@
       "is_free": true,
       "series_end": "2026-08-31",
       "_all_sources": [
+        "Heber Valley Life",
         "Heber Valley Tourism"
       ],
+      "address": "Main Street Park, 200 S Main St., Heber City UT",
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "Heber City Park",
+            "source": "Heber Valley Tourism"
+          },
+          {
+            "value": "Main Street Park Heber City",
+            "source": "Heber Valley Life"
+          }
+        ]
+      },
       "filter_categories": [
+        "Community",
         "Wellness"
       ],
       "id": "e_4de2ebd712d9",
@@ -911,10 +769,10 @@
         "Music",
         "Theater"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021452",
+      "scraped_at": "2026-07-13T12:36:04.716406",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -946,64 +804,6 @@
         "Music"
       ],
       "id": "e_96bbb9c377af",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "TedFest Music Festival",
-      "date": "2026-07-19",
-      "description": "TedFest Music Festival in Heber Valley.",
-      "location": "Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/ted-fest",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Music",
-        "Festival"
-      ],
-      "scraped_at": "2026-07-12T11:12:55.023547",
-      "start_time": "8:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=12-05-54",
-      "date_label": "Jul 17 - 19",
-      "end_date": null,
-      "recurrence_text": "Jul 17 - 19",
-      "category_llm": "Music",
-      "series_end": "2026-07-19",
-      "filter_categories": [
-        "Community",
-        "Music"
-      ],
-      "id": "e_c8769225a80f",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Life Lessons Learned From Horses @ Liberty Sanctuary",
-      "date": "2026-07-19",
-      "description": "Life Lessons Learned From Horses @ Liberty Sanctuary in Heber Valley.",
-      "location": "Liberty Sanctuary, 585 South Little Pole Road, Heber City, UT",
-      "link": "https://www.gohebervalley.com/liberty-sanctuary-event",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-07-12T11:12:55.024080",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188577.jpg?decache=12-05-54",
-      "date_label": "6:00 - 8:00 PM",
-      "end_date": null,
-      "venue_name": "Liberty Sanctuary",
-      "address": "585 South Little Pole Road, Heber City, UT, 84032",
-      "series_end": "2026-07-19",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_b1f4e2c4bdf2",
       "_distance_mi": 0.0
     },
     {
@@ -1102,10 +902,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021100",
+      "scraped_at": "2026-07-13T12:36:04.715979",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1143,10 +943,10 @@
         "Music",
         "Theater"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021452",
+      "scraped_at": "2026-07-13T12:36:04.716406",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1194,10 +994,10 @@
         "Arts",
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.028461",
+      "scraped_at": "2026-07-13T12:36:04.719073",
       "start_time": "12:00 PM",
       "end_time": "6:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727546.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727546.jpg?decache=13-06-04",
       "date_label": "Jul 24 - 26",
       "end_date": null,
       "recurrence_text": "Jul 24 - 26",
@@ -1224,10 +1024,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.030255",
+      "scraped_at": "2026-07-13T12:36:04.721197",
       "start_time": "6:30 PM",
       "end_time": "9:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189010.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189010.jpg?decache=13-06-04",
       "date_label": "6:30 - 9:30 PM",
       "venue_name": "Wolves of Wasatch",
       "price": "$200",
@@ -1336,10 +1136,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021100",
+      "scraped_at": "2026-07-13T12:36:04.715979",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1377,10 +1177,10 @@
         "Music",
         "Theater"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021452",
+      "scraped_at": "2026-07-13T12:36:04.716406",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1485,10 +1285,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021100",
+      "scraped_at": "2026-07-13T12:36:04.715979",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1526,10 +1326,10 @@
         "Music",
         "Theater"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021452",
+      "scraped_at": "2026-07-13T12:36:04.716406",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1663,10 +1463,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021100",
+      "scraped_at": "2026-07-13T12:36:04.715979",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1704,10 +1504,10 @@
         "Music",
         "Theater"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021452",
+      "scraped_at": "2026-07-13T12:36:04.716406",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1813,10 +1613,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021100",
+      "scraped_at": "2026-07-13T12:36:04.715979",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1854,10 +1654,10 @@
         "Music",
         "Theater"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021452",
+      "scraped_at": "2026-07-13T12:36:04.716406",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1936,10 +1736,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021100",
+      "scraped_at": "2026-07-13T12:36:04.715979",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -1977,10 +1777,10 @@
         "Music",
         "Theater"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021452",
+      "scraped_at": "2026-07-13T12:36:04.716406",
       "start_time": "7:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=13-06-04",
       "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
@@ -2028,10 +1828,10 @@
         "Music",
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.044321",
+      "scraped_at": "2026-07-13T12:36:04.737833",
       "start_time": "10:00 AM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=13-06-04",
       "date_label": "Aug 28 - 30",
       "end_date": null,
       "recurrence_text": "Aug 28 - 30",
@@ -2102,7 +1902,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2159,10 +1962,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.050069",
+      "scraped_at": "2026-07-13T12:36:04.744609",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=13-06-04",
       "date_label": "Apr 17 - 19, Sep 11 - 13",
       "recurrence_text": "Apr 17 - 19, Sep 11 - 13",
       "venue_name": "Heber City",
@@ -2188,10 +1991,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.050665",
+      "scraped_at": "2026-07-13T12:36:04.745329",
       "start_time": "9:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132111.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132111.jpg?decache=13-06-04",
       "date_label": "Sep 12 - 13",
       "end_date": null,
       "recurrence_text": "Sep 12 - 13",
@@ -2257,7 +2060,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2390,10 +2196,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.052997",
+      "scraped_at": "2026-07-13T12:36:04.748107",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=13-06-04",
       "date_label": "Sep 19 - 20",
       "end_date": null,
       "recurrence_text": "Sep 19 - 20",
@@ -2432,7 +2238,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2490,10 +2299,10 @@
         "Sports",
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.055027",
+      "scraped_at": "2026-07-13T12:36:04.750503",
       "start_time": "9:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2755717.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2755717.jpg?decache=13-06-04",
       "date_label": "May 30 - 31, Sep 26 - 27",
       "recurrence_text": "May 30 - 31, Sep 26 - 27",
       "venue_name": "Wasatch Wunder Course",
@@ -2533,7 +2342,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2603,7 +2415,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2641,7 +2456,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2679,7 +2497,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2717,7 +2538,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2755,7 +2579,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2793,7 +2620,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2831,7 +2661,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2869,7 +2702,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2907,7 +2743,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2945,7 +2784,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -2983,7 +2825,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -3021,7 +2866,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -3059,7 +2907,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -3097,7 +2948,10 @@
       "facets": [
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
+      "_all_sources": [
+        "Heber Valley Life"
+      ],
       "is_free": true,
       "price": "Free",
       "filter_categories": [
@@ -3189,10 +3043,10 @@
         "Music",
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023229",
+      "scraped_at": "2026-07-13T12:36:04.712747",
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=13-06-04",
       "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
       "recurrence": "weekly",
       "recurrence_day": "Thursday",
@@ -3268,10 +3122,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021951",
+      "scraped_at": "2026-07-13T12:36:04.711186",
       "start_time": "8:15 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=13-06-04",
       "date_label": "Jul 3 - 20",
       "end_date": null,
       "recurrence_text": "Jul 3 - 20",
@@ -3447,10 +3301,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021951",
+      "scraped_at": "2026-07-13T12:36:04.711186",
       "start_time": "8:15 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=13-06-04",
       "date_label": "Jul 3 - 20",
       "end_date": null,
       "recurrence_text": "Jul 3 - 20",
@@ -3482,10 +3336,10 @@
         "Music",
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023547",
+      "scraped_at": "2026-07-13T12:36:04.713150",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=13-06-04",
       "date_label": "Jul 17 - 19",
       "end_date": null,
       "recurrence_text": "Jul 17 - 19",
@@ -3511,10 +3365,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023618",
+      "scraped_at": "2026-07-13T12:36:04.713240",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=13-06-04",
       "date_label": "Jul 17 - 18",
       "end_date": null,
       "recurrence_text": "Jul 17 - 18",
@@ -3570,10 +3424,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023872",
+      "scraped_at": "2026-07-13T12:36:04.713548",
       "start_time": "5:30 PM",
       "end_time": "7:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188635.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188635.jpg?decache=13-06-04",
       "date_label": "5:30 - 7:30 PM",
       "venue_name": "Blue Canyon Farm",
       "address": "1850 Edwards Lane, Heber City, UT, 84032",
@@ -3600,10 +3454,10 @@
         "Community",
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024080",
+      "scraped_at": "2026-07-13T12:36:04.713796",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188577.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188577.jpg?decache=13-06-04",
       "date_label": "6:00 - 8:00 PM",
       "end_date": null,
       "venue_name": "Liberty Sanctuary",
@@ -3645,10 +3499,10 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024147",
+      "scraped_at": "2026-07-13T12:36:04.713878",
       "start_time": "6:30 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188417.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188417.jpg?decache=13-06-04",
       "date_label": "6:30 - 9:00 PM",
       "venue_name": "Black Rock Mountain Resort",
       "address": "909 West Peace Tree Trail, Heber City, UT, 84032",
@@ -3677,10 +3531,10 @@
       "categories": [
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024399",
+      "scraped_at": "2026-07-13T12:36:04.714197",
       "start_time": "9:00 PM",
       "end_time": "11:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188514.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188514.jpg?decache=13-06-04",
       "date_label": "9:00 - 11:00 PM",
       "venue_name": "Avon Theater",
       "address": "94 South Main Street, Heber City, UT, 84032",
@@ -3822,10 +3676,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021951",
+      "scraped_at": "2026-07-13T12:36:04.711186",
       "start_time": "8:15 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=13-06-04",
       "date_label": "Jul 3 - 20",
       "end_date": null,
       "recurrence_text": "Jul 3 - 20",
@@ -3857,10 +3711,10 @@
         "Music",
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023547",
+      "scraped_at": "2026-07-13T12:36:04.713150",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=13-06-04",
       "date_label": "Jul 17 - 19",
       "end_date": null,
       "recurrence_text": "Jul 17 - 19",
@@ -3886,10 +3740,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023618",
+      "scraped_at": "2026-07-13T12:36:04.713240",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2741909.jpg?decache=13-06-04",
       "date_label": "Jul 17 - 18",
       "end_date": null,
       "recurrence_text": "Jul 17 - 18",
@@ -3945,10 +3799,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024080",
+      "scraped_at": "2026-07-13T12:36:04.713796",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188577.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188577.jpg?decache=13-06-04",
       "date_label": "6:00 - 8:00 PM",
       "end_date": null,
       "venue_name": "Liberty Sanctuary",
@@ -3973,10 +3827,10 @@
       "categories": [
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024763",
+      "scraped_at": "2026-07-13T12:36:04.714629",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=13-06-04",
       "date_label": "Sat, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -4007,10 +3861,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024836",
+      "scraped_at": "2026-07-13T12:36:04.714723",
       "start_time": "9:00 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3126376.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3126376.jpg?decache=13-06-04",
       "date_label": "9:00 AM - 1:00 PM",
       "venue_name": "Karl Malone Chrysler Dodge Jeep Ram",
       "address": "255 South Main Street, Heber City, UT, 84032",
@@ -4035,10 +3889,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025037",
+      "scraped_at": "2026-07-13T12:36:04.714983",
       "start_time": "10:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188545.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188545.jpg?decache=13-06-04",
       "date_label": "10:00 AM - 4:00 PM",
       "venue_name": "Country Gardens & Nursery",
       "address": "1401 US-189, Heber City, UT, 84032",
@@ -4063,10 +3917,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025215",
+      "scraped_at": "2026-07-13T12:36:04.715197",
       "start_time": "12:00 PM",
       "end_time": "2:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132178.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132178.jpg?decache=13-06-04",
       "date_label": "Dates vary, 12:00 - 2:00 PM",
       "recurrence_text": "Dates vary, 12:00 - 2:00 PM",
       "venue_name": "Sundance Resort",
@@ -4092,10 +3946,10 @@
       "categories": [
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025339",
+      "scraped_at": "2026-07-13T12:36:04.715343",
       "start_time": "5:00 PM",
       "end_time": "6:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188520.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188520.jpg?decache=13-06-04",
       "date_label": "2 Shows, 5:00 & 7:30 PM",
       "venue_name": "Avon Theater",
       "address": "94 South Main Street, Heber City, UT, 84032",
@@ -4123,10 +3977,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -4334,10 +4188,10 @@
         "Music",
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023229",
+      "scraped_at": "2026-07-13T12:36:04.712747",
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=13-06-04",
       "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
       "recurrence": "weekly",
       "recurrence_day": "Thursday",
@@ -4413,10 +4267,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.027810",
+      "scraped_at": "2026-07-13T12:36:04.718297",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189009.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189009.jpg?decache=13-06-04",
       "date_label": "Jul 23 - 24",
       "end_date": null,
       "venue_name": "Wallsburg Town Park & Town Hall",
@@ -4442,10 +4296,10 @@
         "Community",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.027887",
+      "scraped_at": "2026-07-13T12:36:04.718387",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2724434.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2724434.jpg?decache=13-06-04",
       "date_label": "Jul 23 - 25, 7:00 - 10:00 PM",
       "end_date": null,
       "recurrence_text": "Jul 23 - 25, 7:00 - 10:00 PM",
@@ -4595,10 +4449,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.027810",
+      "scraped_at": "2026-07-13T12:36:04.718297",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189009.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189009.jpg?decache=13-06-04",
       "date_label": "Jul 23 - 24",
       "end_date": null,
       "venue_name": "Wallsburg Town Park & Town Hall",
@@ -4624,10 +4478,10 @@
         "Community",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.027887",
+      "scraped_at": "2026-07-13T12:36:04.718387",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2724434.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2724434.jpg?decache=13-06-04",
       "date_label": "Jul 23 - 25, 7:00 - 10:00 PM",
       "end_date": null,
       "recurrence_text": "Jul 23 - 25, 7:00 - 10:00 PM",
@@ -4658,10 +4512,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.028091",
+      "scraped_at": "2026-07-13T12:36:04.718618",
       "start_time": "6:45 AM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3163382.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3163382.jpg?decache=13-06-04",
       "date_label": "6:45 AM - 10:00 PM",
       "venue_name": "Charleston Town Park",
       "address": "3575 West 3600 South, Charleston, UT, 84032",
@@ -4687,10 +4541,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.028153",
+      "scraped_at": "2026-07-13T12:36:04.718694",
       "start_time": "7:00 AM",
       "end_time": "9:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750856.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750856.jpg?decache=13-06-04",
       "date_label": "7:00 - 9:00 AM ",
       "venue_name": "Charleston Park",
       "address": "3575 West 3600 South, Heber City, UT, 84032",
@@ -4720,10 +4574,10 @@
         "Family",
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.028461",
+      "scraped_at": "2026-07-13T12:36:04.719073",
       "start_time": "12:00 PM",
       "end_time": "6:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727546.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727546.jpg?decache=13-06-04",
       "date_label": "Jul 24 - 26",
       "end_date": null,
       "recurrence_text": "Jul 24 - 26",
@@ -4768,14 +4622,14 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.028667",
+      "scraped_at": "2026-07-13T12:36:04.719327",
       "start_time": "7:00 PM",
       "end_time": "10:45 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760506.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760506.jpg?decache=13-06-04",
       "date_label": "7:00 - 10:45 PM",
       "venue_name": "Heber Valley Railroad",
       "address": "450 South 600 West, Heber City, UT, 84032",
-      "recurrence_text": "annual",
+      "recurrence_text": "Annual event celebrated on Friday, July 24th",
       "is_free": false,
       "end_date": null,
       "series_end": "2026-07-24",
@@ -5038,10 +4892,10 @@
       "categories": [
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024763",
+      "scraped_at": "2026-07-13T12:36:04.714629",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=13-06-04",
       "date_label": "Sat, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -5074,10 +4928,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -5126,10 +4980,10 @@
         "Community",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.027887",
+      "scraped_at": "2026-07-13T12:36:04.718387",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2724434.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2724434.jpg?decache=13-06-04",
       "date_label": "Jul 23 - 25, 7:00 - 10:00 PM",
       "end_date": null,
       "recurrence_text": "Jul 23 - 25, 7:00 - 10:00 PM",
@@ -5191,10 +5045,10 @@
         "Arts",
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.028461",
+      "scraped_at": "2026-07-13T12:36:04.719073",
       "start_time": "12:00 PM",
       "end_time": "6:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727546.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727546.jpg?decache=13-06-04",
       "date_label": "Jul 24 - 26",
       "end_date": null,
       "recurrence_text": "Jul 24 - 26",
@@ -5411,10 +5265,10 @@
         "Music",
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023229",
+      "scraped_at": "2026-07-13T12:36:04.712747",
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=13-06-04",
       "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
       "recurrence": "weekly",
       "recurrence_day": "Thursday",
@@ -5468,10 +5322,10 @@
         "Kids",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.031872",
+      "scraped_at": "2026-07-13T12:36:04.723111",
       "start_time": "7:30 PM",
       "end_time": "10:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726716.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726716.jpg?decache=13-06-04",
       "date_label": "Jul 30 - Aug 1, 7:30 - 10:30 PM",
       "end_date": null,
       "recurrence_text": "Jul 30 - Aug 1, 7:30 - 10:30 PM",
@@ -5560,10 +5414,10 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.030565",
+      "scraped_at": "2026-07-13T12:36:04.721565",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=13-06-04",
       "date_label": "July 27 - August 1, event times vary",
       "recurrence_text": "July 27 - August 1, event times vary",
       "category_llm": "Community",
@@ -5596,10 +5450,10 @@
         "Kids",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.031809",
+      "scraped_at": "2026-07-13T12:36:04.723033",
       "start_time": "5:00 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188357.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188357.jpg?decache=13-06-04",
       "date_label": "5:00 - 8:00 PM",
       "venue_name": "Southfield Skate Park",
       "address": "895 West 100 South, Heber City, UT, 84032",
@@ -5816,10 +5670,10 @@
         "Kids",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.031872",
+      "scraped_at": "2026-07-13T12:36:04.723111",
       "start_time": "7:30 PM",
       "end_time": "10:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726716.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726716.jpg?decache=13-06-04",
       "date_label": "Jul 30 - Aug 1, 7:30 - 10:30 PM",
       "end_date": null,
       "recurrence_text": "Jul 30 - Aug 1, 7:30 - 10:30 PM",
@@ -5885,10 +5739,10 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.030565",
+      "scraped_at": "2026-07-13T12:36:04.721565",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=13-06-04",
       "date_label": "July 27 - August 1, event times vary",
       "recurrence_text": "July 27 - August 1, event times vary",
       "category_llm": "Community",
@@ -5921,10 +5775,10 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.032075",
+      "scraped_at": "2026-07-13T12:36:04.723342",
       "start_time": "8:30 AM",
       "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3125323.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3125323.jpg?decache=13-06-04",
       "date_label": "8:30 AM - 12:00 PM",
       "venue_name": "Wasatch County Rodeo Grounds",
       "address": "415 South Southfield Road, Heber City, UT, 84032",
@@ -5953,10 +5807,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.032380",
+      "scraped_at": "2026-07-13T12:36:04.723701",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760525.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760525.jpg?decache=13-06-04",
       "date_label": "7:00 PM - 8:30 PM",
       "venue_name": "Heber Valley Railroad Depot",
       "address": "450 South 600 West, Heber City, UT, 84032",
@@ -6199,10 +6053,10 @@
         "Kids",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.031872",
+      "scraped_at": "2026-07-13T12:36:04.723111",
       "start_time": "7:30 PM",
       "end_time": "10:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726716.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726716.jpg?decache=13-06-04",
       "date_label": "Jul 30 - Aug 1, 7:30 - 10:30 PM",
       "end_date": null,
       "recurrence_text": "Jul 30 - Aug 1, 7:30 - 10:30 PM",
@@ -6237,10 +6091,10 @@
       "categories": [
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024763",
+      "scraped_at": "2026-07-13T12:36:04.714629",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=13-06-04",
       "date_label": "Sat, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -6273,10 +6127,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -6329,10 +6183,10 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.030565",
+      "scraped_at": "2026-07-13T12:36:04.721565",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=13-06-04",
       "date_label": "July 27 - August 1, event times vary",
       "recurrence_text": "July 27 - August 1, event times vary",
       "category_llm": "Community",
@@ -6360,10 +6214,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.032732",
+      "scraped_at": "2026-07-13T12:36:04.724137",
       "start_time": "9:00 AM",
       "end_time": "2:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188636.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188636.jpg?decache=13-06-04",
       "date_label": "9:00 AM - 2:00 PM",
       "venue_name": "Heber City Main Street Park",
       "address": "250 South Main Street, Heber City, UT, 84032",
@@ -6388,10 +6242,10 @@
       "categories": [
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.033157",
+      "scraped_at": "2026-07-13T12:36:04.724629",
       "start_time": "5:00 PM",
       "end_time": "6:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188524.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188524.jpg?decache=13-06-04",
       "date_label": "2 Shows, 5:00pm & 7:30pm",
       "venue_name": "Avon Theater",
       "address": "94 South Main Street, Heber City, UT, 84032",
@@ -6658,10 +6512,10 @@
         "Music",
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023229",
+      "scraped_at": "2026-07-13T12:36:04.712747",
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=13-06-04",
       "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
       "recurrence": "weekly",
       "recurrence_day": "Thursday",
@@ -6952,10 +6806,10 @@
       "categories": [
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024763",
+      "scraped_at": "2026-07-13T12:36:04.714629",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=13-06-04",
       "date_label": "Sat, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -6986,10 +6840,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025215",
+      "scraped_at": "2026-07-13T12:36:04.715197",
       "start_time": "12:00 PM",
       "end_time": "2:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132178.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132178.jpg?decache=13-06-04",
       "date_label": "Dates vary, 12:00 - 2:00 PM",
       "recurrence_text": "Dates vary, 12:00 - 2:00 PM",
       "venue_name": "Sundance Resort",
@@ -7017,10 +6871,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -7068,10 +6922,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.035758",
+      "scraped_at": "2026-07-13T12:36:04.727722",
       "start_time": "6:00 AM",
       "end_time": "11:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3161632.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3161632.jpg?decache=13-06-04",
       "date_label": "6:00 AM - 11:00 AM",
       "venue_name": "Old Mill Elementary School",
       "address": "1600 East 980th South, Heber City, UT, 84032",
@@ -7098,10 +6952,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.036531",
+      "scraped_at": "2026-07-13T12:36:04.728642",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=13-06-04",
       "date_label": "Dates vary, 7:00 - 8:30 PM",
       "recurrence_text": "Dates vary, 7:00 - 8:30 PM",
       "category_llm": "Nightlife",
@@ -7339,10 +7193,10 @@
         "Music",
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023229",
+      "scraped_at": "2026-07-13T12:36:04.712747",
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=13-06-04",
       "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
       "recurrence": "weekly",
       "recurrence_day": "Thursday",
@@ -7544,10 +7398,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.039151",
+      "scraped_at": "2026-07-13T12:36:04.731720",
       "start_time": "10:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=13-06-04",
       "date_label": "10:00 AM - 4:00 PM",
       "recurrence_text": "Fri &amp; Sat, 8:00 AM - 4:00 PM",
       "venue_name": "Heber City, Utah",
@@ -7777,10 +7631,10 @@
       "categories": [
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024763",
+      "scraped_at": "2026-07-13T12:36:04.714629",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=13-06-04",
       "date_label": "Sat, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -7813,10 +7667,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -7864,10 +7718,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.039151",
+      "scraped_at": "2026-07-13T12:36:04.731720",
       "start_time": "10:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=13-06-04",
       "date_label": "10:00 AM - 4:00 PM",
       "recurrence_text": "Fri &amp; Sat, 8:00 AM - 4:00 PM",
       "venue_name": "Heber City, Utah",
@@ -7919,13 +7773,14 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-07-12T11:12:55.039569",
+      "scraped_at": "2026-07-13T12:36:04.732232",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187839.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187839.jpg?decache=13-06-04",
       "date_label": "7:00 - 10:00 PM",
       "venue_name": "Instructor's private residence",
       "address": "3 miles east of Heber's Main Street, Heber City, Utah 84032",
+      "is_free": false,
       "end_date": null,
       "series_end": "2026-08-15",
       "filter_categories": [
@@ -8138,10 +7993,10 @@
         "Music",
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.023229",
+      "scraped_at": "2026-07-13T12:36:04.712747",
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=13-06-04",
       "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
       "recurrence": "weekly",
       "recurrence_day": "Thursday",
@@ -8446,10 +8301,10 @@
       "categories": [
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024763",
+      "scraped_at": "2026-07-13T12:36:04.714629",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=13-06-04",
       "date_label": "Sat, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -8482,10 +8337,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -8533,10 +8388,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.042216",
+      "scraped_at": "2026-07-13T12:36:04.735345",
       "start_time": "5:00 PM",
       "end_time": "6:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188526.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188526.jpg?decache=13-06-04",
       "date_label": "2 Shows, 5:00 & 7:30 PM",
       "venue_name": "Avon Theater",
       "address": "94 South Main Street, Heber City, UT, 84032",
@@ -8836,10 +8691,10 @@
         "Community",
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.044253",
+      "scraped_at": "2026-07-13T12:36:04.737748",
       "start_time": "8:00 AM",
       "end_time": "12:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185673.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185673.jpg?decache=13-06-04",
       "date_label": "Aug 28 - 29",
       "end_date": null,
       "recurrence_text": "Aug 28 - 29",
@@ -8884,10 +8739,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.044165",
+      "scraped_at": "2026-07-13T12:36:04.737645",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3122383.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3122383.jpg?decache=13-06-04",
       "date_label": "Aug 28 - 29",
       "end_date": null,
       "recurrence_text": "Aug 28 - 29",
@@ -8918,10 +8773,10 @@
         "Music",
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.044321",
+      "scraped_at": "2026-07-13T12:36:04.737833",
       "start_time": "10:00 AM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=13-06-04",
       "date_label": "Aug 28 - 30",
       "end_date": null,
       "recurrence_text": "Aug 28 - 30",
@@ -9053,10 +8908,10 @@
         "Community",
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.044253",
+      "scraped_at": "2026-07-13T12:36:04.737748",
       "start_time": "8:00 AM",
       "end_time": "12:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185673.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185673.jpg?decache=13-06-04",
       "date_label": "Aug 28 - 29",
       "end_date": null,
       "recurrence_text": "Aug 28 - 29",
@@ -9089,10 +8944,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.044165",
+      "scraped_at": "2026-07-13T12:36:04.737645",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3122383.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3122383.jpg?decache=13-06-04",
       "date_label": "Aug 28 - 29",
       "end_date": null,
       "recurrence_text": "Aug 28 - 29",
@@ -9144,10 +8999,10 @@
       "categories": [
         "Outdoor"
       ],
-      "scraped_at": "2026-07-12T11:12:55.024763",
+      "scraped_at": "2026-07-13T12:36:04.714629",
       "start_time": "9:00 AM",
       "end_time": "10:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=13-06-04",
       "date_label": "Sat, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -9180,10 +9035,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -9232,10 +9087,10 @@
         "Music",
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.044321",
+      "scraped_at": "2026-07-13T12:36:04.737833",
       "start_time": "10:00 AM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=13-06-04",
       "date_label": "Aug 28 - 30",
       "end_date": null,
       "recurrence_text": "Aug 28 - 30",
@@ -9261,10 +9116,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.044950",
+      "scraped_at": "2026-07-13T12:36:04.738565",
       "start_time": "6:00 AM",
       "end_time": "7:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740868.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740868.jpg?decache=13-06-04",
       "address": "2575 South Mill Road, Heber City, UT, 84032",
       "end_date": null,
       "series_end": "2026-08-29",
@@ -9494,13 +9349,13 @@
         "Festival",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.047737",
+      "scraped_at": "2026-07-13T12:36:04.741855",
       "start_time": "8:00 AM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=13-06-04",
       "date_label": "Sep 4-5, 8:00 AM - 8:00 PM",
       "end_date": null,
-      "recurrence_text": "Annual event held the Friday and Saturday before Labor Day",
+      "recurrence_text": "Annual event, Friday and Saturday before Labor Day",
       "venue_name": null,
       "series_end": "2026-09-05",
       "address": "200 W Main Street Midway, Utah 84049",
@@ -9541,10 +9396,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.048061",
+      "scraped_at": "2026-07-13T12:36:04.742244",
       "start_time": "7:00 PM",
       "end_time": "9:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178906.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178906.jpg?decache=13-06-04",
       "date_label": "7:00 - 9:30 PM",
       "venue_name": "Heber Valley Railroad",
       "address": "450 South 600 West, Heber City, UT, 84032",
@@ -9669,10 +9524,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -9723,13 +9578,13 @@
         "Festival",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.047737",
+      "scraped_at": "2026-07-13T12:36:04.741855",
       "start_time": "8:00 AM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=13-06-04",
       "date_label": "Sep 4-5, 8:00 AM - 8:00 PM",
       "end_date": null,
-      "recurrence_text": "Annual event held the Friday and Saturday before Labor Day",
+      "recurrence_text": "Annual event, Friday and Saturday before Labor Day",
       "venue_name": null,
       "series_end": "2026-09-05",
       "address": "200 W Main Street Midway, Utah 84049",
@@ -9974,10 +9829,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.050069",
+      "scraped_at": "2026-07-13T12:36:04.744609",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=13-06-04",
       "date_label": "Apr 17 - 19, Sep 11 - 13",
       "recurrence_text": "Apr 17 - 19, Sep 11 - 13",
       "venue_name": "Heber City",
@@ -10044,7 +9899,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -10189,10 +10044,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025215",
+      "scraped_at": "2026-07-13T12:36:04.715197",
       "start_time": "12:00 PM",
       "end_time": "2:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132178.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132178.jpg?decache=13-06-04",
       "date_label": "Dates vary, 12:00 - 2:00 PM",
       "recurrence_text": "Dates vary, 12:00 - 2:00 PM",
       "venue_name": "Sundance Resort",
@@ -10220,10 +10075,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -10271,10 +10126,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.036531",
+      "scraped_at": "2026-07-13T12:36:04.728642",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=13-06-04",
       "date_label": "Dates vary, 7:00 - 8:30 PM",
       "recurrence_text": "Dates vary, 7:00 - 8:30 PM",
       "category_llm": "Nightlife",
@@ -10300,10 +10155,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.050069",
+      "scraped_at": "2026-07-13T12:36:04.744609",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=13-06-04",
       "date_label": "Apr 17 - 19, Sep 11 - 13",
       "recurrence_text": "Apr 17 - 19, Sep 11 - 13",
       "venue_name": "Heber City",
@@ -10330,10 +10185,10 @@
         "Arts",
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.050482",
+      "scraped_at": "2026-07-13T12:36:04.745111",
       "start_time": "8:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727806.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727806.jpg?decache=13-06-04",
       "date_label": "8:00 AM - 4:00 PM",
       "venue_name": "Commemorative Air Force Museum",
       "address": "2365 West Airport Road, Heber City, UT, 84032",
@@ -10376,10 +10231,10 @@
         "Outdoor",
         "Running & Races"
       ],
-      "scraped_at": "2026-07-12T11:12:55.050548",
-      "start_time": "8:00 AM",
+      "scraped_at": "2026-07-13T12:36:04.745192",
+      "start_time": "08:00 AM",
       "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760251.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760251.jpg?decache=13-06-04",
       "venue_name": "Soldier Hollow",
       "address": "2002 Olympic Drive, Midway, UT, 84049",
       "end_date": null,
@@ -10422,10 +10277,10 @@
         "Community",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.050665",
+      "scraped_at": "2026-07-13T12:36:04.745329",
       "start_time": "9:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132111.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132111.jpg?decache=13-06-04",
       "date_label": "Sep 12 - 13",
       "end_date": null,
       "recurrence_text": "Sep 12 - 13",
@@ -10490,10 +10345,10 @@
       "categories": [
         "Festival"
       ],
-      "scraped_at": "2026-07-12T11:12:55.050849",
+      "scraped_at": "2026-07-13T12:36:04.745554",
       "start_time": "11:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188469.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188469.jpg?decache=13-06-04",
       "date_label": "11:00 AM - 5:00 PM",
       "venue_name": "St. Lawrence Catholic Church",
       "address": "90 North 100 West, Heber City, UT, 84032",
@@ -10592,7 +10447,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -10715,10 +10570,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.051852",
+      "scraped_at": "2026-07-13T12:36:04.746739",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=13-06-04",
       "date_label": "Sep 16 - 19",
       "end_date": null,
       "recurrence_text": "Sep 16 - 19",
@@ -10807,10 +10662,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.051852",
+      "scraped_at": "2026-07-13T12:36:04.746739",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=13-06-04",
       "date_label": "Sep 16 - 19",
       "end_date": null,
       "recurrence_text": "Sep 16 - 19",
@@ -10835,10 +10690,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.052518",
+      "scraped_at": "2026-07-13T12:36:04.747526",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189011.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189011.jpg?decache=13-06-04",
       "date_label": "Sep 18 - 19",
       "end_date": null,
       "recurrence_text": "Sep 18 - 19",
@@ -10908,7 +10763,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -11055,10 +10910,10 @@
         "Family",
         "Music"
       ],
-      "scraped_at": "2026-07-12T11:12:55.025527",
+      "scraped_at": "2026-07-13T12:36:04.715584",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=13-06-04",
       "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
       "recurrence": "weekly",
       "recurrence_day": "Saturday",
@@ -11106,10 +10961,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.051852",
+      "scraped_at": "2026-07-13T12:36:04.746739",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=13-06-04",
       "date_label": "Sep 16 - 19",
       "end_date": null,
       "recurrence_text": "Sep 16 - 19",
@@ -11134,10 +10989,10 @@
       "categories": [
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.052518",
+      "scraped_at": "2026-07-13T12:36:04.747526",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189011.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189011.jpg?decache=13-06-04",
       "date_label": "Sep 18 - 19",
       "end_date": null,
       "recurrence_text": "Sep 18 - 19",
@@ -11163,10 +11018,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.052997",
+      "scraped_at": "2026-07-13T12:36:04.748107",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=13-06-04",
       "date_label": "Sep 19 - 20",
       "end_date": null,
       "recurrence_text": "Sep 19 - 20",
@@ -11239,7 +11094,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -11362,10 +11217,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.054236",
+      "scraped_at": "2026-07-13T12:36:04.749564",
       "start_time": "12:00 PM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187859.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187859.jpg?decache=13-06-04",
       "date_label": "Sep 24 - 26",
       "end_date": null,
       "recurrence_text": "Sep 24 - 26",
@@ -11454,10 +11309,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.054236",
+      "scraped_at": "2026-07-13T12:36:04.749564",
       "start_time": "12:00 PM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187859.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187859.jpg?decache=13-06-04",
       "date_label": "Sep 24 - 26",
       "end_date": null,
       "recurrence_text": "Sep 24 - 26",
@@ -11496,7 +11351,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -11612,10 +11467,10 @@
         "Outdoor",
         "Sports"
       ],
-      "scraped_at": "2026-07-12T11:12:55.054944",
+      "scraped_at": "2026-07-13T12:36:04.750409",
       "start_time": "8:00 AM",
       "end_time": "12:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180475.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180475.jpg?decache=13-06-04",
       "date_label": "Race starts at 8:00 AM",
       "venue_name": "Soldier Hollow",
       "address": "2002 Soldier Hollow Lane, Midway, UT, 84049",
@@ -11648,10 +11503,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.054236",
+      "scraped_at": "2026-07-13T12:36:04.749564",
       "start_time": "12:00 PM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187859.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187859.jpg?decache=13-06-04",
       "date_label": "Sep 24 - 26",
       "end_date": null,
       "recurrence_text": "Sep 24 - 26",
@@ -11677,10 +11532,10 @@
         "Sports",
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.055027",
+      "scraped_at": "2026-07-13T12:36:04.750503",
       "start_time": "9:00 AM",
       "end_time": "4:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2755717.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2755717.jpg?decache=13-06-04",
       "date_label": "May 30 - 31, Sep 26 - 27",
       "recurrence_text": "May 30 - 31, Sep 26 - 27",
       "venue_name": "Wasatch Wunder Course",
@@ -11793,7 +11648,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -11962,7 +11817,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -12069,7 +11924,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -12104,7 +11959,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -12239,7 +12094,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -12299,10 +12154,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.036531",
+      "scraped_at": "2026-07-13T12:36:04.728642",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=13-06-04",
       "date_label": "Dates vary, 7:00 - 8:30 PM",
       "recurrence_text": "Dates vary, 7:00 - 8:30 PM",
       "category_llm": "Nightlife",
@@ -12375,7 +12230,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -12410,7 +12265,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -12499,10 +12354,10 @@
       "categories": [
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.058619",
+      "scraped_at": "2026-07-13T12:36:04.754677",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=13-06-04",
       "date_label": "Oct 13 - 16",
       "end_date": null,
       "recurrence_text": "Oct 13 - 16",
@@ -12559,10 +12414,10 @@
       "categories": [
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.058619",
+      "scraped_at": "2026-07-13T12:36:04.754677",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=13-06-04",
       "date_label": "Oct 13 - 16",
       "end_date": null,
       "recurrence_text": "Oct 13 - 16",
@@ -12601,7 +12456,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -12704,7 +12559,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -12739,7 +12594,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -12842,7 +12697,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -12913,7 +12768,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -12948,7 +12803,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -13019,7 +12874,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13090,7 +12945,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13125,7 +12980,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -13229,7 +13084,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13325,7 +13180,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13360,7 +13215,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -13431,7 +13286,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13455,10 +13310,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.036531",
+      "scraped_at": "2026-07-13T12:36:04.728642",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=13-06-04",
       "date_label": "Dates vary, 7:00 - 8:30 PM",
       "recurrence_text": "Dates vary, 7:00 - 8:30 PM",
       "category_llm": "Nightlife",
@@ -13498,7 +13353,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13533,7 +13388,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -13578,34 +13433,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Holiday Chamber Gala",
-      "date": "2026-11-20",
-      "description": "Holiday Chamber Gala in Heber Valley.",
-      "location": "Black Rock Mountain Resort, Heber Valley, UT",
-      "link": "https://www.gohebervalley.com/chamber-gala",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "scraped_at": "2026-07-12T11:12:55.065339",
-      "start_time": "5:30 PM",
-      "end_time": "9:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132170.jpg?decache=12-05-54",
-      "date_label": "Black Rock Mountain Resort 5:30 - 9:30 PM",
-      "venue_name": "Black Rock Mountain Resort",
-      "is_free": false,
-      "end_date": null,
-      "series_end": "2026-11-20",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_54035288abb6",
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Midway Swiss Days",
       "date": "2026-11-20",
       "description": "The annual Swiss Days Festival takes place in Midway, Utah, the Friday and Saturday before Labor Day each year and draws a huge crowd both days. Swiss Days includes a 10K race, parade, live entertainment, and so much more. DATES: Friday, September 4 & Saturday, September 5, 2026 SCHEDULE: Friday, Sep 4th: Market 8:00 am - 8:00 pm Saturday, Sep 5th: Market 8:00 am - 8:00 pm Breakfast & 10K Run start at 7:00 am, Parade at 10:00 am PARKING: Two public parking locations offer a free shuttle bus to and from the event location. Parking is $10 and the shuttle runs approximately every 15 minutes. There is limited street parking and private pay parking lots surrounding the square.\u200d Complimentary bike parking is available at Centennial Park. PETS: Pets are NOT allowed at the venue.\u200d",
@@ -13632,7 +13459,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13670,7 +13497,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13705,7 +13532,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -13776,7 +13603,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13814,7 +13641,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13849,7 +13676,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -13920,7 +13747,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13958,7 +13785,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -13996,7 +13823,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -14034,7 +13861,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -14072,7 +13899,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -14110,7 +13937,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -14148,7 +13975,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -14183,7 +14010,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -14254,7 +14081,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -14289,7 +14116,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -14360,7 +14187,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -14395,7 +14222,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -14466,7 +14293,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -14501,7 +14328,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -14572,7 +14399,7 @@
         "Free",
         "Paid"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "is_free": false,
       "filter_categories": [
         "Community",
@@ -14607,7 +14434,7 @@
       "recurrence_days": "Saturday",
       "end_date": null,
       "is_ongoing": true,
-      "series_end": "2027-01-02",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",
@@ -14649,6 +14476,77 @@
         "Outdoors"
       ],
       "id": "e_e60b71092a1f",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Midway Swiss Days",
+      "date": "2027-01-09",
+      "description": "The annual Swiss Days Festival takes place in Midway, Utah, the Friday and Saturday before Labor Day each year and draws a huge crowd both days. Swiss Days includes a 10K race, parade, live entertainment, and so much more. DATES: Friday, September 4 & Saturday, September 5, 2026 SCHEDULE: Friday, Sep 4th: Market 8:00 am - 8:00 pm Saturday, Sep 5th: Market 8:00 am - 8:00 pm Breakfast & 10K Run start at 7:00 am, Parade at 10:00 am PARKING: Two public parking locations offer a free shuttle bus to and from the event location. Parking is $10 and the shuttle runs approximately every 15 minutes. There is limited street parking and private pay parking lots surrounding the square.\u200d Complimentary bike parking is available at Centennial Park. PETS: Pets are NOT allowed at the venue.\u200d",
+      "location": "Midway Town Square, 200 W Main Street Midway, Utah 84049",
+      "link": "https://hebervalleylife.com/events/midway-swiss-days/",
+      "source": "Heber Valley Life",
+      "source_url": "https://hebervalleylife.com/events/midway-swiss-days/",
+      "lat": 40.5119,
+      "lng": -111.4744,
+      "categories": [
+        "Community",
+        "Sports",
+        "Family",
+        "Festival"
+      ],
+      "start_time": "8:00 AM",
+      "end_time": "8:00 PM",
+      "address": "200 W Main Street Midway, Utah 84049",
+      "venue_name": "Midway Town Square",
+      "recurrence": "weekly",
+      "recurrence_days": "Friday,Saturday",
+      "end_date": null,
+      "facets": [
+        "Free",
+        "Paid"
+      ],
+      "series_end": "2027-01-09",
+      "is_free": false,
+      "filter_categories": [
+        "Community",
+        "Family & Kids",
+        "Food & Drink",
+        "Sports"
+      ],
+      "id": "e_54d517cbdaa6",
+      "_distance_mi": 3.2
+    },
+    {
+      "title": "Saturday Sunset Music Series",
+      "date": "2027-01-09",
+      "description": "There\u2019s no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00\u20138:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. Saturday programming is part of the broader Music on Main season. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley.",
+      "location": "Heber City Main Street, Heber City, UT 84032",
+      "link": "https://hebervalleylife.com/events/saturday-sunset-music-series/",
+      "source": "Heber Valley Life",
+      "source_url": "https://hebervalleylife.com/events/saturday-sunset-music-series/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community",
+        "Music",
+        "Family"
+      ],
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://i0.wp.com/hebervalleylife.com/wp-content/uploads/2026/05/saturdaysunset.webp?fit=1920%2C1080&#038;ssl=1",
+      "address": "Heber City, UT 84032",
+      "venue_name": "Heber City Main Street",
+      "recurrence": "weekly",
+      "recurrence_days": "Saturday",
+      "end_date": null,
+      "is_ongoing": true,
+      "series_end": "2027-01-09",
+      "filter_categories": [
+        "Community",
+        "Family & Kids",
+        "Music"
+      ],
+      "id": "e_f0601bddc26d",
       "_distance_mi": 0.0
     },
     {
@@ -14743,10 +14641,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.022160",
+      "scraped_at": "2026-07-13T12:36:04.711427",
       "start_time": "4:00 PM",
       "end_time": "6:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132166.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132166.jpg?decache=13-06-04",
       "date_label": "Black Rock Mountain Resort 4:00 - 6:00 PM",
       "venue_name": "Black Rock Mountain Resort",
       "address": "909 West Peace Tree Trail, Heber City, UT, 84032",
@@ -14922,10 +14820,10 @@
       "categories": [
         "Family & Kids"
       ],
-      "scraped_at": "2026-07-12T11:12:55.022689",
+      "scraped_at": "2026-07-13T12:36:04.712111",
       "start_time": "4:00 PM",
       "end_time": "5:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188975.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188975.jpg?decache=13-06-04",
       "date_label": "4:00 - 5:30 PM",
       "venue_name": "Wasatch County Library",
       "address": "465 East 1200 South, Heber City, UT, 84032",
@@ -14952,10 +14850,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021951",
+      "scraped_at": "2026-07-13T12:36:04.711186",
       "start_time": "8:15 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=13-06-04",
       "date_label": "Jul 3 - 20",
       "end_date": null,
       "recurrence_text": "Jul 3 - 20",
@@ -14986,10 +14884,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.022896",
+      "scraped_at": "2026-07-13T12:36:04.712362",
       "start_time": "6:30 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=13-06-04",
       "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Wednesday",
@@ -15132,10 +15030,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.022896",
+      "scraped_at": "2026-07-13T12:36:04.712362",
       "start_time": "6:30 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=13-06-04",
       "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Wednesday",
@@ -15301,10 +15199,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.022896",
+      "scraped_at": "2026-07-13T12:36:04.712362",
       "start_time": "6:30 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=13-06-04",
       "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Wednesday",
@@ -15339,10 +15237,10 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.030565",
+      "scraped_at": "2026-07-13T12:36:04.721565",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=13-06-04",
       "date_label": "July 27 - August 1, event times vary",
       "recurrence_text": "July 27 - August 1, event times vary",
       "category_llm": "Community",
@@ -15533,10 +15431,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.022896",
+      "scraped_at": "2026-07-13T12:36:04.712362",
       "start_time": "6:30 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=13-06-04",
       "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Wednesday",
@@ -15624,10 +15522,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.022896",
+      "scraped_at": "2026-07-13T12:36:04.712362",
       "start_time": "6:30 PM",
       "end_time": "8:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=13-06-04",
       "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
       "recurrence": "weekly",
       "recurrence_day": "Wednesday",
@@ -15657,10 +15555,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.037607",
+      "scraped_at": "2026-07-13T12:36:04.729931",
       "start_time": "8:30 AM",
       "end_time": "9:30 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=13-06-04",
       "date_label": "Heber Valley Visitor Center, 8:30 - 9:30 AM",
       "recurrence_text": "Every other month on the second Wednesday",
       "venue_name": "Heber Valley Visitor Center",
@@ -15814,10 +15712,10 @@
         "Community",
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.047310",
+      "scraped_at": "2026-07-13T12:36:04.741352",
       "start_time": "11:30 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=13-06-04",
       "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
       "venue_name": "UVU Wasatch Campus",
       "address": "3111 College Way, Heber City, UT, 84032",
@@ -15923,10 +15821,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.051852",
+      "scraped_at": "2026-07-13T12:36:04.746739",
       "start_time": "10:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=13-06-04",
       "date_label": "Sep 16 - 19",
       "end_date": null,
       "recurrence_text": "Sep 16 - 19",
@@ -16015,10 +15913,10 @@
       "categories": [
         "Food & Drink"
       ],
-      "scraped_at": "2026-07-12T11:12:55.056148",
+      "scraped_at": "2026-07-13T12:36:04.751816",
       "start_time": "7:00 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189012.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189012.jpg?decache=13-06-04",
       "date_label": "7:00 - 8:30 PM",
       "venue_name": "Best Western Plus",
       "address": "1227 South US Highway 40, Heber City, UT, 84032",
@@ -16076,10 +15974,10 @@
       "categories": [
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.058619",
+      "scraped_at": "2026-07-13T12:36:04.754677",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=13-06-04",
       "date_label": "Oct 13 - 16",
       "end_date": null,
       "recurrence_text": "Oct 13 - 16",
@@ -16105,10 +16003,10 @@
         "Community",
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.062623",
+      "scraped_at": "2026-07-13T12:36:04.759328",
       "start_time": "11:30 AM",
       "end_time": "1:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=13-06-04",
       "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
       "venue_name": "UVU Wasatch Campus",
       "address": "3111 College Way, Heber City, UT, 84032",
@@ -16271,10 +16169,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021811",
+      "scraped_at": "2026-07-13T12:36:04.711004",
       "start_time": "4:00 PM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188582.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188582.jpg?decache=13-06-04",
       "date_label": "4:00 - 5:00 PM",
       "venue_name": "Wasatch County Library",
       "address": "465 East 1200 South, Heber City, UT, 84032",
@@ -16336,10 +16234,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021740",
+      "scraped_at": "2026-07-13T12:36:04.710894",
       "start_time": "2:00 PM",
       "end_time": "3:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188581.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188581.jpg?decache=13-06-04",
       "date_label": "2:00 - 3:00 PM",
       "venue_name": "Wasatch County Library",
       "address": "465 East 1200 South, Heber City, UT, 84032",
@@ -16366,10 +16264,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021951",
+      "scraped_at": "2026-07-13T12:36:04.711186",
       "start_time": "8:15 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=13-06-04",
       "date_label": "Jul 3 - 20",
       "end_date": null,
       "recurrence_text": "Jul 3 - 20",
@@ -16543,10 +16441,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.021951",
+      "scraped_at": "2026-07-13T12:36:04.711186",
       "start_time": "8:15 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188091.jpg?decache=13-06-04",
       "date_label": "Jul 3 - 20",
       "end_date": null,
       "recurrence_text": "Jul 3 - 20",
@@ -16577,10 +16475,10 @@
       "categories": [
         "Wellness"
       ],
-      "scraped_at": "2026-07-12T11:12:55.026416",
+      "scraped_at": "2026-07-13T12:36:04.716689",
       "start_time": "6:30 PM",
       "end_time": "8:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188479.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188479.jpg?decache=13-06-04",
       "date_label": "6:30 - 8:30 PM",
       "venue_name": "Utahna Wellness Center",
       "address": "511 West 100 South, Heber City, UT, 84032",
@@ -16726,10 +16624,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.030497",
+      "scraped_at": "2026-07-13T12:36:04.721483",
       "start_time": "4:00 PM",
       "end_time": "7:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152599.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152599.jpg?decache=13-06-04",
       "date_label": "4:00 - 7:00 PM",
       "venue_name": "Folklore Bookshop",
       "address": "49 North 200 West, Suite 101, Midway, UT, 84049",
@@ -16762,10 +16660,10 @@
         "Festival",
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.030565",
+      "scraped_at": "2026-07-13T12:36:04.721565",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-2725251.jp?w=3454&h=1417&tick=1712271045045,media-image-3185951.jpg?decache=13-06-04",
       "date_label": "July 27 - August 1, event times vary",
       "recurrence_text": "July 27 - August 1, event times vary",
       "category_llm": "Community",
@@ -17333,10 +17231,10 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:12:55.026719",
+      "scraped_at": "2026-07-13T12:36:04.717063",
       "start_time": "12:00 PM",
       "end_time": "1:30 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152638.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152638.jpg?decache=13-06-04",
       "date_label": "UVU - Wasatch Campus 12:00 - 1:30 PM",
       "venue_name": "UVU - Wasatch Campus",
       "address": "3111 College Way, Heber City, UT, 84032",
@@ -17400,7 +17298,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -17549,7 +17447,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -17670,7 +17568,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -17755,9 +17653,9 @@
         "Sports",
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.037251",
+      "scraped_at": "2026-07-13T12:36:04.729507",
       "start_time": "7:00 AM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728272.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728272.jpg?decache=13-06-04",
       "date_label": "Soldier Hollow Gold Course, 8:00 AM Shotgun",
       "venue_name": "Soldier Hollow - Gold Course",
       "end_time": "9:00 AM",
@@ -17796,7 +17694,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18047,7 +17945,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18118,7 +18016,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18189,7 +18087,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18260,7 +18158,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18331,7 +18229,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18402,7 +18300,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18473,7 +18371,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18531,10 +18429,10 @@
       "categories": [
         "Education"
       ],
-      "scraped_at": "2026-07-12T11:12:55.058619",
+      "scraped_at": "2026-07-13T12:36:04.754677",
       "start_time": "8:00 AM",
       "end_time": "5:00 PM",
-      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=12-05-54",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=1200,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=13-06-04",
       "date_label": "Oct 13 - 16",
       "end_date": null,
       "recurrence_text": "Oct 13 - 16",
@@ -18572,7 +18470,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18611,7 +18509,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18674,7 +18572,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18703,7 +18601,7 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-07-12T11:15:37.334395",
+      "scraped_at": "2026-07-13T12:38:36.165682",
       "start_time": "7:30 PM",
       "price": "$85.00",
       "end_time": "8:30 PM",
@@ -18740,7 +18638,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18779,7 +18677,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18818,7 +18716,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18857,7 +18755,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18896,7 +18794,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18935,7 +18833,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -18974,7 +18872,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -19013,7 +18911,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -19052,7 +18950,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -19091,7 +18989,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "_all_sources": [
         "Heber Valley Life"
       ],
@@ -19130,7 +19028,7 @@
       "facets": [
         "Free"
       ],
-      "series_end": "2027-01-08",
+      "series_end": "2027-01-09",
       "filter_categories": [
         "Community",
         "Family & Kids",

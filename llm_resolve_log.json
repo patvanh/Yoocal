@@ -1,25 +1,33 @@
 {
-  "generated_at": "2026-07-12T11:26:43.127861",
+  "generated_at": "2026-07-13T12:49:40.491926",
   "attempted": 2,
-  "applied": 1,
+  "applied": 2,
   "log": [
     {
       "city": "jackson",
-      "title": "Western Wednesdays",
+      "title": "Summer Evenings at The Rooftop Bar",
       "type": "title_truncated",
-      "link": "https://www.jacksonhole.com/events/western-wednesday-aug5",
+      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-08-03",
       "resolution": {
         "confidence": "high",
-        "new_title": "Western Wednesdays at Teton Village's Alive @ Five",
-        "reasoning": "The source text explicitly states 'Western Wednesdays at Teton Village's Alive @ Five series' in the event description, indicating this is the complete title of the event series."
+        "new_title": "Summer Evenings at The Rooftop Bar",
+        "reasoning": "The current title matches exactly with the event title shown in the source page text, and no additional information or longer version is present in the source material."
       },
       "applied": true,
-      "note": "title: 'Western Wednesdays' \u2192 \"Western Wednesdays at Teton Village's Alive @ Five\""
+      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
     },
     {
       "city": "jackson",
+      "title": "Summer Evenings at The Rooftop Bar",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-08-26",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "Summer Evenings at The Rooftop Bar",
+        "reasoning": "The source page confirms 'Summer Evenings at The Rooftop Bar' is the complete title as it appears in the page header and throughout the content with no additional text."
+      },
+      "applied": true,
+      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-12",
+  "generated_at": "2026-07-13",
   "cities": {
     "all": {
-      "events": 4224,
+      "events": 4057,
       "findings": [
         {
           "code": "C1",
@@ -23,17 +23,9 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 27,
+          "count": 26,
           "examples": [
             {
-              "date": "2026-07-12",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
               "date": "2026-07-19",
               "title_a": "Stein's Famous Sunday Brunch",
               "src_a": "The Park Record",
@@ -63,6 +55,14 @@
               "src_a": "Jackson Hole Mountain Resort",
               "title_b": "Sunday Fundays, Concert on the Commons Series",
               "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-02",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "The Park Record",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             }
           ]
@@ -71,13 +71,13 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 4,
+          "count": 5,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 161,
-              "lost": 879
+              "now": 158,
+              "lost": 882
             },
             {
               "source": "Siebkens Resort",
@@ -86,10 +86,16 @@
               "lost": 259
             },
             {
+              "source": "Visit Park City (sitemap)",
+              "was": 169,
+              "now": 0,
+              "lost": 169
+            },
+            {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 52,
-              "lost": 64
+              "now": 50,
+              "lost": 66
             },
             {
               "source": "Oakley City",
@@ -102,7 +108,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 222,
+      "events": 219,
       "findings": [
         {
           "code": "C6",
@@ -121,7 +127,7 @@
       ]
     },
     "greenlake": {
-      "events": 200,
+      "events": 198,
       "findings": [
         {
           "code": "C5",
@@ -142,7 +148,7 @@
       ]
     },
     "heber": {
-      "events": 574,
+      "events": 569,
       "findings": [
         {
           "code": "C5",
@@ -201,30 +207,22 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 157,
-              "lost": 876
+              "now": 153,
+              "lost": 880
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1404,
+      "events": 1385,
       "findings": [
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 6,
+          "count": 5,
           "examples": [
-            {
-              "date": "2026-07-12",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
             {
               "date": "2026-07-19",
               "title_a": "Sunday Funday",
@@ -256,6 +254,14 @@
               "title_b": "Sunday Fundays, Concert on the Commons Series",
               "src_b": "Dishing Jackson Hole",
               "sim": 0.85
+            },
+            {
+              "date": "2026-08-16",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
             }
           ]
         },
@@ -268,13 +274,13 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 52,
-              "lost": 64
+              "now": 50,
+              "lost": 66
             }
           ]
         }
       ]
     }
   },
-  "high_total": 8
+  "high_total": 9
 }
