@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-13",
+  "generated_at": "2026-07-14",
   "cities": {
     "all": {
-      "events": 4057,
+      "events": 4019,
       "findings": [
         {
           "code": "C1",
@@ -76,14 +76,14 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 158,
-              "lost": 882
+              "now": 157,
+              "lost": 883
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 17,
-              "lost": 259
+              "now": 18,
+              "lost": 258
             },
             {
               "source": "Visit Park City (sitemap)",
@@ -94,8 +94,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 50,
-              "lost": 66
+              "now": 49,
+              "lost": 67
             },
             {
               "source": "Oakley City",
@@ -108,8 +108,24 @@
       ]
     },
     "elkhartlake": {
-      "events": 219,
+      "events": 217,
       "findings": [
+        {
+          "code": "C5",
+          "name": "CROSS-SOURCE-DUP",
+          "severity": "MED",
+          "count": 1,
+          "examples": [
+            {
+              "date": "2026-09-19",
+              "title_a": "Siebkens Live Music: Boo! The Band (Elktoberfest)",
+              "src_a": "Siebkens Resort",
+              "title_b": "Elktoberfest",
+              "src_b": "Elkhart Lake Tourism",
+              "sim": 0.85
+            }
+          ]
+        },
         {
           "code": "C6",
           "name": "COVERAGE-CLIFF",
@@ -119,15 +135,15 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 17,
-              "lost": 259
+              "now": 18,
+              "lost": 258
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 198,
+      "events": 194,
       "findings": [
         {
           "code": "C5",
@@ -148,13 +164,13 @@
       ]
     },
     "heber": {
-      "events": 569,
+      "events": 563,
       "findings": [
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 11,
+          "count": 10,
           "examples": [
             {
               "date": "2026-07-18",
@@ -207,15 +223,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 153,
-              "lost": 880
+              "now": 152,
+              "lost": 881
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1385,
+      "events": 1368,
       "findings": [
         {
           "code": "C5",
@@ -274,8 +290,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 50,
-              "lost": 66
+              "now": 49,
+              "lost": 67
             }
           ]
         }

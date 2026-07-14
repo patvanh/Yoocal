@@ -1,33 +1,33 @@
 {
-  "generated_at": "2026-07-13T12:49:40.491926",
+  "generated_at": "2026-07-14T11:39:42.668940",
   "attempted": 2,
-  "applied": 2,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "Summer Evenings at The Rooftop Bar",
+      "title": "Damien Gunn",
       "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-08-03",
+      "link": "https://www.milliondollarcowboybar.com/events/damien-gunn-1-1-0-0-0-0-0",
       "resolution": {
-        "confidence": "high",
-        "new_title": "Summer Evenings at The Rooftop Bar",
-        "reasoning": "The current title matches exactly with the event title shown in the source page text, and no additional information or longer version is present in the source material."
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source text only shows an event for June 5, 2025 at Million Dollar Cowboy Bar, but does not contain any information about an August 1, 2026 event at the same venue, so I cannot verify or complete the title for that different date."
       },
-      "applied": true,
-      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
+      "applied": false,
+      "note": "confidence=low, not applying"
     },
     {
       "city": "jackson",
-      "title": "Summer Evenings at The Rooftop Bar",
+      "title": "Sunday Funday",
       "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-08-26",
+      "link": "https://www.jacksonhole.com/events/sunday-funday-11",
       "resolution": {
         "confidence": "high",
-        "new_title": "Summer Evenings at The Rooftop Bar",
-        "reasoning": "The source page confirms 'Summer Evenings at The Rooftop Bar' is the complete title as it appears in the page header and throughout the content with no additional text."
+        "new_title": "Sunday Funday at Jackson Hole Mountain Resort",
+        "reasoning": "The complete title is clearly stated at the beginning of the source page text as 'Sunday Funday at Jackson Hole Mountain Resort', which includes both the event name and venue."
       },
       "applied": true,
-      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
+      "note": "title: 'Sunday Funday' \u2192 'Sunday Funday at Jackson Hole Mountain Resort'"
     }
   ]
 }

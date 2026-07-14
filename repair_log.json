@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-13T12:49:26.333873",
-  "audit_date": "2026-07-13",
+  "generated_at": "2026-07-14T11:39:35.021202",
+  "audit_date": "2026-07-14",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1576,
+      "before_count": 1586,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -113,31 +113,47 @@
           ]
         },
         "classification": {
-          "fixed": 355,
+          "fixed": 354,
           "examples": [
             {
-              "title": "Old Town walking tour",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Park City Trail Series \u2014 Half Marathon",
-              "before": [],
-              "after": [
-                "Sports",
-                "Outdoor"
-              ]
-            },
-            {
-              "title": "Next Chapter Book Club",
+              "title": "Book Bedazzling",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
                 "Education"
+              ]
+            },
+            {
+              "title": "Tiny Dino Play Time",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Kids"
+              ]
+            },
+            {
+              "title": "Bilingual Baby | Beb\u00e9 biling\u00fce",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Kids",
+                "Education"
+              ]
+            },
+            {
+              "title": "Glenwood Cemetery Tours",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Arts"
               ]
             },
             {
@@ -150,22 +166,12 @@
                 "Arts",
                 "Festival"
               ]
-            },
-            {
-              "title": "Daniel Torriente",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Music"
-              ]
             }
           ]
         }
       },
-      "after_count": 1578,
-      "total_fixes": 370
+      "after_count": 1588,
+      "total_fixes": 369
     },
     {
       "city": "elkhart-lake",
@@ -217,7 +223,7 @@
     },
     {
       "city": "heber",
-      "before_count": 207,
+      "before_count": 204,
       "passes": {
         "past_dates": {
           "fixed": 56,
@@ -227,20 +233,20 @@
               "date": "2026-06-15"
             },
             {
-              "title": "Yoga in the Lavender Field @ Blue Canyon Lavender Farm",
-              "date": "2026-06-15"
-            },
-            {
               "title": "Meet the Cows - Dairy Farm Tour",
-              "date": "2026-06-15"
-            },
-            {
-              "title": "Monday Night Train @ Heber Valley Railroad",
               "date": "2026-06-15"
             },
             {
               "title": "Community Drum Circle @ River's Edge RV Resort",
               "date": "2026-07-07"
+            },
+            {
+              "title": "Cornhole @ Wallsburg Town Hall",
+              "date": "2026-06-16"
+            },
+            {
+              "title": "Country Swing & Line Dancing @ The Sycamore Building",
+              "date": "2026-06-23"
             }
           ]
         },
@@ -319,12 +325,12 @@
           "examples": []
         }
       },
-      "after_count": 154,
+      "after_count": 151,
       "total_fixes": 67
     },
     {
       "city": "jackson",
-      "before_count": 448,
+      "before_count": 440,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -409,7 +415,7 @@
           "examples": []
         }
       },
-      "after_count": 457,
+      "after_count": 449,
       "total_fixes": 9
     }
   ]
