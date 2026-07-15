@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-14",
+  "generated_at": "2026-07-15",
   "cities": {
     "all": {
-      "events": 4019,
+      "events": 4183,
       "findings": [
         {
           "code": "C1",
@@ -26,9 +26,25 @@
           "count": 26,
           "examples": [
             {
+              "date": "2026-07-18",
+              "title_a": "Challenge Accepted!",
+              "src_a": "Visit Park City",
+              "title_b": "Challenge Accepted with Live Like Sam",
+              "src_b": "KPCW Community Calendar",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-18",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
               "date": "2026-07-19",
               "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "The Park Record",
+              "src_a": "Visit Park City (sitemap)",
               "title_b": "Sunday Brunch",
               "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
@@ -42,27 +58,11 @@
               "sim": 0.85
             },
             {
-              "date": "2026-07-26",
-              "title_a": "Stein's Famous Sunday Brunch",
+              "date": "2026-07-25",
+              "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-26",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-02",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "The Park Record",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
               "sim": 0.85
             }
           ]
@@ -71,31 +71,25 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 5,
+          "count": 4,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 157,
-              "lost": 883
+              "now": 156,
+              "lost": 884
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 18,
-              "lost": 258
-            },
-            {
-              "source": "Visit Park City (sitemap)",
-              "was": 169,
-              "now": 0,
-              "lost": 169
+              "now": 17,
+              "lost": 259
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 49,
-              "lost": 67
+              "now": 48,
+              "lost": 68
             },
             {
               "source": "Oakley City",
@@ -111,22 +105,6 @@
       "events": 217,
       "findings": [
         {
-          "code": "C5",
-          "name": "CROSS-SOURCE-DUP",
-          "severity": "MED",
-          "count": 1,
-          "examples": [
-            {
-              "date": "2026-09-19",
-              "title_a": "Siebkens Live Music: Boo! The Band (Elktoberfest)",
-              "src_a": "Siebkens Resort",
-              "title_b": "Elktoberfest",
-              "src_b": "Elkhart Lake Tourism",
-              "sim": 0.85
-            }
-          ]
-        },
-        {
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
@@ -135,15 +113,15 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 18,
-              "lost": 258
+              "now": 17,
+              "lost": 259
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 194,
+      "events": 192,
       "findings": [
         {
           "code": "C5",
@@ -164,7 +142,7 @@
       ]
     },
     "heber": {
-      "events": 563,
+      "events": 564,
       "findings": [
         {
           "code": "C5",
@@ -223,15 +201,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 152,
-              "lost": 881
+              "now": 151,
+              "lost": 882
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1368,
+      "events": 1413,
       "findings": [
         {
           "code": "C5",
@@ -290,13 +268,13 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 49,
-              "lost": 67
+              "now": 48,
+              "lost": 68
             }
           ]
         }
       ]
     }
   },
-  "high_total": 9
+  "high_total": 8
 }

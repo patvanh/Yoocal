@@ -1,33 +1,39 @@
 {
-  "generated_at": "2026-07-14T11:39:42.668940",
-  "attempted": 2,
-  "applied": 1,
+  "generated_at": "2026-07-15T11:44:15.918352",
+  "attempted": 3,
+  "applied": 2,
   "log": [
     {
-      "city": "jackson",
-      "title": "Damien Gunn",
+      "city": "elkhart-lake",
+      "title": "Siebkens Live Music by Boo! The Band",
       "type": "title_truncated",
-      "link": "https://www.milliondollarcowboybar.com/events/damien-gunn-1-1-0-0-0-0-0",
+      "link": "https://www.siebkens.com/event/vintage-wknd-live-music-boo-the-band/",
       "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source text only shows an event for June 5, 2025 at Million Dollar Cowboy Bar, but does not contain any information about an August 1, 2026 event at the same venue, so I cannot verify or complete the title for that different date."
+        "confidence": "high",
+        "new_title": "VINTAGE WKND LIVE MUSIC: BOO! THE BAND",
+        "reasoning": "The source page clearly shows the full event title as 'VINTAGE WKND LIVE MUSIC: BOO! THE BAND' multiple times, indicating the current title is missing 'VINTAGE WKND LIVE MUSIC:' prefix."
       },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "applied": true,
+      "note": "title: 'Siebkens Live Music by Boo! The Band' \u2192 'VINTAGE WKND LIVE MUSIC: BOO! THE BAND'"
     },
     {
       "city": "jackson",
-      "title": "Sunday Funday",
+      "title": "Snow King Hill Climb",
       "type": "title_truncated",
-      "link": "https://www.jacksonhole.com/events/sunday-funday-11",
+      "skipped": "[fetch failed: 403 Client Error: Forbidden for url: https://www.runningintheusa.com/details/125411]"
+    },
+    {
+      "city": "jackson",
+      "title": "Western Wednesdays",
+      "type": "title_truncated",
+      "link": "https://www.jacksonhole.com/events/western-wednesday-aug12",
       "resolution": {
         "confidence": "high",
-        "new_title": "Sunday Funday at Jackson Hole Mountain Resort",
-        "reasoning": "The complete title is clearly stated at the beginning of the source page text as 'Sunday Funday at Jackson Hole Mountain Resort', which includes both the event name and venue."
+        "new_title": "Western Wednesdays at Teton Village's Alive @ Five",
+        "reasoning": "The source text explicitly states 'Western Wednesdays at Teton Village's Alive @ Five series' in the event description, indicating this is the complete title of the event series."
       },
       "applied": true,
-      "note": "title: 'Sunday Funday' \u2192 'Sunday Funday at Jackson Hole Mountain Resort'"
+      "note": "title: 'Western Wednesdays' \u2192 \"Western Wednesdays at Teton Village's Alive @ Five\""
     }
   ]
 }

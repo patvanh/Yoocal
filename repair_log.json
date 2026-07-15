@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-14T11:39:35.021202",
-  "audit_date": "2026-07-14",
+  "generated_at": "2026-07-15T11:44:08.026053",
+  "audit_date": "2026-07-15",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1586,
+      "before_count": 1617,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -28,12 +28,38 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 4,
+          "examples": [
+            {
+              "title": "Old Town walking tour",
+              "had_span": 31
+            },
+            {
+              "title": "Fascia Rolling Class",
+              "had_span": 181
+            },
+            {
+              "title": "Group Fitness Classes",
+              "had_span": 181
+            },
+            {
+              "title": "Moose on the Loose Kids Trail Series",
+              "had_span": 57
+            }
+          ]
         },
         "multi_day_splits": {
           "fixed": 5,
           "examples": [
+            {
+              "title": "Fox US Open of Mountain Biking",
+              "original_span": "2026-09-11 to 2026-09-13",
+              "split_into": [
+                "2026-09-11",
+                "2026-09-12",
+                "2026-09-13"
+              ]
+            },
             {
               "title": "Matilda & Gozney Weekend",
               "original_span": "2026-07-18 to 2026-07-19",
@@ -56,15 +82,6 @@
               "split_into": [
                 "2026-08-08",
                 "2026-08-09"
-              ]
-            },
-            {
-              "title": "Fox US Open of Mountain Biking",
-              "original_span": "2026-09-11 to 2026-09-13",
-              "split_into": [
-                "2026-09-11",
-                "2026-09-12",
-                "2026-09-13"
               ]
             },
             {
@@ -113,30 +130,41 @@
           ]
         },
         "classification": {
-          "fixed": 354,
+          "fixed": 359,
           "examples": [
             {
-              "title": "Book Bedazzling",
+              "title": "Challenge Accepted!",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Old Town walking tour",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Summer Garden Camps",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Education"
+                "Food & Drink"
               ]
             },
             {
-              "title": "Tiny Dino Play Time",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Kids"
-              ]
-            },
-            {
-              "title": "Bilingual Baby | Beb\u00e9 biling\u00fce",
+              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
               "before": [
                 "Community"
               ],
@@ -145,33 +173,12 @@
                 "Kids",
                 "Education"
               ]
-            },
-            {
-              "title": "Glenwood Cemetery Tours",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Arts"
-              ]
-            },
-            {
-              "title": "Main Street Walking Tour",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Arts",
-                "Festival"
-              ]
             }
           ]
         }
       },
-      "after_count": 1588,
-      "total_fixes": 369
+      "after_count": 1619,
+      "total_fixes": 378
     },
     {
       "city": "elkhart-lake",
@@ -223,7 +230,7 @@
     },
     {
       "city": "heber",
-      "before_count": 204,
+      "before_count": 206,
       "passes": {
         "past_dates": {
           "fixed": 56,
@@ -233,20 +240,20 @@
               "date": "2026-06-15"
             },
             {
+              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+              "date": "2026-06-17"
+            },
+            {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Community Drum Circle @ River's Edge RV Resort",
-              "date": "2026-07-07"
+              "title": "Heber Midday Wednesday Ride @ Southfield Park",
+              "date": "2026-06-17"
             },
             {
-              "title": "Cornhole @ Wallsburg Town Hall",
-              "date": "2026-06-16"
-            },
-            {
-              "title": "Country Swing & Line Dancing @ The Sycamore Building",
-              "date": "2026-06-23"
+              "title": "Wasatch County Council Monthly Meetings",
+              "date": "2026-06-17"
             }
           ]
         },
@@ -325,23 +332,36 @@
           "examples": []
         }
       },
-      "after_count": 151,
+      "after_count": 153,
       "total_fixes": 67
     },
     {
       "city": "jackson",
-      "before_count": 440,
+      "before_count": 582,
       "passes": {
         "past_dates": {
           "fixed": 0,
           "examples": []
         },
         "absurd_spans": {
-          "fixed": 0,
-          "examples": []
+          "fixed": 3,
+          "examples": [
+            {
+              "title": "Historic Downtown Walking Tour",
+              "had_span": 80
+            },
+            {
+              "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
+              "had_span": 67
+            },
+            {
+              "title": "Take-a-Tour Tuesday",
+              "had_span": 168
+            }
+          ]
         },
         "multi_day_splits": {
-          "fixed": 3,
+          "fixed": 6,
           "examples": [
             {
               "title": "Mata Ortiz Pop-Up Pottery Shop",
@@ -361,6 +381,26 @@
               ]
             },
             {
+              "title": "Kids Yoga & Mindfulness Summer Camp",
+              "original_span": "2026-08-10 to 2026-08-14",
+              "split_into": [
+                "2026-08-10",
+                "2026-08-11",
+                "2026-08-12",
+                "2026-08-13",
+                "2026-08-14"
+              ]
+            },
+            {
+              "title": "Bhakti Bliss Weekend Immersion with Ananda Das",
+              "original_span": "2026-08-14 to 2026-08-16",
+              "split_into": [
+                "2026-08-14",
+                "2026-08-15",
+                "2026-08-16"
+              ]
+            },
+            {
               "title": "Teton Village Restaurant Week",
               "original_span": "2026-08-24 to 2026-08-30",
               "split_into": [
@@ -376,8 +416,20 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 10,
           "examples": [
+            {
+              "title": "Karaoke at The Virginian Saloon",
+              "start_time": "8:00 PM",
+              "new_end_time": "11:00 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "Little Wings Story Time",
+              "start_time": "11:00 AM",
+              "new_end_time": "11:30 AM",
+              "duration_hours": 0.5
+            },
             {
               "title": "Teton Toss #11 Disc Golf Tournament",
               "start_time": "9:00 AM",
@@ -395,18 +447,6 @@
               "start_time": "5:00 PM",
               "new_end_time": "8:00 PM",
               "duration_hours": 3
-            },
-            {
-              "title": "Wreckless Strangers | Concerts on the Commons",
-              "start_time": "5:00 PM",
-              "new_end_time": "8:00 PM",
-              "duration_hours": 3
-            },
-            {
-              "title": "Boot Juice | Concerts on the Commons",
-              "start_time": "5:00 PM",
-              "new_end_time": "8:00 PM",
-              "duration_hours": 3
             }
           ]
         },
@@ -415,8 +455,8 @@
           "examples": []
         }
       },
-      "after_count": 449,
-      "total_fixes": 9
+      "after_count": 608,
+      "total_fixes": 19
     }
   ]
 }
