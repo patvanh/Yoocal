@@ -1,15 +1,22 @@
 {
-  "generated_at": "2026-07-15",
+  "generated_at": "2026-07-16",
   "cities": {
     "all": {
-      "events": 4183,
+      "events": 4159,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 1,
+          "count": 2,
           "examples": [
+            {
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-07-18",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            },
             {
               "title": "Yoga in the Park",
               "venue": "city park",
@@ -76,14 +83,14 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 156,
-              "lost": 884
+              "now": 157,
+              "lost": 883
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 17,
-              "lost": 259
+              "now": 16,
+              "lost": 260
             },
             {
               "source": "Dishing Jackson Hole",
@@ -102,7 +109,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 217,
+      "events": 214,
       "findings": [
         {
           "code": "C6",
@@ -113,15 +120,15 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 17,
-              "lost": 259
+              "now": 16,
+              "lost": 260
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 192,
+      "events": 187,
       "findings": [
         {
           "code": "C5",
@@ -142,8 +149,23 @@
       ]
     },
     "heber": {
-      "events": 564,
+      "events": 566,
       "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 1,
+          "examples": [
+            {
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-07-18",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            }
+          ]
+        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -201,15 +223,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 151,
-              "lost": 882
+              "now": 153,
+              "lost": 880
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1413,
+      "events": 1395,
       "findings": [
         {
           "code": "C5",
@@ -276,5 +298,5 @@
       ]
     }
   },
-  "high_total": 8
+  "high_total": 10
 }

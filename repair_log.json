@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-15T11:44:08.026053",
-  "audit_date": "2026-07-15",
+  "generated_at": "2026-07-16T11:52:22.318800",
+  "audit_date": "2026-07-16",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1617,
+      "before_count": 1602,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -28,11 +28,15 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 5,
           "examples": [
             {
               "title": "Old Town walking tour",
-              "had_span": 31
+              "had_span": 30
+            },
+            {
+              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
+              "had_span": 42
             },
             {
               "title": "Fascia Rolling Class",
@@ -130,7 +134,7 @@
           ]
         },
         "classification": {
-          "fixed": 359,
+          "fixed": 356,
           "examples": [
             {
               "title": "Challenge Accepted!",
@@ -147,23 +151,6 @@
               ]
             },
             {
-              "title": "Summer Garden Camps",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Food & Drink"
-              ]
-            },
-            {
               "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
               "before": [
                 "Community"
@@ -173,16 +160,36 @@
                 "Kids",
                 "Education"
               ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
             }
           ]
         }
       },
-      "after_count": 1619,
-      "total_fixes": 378
+      "after_count": 1604,
+      "total_fixes": 376
     },
     {
       "city": "elkhart-lake",
-      "before_count": 207,
+      "before_count": 205,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -225,35 +232,35 @@
           "examples": []
         }
       },
-      "after_count": 212,
+      "after_count": 210,
       "total_fixes": 2
     },
     {
       "city": "heber",
-      "before_count": 206,
+      "before_count": 216,
       "passes": {
         "past_dates": {
-          "fixed": 56,
+          "fixed": 57,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
-              "date": "2026-06-17"
+              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
+              "date": "2026-06-18"
             },
             {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Heber Midday Wednesday Ride @ Southfield Park",
-              "date": "2026-06-17"
+              "title": "Tween Book Club @ Folklore Bookshop",
+              "date": "2026-06-18"
             },
             {
-              "title": "Wasatch County Council Monthly Meetings",
-              "date": "2026-06-17"
+              "title": "Midway Art Gallery Open House",
+              "date": "2026-06-19"
             }
           ]
         },
@@ -266,7 +273,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 181
+              "had_span": 179
             }
           ]
         },
@@ -332,12 +339,12 @@
           "examples": []
         }
       },
-      "after_count": 153,
-      "total_fixes": 67
+      "after_count": 162,
+      "total_fixes": 68
     },
     {
       "city": "jackson",
-      "before_count": 582,
+      "before_count": 570,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -348,15 +355,15 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 80
+              "had_span": 79
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 67
+              "had_span": 66
             },
             {
               "title": "Take-a-Tour Tuesday",
-              "had_span": 168
+              "had_span": 169
             }
           ]
         },
@@ -455,7 +462,7 @@
           "examples": []
         }
       },
-      "after_count": 608,
+      "after_count": 596,
       "total_fixes": 19
     }
   ]

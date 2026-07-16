@@ -6,124 +6,10 @@
     "lng": -88.0426
   },
   "radius_mi": 15,
-  "generated_at": "2026-07-15T05:47:12.304435-06:00",
-  "today": "2026-07-15",
-  "event_count": 217,
+  "generated_at": "2026-07-16T05:53:51.709325-06:00",
+  "today": "2026-07-16",
+  "event_count": 214,
   "events": [
-    {
-      "title": "Sunset Cruise at Road America",
-      "date": "2026-07-15",
-      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/get-track",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-14T11:30:29.594003",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "end_date": null,
-      "recurrence": "weekly_multiple",
-      "recurrence_days": "Monday,Wednesday",
-      "categories": [
-        "Outdoor",
-        "Sports"
-      ],
-      "series_end": "2026-08-19",
-      "venue_name": "Road America",
-      "_all_sources": [
-        "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "5:30 PM",
-            "source": "Road America"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Outdoors",
-        "Sports"
-      ],
-      "id": "e_4a9db22268c3",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "4 Miles of Fitness",
-      "date": "2026-07-15",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "description": "Bike, walk, or run your way around Road America\u2019s legendary 4-mile, 14-turn road course during this fan-favorite fitness series. Set against the scenic 640-acre property, participants can explore everything from wooded cross-country trails to service roads and even the iconic racing surface itself, all in a safe, traffic-free environment. Dates & Times: Mondays & Wednesdays | May 4 \u2013 September 30, 2026 6:00 PM \u2013 8:00 PM (September hours: 5:30 PM \u2013 7:30 PM) Pricing: $5 per person (cash only at the gate) $25 for an 8-visit pass $60 for an unlimited season membership Youth 16 and under are free with a paid adult. Group discounts available for groups of 10 or more. Know Before You Go: All participants must complete the SpeedWaiver before arrival. For safety, pets, scooters, and skateboards are not permitted. Lace up, roll out and experience Road America like never before\u2014no engines required....",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-15/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.724417",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Sports",
-        "Wellness",
-        "Kids",
-        "Education"
-      ],
-      "facets": [
-        "Paid"
-      ],
-      "end_date": null,
-      "series_end": "2026-07-15",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Community",
-        "Education & Talks",
-        "Family & Kids",
-        "Sports",
-        "Wellness"
-      ],
-      "id": "e_78dcbb994730",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Siebkens Live Music by Erin Krebs & Paul Sucherman",
-      "date": "2026-07-15",
-      "description": "Erin Krebs brings her signature blend of jazz, blues, and soul to the Siebkens Summer Concert Series, joined by acclaimed drummer Paul Sucherman. A Wisconsin-based vocalist known for her rich tone and timeless style, Erin pairs seamlessly with Paul\u2019s seasoned musicianship for a performance that\u2019s both refined and engaging. Catch them live on the bandstand outside the Stop-Inn Tavern for a night of music that sets the tone for a perfect summer evening.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-erin-krebs-and-paul-sucherman/",
-      "source": "Siebkens Resort",
-      "source_url": "https://www.siebkens.com/events/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521255",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/erin-krebs.avif",
-      "venue_name": "Siebkens Bandstand",
-      "series": "Siebkens Live Music",
-      "categories": [
-        "Music"
-      ],
-      "end_date": null,
-      "series_end": "2026-07-15",
-      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_660754bf5e01",
-      "_distance_mi": 0.0
-    },
     {
       "title": "WeatherTech Vintage Weekend with Brian Redman",
       "date": "2026-07-16",
@@ -134,7 +20,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521201",
+      "scraped_at": "2026-07-16T11:41:59.979881",
       "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
@@ -197,7 +83,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-90s-jake/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.724643",
+      "scraped_at": "2026-07-16T11:42:02.325721",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/90s-jake.avif",
       "lat": 43.833,
@@ -227,7 +113,7 @@
       "link": "https://osthoff.com/event/sadie-acoustic-duo-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593489",
+      "scraped_at": "2026-07-16T11:42:08.907647",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/sadie-live-music.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -282,7 +168,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521201",
+      "scraped_at": "2026-07-16T11:41:59.979881",
       "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
@@ -338,43 +224,47 @@
     {
       "title": "VINTAGE WKND LIVE MUSIC",
       "date": "2026-07-17",
-      "description": "Livin The Dream takes the stage Friday night at the Siebkens Bandstand during Vintage Weekend. As classic cars line the streets and the energy builds throughout Elkhart Lake, the band keeps the party going with a high-energy set you won\u2019t want to miss.",
+      "description": "Live music at Siebkens Resort on the shores of Elkhart Lake. Outdoor bandstand outside the Stop-Inn Tavern. Free, family & dog friendly.",
       "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
       "link": "https://www.siebkens.com/event/vintage-wknd-live-music-livin-the-dream/",
       "source": "Siebkens Resort",
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521258",
+      "scraped_at": "2026-07-16T11:41:59.979937",
       "start_time": "7:00 PM",
       "end_time": "11:00 PM",
       "featured": true,
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/lviin-the-dream-siebkens-live-music.avif",
-      "venue_name": "Siebkens Resort",
       "series": "Siebkens Live Music",
       "categories": [
         "Music"
       ],
+      "venue_name": "Siebkens Bandstand",
       "end_date": null,
       "series_end": "2026-07-17",
-      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
+      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "is_free": true,
+      "price": "Free",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/platinum.avif",
       "_all_sources": [
         "Siebkens Resort"
       ],
       "_conflicts": {
         "venue": [
           {
-            "value": "Siebkens Resort",
+            "value": "Siebkens Bandstand",
             "source": "Siebkens Resort"
           },
           {
-            "value": "Siebkens Bandstand",
+            "value": "Siebkens Resort",
             "source": "Siebkens Resort"
           }
         ]
       },
       "filter_categories": [
-        "Music"
+        "Family & Kids",
+        "Music",
+        "Outdoors"
       ],
       "id": "e_838aa6f21984",
       "_distance_mi": 0.0
@@ -399,7 +289,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523041",
+      "scraped_at": "2026-07-16T11:41:59.981810",
       "facets": [
         "Free"
       ],
@@ -443,7 +333,7 @@
       "link": "https://osthoff.com/event/that-90s-band/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593523",
+      "scraped_at": "2026-07-16T11:42:08.907685",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_That-90s-Band-scaled.png",
       "series": "The Osthoff Lake Deck",
       "lat": 43.833,
@@ -490,7 +380,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-reverend-raven/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.724853",
+      "scraped_at": "2026-07-16T11:42:02.325939",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/reverend-raven.avif",
       "lat": 43.833,
@@ -557,7 +447,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521201",
+      "scraped_at": "2026-07-16T11:41:59.979881",
       "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
@@ -620,7 +510,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -698,7 +588,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523042",
+      "scraped_at": "2026-07-16T11:41:59.981811",
       "facets": [
         "Free"
       ],
@@ -740,7 +630,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521281",
+      "scraped_at": "2026-07-16T11:41:59.979961",
       "start_time": "7:00 PM",
       "series": "Siebkens Live Music",
       "categories": [
@@ -777,7 +667,7 @@
       "link": "https://www.elkhartlake.com/event/throttlestop-open-house/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.724940",
+      "scraped_at": "2026-07-16T11:42:02.326046",
       "venue_name": "Throttlestop",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/654685113_1393299896147849_937036720986135078_n.avif",
       "lat": 43.833,
@@ -814,7 +704,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-the-mississippi-leg-hounds/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725124",
+      "scraped_at": "2026-07-16T11:42:02.326262",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/The-Mississippi-Leg-Hounds-e1780588160813.avif",
       "lat": 43.833,
@@ -885,7 +775,7 @@
       "link": "https://osthoff.com/event/the-flight-crew/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593586",
+      "scraped_at": "2026-07-16T11:42:08.907754",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-flight-crew-osthoff-lake-deck.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -916,7 +806,7 @@
       "link": "https://osthoff.com/event/homestyle-bbq/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593562",
+      "scraped_at": "2026-07-16T11:42:08.907729",
       "image_url": "https://osthoff.com/wp-content/uploads/BBQC.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -951,7 +841,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521201",
+      "scraped_at": "2026-07-16T11:41:59.979881",
       "start_time": "8:00 AM",
       "end_date": null,
       "featured": true,
@@ -1014,7 +904,7 @@
       "link": "https://www.elkhartlake.com/event/japanese-wood-block-printing-workshop-at-the-mad-patcher/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725194",
+      "scraped_at": "2026-07-16T11:42:02.326338",
       "venue_name": "The Mad Patcher",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/japanese-wood-printing.avif",
       "lat": 43.833,
@@ -1043,7 +933,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-patrick-van-bibber/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725228",
+      "scraped_at": "2026-07-16T11:42:02.326374",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/patrick-van-bibber.avif",
       "lat": 43.833,
@@ -1089,7 +979,7 @@
       "link": "https://osthoff.com/event/luke-abler-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593608",
+      "scraped_at": "2026-07-16T11:42:08.907776",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/luke-abler-live-music-e1779213095821.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -1167,7 +1057,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-20/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725284",
+      "scraped_at": "2026-07-16T11:42:02.326432",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -1253,7 +1143,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-22/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725332",
+      "scraped_at": "2026-07-16T11:42:02.326488",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -1292,7 +1182,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521260",
+      "scraped_at": "2026-07-16T11:41:59.979940",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/katalysst.avif",
@@ -1320,7 +1210,7 @@
       "link": "https://osthoff.com/event/soak-sip-savor-an-aspira-spa-after-hours-event/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593647",
+      "scraped_at": "2026-07-16T11:42:08.907815",
       "image_url": "https://osthoff.com/wp-content/uploads/SIP.png",
       "lat": 43.833,
       "lng": -88.0426,
@@ -1356,7 +1246,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-mike-brumm/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725464",
+      "scraped_at": "2026-07-16T11:42:02.326607",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/mike-brumm-music-e1779215999327.avif",
       "lat": 43.833,
@@ -1386,7 +1276,7 @@
       "link": "https://osthoff.com/event/hipp-jones-duo/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593671",
+      "scraped_at": "2026-07-16T11:42:08.907841",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/hipp-jones-duo.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -1441,7 +1331,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-jay-stulo/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725520",
+      "scraped_at": "2026-07-16T11:42:02.326660",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/jay-stulo-e1783607558309.avif",
       "lat": 43.833,
@@ -1508,7 +1398,7 @@
       "link": "https://osthoff.com/event/boat-drinks/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593725",
+      "scraped_at": "2026-07-16T11:42:08.907890",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/boat-drink-osthoff-e1779213397329.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -1539,7 +1429,7 @@
       "link": "https://osthoff.com/event/pasta-i/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593702",
+      "scraped_at": "2026-07-16T11:42:08.907869",
       "image_url": "https://osthoff.com/wp-content/uploads/PASTA-3.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -1575,7 +1465,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -1643,7 +1533,7 @@
       "link": "https://www.elkhartlake.com/event/the-garage-live-music-by-mercury-rising/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725574",
+      "scraped_at": "2026-07-16T11:42:02.326710",
       "venue_name": "The Garage BBQ Pit & Saloon",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/mercury-rising.avif",
       "lat": 43.833,
@@ -1673,7 +1563,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-vertical-vibes-duo/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725627",
+      "scraped_at": "2026-07-16T11:42:02.326768",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vertical-vibes-duo-e1783607813212.avif",
       "lat": 43.833,
@@ -1740,7 +1630,7 @@
       "link": "https://osthoff.com/event/boomboxx/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593776",
+      "scraped_at": "2026-07-16T11:42:08.907936",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/boomboxx-osthoff-music.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -1771,7 +1661,7 @@
       "link": "https://osthoff.com/event/pasta-i-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593754",
+      "scraped_at": "2026-07-16T11:42:08.907916",
       "image_url": "https://osthoff.com/wp-content/uploads/PASTA-3.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -1807,7 +1697,7 @@
       "link": "https://www.elkhartlake.com/event/cars-coffee-at-road-america/2026-07-26/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725660",
+      "scraped_at": "2026-07-16T11:42:02.326806",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/cars-and-coffee-2.avif",
       "lat": 43.833,
@@ -1841,7 +1731,7 @@
       "link": "https://www.elkhartlake.com/event/crystal-persuasion-wire-wrap-workshop-at-the-mad-patcher/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725740",
+      "scraped_at": "2026-07-16T11:42:02.326890",
       "venue_name": "The Mad Patcher",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/wire-wrap-jewelery-e1782315081231.avif",
       "lat": 43.833,
@@ -1872,7 +1762,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-jon-prigge-alex-simmons/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725776",
+      "scraped_at": "2026-07-16T11:42:02.326927",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/alex-simmons-jon-prigge-e1779227679362.avif",
       "lat": 43.833,
@@ -1902,7 +1792,7 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-07-26/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725805",
+      "scraped_at": "2026-07-16T11:42:02.326956",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "lat": 43.833,
@@ -1932,7 +1822,7 @@
       "link": "https://osthoff.com/event/skyhouse/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593797",
+      "scraped_at": "2026-07-16T11:42:08.907957",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/skyhouse.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -1987,7 +1877,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521226",
+      "scraped_at": "2026-07-16T11:41:59.979907",
       "start_time": "5:30 PM",
       "end_time": "7:00 PM",
       "end_date": null,
@@ -2034,7 +1924,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-27/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725860",
+      "scraped_at": "2026-07-16T11:42:02.327009",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -2073,7 +1963,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521226",
+      "scraped_at": "2026-07-16T11:41:59.979907",
       "start_time": "5:30 PM",
       "end_time": "7:00 PM",
       "end_date": null,
@@ -2120,7 +2010,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521261",
+      "scraped_at": "2026-07-16T11:41:59.979942",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "image_url": "https://www.siebkens.com/wp-content/uploads/2026/03/18.jpg",
@@ -2152,7 +2042,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-07-29/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725912",
+      "scraped_at": "2026-07-16T11:42:02.327061",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -2191,7 +2081,7 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-katalysst-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.725933",
+      "scraped_at": "2026-07-16T11:42:02.327080",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/valleyfox.avif",
       "series": "Siebkens Live Music",
@@ -2220,7 +2110,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521208",
+      "scraped_at": "2026-07-16T11:41:59.979889",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -2277,7 +2167,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521263",
+      "scraped_at": "2026-07-16T11:41:59.979943",
       "start_time": "6:00 PM",
       "end_time": "10:00 PM",
       "featured": true,
@@ -2315,7 +2205,7 @@
       "link": "https://www.elkhartlake.com/event/imsa-welcome-party/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.726008",
+      "scraped_at": "2026-07-16T11:42:02.327167",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/imsa-welcome-party.avif",
       "series": "Siebkens Live Music",
@@ -2347,7 +2237,7 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-the-chocolateers-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.726028",
+      "scraped_at": "2026-07-16T11:42:02.327186",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-chocolateers-1.avif",
       "series": "Siebkens Live Music",
@@ -2378,7 +2268,7 @@
       "link": "https://osthoff.com/event/burgundy-ties-duo/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593820",
+      "scraped_at": "2026-07-16T11:42:08.907979",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Burgundy-Ties-Band-scaled.png",
       "series": "The Osthoff Lake Deck",
       "lat": 43.833,
@@ -2425,7 +2315,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-ben-janzow/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.726083",
+      "scraped_at": "2026-07-16T11:42:02.327240",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/ben-janzow.avif",
       "lat": 43.833,
@@ -2481,6 +2371,76 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "4 Miles of Fitness",
+      "date": "2026-09-07",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "description": "Bike, walk, or run your way around Road America\u2019s legendary 4-mile, 14-turn road course during this fan-favorite fitness series. Set against the scenic 640-acre property, participants can explore everything from wooded cross-country trails to service roads and even the iconic racing surface itself, all in a safe, traffic-free environment. Dates & Times: Mondays & Wednesdays | May 4 \u2013 September 30, 2026 6:00 PM \u2013 8:00 PM (September hours: 5:30 PM \u2013 7:30 PM) Pricing: $5 per person (cash only at the gate) $25 for an 8-visit pass $60 for an unlimited season membership Youth 16 and under are free with a paid adult. Group discounts available for groups of 10 or more. Know Before You Go: All participants must complete the SpeedWaiver before arrival. For safety, pets, scooters, and skateboards are not permitted. Lace up, roll out and experience Road America like never before\u2014no engines required....",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-07/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:06.733548",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ],
+      "facets": [
+        "Paid"
+      ],
+      "end_date": null,
+      "series_end": "2026-09-07",
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Community",
+        "Education & Talks",
+        "Family & Kids",
+        "Sports",
+        "Wellness"
+      ],
+      "id": "e_a1efb080abac",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Suzie & The Detonators",
+      "date": "2026-09-07",
+      "start_time": "1:00 PM",
+      "end_time": "5:00 PM",
+      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring Suzie & The Detonators. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
+      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
+      "link": "https://osthoff.com/event/suzie-the-detonators-4/",
+      "source": "The Osthoff Resort",
+      "source_url": "https://osthoff.com/calendar/",
+      "scraped_at": "2026-07-16T11:42:08.908699",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/suzie-osthoff-live-music.avif",
+      "venue_name": "Osthoff Lake Deck",
+      "series": "The Osthoff Lake Deck",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "end_date": null,
+      "series_end": "2026-09-07",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_9713ae85ee0e",
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Motul SportsCar Endurance Grand Prix featuring IMSA",
       "date": "2026-07-31",
       "description": "A six-hour endurance event featuring IMSA's elite sportscars from nearly 20 manufacturers including Mercedes, Ferrari, Chevrolet, and Aston Martin.",
@@ -2490,7 +2450,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521208",
+      "scraped_at": "2026-07-16T11:41:59.979889",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -2547,7 +2507,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521264",
+      "scraped_at": "2026-07-16T11:41:59.979945",
       "start_time": "7:00 PM",
       "end_time": "11:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bowser-band.avif",
@@ -2592,7 +2552,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-luma-knotty/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.726159",
+      "scraped_at": "2026-07-16T11:42:02.327312",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/luma-knotty-e1779820175237.avif",
       "lat": 43.833,
@@ -2657,7 +2617,7 @@
       "link": "https://osthoff.com/event/suzie-the-detonators-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593880",
+      "scraped_at": "2026-07-16T11:42:08.908038",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/suzie-osthoff-live-music.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -2688,7 +2648,7 @@
       "link": "https://osthoff.com/event/gnocchi-and-sauce/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593854",
+      "scraped_at": "2026-07-16T11:42:08.908013",
       "image_url": "https://osthoff.com/wp-content/uploads/GNOCCH-1.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -2721,7 +2681,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521208",
+      "scraped_at": "2026-07-16T11:41:59.979889",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -2778,7 +2738,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -2846,7 +2806,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521266",
+      "scraped_at": "2026-07-16T11:41:59.979946",
       "start_time": "7:00 PM",
       "end_time": "11:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/fd8cab_83382145273b49a9be40fc9b65c82b61mv2.avif",
@@ -2876,7 +2836,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-bowser/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:32:59.726272",
+      "scraped_at": "2026-07-16T11:42:02.327422",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bowser-band.avif",
       "lat": 43.833,
@@ -2906,7 +2866,7 @@
       "link": "https://osthoff.com/event/the-third-wheels/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593934",
+      "scraped_at": "2026-07-16T11:42:08.908107",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-third-wheels-osthoff.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -2937,7 +2897,7 @@
       "link": "https://osthoff.com/event/gnocchi-and-sauces/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593912",
+      "scraped_at": "2026-07-16T11:42:08.908070",
       "image_url": "https://osthoff.com/wp-content/uploads/GNOCCH-1.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -2985,340 +2945,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "Motul SportsCar Endurance Grand Prix featuring IMSA",
-      "date": "2026-08-02",
-      "description": "A six-hour endurance event featuring IMSA's elite sportscars from nearly 20 manufacturers including Mercedes, Ferrari, Chevrolet, and Aston Martin.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521208",
-      "start_time": "7:00 AM",
-      "end_date": null,
-      "featured": true,
-      "categories": [
-        "Festival",
-        "Sports"
-      ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "series_end": "2026-08-02",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Sports"
-      ],
-      "id": "e_ae87261b635a",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music: Jesse Voelker",
-      "date": "2026-08-02",
-      "start_time": "3:00 PM",
-      "end_time": "6:00 PM",
-      "description": "Spend your evening lakeside at The Tiki Bar with live music from Jesse Voelker . Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
-      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-jesse-voelker/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033077",
-      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/jesse-voelker-tiki-bar.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "276 Victorian Village Drive",
-      "end_date": null,
-      "series_end": "2026-08-02",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "The Tiki Bar Elkhart Lake"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Tiki Bar",
-            "source": "The Tiki Bar Elkhart Lake"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_4ab061873b8d",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Rob Anthony",
-      "date": "2026-08-02",
-      "start_time": "1:00 PM",
-      "end_time": "5:00 PM",
-      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring Rob Anthony. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
-      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
-      "link": "https://osthoff.com/event/rob-anthony/",
-      "source": "The Osthoff Resort",
-      "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593957",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/rob-anthony-jpg.avif",
-      "venue_name": "Osthoff Lake Deck",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-02",
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_39aa1eedcddf",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Sunset Cruise at Road America",
-      "date": "2026-08-03",
-      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/get-track",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521226",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
-      "end_date": null,
-      "recurrence": "weekly_multiple",
-      "recurrence_days": "Monday,Wednesday",
-      "categories": [
-        "Outdoor",
-        "Sports"
-      ],
-      "venue_name": "Road America",
-      "series_end": "2026-08-19",
-      "_all_sources": [
-        "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "5:30 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Outdoors",
-        "Sports"
-      ],
-      "id": "e_3d6962c1f082",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "4 Miles of Fitness",
-      "date": "2026-08-03",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "description": "Bike, walk, or run your way around Road America\u2019s legendary 4-mile, 14-turn road course during this fan-favorite fitness series. Set against the scenic 640-acre property, participants can explore everything from wooded cross-country trails to service roads and even the iconic racing surface itself, all in a safe, traffic-free environment. Dates & Times: Mondays & Wednesdays | May 4 \u2013 September 30, 2026 6:00 PM \u2013 8:00 PM (September hours: 5:30 PM \u2013 7:30 PM) Pricing: $5 per person (cash only at the gate) $25 for an 8-visit pass $60 for an unlimited season membership Youth 16 and under are free with a paid adult. Group discounts available for groups of 10 or more. Know Before You Go: All participants must complete the SpeedWaiver before arrival. For safety, pets, scooters, and skateboards are not permitted. Lace up, roll out and experience Road America like never before\u2014no engines required....",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-03/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033138",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Sports",
-        "Wellness",
-        "Kids",
-        "Education"
-      ],
-      "facets": [
-        "Paid"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-03",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Community",
-        "Education & Talks",
-        "Family & Kids",
-        "Sports",
-        "Wellness"
-      ],
-      "id": "e_9f68352231bb",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Sunset Cruise at Road America",
-      "date": "2026-08-05",
-      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/get-track",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521226",
-      "start_time": "5:30 PM",
-      "end_time": "7:00 PM",
-      "end_date": null,
-      "recurrence": "weekly_multiple",
-      "recurrence_days": "Monday,Wednesday",
-      "categories": [
-        "Outdoor",
-        "Sports"
-      ],
-      "venue_name": "Road America",
-      "series_end": "2026-08-19",
-      "_all_sources": [
-        "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "5:30 PM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Road America"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Outdoors",
-        "Sports"
-      ],
-      "id": "e_3ffeda9053e1",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Siebkens Live Music by Mike Brumm with Trust & Follow",
-      "date": "2026-08-05",
-      "description": "Spend a summer night at Siebkens Resort with live music from Mike Brumm with Trust & Follow during the Siebkens Summer Concert Series. Milwaukee native Mike Brumm brings a soulful, genre-blending sound shaped by years of performing around the world, creating the perfect soundtrack for a night in Elkhart Lake.",
-      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-mike-brumm-with-trust-follow/",
-      "source": "Siebkens Resort",
-      "source_url": "https://www.siebkens.com/events/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521267",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/mike-brumm-music-e1779215999327.avif",
-      "venue_name": "Siebkens Bandstand",
-      "series": "Siebkens Live Music",
-      "categories": [
-        "Music"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-05",
-      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_5c64dda9cb98",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "4 Miles of Fitness",
-      "date": "2026-08-05",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "description": "Bike, walk, or run your way around Road America\u2019s legendary 4-mile, 14-turn road course during this fan-favorite fitness series. Set against the scenic 640-acre property, participants can explore everything from wooded cross-country trails to service roads and even the iconic racing surface itself, all in a safe, traffic-free environment. Dates & Times: Mondays & Wednesdays | May 4 \u2013 September 30, 2026 6:00 PM \u2013 8:00 PM (September hours: 5:30 PM \u2013 7:30 PM) Pricing: $5 per person (cash only at the gate) $25 for an 8-visit pass $60 for an unlimited season membership Youth 16 and under are free with a paid adult. Group discounts available for groups of 10 or more. Know Before You Go: All participants must complete the SpeedWaiver before arrival. For safety, pets, scooters, and skateboards are not permitted. Lace up, roll out and experience Road America like never before\u2014no engines required....",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-05/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033192",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Sports",
-        "Wellness",
-        "Kids",
-        "Education"
-      ],
-      "facets": [
-        "Paid"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-05",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Community",
-        "Education & Talks",
-        "Family & Kids",
-        "Sports",
-        "Wellness"
-      ],
-      "id": "e_8e80b7d6aa5a",
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Live Music: Ian Seaholm",
       "date": "2026-08-06",
       "start_time": "6:00 PM",
@@ -3328,7 +2954,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-ian-seaholm/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033282",
+      "scraped_at": "2026-07-16T11:42:04.471429",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/ian-seaholm.avif",
       "lat": 43.833,
@@ -3374,7 +3000,7 @@
       "link": "https://osthoff.com/event/the-abler-boys-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.593979",
+      "scraped_at": "2026-07-16T11:42:08.908151",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/abler-boys-osthoff-resort.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -3405,7 +3031,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-big-al-dorn/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033338",
+      "scraped_at": "2026-07-16T11:42:04.471488",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/big-al-dorn-music.avif",
       "lat": 43.833,
@@ -3472,7 +3098,7 @@
       "link": "https://osthoff.com/event/bazooka-joe/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594001",
+      "scraped_at": "2026-07-16T11:42:08.908172",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bazooka-joe.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -3494,1012 +3120,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "4 Miles of Fitness",
-      "date": "2026-09-07",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "description": "Bike, walk, or run your way around Road America\u2019s legendary 4-mile, 14-turn road course during this fan-favorite fitness series. Set against the scenic 640-acre property, participants can explore everything from wooded cross-country trails to service roads and even the iconic racing surface itself, all in a safe, traffic-free environment. Dates & Times: Mondays & Wednesdays | May 4 \u2013 September 30, 2026 6:00 PM \u2013 8:00 PM (September hours: 5:30 PM \u2013 7:30 PM) Pricing: $5 per person (cash only at the gate) $25 for an 8-visit pass $60 for an unlimited season membership Youth 16 and under are free with a paid adult. Group discounts available for groups of 10 or more. Know Before You Go: All participants must complete the SpeedWaiver before arrival. For safety, pets, scooters, and skateboards are not permitted. Lace up, roll out and experience Road America like never before\u2014no engines required....",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-07/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404338",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Sports",
-        "Wellness",
-        "Kids",
-        "Education"
-      ],
-      "facets": [
-        "Paid"
-      ],
-      "end_date": null,
-      "series_end": "2026-09-07",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Community",
-        "Education & Talks",
-        "Family & Kids",
-        "Sports",
-        "Wellness"
-      ],
-      "id": "e_a1efb080abac",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Suzie & The Detonators",
-      "date": "2026-09-07",
-      "start_time": "1:00 PM",
-      "end_time": "5:00 PM",
-      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring Suzie & The Detonators. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
-      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
-      "link": "https://osthoff.com/event/suzie-the-detonators-4/",
-      "source": "The Osthoff Resort",
-      "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594564",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/suzie-osthoff-live-music.avif",
-      "venue_name": "Osthoff Lake Deck",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "end_date": null,
-      "series_end": "2026-09-07",
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_9713ae85ee0e",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Alex Simmons / Jon Prigge",
-      "date": "2026-08-09",
-      "start_time": "1:00 PM",
-      "end_time": "5:00 PM",
-      "description": "Live Music at The Lake Deck \u2013 Sunday, August 9, 2026 Join us for an evening of live music and a laid-back summer atmosphere on the shores of Elkhart Lake. Relax with great tunes, cold drinks, and tasty concession favorites while you unwind by the water. Open to the public.",
-      "location": "The Osthoff Resort, Elkhart Lake, WI",
-      "link": "https://osthoff.com/event/alex-simmons-jon-prigge/",
-      "source": "The Osthoff Resort",
-      "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594045",
-      "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Alex-Simmons_Jon-Prigge-scaled.png",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-09",
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "venue_name": "The Osthoff Resort",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "The Osthoff Resort"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "The Osthoff Resort",
-            "source": "The Osthoff Resort"
-          },
-          {
-            "value": "Osthoff Lake Deck",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_b9927ff30684",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Book Binding & Decorating Workshop at The Mad Patcher",
-      "date": "2026-08-09",
-      "start_time": "3:00 PM",
-      "end_time": "5:00 PM",
-      "description": "Create a custom book or journal from scratch in this Mad Patcher exclusive workshop at Elkhart Lake\u2019s Historic Depot. Participants will be guided through the bookbinding process using paper, fabric, glue, and string to craft a one-of-a-kind handmade journal. Whether creating a personal keepsake or a thoughtful gift, this workshop offers a fun introduction to the art of bookbinding using repurposed materials. All experience levels are welcome, and instructors will provide step-by-step guidance throughout the class. Materials will be provided, but participants are encouraged to bring their own fabrics, papers, or decorative items to add a personal touch to their creation. Each attendee will leave with a unique handmade book and a new appreciation for this timeless craft. Reserve Your Spot...",
-      "location": "The Mad Patcher, 80 Square Street, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/book-binding-decorating-workshop-at-the-mad-patcher/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033625",
-      "venue_name": "The Mad Patcher",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/book-binding.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Education"
-      ],
-      "address": "80 Square Street",
-      "end_date": null,
-      "series_end": "2026-08-09",
-      "filter_categories": [
-        "Arts & Theater",
-        "Education & Talks"
-      ],
-      "id": "e_4de8f68c72d3",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music: Jim Ohlschmidt & Steve Cohen",
-      "date": "2026-08-09",
-      "start_time": "3:00 PM",
-      "end_time": "6:00 PM",
-      "description": "Spend your evening lakeside at The Tiki Bar with live music from Jim Ohlschmidt & Steve Cohen. Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
-      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-jim-ohlschmidt-steve-cohen/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033664",
-      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/jim-live-music.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "276 Victorian Village Drive",
-      "end_date": null,
-      "series_end": "2026-08-09",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "The Tiki Bar Elkhart Lake"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Tiki Bar",
-            "source": "The Tiki Bar Elkhart Lake"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_684d04d06851",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Wisco Daddy \u2013 aka McManus Duo",
-      "date": "2026-08-16",
-      "start_time": "1:00 PM",
-      "end_time": "5:00 PM",
-      "description": "Live Music at The Lake Deck \u2013 Sunday, August 16, 2026 Join us for an evening of live music and a laid-back summer atmosphere on the shores of Elkhart Lake. Relax with great tunes, cold drinks, and tasty concession favorites while you unwind by the water. Open to the public.",
-      "location": "The Osthoff Resort, Elkhart Lake, WI",
-      "link": "https://osthoff.com/event/wisco-daddy-aka-mcmanus-duo/",
-      "source": "The Osthoff Resort",
-      "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594188",
-      "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Wisco-Daddy-AKA-MCMANUS-DUO-scaled.png",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-16",
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "venue_name": "The Osthoff Resort",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "The Osthoff Resort"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "The Osthoff Resort",
-            "source": "The Osthoff Resort"
-          },
-          {
-            "value": "Osthoff Lake Deck",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_3fc1e76242e1",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "The Tiki Bar Live Music by Apple Jam Duo",
-      "date": "2026-08-16",
-      "start_time": "3:00 PM",
-      "end_time": "6:00 PM",
-      "description": "Spend your evening lakeside at The Tiki Bar with live music from Apple Jam Duo. Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
-      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-apple-jam-duo/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034103",
-      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/apple-jam-duo.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "276 Victorian Village Drive",
-      "end_date": null,
-      "series_end": "2026-08-16",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_aae6c85fb22f",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music: AppleJam Duo",
-      "date": "2026-08-16",
-      "start_time": "3:00 PM",
-      "end_time": "6:00 PM",
-      "location": "The Tiki Bar, Elkhart Lake, WI",
-      "venue_name": "The Tiki Bar",
-      "description": "Live music at The Tiki Bar in Elkhart Lake featuring AppleJam Duo.",
-      "categories": [
-        "Music"
-      ],
-      "filter_categories": [
-        "Music"
-      ],
-      "link": "https://thetikibarelkhartlake.com/live-music-schedule",
-      "source": "The Tiki Bar Elkhart Lake",
-      "source_url": "https://thetikibarelkhartlake.com/live-music-schedule",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-06-30T19:40:48.809129",
-      "facets": [],
-      "id": "e_781c00fb28ef",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Cars & Coffee at Road America",
-      "date": "2026-08-23",
-      "start_time": "8:00 AM",
-      "end_time": "11:00 AM",
-      "description": "Join Road America for Cars & Coffee, a free morning event featuring car enthusiasts, fresh coffee and an unbeatable atmosphere at the track. Event Dates and Times 8:00AM to 11:00AM Sunday, June 28 Sunday, July 26 Sunday, August 23 Entry Information All guests should enter through Gate 6 and park in the Turn 12 Canada Corner area. Important All attendees must complete the online SpeedWaiver prior to arrival. Your completed waiver will serve as your admission into the event.",
-      "location": "Road America, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/cars-coffee-at-road-america/2026-08-23/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034506",
-      "venue_name": "Road America",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/cars-and-coffee-2.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Community"
-      ],
-      "facets": [
-        "Paid"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-23",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": true,
-      "price": "Free",
-      "filter_categories": [
-        "Community",
-        "Food & Drink"
-      ],
-      "id": "e_8a6131f957c1",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Sew A Sock Monkey Workshop at The Mad Patcher",
-      "date": "2026-08-23",
-      "start_time": "3:00 PM",
-      "end_time": "5:00 PM",
-      "description": "Create your very own personalized sock monkey in this fun and family-friendly workshop held on the platform of Elkhart Lake\u2019s Historic Depot. Participants will be guided through the process of hand sewing a custom sock monkey using socks with imperfect knits donated from Wigwam\u2019s manufacturing process. Led by Mad Patcher founder Baxter Salzwedel, this workshop is perfect for refreshing hand-sewing skills while creating a unique handmade keepsake. All ages and skill levels are welcome, and participants are encouraged to bring socks with special colors or designs if they would like to incorporate them into their project. Attendees will leave with an adorable custom sock monkey and a memorable handcrafted creation to take home. Reserve Your Spot...",
-      "location": "The Mad Patcher, 80 Square Street, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/sew-a-sock-monkey-workshop-at-the-mad-patcher/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034581",
-      "venue_name": "The Mad Patcher",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/sock-monkey.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Family",
-        "Education"
-      ],
-      "address": "80 Square Street",
-      "end_date": null,
-      "series_end": "2026-08-23",
-      "filter_categories": [
-        "Education & Talks",
-        "Family & Kids"
-      ],
-      "id": "e_36f304f7c469",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music: Open Tab Duo",
-      "date": "2026-08-23",
-      "start_time": "6:00 PM",
-      "end_time": "9:00 PM",
-      "description": "Spend your evening lakeside at The Tiki Bar with live music from Open Tab Duo. Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
-      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-open-tab-duo/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034617",
-      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/open-tab-duo-e1780588839474.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "276 Victorian Village Drive",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "The Tiki Bar Elkhart Lake"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "3:00 PM",
-            "source": "The Tiki Bar Elkhart Lake"
-          }
-        ],
-        "venue": [
-          {
-            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Tiki Bar",
-            "source": "The Tiki Bar Elkhart Lake"
-          }
-        ]
-      },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-open-tab-duo/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://thetikibarelkhartlake.com/live-music-schedule",
-          "source": "The Tiki Bar Elkhart Lake"
-        }
-      ],
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_956b38654ff5",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Gene Gruber",
-      "date": "2026-08-23",
-      "start_time": "1:00 PM",
-      "end_time": "5:00 PM",
-      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring Gene Gruber. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
-      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
-      "link": "https://osthoff.com/event/gene-gruber/",
-      "source": "The Osthoff Resort",
-      "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594309",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gene-gruber-3.avif",
-      "venue_name": "Osthoff Lake Deck",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-23",
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_bfa4d58f6a94",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "GT World Challenge America",
-      "date": "2026-08-30",
-      "description": "All-sportscar weekend at Road America featuring GT World Challenge America racing.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521214",
-      "start_time": "7:00 AM",
-      "end_date": null,
-      "featured": true,
-      "categories": [
-        "Sports"
-      ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "series_end": "2026-08-30",
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
-      "filter_categories": [
-        "Sports"
-      ],
-      "id": "e_9fd5b8887be3",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music: Bob Gresh",
-      "date": "2026-08-30",
-      "start_time": "3:00 PM",
-      "end_time": "6:00 PM",
-      "description": "Spend your evening lakeside at The Tiki Bar with live music from Bob Gresh. Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
-      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-bob-gresh/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.403874",
-      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/bob-gresh-e1783612810905.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "276 Victorian Village Drive",
-      "end_date": null,
-      "series_end": "2026-08-30",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "The Tiki Bar Elkhart Lake"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Tiki Bar",
-            "source": "The Tiki Bar Elkhart Lake"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_625edd21d150",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "The Abler Boys",
-      "date": "2026-08-30",
-      "start_time": "1:00 PM",
-      "end_time": "5:00 PM",
-      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring The Abler Boys. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
-      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
-      "link": "https://osthoff.com/event/the-abler-boys-3/",
-      "source": "The Osthoff Resort",
-      "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594414",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/abler-boys-osthoff-resort.avif",
-      "venue_name": "Osthoff Lake Deck",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "end_date": null,
-      "series_end": "2026-08-30",
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_fb7363d6f75b",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music: FooCoustics",
-      "date": "2026-09-06",
-      "start_time": "3:00 PM",
-      "end_time": "6:00 PM",
-      "description": "Spend your evening lakeside at The Tiki Bar with live music from Foocoustics . Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
-      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-foocoustics-3/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404262",
-      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/foocoustics.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "276 Victorian Village Drive",
-      "end_date": null,
-      "series_end": "2026-09-06",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "The Tiki Bar Elkhart Lake"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Tiki Bar",
-            "source": "The Tiki Bar Elkhart Lake"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_8e87e6e13deb",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Skyhouse",
-      "date": "2026-09-06",
-      "start_time": "11:00 AM",
-      "end_time": "2:00 PM",
-      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring SkyHouse. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
-      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
-      "link": "https://osthoff.com/event/skyhouse-3/",
-      "source": "The Osthoff Resort",
-      "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594540",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/skyhouse.avif",
-      "venue_name": "Osthoff Lake Deck",
-      "series": "The Osthoff Lake Deck",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "end_date": null,
-      "series_end": "2026-09-06",
-      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_b6b7071a11f2",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music: Patrick Van Bibber",
-      "date": "2026-09-13",
-      "start_time": "3:00 PM",
-      "end_time": "6:00 PM",
-      "description": "Spend your evening lakeside at The Tiki Bar with live music from Patrick Van Bibber . Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
-      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-patrick-van-bibber-3/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404647",
-      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/patrick-van-bibber.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "276 Victorian Village Drive",
-      "end_date": null,
-      "series_end": "2026-09-13",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "The Tiki Bar Elkhart Lake"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Tiki Bar",
-            "source": "The Tiki Bar Elkhart Lake"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_028aa24129da",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Art on Wheels Weekend with VSCDA",
-      "date": "2026-09-20",
-      "description": "300+ meticulously restored vintage and historic race cars spanning 11 racing classes. A three-day journey through automotive history.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/art-wheels-vintage-weekend-vscda",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521217",
-      "start_time": "7:00 AM",
-      "end_date": null,
-      "featured": true,
-      "categories": [
-        "Community",
-        "Sports"
-      ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "series_end": "2026-09-20",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/art-wheels-vintage-weekend-vscda",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Arts & Theater",
-        "Community",
-        "Education & Talks",
-        "Sports"
-      ],
-      "id": "e_cd41d82a11d3",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music: Reverend Raven",
-      "date": "2026-09-20",
-      "start_time": "3:00 PM",
-      "end_time": "6:00 PM",
-      "description": "Spend your evening lakeside at The Tiki Bar with live music from Reverend Raven . Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
-      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
-      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-reverend-raven-3/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404974",
-      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/reverend-raven.avif",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "_geo_source": "default",
-      "categories": [
-        "Music",
-        "Outdoor"
-      ],
-      "address": "276 Victorian Village Drive",
-      "end_date": null,
-      "series_end": "2026-09-20",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "The Tiki Bar Elkhart Lake"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Tiki Bar",
-            "source": "The Tiki Bar Elkhart Lake"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_cc9a0839c070",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "SCCA National Championship Runoffs",
-      "date": "2026-10-04",
-      "description": "The pinnacle of US amateur road racing. Top SCCA racers from across the country compete for national championships at Road America.",
-      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
-      "link": "https://www.roadamerica.com/events",
-      "source": "Road America",
-      "source_url": "https://www.roadamerica.com",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521220",
-      "start_time": "7:00 AM",
-      "end_date": null,
-      "featured": true,
-      "categories": [
-        "Festival",
-        "Sports"
-      ],
-      "end_time": "5:00 PM",
-      "venue_name": "Road America",
-      "series_end": "2026-10-04",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
-      "_all_sources": [
-        "Elkhart Lake Tourism",
-        "Road America"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "7:00 AM",
-            "source": "Road America"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": false,
-      "_source_links": [
-        {
-          "url": "https://www.roadamerica.com/events",
-          "source": "Road America"
-        },
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
-      "address": "N7390 US-12, Elkhart Lake, WI 53020",
-      "is_free": false,
-      "filter_categories": [
-        "Sports"
-      ],
-      "id": "e_a6432802658d",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Old World Christmas Market",
-      "date": "2026-12-06",
-      "end_date": null,
-      "location": "The Osthoff Resort, Elkhart Lake, WI",
-      "venue_name": "The Osthoff Resort",
-      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
-      "categories": [
-        "Family",
-        "Festival",
-        "Food & Drink",
-        "Wellness"
-      ],
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "_all_sources": [
-        "Elkhart Lake Tourism"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "The Osthoff Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Osthoff Resort & Spa",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-06/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
-      "filter_categories": [
-        "Family & Kids",
-        "Food & Drink",
-        "Wellness"
-      ],
-      "id": "e_01e19ec39df7",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Old World Christmas Market",
-      "date": "2026-12-13",
-      "end_date": null,
-      "location": "The Osthoff Resort, Elkhart Lake, WI",
-      "venue_name": "The Osthoff Resort",
-      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
-      "categories": [
-        "Family",
-        "Festival",
-        "Food & Drink",
-        "Wellness"
-      ],
-      "link": "https://www.elkhartlake.com/events/",
-      "source": "Elkhart Lake Tourism",
-      "source_url": "https://www.elkhartlake.com/",
-      "lat": 43.833,
-      "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
-      "start_time": "6:00 PM",
-      "end_time": "8:00 PM",
-      "series_end": "2026-12-13",
-      "address": "101 Osthoff Avenue",
-      "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
-      "_all_sources": [
-        "Elkhart Lake Tourism"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "6:00 PM",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "10:00 AM",
-            "source": "Elkhart Lake Tourism"
-          }
-        ],
-        "venue": [
-          {
-            "value": "The Osthoff Resort",
-            "source": "Elkhart Lake Tourism"
-          },
-          {
-            "value": "The Osthoff Resort & Spa",
-            "source": "Elkhart Lake Tourism"
-          }
-        ]
-      },
-      "_time_uncertain": true,
-      "_source_links": [
-        {
-          "url": "https://www.elkhartlake.com/events/",
-          "source": "Elkhart Lake Tourism"
-        },
-        {
-          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-13/",
-          "source": "Elkhart Lake Tourism"
-        }
-      ],
-      "filter_categories": [
-        "Family & Kids",
-        "Food & Drink",
-        "Wellness"
-      ],
-      "id": "e_b50ce53f4c21",
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Farmers & Artisans Market",
       "date": "2026-08-08",
       "description": "Saturday morning tradition in the Village Square. Fresh vegetables, flowers, cheeses, local arts and specialty products from ~50 vendors.",
@@ -4509,7 +3129,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -4577,7 +3197,7 @@
       "link": "https://www.elkhartlake.com/event/throttlestop-cars-coffee/2026-08-08/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033428",
+      "scraped_at": "2026-07-16T11:42:04.471563",
       "venue_name": "Throttlestop",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif",
       "lat": 43.833,
@@ -4608,7 +3228,7 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-08-08/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033492",
+      "scraped_at": "2026-07-16T11:42:04.471622",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "lat": 43.833,
@@ -4638,7 +3258,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-vertical-vibes-duo-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033552",
+      "scraped_at": "2026-07-16T11:42:04.471678",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/vertical-vibes-duo-e1783607813212.avif",
       "lat": 43.833,
@@ -4705,7 +3325,7 @@
       "link": "https://osthoff.com/event/fire-on-high/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594023",
+      "scraped_at": "2026-07-16T11:42:08.908193",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/fire-on-high.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -4736,7 +3356,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-foocoustics-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033908",
+      "scraped_at": "2026-07-16T11:42:04.472029",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/foocoustics.avif",
       "lat": 43.833,
@@ -4782,7 +3402,7 @@
       "link": "https://osthoff.com/event/jacob-fannin/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594066",
+      "scraped_at": "2026-07-16T11:42:08.908236",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/jacob-fannin-music-e1779227186191.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -4813,7 +3433,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-until-dawn/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033961",
+      "scraped_at": "2026-07-16T11:42:04.472081",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/until-dawn.avif",
       "lat": 43.833,
@@ -4857,7 +3477,7 @@
       "link": "https://osthoff.com/event/bowser-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594088",
+      "scraped_at": "2026-07-16T11:42:08.908256",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bowser-lake-deck-music-e1747918750646.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -4888,7 +3508,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -4956,7 +3576,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-andrew-gelles-band/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034050",
+      "scraped_at": "2026-07-16T11:42:04.472185",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/andrew-gelles-band.avif",
       "lat": 43.833,
@@ -5023,7 +3643,7 @@
       "link": "https://osthoff.com/event/brent-bel-the-boys-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594160",
+      "scraped_at": "2026-07-16T11:42:08.908330",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/brent-bel-and-the-boys-osthoff-resort.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -5054,7 +3674,7 @@
       "link": "https://osthoff.com/event/pizza-creations/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594134",
+      "scraped_at": "2026-07-16T11:42:08.908304",
       "image_url": "https://osthoff.com/wp-content/uploads/PIZZA-1.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -5089,7 +3709,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521222",
+      "scraped_at": "2026-07-16T11:41:59.979904",
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
@@ -5122,7 +3742,7 @@
       "link": "https://osthoff.com/event/abler-mcmanus-3/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594212",
+      "scraped_at": "2026-07-16T11:42:08.908379",
       "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Abler-McManus-scaled.png",
       "series": "The Osthoff Lake Deck",
       "lat": 43.833,
@@ -5169,7 +3789,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-patrick-van-bibber-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034275",
+      "scraped_at": "2026-07-16T11:42:04.472403",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/patrick-van-bibber.avif",
       "lat": 43.833,
@@ -5215,7 +3835,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-the-mississippi-leg-hounds-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034332",
+      "scraped_at": "2026-07-16T11:42:04.472457",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/The-Mississippi-Leg-Hounds-e1780588160813.avif",
       "lat": 43.833,
@@ -5245,7 +3865,7 @@
       "link": "https://osthoff.com/event/cold-soda-club/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594264",
+      "scraped_at": "2026-07-16T11:42:08.908429",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/cold-soda-club-3.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -5276,7 +3896,7 @@
       "link": "https://osthoff.com/event/ramen-bowls/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594241",
+      "scraped_at": "2026-07-16T11:42:08.908407",
       "image_url": "https://osthoff.com/wp-content/uploads/RAMEN-1.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -5334,7 +3954,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -5402,7 +4022,7 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-08-22/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034390",
+      "scraped_at": "2026-07-16T11:42:04.472511",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "lat": 43.833,
@@ -5432,7 +4052,7 @@
       "link": "https://www.elkhartlake.com/event/the-osthoff-lake-deck-live-music-by-dirty-boogie/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034435",
+      "scraped_at": "2026-07-16T11:42:04.472532",
       "venue_name": "Osthoff Lake Deck",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/dirty-boogie-e1779228382200.avif",
       "series": "The Osthoff Lake Deck",
@@ -5463,7 +4083,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-roots-renegade/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034471",
+      "scraped_at": "2026-07-16T11:42:04.472563",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/roots-renegade.avif",
       "lat": 43.833,
@@ -5530,7 +4150,7 @@
       "link": "https://osthoff.com/event/model-citizens/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594287",
+      "scraped_at": "2026-07-16T11:42:08.908450",
       "series": "The Osthoff Lake Deck",
       "lat": 43.833,
       "lng": -88.0426,
@@ -5560,7 +4180,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521277",
+      "scraped_at": "2026-07-16T11:41:59.979957",
       "start_time": "5:00 PM",
       "end_time": "9:00 PM",
       "series": "Siebkens Live Music",
@@ -5593,7 +4213,7 @@
       "link": "https://www.elkhartlake.com/event/gt-parade-and-welcome-party/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034768",
+      "scraped_at": "2026-07-16T11:42:04.472824",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/528040139_1777525296207135_8713793072170812499_n-e1755005760937.avif",
       "series": "Siebkens Live Music",
@@ -5630,7 +4250,7 @@
       "link": "https://www.elkhartlake.com/event/siebkens-live-music-by-burgundy-ties-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.403480",
+      "scraped_at": "2026-07-16T11:42:04.472846",
       "venue_name": "Siebkens Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/burgundy-ties-siebkens.avif",
       "series": "Siebkens Live Music",
@@ -5661,7 +4281,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-phil-norby/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.403562",
+      "scraped_at": "2026-07-16T11:42:06.732754",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/phil-norby-live-music.avif",
       "lat": 43.833,
@@ -5707,7 +4327,7 @@
       "link": "https://osthoff.com/event/sadie-acoustic-duo/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594332",
+      "scraped_at": "2026-07-16T11:42:08.908493",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/sadie-live-music.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -5738,7 +4358,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521214",
+      "scraped_at": "2026-07-16T11:41:59.979895",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -5794,7 +4414,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521278",
+      "scraped_at": "2026-07-16T11:41:59.979958",
       "start_time": "7:00 PM",
       "end_time": "11:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/second-hand-stereo.avif",
@@ -5824,7 +4444,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-jay-stulo-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.403698",
+      "scraped_at": "2026-07-16T11:42:06.732909",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/jay-stulo-e1783607558309.avif",
       "lat": 43.833,
@@ -5891,7 +4511,7 @@
       "link": "https://osthoff.com/event/bad-habitz/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594354",
+      "scraped_at": "2026-07-16T11:42:08.908515",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bad-habitz.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -5922,7 +4542,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521214",
+      "scraped_at": "2026-07-16T11:41:59.979895",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -5977,7 +4597,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -6045,7 +4665,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521280",
+      "scraped_at": "2026-07-16T11:41:59.979960",
       "start_time": "7:00 PM",
       "end_time": "11:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/joseph-huber-music.avif",
@@ -6075,7 +4695,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-sonya-geoff-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.403819",
+      "scraped_at": "2026-07-16T11:42:06.733025",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/sonya-and-geoff.avif",
       "lat": 43.833,
@@ -6142,7 +4762,7 @@
       "link": "https://osthoff.com/event/breaking-cadence-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594376",
+      "scraped_at": "2026-07-16T11:42:08.908536",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/breaking-cadence.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -6173,7 +4793,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-jesse-voelker-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404069",
+      "scraped_at": "2026-07-16T11:42:06.733290",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/jesse-voelker-tiki-bar.avif",
       "lat": 43.833,
@@ -6219,7 +4839,7 @@
       "link": "https://osthoff.com/event/the-tones-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594443",
+      "scraped_at": "2026-07-16T11:42:08.908583",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-tones.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -6250,7 +4870,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-reverend-raven-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404125",
+      "scraped_at": "2026-07-16T11:42:06.733343",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/reverend-raven.avif",
       "lat": 43.833,
@@ -6317,7 +4937,7 @@
       "link": "https://osthoff.com/event/the-empty-vees/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594467",
+      "scraped_at": "2026-07-16T11:42:08.908604",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/the-empty-vees.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -6348,7 +4968,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -6416,7 +5036,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-apple-jam-duo-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404209",
+      "scraped_at": "2026-07-16T11:42:06.733423",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/apple-jam-duo.avif",
       "lat": 43.833,
@@ -6446,7 +5066,7 @@
       "link": "https://osthoff.com/event/maddie-jo-band/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594518",
+      "scraped_at": "2026-07-16T11:42:08.908654",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/maddie-jo-band.avif",
       "venue_name": "Osthoff Lake Deck",
       "series": "The Osthoff Lake Deck",
@@ -6477,7 +5097,7 @@
       "link": "https://osthoff.com/event/searing-scallops/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594495",
+      "scraped_at": "2026-07-16T11:42:08.908632",
       "image_url": "https://osthoff.com/wp-content/uploads/SCALL.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -6560,7 +5180,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-open-tab-duo-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404444",
+      "scraped_at": "2026-07-16T11:42:06.733625",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/open-tab-duo-e1780588839474.avif",
       "lat": 43.833,
@@ -6627,7 +5247,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -6695,7 +5315,7 @@
       "link": "https://www.elkhartlake.com/event/throttlestop-cars-coffee/2026-09-12/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404523",
+      "scraped_at": "2026-07-16T11:42:06.733698",
       "venue_name": "Throttlestop",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/644448524_1376360481175124_3149061756207181792_n.avif",
       "lat": 43.833,
@@ -6726,7 +5346,7 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-09-12/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404582",
+      "scraped_at": "2026-07-16T11:42:06.733755",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "lat": 43.833,
@@ -6756,7 +5376,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-jupiter-lynx/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404615",
+      "scraped_at": "2026-07-16T11:42:06.733786",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/jupiter-lynx.avif",
       "lat": 43.833,
@@ -6800,7 +5420,7 @@
       "link": "https://osthoff.com/event/boeuf-bourguignon/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594594",
+      "scraped_at": "2026-07-16T11:42:08.908729",
       "image_url": "https://osthoff.com/wp-content/uploads/BOURG.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -6859,7 +5479,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521217",
+      "scraped_at": "2026-07-16T11:41:59.979898",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -6919,7 +5539,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-andrew-gelles-band-2/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404815",
+      "scraped_at": "2026-07-16T11:42:06.733985",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/andrew-gelles-band.avif",
       "lat": 43.833,
@@ -6986,7 +5606,7 @@
       "link": "https://osthoff.com/event/pasta-ii-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594623",
+      "scraped_at": "2026-07-16T11:42:08.908758",
       "image_url": "https://osthoff.com/wp-content/uploads/PASTA2-1.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -7021,7 +5641,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521217",
+      "scraped_at": "2026-07-16T11:41:59.979898",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -7080,7 +5700,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -7148,7 +5768,7 @@
       "link": "https://www.elkhartlake.com/event/elktoberfest-wine-beer-run-5k/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404879",
+      "scraped_at": "2026-07-16T11:42:06.734049",
       "venue_name": "Vintage Elkhart Lake",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/Facebook-Cover-Event-Header-Banner-Birthday-Party-Invitation-Invite.png",
       "lat": 43.833,
@@ -7220,7 +5840,7 @@
       "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-kojo-reggae/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404943",
+      "scraped_at": "2026-07-16T11:42:06.734124",
       "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/kojo.avif",
       "lat": 43.833,
@@ -7287,7 +5907,7 @@
       "link": "https://osthoff.com/event/pasta-ii-3/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594649",
+      "scraped_at": "2026-07-16T11:42:08.908783",
       "image_url": "https://osthoff.com/wp-content/uploads/PASTA2-1.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -7322,7 +5942,7 @@
       "link": "https://osthoff.com/event/beef-wellington/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594684",
+      "scraped_at": "2026-07-16T11:42:08.908819",
       "image_url": "https://osthoff.com/wp-content/uploads/BEEF.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -7356,7 +5976,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -7424,7 +6044,7 @@
       "link": "https://www.elkhartlake.com/event/sunset-cruise-at-road-america-2/2026-09-26/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.405125",
+      "scraped_at": "2026-07-16T11:42:06.734309",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/road-america-_-sunset-cruise-jpg.webp",
       "lat": 43.833,
@@ -7454,7 +6074,7 @@
       "link": "https://osthoff.com/event/beef-wellington-2/",
       "source": "The Osthoff Resort",
       "source_url": "https://osthoff.com/calendar/",
-      "scraped_at": "2026-07-15T11:33:06.594715",
+      "scraped_at": "2026-07-16T11:42:08.908852",
       "image_url": "https://osthoff.com/wp-content/uploads/BEEF.jpg",
       "lat": 43.833,
       "lng": -88.0426,
@@ -7488,7 +6108,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521220",
+      "scraped_at": "2026-07-16T11:41:59.979901",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -7545,7 +6165,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521220",
+      "scraped_at": "2026-07-16T11:41:59.979901",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -7602,7 +6222,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521220",
+      "scraped_at": "2026-07-16T11:41:59.979901",
       "start_time": "7:00 AM",
       "end_date": null,
       "featured": true,
@@ -7659,7 +6279,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -7727,7 +6347,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521222",
+      "scraped_at": "2026-07-16T11:41:59.979904",
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
@@ -7760,7 +6380,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -7790,7 +6410,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521222",
+      "scraped_at": "2026-07-16T11:41:59.979904",
       "start_time": "7:30 AM",
       "end_time": "5:00 PM",
       "categories": [
@@ -7823,7 +6443,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -7853,7 +6473,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -7883,7 +6503,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521231",
+      "scraped_at": "2026-07-16T11:41:59.979913",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "end_date": null,
@@ -7920,7 +6540,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
+      "scraped_at": "2026-07-16T11:41:59.981820",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "series_end": "2026-12-13",
@@ -7950,7 +6570,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
+      "scraped_at": "2026-07-16T11:41:59.981820",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "series_end": "2026-12-13",
@@ -8018,7 +6638,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
+      "scraped_at": "2026-07-16T11:41:59.981820",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "series_end": "2026-12-13",
@@ -8086,7 +6706,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
+      "scraped_at": "2026-07-16T11:41:59.981820",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "series_end": "2026-12-13",
@@ -8137,6 +6757,1190 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Motul SportsCar Endurance Grand Prix featuring IMSA",
+      "date": "2026-08-02",
+      "description": "A six-hour endurance event featuring IMSA's elite sportscars from nearly 20 manufacturers including Mercedes, Ferrari, Chevrolet, and Aston Martin.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-07-16T11:41:59.979889",
+      "start_time": "7:00 AM",
+      "end_date": null,
+      "featured": true,
+      "categories": [
+        "Festival",
+        "Sports"
+      ],
+      "end_time": "5:00 PM",
+      "venue_name": "Road America",
+      "series_end": "2026-08-02",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/motul-imsa-road-america.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 AM",
+            "source": "Road America"
+          },
+          {
+            "value": "6:00 PM",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
+          "source": "Road America"
+        },
+        {
+          "url": "https://www.elkhartlake.com/events/",
+          "source": "Elkhart Lake Tourism"
+        }
+      ],
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Sports"
+      ],
+      "id": "e_ae87261b635a",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music: Jesse Voelker",
+      "date": "2026-08-02",
+      "start_time": "3:00 PM",
+      "end_time": "6:00 PM",
+      "description": "Spend your evening lakeside at The Tiki Bar with live music from Jesse Voelker . Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
+      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-jesse-voelker/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:02.327479",
+      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/jesse-voelker-tiki-bar.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "address": "276 Victorian Village Drive",
+      "end_date": null,
+      "series_end": "2026-08-02",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Tiki Bar Elkhart Lake"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "The Tiki Bar",
+            "source": "The Tiki Bar Elkhart Lake"
+          }
+        ]
+      },
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_4ab061873b8d",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Rob Anthony",
+      "date": "2026-08-02",
+      "start_time": "1:00 PM",
+      "end_time": "5:00 PM",
+      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring Rob Anthony. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
+      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
+      "link": "https://osthoff.com/event/rob-anthony/",
+      "source": "The Osthoff Resort",
+      "source_url": "https://osthoff.com/calendar/",
+      "scraped_at": "2026-07-16T11:42:08.908129",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/rob-anthony-jpg.avif",
+      "venue_name": "Osthoff Lake Deck",
+      "series": "The Osthoff Lake Deck",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "end_date": null,
+      "series_end": "2026-08-02",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_39aa1eedcddf",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Alex Simmons / Jon Prigge",
+      "date": "2026-08-09",
+      "start_time": "1:00 PM",
+      "end_time": "5:00 PM",
+      "description": "Live Music at The Lake Deck \u2013 Sunday, August 9, 2026 Join us for an evening of live music and a laid-back summer atmosphere on the shores of Elkhart Lake. Relax with great tunes, cold drinks, and tasty concession favorites while you unwind by the water. Open to the public.",
+      "location": "The Osthoff Resort, Elkhart Lake, WI",
+      "link": "https://osthoff.com/event/alex-simmons-jon-prigge/",
+      "source": "The Osthoff Resort",
+      "source_url": "https://osthoff.com/calendar/",
+      "scraped_at": "2026-07-16T11:42:08.908215",
+      "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Alex-Simmons_Jon-Prigge-scaled.png",
+      "series": "The Osthoff Lake Deck",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "end_date": null,
+      "series_end": "2026-08-09",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "venue_name": "The Osthoff Resort",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Osthoff Resort"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Osthoff Resort",
+            "source": "The Osthoff Resort"
+          },
+          {
+            "value": "Osthoff Lake Deck",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_b9927ff30684",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Book Binding & Decorating Workshop at The Mad Patcher",
+      "date": "2026-08-09",
+      "start_time": "3:00 PM",
+      "end_time": "5:00 PM",
+      "description": "Create a custom book or journal from scratch in this Mad Patcher exclusive workshop at Elkhart Lake\u2019s Historic Depot. Participants will be guided through the bookbinding process using paper, fabric, glue, and string to craft a one-of-a-kind handmade journal. Whether creating a personal keepsake or a thoughtful gift, this workshop offers a fun introduction to the art of bookbinding using repurposed materials. All experience levels are welcome, and instructors will provide step-by-step guidance throughout the class. Materials will be provided, but participants are encouraged to bring their own fabrics, papers, or decorative items to add a personal touch to their creation. Each attendee will leave with a unique handmade book and a new appreciation for this timeless craft. Reserve Your Spot...",
+      "location": "The Mad Patcher, 80 Square Street, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/book-binding-decorating-workshop-at-the-mad-patcher/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:04.471748",
+      "venue_name": "The Mad Patcher",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/book-binding.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Education"
+      ],
+      "address": "80 Square Street",
+      "end_date": null,
+      "series_end": "2026-08-09",
+      "filter_categories": [
+        "Arts & Theater",
+        "Education & Talks"
+      ],
+      "id": "e_4de8f68c72d3",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music: Jim Ohlschmidt & Steve Cohen",
+      "date": "2026-08-09",
+      "start_time": "3:00 PM",
+      "end_time": "6:00 PM",
+      "description": "Spend your evening lakeside at The Tiki Bar with live music from Jim Ohlschmidt & Steve Cohen. Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
+      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-jim-ohlschmidt-steve-cohen/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:04.471786",
+      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/jim-live-music.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "address": "276 Victorian Village Drive",
+      "end_date": null,
+      "series_end": "2026-08-09",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Tiki Bar Elkhart Lake"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "The Tiki Bar",
+            "source": "The Tiki Bar Elkhart Lake"
+          }
+        ]
+      },
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_684d04d06851",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Wisco Daddy \u2013 aka McManus Duo",
+      "date": "2026-08-16",
+      "start_time": "1:00 PM",
+      "end_time": "5:00 PM",
+      "description": "Live Music at The Lake Deck \u2013 Sunday, August 16, 2026 Join us for an evening of live music and a laid-back summer atmosphere on the shores of Elkhart Lake. Relax with great tunes, cold drinks, and tasty concession favorites while you unwind by the water. Open to the public.",
+      "location": "The Osthoff Resort, Elkhart Lake, WI",
+      "link": "https://osthoff.com/event/wisco-daddy-aka-mcmanus-duo/",
+      "source": "The Osthoff Resort",
+      "source_url": "https://osthoff.com/calendar/",
+      "scraped_at": "2026-07-16T11:42:08.908358",
+      "image_url": "https://osthoff.com/wp-content/uploads/Lake-Deck-Music-Series_Wisco-Daddy-AKA-MCMANUS-DUO-scaled.png",
+      "series": "The Osthoff Lake Deck",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "end_date": null,
+      "series_end": "2026-08-16",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "venue_name": "The Osthoff Resort",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Osthoff Resort"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Osthoff Resort",
+            "source": "The Osthoff Resort"
+          },
+          {
+            "value": "Osthoff Lake Deck",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_3fc1e76242e1",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "The Tiki Bar Live Music by Apple Jam Duo",
+      "date": "2026-08-16",
+      "start_time": "3:00 PM",
+      "end_time": "6:00 PM",
+      "description": "Spend your evening lakeside at The Tiki Bar with live music from Apple Jam Duo. Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
+      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-apple-jam-duo/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:04.472235",
+      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/apple-jam-duo.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "address": "276 Victorian Village Drive",
+      "end_date": null,
+      "series_end": "2026-08-16",
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_aae6c85fb22f",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music: AppleJam Duo",
+      "date": "2026-08-16",
+      "start_time": "3:00 PM",
+      "end_time": "6:00 PM",
+      "location": "The Tiki Bar, Elkhart Lake, WI",
+      "venue_name": "The Tiki Bar",
+      "description": "Live music at The Tiki Bar in Elkhart Lake featuring AppleJam Duo.",
+      "categories": [
+        "Music"
+      ],
+      "filter_categories": [
+        "Music"
+      ],
+      "link": "https://thetikibarelkhartlake.com/live-music-schedule",
+      "source": "The Tiki Bar Elkhart Lake",
+      "source_url": "https://thetikibarelkhartlake.com/live-music-schedule",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-06-30T19:40:48.809129",
+      "facets": [],
+      "id": "e_781c00fb28ef",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Cars & Coffee at Road America",
+      "date": "2026-08-23",
+      "start_time": "8:00 AM",
+      "end_time": "11:00 AM",
+      "description": "Join Road America for Cars & Coffee, a free morning event featuring car enthusiasts, fresh coffee and an unbeatable atmosphere at the track. Event Dates and Times 8:00AM to 11:00AM Sunday, June 28 Sunday, July 26 Sunday, August 23 Entry Information All guests should enter through Gate 6 and park in the Turn 12 Canada Corner area. Important All attendees must complete the online SpeedWaiver prior to arrival. Your completed waiver will serve as your admission into the event.",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/cars-coffee-at-road-america/2026-08-23/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:04.472596",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/cars-and-coffee-2.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Community"
+      ],
+      "facets": [
+        "Paid"
+      ],
+      "end_date": null,
+      "series_end": "2026-08-23",
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Community",
+        "Food & Drink"
+      ],
+      "id": "e_8a6131f957c1",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Sew A Sock Monkey Workshop at The Mad Patcher",
+      "date": "2026-08-23",
+      "start_time": "3:00 PM",
+      "end_time": "5:00 PM",
+      "description": "Create your very own personalized sock monkey in this fun and family-friendly workshop held on the platform of Elkhart Lake\u2019s Historic Depot. Participants will be guided through the process of hand sewing a custom sock monkey using socks with imperfect knits donated from Wigwam\u2019s manufacturing process. Led by Mad Patcher founder Baxter Salzwedel, this workshop is perfect for refreshing hand-sewing skills while creating a unique handmade keepsake. All ages and skill levels are welcome, and participants are encouraged to bring socks with special colors or designs if they would like to incorporate them into their project. Attendees will leave with an adorable custom sock monkey and a memorable handcrafted creation to take home. Reserve Your Spot...",
+      "location": "The Mad Patcher, 80 Square Street, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/sew-a-sock-monkey-workshop-at-the-mad-patcher/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:04.472657",
+      "venue_name": "The Mad Patcher",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/sock-monkey.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Family",
+        "Education"
+      ],
+      "address": "80 Square Street",
+      "end_date": null,
+      "series_end": "2026-08-23",
+      "filter_categories": [
+        "Education & Talks",
+        "Family & Kids"
+      ],
+      "id": "e_36f304f7c469",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music: Open Tab Duo",
+      "date": "2026-08-23",
+      "start_time": "6:00 PM",
+      "end_time": "9:00 PM",
+      "description": "Spend your evening lakeside at The Tiki Bar with live music from Open Tab Duo. Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
+      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-open-tab-duo/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:04.472689",
+      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/open-tab-duo-e1780588839474.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "address": "276 Victorian Village Drive",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Tiki Bar Elkhart Lake"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "6:00 PM",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "3:00 PM",
+            "source": "The Tiki Bar Elkhart Lake"
+          }
+        ],
+        "venue": [
+          {
+            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "The Tiki Bar",
+            "source": "The Tiki Bar Elkhart Lake"
+          }
+        ]
+      },
+      "_time_uncertain": true,
+      "_source_links": [
+        {
+          "url": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-open-tab-duo/",
+          "source": "Elkhart Lake Tourism"
+        },
+        {
+          "url": "https://thetikibarelkhartlake.com/live-music-schedule",
+          "source": "The Tiki Bar Elkhart Lake"
+        }
+      ],
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_956b38654ff5",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Gene Gruber",
+      "date": "2026-08-23",
+      "start_time": "1:00 PM",
+      "end_time": "5:00 PM",
+      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring Gene Gruber. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
+      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
+      "link": "https://osthoff.com/event/gene-gruber/",
+      "source": "The Osthoff Resort",
+      "source_url": "https://osthoff.com/calendar/",
+      "scraped_at": "2026-07-16T11:42:08.908472",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/gene-gruber-3.avif",
+      "venue_name": "Osthoff Lake Deck",
+      "series": "The Osthoff Lake Deck",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "end_date": null,
+      "series_end": "2026-08-23",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_bfa4d58f6a94",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "GT World Challenge America",
+      "date": "2026-08-30",
+      "description": "All-sportscar weekend at Road America featuring GT World Challenge America racing.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/events",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-07-16T11:41:59.979895",
+      "start_time": "7:00 AM",
+      "end_date": null,
+      "featured": true,
+      "categories": [
+        "Sports"
+      ],
+      "end_time": "5:00 PM",
+      "venue_name": "Road America",
+      "series_end": "2026-08-30",
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 AM",
+            "source": "Road America"
+          },
+          {
+            "value": "6:00 PM",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.roadamerica.com/events",
+          "source": "Road America"
+        },
+        {
+          "url": "https://www.elkhartlake.com/events/",
+          "source": "Elkhart Lake Tourism"
+        }
+      ],
+      "filter_categories": [
+        "Sports"
+      ],
+      "id": "e_9fd5b8887be3",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music: Bob Gresh",
+      "date": "2026-08-30",
+      "start_time": "3:00 PM",
+      "end_time": "6:00 PM",
+      "description": "Spend your evening lakeside at The Tiki Bar with live music from Bob Gresh. Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
+      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-bob-gresh/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:06.733078",
+      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/bob-gresh-e1783612810905.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "address": "276 Victorian Village Drive",
+      "end_date": null,
+      "series_end": "2026-08-30",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Tiki Bar Elkhart Lake"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "The Tiki Bar",
+            "source": "The Tiki Bar Elkhart Lake"
+          }
+        ]
+      },
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_625edd21d150",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "The Abler Boys",
+      "date": "2026-08-30",
+      "start_time": "1:00 PM",
+      "end_time": "5:00 PM",
+      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring The Abler Boys. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
+      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
+      "link": "https://osthoff.com/event/the-abler-boys-3/",
+      "source": "The Osthoff Resort",
+      "source_url": "https://osthoff.com/calendar/",
+      "scraped_at": "2026-07-16T11:42:08.908558",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/abler-boys-osthoff-resort.avif",
+      "venue_name": "Osthoff Lake Deck",
+      "series": "The Osthoff Lake Deck",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "end_date": null,
+      "series_end": "2026-08-30",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_fb7363d6f75b",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music: FooCoustics",
+      "date": "2026-09-06",
+      "start_time": "3:00 PM",
+      "end_time": "6:00 PM",
+      "description": "Spend your evening lakeside at The Tiki Bar with live music from Foocoustics . Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
+      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-foocoustics-3/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:06.733474",
+      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/foocoustics.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "address": "276 Victorian Village Drive",
+      "end_date": null,
+      "series_end": "2026-09-06",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Tiki Bar Elkhart Lake"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "The Tiki Bar",
+            "source": "The Tiki Bar Elkhart Lake"
+          }
+        ]
+      },
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_8e87e6e13deb",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Skyhouse",
+      "date": "2026-09-06",
+      "start_time": "11:00 AM",
+      "end_time": "2:00 PM",
+      "description": "Spend your summer nights lakeside at The Osthoff Resort for the Lake Deck Live Music Series featuring SkyHouse. Enjoy live music, sunset views, refreshing drinks and laid-back summer vibes right on the shores of Elkhart Lake. Sit back, relax, and enjoy live music by the water all summer long. Open to the public.",
+      "location": "Osthoff Lake Deck, 101 Osthoff Avenue, Elkhart Lake, WI",
+      "link": "https://osthoff.com/event/skyhouse-3/",
+      "source": "The Osthoff Resort",
+      "source_url": "https://osthoff.com/calendar/",
+      "scraped_at": "2026-07-16T11:42:08.908674",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/skyhouse.avif",
+      "venue_name": "Osthoff Lake Deck",
+      "series": "The Osthoff Lake Deck",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "end_date": null,
+      "series_end": "2026-09-06",
+      "address": "101 Osthoff Avenue, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_b6b7071a11f2",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music: Patrick Van Bibber",
+      "date": "2026-09-13",
+      "start_time": "3:00 PM",
+      "end_time": "6:00 PM",
+      "description": "Spend your evening lakeside at The Tiki Bar with live music from Patrick Van Bibber . Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
+      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-patrick-van-bibber-3/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:06.733818",
+      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/patrick-van-bibber.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "address": "276 Victorian Village Drive",
+      "end_date": null,
+      "series_end": "2026-09-13",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Tiki Bar Elkhart Lake"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "The Tiki Bar",
+            "source": "The Tiki Bar Elkhart Lake"
+          }
+        ]
+      },
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_028aa24129da",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Art on Wheels Weekend with VSCDA",
+      "date": "2026-09-20",
+      "description": "300+ meticulously restored vintage and historic race cars spanning 11 racing classes. A three-day journey through automotive history.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/art-wheels-vintage-weekend-vscda",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-07-16T11:41:59.979898",
+      "start_time": "7:00 AM",
+      "end_date": null,
+      "featured": true,
+      "categories": [
+        "Community",
+        "Sports"
+      ],
+      "end_time": "5:00 PM",
+      "venue_name": "Road America",
+      "series_end": "2026-09-20",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 AM",
+            "source": "Road America"
+          },
+          {
+            "value": "6:00 PM",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.roadamerica.com/art-wheels-vintage-weekend-vscda",
+          "source": "Road America"
+        },
+        {
+          "url": "https://www.elkhartlake.com/events/",
+          "source": "Elkhart Lake Tourism"
+        }
+      ],
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Arts & Theater",
+        "Community",
+        "Education & Talks",
+        "Sports"
+      ],
+      "id": "e_cd41d82a11d3",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music: Reverend Raven",
+      "date": "2026-09-20",
+      "start_time": "3:00 PM",
+      "end_time": "6:00 PM",
+      "description": "Spend your evening lakeside at The Tiki Bar with live music from Reverend Raven . Enjoy tropical cocktails, casual bites and unbeatable views of Elkhart Lake while soaking in the laid-back island vibes. Whether you\u2019re relaxing on the deck or dancing to the music, it\u2019s the perfect way to spend a summer evening at the lake. The Tiki Bar is located on the lakefront of The Elkhart Lake Beach Resort. Live music at The Tiki Bar takes place Thursday through Sunday throughout the summer season.",
+      "location": "The Tiki Bar at Elkhart Lake Beach Resort, 276 Victorian Village Drive, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/the-tiki-bar-live-music-by-reverend-raven-3/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:06.734156",
+      "venue_name": "The Tiki Bar at Elkhart Lake Beach Resort",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/reverend-raven.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Music",
+        "Outdoor"
+      ],
+      "address": "276 Victorian Village Drive",
+      "end_date": null,
+      "series_end": "2026-09-20",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "The Tiki Bar Elkhart Lake"
+      ],
+      "_conflicts": {
+        "venue": [
+          {
+            "value": "The Tiki Bar at Elkhart Lake Beach Resort",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "The Tiki Bar",
+            "source": "The Tiki Bar Elkhart Lake"
+          }
+        ]
+      },
+      "filter_categories": [
+        "Music",
+        "Outdoors"
+      ],
+      "id": "e_cc9a0839c070",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "SCCA National Championship Runoffs",
+      "date": "2026-10-04",
+      "description": "The pinnacle of US amateur road racing. Top SCCA racers from across the country compete for national championships at Road America.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/events",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-07-16T11:41:59.979901",
+      "start_time": "7:00 AM",
+      "end_date": null,
+      "featured": true,
+      "categories": [
+        "Festival",
+        "Sports"
+      ],
+      "end_time": "5:00 PM",
+      "venue_name": "Road America",
+      "series_end": "2026-10-04",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/scca-runoffs-1.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism",
+        "Road America"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "7:00 AM",
+            "source": "Road America"
+          },
+          {
+            "value": "6:00 PM",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "_source_links": [
+        {
+          "url": "https://www.roadamerica.com/events",
+          "source": "Road America"
+        },
+        {
+          "url": "https://www.elkhartlake.com/events/",
+          "source": "Elkhart Lake Tourism"
+        }
+      ],
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Sports"
+      ],
+      "id": "e_a6432802658d",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Old World Christmas Market",
+      "date": "2026-12-06",
+      "end_date": null,
+      "location": "The Osthoff Resort, Elkhart Lake, WI",
+      "venue_name": "The Osthoff Resort",
+      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
+      "categories": [
+        "Family",
+        "Festival",
+        "Food & Drink",
+        "Wellness"
+      ],
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-07-16T11:41:59.981820",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "series_end": "2026-12-13",
+      "address": "101 Osthoff Avenue",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "6:00 PM",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "10:00 AM",
+            "source": "Elkhart Lake Tourism"
+          }
+        ],
+        "venue": [
+          {
+            "value": "The Osthoff Resort",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "The Osthoff Resort & Spa",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
+      "_time_uncertain": true,
+      "_source_links": [
+        {
+          "url": "https://www.elkhartlake.com/events/",
+          "source": "Elkhart Lake Tourism"
+        },
+        {
+          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-06/",
+          "source": "Elkhart Lake Tourism"
+        }
+      ],
+      "filter_categories": [
+        "Family & Kids",
+        "Food & Drink",
+        "Wellness"
+      ],
+      "id": "e_01e19ec39df7",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Old World Christmas Market",
+      "date": "2026-12-13",
+      "end_date": null,
+      "location": "The Osthoff Resort, Elkhart Lake, WI",
+      "venue_name": "The Osthoff Resort",
+      "description": "Authentic German-style Christmas market at The Osthoff Resort. European vendors, holiday food, traditional crafts, and festive decor over 10 days. A signature winter destination event.",
+      "categories": [
+        "Family",
+        "Festival",
+        "Food & Drink",
+        "Wellness"
+      ],
+      "link": "https://www.elkhartlake.com/events/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-07-16T11:41:59.981820",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "series_end": "2026-12-13",
+      "address": "101 Osthoff Avenue",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/DSC_2867-jpg.avif",
+      "_all_sources": [
+        "Elkhart Lake Tourism"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "6:00 PM",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "10:00 AM",
+            "source": "Elkhart Lake Tourism"
+          }
+        ],
+        "venue": [
+          {
+            "value": "The Osthoff Resort",
+            "source": "Elkhart Lake Tourism"
+          },
+          {
+            "value": "The Osthoff Resort & Spa",
+            "source": "Elkhart Lake Tourism"
+          }
+        ]
+      },
+      "_time_uncertain": true,
+      "_source_links": [
+        {
+          "url": "https://www.elkhartlake.com/events/",
+          "source": "Elkhart Lake Tourism"
+        },
+        {
+          "url": "https://www.elkhartlake.com/event/old-world-christmas-market/2026-12-13/",
+          "source": "Elkhart Lake Tourism"
+        }
+      ],
+      "filter_categories": [
+        "Family & Kids",
+        "Food & Drink",
+        "Wellness"
+      ],
+      "id": "e_b50ce53f4c21",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
+      "date": "2026-08-05",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-07-16T11:41:59.979907",
+      "start_time": "5:30 PM",
+      "end_time": "7:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Outdoor",
+        "Sports"
+      ],
+      "venue_name": "Road America",
+      "series_end": "2026-08-19",
+      "_all_sources": [
+        "Road America"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "5:30 PM",
+            "source": "Road America"
+          },
+          {
+            "value": "6:00 PM",
+            "source": "Road America"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "id": "e_3ffeda9053e1",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Siebkens Live Music by Mike Brumm with Trust & Follow",
+      "date": "2026-08-05",
+      "description": "Spend a summer night at Siebkens Resort with live music from Mike Brumm with Trust & Follow during the Siebkens Summer Concert Series. Milwaukee native Mike Brumm brings a soulful, genre-blending sound shaped by years of performing around the world, creating the perfect soundtrack for a night in Elkhart Lake.",
+      "location": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "link": "https://www.siebkens.com/event/siebkens-summer-concert-series-mike-brumm-with-trust-follow/",
+      "source": "Siebkens Resort",
+      "source_url": "https://www.siebkens.com/events/",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-07-16T11:41:59.979948",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/mike-brumm-music-e1779215999327.avif",
+      "venue_name": "Siebkens Bandstand",
+      "series": "Siebkens Live Music",
+      "categories": [
+        "Music"
+      ],
+      "end_date": null,
+      "series_end": "2026-08-05",
+      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
+      "filter_categories": [
+        "Music"
+      ],
+      "id": "e_5c64dda9cb98",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "4 Miles of Fitness",
+      "date": "2026-08-05",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "description": "Bike, walk, or run your way around Road America\u2019s legendary 4-mile, 14-turn road course during this fan-favorite fitness series. Set against the scenic 640-acre property, participants can explore everything from wooded cross-country trails to service roads and even the iconic racing surface itself, all in a safe, traffic-free environment. Dates & Times: Mondays & Wednesdays | May 4 \u2013 September 30, 2026 6:00 PM \u2013 8:00 PM (September hours: 5:30 PM \u2013 7:30 PM) Pricing: $5 per person (cash only at the gate) $25 for an 8-visit pass $60 for an unlimited season membership Youth 16 and under are free with a paid adult. Group discounts available for groups of 10 or more. Know Before You Go: All participants must complete the SpeedWaiver before arrival. For safety, pets, scooters, and skateboards are not permitted. Lace up, roll out and experience Road America like never before\u2014no engines required....",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-05/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:04.471333",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ],
+      "facets": [
+        "Paid"
+      ],
+      "end_date": null,
+      "series_end": "2026-08-05",
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Community",
+        "Education & Talks",
+        "Family & Kids",
+        "Sports",
+        "Wellness"
+      ],
+      "id": "e_8e80b7d6aa5a",
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Sunset Cruise at Road America",
       "date": "2026-08-12",
       "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
@@ -8146,7 +7950,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521226",
+      "scraped_at": "2026-07-16T11:41:59.979907",
       "start_time": "5:30 PM",
       "end_time": "7:00 PM",
       "end_date": null,
@@ -8193,7 +7997,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521272",
+      "scraped_at": "2026-07-16T11:41:59.979950",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/bob-connor-mcmanus.avif",
@@ -8221,7 +8025,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-12/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033826",
+      "scraped_at": "2026-07-16T11:42:04.471950",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -8260,7 +8064,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521226",
+      "scraped_at": "2026-07-16T11:41:59.979907",
       "start_time": "5:30 PM",
       "end_time": "7:00 PM",
       "end_date": null,
@@ -8307,7 +8111,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521273",
+      "scraped_at": "2026-07-16T11:41:59.979954",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/Pat-McCurdy-hand.avif",
@@ -8335,7 +8139,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-19/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034199",
+      "scraped_at": "2026-07-16T11:42:04.472330",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -8374,18 +8178,18 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521275",
+      "scraped_at": "2026-07-16T11:41:59.979956",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/celeste-e1779218629655.avif",
-      "venue_name": "Siebkens Resort",
+      "venue_name": "Siebkens Bandstand",
       "series": "Siebkens Live Music",
       "categories": [
         "Music"
       ],
       "end_date": null,
       "series_end": "2026-08-26",
-      "address": "284 S Lake Street, Elkhart Lake, WI 53020",
+      "address": "Siebkens Resort, 284 S Lake Street, Elkhart Lake, WI 53020",
       "filter_categories": [
         "Music"
       ],
@@ -8402,7 +8206,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-26/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034722",
+      "scraped_at": "2026-07-16T11:42:04.472782",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -8441,7 +8245,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521283",
+      "scraped_at": "2026-07-16T11:41:59.979962",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/brent-bel-2.avif",
@@ -8469,7 +8273,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-02/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.403979",
+      "scraped_at": "2026-07-16T11:42:06.733201",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -8508,7 +8312,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-09/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404388",
+      "scraped_at": "2026-07-16T11:42:06.733594",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -8547,7 +8351,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-16/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404744",
+      "scraped_at": "2026-07-16T11:42:06.733915",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -8586,7 +8390,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-23/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.405069",
+      "scraped_at": "2026-07-16T11:42:06.734254",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -8625,7 +8429,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-30/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.405218",
+      "scraped_at": "2026-07-16T11:42:06.734400",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -8672,7 +8476,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
+      "scraped_at": "2026-07-16T11:41:59.981820",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "series_end": "2026-12-13",
@@ -8740,7 +8544,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
+      "scraped_at": "2026-07-16T11:41:59.981820",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "series_end": "2026-12-13",
@@ -8792,6 +8596,92 @@
     },
     {
       "title": "Sunset Cruise at Road America",
+      "date": "2026-08-03",
+      "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
+      "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
+      "link": "https://www.roadamerica.com/get-track",
+      "source": "Road America",
+      "source_url": "https://www.roadamerica.com",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "scraped_at": "2026-07-16T11:41:59.979907",
+      "start_time": "5:30 PM",
+      "end_time": "7:00 PM",
+      "end_date": null,
+      "recurrence": "weekly_multiple",
+      "recurrence_days": "Monday,Wednesday",
+      "categories": [
+        "Outdoor",
+        "Sports"
+      ],
+      "venue_name": "Road America",
+      "series_end": "2026-08-19",
+      "_all_sources": [
+        "Road America"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "5:30 PM",
+            "source": "Road America"
+          },
+          {
+            "value": "6:00 PM",
+            "source": "Road America"
+          }
+        ]
+      },
+      "_time_uncertain": false,
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Outdoors",
+        "Sports"
+      ],
+      "id": "e_3d6962c1f082",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "4 Miles of Fitness",
+      "date": "2026-08-03",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "description": "Bike, walk, or run your way around Road America\u2019s legendary 4-mile, 14-turn road course during this fan-favorite fitness series. Set against the scenic 640-acre property, participants can explore everything from wooded cross-country trails to service roads and even the iconic racing surface itself, all in a safe, traffic-free environment. Dates & Times: Mondays & Wednesdays | May 4 \u2013 September 30, 2026 6:00 PM \u2013 8:00 PM (September hours: 5:30 PM \u2013 7:30 PM) Pricing: $5 per person (cash only at the gate) $25 for an 8-visit pass $60 for an unlimited season membership Youth 16 and under are free with a paid adult. Group discounts available for groups of 10 or more. Know Before You Go: All participants must complete the SpeedWaiver before arrival. For safety, pets, scooters, and skateboards are not permitted. Lace up, roll out and experience Road America like never before\u2014no engines required....",
+      "location": "Road America, Elkhart Lake, WI",
+      "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-03/",
+      "source": "Elkhart Lake Tourism",
+      "source_url": "https://www.elkhartlake.com/events/",
+      "scraped_at": "2026-07-16T11:42:04.471262",
+      "venue_name": "Road America",
+      "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
+      "lat": 43.833,
+      "lng": -88.0426,
+      "_geo_source": "default",
+      "categories": [
+        "Sports",
+        "Wellness",
+        "Kids",
+        "Education"
+      ],
+      "facets": [
+        "Paid"
+      ],
+      "end_date": null,
+      "series_end": "2026-08-03",
+      "address": "N7390 US-12, Elkhart Lake, WI 53020",
+      "is_free": false,
+      "filter_categories": [
+        "Community",
+        "Education & Talks",
+        "Family & Kids",
+        "Sports",
+        "Wellness"
+      ],
+      "id": "e_9f68352231bb",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Sunset Cruise at Road America",
       "date": "2026-08-10",
       "description": "Leisurely 3-lap sunset cruise of the iconic 4-mile Road America track in your own vehicle. Mon & Wed evenings May through August.",
       "location": "Road America, N7390 US-12, Elkhart Lake, WI 53020",
@@ -8800,7 +8690,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521226",
+      "scraped_at": "2026-07-16T11:41:59.979907",
       "start_time": "5:30 PM",
       "end_time": "7:00 PM",
       "end_date": null,
@@ -8847,7 +8737,7 @@
       "source_url": "https://www.siebkens.com/events/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521269",
+      "scraped_at": "2026-07-16T11:41:59.979949",
       "start_time": "7:00 PM",
       "end_time": "10:00 PM",
       "series": "Siebkens Live Music",
@@ -8924,7 +8814,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-10/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.033759",
+      "scraped_at": "2026-07-16T11:42:04.471882",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -8963,7 +8853,7 @@
       "source_url": "https://www.roadamerica.com",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.521226",
+      "scraped_at": "2026-07-16T11:41:59.979907",
       "start_time": "5:30 PM",
       "end_time": "7:00 PM",
       "end_date": null,
@@ -9010,7 +8900,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-17/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034152",
+      "scraped_at": "2026-07-16T11:42:04.472284",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -9049,7 +8939,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-24/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:02.034671",
+      "scraped_at": "2026-07-16T11:42:04.472737",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -9088,7 +8978,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-08-31/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.403928",
+      "scraped_at": "2026-07-16T11:42:06.733152",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -9127,7 +9017,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-14/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.404697",
+      "scraped_at": "2026-07-16T11:42:06.733869",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -9166,7 +9056,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-21/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.405022",
+      "scraped_at": "2026-07-16T11:42:06.734205",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -9205,7 +9095,7 @@
       "link": "https://www.elkhartlake.com/event/4-miles-of-fitness/2026-09-28/",
       "source": "Elkhart Lake Tourism",
       "source_url": "https://www.elkhartlake.com/events/",
-      "scraped_at": "2026-07-15T11:33:04.405171",
+      "scraped_at": "2026-07-16T11:42:06.734355",
       "venue_name": "Road America",
       "image_url": "https://www.elkhartlake.com/wp-content/uploads/682121322_1382927883869244_6669316620293348948_n.avif",
       "lat": 43.833,
@@ -9252,7 +9142,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
+      "scraped_at": "2026-07-16T11:41:59.981820",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "series_end": "2026-12-13",
@@ -9320,7 +9210,7 @@
       "source_url": "https://www.elkhartlake.com/",
       "lat": 43.833,
       "lng": -88.0426,
-      "scraped_at": "2026-07-15T11:32:57.523052",
+      "scraped_at": "2026-07-16T11:41:59.981820",
       "start_time": "6:00 PM",
       "end_time": "8:00 PM",
       "series_end": "2026-12-13",
