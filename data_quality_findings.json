@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-16",
+  "generated_at": "2026-07-17",
   "cities": {
     "all": {
-      "events": 4159,
+      "events": 4147,
       "findings": [
         {
           "code": "C1",
@@ -30,7 +30,7 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 26,
+          "count": 28,
           "examples": [
             {
               "date": "2026-07-18",
@@ -83,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 157,
-              "lost": 883
+              "now": 154,
+              "lost": 886
             },
             {
               "source": "Siebkens Resort",
@@ -95,8 +95,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 48,
-              "lost": 68
+              "now": 47,
+              "lost": 69
             },
             {
               "source": "Oakley City",
@@ -109,7 +109,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 214,
+      "events": 210,
       "findings": [
         {
           "code": "C6",
@@ -128,7 +128,7 @@
       ]
     },
     "greenlake": {
-      "events": 187,
+      "events": 185,
       "findings": [
         {
           "code": "C5",
@@ -149,7 +149,7 @@
       ]
     },
     "heber": {
-      "events": 566,
+      "events": 567,
       "findings": [
         {
           "code": "C1",
@@ -223,15 +223,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 153,
-              "lost": 880
+              "now": 149,
+              "lost": 884
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1395,
+      "events": 1370,
       "findings": [
         {
           "code": "C5",
@@ -290,8 +290,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 48,
-              "lost": 68
+              "now": 47,
+              "lost": 69
             }
           ]
         }

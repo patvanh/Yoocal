@@ -1,32 +1,38 @@
 {
-  "generated_at": "2026-07-16T11:52:26.996993",
+  "generated_at": "2026-07-17T11:38:50.411679",
   "attempted": 3,
   "applied": 1,
   "log": [
     {
       "city": "elkhart-lake",
-      "title": "Elkhart Lake Farmers & Artisans Market",
+      "title": "Road America Track Day",
       "type": "title_truncated",
-      "skipped": "[fetch failed: 403 Client Error: Forbidden for url: https://www.elkhartlake.com/events/]"
-    },
-    {
-      "city": "jackson",
-      "title": "Western Scholars: The Great Smallpox Epidemic of 1",
-      "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/western-scholars%3a-the-great-smallpox-epidemic-of-1775-82-with-elizabeth-fenn/3716/",
+      "link": "https://www.roadamerica.com/track-days",
       "resolution": {
         "confidence": "high",
-        "new_title": "Western Scholars: The Great Smallpox Epidemic of 1775-82 with Elizabeth Fenn",
-        "reasoning": "The source page text contains the exact same title as the current title, indicating it is already complete and not truncated."
+        "new_title": "Track Days on the 4 Mile Track",
+        "reasoning": "The source page explicitly states 'Track Days on the 4 Mile Track' as the descriptive title in the overview section, which provides more complete information than the truncated 'Road America Track Day'."
       },
       "applied": true,
-      "note": "title: 'Western Scholars: The Great Smallpox Epidemic of 1775-82 with Elizabeth Fenn' \u2192 'Western Scholars: The Great Smallpox Epidemic of 1775-82 with Elizabeth Fenn'"
+      "note": "title: 'Road America Track Day' \u2192 'Track Days on the 4 Mile Track'"
     },
     {
       "city": "jackson",
-      "title": "The 29th Annual Manhattan Short Film Festival",
+      "title": "Damien Gunn",
       "type": "title_truncated",
-      "skipped": "[fetch failed: 415 Client Error: Unsupported Media Type for url: https://www.jhcenterforthearts.org/event/msff-26/]"
+      "link": "https://www.milliondollarcowboybar.com/events/damien-gunn-1-1-0-0",
+      "resolution": {
+        "confidence": "medium",
+        "new_title": "Damien Gunn Band",
+        "reasoning": "The source text consistently refers to the act as 'Damien Gunn Band' rather than just 'Damien Gunn', though the exact event title format is not explicitly stated in the provided text."
+      },
+      "applied": false,
+      "note": "confidence=medium, not applying"
+    },
+    {
+      "city": "jackson",
+      "type": "title_truncated",
+      "skipped": "no event_index"
     }
   ]
 }
