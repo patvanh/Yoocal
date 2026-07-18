@@ -1,38 +1,46 @@
 {
-  "generated_at": "2026-07-17T11:38:50.411679",
+  "generated_at": "2026-07-18T11:19:32.891746",
   "attempted": 3,
-  "applied": 1,
+  "applied": 3,
   "log": [
     {
       "city": "elkhart-lake",
-      "title": "Road America Track Day",
+      "title": "Motul SportsCar Endurance Grand Prix featuring IMS",
       "type": "title_truncated",
-      "link": "https://www.roadamerica.com/track-days",
+      "link": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
       "resolution": {
         "confidence": "high",
-        "new_title": "Track Days on the 4 Mile Track",
-        "reasoning": "The source page explicitly states 'Track Days on the 4 Mile Track' as the descriptive title in the overview section, which provides more complete information than the truncated 'Road America Track Day'."
+        "new_title": "Motul SportsCar Endurance Grand Prix Featuring IMSA",
+        "reasoning": "The source text consistently shows the title as 'Motul SportsCar Endurance Grand Prix Featuring IMSA' throughout the page, with 'Featuring' capitalized, which appears to be the complete official title."
       },
       "applied": true,
-      "note": "title: 'Road America Track Day' \u2192 'Track Days on the 4 Mile Track'"
+      "note": "title: 'Motul SportsCar Endurance Grand Prix featuring IMSA' \u2192 'Motul SportsCar Endurance Grand Prix Featuring IMSA'"
     },
     {
       "city": "jackson",
-      "title": "Damien Gunn",
+      "title": "Musical Adventures at Teton Village Commons",
       "type": "title_truncated",
-      "link": "https://www.milliondollarcowboybar.com/events/damien-gunn-1-1-0-0",
+      "link": "https://gtmf.org/events/musical-adventures-at-teton-village-commons-14",
       "resolution": {
-        "confidence": "medium",
-        "new_title": "Damien Gunn Band",
-        "reasoning": "The source text consistently refers to the act as 'Damien Gunn Band' rather than just 'Damien Gunn', though the exact event title format is not explicitly stated in the provided text."
+        "confidence": "high",
+        "new_title": "Musical Adventures at Teton Village Commons",
+        "reasoning": "The current title matches exactly with the title shown in the source page and the related events section, and no additional information appears to be truncated."
       },
-      "applied": false,
-      "note": "confidence=medium, not applying"
+      "applied": true,
+      "note": "title: 'Musical Adventures at Teton Village Commons' \u2192 'Musical Adventures at Teton Village Commons'"
     },
     {
       "city": "jackson",
+      "title": "JH Chamber Music & The Center: Appalachian Spring",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://www.jhcenterforthearts.org/event/appalachian-spring/",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "JH Chamber Music & The Center: Appalachian Spring with choreography by Contemporary Dance Wyoming at Dancers' Workshop",
+        "reasoning": "The source page clearly shows the subtitle 'with choreography by Contemporary Dance Wyoming at Dancers' Workshop' directly under the main title, indicating this is part of the complete event title."
+      },
+      "applied": true,
+      "note": "title: 'JH Chamber Music & The Center: Appalachian Spring' \u2192 \"JH Chamber Music & The Center: Appalachian Spring with choreography by Contemporary Dance Wyoming at Dancers' Workshop\""
     }
   ]
 }

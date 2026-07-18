@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-17T11:38:42.417223",
-  "audit_date": "2026-07-17",
+  "generated_at": "2026-07-18T11:19:22.813745",
+  "audit_date": "2026-07-18",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1584,
+      "before_count": 1556,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -31,8 +31,12 @@
           "fixed": 4,
           "examples": [
             {
+              "title": "Moose on the Loose Kids Trail Series",
+              "had_span": 57
+            },
+            {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 41
+              "had_span": 40
             },
             {
               "title": "Fascia Rolling Class",
@@ -41,10 +45,6 @@
             {
               "title": "Group Fitness Classes",
               "had_span": 181
-            },
-            {
-              "title": "Moose on the Loose Kids Trail Series",
-              "had_span": 57
             }
           ]
         },
@@ -130,30 +130,8 @@
           ]
         },
         "classification": {
-          "fixed": 351,
+          "fixed": 341,
           "examples": [
-            {
-              "title": "Challenge Accepted!",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Saturdays at Velvet Room: Noir Nights with Miss DJ Lux",
-              "before": [],
-              "after": [
-                "Music"
-              ]
-            },
-            {
-              "title": "Flow in the Forum - Outdoor Yoga at Canyons Village",
-              "before": [],
-              "after": [
-                "Outdoor",
-                "Wellness"
-              ]
-            },
             {
               "title": "Old Town walking tour",
               "before": [],
@@ -162,25 +140,55 @@
               ]
             },
             {
-              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
+              "title": "Coffee Chat with the CEO",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Kids",
                 "Education"
+              ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "DJ, Drop the Beat Pool Party",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Government",
+                "Music"
               ]
             }
           ]
         }
       },
-      "after_count": 1586,
-      "total_fixes": 371
+      "after_count": 1558,
+      "total_fixes": 361
     },
     {
       "city": "elkhart-lake",
-      "before_count": 203,
+      "before_count": 197,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -213,15 +221,15 @@
           "examples": []
         }
       },
-      "after_count": 205,
+      "after_count": 199,
       "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 214,
+      "before_count": 209,
       "passes": {
         "past_dates": {
-          "fixed": 57,
+          "fixed": 58,
           "examples": [
             {
               "title": "Midway Art Gallery Open House",
@@ -232,16 +240,16 @@
               "date": "2026-06-15"
             },
             {
-              "title": "Ritual Chocolate Public Tour and Mini Tasting",
-              "date": "2026-06-19"
+              "title": "Heber Valley Pioneer Baseball Tournament",
+              "date": "2026-07-17"
             },
             {
-              "title": "Anna's European Antiques Pop-Up Event",
-              "date": "2026-06-26"
+              "title": "Free Yoga @ Midway Town Square",
+              "date": "2026-06-27"
             },
             {
-              "title": "Meet the Cows - Dairy Farm Tour",
-              "date": "2026-06-15"
+              "title": "Commemorative Air Force Museum Tours",
+              "date": "2026-06-20"
             }
           ]
         },
@@ -254,7 +262,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 180
+              "had_span": 181
             }
           ]
         },
@@ -320,12 +328,12 @@
           "examples": []
         }
       },
-      "after_count": 160,
-      "total_fixes": 68
+      "after_count": 154,
+      "total_fixes": 69
     },
     {
       "city": "jackson",
-      "before_count": 560,
+      "before_count": 545,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -336,30 +344,21 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 78
+              "had_span": 77
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 65
+              "had_span": 64
             },
             {
               "title": "Take-a-Tour Tuesday",
-              "had_span": 170
+              "had_span": 171
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 6,
+          "fixed": 5,
           "examples": [
-            {
-              "title": "Mata Ortiz Pop-Up Pottery Shop",
-              "original_span": "2026-07-17 to 2026-07-19",
-              "split_into": [
-                "2026-07-17",
-                "2026-07-18",
-                "2026-07-19"
-              ]
-            },
             {
               "title": "Rodeo Tent Sale",
               "original_span": "2026-07-24 to 2026-07-26",
@@ -399,6 +398,24 @@
                 "2026-08-28",
                 "2026-08-29",
                 "2026-08-30"
+              ]
+            },
+            {
+              "title": "43rd Annual Fall Arts Festival 2027",
+              "original_span": "2027-09-08 to 2027-09-19",
+              "split_into": [
+                "2027-09-08",
+                "2027-09-09",
+                "2027-09-10",
+                "2027-09-11",
+                "2027-09-12",
+                "2027-09-13",
+                "2027-09-14",
+                "2027-09-15",
+                "2027-09-16",
+                "2027-09-17",
+                "2027-09-18",
+                "2027-09-19"
               ]
             }
           ]
@@ -443,8 +460,8 @@
           "examples": []
         }
       },
-      "after_count": 586,
-      "total_fixes": 19
+      "after_count": 569,
+      "total_fixes": 18
     }
   ]
 }
