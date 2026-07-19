@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-18T11:19:22.813745",
-  "audit_date": "2026-07-18",
+  "generated_at": "2026-07-19T11:28:16.318051",
+  "audit_date": "2026-07-19",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1556,
+      "before_count": 1522,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -28,15 +28,11 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 3,
           "examples": [
             {
-              "title": "Moose on the Loose Kids Trail Series",
-              "had_span": 57
-            },
-            {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 40
+              "had_span": 39
             },
             {
               "title": "Fascia Rolling Class",
@@ -49,7 +45,7 @@
           ]
         },
         "multi_day_splits": {
-          "fixed": 5,
+          "fixed": 4,
           "examples": [
             {
               "title": "Fox US Open of Mountain Biking",
@@ -58,14 +54,6 @@
                 "2026-09-11",
                 "2026-09-12",
                 "2026-09-13"
-              ]
-            },
-            {
-              "title": "Matilda & Gozney Weekend",
-              "original_span": "2026-07-18 to 2026-07-19",
-              "split_into": [
-                "2026-07-18",
-                "2026-07-19"
               ]
             },
             {
@@ -130,22 +118,33 @@
           ]
         },
         "classification": {
-          "fixed": 341,
+          "fixed": 334,
           "examples": [
             {
-              "title": "Old Town walking tour",
+              "title": "Challenge Accepted!",
               "before": [],
               "after": [
                 "Community"
               ]
             },
             {
-              "title": "Coffee Chat with the CEO",
+              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
+                "Food & Drink"
+              ]
+            },
+            {
+              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Kids",
                 "Education"
               ]
             },
@@ -167,28 +166,17 @@
               "after": [
                 "Community",
                 "Education"
-              ]
-            },
-            {
-              "title": "DJ, Drop the Beat Pool Party",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Government",
-                "Music"
               ]
             }
           ]
         }
       },
-      "after_count": 1558,
-      "total_fixes": 361
+      "after_count": 1523,
+      "total_fixes": 352
     },
     {
       "city": "elkhart-lake",
-      "before_count": 197,
+      "before_count": 189,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -221,31 +209,31 @@
           "examples": []
         }
       },
-      "after_count": 199,
+      "after_count": 191,
       "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 209,
+      "before_count": 200,
       "passes": {
         "past_dates": {
-          "fixed": 58,
+          "fixed": 59,
           "examples": [
-            {
-              "title": "Midway Art Gallery Open House",
-              "date": "2026-06-19"
-            },
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Heber Valley Pioneer Baseball Tournament",
+              "title": "Mountain Top Yoga @ Sundance Resort",
+              "date": "2026-07-05"
+            },
+            {
+              "title": "TedFest Music Festival",
               "date": "2026-07-17"
             },
             {
-              "title": "Free Yoga @ Midway Town Square",
-              "date": "2026-06-27"
+              "title": "Live Music @ Caf\u00e9 Galleria",
+              "date": "2026-06-19"
             },
             {
               "title": "Commemorative Air Force Museum Tours",
@@ -267,16 +255,8 @@
           ]
         },
         "multi_day_splits": {
-          "fixed": 2,
+          "fixed": 1,
           "examples": [
-            {
-              "title": "2-Day Throwing Large Forms on the Wheel",
-              "original_span": "2026-07-18 to 2026-07-19",
-              "split_into": [
-                "2026-07-18",
-                "2026-07-19"
-              ]
-            },
             {
               "title": "Kimball Arts Festival",
               "original_span": "2026-08-07 to 2026-08-09",
@@ -328,12 +308,12 @@
           "examples": []
         }
       },
-      "after_count": 154,
+      "after_count": 143,
       "total_fixes": 69
     },
     {
       "city": "jackson",
-      "before_count": 545,
+      "before_count": 531,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -344,15 +324,15 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 77
+              "had_span": 76
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 64
+              "had_span": 63
             },
             {
               "title": "Take-a-Tour Tuesday",
-              "had_span": 171
+              "had_span": 172
             }
           ]
         },
@@ -421,7 +401,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 10,
+          "fixed": 9,
           "examples": [
             {
               "title": "Karaoke at The Virginian Saloon",
@@ -436,12 +416,6 @@
               "duration_hours": 0.5
             },
             {
-              "title": "Teton Toss #11 Disc Golf Tournament",
-              "start_time": "9:00 AM",
-              "new_end_time": "10:00 AM",
-              "duration_hours": 1
-            },
-            {
               "title": "Object Heavy | Concerts on the Commons",
               "start_time": "5:00 PM",
               "new_end_time": "8:00 PM",
@@ -449,6 +423,12 @@
             },
             {
               "title": "Old 97's | Concerts on the Commons",
+              "start_time": "5:00 PM",
+              "new_end_time": "8:00 PM",
+              "duration_hours": 3
+            },
+            {
+              "title": "Wreckless Strangers | Concerts on the Commons",
               "start_time": "5:00 PM",
               "new_end_time": "8:00 PM",
               "duration_hours": 3
@@ -460,8 +440,8 @@
           "examples": []
         }
       },
-      "after_count": 569,
-      "total_fixes": 18
+      "after_count": 555,
+      "total_fixes": 17
     }
   ]
 }

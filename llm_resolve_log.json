@@ -1,46 +1,20 @@
 {
-  "generated_at": "2026-07-18T11:19:32.891746",
-  "attempted": 3,
-  "applied": 3,
+  "generated_at": "2026-07-19T11:28:20.049882",
+  "attempted": 1,
+  "applied": 0,
   "log": [
     {
-      "city": "elkhart-lake",
-      "title": "Motul SportsCar Endurance Grand Prix featuring IMS",
-      "type": "title_truncated",
-      "link": "https://www.roadamerica.com/motul-sportscar-endurance-grand-prix-featuring-imsa",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Motul SportsCar Endurance Grand Prix Featuring IMSA",
-        "reasoning": "The source text consistently shows the title as 'Motul SportsCar Endurance Grand Prix Featuring IMSA' throughout the page, with 'Featuring' capitalized, which appears to be the complete official title."
-      },
-      "applied": true,
-      "note": "title: 'Motul SportsCar Endurance Grand Prix featuring IMSA' \u2192 'Motul SportsCar Endurance Grand Prix Featuring IMSA'"
-    },
-    {
       "city": "jackson",
-      "title": "Musical Adventures at Teton Village Commons",
+      "title": "Fall Arts Festival Gallery Walk",
       "type": "title_truncated",
-      "link": "https://gtmf.org/events/musical-adventures-at-teton-village-commons-14",
+      "link": "https://www.jacksonholechamber.com/event/fall-arts-festival-gallery-walk/3076/",
       "resolution": {
-        "confidence": "high",
-        "new_title": "Musical Adventures at Teton Village Commons",
-        "reasoning": "The current title matches exactly with the title shown in the source page and the related events section, and no additional information appears to be truncated."
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only shows 'Fall Arts Festival Gallery Walk' without any additional context or extended title information, so there is no evidence of truncation or a more complete version."
       },
-      "applied": true,
-      "note": "title: 'Musical Adventures at Teton Village Commons' \u2192 'Musical Adventures at Teton Village Commons'"
-    },
-    {
-      "city": "jackson",
-      "title": "JH Chamber Music & The Center: Appalachian Spring",
-      "type": "title_truncated",
-      "link": "https://www.jhcenterforthearts.org/event/appalachian-spring/",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "JH Chamber Music & The Center: Appalachian Spring with choreography by Contemporary Dance Wyoming at Dancers' Workshop",
-        "reasoning": "The source page clearly shows the subtitle 'with choreography by Contemporary Dance Wyoming at Dancers' Workshop' directly under the main title, indicating this is part of the complete event title."
-      },
-      "applied": true,
-      "note": "title: 'JH Chamber Music & The Center: Appalachian Spring' \u2192 \"JH Chamber Music & The Center: Appalachian Spring with choreography by Contemporary Dance Wyoming at Dancers' Workshop\""
+      "applied": false,
+      "note": "confidence=low, not applying"
     }
   ]
 }

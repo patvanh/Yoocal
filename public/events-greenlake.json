@@ -6,9 +6,9 @@
     "lng": -88.9576
   },
   "radius_mi": 25,
-  "generated_at": "2026-07-18T05:21:01.224034-06:00",
-  "today": "2026-07-18",
-  "event_count": 182,
+  "generated_at": "2026-07-19T05:29:22.883003-06:00",
+  "today": "2026-07-19",
+  "event_count": 176,
   "events": [
     {
       "title": "RMC Kids Aquathon",
@@ -357,6 +357,29 @@
       "_distance_mi": 0.3
     },
     {
+      "title": "DN Western Region Championship",
+      "date": "2027-01-02",
+      "end_date": null,
+      "location": "green lake wisconsin",
+      "venue_name": "",
+      "link": "https://www.iceboat.org/2026/01/25/isa-regatta-on-for-green-lake-wi-starting-january-29th/",
+      "start_time": null,
+      "end_time": null,
+      "source": "iceboat.org",
+      "source_url": "https://www.iceboat.org/2026/01/25/isa-regatta-on-for-green-lake-wi-starting-january-29th/",
+      "lat": 43.8441481,
+      "lng": -88.9601133,
+      "city": "green lake wisconsin",
+      "categories": [],
+      "category_llm": "Sports",
+      "series_end": "2027-01-03",
+      "filter_categories": [
+        "Sports"
+      ],
+      "id": "e_b68952cdd897",
+      "_distance_mi": 0.3
+    },
+    {
       "title": "Creation Care 5k (Virtual)",
       "date": "2026-09-01",
       "end_date": null,
@@ -402,29 +425,6 @@
       ],
       "id": "e_d6da5c47d60d",
       "_distance_mi": 9.4
-    },
-    {
-      "title": "DN Western Region Championship",
-      "date": "2027-01-02",
-      "end_date": null,
-      "location": "green lake wisconsin",
-      "venue_name": "",
-      "link": "https://www.iceboat.org/2026/01/25/isa-regatta-on-for-green-lake-wi-starting-january-29th/",
-      "start_time": null,
-      "end_time": null,
-      "source": "iceboat.org",
-      "source_url": "https://www.iceboat.org/2026/01/25/isa-regatta-on-for-green-lake-wi-starting-january-29th/",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "city": "green lake wisconsin",
-      "categories": [],
-      "category_llm": "Sports",
-      "series_end": "2027-01-03",
-      "filter_categories": [
-        "Sports"
-      ],
-      "id": "e_b68952cdd897",
-      "_distance_mi": 0.3
     },
     {
       "title": "DN World & NA Championship",
@@ -516,168 +516,6 @@
         "Sports"
       ],
       "id": "e_b81f61e926b3",
-      "_distance_mi": 0.3
-    },
-    {
-      "title": "Live Music \u2013 Tango en Fuego",
-      "date": "2026-07-18",
-      "start_time": "5:00 PM",
-      "end_time": "8:00 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/live-music-at-norton-s-tango-en-fuego-842132",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
-      "location": "Norton's of Green Lake\u00a0\r\n380 S Lawson Dr.\r\nGreen Lake, WI 54941",
-      "venue_name": "Norton's of Green Lake\u00a0\r\n380 S Lawson Dr.\r\nGreen Lake, WI 54941",
-      "description": "Another Saturday, means more great live music at Norton's! Our Friends Tango en Fuego join us to bring the weekend fun!",
-      "city": "green lake wisconsin",
-      "categories": [
-        "Event"
-      ],
-      "_all_sources": [
-        "chamber.visitgreenlake.com",
-        "nortonsgreenlake.com"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "Norton's of Green Lake\u00a0\r\n380 S Lawson Dr.\r\nGreen Lake, WI 54941",
-            "source": "chamber.visitgreenlake.com"
-          },
-          {
-            "value": "Norton's of Green Lake",
-            "source": "nortonsgreenlake.com"
-          }
-        ]
-      },
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_197e95120247",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Comedy - The Best of Second City 2 Shows",
-      "date": "2026-07-18",
-      "start_time": "4:30 PM",
-      "end_time": "10:00 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/comedy-the-best-of-second-city-2-shows-840542",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
-      "location": "Thrasher Opera House\r\n506 Mill St.\u00a0\r\nGreen Lake, WI 54941",
-      "venue_name": "Thrasher Opera House\r\n506 Mill St.\u00a0\r\nGreen Lake, WI 54941",
-      "description": "The legendary Second City is celebrating 65 years of laughter with The Best of Second City, a spectacular show featuring a hilarious mix of their all-time classic sketch comedy, memorable songs from their rich history, and fresh new favorites, all anchored by the signature brand of irreverent improv they\u2019re famous for; for over six decades, The Second City Touring Company has been an original, daring, and consistently hilarious force, performing social and political satire, and its alumni list is a veritable comedy hall of fame, launching the careers of stars like Bill Murray, Tina Fey, Stephen Colbert, Chris Farley, and Julia Louis-Dreyfus, among many others, and just a heads-up: this event does contain adult language or content.",
-      "city": "green lake wisconsin",
-      "filter_categories": [
-        "Arts & Theater",
-        "Education & Talks"
-      ],
-      "id": "e_2d14bae9bb47",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Affair for the Square 2026",
-      "date": "2026-07-18",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/affair-for-the-square-07-18-2026-841673",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/8380029/events/841673/EVENT_PHOTO/Image_14.jpeg",
-      "location": "Private Venue\r\nOakwood Point, 477 Greenway Ave, Green Lake",
-      "venue_name": "Private Venue\r\nOakwood Point, 477 Greenway Ave, Green Lake",
-      "description": "Affair for the Square Town Square\u2019s Annual Fundraising Party Join us for the 2026 Affair for the Square\u2014an unforgettable summer evening in support of Town Square. When: Saturday, July 18 | 7\u201310 PM Where: Oakwood Point, 477 Greenway Ave, Green Lake Hosted by: Mark and Janice Franzen and the Vandervelde Family Celebrate community in one of Green Lake\u2019s most beautiful settings. Enjoy great music, lively conversation, and a festive evening with friends and neighbors\u2014all while supporting the programs and experiences that make Town Square a vibrant gathering place for everyone. Join us for a beautiful summer evening of cocktails, music by Kate Voss & the Hot Sauce , & hors d\u2019oeuvres from Heidel House , Mr. & Mrs. P\u2019s and Adam\u2019s Rib & Hogfather Whether you're a longtime supporter or joining us for the first time, this is a night you won\u2019t want to miss. Reserve your spot today and be part of the celebration. Bring a friend. Share the invitation. All are welcome. Register Now!",
-      "city": "green lake wisconsin",
-      "filter_categories": [
-        "Family & Kids"
-      ],
-      "id": "e_befdfc84bef9",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "DAVID FREEBORG",
-      "date": "2026-07-18",
-      "start_time": "7:00 PM",
-      "end_time": "10:00 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/live-music-david-freeborg-841859",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
-      "location": "Waves Pub & Grill\r\n653 Illinois Ave, Green Lake, WI 54941",
-      "venue_name": "Waves Pub & Grill\r\n653 Illinois Ave, Green Lake, WI 54941",
-      "description": "Join us at Waves Pub & Grill all summer long for live music from 7-10PM! We're excited to feature David Freeborg ! A dynamic guitarist and vocalist specializing in 80s rock, pop, and blues, David delivers powerful vocals, electrifying guitar solos, and nonstop energy for a night of pure nostalgia. Come out and enjoy a great night of live music with David!",
-      "city": "green lake wisconsin",
-      "_all_sources": [
-        "bananasentertainment.com",
-        "chamber.visitgreenlake.com"
-      ],
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_f07525ad5e60",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "The Best of Second City \u2013 Two Shows",
-      "date": "2026-07-18",
-      "description": "Season Sponsor - Lake Street Consulting: Bill & Erica TourlasSponsored By: The legendary Second City is celebrating 65 years of laughter with The Best of Second City, a spectacular show featuring a hilarious mix of their all-time classic sketch comedy, memorable songs from their rich history, and fresh new favorites, all anchored by the signature [\u2026] \\n",
-      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
-      "link": "https://www.thrasheroperahouse.com/event/the-best-of-second-city-two-shows/",
-      "source": "thrasheroperahouse.com",
-      "source_url": "https://www.thrasheroperahouse.com/events/photo/",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "6:30 PM",
-      "end_time": "9:30 PM",
-      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2025/11/scwebsite.png",
-      "address": "506 Mill Street, Green Lake, WI, 54941",
-      "venue_name": "Thrasher Opera House",
-      "city": "green lake wisconsin",
-      "filter_categories": [
-        "Arts & Theater",
-        "Education & Talks"
-      ],
-      "id": "e_035adebb0cf3",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music \u2013 Mike Stagg",
-      "date": "2026-07-18",
-      "description": "Join us for more Memories Made Fresh at Norton\\'s. We\\'re bringing in live music every Saturday all summer long! Come give a warm welcome to Mike Stagg at his Norton\\'s debut! \\n",
-      "location": "green lake wisconsin",
-      "link": "https://nortonsgreenlake.com/event/live-music-mike-stagg/",
-      "source": "nortonsgreenlake.com",
-      "source_url": "https://nortonsgreenlake.com/events/month/",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "5:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://nortonsgreenlake.com/wp-content/uploads/2026/06/June-27-Mike-Stagg-300x169.png",
-      "recurrence": "weekly",
-      "recurrence_days": "Saturday",
-      "end_date": null,
-      "city": "green lake wisconsin",
-      "venue_name": "Norton's of Green Lake",
-      "category_llm": "Music",
-      "series_end": "2026-08-29",
-      "_all_sources": [
-        "nortonsgreenlake.com"
-      ],
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_749ab6419ac7",
       "_distance_mi": 0.3
     },
     {
