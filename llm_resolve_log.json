@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-19T11:28:20.049882",
+  "generated_at": "2026-07-20T12:31:57.643793",
   "attempted": 1,
-  "applied": 0,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "Fall Arts Festival Gallery Walk",
+      "title": "Summer People's Market 2026",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/fall-arts-festival-gallery-walk/3076/",
+      "link": "https://www.jhcenterforthearts.org/event/summer-peoples-market-2026-14/",
       "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source page text only shows 'Fall Arts Festival Gallery Walk' without any additional context or extended title information, so there is no evidence of truncation or a more complete version."
+        "confidence": "high",
+        "new_title": "Summer People's Market 2026",
+        "reasoning": "The source text confirms 'Summer People's Market 2026' is the complete title, and the event runs weekly from June 3rd through September 23rd (not just September 9th which appears to be one market date)."
       },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "applied": true,
+      "note": "title: \"Summer People's Market 2026\" \u2192 \"Summer People's Market 2026\""
     }
   ]
 }

@@ -1,18 +1,4 @@
 {
-  "generated_at": "2026-07-19T11:28:20.050330",
-  "uncertain": [
-    {
-      "city": "jackson",
-      "title": "Fall Arts Festival Gallery Walk",
-      "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/fall-arts-festival-gallery-walk/3076/",
-      "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source page text only shows 'Fall Arts Festival Gallery Walk' without any additional context or extended title information, so there is no evidence of truncation or a more complete version."
-      },
-      "applied": false,
-      "note": "confidence=low, not applying"
-    }
-  ]
+  "generated_at": "2026-07-20T12:31:57.643986",
+  "uncertain": []
 }

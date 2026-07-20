@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-19T11:28:16.318051",
-  "audit_date": "2026-07-19",
+  "generated_at": "2026-07-20T12:31:53.151513",
+  "audit_date": "2026-07-20",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1522,
+      "before_count": 1507,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -28,11 +28,15 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 3,
+          "fixed": 4,
           "examples": [
             {
+              "title": "(Re)sounding: Art Exhibition",
+              "had_span": 56
+            },
+            {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 39
+              "had_span": 38
             },
             {
               "title": "Fascia Rolling Class",
@@ -118,13 +122,37 @@
           ]
         },
         "classification": {
-          "fixed": 334,
+          "fixed": 333,
           "examples": [
             {
               "title": "Challenge Accepted!",
               "before": [],
               "after": [
                 "Community"
+              ]
+            },
+            {
+              "title": "Summer Garden Camps",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "Old Town walking tour",
+              "before": [],
+              "after": [
+                "Community"
+              ]
+            },
+            {
+              "title": "(Re)sounding: Art Exhibition",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Arts"
               ]
             },
             {
@@ -136,47 +164,16 @@
                 "Community",
                 "Food & Drink"
               ]
-            },
-            {
-              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Kids",
-                "Education"
-              ]
-            },
-            {
-              "title": "Coffee Chat with the CEO",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Education"
-              ]
-            },
-            {
-              "title": "Coffee Chat with the CEO",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Education"
-              ]
             }
           ]
         }
       },
-      "after_count": 1523,
+      "after_count": 1508,
       "total_fixes": 352
     },
     {
       "city": "elkhart-lake",
-      "before_count": 189,
+      "before_count": 184,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -209,35 +206,35 @@
           "examples": []
         }
       },
-      "after_count": 191,
+      "after_count": 186,
       "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 200,
+      "before_count": 196,
       "passes": {
         "past_dates": {
-          "fixed": 59,
+          "fixed": 58,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Mountain Top Yoga @ Sundance Resort",
-              "date": "2026-07-05"
+              "title": "Yoga in the Lavender Field @ Blue Canyon Lavender Farm",
+              "date": "2026-06-15"
             },
             {
-              "title": "TedFest Music Festival",
-              "date": "2026-07-17"
+              "title": "Meet the Cows - Dairy Farm Tour",
+              "date": "2026-06-15"
             },
             {
-              "title": "Live Music @ Caf\u00e9 Galleria",
-              "date": "2026-06-19"
+              "title": "Monday Night Train @ Heber Valley Railroad",
+              "date": "2026-06-15"
             },
             {
-              "title": "Commemorative Air Force Museum Tours",
-              "date": "2026-06-20"
+              "title": "The Little Mermaid @ High Valley Arts Outdoor Theatre",
+              "date": "2026-07-03"
             }
           ]
         },
@@ -308,12 +305,12 @@
           "examples": []
         }
       },
-      "after_count": 143,
-      "total_fixes": 69
+      "after_count": 140,
+      "total_fixes": 68
     },
     {
       "city": "jackson",
-      "before_count": 531,
+      "before_count": 518,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -324,15 +321,15 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 76
+              "had_span": 75
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 63
+              "had_span": 62
             },
             {
               "title": "Take-a-Tour Tuesday",
-              "had_span": 172
+              "had_span": 173
             }
           ]
         },
@@ -401,7 +398,7 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 9,
+          "fixed": 8,
           "examples": [
             {
               "title": "Karaoke at The Virginian Saloon",
@@ -416,12 +413,6 @@
               "duration_hours": 0.5
             },
             {
-              "title": "Object Heavy | Concerts on the Commons",
-              "start_time": "5:00 PM",
-              "new_end_time": "8:00 PM",
-              "duration_hours": 3
-            },
-            {
               "title": "Old 97's | Concerts on the Commons",
               "start_time": "5:00 PM",
               "new_end_time": "8:00 PM",
@@ -432,6 +423,12 @@
               "start_time": "5:00 PM",
               "new_end_time": "8:00 PM",
               "duration_hours": 3
+            },
+            {
+              "title": "JH Elks Charity Classic Golf Tournament",
+              "start_time": "5:00 PM",
+              "new_end_time": "6:00 PM",
+              "duration_hours": 1
             }
           ]
         },
@@ -440,8 +437,8 @@
           "examples": []
         }
       },
-      "after_count": 555,
-      "total_fixes": 17
+      "after_count": 542,
+      "total_fixes": 16
     }
   ]
 }
