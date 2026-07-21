@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-20T12:31:53.151513",
-  "audit_date": "2026-07-20",
+  "generated_at": "2026-07-21T11:57:18.442994",
+  "audit_date": "2026-07-21",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1507,
+      "before_count": 1548,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -28,15 +28,11 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 3,
           "examples": [
             {
-              "title": "(Re)sounding: Art Exhibition",
-              "had_span": 56
-            },
-            {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 38
+              "had_span": 37
             },
             {
               "title": "Fascia Rolling Class",
@@ -122,7 +118,7 @@
           ]
         },
         "classification": {
-          "fixed": 333,
+          "fixed": 329,
           "examples": [
             {
               "title": "Challenge Accepted!",
@@ -139,23 +135,6 @@
               ]
             },
             {
-              "title": "Old Town walking tour",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "(Re)sounding: Art Exhibition",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Arts"
-              ]
-            },
-            {
               "title": "A Spirited Paint Party with Artist Briar West",
               "before": [
                 "Community"
@@ -164,16 +143,37 @@
                 "Community",
                 "Food & Drink"
               ]
+            },
+            {
+              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Kids",
+                "Education"
+              ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
             }
           ]
         }
       },
-      "after_count": 1508,
-      "total_fixes": 352
+      "after_count": 1549,
+      "total_fixes": 347
     },
     {
       "city": "elkhart-lake",
-      "before_count": 184,
+      "before_count": 183,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -206,22 +206,18 @@
           "examples": []
         }
       },
-      "after_count": 186,
+      "after_count": 185,
       "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 196,
+      "before_count": 192,
       "passes": {
         "past_dates": {
-          "fixed": 58,
+          "fixed": 56,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
-              "date": "2026-06-15"
-            },
-            {
-              "title": "Yoga in the Lavender Field @ Blue Canyon Lavender Farm",
               "date": "2026-06-15"
             },
             {
@@ -229,12 +225,16 @@
               "date": "2026-06-15"
             },
             {
-              "title": "Monday Night Train @ Heber Valley Railroad",
-              "date": "2026-06-15"
+              "title": "Heber City Council Monthly Meetings",
+              "date": "2026-06-16"
             },
             {
-              "title": "The Little Mermaid @ High Valley Arts Outdoor Theatre",
-              "date": "2026-07-03"
+              "title": "Midway City Council Monthly Meetings",
+              "date": "2026-06-16"
+            },
+            {
+              "title": "Community Drum Circle @ River's Edge RV Resort",
+              "date": "2026-07-07"
             }
           ]
         },
@@ -247,7 +247,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 181
+              "had_span": 177
             }
           ]
         },
@@ -305,12 +305,12 @@
           "examples": []
         }
       },
-      "after_count": 140,
-      "total_fixes": 68
+      "after_count": 138,
+      "total_fixes": 66
     },
     {
       "city": "jackson",
-      "before_count": 518,
+      "before_count": 509,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -321,15 +321,15 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 75
+              "had_span": 74
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 62
+              "had_span": 61
             },
             {
               "title": "Take-a-Tour Tuesday",
-              "had_span": 173
+              "had_span": 174
             }
           ]
         },
@@ -437,7 +437,7 @@
           "examples": []
         }
       },
-      "after_count": 542,
+      "after_count": 533,
       "total_fixes": 16
     }
   ]

@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-20T12:31:57.643793",
+  "generated_at": "2026-07-21T11:57:23.850510",
   "attempted": 1,
   "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "Summer People's Market 2026",
+      "title": "Summer Evenings at The Rooftop Bar",
       "type": "title_truncated",
-      "link": "https://www.jhcenterforthearts.org/event/summer-peoples-market-2026-14/",
+      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-09-03",
       "resolution": {
         "confidence": "high",
-        "new_title": "Summer People's Market 2026",
-        "reasoning": "The source text confirms 'Summer People's Market 2026' is the complete title, and the event runs weekly from June 3rd through September 23rd (not just September 9th which appears to be one market date)."
+        "new_title": "Summer Evenings at The Rooftop Bar",
+        "reasoning": "The source page shows this exact title 'Summer Evenings at The Rooftop Bar' in the header and it is the complete, official event name as used throughout the page, so no truncation occurred."
       },
       "applied": true,
-      "note": "title: \"Summer People's Market 2026\" \u2192 \"Summer People's Market 2026\""
+      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
     }
   ]
 }

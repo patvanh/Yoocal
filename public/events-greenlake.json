@@ -6,8 +6,8 @@
     "lng": -88.9576
   },
   "radius_mi": 25,
-  "generated_at": "2026-07-20T06:34:57.159372-06:00",
-  "today": "2026-07-20",
+  "generated_at": "2026-07-21T06:01:12.351436-06:00",
+  "today": "2026-07-21",
   "event_count": 173,
   "events": [
     {
@@ -80,6 +80,29 @@
     },
     {
       "title": "Avrom Farm Party 2026",
+      "date": "2026-08-21",
+      "end_date": null,
+      "location": "Green Lake, Wisconsin",
+      "venue_name": "Avrom Farm",
+      "link": "https://avromfarmparty.com",
+      "start_time": null,
+      "end_time": null,
+      "source": "avromfarmparty.com",
+      "source_url": "https://avromfarmparty.com/",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "city": "green lake wisconsin",
+      "categories": [],
+      "category_llm": "Music/Food",
+      "series_end": "2026-08-23",
+      "filter_categories": [
+        "Community"
+      ],
+      "id": "e_d24167e2a447",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Avrom Farm Party 2026",
       "date": "2026-08-22",
       "end_date": null,
       "location": "Green Lake, Wisconsin",
@@ -122,29 +145,6 @@
       ],
       "id": "e_1d82c4603db1",
       "_distance_mi": 6.1
-    },
-    {
-      "title": "Avrom Farm Party 2026",
-      "date": "2026-08-21",
-      "end_date": null,
-      "location": "Green Lake, Wisconsin",
-      "venue_name": "Avrom Farm",
-      "link": "https://avromfarmparty.com",
-      "start_time": null,
-      "end_time": null,
-      "source": "avromfarmparty.com",
-      "source_url": "https://avromfarmparty.com/",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "city": "green lake wisconsin",
-      "categories": [],
-      "category_llm": "Music/Food",
-      "series_end": "2026-08-23",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_d24167e2a447",
-      "_distance_mi": 0.0
     },
     {
       "title": "Green Lake Area Half Marathon & 5K",
@@ -813,7 +813,7 @@
       "date": "2026-07-25",
       "start_time": "5:00 PM",
       "end_time": "8:00 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/live-music-at-norton-s-tinker-boys-842049",
+      "link": "https://chamber.visitgreenlake.com/events",
       "source": "chamber.visitgreenlake.com",
       "lat": 43.8371929,
       "lng": -88.9705061,
@@ -1293,6 +1293,26 @@
       "_distance_mi": 6.1
     },
     {
+      "title": "AA and Al-Anon Meetings",
+      "date": "2026-08-04",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "link": "https://chamber.visitgreenlake.com/events/details/aa-and-al-anon-meetings-08-04-2026-841293",
+      "source": "chamber.visitgreenlake.com",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/8380029/events/840664/EVENT_PHOTO/AA_and_Al-Anon.png",
+      "location": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
+      "venue_name": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
+      "description": "There are weekly 12-Step Recovery meetings at Town Square Community Center. You are welcome to attend these meetings every Tuesday from 9:00 - 10:00 a.m. and Sundays 6:30 - 7:30 pm. AA: Studio B Al-Anon: MakerSpace (Sunday); Club Room (Tuesday) For more information, call 920-807-0008.",
+      "city": "green lake wisconsin",
+      "filter_categories": [
+        "Community"
+      ],
+      "id": "e_71e7724ae7e3",
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Summer Market at Town Square",
       "date": "2026-07-31",
       "start_time": "3:00 PM",
@@ -1582,26 +1602,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "AA and Al-Anon Meetings",
-      "date": "2026-08-04",
-      "start_time": "9:00 AM",
-      "end_time": "10:00 AM",
-      "link": "https://chamber.visitgreenlake.com/events/details/aa-and-al-anon-meetings-08-04-2026-841293",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/8380029/events/840664/EVENT_PHOTO/AA_and_Al-Anon.png",
-      "location": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
-      "venue_name": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
-      "description": "There are weekly 12-Step Recovery meetings at Town Square Community Center. You are welcome to attend these meetings every Tuesday from 9:00 - 10:00 a.m. and Sundays 6:30 - 7:30 pm. AA: Studio B Al-Anon: MakerSpace (Sunday); Club Room (Tuesday) For more information, call 920-807-0008.",
-      "city": "green lake wisconsin",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_71e7724ae7e3",
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Caregivers Support Group",
       "date": "2026-08-05",
       "start_time": "10:00 AM",
@@ -1885,6 +1885,155 @@
       "_distance_mi": 0.6
     },
     {
+      "title": "Concerts in the Park | Copper Box",
+      "date": "2026-08-12",
+      "start_time": "6:30 PM",
+      "end_time": "8:30 PM",
+      "link": "https://chamber.visitgreenlake.com/events/details/concerts-in-the-park-copper-box-840514",
+      "source": "chamber.visitgreenlake.com",
+      "lat": 43.8441481,
+      "lng": -88.9601133,
+      "image_url": "https://chambermaster.blob.core.windows.net/images/events/3664/840514/EventPhotoFull_271177806_329628365829837_2137455532387605848_n.jpg",
+      "location": "green lake wisconsin",
+      "venue_name": "Deacon Mills Park",
+      "description": "Come on Wednesday, July 22, and enjoy free live music by Copper Box! \ud83c\udfb6 A Green Lake fan favorite, this Oshkosh-based quartet brings high-energy blues, jazz, polka, and rock you won?t want to miss! \ud83d\udd25 Find your perfect lakeside view, unfold that lawn chair, and kick back with some cold refreshments and delicious food! \ud83c\udf7b\ud83d\ude0b Food Vendors: Guth's Candy North Bay Sports & Liquor Say Cheese Curd Company Thai To Go The Backstage Studio Wisco Coffee Company \ud83c\udf9f\ufe0f 50/50 Raffle - Brought to you by Green Lake Greenways \ud83e\ude75 Thank you to our generous sponsors: Horicon Bank & Shoreline Marine Contracting",
+      "city": "green lake wisconsin",
+      "recurrence": "weekly",
+      "recurrence_days": "Wednesday",
+      "end_date": null,
+      "category_llm": "Music",
+      "series_end": "2026-08-19",
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "id": "e_013c80432b75",
+      "_distance_mi": 0.3
+    },
+    {
+      "title": "Concerts in the Park | 5pm to Nowhere",
+      "date": "2026-08-12",
+      "start_time": "6:30 PM",
+      "end_time": "8:30 PM",
+      "link": "https://chamber.visitgreenlake.com/events/details/concerts-in-the-park-5pm-to-nowhere-840515",
+      "source": "chamber.visitgreenlake.com",
+      "lat": 43.8441481,
+      "lng": -88.9601133,
+      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
+      "location": "green lake wisconsin",
+      "venue_name": "Deacon Mills Park",
+      "description": "Come out on Wednesday, July 29, and enjoy free live music by 5pm to Nowhere! \ud83c\udfb6 Coming from Milwaukee, this indie rock group knows how to set the mood and keep the energy just right all night long! \ud83c\udfb8 Find your perfect lakeside view, unfold that lawn chair, and kick back with some cold refreshments and delicious food! \ud83d\ude0b\ud83c\udf7b Food Vendors: Guth's Candy Mandy Jane Bakery North Bay Sports & Liquor Say Cheese Curd Company Thai To Go Wisco Coffee Company \ud83c\udf9f\ufe0f 50/50 Raffle - Brought to you by the Green Lake Rotary \ud83e\ude75 Thank you to our generous sponsors: Lake Effect HR + Law & Ripon Window & Door LLC",
+      "city": "green lake wisconsin",
+      "recurrence": "weekly",
+      "recurrence_days": "Wednesday",
+      "end_date": null,
+      "category_llm": "Music",
+      "series_end": "2026-08-19",
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "id": "e_7e4445653a4d",
+      "_distance_mi": 0.3
+    },
+    {
+      "title": "Jazz Orgy Performance",
+      "date": "2026-08-12",
+      "end_date": "2026-08-12",
+      "location": "Town Square Community Center, Green Lake, WI",
+      "venue_name": "",
+      "link": "https://greenlaketownsquare.org/our-impact/2023/9/7/50-years-strong-fine-art-show-moves-to-town-square",
+      "start_time": "11:00 AM",
+      "end_time": "4:00 PM",
+      "source": "greenlaketownsquare.org",
+      "source_url": "https://greenlaketownsquare.org/our-impact/2023/9/7/50-years-strong-fine-art-show-moves-to-town-square",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "city": "green lake wisconsin",
+      "categories": [],
+      "_all_sources": [
+        "greenlaketownsquare.org"
+      ],
+      "_conflicts": {
+        "time": [
+          {
+            "value": "11:00 AM",
+            "source": "greenlaketownsquare.org"
+          },
+          {
+            "value": "6:00 PM",
+            "source": "greenlaketownsquare.org"
+          }
+        ]
+      },
+      "_time_uncertain": true,
+      "filter_categories": [
+        "Music"
+      ],
+      "id": "e_bb2b0dd17d72",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Concerts in the Park | Copper Box",
+      "date": "2026-08-19",
+      "start_time": "6:30 PM",
+      "end_time": "8:30 PM",
+      "link": "https://chamber.visitgreenlake.com/events/details/concerts-in-the-park-copper-box-840514",
+      "source": "chamber.visitgreenlake.com",
+      "lat": 43.8441481,
+      "lng": -88.9601133,
+      "image_url": "https://chambermaster.blob.core.windows.net/images/events/3664/840514/EventPhotoFull_271177806_329628365829837_2137455532387605848_n.jpg",
+      "location": "green lake wisconsin",
+      "venue_name": "Deacon Mills Park",
+      "description": "Come on Wednesday, July 22, and enjoy free live music by Copper Box! \ud83c\udfb6 A Green Lake fan favorite, this Oshkosh-based quartet brings high-energy blues, jazz, polka, and rock you won?t want to miss! \ud83d\udd25 Find your perfect lakeside view, unfold that lawn chair, and kick back with some cold refreshments and delicious food! \ud83c\udf7b\ud83d\ude0b Food Vendors: Guth's Candy North Bay Sports & Liquor Say Cheese Curd Company Thai To Go The Backstage Studio Wisco Coffee Company \ud83c\udf9f\ufe0f 50/50 Raffle - Brought to you by Green Lake Greenways \ud83e\ude75 Thank you to our generous sponsors: Horicon Bank & Shoreline Marine Contracting",
+      "city": "green lake wisconsin",
+      "recurrence": "weekly",
+      "recurrence_days": "Wednesday",
+      "end_date": null,
+      "category_llm": "Music",
+      "series_end": "2026-08-19",
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "id": "e_3d105a691ed0",
+      "_distance_mi": 0.3
+    },
+    {
+      "title": "Concerts in the Park | 5pm to Nowhere",
+      "date": "2026-08-19",
+      "start_time": "6:30 PM",
+      "end_time": "8:30 PM",
+      "link": "https://chamber.visitgreenlake.com/events/details/concerts-in-the-park-5pm-to-nowhere-840515",
+      "source": "chamber.visitgreenlake.com",
+      "lat": 43.8441481,
+      "lng": -88.9601133,
+      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
+      "location": "green lake wisconsin",
+      "venue_name": "Deacon Mills Park",
+      "description": "Come out on Wednesday, July 29, and enjoy free live music by 5pm to Nowhere! \ud83c\udfb6 Coming from Milwaukee, this indie rock group knows how to set the mood and keep the energy just right all night long! \ud83c\udfb8 Find your perfect lakeside view, unfold that lawn chair, and kick back with some cold refreshments and delicious food! \ud83d\ude0b\ud83c\udf7b Food Vendors: Guth's Candy Mandy Jane Bakery North Bay Sports & Liquor Say Cheese Curd Company Thai To Go Wisco Coffee Company \ud83c\udf9f\ufe0f 50/50 Raffle - Brought to you by the Green Lake Rotary \ud83e\ude75 Thank you to our generous sponsors: Lake Effect HR + Law & Ripon Window & Door LLC",
+      "city": "green lake wisconsin",
+      "recurrence": "weekly",
+      "recurrence_days": "Wednesday",
+      "end_date": null,
+      "category_llm": "Music",
+      "series_end": "2026-08-19",
+      "is_free": true,
+      "price": "Free",
+      "filter_categories": [
+        "Food & Drink",
+        "Music"
+      ],
+      "id": "e_6c28a010b85d",
+      "_distance_mi": 0.3
+    },
+    {
       "title": "Fine Art Show",
       "date": "2026-08-08",
       "start_time": "10:00 AM",
@@ -2035,6 +2184,56 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "Steve Yeomans - Jazz Performance",
+      "date": "2026-08-13",
+      "end_date": "2026-08-13",
+      "location": "Town Square Community Center, Green Lake, WI",
+      "venue_name": "",
+      "link": "https://greenlaketownsquare.org/our-impact/2023/9/7/50-years-strong-fine-art-show-moves-to-town-square",
+      "start_time": "11:00 AM",
+      "end_time": "3:00 PM",
+      "source": "greenlaketownsquare.org",
+      "source_url": "https://greenlaketownsquare.org/our-impact/2023/9/7/50-years-strong-fine-art-show-moves-to-town-square",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "city": "green lake wisconsin",
+      "categories": [],
+      "filter_categories": [
+        "Music"
+      ],
+      "id": "e_bb2113e4a920",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Nathan & The Zydeco Cha Chas",
+      "date": "2026-08-14",
+      "description": "Season Sponsor - Lake Street Consulting: Bill & Erica TourlasWilliams started his professional music career at 21, just five years after high school, recording singles for his brother\\'s El Sid label. Sid also opened a venue in Lafayette, El-Sid-O\\'s, where Nathan became a staple performer on Friday nights. Williams\\' big break came when Buckwheat Zydeco recommended [\u2026] \\n",
+      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
+      "link": "https://www.thrasheroperahouse.com/event/nathan-the-zydeco-cha-chas/",
+      "source": "thrasheroperahouse.com",
+      "source_url": "https://www.thrasheroperahouse.com/events/photo/?eventDisplay=past",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "categories": [
+        "Event"
+      ],
+      "start_time": "4:00 PM",
+      "end_time": "6:00 PM",
+      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2025/11/Nathan-The-Zydeco-Cha-Chas-Website-1920x1080-1.png",
+      "address": "506 Mill Street, Green Lake, WI, 54941",
+      "venue_name": "Thrasher Opera House",
+      "recurrence": "weekly",
+      "recurrence_days": "Friday",
+      "end_date": null,
+      "city": "green lake wisconsin",
+      "series_end": "2026-12-23",
+      "filter_categories": [
+        "Community"
+      ],
+      "id": "e_89f14e5df1c8",
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Live Music \u2013 Dan & Al",
       "date": "2026-08-15",
       "description": "Mark your calendars as Dan and Al bring live music to Norton\u2019s for another great summer evening at the lake. Whether you\u2019re joining us for dinner, cocktails at the bar, [\u2026] \\n",
@@ -2143,6 +2342,35 @@
       ],
       "id": "e_f1b9f07bcf65",
       "_distance_mi": 0.6
+    },
+    {
+      "title": "Nathan & The Zydeco Cha Chas",
+      "date": "2026-08-21",
+      "description": "Season Sponsor - Lake Street Consulting: Bill & Erica TourlasWilliams started his professional music career at 21, just five years after high school, recording singles for his brother\\'s El Sid label. Sid also opened a venue in Lafayette, El-Sid-O\\'s, where Nathan became a staple performer on Friday nights. Williams\\' big break came when Buckwheat Zydeco recommended [\u2026] \\n",
+      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
+      "link": "https://www.thrasheroperahouse.com/event/nathan-the-zydeco-cha-chas/",
+      "source": "thrasheroperahouse.com",
+      "source_url": "https://www.thrasheroperahouse.com/events/photo/?eventDisplay=past",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "categories": [
+        "Event"
+      ],
+      "start_time": "4:00 PM",
+      "end_time": "6:00 PM",
+      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2025/11/Nathan-The-Zydeco-Cha-Chas-Website-1920x1080-1.png",
+      "address": "506 Mill Street, Green Lake, WI, 54941",
+      "venue_name": "Thrasher Opera House",
+      "recurrence": "weekly",
+      "recurrence_days": "Friday",
+      "end_date": null,
+      "city": "green lake wisconsin",
+      "series_end": "2026-12-23",
+      "filter_categories": [
+        "Community"
+      ],
+      "id": "e_a4a992d321d9",
+      "_distance_mi": 0.0
     },
     {
       "title": "Anna Fermin\u2019s Trigger Gospel",
@@ -2258,6 +2486,61 @@
       "_distance_mi": 0.3
     },
     {
+      "title": "Cimarron 615",
+      "date": "2026-08-27",
+      "description": "Season SponsorShow Sponsor Mike & Jeanne Shohoney Cimarron 615 is a country-rock powerhouse boasting a \"who\u2019s-who\" resume of Americana history. Formed by long-term collaborators and former members of the legendary band Poco, the quartet includes Rick Lonow, Jack Sundrud, Michael Webb, and Ronnie Guilbeau. Their collective credits span work with icons like Johnny Cash, Loretta [\u2026] \\n",
+      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
+      "link": "https://www.thrasheroperahouse.com/event/cimarron615thursdayshow/",
+      "source": "thrasheroperahouse.com",
+      "source_url": "https://www.thrasheroperahouse.com/events/photo/",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "categories": [
+        "Event"
+      ],
+      "start_time": "6:30 PM",
+      "end_time": "9:30 PM",
+      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2026/03/Cimarron-615-2026.png",
+      "address": "506 Mill Street, Green Lake, WI, 54941",
+      "venue_name": "Thrasher Opera House",
+      "city": "green lake wisconsin",
+      "filter_categories": [
+        "Education & Talks",
+        "Music"
+      ],
+      "id": "e_10a8781971c1",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Nathan & The Zydeco Cha Chas",
+      "date": "2026-08-28",
+      "description": "Season Sponsor - Lake Street Consulting: Bill & Erica TourlasWilliams started his professional music career at 21, just five years after high school, recording singles for his brother\\'s El Sid label. Sid also opened a venue in Lafayette, El-Sid-O\\'s, where Nathan became a staple performer on Friday nights. Williams\\' big break came when Buckwheat Zydeco recommended [\u2026] \\n",
+      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
+      "link": "https://www.thrasheroperahouse.com/event/nathan-the-zydeco-cha-chas/",
+      "source": "thrasheroperahouse.com",
+      "source_url": "https://www.thrasheroperahouse.com/events/photo/?eventDisplay=past",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "categories": [
+        "Event"
+      ],
+      "start_time": "4:00 PM",
+      "end_time": "6:00 PM",
+      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2025/11/Nathan-The-Zydeco-Cha-Chas-Website-1920x1080-1.png",
+      "address": "506 Mill Street, Green Lake, WI, 54941",
+      "venue_name": "Thrasher Opera House",
+      "recurrence": "weekly",
+      "recurrence_days": "Friday",
+      "end_date": null,
+      "city": "green lake wisconsin",
+      "series_end": "2026-12-23",
+      "filter_categories": [
+        "Community"
+      ],
+      "id": "e_43e60583eb3a",
+      "_distance_mi": 0.0
+    },
+    {
       "title": "Live Music \u2013 Tango en Fuego",
       "date": "2026-08-29",
       "description": "Always a fan favorite, we\\'re happy to bring Tango en Fuego back to the Lake for our Saturday Live Music lineup! \\n",
@@ -2320,289 +2603,6 @@
       ],
       "id": "e_53be932dc673",
       "_distance_mi": 0.3
-    },
-    {
-      "title": "Concerts in the Park | Copper Box",
-      "date": "2026-08-12",
-      "start_time": "6:30 PM",
-      "end_time": "8:30 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/concerts-in-the-park-copper-box-840514",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/events/3664/840514/EventPhotoFull_271177806_329628365829837_2137455532387605848_n.jpg",
-      "location": "green lake wisconsin",
-      "venue_name": "Deacon Mills Park",
-      "description": "Come on Wednesday, July 22, and enjoy free live music by Copper Box! \ud83c\udfb6 A Green Lake fan favorite, this Oshkosh-based quartet brings high-energy blues, jazz, polka, and rock you won?t want to miss! \ud83d\udd25 Find your perfect lakeside view, unfold that lawn chair, and kick back with some cold refreshments and delicious food! \ud83c\udf7b\ud83d\ude0b Food Vendors: Guth's Candy North Bay Sports & Liquor Say Cheese Curd Company Thai To Go The Backstage Studio Wisco Coffee Company \ud83c\udf9f\ufe0f 50/50 Raffle - Brought to you by Green Lake Greenways \ud83e\ude75 Thank you to our generous sponsors: Horicon Bank & Shoreline Marine Contracting",
-      "city": "green lake wisconsin",
-      "recurrence": "weekly",
-      "recurrence_days": "Wednesday",
-      "end_date": null,
-      "category_llm": "Music",
-      "series_end": "2026-08-19",
-      "is_free": true,
-      "price": "Free",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "id": "e_013c80432b75",
-      "_distance_mi": 0.3
-    },
-    {
-      "title": "Concerts in the Park | 5pm to Nowhere",
-      "date": "2026-08-12",
-      "start_time": "6:30 PM",
-      "end_time": "8:30 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/concerts-in-the-park-5pm-to-nowhere-840515",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
-      "location": "green lake wisconsin",
-      "venue_name": "Deacon Mills Park",
-      "description": "Come out on Wednesday, July 29, and enjoy free live music by 5pm to Nowhere! \ud83c\udfb6 Coming from Milwaukee, this indie rock group knows how to set the mood and keep the energy just right all night long! \ud83c\udfb8 Find your perfect lakeside view, unfold that lawn chair, and kick back with some cold refreshments and delicious food! \ud83d\ude0b\ud83c\udf7b Food Vendors: Guth's Candy Mandy Jane Bakery North Bay Sports & Liquor Say Cheese Curd Company Thai To Go Wisco Coffee Company \ud83c\udf9f\ufe0f 50/50 Raffle - Brought to you by the Green Lake Rotary \ud83e\ude75 Thank you to our generous sponsors: Lake Effect HR + Law & Ripon Window & Door LLC",
-      "city": "green lake wisconsin",
-      "recurrence": "weekly",
-      "recurrence_days": "Wednesday",
-      "end_date": null,
-      "category_llm": "Music",
-      "series_end": "2026-08-19",
-      "is_free": true,
-      "price": "Free",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "id": "e_7e4445653a4d",
-      "_distance_mi": 0.3
-    },
-    {
-      "title": "Jazz Orgy Performance",
-      "date": "2026-08-12",
-      "end_date": "2026-08-12",
-      "location": "Town Square Community Center, Green Lake, WI",
-      "venue_name": "",
-      "link": "https://greenlaketownsquare.org/our-impact/2023/9/7/50-years-strong-fine-art-show-moves-to-town-square",
-      "start_time": "11:00 AM",
-      "end_time": "4:00 PM",
-      "source": "greenlaketownsquare.org",
-      "source_url": "https://greenlaketownsquare.org/our-impact/2023/9/7/50-years-strong-fine-art-show-moves-to-town-square",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "city": "green lake wisconsin",
-      "categories": [],
-      "_all_sources": [
-        "greenlaketownsquare.org"
-      ],
-      "_conflicts": {
-        "time": [
-          {
-            "value": "11:00 AM",
-            "source": "greenlaketownsquare.org"
-          },
-          {
-            "value": "6:00 PM",
-            "source": "greenlaketownsquare.org"
-          }
-        ]
-      },
-      "_time_uncertain": true,
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_bb2b0dd17d72",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Concerts in the Park | Copper Box",
-      "date": "2026-08-19",
-      "start_time": "6:30 PM",
-      "end_time": "8:30 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/concerts-in-the-park-copper-box-840514",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/events/3664/840514/EventPhotoFull_271177806_329628365829837_2137455532387605848_n.jpg",
-      "location": "green lake wisconsin",
-      "venue_name": "Deacon Mills Park",
-      "description": "Come on Wednesday, July 22, and enjoy free live music by Copper Box! \ud83c\udfb6 A Green Lake fan favorite, this Oshkosh-based quartet brings high-energy blues, jazz, polka, and rock you won?t want to miss! \ud83d\udd25 Find your perfect lakeside view, unfold that lawn chair, and kick back with some cold refreshments and delicious food! \ud83c\udf7b\ud83d\ude0b Food Vendors: Guth's Candy North Bay Sports & Liquor Say Cheese Curd Company Thai To Go The Backstage Studio Wisco Coffee Company \ud83c\udf9f\ufe0f 50/50 Raffle - Brought to you by Green Lake Greenways \ud83e\ude75 Thank you to our generous sponsors: Horicon Bank & Shoreline Marine Contracting",
-      "city": "green lake wisconsin",
-      "recurrence": "weekly",
-      "recurrence_days": "Wednesday",
-      "end_date": null,
-      "category_llm": "Music",
-      "series_end": "2026-08-19",
-      "is_free": true,
-      "price": "Free",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "id": "e_3d105a691ed0",
-      "_distance_mi": 0.3
-    },
-    {
-      "title": "Concerts in the Park | 5pm to Nowhere",
-      "date": "2026-08-19",
-      "start_time": "6:30 PM",
-      "end_time": "8:30 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/concerts-in-the-park-5pm-to-nowhere-840515",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
-      "location": "green lake wisconsin",
-      "venue_name": "Deacon Mills Park",
-      "description": "Come out on Wednesday, July 29, and enjoy free live music by 5pm to Nowhere! \ud83c\udfb6 Coming from Milwaukee, this indie rock group knows how to set the mood and keep the energy just right all night long! \ud83c\udfb8 Find your perfect lakeside view, unfold that lawn chair, and kick back with some cold refreshments and delicious food! \ud83d\ude0b\ud83c\udf7b Food Vendors: Guth's Candy Mandy Jane Bakery North Bay Sports & Liquor Say Cheese Curd Company Thai To Go Wisco Coffee Company \ud83c\udf9f\ufe0f 50/50 Raffle - Brought to you by the Green Lake Rotary \ud83e\ude75 Thank you to our generous sponsors: Lake Effect HR + Law & Ripon Window & Door LLC",
-      "city": "green lake wisconsin",
-      "recurrence": "weekly",
-      "recurrence_days": "Wednesday",
-      "end_date": null,
-      "category_llm": "Music",
-      "series_end": "2026-08-19",
-      "is_free": true,
-      "price": "Free",
-      "filter_categories": [
-        "Food & Drink",
-        "Music"
-      ],
-      "id": "e_6c28a010b85d",
-      "_distance_mi": 0.3
-    },
-    {
-      "title": "Steve Yeomans - Jazz Performance",
-      "date": "2026-08-13",
-      "end_date": "2026-08-13",
-      "location": "Town Square Community Center, Green Lake, WI",
-      "venue_name": "",
-      "link": "https://greenlaketownsquare.org/our-impact/2023/9/7/50-years-strong-fine-art-show-moves-to-town-square",
-      "start_time": "11:00 AM",
-      "end_time": "3:00 PM",
-      "source": "greenlaketownsquare.org",
-      "source_url": "https://greenlaketownsquare.org/our-impact/2023/9/7/50-years-strong-fine-art-show-moves-to-town-square",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "city": "green lake wisconsin",
-      "categories": [],
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_bb2113e4a920",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Nathan & The Zydeco Cha Chas",
-      "date": "2026-08-14",
-      "description": "Season Sponsor - Lake Street Consulting: Bill & Erica TourlasWilliams started his professional music career at 21, just five years after high school, recording singles for his brother\\'s El Sid label. Sid also opened a venue in Lafayette, El-Sid-O\\'s, where Nathan became a staple performer on Friday nights. Williams\\' big break came when Buckwheat Zydeco recommended [\u2026] \\n",
-      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
-      "link": "https://www.thrasheroperahouse.com/event/nathan-the-zydeco-cha-chas/",
-      "source": "thrasheroperahouse.com",
-      "source_url": "https://www.thrasheroperahouse.com/events/photo/?eventDisplay=past",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "4:00 PM",
-      "end_time": "6:00 PM",
-      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2025/11/Nathan-The-Zydeco-Cha-Chas-Website-1920x1080-1.png",
-      "address": "506 Mill Street, Green Lake, WI, 54941",
-      "venue_name": "Thrasher Opera House",
-      "recurrence": "weekly",
-      "recurrence_days": "Friday",
-      "end_date": null,
-      "city": "green lake wisconsin",
-      "series_end": "2026-12-23",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_89f14e5df1c8",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Nathan & The Zydeco Cha Chas",
-      "date": "2026-08-21",
-      "description": "Season Sponsor - Lake Street Consulting: Bill & Erica TourlasWilliams started his professional music career at 21, just five years after high school, recording singles for his brother\\'s El Sid label. Sid also opened a venue in Lafayette, El-Sid-O\\'s, where Nathan became a staple performer on Friday nights. Williams\\' big break came when Buckwheat Zydeco recommended [\u2026] \\n",
-      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
-      "link": "https://www.thrasheroperahouse.com/event/nathan-the-zydeco-cha-chas/",
-      "source": "thrasheroperahouse.com",
-      "source_url": "https://www.thrasheroperahouse.com/events/photo/?eventDisplay=past",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "4:00 PM",
-      "end_time": "6:00 PM",
-      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2025/11/Nathan-The-Zydeco-Cha-Chas-Website-1920x1080-1.png",
-      "address": "506 Mill Street, Green Lake, WI, 54941",
-      "venue_name": "Thrasher Opera House",
-      "recurrence": "weekly",
-      "recurrence_days": "Friday",
-      "end_date": null,
-      "city": "green lake wisconsin",
-      "series_end": "2026-12-23",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_a4a992d321d9",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Cimarron 615",
-      "date": "2026-08-27",
-      "description": "Season SponsorShow Sponsor Mike & Jeanne Shohoney Cimarron 615 is a country-rock powerhouse boasting a \"who\u2019s-who\" resume of Americana history. Formed by long-term collaborators and former members of the legendary band Poco, the quartet includes Rick Lonow, Jack Sundrud, Michael Webb, and Ronnie Guilbeau. Their collective credits span work with icons like Johnny Cash, Loretta [\u2026] \\n",
-      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
-      "link": "https://www.thrasheroperahouse.com/event/cimarron615thursdayshow/",
-      "source": "thrasheroperahouse.com",
-      "source_url": "https://www.thrasheroperahouse.com/events/photo/",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "6:30 PM",
-      "end_time": "9:30 PM",
-      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2026/03/Cimarron-615-2026.png",
-      "address": "506 Mill Street, Green Lake, WI, 54941",
-      "venue_name": "Thrasher Opera House",
-      "city": "green lake wisconsin",
-      "filter_categories": [
-        "Education & Talks",
-        "Music"
-      ],
-      "id": "e_10a8781971c1",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Nathan & The Zydeco Cha Chas",
-      "date": "2026-08-28",
-      "description": "Season Sponsor - Lake Street Consulting: Bill & Erica TourlasWilliams started his professional music career at 21, just five years after high school, recording singles for his brother\\'s El Sid label. Sid also opened a venue in Lafayette, El-Sid-O\\'s, where Nathan became a staple performer on Friday nights. Williams\\' big break came when Buckwheat Zydeco recommended [\u2026] \\n",
-      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
-      "link": "https://www.thrasheroperahouse.com/event/nathan-the-zydeco-cha-chas/",
-      "source": "thrasheroperahouse.com",
-      "source_url": "https://www.thrasheroperahouse.com/events/photo/?eventDisplay=past",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "4:00 PM",
-      "end_time": "6:00 PM",
-      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2025/11/Nathan-The-Zydeco-Cha-Chas-Website-1920x1080-1.png",
-      "address": "506 Mill Street, Green Lake, WI, 54941",
-      "venue_name": "Thrasher Opera House",
-      "recurrence": "weekly",
-      "recurrence_days": "Friday",
-      "end_date": null,
-      "city": "green lake wisconsin",
-      "series_end": "2026-12-23",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_43e60583eb3a",
-      "_distance_mi": 0.0
     },
     {
       "title": "Nathan & The Zydeco Cha Chas",
