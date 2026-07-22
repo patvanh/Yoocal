@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-21",
+  "generated_at": "2026-07-22",
   "cities": {
     "all": {
-      "events": 3902,
+      "events": 3898,
       "findings": [
         {
           "code": "C1",
@@ -50,19 +50,19 @@
               "sim": 0.85
             },
             {
-              "date": "2026-08-02",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City (sitemap)",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
+              "date": "2026-08-07",
+              "title_a": "57th Kimball Arts Festival - August 7-9, 2026",
+              "src_a": "KPCW Community Calendar",
+              "title_b": "Kimball Arts Festival",
+              "src_b": "Visit Park City",
               "sim": 0.85
             },
             {
-              "date": "2026-08-02",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
+              "date": "2026-08-07",
+              "title_a": "Lonestar",
+              "src_a": "Visit Park City",
+              "title_b": "Country Weekend - Lonestar",
+              "src_b": "Park City Institute",
               "sim": 0.85
             }
           ]
@@ -88,14 +88,14 @@
             {
               "source": "Mountain Town Music",
               "was": 200,
-              "now": 57,
-              "lost": 143
+              "now": 53,
+              "lost": 147
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 42,
-              "lost": 74
+              "now": 41,
+              "lost": 75
             },
             {
               "source": "Oakley City",
@@ -143,7 +143,7 @@
       ]
     },
     "greenlake": {
-      "events": 173,
+      "events": 170,
       "findings": [
         {
           "code": "C5",
@@ -164,7 +164,7 @@
       ]
     },
     "heber": {
-      "events": 554,
+      "events": 552,
       "findings": [
         {
           "code": "C1",
@@ -238,15 +238,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 127,
-              "lost": 906
+              "now": 128,
+              "lost": 905
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1283,
+      "events": 1272,
       "findings": [
         {
           "code": "C5",
@@ -297,8 +297,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 42,
-              "lost": 74
+              "now": 41,
+              "lost": 75
             }
           ]
         }

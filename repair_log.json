@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-21T11:57:18.442994",
-  "audit_date": "2026-07-21",
+  "generated_at": "2026-07-22T11:57:21.583186",
+  "audit_date": "2026-07-22",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1548,
+      "before_count": 1545,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -31,8 +31,8 @@
           "fixed": 3,
           "examples": [
             {
-              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 37
+              "title": "Canyons Village Summer Concert Series",
+              "had_span": 29
             },
             {
               "title": "Fascia Rolling Class",
@@ -118,7 +118,7 @@
           ]
         },
         "classification": {
-          "fixed": 329,
+          "fixed": 331,
           "examples": [
             {
               "title": "Challenge Accepted!",
@@ -128,10 +128,10 @@
               ]
             },
             {
-              "title": "Summer Garden Camps",
+              "title": "Canyons Village Summer Concert Series",
               "before": [],
               "after": [
-                "Community"
+                "Music"
               ]
             },
             {
@@ -168,8 +168,8 @@
           ]
         }
       },
-      "after_count": 1549,
-      "total_fixes": 347
+      "after_count": 1546,
+      "total_fixes": 349
     },
     {
       "city": "elkhart-lake",
@@ -211,7 +211,7 @@
     },
     {
       "city": "heber",
-      "before_count": 192,
+      "before_count": 197,
       "passes": {
         "past_dates": {
           "fixed": 56,
@@ -221,20 +221,20 @@
               "date": "2026-06-15"
             },
             {
+              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+              "date": "2026-06-17"
+            },
+            {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Heber City Council Monthly Meetings",
-              "date": "2026-06-16"
+              "title": "Heber Midday Wednesday Ride @ Southfield Park",
+              "date": "2026-06-17"
             },
             {
-              "title": "Midway City Council Monthly Meetings",
-              "date": "2026-06-16"
-            },
-            {
-              "title": "Community Drum Circle @ River's Edge RV Resort",
-              "date": "2026-07-07"
+              "title": "Open Art Studio Night @ Alchemy Art Studio",
+              "date": "2026-06-17"
             }
           ]
         },
@@ -247,7 +247,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 177
+              "had_span": 178
             }
           ]
         },
@@ -305,12 +305,12 @@
           "examples": []
         }
       },
-      "after_count": 138,
+      "after_count": 143,
       "total_fixes": 66
     },
     {
       "city": "jackson",
-      "before_count": 509,
+      "before_count": 506,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -321,15 +321,15 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 74
+              "had_span": 73
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 61
+              "had_span": 60
             },
             {
               "title": "Take-a-Tour Tuesday",
-              "had_span": 174
+              "had_span": 175
             }
           ]
         },
@@ -437,7 +437,7 @@
           "examples": []
         }
       },
-      "after_count": 533,
+      "after_count": 530,
       "total_fixes": 16
     }
   ]

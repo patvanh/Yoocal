@@ -1,20 +1,13 @@
 {
-  "generated_at": "2026-07-21T11:57:23.850510",
+  "generated_at": "2026-07-22T11:57:21.997477",
   "attempted": 1,
-  "applied": 1,
+  "applied": 0,
   "log": [
     {
       "city": "jackson",
-      "title": "Summer Evenings at The Rooftop Bar",
+      "title": "Old Bill's Fun Run",
       "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-09-03",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Summer Evenings at The Rooftop Bar",
-        "reasoning": "The source page shows this exact title 'Summer Evenings at The Rooftop Bar' in the header and it is the complete, official event name as used throughout the page, so no truncation occurred."
-      },
-      "applied": true,
-      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
+      "skipped": "[fetch failed: 403 Client Error: Forbidden for url: https://www.runningintheusa.com/details/11469]"
     }
   ]
 }
