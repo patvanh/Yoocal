@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-22",
+  "generated_at": "2026-07-23",
   "cities": {
     "all": {
-      "events": 3898,
+      "events": 3931,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 1,
+          "count": 2,
           "examples": [
             {
               "title": "Guided Hike + Forest Bathing",
@@ -16,6 +16,13 @@
               "only_date": "2026-07-25",
               "why": "recurrence-field",
               "source": "Heber Valley Tourism"
+            },
+            {
+              "title": "Learn Spanish at the Library!",
+              "venue": "park city library",
+              "only_date": "2026-07-29",
+              "why": "recurrence-field",
+              "source": "Visit Park City (sitemap)"
             }
           ]
         },
@@ -50,19 +57,19 @@
               "sim": 0.85
             },
             {
-              "date": "2026-08-07",
-              "title_a": "57th Kimball Arts Festival - August 7-9, 2026",
-              "src_a": "KPCW Community Calendar",
-              "title_b": "Kimball Arts Festival",
-              "src_b": "Visit Park City",
+              "date": "2026-08-02",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             },
             {
-              "date": "2026-08-07",
-              "title_a": "Lonestar",
-              "src_a": "Visit Park City",
-              "title_b": "Country Weekend - Lonestar",
-              "src_b": "Park City Institute",
+              "date": "2026-08-02",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             }
           ]
@@ -76,14 +83,14 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 132,
-              "lost": 908
+              "now": 129,
+              "lost": 911
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 15,
-              "lost": 261
+              "now": 14,
+              "lost": 262
             },
             {
               "source": "Mountain Town Music",
@@ -94,8 +101,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 41,
-              "lost": 75
+              "now": 40,
+              "lost": 76
             },
             {
               "source": "Oakley City",
@@ -108,7 +115,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 191,
+      "events": 188,
       "findings": [
         {
           "code": "C5",
@@ -135,15 +142,15 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 15,
-              "lost": 261
+              "now": 14,
+              "lost": 262
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 170,
+      "events": 164,
       "findings": [
         {
           "code": "C5",
@@ -238,15 +245,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 128,
-              "lost": 905
+              "now": 125,
+              "lost": 908
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1272,
+      "events": 1303,
       "findings": [
         {
           "code": "C5",
@@ -297,13 +304,13 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 41,
-              "lost": 75
+              "now": 40,
+              "lost": 76
             }
           ]
         }
       ]
     }
   },
-  "high_total": 10
+  "high_total": 11
 }
