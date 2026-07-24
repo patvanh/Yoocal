@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-23",
+  "generated_at": "2026-07-24",
   "cities": {
     "all": {
-      "events": 3931,
+      "events": 3872,
       "findings": [
         {
           "code": "C1",
@@ -49,27 +49,27 @@
               "sim": 0.85
             },
             {
+              "date": "2026-08-07",
+              "title_a": "57th Kimball Arts Festival - August 7-9, 2026",
+              "src_a": "KPCW Community Calendar",
+              "title_b": "Kimball Arts Festival",
+              "src_b": "Visit Park City",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-07",
+              "title_a": "Lonestar",
+              "src_a": "Visit Park City",
+              "title_b": "Country Weekend - Lonestar",
+              "src_b": "Park City Institute",
+              "sim": 0.85
+            },
+            {
               "date": "2026-08-01",
               "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
               "title_b": "Saturday Sunset Music Series",
               "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-02",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City (sitemap)",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-02",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             }
           ]
@@ -83,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 129,
-              "lost": 911
+              "now": 126,
+              "lost": 914
             },
             {
               "source": "Siebkens Resort",
@@ -101,8 +101,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 40,
-              "lost": 76
+              "now": 39,
+              "lost": 77
             },
             {
               "source": "Oakley City",
@@ -115,7 +115,7 @@
       ]
     },
     "elkhartlake": {
-      "events": 188,
+      "events": 184,
       "findings": [
         {
           "code": "C5",
@@ -150,7 +150,7 @@
       ]
     },
     "greenlake": {
-      "events": 164,
+      "events": 162,
       "findings": [
         {
           "code": "C5",
@@ -171,7 +171,7 @@
       ]
     },
     "heber": {
-      "events": 552,
+      "events": 543,
       "findings": [
         {
           "code": "C1",
@@ -245,15 +245,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 125,
-              "lost": 908
+              "now": 121,
+              "lost": 912
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1303,
+      "events": 1279,
       "findings": [
         {
           "code": "C5",
@@ -304,8 +304,8 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 40,
-              "lost": 76
+              "now": 39,
+              "lost": 77
             }
           ]
         }

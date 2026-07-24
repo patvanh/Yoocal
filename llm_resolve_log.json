@@ -1,12 +1,20 @@
 {
-  "generated_at": "2026-07-23T11:59:10.999613",
+  "generated_at": "2026-07-24T11:51:33.964258",
   "attempted": 1,
-  "applied": 0,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
+      "title": "DJ Goldcone at Friday Night Bikes",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://www.jacksonhole.com/events/dj-goldcone-fnb",
+      "resolution": {
+        "confidence": "high",
+        "new_title": "DJ Goldcone at Friday Night Bikes",
+        "reasoning": "The title 'DJ Goldcone at Friday Night Bikes' appears complete in the source text under 'Event Details' and matches the current title exactly, so no truncation is evident."
+      },
+      "applied": true,
+      "note": "title: 'DJ Goldcone at Friday Night Bikes' \u2192 'DJ Goldcone at Friday Night Bikes'"
     }
   ]
 }
