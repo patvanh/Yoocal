@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-24T11:51:33.964258",
+  "generated_at": "2026-07-25T11:23:12.393915",
   "attempted": 1,
   "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "DJ Goldcone at Friday Night Bikes",
+      "title": "Summer Evenings at The Rooftop Bar",
       "type": "title_truncated",
-      "link": "https://www.jacksonhole.com/events/dj-goldcone-fnb",
+      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-09-12",
       "resolution": {
         "confidence": "high",
-        "new_title": "DJ Goldcone at Friday Night Bikes",
-        "reasoning": "The title 'DJ Goldcone at Friday Night Bikes' appears complete in the source text under 'Event Details' and matches the current title exactly, so no truncation is evident."
+        "new_title": "Summer Evenings at The Rooftop Bar",
+        "reasoning": "The source page shows 'Summer Evenings at The Rooftop Bar' as the complete title in the page header, and there is no additional text that would extend this title further."
       },
       "applied": true,
-      "note": "title: 'DJ Goldcone at Friday Night Bikes' \u2192 'DJ Goldcone at Friday Night Bikes'"
+      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
     }
   ]
 }

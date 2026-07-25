@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-24",
+  "generated_at": "2026-07-25",
   "cities": {
     "all": {
-      "events": 3872,
+      "events": 3769,
       "findings": [
         {
           "code": "C1",
@@ -30,42 +30,42 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 22,
+          "count": 23,
           "examples": [
             {
-              "date": "2026-07-26",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City (sitemap)",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-26",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-07",
-              "title_a": "57th Kimball Arts Festival - August 7-9, 2026",
-              "src_a": "KPCW Community Calendar",
-              "title_b": "Kimball Arts Festival",
-              "src_b": "Visit Park City",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-07",
-              "title_a": "Lonestar",
-              "src_a": "Visit Park City",
-              "title_b": "Country Weekend - Lonestar",
-              "src_b": "Park City Institute",
-              "sim": 0.85
-            },
-            {
               "date": "2026-08-01",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-08",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-15",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-22",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-29",
               "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
               "title_b": "Saturday Sunset Music Series",
@@ -78,13 +78,13 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 5,
+          "count": 6,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 126,
-              "lost": 914
+              "now": 118,
+              "lost": 922
             },
             {
               "source": "Siebkens Resort",
@@ -95,27 +95,27 @@
             {
               "source": "Mountain Town Music",
               "was": 200,
-              "now": 53,
-              "lost": 147
+              "now": 52,
+              "lost": 148
+            },
+            {
+              "source": "The Cloudveil",
+              "was": 160,
+              "now": 78,
+              "lost": 82
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
               "now": 39,
               "lost": 77
-            },
-            {
-              "source": "Oakley City",
-              "was": 14,
-              "now": 0,
-              "lost": 14
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 184,
+      "events": 181,
       "findings": [
         {
           "code": "C5",
@@ -150,7 +150,7 @@
       ]
     },
     "greenlake": {
-      "events": 162,
+      "events": 157,
       "findings": [
         {
           "code": "C5",
@@ -171,7 +171,7 @@
       ]
     },
     "heber": {
-      "events": 543,
+      "events": 526,
       "findings": [
         {
           "code": "C1",
@@ -245,15 +245,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 121,
-              "lost": 912
+              "now": 113,
+              "lost": 920
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1279,
+      "events": 1266,
       "findings": [
         {
           "code": "C5",
@@ -299,8 +299,14 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 1,
+          "count": 2,
           "examples": [
+            {
+              "source": "The Cloudveil",
+              "was": 160,
+              "now": 78,
+              "lost": 82
+            },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
@@ -312,5 +318,5 @@
       ]
     }
   },
-  "high_total": 11
+  "high_total": 13
 }
