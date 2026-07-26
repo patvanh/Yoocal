@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-25",
+  "generated_at": "2026-07-26",
   "cities": {
     "all": {
-      "events": 3769,
+      "events": 3694,
       "findings": [
         {
           "code": "C1",
@@ -11,11 +11,11 @@
           "count": 2,
           "examples": [
             {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-07-25",
+              "title": "Beat the Heat! / \u00a1Vence al calor!",
+              "venue": "park city library",
+              "only_date": "2026-08-03",
               "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
+              "source": "Visit Park City (sitemap)"
             },
             {
               "title": "Learn Spanish at the Library!",
@@ -30,14 +30,30 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 23,
+          "count": 22,
           "examples": [
             {
-              "date": "2026-08-01",
-              "title_a": "Heber's Saturday Sunset Music Series",
+              "date": "2026-07-26",
+              "title_a": "Stein's Famous Sunday Brunch",
               "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-26",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-07-29",
+              "title_a": "Challenge Accepted!",
+              "src_a": "Visit Park City",
+              "title_b": "Challenge Accepted with Live Like Sam | Teen Meet-up! | Rescue Horses",
+              "src_b": "TownLift",
               "sim": 0.85
             },
             {
@@ -55,22 +71,6 @@
               "title_b": "Saturday Sunset Music Series",
               "src_b": "Heber Valley Tourism",
               "sim": 0.85
-            },
-            {
-              "date": "2026-08-22",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-29",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
             }
           ]
         },
@@ -83,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 118,
-              "lost": 922
+              "now": 110,
+              "lost": 930
             },
             {
               "source": "Siebkens Resort",
@@ -101,21 +101,21 @@
             {
               "source": "The Cloudveil",
               "was": 160,
-              "now": 78,
-              "lost": 82
+              "now": 76,
+              "lost": 84
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 39,
-              "lost": 77
+              "now": 37,
+              "lost": 79
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 181,
+      "events": 176,
       "findings": [
         {
           "code": "C5",
@@ -150,7 +150,7 @@
       ]
     },
     "greenlake": {
-      "events": 157,
+      "events": 151,
       "findings": [
         {
           "code": "C5",
@@ -171,28 +171,13 @@
       ]
     },
     "heber": {
-      "events": 526,
+      "events": 512,
       "findings": [
-        {
-          "code": "C1",
-          "name": "RECURRING-DROPPED",
-          "severity": "HIGH",
-          "count": 1,
-          "examples": [
-            {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-07-25",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
-            }
-          ]
-        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 8,
+          "count": 7,
           "examples": [
             {
               "date": "2026-08-08",
@@ -204,14 +189,6 @@
             },
             {
               "date": "2026-08-15",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-01",
               "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
               "title_b": "Saturday Sunset Music Series",
@@ -233,6 +210,14 @@
               "title_b": "Saturday Sunset Music Series",
               "src_b": "Heber Valley Tourism",
               "sim": 0.85
+            },
+            {
+              "date": "2026-09-05",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
             }
           ]
         },
@@ -245,15 +230,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 113,
-              "lost": 920
+              "now": 107,
+              "lost": 926
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1266,
+      "events": 1235,
       "findings": [
         {
           "code": "C5",
@@ -304,19 +289,19 @@
             {
               "source": "The Cloudveil",
               "was": 160,
-              "now": 78,
-              "lost": 82
+              "now": 76,
+              "lost": 84
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 39,
-              "lost": 77
+              "now": 37,
+              "lost": 79
             }
           ]
         }
       ]
     }
   },
-  "high_total": 13
+  "high_total": 12
 }

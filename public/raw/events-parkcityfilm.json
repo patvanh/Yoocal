@@ -1,23 +1,6 @@
 {
   "events": [
     {
-      "title": "Best Day Ever",
-      "date": "2026-07-25",
-      "start_time": "7:00 PM",
-      "description": null,
-      "venue_name": "Jim Santy Auditorium",
-      "address": "1255 Park Avenue, Park City, UT 84060",
-      "lat": 40.6507,
-      "lng": -111.5054,
-      "link": "https://parkcityfilm.eventive.org/films/69e9443bbefea8dbdcc7ef19",
-      "image_url": "https://parkcityfilm.org/wp-content/uploads/2026/05/Copy-of-Screenshot-2025-06-06-at-12.43.02-PM-scaled-e1779769832942-1024x311.png",
-      "source": "Park City Film",
-      "source_url": "https://parkcityfilm.org/film/best-day-ever/",
-      "categories": [
-        "Film"
-      ]
-    },
-    {
       "title": "Buddy",
       "date": "2026-07-31",
       "start_time": "7:00 PM",
@@ -154,6 +137,40 @@
       ]
     },
     {
+      "title": "A Life Illuminated",
+      "date": "2026-08-21",
+      "start_time": "7:00 PM",
+      "description": null,
+      "venue_name": "Jim Santy Auditorium",
+      "address": "1255 Park Avenue, Park City, UT 84060",
+      "lat": 40.6507,
+      "lng": -111.5054,
+      "link": "https://parkcityfilm.eventive.org/films/6a650908751f2fd000b2f925",
+      "image_url": "https://parkcityfilm.org/wp-content/uploads/2026/07/Life-Illuminated.png",
+      "source": "Park City Film",
+      "source_url": "https://parkcityfilm.org/film/a-life-illuminated/",
+      "categories": [
+        "Film"
+      ]
+    },
+    {
+      "title": "A Life Illuminated",
+      "date": "2026-08-23",
+      "start_time": "7:00 PM",
+      "description": null,
+      "venue_name": "Jim Santy Auditorium",
+      "address": "1255 Park Avenue, Park City, UT 84060",
+      "lat": 40.6507,
+      "lng": -111.5054,
+      "link": "https://parkcityfilm.eventive.org/films/6a650908751f2fd000b2f925",
+      "image_url": "https://parkcityfilm.org/wp-content/uploads/2026/07/Life-Illuminated.png",
+      "source": "Park City Film",
+      "source_url": "https://parkcityfilm.org/film/a-life-illuminated/",
+      "categories": [
+        "Film"
+      ]
+    },
+    {
       "title": "Made in Utah: Mid-Length 2026",
       "date": "2026-09-24",
       "start_time": "7:00 PM",
@@ -171,5 +188,5 @@
       ]
     }
   ],
-  "scraped_at": "2026-07-25T05:09:44.054258-06:00"
+  "scraped_at": "2026-07-26T05:20:58.600376-06:00"
 }

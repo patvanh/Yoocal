@@ -1,20 +1,12 @@
 {
-  "generated_at": "2026-07-25T11:23:12.393915",
+  "generated_at": "2026-07-26T11:34:03.665942",
   "attempted": 1,
-  "applied": 1,
+  "applied": 0,
   "log": [
     {
       "city": "jackson",
-      "title": "Summer Evenings at The Rooftop Bar",
       "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/summer-evenings-at-the-rooftop-bar/2026-09-12",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Summer Evenings at The Rooftop Bar",
-        "reasoning": "The source page shows 'Summer Evenings at The Rooftop Bar' as the complete title in the page header, and there is no additional text that would extend this title further."
-      },
-      "applied": true,
-      "note": "title: 'Summer Evenings at The Rooftop Bar' \u2192 'Summer Evenings at The Rooftop Bar'"
+      "skipped": "no event_index"
     }
   ]
 }
