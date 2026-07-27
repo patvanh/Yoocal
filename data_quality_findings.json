@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-26",
+  "generated_at": "2026-07-27",
   "cities": {
     "all": {
-      "events": 3694,
+      "events": 3731,
       "findings": [
         {
           "code": "C1",
@@ -30,24 +30,8 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 22,
+          "count": 20,
           "examples": [
-            {
-              "date": "2026-07-26",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "The Park Record",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-07-26",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
             {
               "date": "2026-07-29",
               "title_a": "Challenge Accepted!",
@@ -57,19 +41,35 @@
               "sim": 0.85
             },
             {
-              "date": "2026-08-08",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-08-02",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
               "sim": 0.85
             },
             {
-              "date": "2026-08-15",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
+              "date": "2026-08-02",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-07",
+              "title_a": "57th Kimball Arts Festival - August 7-9, 2026",
+              "src_a": "KPCW Community Calendar",
+              "title_b": "Kimball Arts Festival",
+              "src_b": "Visit Park City",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-07",
+              "title_a": "Lonestar",
+              "src_a": "Visit Park City",
+              "title_b": "Country Weekend - Lonestar",
+              "src_b": "Park City Institute",
               "sim": 0.85
             }
           ]
@@ -83,8 +83,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 110,
-              "lost": 930
+              "now": 106,
+              "lost": 934
             },
             {
               "source": "Siebkens Resort",
@@ -101,21 +101,21 @@
             {
               "source": "The Cloudveil",
               "was": 160,
-              "now": 76,
-              "lost": 84
+              "now": 74,
+              "lost": 86
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 37,
-              "lost": 79
+              "now": 36,
+              "lost": 80
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 176,
+      "events": 170,
       "findings": [
         {
           "code": "C5",
@@ -150,7 +150,7 @@
       ]
     },
     "greenlake": {
-      "events": 151,
+      "events": 146,
       "findings": [
         {
           "code": "C5",
@@ -171,7 +171,7 @@
       ]
     },
     "heber": {
-      "events": 512,
+      "events": 504,
       "findings": [
         {
           "code": "C5",
@@ -230,30 +230,22 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 107,
-              "lost": 926
+              "now": 102,
+              "lost": 931
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1235,
+      "events": 1220,
       "findings": [
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 4,
+          "count": 3,
           "examples": [
-            {
-              "date": "2026-07-26",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
             {
               "date": "2026-08-02",
               "title_a": "Sunday Funday",
@@ -289,14 +281,14 @@
             {
               "source": "The Cloudveil",
               "was": 160,
-              "now": 76,
-              "lost": 84
+              "now": 74,
+              "lost": 86
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 37,
-              "lost": 79
+              "now": 36,
+              "lost": 80
             }
           ]
         }
