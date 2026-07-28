@@ -1,12 +1,20 @@
 {
-  "generated_at": "2026-07-27T13:12:20.259539",
+  "generated_at": "2026-07-28T12:05:56.906464",
   "attempted": 1,
   "applied": 0,
   "log": [
     {
       "city": "jackson",
+      "title": "Wellness Foot Health",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://www.jacksonholechamber.com/event/wellness-foot-health/3533/",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only shows 'Wellness Foot Health' as the title with no additional context or complete title information available."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
     }
   ]
 }

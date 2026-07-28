@@ -6,57 +6,10 @@
     "lng": -88.9576
   },
   "radius_mi": 25,
-  "generated_at": "2026-07-27T07:15:09.600862-06:00",
-  "today": "2026-07-27",
-  "event_count": 146,
+  "generated_at": "2026-07-28T06:08:40.962660-06:00",
+  "today": "2026-07-28",
+  "event_count": 145,
   "events": [
-    {
-      "title": "Creation Care 5k (Virtual)",
-      "date": "2026-09-01",
-      "end_date": null,
-      "location": "Ripon, WI",
-      "venue_name": "",
-      "link": "https://www.fleetfeet.com/races/wi/green-lake?srsltid=AfmBOop1r-g_CZrfK4j6tN8ezeadwU36i1e-owfEONcbBhfWIwuVPpHF",
-      "start_time": null,
-      "end_time": null,
-      "source": "fleetfeet.com",
-      "source_url": "https://www.fleetfeet.com/races/wi/green-lake?srsltid=AfmBOop1r-g_CZrfK4j6tN8ezeadwU36i1e-owfEONcbBhfWIwuVPpHF",
-      "lat": 43.8422,
-      "lng": -88.8359,
-      "city": "green lake wisconsin",
-      "categories": [],
-      "category_llm": "Sports",
-      "series_end": "2026-09-30",
-      "is_free": false,
-      "filter_categories": [
-        "Running & Races"
-      ],
-      "id": "e_9d545b328a46",
-      "_distance_mi": 6.1
-    },
-    {
-      "title": "Wisconsin Stern Steering Association (WSSA) Regatta",
-      "date": "2026-12-01",
-      "end_date": null,
-      "location": "Wisconsin",
-      "venue_name": "",
-      "start_time": null,
-      "end_time": null,
-      "link": "https://www.iceboat.org/2026/03/02/regatta-watch-wssa-postponed-to-dec-2026/",
-      "source": "iceboat.org",
-      "source_url": "https://www.iceboat.org/2026/03/02/regatta-watch-wssa-postponed-to-dec-2026/",
-      "lat": 43.9759008,
-      "lng": -88.946786,
-      "city": "",
-      "categories": [],
-      "category_llm": "Sports",
-      "series_end": "2026-12-01",
-      "filter_categories": [
-        "Sports"
-      ],
-      "id": "e_d6da5c47d60d",
-      "_distance_mi": 9.4
-    },
     {
       "title": "Avrom Farm Party 2026",
       "date": "2026-08-21",
@@ -215,10 +168,10 @@
     },
     {
       "title": "25th Annual From the Land Folk Art Festival",
-      "date": "2026-10-17",
+      "date": "2026-10-15",
       "end_date": null,
       "location": "Green Lake, Wisconsin",
-      "venue_name": "Najmot Farm & Heritage Hemp Farm",
+      "venue_name": "",
       "link": "https://fromthelandfestival.com",
       "start_time": null,
       "end_time": null,
@@ -228,15 +181,13 @@
       "lng": -88.9576,
       "city": "green lake wisconsin",
       "categories": [],
-      "recurrence": "weekly",
-      "recurrence_days": "Saturday,Sunday",
       "category_llm": "Arts",
-      "series_end": "2026-10-18",
+      "series_end": "2026-10-16",
       "filter_categories": [
         "Arts & Theater",
         "Community"
       ],
-      "id": "e_dd76dee5f398",
+      "id": "e_7005a0240595",
       "_distance_mi": 0.0
     },
     {
@@ -310,32 +261,6 @@
       "_distance_mi": 0.0
     },
     {
-      "title": "25th Annual From the Land Folk Art Festival",
-      "date": "2026-10-18",
-      "end_date": null,
-      "location": "Green Lake, Wisconsin",
-      "venue_name": "Najmot Farm & Heritage Hemp Farm",
-      "link": "https://fromthelandfestival.com",
-      "start_time": null,
-      "end_time": null,
-      "source": "fromthelandfestival.com",
-      "source_url": "https://www.fromthelandfestival.com/category/wisconsin-events/",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "city": "green lake wisconsin",
-      "categories": [],
-      "recurrence": "weekly",
-      "recurrence_days": "Saturday,Sunday",
-      "category_llm": "Arts",
-      "series_end": "2026-10-18",
-      "filter_categories": [
-        "Arts & Theater",
-        "Community"
-      ],
-      "id": "e_5a70f1d2321d",
-      "_distance_mi": 0.0
-    },
-    {
       "title": "DN Western Region Championship",
       "date": "2027-01-03",
       "end_date": null,
@@ -357,6 +282,53 @@
       ],
       "id": "e_c59ee810c911",
       "_distance_mi": 0.3
+    },
+    {
+      "title": "Creation Care 5k (Virtual)",
+      "date": "2026-09-01",
+      "end_date": null,
+      "location": "Ripon, WI",
+      "venue_name": "",
+      "link": "https://www.fleetfeet.com/races/wi/green-lake?srsltid=AfmBOop1r-g_CZrfK4j6tN8ezeadwU36i1e-owfEONcbBhfWIwuVPpHF",
+      "start_time": null,
+      "end_time": null,
+      "source": "fleetfeet.com",
+      "source_url": "https://www.fleetfeet.com/races/wi/green-lake?srsltid=AfmBOop1r-g_CZrfK4j6tN8ezeadwU36i1e-owfEONcbBhfWIwuVPpHF",
+      "lat": 43.8422,
+      "lng": -88.8359,
+      "city": "green lake wisconsin",
+      "categories": [],
+      "category_llm": "Sports",
+      "series_end": "2026-09-30",
+      "is_free": false,
+      "filter_categories": [
+        "Running & Races"
+      ],
+      "id": "e_9d545b328a46",
+      "_distance_mi": 6.1
+    },
+    {
+      "title": "Wisconsin Stern Steering Association (WSSA) Regatta",
+      "date": "2026-12-01",
+      "end_date": null,
+      "location": "Wisconsin",
+      "venue_name": "",
+      "start_time": null,
+      "end_time": null,
+      "link": "https://www.iceboat.org/2026/03/02/regatta-watch-wssa-postponed-to-dec-2026/",
+      "source": "iceboat.org",
+      "source_url": "https://www.iceboat.org/2026/03/02/regatta-watch-wssa-postponed-to-dec-2026/",
+      "lat": 43.9759008,
+      "lng": -88.946786,
+      "city": "",
+      "categories": [],
+      "category_llm": "Sports",
+      "series_end": "2026-12-01",
+      "filter_categories": [
+        "Sports"
+      ],
+      "id": "e_d6da5c47d60d",
+      "_distance_mi": 9.4
     },
     {
       "title": "DN World & NA Championship",
@@ -634,6 +606,26 @@
       ],
       "id": "e_81f577df5f6a",
       "_distance_mi": 6.1
+    },
+    {
+      "title": "AA and Al-Anon Meetings",
+      "date": "2026-08-04",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "link": "https://chamber.visitgreenlake.com/events/details/aa-and-al-anon-meetings-08-04-2026-841293",
+      "source": "chamber.visitgreenlake.com",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/8380029/events/840664/EVENT_PHOTO/AA_and_Al-Anon.png",
+      "location": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
+      "venue_name": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
+      "description": "There are weekly 12-Step Recovery meetings at Town Square Community Center. You are welcome to attend these meetings every Tuesday from 9:00 - 10:00 a.m. and Sundays 6:30 - 7:30 pm. AA: Studio B Al-Anon: MakerSpace (Sunday); Club Room (Tuesday) For more information, call 920-807-0008.",
+      "city": "green lake wisconsin",
+      "filter_categories": [
+        "Community"
+      ],
+      "id": "e_71e7724ae7e3",
+      "_distance_mi": 0.0
     },
     {
       "title": "Summer Market at Town Square",
@@ -922,26 +914,6 @@
         "Community"
       ],
       "id": "e_a90548e5645e",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "AA and Al-Anon Meetings",
-      "date": "2026-08-04",
-      "start_time": "9:00 AM",
-      "end_time": "10:00 AM",
-      "link": "https://chamber.visitgreenlake.com/events/details/aa-and-al-anon-meetings-08-04-2026-841293",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/8380029/events/840664/EVENT_PHOTO/AA_and_Al-Anon.png",
-      "location": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
-      "venue_name": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
-      "description": "There are weekly 12-Step Recovery meetings at Town Square Community Center. You are welcome to attend these meetings every Tuesday from 9:00 - 10:00 a.m. and Sundays 6:30 - 7:30 pm. AA: Studio B Al-Anon: MakerSpace (Sunday); Club Room (Tuesday) For more information, call 920-807-0008.",
-      "city": "green lake wisconsin",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_71e7724ae7e3",
       "_distance_mi": 0.0
     },
     {
@@ -3512,35 +3484,6 @@
       "_distance_mi": 0.3
     },
     {
-      "title": "Live Music \u2013 Tango en Fuego",
-      "date": "2026-12-19",
-      "description": "Always a fan favorite, we\\'re happy to bring Tango en Fuego back to the Lake for our Saturday Live Music lineup! \\n",
-      "location": "green lake wisconsin",
-      "link": "https://nortonsgreenlake.com/event/live-music-tango-en-fuego-2/",
-      "source": "nortonsgreenlake.com",
-      "source_url": "https://nortonsgreenlake.com/events/list/",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "5:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://nortonsgreenlake.com/wp-content/uploads/2026/05/July-18-Tango-en-Fuego-300x169.png",
-      "recurrence": "weekly",
-      "recurrence_days": "Saturday",
-      "end_date": null,
-      "city": "green lake wisconsin",
-      "venue_name": "Norton's of Green Lake",
-      "category_llm": "Music",
-      "series_end": "2026-12-25",
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_826969cb6b25",
-      "_distance_mi": 0.3
-    },
-    {
       "title": "Nathan & The Zydeco Cha Chas",
       "date": "2026-12-18",
       "description": "Season Sponsor - Lake Street Consulting: Bill & Erica TourlasWilliams started his professional music career at 21, just five years after high school, recording singles for his brother\\'s El Sid label. Sid also opened a venue in Lafayette, El-Sid-O\\'s, where Nathan became a staple performer on Friday nights. Williams\\' big break came when Buckwheat Zydeco recommended [\u2026] \\n",
@@ -3568,6 +3511,35 @@
       ],
       "id": "e_0e3b7e7da9c7",
       "_distance_mi": 0.0
+    },
+    {
+      "title": "Live Music \u2013 Tango en Fuego",
+      "date": "2026-12-19",
+      "description": "Always a fan favorite, we\\'re happy to bring Tango en Fuego back to the Lake for our Saturday Live Music lineup! \\n",
+      "location": "green lake wisconsin",
+      "link": "https://nortonsgreenlake.com/event/live-music-tango-en-fuego-2/",
+      "source": "nortonsgreenlake.com",
+      "source_url": "https://nortonsgreenlake.com/events/list/",
+      "lat": 43.8441481,
+      "lng": -88.9601133,
+      "categories": [
+        "Event"
+      ],
+      "start_time": "5:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://nortonsgreenlake.com/wp-content/uploads/2026/05/July-18-Tango-en-Fuego-300x169.png",
+      "recurrence": "weekly",
+      "recurrence_days": "Saturday",
+      "end_date": null,
+      "city": "green lake wisconsin",
+      "venue_name": "Norton's of Green Lake",
+      "category_llm": "Music",
+      "series_end": "2026-12-25",
+      "filter_categories": [
+        "Music"
+      ],
+      "id": "e_826969cb6b25",
+      "_distance_mi": 0.3
     },
     {
       "title": "Fine Art Show",

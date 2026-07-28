@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-27",
+  "generated_at": "2026-07-28",
   "cities": {
     "all": {
-      "events": 3731,
+      "events": 3580,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 2,
+          "count": 3,
           "examples": [
             {
               "title": "Beat the Heat! / \u00a1Vence al calor!",
@@ -23,6 +23,13 @@
               "only_date": "2026-07-29",
               "why": "recurrence-field",
               "source": "Visit Park City (sitemap)"
+            },
+            {
+              "title": "Musical Adventures at Teton Village Commons",
+              "venue": "teton village commons",
+              "only_date": "2026-08-03",
+              "why": "recurrence-field",
+              "source": "Jackson Hole Chamber of Commerce"
             }
           ]
         },
@@ -78,13 +85,13 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 6,
+          "count": 8,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 106,
-              "lost": 934
+              "now": 100,
+              "lost": 940
             },
             {
               "source": "Siebkens Resort",
@@ -101,21 +108,21 @@
             {
               "source": "The Cloudveil",
               "was": 160,
-              "now": 74,
-              "lost": 86
+              "now": 73,
+              "lost": 87
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 36,
-              "lost": 80
+              "now": 35,
+              "lost": 81
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 170,
+      "events": 168,
       "findings": [
         {
           "code": "C5",
@@ -150,7 +157,7 @@
       ]
     },
     "greenlake": {
-      "events": 146,
+      "events": 145,
       "findings": [
         {
           "code": "C5",
@@ -171,7 +178,7 @@
       ]
     },
     "heber": {
-      "events": 504,
+      "events": 496,
       "findings": [
         {
           "code": "C5",
@@ -230,16 +237,31 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 102,
-              "lost": 931
+              "now": 97,
+              "lost": 936
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1220,
+      "events": 1167,
       "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 1,
+          "examples": [
+            {
+              "title": "Musical Adventures at Teton Village Commons",
+              "venue": "teton village commons",
+              "only_date": "2026-08-03",
+              "why": "recurrence-field",
+              "source": "Jackson Hole Chamber of Commerce"
+            }
+          ]
+        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -276,24 +298,30 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 2,
+          "count": 3,
           "examples": [
             {
               "source": "The Cloudveil",
               "was": 160,
-              "now": 74,
-              "lost": 86
+              "now": 73,
+              "lost": 87
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 36,
-              "lost": 80
+              "now": 35,
+              "lost": 81
+            },
+            {
+              "source": "Grand Teton Music Festival",
+              "was": 77,
+              "now": 35,
+              "lost": 42
             }
           ]
         }
       ]
     }
   },
-  "high_total": 12
+  "high_total": 17
 }
