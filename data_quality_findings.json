@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-28",
+  "generated_at": "2026-07-29",
   "cities": {
     "all": {
-      "events": 3580,
+      "events": 3594,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 3,
+          "count": 4,
           "examples": [
             {
               "title": "Beat the Heat! / \u00a1Vence al calor!",
@@ -16,6 +16,13 @@
               "only_date": "2026-08-03",
               "why": "recurrence-field",
               "source": "Visit Park City (sitemap)"
+            },
+            {
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-08-01",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
             },
             {
               "title": "Learn Spanish at the Library!",
@@ -48,22 +55,6 @@
               "sim": 0.85
             },
             {
-              "date": "2026-08-02",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City (sitemap)",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-02",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
               "date": "2026-08-07",
               "title_a": "57th Kimball Arts Festival - August 7-9, 2026",
               "src_a": "KPCW Community Calendar",
@@ -77,6 +68,22 @@
               "src_a": "Visit Park City",
               "title_b": "Country Weekend - Lonestar",
               "src_b": "Park City Institute",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-08",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-15",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
               "sim": 0.85
             }
           ]
@@ -106,23 +113,23 @@
               "lost": 148
             },
             {
-              "source": "The Cloudveil",
-              "was": 160,
-              "now": 73,
-              "lost": 87
-            },
-            {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 35,
-              "lost": 81
+              "now": 33,
+              "lost": 83
+            },
+            {
+              "source": "Grand Teton Music Festival",
+              "was": 77,
+              "now": 34,
+              "lost": 43
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 168,
+      "events": 182,
       "findings": [
         {
           "code": "C5",
@@ -157,7 +164,7 @@
       ]
     },
     "greenlake": {
-      "events": 145,
+      "events": 144,
       "findings": [
         {
           "code": "C5",
@@ -178,8 +185,23 @@
       ]
     },
     "heber": {
-      "events": 496,
+      "events": 495,
       "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 1,
+          "examples": [
+            {
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-08-01",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            }
+          ]
+        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -237,15 +259,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 97,
-              "lost": 936
+              "now": 96,
+              "lost": 937
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1167,
+      "events": 1173,
       "findings": [
         {
           "code": "C1",
@@ -298,30 +320,24 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 3,
+          "count": 2,
           "examples": [
-            {
-              "source": "The Cloudveil",
-              "was": 160,
-              "now": 73,
-              "lost": 87
-            },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 35,
-              "lost": 81
+              "now": 33,
+              "lost": 83
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 35,
-              "lost": 42
+              "now": 34,
+              "lost": 43
             }
           ]
         }
       ]
     }
   },
-  "high_total": 17
+  "high_total": 18
 }

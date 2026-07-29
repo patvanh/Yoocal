@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-07-28T12:05:56.906464",
+  "generated_at": "2026-07-29T12:22:04.064399",
   "attempted": 1,
-  "applied": 0,
+  "applied": 1,
   "log": [
     {
       "city": "jackson",
-      "title": "Wellness Foot Health",
+      "title": "O.A.R. + Gavin Degraw + Lisa Loeb at Snow King",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/wellness-foot-health/3533/",
+      "link": "https://thecloudveil.com/event/king-concerts-2023/2026-08-22",
       "resolution": {
-        "confidence": "low",
-        "new_title": "",
-        "reasoning": "The source page text only shows 'Wellness Foot Health' as the title with no additional context or complete title information available."
+        "confidence": "high",
+        "new_title": "O.A.R. + Gavin Degraw + Lisa Loeb at Snow King",
+        "reasoning": "The source page text explicitly lists 'August 22: O.A.R. + Gavin Degraw + Lisa Loeb' in the lineup, which matches the current title and confirms it is complete, not truncated."
       },
-      "applied": false,
-      "note": "confidence=low, not applying"
+      "applied": true,
+      "note": "title: 'O.A.R. + Gavin Degraw + Lisa Loeb at Snow King' \u2192 'O.A.R. + Gavin Degraw + Lisa Loeb at Snow King'"
     }
   ]
 }
