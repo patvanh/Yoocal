@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-29",
+  "generated_at": "2026-07-30",
   "cities": {
     "all": {
-      "events": 3594,
+      "events": 3639,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 4,
+          "count": 3,
           "examples": [
             {
               "title": "Beat the Heat! / \u00a1Vence al calor!",
@@ -25,13 +25,6 @@
               "source": "Heber Valley Tourism"
             },
             {
-              "title": "Learn Spanish at the Library!",
-              "venue": "park city library",
-              "only_date": "2026-07-29",
-              "why": "recurrence-field",
-              "source": "Visit Park City (sitemap)"
-            },
-            {
               "title": "Musical Adventures at Teton Village Commons",
               "venue": "teton village commons",
               "only_date": "2026-08-03",
@@ -44,14 +37,22 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 20,
+          "count": 19,
           "examples": [
             {
-              "date": "2026-07-29",
-              "title_a": "Challenge Accepted!",
-              "src_a": "Visit Park City",
-              "title_b": "Challenge Accepted with Live Like Sam | Teen Meet-up! | Rescue Horses",
-              "src_b": "TownLift",
+              "date": "2026-08-02",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-02",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
               "sim": 0.85
             },
             {
@@ -77,14 +78,6 @@
               "title_b": "Saturday Sunset Music Series",
               "src_b": "Heber Valley Tourism",
               "sim": 0.85
-            },
-            {
-              "date": "2026-08-15",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
             }
           ]
         },
@@ -97,14 +90,14 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 100,
-              "lost": 940
+              "now": 113,
+              "lost": 927
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 14,
-              "lost": 262
+              "now": 13,
+              "lost": 263
             },
             {
               "source": "Mountain Town Music",
@@ -121,15 +114,15 @@
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 34,
-              "lost": 43
+              "now": 32,
+              "lost": 45
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 182,
+      "events": 179,
       "findings": [
         {
           "code": "C5",
@@ -156,15 +149,15 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 14,
-              "lost": 262
+              "now": 13,
+              "lost": 263
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 144,
+      "events": 139,
       "findings": [
         {
           "code": "C5",
@@ -185,7 +178,7 @@
       ]
     },
     "heber": {
-      "events": 495,
+      "events": 502,
       "findings": [
         {
           "code": "C1",
@@ -259,15 +252,15 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 96,
-              "lost": 937
+              "now": 109,
+              "lost": 924
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1173,
+      "events": 1164,
       "findings": [
         {
           "code": "C1",
@@ -331,13 +324,13 @@
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 34,
-              "lost": 43
+              "now": 32,
+              "lost": 45
             }
           ]
         }
       ]
     }
   },
-  "high_total": 18
+  "high_total": 17
 }

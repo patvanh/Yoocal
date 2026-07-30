@@ -1,20 +1,12 @@
 {
-  "generated_at": "2026-07-29T12:22:04.064399",
+  "generated_at": "2026-07-30T11:59:38.579412",
   "attempted": 1,
-  "applied": 1,
+  "applied": 0,
   "log": [
     {
       "city": "jackson",
-      "title": "O.A.R. + Gavin Degraw + Lisa Loeb at Snow King",
       "type": "title_truncated",
-      "link": "https://thecloudveil.com/event/king-concerts-2023/2026-08-22",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "O.A.R. + Gavin Degraw + Lisa Loeb at Snow King",
-        "reasoning": "The source page text explicitly lists 'August 22: O.A.R. + Gavin Degraw + Lisa Loeb' in the lineup, which matches the current title and confirms it is complete, not truncated."
-      },
-      "applied": true,
-      "note": "title: 'O.A.R. + Gavin Degraw + Lisa Loeb at Snow King' \u2192 'O.A.R. + Gavin Degraw + Lisa Loeb at Snow King'"
+      "skipped": "no event_index"
     }
   ]
 }
