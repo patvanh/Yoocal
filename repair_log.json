@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-30T11:59:38.237778",
-  "audit_date": "2026-07-30",
+  "generated_at": "2026-07-31T12:18:06.575282",
+  "audit_date": "2026-07-31",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1392,
+      "before_count": 1372,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -28,15 +28,11 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 3,
           "examples": [
             {
-              "title": "Old Town walking tour",
-              "had_span": 16
-            },
-            {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 28
+              "had_span": 27
             },
             {
               "title": "Fascia Rolling Class",
@@ -122,39 +118,8 @@
           ]
         },
         "classification": {
-          "fixed": 302,
+          "fixed": 293,
           "examples": [
-            {
-              "title": "Old Town walking tour",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Summer Garden Camps",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Junction Jam: Lunch Break Live",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Food & Drink"
-              ]
-            },
             {
               "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
               "before": [
@@ -165,16 +130,56 @@
                 "Kids",
                 "Education"
               ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Cruisin' + Burgers",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Family"
+              ]
             }
           ]
         }
       },
-      "after_count": 1393,
-      "total_fixes": 320
+      "after_count": 1373,
+      "total_fixes": 310
     },
     {
       "city": "elkhart-lake",
-      "before_count": 179,
+      "before_count": 172,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -207,26 +212,22 @@
           "examples": []
         }
       },
-      "after_count": 181,
+      "after_count": 174,
       "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 178,
+      "before_count": 186,
       "passes": {
         "past_dates": {
           "fixed": 56,
           "examples": [
             {
+              "title": "Midway Art Gallery Open House",
+              "date": "2026-06-19"
+            },
+            {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
-              "date": "2026-06-15"
-            },
-            {
-              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
-              "date": "2026-06-18"
-            },
-            {
-              "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
@@ -234,8 +235,12 @@
               "date": "2026-07-27"
             },
             {
-              "title": "Midway Art Gallery Open House",
+              "title": "Ritual Chocolate Public Tour and Mini Tasting",
               "date": "2026-06-19"
+            },
+            {
+              "title": "Meet the Cows - Dairy Farm Tour",
+              "date": "2026-06-15"
             }
           ]
         },
@@ -248,7 +253,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 179
+              "had_span": 180
             }
           ]
         },
@@ -306,12 +311,12 @@
           "examples": []
         }
       },
-      "after_count": 124,
+      "after_count": 132,
       "total_fixes": 64
     },
     {
       "city": "jackson",
-      "before_count": 467,
+      "before_count": 460,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -322,16 +327,16 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 65
+              "had_span": 64
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 52
+              "had_span": 51
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 5,
+          "fixed": 4,
           "examples": [
             {
               "title": "PCJH Community Rummage Sale",
@@ -349,15 +354,6 @@
                 "2026-08-12",
                 "2026-08-13",
                 "2026-08-14"
-              ]
-            },
-            {
-              "title": "Bhakti Bliss Weekend Immersion with Ananda Das",
-              "original_span": "2026-08-14 to 2026-08-16",
-              "split_into": [
-                "2026-08-14",
-                "2026-08-15",
-                "2026-08-16"
               ]
             },
             {
@@ -433,8 +429,8 @@
           "examples": []
         }
       },
-      "after_count": 490,
-      "total_fixes": 14
+      "after_count": 481,
+      "total_fixes": 13
     }
   ]
 }

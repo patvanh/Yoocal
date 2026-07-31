@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-30",
+  "generated_at": "2026-07-31",
   "cities": {
     "all": {
-      "events": 3639,
+      "events": 3623,
       "findings": [
         {
           "code": "C1",
@@ -40,22 +40,6 @@
           "count": 19,
           "examples": [
             {
-              "date": "2026-08-02",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City (sitemap)",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-02",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
               "date": "2026-08-07",
               "title_a": "57th Kimball Arts Festival - August 7-9, 2026",
               "src_a": "KPCW Community Calendar",
@@ -78,6 +62,22 @@
               "title_b": "Saturday Sunset Music Series",
               "src_b": "Heber Valley Tourism",
               "sim": 0.85
+            },
+            {
+              "date": "2026-08-15",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-22",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
             }
           ]
         },
@@ -90,39 +90,39 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 113,
-              "lost": 927
+              "now": 181,
+              "lost": 859
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 13,
-              "lost": 263
+              "now": 12,
+              "lost": 264
             },
             {
               "source": "Mountain Town Music",
               "was": 200,
-              "now": 52,
-              "lost": 148
+              "now": 47,
+              "lost": 153
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 33,
-              "lost": 83
+              "now": 32,
+              "lost": 84
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 32,
-              "lost": 45
+              "now": 29,
+              "lost": 48
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 179,
+      "events": 173,
       "findings": [
         {
           "code": "C5",
@@ -149,15 +149,15 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 13,
-              "lost": 263
+              "now": 12,
+              "lost": 264
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 139,
+      "events": 138,
       "findings": [
         {
           "code": "C5",
@@ -178,7 +178,7 @@
       ]
     },
     "heber": {
-      "events": 502,
+      "events": 560,
       "findings": [
         {
           "code": "C1",
@@ -247,20 +247,26 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 1,
+          "count": 2,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 109,
-              "lost": 924
+              "now": 177,
+              "lost": 856
+            },
+            {
+              "source": "TownLift",
+              "was": 39,
+              "now": 18,
+              "lost": 21
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1164,
+      "events": 1145,
       "findings": [
         {
           "code": "C1",
@@ -318,19 +324,19 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 33,
-              "lost": 83
+              "now": 32,
+              "lost": 84
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 32,
-              "lost": 45
+              "now": 29,
+              "lost": 48
             }
           ]
         }
       ]
     }
   },
-  "high_total": 17
+  "high_total": 18
 }
