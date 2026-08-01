@@ -1,20 +1,12 @@
 {
-  "generated_at": "2026-07-31T12:18:09.878077",
+  "generated_at": "2026-08-01T11:25:16.474403",
   "attempted": 1,
-  "applied": 1,
+  "applied": 0,
   "log": [
     {
       "city": "jackson",
-      "title": "Western Scholars: The Western End to the American ",
       "type": "title_truncated",
-      "link": "https://www.jacksonholechamber.com/event/western-scholars%3a-the-western-end-to-the-american-revolution/3717/",
-      "resolution": {
-        "confidence": "high",
-        "new_title": "Western Scholars: The Western End to the American Revolution",
-        "reasoning": "The source page text shows this exact title with no additional text or continuation, indicating this is the complete title and not truncated."
-      },
-      "applied": true,
-      "note": "title: 'Western Scholars: The Western End to the American Revolution' \u2192 'Western Scholars: The Western End to the American Revolution'"
+      "skipped": "no event_index"
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-31T12:18:06.575282",
-  "audit_date": "2026-07-31",
+  "generated_at": "2026-08-01T11:25:16.156453",
+  "audit_date": "2026-08-01",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1372,
+      "before_count": 1350,
       "passes": {
         "past_dates": {
           "fixed": 4,
@@ -32,7 +32,7 @@
           "examples": [
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 27
+              "had_span": 26
             },
             {
               "title": "Fascia Rolling Class",
@@ -118,17 +118,24 @@
           ]
         },
         "classification": {
-          "fixed": 293,
+          "fixed": 290,
           "examples": [
             {
-              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
+              "title": "Coffee & Calm: Designer Chats",
+              "before": [],
+              "after": [
+                "Wellness",
+                "Education"
+              ]
+            },
+            {
+              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Kids",
-                "Education"
+                "Food & Drink"
               ]
             },
             {
@@ -159,27 +166,17 @@
               "after": [
                 "Community",
                 "Education"
-              ]
-            },
-            {
-              "title": "Cruisin' + Burgers",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Family"
               ]
             }
           ]
         }
       },
-      "after_count": 1373,
-      "total_fixes": 310
+      "after_count": 1351,
+      "total_fixes": 307
     },
     {
       "city": "elkhart-lake",
-      "before_count": 172,
+      "before_count": 167,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -212,48 +209,44 @@
           "examples": []
         }
       },
-      "after_count": 174,
+      "after_count": 169,
       "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 186,
+      "before_count": 90,
       "passes": {
         "past_dates": {
-          "fixed": 56,
+          "fixed": 13,
           "examples": [
             {
-              "title": "Midway Art Gallery Open House",
-              "date": "2026-06-19"
+              "title": "Oakley PRCA Rodeo",
+              "date": "2026-07-01"
             },
             {
-              "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
-              "date": "2026-06-15"
+              "title": "Oakley PRCA Rodeo",
+              "date": "2026-07-02"
             },
             {
-              "title": "Wasatch County Fair Days",
-              "date": "2026-07-27"
+              "title": "Oakley PRCA Rodeo",
+              "date": "2026-07-03"
             },
             {
-              "title": "Ritual Chocolate Public Tour and Mini Tasting",
-              "date": "2026-06-19"
+              "title": "Oakley PRCA Rodeo",
+              "date": "2026-07-04"
             },
             {
-              "title": "Meet the Cows - Dairy Farm Tour",
-              "date": "2026-06-15"
+              "title": "Xtreme Bulls \u2014 Presented by Grade Tech",
+              "date": "2026-07-06"
             }
           ]
         },
         "absurd_spans": {
-          "fixed": 2,
+          "fixed": 1,
           "examples": [
             {
-              "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
-              "had_span": 103
-            },
-            {
               "title": "Saturday Sunset Music Series",
-              "had_span": 180
+              "had_span": 181
             }
           ]
         },
@@ -272,20 +265,8 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 5,
+          "fixed": 3,
           "examples": [
-            {
-              "title": "Heber Valley Chamber Golf Tournament",
-              "start_time": "8:00 AM",
-              "new_end_time": "9:00 AM",
-              "duration_hours": 1
-            },
-            {
-              "title": "Mountain Valley Stampede Rodeo",
-              "start_time": "7:30 PM",
-              "new_end_time": "9:30 PM",
-              "duration_hours": 2
-            },
             {
               "title": "Mountain Valley Stampede Rodeo",
               "start_time": "7:30 PM",
@@ -311,12 +292,12 @@
           "examples": []
         }
       },
-      "after_count": 132,
-      "total_fixes": 64
+      "after_count": 79,
+      "total_fixes": 18
     },
     {
       "city": "jackson",
-      "before_count": 460,
+      "before_count": 445,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -327,11 +308,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 64
+              "had_span": 63
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 51
+              "had_span": 50
             }
           ]
         },
@@ -429,7 +410,7 @@
           "examples": []
         }
       },
-      "after_count": 481,
+      "after_count": 466,
       "total_fixes": 13
     }
   ]

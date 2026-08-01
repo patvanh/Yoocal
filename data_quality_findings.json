@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-07-31",
+  "generated_at": "2026-08-01",
   "cities": {
     "all": {
-      "events": 3623,
+      "events": 3499,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 3,
+          "count": 4,
           "examples": [
             {
               "title": "Beat the Heat! / \u00a1Vence al calor!",
@@ -23,6 +23,13 @@
               "only_date": "2026-08-01",
               "why": "recurrence-field",
               "source": "Heber Valley Tourism"
+            },
+            {
+              "title": "Hops on the Hill",
+              "venue": "glitretind restaurant at stein eriksen lodge",
+              "only_date": "2026-08-11",
+              "why": "recurrence-field",
+              "source": "Visit Park City"
             },
             {
               "title": "Musical Adventures at Teton Village Commons",
@@ -85,44 +92,44 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 8,
+          "count": 9,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 181,
-              "lost": 859
+              "now": 221,
+              "lost": 819
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 12,
-              "lost": 264
+              "now": 11,
+              "lost": 265
             },
             {
               "source": "Mountain Town Music",
               "was": 200,
-              "now": 47,
-              "lost": 153
+              "now": 46,
+              "lost": 154
             },
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 32,
-              "lost": 84
+              "now": 31,
+              "lost": 85
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 29,
-              "lost": 48
+              "now": 26,
+              "lost": 51
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 173,
+      "events": 168,
       "findings": [
         {
           "code": "C5",
@@ -149,15 +156,15 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 12,
-              "lost": 264
+              "now": 11,
+              "lost": 265
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 138,
+      "events": 135,
       "findings": [
         {
           "code": "C5",
@@ -178,7 +185,7 @@
       ]
     },
     "heber": {
-      "events": 560,
+      "events": 550,
       "findings": [
         {
           "code": "C1",
@@ -252,21 +259,21 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 177,
-              "lost": 856
+              "now": 217,
+              "lost": 816
             },
             {
               "source": "TownLift",
               "was": 39,
-              "now": 18,
-              "lost": 21
+              "now": 17,
+              "lost": 22
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1145,
+      "events": 1129,
       "findings": [
         {
           "code": "C1",
@@ -324,19 +331,19 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 32,
-              "lost": 84
+              "now": 31,
+              "lost": 85
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 29,
-              "lost": 48
+              "now": 26,
+              "lost": 51
             }
           ]
         }
       ]
     }
   },
-  "high_total": 18
+  "high_total": 20
 }
