@@ -1,29 +1,15 @@
 {
-  "generated_at": "2026-08-01",
+  "generated_at": "2026-08-02",
   "cities": {
     "all": {
-      "events": 3499,
+      "events": 3445,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 4,
+          "count": 2,
           "examples": [
-            {
-              "title": "Beat the Heat! / \u00a1Vence al calor!",
-              "venue": "park city library",
-              "only_date": "2026-08-03",
-              "why": "recurrence-field",
-              "source": "Visit Park City (sitemap)"
-            },
-            {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-08-01",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
-            },
             {
               "title": "Hops on the Hill",
               "venue": "glitretind restaurant at stein eriksen lodge",
@@ -44,8 +30,24 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 19,
+          "count": 18,
           "examples": [
+            {
+              "date": "2026-08-02",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-02",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
             {
               "date": "2026-08-07",
               "title_a": "57th Kimball Arts Festival - August 7-9, 2026",
@@ -63,23 +65,7 @@
               "sim": 0.85
             },
             {
-              "date": "2026-08-08",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
-            {
               "date": "2026-08-15",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-22",
               "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
               "title_b": "Saturday Sunset Music Series",
@@ -92,19 +78,19 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 9,
+          "count": 10,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 221,
-              "lost": 819
+              "now": 173,
+              "lost": 867
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 11,
-              "lost": 265
+              "now": 10,
+              "lost": 266
             },
             {
               "source": "Mountain Town Music",
@@ -115,21 +101,21 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 31,
-              "lost": 85
+              "now": 29,
+              "lost": 87
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 26,
-              "lost": 51
+              "now": 24,
+              "lost": 53
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 168,
+      "events": 160,
       "findings": [
         {
           "code": "C5",
@@ -156,15 +142,15 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 11,
-              "lost": 265
+              "now": 10,
+              "lost": 266
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 135,
+      "events": 129,
       "findings": [
         {
           "code": "C5",
@@ -185,37 +171,14 @@
       ]
     },
     "heber": {
-      "events": 550,
+      "events": 532,
       "findings": [
-        {
-          "code": "C1",
-          "name": "RECURRING-DROPPED",
-          "severity": "HIGH",
-          "count": 1,
-          "examples": [
-            {
-              "title": "Guided Hike + Forest Bathing",
-              "venue": "grand hyatt deer valley",
-              "only_date": "2026-08-01",
-              "why": "recurrence-field",
-              "source": "Heber Valley Tourism"
-            }
-          ]
-        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 7,
+          "count": 6,
           "examples": [
-            {
-              "date": "2026-08-08",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
             {
               "date": "2026-08-15",
               "title_a": "Heber's Saturday Sunset Music Series",
@@ -247,6 +210,14 @@
               "title_b": "Saturday Sunset Music Series",
               "src_b": "Heber Valley Tourism",
               "sim": 0.85
+            },
+            {
+              "date": "2026-09-12",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
             }
           ]
         },
@@ -254,26 +225,32 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 2,
+          "count": 3,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 217,
-              "lost": 816
+              "now": 169,
+              "lost": 864
+            },
+            {
+              "source": "Wasatch County Parks & Rec",
+              "was": 47,
+              "now": 21,
+              "lost": 26
             },
             {
               "source": "TownLift",
               "was": 39,
-              "now": 17,
-              "lost": 22
+              "now": 16,
+              "lost": 23
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1129,
+      "events": 1110,
       "findings": [
         {
           "code": "C1",
@@ -331,19 +308,19 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 31,
-              "lost": 85
+              "now": 29,
+              "lost": 87
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 26,
-              "lost": 51
+              "now": 24,
+              "lost": 53
             }
           ]
         }
       ]
     }
   },
-  "high_total": 20
+  "high_total": 19
 }

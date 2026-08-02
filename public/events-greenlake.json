@@ -6,9 +6,9 @@
     "lng": -88.9576
   },
   "radius_mi": 25,
-  "generated_at": "2026-08-01T05:26:58.388762-06:00",
-  "today": "2026-08-01",
-  "event_count": 135,
+  "generated_at": "2026-08-02T05:32:35.092766-06:00",
+  "today": "2026-08-02",
+  "event_count": 129,
   "events": [
     {
       "title": "Avrom Farm Party 2026",
@@ -217,6 +217,29 @@
       "_distance_mi": 0.0
     },
     {
+      "title": "DN Western Region Championship",
+      "date": "2027-01-02",
+      "end_date": null,
+      "location": "green lake wisconsin",
+      "venue_name": "",
+      "link": "https://www.iceboat.org/2026/01/25/isa-regatta-on-for-green-lake-wi-starting-january-29th/",
+      "start_time": null,
+      "end_time": null,
+      "source": "iceboat.org",
+      "source_url": "https://www.iceboat.org/2026/01/25/isa-regatta-on-for-green-lake-wi-starting-january-29th/",
+      "lat": 43.8441481,
+      "lng": -88.9601133,
+      "city": "green lake wisconsin",
+      "categories": [],
+      "category_llm": "Sports",
+      "series_end": "2027-01-03",
+      "filter_categories": [
+        "Sports"
+      ],
+      "id": "e_b68952cdd897",
+      "_distance_mi": 0.3
+    },
+    {
       "title": "Avrom Farm Party 2026",
       "date": "2026-08-23",
       "end_date": null,
@@ -286,29 +309,6 @@
         "Sports"
       ],
       "id": "e_c59ee810c911",
-      "_distance_mi": 0.3
-    },
-    {
-      "title": "DN Western Region Championship",
-      "date": "2027-01-02",
-      "end_date": null,
-      "location": "green lake wisconsin",
-      "venue_name": "",
-      "link": "https://www.iceboat.org/2026/01/25/isa-regatta-on-for-green-lake-wi-starting-january-29th/",
-      "start_time": null,
-      "end_time": null,
-      "source": "iceboat.org",
-      "source_url": "https://www.iceboat.org/2026/01/25/isa-regatta-on-for-green-lake-wi-starting-january-29th/",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "city": "green lake wisconsin",
-      "categories": [],
-      "category_llm": "Sports",
-      "series_end": "2027-01-03",
-      "filter_categories": [
-        "Sports"
-      ],
-      "id": "e_b68952cdd897",
       "_distance_mi": 0.3
     },
     {
@@ -451,178 +451,69 @@
       "_distance_mi": 0.3
     },
     {
-      "title": "Live Music \u2013 Jim N Nancy",
-      "date": "2026-08-01",
-      "start_time": "4:00 PM",
-      "end_time": "7:00 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/live-music-at-norton-s-jim-n-nancy-842018",
+      "title": "Sunday Sessions Vol. 7 at Horseradish Kitchen + Market 2026",
+      "date": "2026-08-02",
+      "start_time": "6:00 PM",
+      "end_time": "9:00 PM",
+      "link": "https://chamber.visitgreenlake.com/events/details/sunday-sessions-vol-7-at-horseradish-kitchen-market-2026-08-02-2026-842090",
       "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
-      "location": "Norton's of Green Lake\r\n380 S Lawson Dr, Green Lake, WI 54941",
-      "venue_name": "Norton's of Green Lake\r\n380 S Lawson Dr, Green Lake, WI 54941",
-      "description": "Another weekend of fun at Norton's - join us for Memories Made Fresh at our Dock Bar with Jim N Nancy bringing the funk and fun to Big Green!",
+      "lat": 43.8497,
+      "lng": -89.129,
+      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/10855162/events/842084/EVENT_PHOTO/IMG_3175.jpg",
+      "location": "Horseradish Kitchen + Market, 505 W Water St, Princeton, WI 54968",
+      "venue_name": "Horseradish Kitchen + Market, 505 W Water St, Princeton, WI 54968",
+      "description": "THE SUNDAY SESSIONS \u2013 VOL. 7 Sunday, June 21 - Sunday, September 6 Doors: 6PM | Show: 7PM \u2013 9PM $10 Cover | No Reservations Live music, riverside vibes, and the best food & drinks in town\u2014The Sunday Sessions are BACK! Join us at Horseradish Kitchen + Market in Princeton, WI, for an unforgettable summer music series.",
       "city": "green lake wisconsin",
-      "categories": [
-        "Event"
-      ],
-      "_all_sources": [
-        "chamber.visitgreenlake.com",
-        "nortonsgreenlake.com"
-      ],
-      "_conflicts": {
-        "venue": [
-          {
-            "value": "Norton's of Green Lake\r\n380 S Lawson Dr, Green Lake, WI 54941",
-            "source": "chamber.visitgreenlake.com"
-          },
-          {
-            "value": "Norton's of Green Lake",
-            "source": "nortonsgreenlake.com"
-          }
-        ]
-      },
+      "is_free": false,
       "filter_categories": [
         "Music"
       ],
-      "id": "e_ef0a6ac19ced",
-      "_distance_mi": 0.0
+      "id": "e_bc169fcfdc84",
+      "_distance_mi": 8.6
     },
     {
-      "title": "The Lake Ball",
-      "date": "2026-08-01",
-      "start_time": "5:30 PM",
-      "end_time": "8:30 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/the-lake-ball-08-01-2026-842059",
+      "title": "AA and Al-Anon Meetings",
+      "date": "2026-08-02",
+      "start_time": "6:30 PM",
+      "end_time": "7:30 PM",
+      "link": "https://chamber.visitgreenlake.com/events/details/aa-and-al-anon-meetings-08-02-2026-841093",
       "source": "chamber.visitgreenlake.com",
       "lat": 43.8408,
       "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/events/3664/842059/EventPhotoFull_2026%20TLB%20banner.jpg",
-      "location": "Heidel House Hotel & Conference Center\r\n653 Illinois Ave, Green Lake, WI 54941",
-      "venue_name": "Heidel House Hotel & Conference Center\r\n653 Illinois Ave, Green Lake, WI 54941",
-      "description": "Join the Green Lake Association for an extraordinary evening of community, connection, and celebration at The Lake Ball, presented by Craig & Katie Culver. This signature gala brings together friends, neighbors, and partners who care deeply about Green Lake for a cocktail hour, elegant dinner, and spirited live auction\u2014all in support of the lake we love and the work ahead. Seating is limited, so please reserve your seats online today at https://www.greenlakeassociation.org/lakeball2026. When the final paddle is raised, the celebration continues at The After Party at Waves Pub & Grill. Enjoy a complimentary bar, live music, and dancing as we keep the energy going well into the night. Tickets for The After Party are included for Lake Ball guests, or are available separately for $25 for those who\u2019d like to join the festivities after the gala.",
+      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/8380029/events/841063/EVENT_PHOTO/AA_and_Al-Anon.png",
+      "location": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
+      "venue_name": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
+      "description": "There are weekly 12-Step Recovery meetings at Town Square Community Center. You are welcome to attend these meetings every Tuesday from 9:00 - 10:00 a.m. and Sundays 6:30 - 7:30 pm. AA: Studio B Al-Anon: MakerSpace (Sunday); Club Room (Tuesday) For more information, call 920-807-0008.",
       "city": "green lake wisconsin",
-      "_all_sources": [
-        "chamber.visitgreenlake.com",
-        "greenlakeassociation.org"
-      ],
-      "is_free": false,
       "filter_categories": [
-        "Food & Drink",
-        "Music",
-        "Outdoors"
+        "Community"
       ],
-      "id": "e_3696b05db862",
+      "id": "e_a90548e5645e",
       "_distance_mi": 0.0
     },
     {
-      "title": "Shining Light Choral Program",
-      "date": "2026-08-01",
-      "start_time": "7:30 PM",
-      "end_time": "8:30 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/shining-light-choral-program-841760",
+      "title": "Yoga in the Vineyard w/Lotus Root Yoga",
+      "date": "2026-08-06",
+      "start_time": "5:30 PM",
+      "end_time": "6:30 PM",
+      "link": "https://chamber.visitgreenlake.com/events/details/yoga-in-the-vineyard-w-lotus-root-yoga-08-06-2026-842111",
       "source": "chamber.visitgreenlake.com",
       "lat": 43.8422,
       "lng": -88.8359,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/8380137/events/841760/EVENT_PHOTO/GLFM_Logo_2026_.png",
-      "location": "First Congregational Church of Ripon\r\n220 Ransom St.\r\nRipon, WI 54971\u00a0",
-      "venue_name": "First Congregational Church of Ripon\r\n220 Ransom St.\r\nRipon, WI 54971",
-      "description": "Choral music has long been a highlight of the Green Lake Festival of Music. Two choral-orchestral works centered on the theme of Light ground this year\u2019s free program\u2014Morten Lauridsen\u2019s lush Lux Aeterna and Elaine Hagenberg\u2019s inspirational Illuminare . Shawn Kirchner\u2019s thought-provoking America the Beautiful will also be performed in honor of the United States\u2019 semi quincentennial. Join us at 7:00 p.m. for a pre-concert talk before emerging yourself in this spectacular free performance. https://greenlakefestival.org/event/choral-program-concert-2026/",
+      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
+      "location": "Vines & Rushes Winery\r\n410 County Road E\r\nRipon, WI 54971",
+      "venue_name": "Vines & Rushes Winery\r\n410 County Road E\r\nRipon, WI 54971",
+      "description": "Join us for Yoga in the Vineyard! Our popular weekly yoga class, with Lotus Root Yoga, held outdoors among the grapevines is coming back this summer! This gentle Vinyasa flow class is suitable for all levels. Be sure to bring your yoga mat, sunglasses, and plenty of water. The cost is $10 per class (option to register and pay online) Link to register online : https://clients.mindbodyonline.com/classic/ws?studioid=640759&stype=-7&sTG=23&sView=day&sLoc=0&date=06/18/26 Each class is led by a rotating team of instructors. Yoga goes from 5:30pm - 6:30pm. In the case of inclement weather, class will be cancelled. The winery is open until 9PM, with a selection of beverages, snacks, pizza (served until 8PM), and other food options. (outside food and drinks are not permitted) We can't wait to see you at this relaxing outdoor series every Thursday until the end of August!",
       "city": "green lake wisconsin",
+      "is_free": false,
       "filter_categories": [
-        "Community",
         "Education & Talks",
-        "Music"
+        "Food & Drink",
+        "Outdoors",
+        "Wellness"
       ],
-      "id": "e_e82013668930",
+      "id": "e_74a11f280b3e",
       "_distance_mi": 6.1
-    },
-    {
-      "title": "The After Party",
-      "date": "2026-08-01",
-      "start_time": "8:30 PM",
-      "end_time": "11:00 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/the-after-party-08-01-2026-841981",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/events/3664/841981/EventPhotoFull_TheAfterPartyLogo2026_withImageandSponsor%20(1).jpg",
-      "location": "Heidel House Hotel & Conference Center\r\n653 Illinois Ave, Green Lake, WI 54941",
-      "venue_name": "Heidel House Hotel & Conference Center\r\n653 Illinois Ave, Green Lake, WI 54941",
-      "description": "Join the Green Lake Association for a night of music and celebration at Waves Pub & Grill\u2014all in honor of the lake that brings us together. Enjoy live music, a complimentary raffle, an open bar, and late-night snacks and desserts as we gather with friends, neighbors, and partners who care about Green Lake. This festive evening is generously sponsored by Shoreline Boat Center. We can\u2019t wait to celebrate with you on the dance floor! The After Party will immediately follow The Lake Ball and is included in the ticket price for The Lake Ball attendees.",
-      "city": "green lake wisconsin",
-      "_all_sources": [
-        "chamber.visitgreenlake.com",
-        "greenlakeassociation.org"
-      ],
-      "filter_categories": [
-        "Music",
-        "Outdoors"
-      ],
-      "id": "e_4a82d7fb075f",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Live Music \u2013 Tango en Fuego",
-      "date": "2026-08-01",
-      "description": "Always a fan favorite, we\\'re happy to bring Tango en Fuego back to the Lake for our Saturday Live Music lineup! \\n",
-      "location": "green lake wisconsin",
-      "link": "https://nortonsgreenlake.com/event/live-music-tango-en-fuego-2/",
-      "source": "nortonsgreenlake.com",
-      "source_url": "https://nortonsgreenlake.com/events/list/",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "5:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://nortonsgreenlake.com/wp-content/uploads/2026/05/July-18-Tango-en-Fuego-300x169.png",
-      "recurrence": "weekly",
-      "recurrence_days": "Saturday",
-      "end_date": null,
-      "city": "green lake wisconsin",
-      "venue_name": "Norton's of Green Lake",
-      "category_llm": "Music",
-      "series_end": "2026-12-25",
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_cf441c03007d",
-      "_distance_mi": 0.3
-    },
-    {
-      "title": "Live Music \u2013 Mike Stagg",
-      "date": "2026-08-01",
-      "description": "Join us for more Memories Made Fresh at Norton\\'s. We\\'re bringing in live music every Saturday all summer long! Come give a warm welcome to Mike Stagg at his Norton\\'s debut! \\n",
-      "location": "green lake wisconsin",
-      "link": "https://nortonsgreenlake.com/event/live-music-mike-stagg/",
-      "source": "nortonsgreenlake.com",
-      "source_url": "https://nortonsgreenlake.com/events/month/",
-      "lat": 43.8441481,
-      "lng": -88.9601133,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "5:00 PM",
-      "end_time": "8:00 PM",
-      "image_url": "https://nortonsgreenlake.com/wp-content/uploads/2026/06/June-27-Mike-Stagg-300x169.png",
-      "recurrence": "weekly",
-      "recurrence_days": "Saturday",
-      "end_date": null,
-      "city": "green lake wisconsin",
-      "venue_name": "Norton's of Green Lake",
-      "category_llm": "Music",
-      "series_end": "2026-08-29",
-      "_all_sources": [
-        "nortonsgreenlake.com"
-      ],
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_3743ec5b87f7",
-      "_distance_mi": 0.3
     },
     {
       "title": "WINE WALK",
@@ -1487,6 +1378,31 @@
         "Community"
       ],
       "id": "e_0e3b7e7da9c7",
+      "_distance_mi": 0.0
+    },
+    {
+      "title": "Skerryvore \u2013 Friday Standing \u2013 2027",
+      "date": "2027-01-29",
+      "description": "Skerryvore \u2013 Friday Standing \u2013 2027",
+      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
+      "link": "https://www.thrasheroperahouse.com/event/2027-skerryvore-friday-standing/",
+      "source": "thrasheroperahouse.com",
+      "source_url": "https://www.thrasheroperahouse.com/event/2027-skerryvore-friday-standing/#tribe-tickets__tickets-form",
+      "lat": 43.8408,
+      "lng": -88.9576,
+      "categories": [
+        "Event"
+      ],
+      "start_time": "7:30 PM",
+      "end_time": "7:30 PM",
+      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2025/04/skerryvore-toh-1920x1080-1-1024x576.png",
+      "address": "506 Mill Street, Green Lake, WI, 54941",
+      "venue_name": "Thrasher Opera House",
+      "city": "green lake wisconsin",
+      "filter_categories": [
+        "Community"
+      ],
+      "id": "e_4484211edd52",
       "_distance_mi": 0.0
     },
     {
@@ -2957,71 +2873,6 @@
       "_distance_mi": 0.3
     },
     {
-      "title": "Yoga in the Vineyard w/Lotus Root Yoga",
-      "date": "2026-08-06",
-      "start_time": "5:30 PM",
-      "end_time": "6:30 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/yoga-in-the-vineyard-w-lotus-root-yoga-08-06-2026-842111",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8422,
-      "lng": -88.8359,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/chambers/3664/ChamberImages/logo/200x200/GreenLake_The-GoodLifeLogo.png",
-      "location": "Vines & Rushes Winery\r\n410 County Road E\r\nRipon, WI 54971",
-      "venue_name": "Vines & Rushes Winery\r\n410 County Road E\r\nRipon, WI 54971",
-      "description": "Join us for Yoga in the Vineyard! Our popular weekly yoga class, with Lotus Root Yoga, held outdoors among the grapevines is coming back this summer! This gentle Vinyasa flow class is suitable for all levels. Be sure to bring your yoga mat, sunglasses, and plenty of water. The cost is $10 per class (option to register and pay online) Link to register online : https://clients.mindbodyonline.com/classic/ws?studioid=640759&stype=-7&sTG=23&sView=day&sLoc=0&date=06/18/26 Each class is led by a rotating team of instructors. Yoga goes from 5:30pm - 6:30pm. In the case of inclement weather, class will be cancelled. The winery is open until 9PM, with a selection of beverages, snacks, pizza (served until 8PM), and other food options. (outside food and drinks are not permitted) We can't wait to see you at this relaxing outdoor series every Thursday until the end of August!",
-      "city": "green lake wisconsin",
-      "is_free": false,
-      "filter_categories": [
-        "Education & Talks",
-        "Food & Drink",
-        "Outdoors",
-        "Wellness"
-      ],
-      "id": "e_74a11f280b3e",
-      "_distance_mi": 6.1
-    },
-    {
-      "title": "Sunday Sessions Vol. 7 at Horseradish Kitchen + Market 2026",
-      "date": "2026-08-02",
-      "start_time": "6:00 PM",
-      "end_time": "9:00 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/sunday-sessions-vol-7-at-horseradish-kitchen-market-2026-08-02-2026-842090",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8497,
-      "lng": -89.129,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/10855162/events/842084/EVENT_PHOTO/IMG_3175.jpg",
-      "location": "Horseradish Kitchen + Market, 505 W Water St, Princeton, WI 54968",
-      "venue_name": "Horseradish Kitchen + Market, 505 W Water St, Princeton, WI 54968",
-      "description": "THE SUNDAY SESSIONS \u2013 VOL. 7 Sunday, June 21 - Sunday, September 6 Doors: 6PM | Show: 7PM \u2013 9PM $10 Cover | No Reservations Live music, riverside vibes, and the best food & drinks in town\u2014The Sunday Sessions are BACK! Join us at Horseradish Kitchen + Market in Princeton, WI, for an unforgettable summer music series.",
-      "city": "green lake wisconsin",
-      "is_free": false,
-      "filter_categories": [
-        "Music"
-      ],
-      "id": "e_bc169fcfdc84",
-      "_distance_mi": 8.6
-    },
-    {
-      "title": "AA and Al-Anon Meetings",
-      "date": "2026-08-02",
-      "start_time": "6:30 PM",
-      "end_time": "7:30 PM",
-      "link": "https://chamber.visitgreenlake.com/events/details/aa-and-al-anon-meetings-08-02-2026-841093",
-      "source": "chamber.visitgreenlake.com",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "image_url": "https://chambermaster.blob.core.windows.net/images/customers/3664/members/8380029/events/841063/EVENT_PHOTO/AA_and_Al-Anon.png",
-      "location": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
-      "venue_name": "Town Square Community Center\r\n492 Hill Street\r\nGreen Lake, WI",
-      "description": "There are weekly 12-Step Recovery meetings at Town Square Community Center. You are welcome to attend these meetings every Tuesday from 9:00 - 10:00 a.m. and Sundays 6:30 - 7:30 pm. AA: Studio B Al-Anon: MakerSpace (Sunday); Club Room (Tuesday) For more information, call 920-807-0008.",
-      "city": "green lake wisconsin",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_a90548e5645e",
-      "_distance_mi": 0.0
-    },
-    {
       "title": "Fine Art Show",
       "date": "2026-08-09",
       "end_date": null,
@@ -3534,31 +3385,6 @@
         "Community"
       ],
       "id": "e_ffcac08b6413",
-      "_distance_mi": 0.0
-    },
-    {
-      "title": "Skerryvore \u2013 Friday Standing \u2013 2027",
-      "date": "2027-01-29",
-      "description": "Skerryvore \u2013 Friday Standing \u2013 2027",
-      "location": "Thrasher Opera House, 506 Mill Street, Green Lake, WI, 54941",
-      "link": "https://www.thrasheroperahouse.com/event/2027-skerryvore-friday-standing/",
-      "source": "thrasheroperahouse.com",
-      "source_url": "https://www.thrasheroperahouse.com/event/2027-skerryvore-friday-standing/#tribe-tickets__tickets-form",
-      "lat": 43.8408,
-      "lng": -88.9576,
-      "categories": [
-        "Event"
-      ],
-      "start_time": "7:30 PM",
-      "end_time": "7:30 PM",
-      "image_url": "https://www.thrasheroperahouse.com/wp-content/uploads/2025/04/skerryvore-toh-1920x1080-1-1024x576.png",
-      "address": "506 Mill Street, Green Lake, WI, 54941",
-      "venue_name": "Thrasher Opera House",
-      "city": "green lake wisconsin",
-      "filter_categories": [
-        "Community"
-      ],
-      "id": "e_4484211edd52",
       "_distance_mi": 0.0
     }
   ]

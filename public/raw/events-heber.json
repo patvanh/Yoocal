@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-01T11:16:34.586107",
-  "total": 77,
+  "updated_at": "2026-08-02T11:23:13.615125",
+  "total": 156,
   "events": [
     {
       "title": "Vote for the Summer LEGO Build Contest at the Wasatch County Library",
@@ -20,10 +20,10 @@
     },
     {
       "title": "Bird Show at the Wasatch Co. Library",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "description": "Start your week with a stop at the Wasatch County Library and experience the wonder of birds up close! As part of Summer Reading and Monday Summer Fun, enjoy a",
       "location": "Wasatch County Library, 465 East 1200 South, Heber City, UT 84032, USA",
-      "link": "https://tockify.com/kpcwcommunitycalendar/detail/1655/1785614400000",
+      "link": "https://tockify.com/kpcwcommunitycalendar/detail/1655/1785700800000",
       "source": "KPCW Community Calendar",
       "source_url": "https://www.kpcw.org/kpcw-community-calendar",
       "start_time": "2:00 PM",
@@ -71,174 +71,1430 @@
       ]
     },
     {
-      "title": "Heber Thursday Market on Main",
-      "date": "2026-06-04",
-      "description": "Weekly outdoor market with food trucks, artisan booths, and free live concerts at 6:30pm. At Heber City Main Street Park.",
-      "location": "Heber City Main Street Park, 250 S Main St, Heber City, UT 84032",
-      "link": "https://hebermarket.com/heber-market-events/",
+      "title": "Free Yoga on the Lawn @ Heber City Park",
+      "date": "2026-06-21",
+      "description": "Free Yoga on the Lawn @ Heber City Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-yoga-on-the-lawn",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-08-01T11:14:26.975725",
-      "start_time": "5:00 PM",
-      "end_time": "9:00 PM",
-      "end_date": "2026-08-20",
-      "recurrence": "weekly",
-      "recurrence_day": "Thursday",
-      "is_free": true,
+      "lat": 40.50461603100708,
+      "lng": -111.41442575581972,
       "categories": [
-        "Food & Drink",
-        "Outdoor"
-      ]
-    },
-    {
-      "title": "Soulful Sundays Live Music",
-      "date": "2026-06-07",
-      "description": "Free Sunday evening live music at Heber City Main Street Park.",
-      "location": "Heber City Main Street Park, 250 S Main St, Heber City, UT 84032",
-      "link": "https://www.gohebervalley.com/events/",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-08-01T11:14:26.975740",
-      "start_time": "6:00 PM",
-      "end_time": "7:00 PM",
-      "end_date": "2026-08-30",
+        "Wellness"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.480393",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186890.jpg?decache=02-05-34",
+      "date_label": "Sun, Jun - Aug, 9:00 - 10:00 AM",
       "recurrence": "weekly",
       "recurrence_day": "Sunday",
-      "is_free": true,
-      "categories": [
-        "Music"
-      ]
-    },
-    {
-      "title": "Main Stage Live Music \u2014 Heber City",
-      "date": "2026-06-01",
-      "description": "Free Monday evening live music at Heber City Main Street Park.",
-      "location": "Heber City Main Street Park, 250 S Main St, Heber City, UT 84032",
-      "link": "https://www.gohebervalley.com/events/",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5069,
-      "lng": -111.4133,
-      "scraped_at": "2026-08-01T11:14:26.975744",
-      "start_time": "6:30 PM",
-      "end_time": "8:00 PM",
       "end_date": "2026-08-31",
-      "recurrence": "weekly",
-      "recurrence_day": "Monday",
-      "is_free": true,
-      "categories": [
-        "Music"
-      ]
-    },
-    {
-      "title": "Midway Music on the Square",
-      "date": "2026-06-03",
-      "description": "Free Wednesday evening live music at Midway Town Square.",
-      "location": "Midway Town Square, 75 N 100 W, Midway, UT 84049",
-      "link": "https://www.gohebervalley.com/events/",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5127,
-      "lng": -111.4742,
-      "scraped_at": "2026-08-01T11:14:26.975746",
-      "start_time": "6:00 PM",
-      "end_date": "2026-08-26",
-      "recurrence": "weekly",
-      "recurrence_day": "Wednesday",
-      "is_free": true,
-      "categories": [
-        "Music"
-      ]
-    },
-    {
-      "title": "Midway Swiss Days",
-      "date": "2026-09-04",
-      "description": "Utah's second largest festival. Free 10K run at 7am, parade at 10am, live entertainment, food vendors, artisan booths. Free admission.",
-      "location": "151 W Main Street, Midway, UT 84049",
-      "link": "https://www.gohebervalley.com/swiss-days/",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.5127,
-      "lng": -111.4742,
-      "scraped_at": "2026-08-01T11:14:26.975749",
-      "start_time": "8:00 AM",
-      "end_time": "8:00 PM",
-      "end_date": "2026-09-05",
-      "is_free": true,
-      "featured": true,
-      "categories": [
-        "Food & Drink",
-        "Sports",
-        "Family",
-        "Festival"
+      "recurrence_text": "Sun, Jun - Aug, 9:00 - 10:00 AM",
+      "occurrence_dates": [
+        "2026-06-21",
+        "2026-06-28",
+        "2026-07-05",
+        "2026-07-12",
+        "2026-07-19",
+        "2026-07-26",
+        "2026-08-02",
+        "2026-08-09",
+        "2026-08-16",
+        "2026-08-23",
+        "2026-08-30",
+        "2026-09-06"
       ],
       "facets": [
         "Free"
       ]
     },
     {
-      "title": "Wasatch County Fair",
-      "date": "2026-07-28",
-      "description": "Annual county fair with rides, livestock, rodeo, live entertainment, food, and one of the biggest demolition derbies in the western US.",
-      "location": "Wasatch County Fairgrounds, Heber City, UT 84032",
-      "link": "https://www.gohebervalley.com/events/",
+      "title": "Soulful Music Sundays @ Heber City Park",
+      "date": "2026-06-21",
+      "description": "Soulful Music Sundays @ Heber City Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/soulful-sundays-at-heber-city-park",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5040042,
+      "lng": -111.4144794,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.480923",
+      "start_time": "7:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180474.jpg?decache=02-05-34",
+      "date_label": "Sun, Jun - Aug, 7:00 - 8:00 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Sunday",
+      "end_date": "2026-08-31",
+      "recurrence_text": "Sun, Jun - Aug, 7:00 - 8:00 PM",
+      "occurrence_dates": [
+        "2026-06-21",
+        "2026-06-28",
+        "2026-07-05",
+        "2026-07-12",
+        "2026-07-19",
+        "2026-07-26",
+        "2026-08-02",
+        "2026-08-09",
+        "2026-08-16",
+        "2026-08-23"
+      ]
+    },
+    {
+      "title": "Bird Show @ Wasatch County Library",
+      "date": "2026-08-03",
+      "description": "Bird Show @ Wasatch County Library in Heber Valley.",
+      "location": "Wasatch County Library, 465 East 1200 South, Heber City, UT",
+      "link": "https://www.gohebervalley.com/wasatch-county-library-bird-show",
       "source": "Heber Valley Tourism",
       "source_url": "https://www.gohebervalley.com/events/",
       "lat": 40.5069,
       "lng": -111.4133,
-      "scraped_at": "2026-08-01T11:14:26.975751",
-      "start_time": "10:00 AM",
-      "end_date": "2026-08-01",
-      "featured": true,
-      "categories": [
-        "Music",
-        "Food & Drink",
-        "Sports",
-        "Kids",
-        "Family",
-        "Festival",
-        "Community"
-      ]
-    },
-    {
-      "title": "Heber Valley Railroad Excursion",
-      "date": "2026-05-16",
-      "description": "Scenic train rides through Heber Valley on a historic railroad. Multiple excursions available including dinner trains and special events.",
-      "location": "Heber Valley Railroad, 450 S 600 W, Heber City, UT 84032",
-      "link": "https://hebervalleyrailroad.org",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.504,
-      "lng": -111.408,
-      "scraped_at": "2026-08-01T11:14:26.975754",
-      "start_time": "11:00 AM",
-      "end_date": "2026-10-31",
-      "recurrence": "weekly",
-      "recurrence_days": "Saturday,Sunday",
-      "categories": [
-        "Outdoor",
-        "Family"
-      ]
-    },
-    {
-      "title": "Deer Creek State Park \u2014 Open Season",
-      "date": "2026-05-01",
-      "description": "Boating, fishing, swimming, and camping at Deer Creek Reservoir. 20 minutes from Park City via Hwy 189.",
-      "location": "Deer Creek State Park, 4000 UT-189, Midway, UT 84049",
-      "link": "https://stateparks.utah.gov/parks/deer-creek/",
-      "source": "Heber Valley Tourism",
-      "source_url": "https://www.gohebervalley.com/events/",
-      "lat": 40.41,
-      "lng": -111.53,
-      "scraped_at": "2026-08-01T11:14:26.975756",
-      "end_date": "2026-09-30",
       "categories": [
         "Outdoor"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.481221",
+      "start_time": "2:00 PM",
+      "end_time": "3:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189971.jpg?decache=02-05-34",
+      "date_label": "2:00 - 3:00 PM",
+      "venue_name": "Wasatch County Library",
+      "address": "465 East 1200 South, Heber City, UT, 84032"
+    },
+    {
+      "title": "Free Community Self-Reliance Classes",
+      "date": "2026-08-04",
+      "description": "Free Community Self-Reliance Classes in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/self-reliance-classes",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.481910",
+      "start_time": "6:30 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189972.jpg?decache=02-05-34",
+      "date_label": "Dates vary, 6:30 - 8:00 PM",
+      "recurrence_text": "Dates vary, 6:30 - 8:00 PM",
+      "occurrence_dates": [
+        "2026-08-04",
+        "2026-08-12",
+        "2026-08-18",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-09-01",
+        "2026-09-08",
+        "2026-09-15",
+        "2026-09-22",
+        "2026-09-29"
       ]
+    },
+    {
+      "title": "Midway Music on the Square",
+      "date": "2026-06-17",
+      "description": "Midway Music on the Square in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/midway-music-on-the-square",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5133349,
+      "lng": -111.4743764,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.482714",
+      "start_time": "6:30 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3179995.jpg?decache=02-05-34",
+      "date_label": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Wednesday",
+      "end_date": "2026-08-12",
+      "recurrence_text": "Wed, Jun 10 - Aug 12, 6:30 - 8:00 PM",
+      "occurrence_dates": [
+        "2026-06-17",
+        "2026-06-24",
+        "2026-07-01",
+        "2026-07-08",
+        "2026-07-15",
+        "2026-07-22",
+        "2026-07-29",
+        "2026-08-05",
+        "2026-08-12"
+      ]
+    },
+    {
+      "title": "Heber Market on Main",
+      "date": "2026-06-18",
+      "description": "Heber Market on Main in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-market-on-main",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.504355,
+      "lng": -111.413598,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.483057",
+      "start_time": "5:00 PM",
+      "end_time": "9:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728261.jpg?decache=02-05-34",
+      "date_label": "Weekly, Thu nights, Jun 4 - Aug 20",
+      "recurrence": "weekly",
+      "recurrence_day": "Thursday",
+      "end_date": "2026-08-20",
+      "recurrence_text": "Weekly, Thu nights, Jun 4 - Aug 20",
+      "occurrence_dates": [
+        "2026-06-18",
+        "2026-06-25",
+        "2026-07-02",
+        "2026-07-09",
+        "2026-07-16",
+        "2026-07-23",
+        "2026-07-30",
+        "2026-08-06",
+        "2026-08-13",
+        "2026-08-20"
+      ]
+    },
+    {
+      "title": "Taylor Swift Train @ Heber Valley Railroad",
+      "date": "2026-08-07",
+      "description": "Taylor Swift Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley Railroad Depot, 450 South 600 West, Heber City, UT",
+      "link": "https://www.gohebervalley.com/taylor-swift-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022051,
+      "lng": -111.4245238,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.483648",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189985.jpg?decache=02-05-34",
+      "date_label": "7:00 - 8:30 PM",
+      "venue_name": "Heber Valley Railroad Depot",
+      "address": "450 South 600 West, Heber City, UT, 84032"
+    },
+    {
+      "title": "Heber Half Marathon Run For Autism",
+      "date": "2026-08-08",
+      "description": "Heber Half Marathon Run For Autism in Heber Valley.",
+      "location": "Old Mill Elementary School, 1600 East 980th South, Heber City, UT",
+      "link": "https://www.gohebervalley.com/runtastic-heber-half-marathon",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.495481,
+      "lng": -111.39022,
+      "categories": [
+        "Sports"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.483981",
+      "start_time": "6:00 AM",
+      "end_time": "11:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3161632.jpg?decache=02-05-34",
+      "date_label": "6:00 AM - 11:00 AM",
+      "venue_name": "Old Mill Elementary School",
+      "address": "1600 East 980th South, Heber City, UT, 84032"
+    },
+    {
+      "title": "Guided Hike + Forest Bathing @ Grand Hyatt Deer Valley",
+      "date": "2026-06-20",
+      "description": "Guided Hike + Forest Bathing @ Grand Hyatt Deer Valley in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/grand-hyatt-deer-valley-guided-hike-forest-bathing",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Outdoor"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.484249",
+      "start_time": "9:00 AM",
+      "end_time": "10:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188125.jpg?decache=02-05-34",
+      "date_label": "Sat, Jun - Aug, 9:00 - 10:00 AM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": "2026-08-31",
+      "recurrence_text": "Sat, Jun - Aug, 9:00 - 10:00 AM",
+      "occurrence_dates": [
+        "2026-06-20",
+        "2026-06-27",
+        "2026-07-04",
+        "2026-07-11",
+        "2026-07-18",
+        "2026-07-25",
+        "2026-08-01",
+        "2026-08-08",
+        "2026-08-15",
+        "2026-08-22",
+        "2026-08-29",
+        "2026-09-05"
+      ]
+    },
+    {
+      "title": "New Artist Reception @ Midway Art Gallery",
+      "date": "2026-08-08",
+      "description": "New Artist Reception @ Midway Art Gallery in Heber Valley.",
+      "location": "Midway Art Gallery, 120 West Main Street, Suite 120B, Midway, UT",
+      "link": "https://www.gohebervalley.com/midway-art-gallery-new-artist-reception",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.484754",
+      "start_time": "12:00 PM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749909.jpg?decache=02-05-34",
+      "date_label": "12:00 - 5:00 PM",
+      "venue_name": "Midway Art Gallery",
+      "address": "120 West Main Street, Suite 120B, Midway, UT, 84049"
+    },
+    {
+      "title": "Improv Comedy with the Belvederes",
+      "date": "2026-08-08",
+      "description": "Improv Comedy with the Belvederes in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/improv-comedy-with-the-belvederes",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5090561,
+      "lng": -111.4149233,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.485063",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728122.jpg?decache=02-05-34",
+      "date_label": "Dates vary, 7:00 - 8:30 PM",
+      "recurrence_text": "Dates vary, 7:00 - 8:30 PM",
+      "occurrence_dates": [
+        "2026-08-08",
+        "2026-09-12",
+        "2026-10-10",
+        "2026-11-14"
+      ]
+    },
+    {
+      "title": "Saturday Sunset Music Series @ Heber City Main Street Park",
+      "date": "2026-06-20",
+      "description": "Saturday Sunset Music Series @ Heber City Main Street Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-city-park-saturday-music-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.503369,
+      "lng": -111.4136475,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.485148",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728256.jpg?decache=02-05-34",
+      "date_label": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "recurrence": "weekly",
+      "recurrence_day": "Saturday",
+      "end_date": null,
+      "recurrence_text": "Sat, May - Sep, 7:00 - 8:30 PM",
+      "occurrence_dates": [
+        "2026-06-20",
+        "2026-06-27",
+        "2026-07-04",
+        "2026-07-11",
+        "2026-07-18",
+        "2026-07-25",
+        "2026-08-01",
+        "2026-08-08",
+        "2026-08-15",
+        "2026-08-22",
+        "2026-08-29",
+        "2026-09-05",
+        "2026-09-12",
+        "2026-09-19"
+      ],
+      "is_ongoing": true
+    },
+    {
+      "title": "Mindful Mondays Pilates @ Wasatch Mountain State Park",
+      "date": "2026-08-10",
+      "description": "Mindful Mondays Pilates @ Wasatch Mountain State Park in Heber Valley.",
+      "location": "Wasatch Mountain State Park, 1281 Warm Springs Road, Midway, UT",
+      "link": "https://www.gohebervalley.com/pilates-at-wasatch-mountain-state-park",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Wellness"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.485980",
+      "start_time": "6:00 PM",
+      "end_time": "7:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189101.jpg?decache=02-05-34",
+      "date_label": "6:00 - 7:30 PM",
+      "venue_name": "Wasatch Mountain State Park",
+      "address": "1281 Warm Springs Road, Midway, UT, 84049"
+    },
+    {
+      "title": "Heber Valley Chamber Golf Tournament",
+      "date": "2026-08-11",
+      "description": "Heber Valley Chamber Golf Tournament in Heber Valley.",
+      "location": "Soldier Hollow Gold Course, Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/heber-valley-chamber-golf-tournament",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4819576,
+      "lng": -111.5007583,
+      "categories": [
+        "Sports",
+        "Education"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.486247",
+      "start_time": "8:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728272.jpg?decache=02-05-34",
+      "date_label": "Soldier Hollow Gold Course, 8:00 AM Shotgun",
+      "venue_name": "Soldier Hollow Gold Course",
+      "end_time": "9:00 AM"
+    },
+    {
+      "title": "Donuts with the Director",
+      "date": "2026-08-12",
+      "description": "Donuts with the Director in Heber Valley.",
+      "location": "Heber Valley Visitor Center, 475 North Main Street, Heber City, UT",
+      "link": "https://www.gohebervalley.com/donuts-with-the-director",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5138203,
+      "lng": -111.4135167,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.486729",
+      "start_time": "8:30 AM",
+      "end_time": "9:30 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178947.jpg?decache=02-05-34",
+      "date_label": "Heber Valley Visitor Center, 8:30 - 9:30 AM",
+      "recurrence_text": "Every other month on the second Wednesday at 8:30 AM",
+      "occurrence_dates": [
+        "2026-08-12",
+        "2026-10-14",
+        "2026-12-09",
+        "2027-02-10",
+        "2027-04-14",
+        "2027-06-09",
+        "2027-08-11",
+        "2027-10-13",
+        "2027-12-08"
+      ],
+      "venue_name": "Heber Valley Visitor Center",
+      "address": "475 North Main Street, Heber City, UT, 84032"
+    },
+    {
+      "title": "Sunset Hike @ Phosphate Hill",
+      "date": "2026-08-12",
+      "description": "Sunset Hike @ Phosphate Hill in Heber Valley.",
+      "location": "Phosphate Hill Trailhead, Pine Canyon Road, Midway, UT",
+      "link": "https://www.gohebervalley.com/wasatch-trails-foundation-hike",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Outdoor"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.487272",
+      "start_time": "6:30 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189961.jpg?decache=02-05-34",
+      "date_label": "6:30 - 8:30 PM",
+      "venue_name": "Phosphate Hill Trailhead",
+      "address": "Pine Canyon Road, Midway, UT, 84049"
+    },
+    {
+      "title": "Intermountain Mustang and All Ford Car Show",
+      "date": "2026-08-14",
+      "description": "Intermountain Mustang and All Ford Car Show in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/intermountain-mustang-and-all-ford-stampede",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.503369,
+      "lng": -111.4136475,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.488815",
+      "start_time": "10:00 AM",
+      "end_time": "4:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2750217.jpg?decache=02-05-34",
+      "date_label": "10:00 AM - 4:00 PM",
+      "recurrence_text": "Fri & Sat, 8:00 AM - 4:00 PM",
+      "occurrence_dates": [
+        "2026-08-14",
+        "2026-08-15"
+      ]
+    },
+    {
+      "title": "Sunset Meditation in the Labyrinth",
+      "date": "2026-08-15",
+      "description": "Sunset Meditation in the Labyrinth in Heber Valley.",
+      "location": "Instructor's private residence, Heber City, UT",
+      "link": "https://www.gohebervalley.com/sunset-labyrinth-meditation",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Wellness"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.489374",
+      "start_time": "7:00 PM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187839.jpg?decache=02-05-34",
+      "date_label": "7:00 - 10:00 PM",
+      "venue_name": "Instructor's private residence"
+    },
+    {
+      "title": "Summer Outdoor Free Movie Series",
+      "date": "2026-08-15",
+      "description": "Summer Outdoor Free Movie Series in Heber Valley.",
+      "location": "Heber Valley Funeral Home, 288 North Main Street, Heber City, UT",
+      "link": "https://www.gohebervalley.com/heber-valley-funeral-home-summer-movie-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5113625,
+      "lng": -111.4133396,
+      "categories": [
+        "Film"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.489463",
+      "start_time": "8:30 PM",
+      "end_time": "10:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189973.jpg?decache=02-05-34",
+      "date_label": "8:30 - 10:30 PM",
+      "venue_name": "Heber Valley Funeral Home",
+      "address": "288 North Main Street, Heber City, UT, 84032",
+      "facets": [
+        "Free"
+      ]
+    },
+    {
+      "title": "Bacardi Pairing Dinner @ Grand Hyatt Deer Valley",
+      "date": "2026-08-18",
+      "description": "Bacardi Pairing Dinner @ Grand Hyatt Deer Valley in Heber Valley.",
+      "location": "Grand Hyatt Deer Valley, 1702 Glencoe Mountain Way, Heber City, UT",
+      "link": "https://www.gohebervalley.com/grand-hyatt-deer-valley-food-pairing",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.62063,
+      "lng": -111.44193,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.490807",
+      "start_time": "7:00 PM",
+      "end_time": "9:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189040.jpg?decache=02-05-34",
+      "date_label": "7:00 - 9:30 PM",
+      "venue_name": "Grand Hyatt Deer Valley",
+      "address": "1702 Glencoe Mountain Way, Heber City, UT, 84032"
+    },
+    {
+      "title": "Women's Wednesday Mountain Bike Group Ride",
+      "date": "2026-08-19",
+      "description": "Women's Wednesday Mountain Bike Group Ride in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/womens-wednesday-group-ride",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.279985,
+      "lng": -111.714395,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.491425",
+      "start_time": "6:00 PM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3125276.jpg?decache=02-05-34",
+      "date_label": "Dates vary, 6:00 - 8:00 PM"
+    },
+    {
+      "title": "Evening of John Denver with Jeff Hinton @ Avon Theater",
+      "date": "2026-08-22",
+      "description": "Evening of John Denver with Jeff Hinton @ Avon Theater in Heber Valley.",
+      "location": "Avon Theater, 94 South Main Street, Heber City, UT",
+      "link": "https://www.gohebervalley.com/avon-theater-john-denver-tribute",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.493018",
+      "start_time": "5:00 PM",
+      "end_time": "6:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188526.jpg?decache=02-05-34",
+      "date_label": "2 Shows, 5:00 & 7:30 PM",
+      "venue_name": "Avon Theater",
+      "address": "94 South Main Street, Heber City, UT, 84032"
+    },
+    {
+      "title": "August Chamber Mixer hosted by the Heber Valley Railroad",
+      "date": "2026-08-26",
+      "description": "August Chamber Mixer hosted by the Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley Railroad, 450 South 600 West, Heber City, UT",
+      "link": "https://www.gohebervalley.com/august-chamber-mixer",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.50213960000001,
+      "lng": -111.4247941,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.495147",
+      "start_time": "4:00 PM",
+      "end_time": "6:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727728.jpg?decache=02-05-34",
+      "date_label": "4:00 - 6:00 PM",
+      "venue_name": "Heber Valley Railroad",
+      "address": "450 South 600 West, Heber City, UT, 84032"
+    },
+    {
+      "title": "ZD Wine Dinner @ Grand Hyatt Deer Valley",
+      "date": "2026-08-27",
+      "description": "ZD Wine Dinner @ Grand Hyatt Deer Valley in Heber Valley.",
+      "location": "Remington Hall at Grand Hyatt Deer Valley, 1702 Glencoe Mountain Way, Heber City, UT",
+      "link": "https://www.gohebervalley.com/grand-hyatt-deer-valley-wine-dinner",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Food & Drink"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.495619",
+      "start_time": "6:00 PM",
+      "end_time": "9:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186389.jpg?decache=02-05-34",
+      "date_label": "6:00 - 9:30PM",
+      "venue_name": "Remington Hall at Grand Hyatt Deer Valley",
+      "address": "1702 Glencoe Mountain Way, Heber City, UT, 84032",
+      "facets": [
+        "21+"
+      ]
+    },
+    {
+      "title": "Make It Reign Fastpitch Softball Tournament",
+      "date": "2026-08-28",
+      "description": "Make It Reign Fastpitch Softball Tournament in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/make-it-reign-softball-tournament",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5067807,
+      "lng": -111.4261642,
+      "categories": [
+        "Sports"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.495935",
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3122383.jpg?decache=02-05-34",
+      "date_label": "Aug 28 - 29",
+      "end_date": "2026-08-29",
+      "recurrence_text": "Aug 28 - 29",
+      "occurrence_dates": [
+        "2026-08-28",
+        "2026-08-29"
+      ]
+    },
+    {
+      "title": "Soldier Hollow Ragnar Trail Relay Team Races",
+      "date": "2026-08-28",
+      "description": "Soldier Hollow Ragnar Trail Relay Team Races in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/soldier-hollow-ragnar-trail-relay",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.47887437876625,
+      "lng": -111.49787206452638,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.496043",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3185673.jpg?decache=02-05-34",
+      "date_label": "Aug 28 - 29",
+      "end_date": "2026-08-29",
+      "recurrence_text": "Aug 28 - 29",
+      "occurrence_dates": [
+        "2026-08-28",
+        "2026-08-29"
+      ]
+    },
+    {
+      "title": "Wasatch Boomerfest Music Festival",
+      "date": "2026-08-28",
+      "description": "Wasatch Boomerfest Music Festival in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wasatch-boomerfest",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.384913,
+      "lng": -111.40169,
+      "categories": [
+        "Music",
+        "Festival"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.496131",
+      "start_time": "10:00 AM",
+      "end_time": "10:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2726683.jpg?decache=02-05-34",
+      "date_label": "Aug 28 - 30",
+      "end_date": "2026-08-30",
+      "recurrence_text": "Aug 28 - 30",
+      "occurrence_dates": [
+        "2026-08-28",
+        "2026-08-29",
+        "2026-08-30"
+      ]
+    },
+    {
+      "title": "Friday Night Train @ Heber Valley Railroad",
+      "date": "2026-08-28",
+      "description": "Friday Night Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley Railroad Depot, 450 South 600 West, Heber City, UT",
+      "link": "https://www.gohebervalley.com/friday-night-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 39.76066,
+      "lng": -76.6983,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.496736",
+      "start_time": "6:40 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749462.jpg?decache=02-05-34",
+      "date_label": "6:40 - 8:30 PM",
+      "venue_name": "Heber Valley Railroad Depot",
+      "address": "450 South 600 West, Heber City, UT, 84032"
+    },
+    {
+      "title": "Wasatch All-Road Gravel Bike Race",
+      "date": "2026-08-29",
+      "description": "Wasatch All-Road Gravel Bike Race in Heber Valley.",
+      "location": "2575 South Mill Road, Heber City, UT",
+      "link": "https://www.gohebervalley.com/wasatch-all-road",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4736367,
+      "lng": -111.3926552,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.497044",
+      "start_time": "6:00 AM",
+      "end_time": "7:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2740868.jpg?decache=02-05-34",
+      "address": "2575 South Mill Road, Heber City, UT, 84032"
+    },
+    {
+      "title": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools",
+      "date": "2026-09-02",
+      "description": "Wasatch Back Business University: Get Found First: Local Website Optimization, SEP & Google Business Tools in Heber Valley.",
+      "location": "UVU Wasatch Campus, 3111 College Way, Heber City, UT",
+      "link": "https://www.gohebervalley.com/sept-business-university",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.545359,
+      "lng": -111.413593,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.500047",
+      "start_time": "11:30 PM",
+      "end_time": "1:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=02-05-34",
+      "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
+      "venue_name": "UVU Wasatch Campus",
+      "address": "3111 College Way, Heber City, UT, 84032"
+    },
+    {
+      "title": "Midway Swiss Days Festival",
+      "date": "2026-09-04",
+      "description": "Midway Swiss Days Festival in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/swiss-days-festival-event",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.512205,
+      "lng": -111.474441,
+      "categories": [
+        "Festival"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.500625",
+      "start_time": "8:00 AM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727538.jpg?decache=02-05-34",
+      "date_label": "Sep 4-5, 8:00 AM - 8:00 PM",
+      "end_date": "2026-09-05"
+    },
+    {
+      "title": "Annual Ride-to-Zero & Campout",
+      "date": "2026-09-06",
+      "description": "Annual Ride-to-Zero & Campout in Heber Valley.",
+      "location": "River's Edge RV Resort, 7000 Old Highway 40, Heber City, UT",
+      "link": "https://www.gohebervalley.com/ride-to-zero",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.590059,
+      "lng": -111.428033,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.502181",
+      "start_time": "10:00 AM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132179.jpg?decache=02-05-34",
+      "venue_name": "River's Edge RV Resort",
+      "address": "7000 Old Highway 40, Heber City, UT, 84032"
+    },
+    {
+      "title": "Labor Day BBQ @ Sundance Resort",
+      "date": "2026-09-07",
+      "description": "Labor Day BBQ @ Sundance Resort in Heber Valley.",
+      "location": "Sundance Mountain Resort, 8841 North Alpine Loop Road, Sundance, UT",
+      "link": "https://www.gohebervalley.com/sundance-labor-day-bbq",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Food & Drink",
+        "Festival"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.502548",
+      "start_time": "11:00 AM",
+      "end_time": "4:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187464.jpg?decache=02-05-34",
+      "date_label": "11:00 AM - 4:00PM ",
+      "venue_name": "Sundance Mountain Resort",
+      "address": "8841 North Alpine Loop Road, Sundance, UT, 84604"
+    },
+    {
+      "title": "Utah Barrel Race",
+      "date": "2026-09-11",
+      "description": "Utah Barrel Race in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/ubra-futurity-race",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4886915,
+      "lng": -111.4335895,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.503656",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727560.jpg?decache=02-05-34",
+      "date_label": "Apr 17 - 19, Sep 11 - 13",
+      "recurrence_text": "Apr 17 - 19, Sep 11 - 13",
+      "occurrence_dates": [
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ]
+    },
+    {
+      "title": "Hobo Train @ Heber Valley Railroad",
+      "date": "2026-09-11",
+      "description": "Hobo Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley Railroad, 450 South 600 West, Heber City, UT",
+      "link": "https://www.gohebervalley.com/hobo-days-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022051,
+      "lng": -111.4245238,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.504104",
+      "start_time": "7:00 PM",
+      "end_time": "9:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3178906.jpg?decache=02-05-34",
+      "date_label": "7:00 - 9:30 PM",
+      "venue_name": "Heber Valley Railroad",
+      "address": "450 South 600 West, Heber City, UT, 84032"
+    },
+    {
+      "title": "Planes & Horsepower Car Show @ Heber Valley Airport",
+      "date": "2026-09-12",
+      "description": "Planes & Horsepower Car Show @ Heber Valley Airport in Heber Valley.",
+      "location": "Commemorative Air Force Museum, 2365 West Airport Road, Heber City, UT",
+      "link": "https://www.gohebervalley.com/planes-and-horsepower-car-show",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.4793812,
+      "lng": -111.4291258,
+      "categories": [
+        "Arts"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.504276",
+      "start_time": "8:00 AM",
+      "end_time": "4:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2727806.jpg?decache=02-05-34",
+      "date_label": "8:00 AM - 4:00 PM",
+      "venue_name": "Commemorative Air Force Museum",
+      "address": "2365 West Airport Road, Heber City, UT, 84032"
+    },
+    {
+      "title": "Mamele Mountains Women's Trail Race @ Soldier Hollow",
+      "date": "2026-09-12",
+      "description": "Mamele Mountains Women's Trail Race @ Soldier Hollow in Heber Valley.",
+      "location": "Soldier Hollow, 2002 Olympic Drive, Midway, UT",
+      "link": "https://www.gohebervalley.com/mamele-mountains-race",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Outdoor"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.504361",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2760251.jpg?decache=02-05-34",
+      "venue_name": "Soldier Hollow",
+      "address": "2002 Olympic Drive, Midway, UT, 84049"
+    },
+    {
+      "title": "Park City Sailing Annual Fall Regatta @ Jordanelle Reservoir",
+      "date": "2026-09-12",
+      "description": "Park City Sailing Annual Fall Regatta @ Jordanelle Reservoir in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/sailing-fall-regatta",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.517678,
+      "lng": -111.348882,
+      "categories": [
+        "Sports"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.504507",
+      "start_time": "9:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132111.jpg?decache=02-05-34",
+      "date_label": "Sep 12 - 13",
+      "end_date": "2026-09-13",
+      "recurrence_text": "Sep 12 - 13",
+      "occurrence_dates": [
+        "2026-09-12",
+        "2026-09-13"
+      ]
+    },
+    {
+      "title": "St. Lawrence Annual Fall Festival",
+      "date": "2026-09-12",
+      "description": "St. Lawrence Annual Fall Festival in Heber Valley.",
+      "location": "St. Lawrence Catholic Church, 90 North 100 West, Heber City, UT",
+      "link": "https://www.gohebervalley.com/st-lawrence-fall-festival",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5087667,
+      "lng": -111.4150985,
+      "categories": [
+        "Festival"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.504745",
+      "start_time": "11:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3188469.jpg?decache=02-05-34",
+      "date_label": "11:00 AM - 5:00 PM",
+      "venue_name": "St. Lawrence Catholic Church",
+      "address": "90 North 100 West, Heber City, UT, 84032"
+    },
+    {
+      "title": "Plein Air Rendezvous",
+      "date": "2026-09-16",
+      "description": "Plein Air Rendezvous in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/plein-air-rendezvous",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5123009,
+      "lng": -111.4749619,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.506083",
+      "start_time": "10:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2748450.jpg?decache=02-05-34",
+      "date_label": "Sep 16 - 19",
+      "end_date": "2026-09-19",
+      "recurrence_text": "Sep 16 - 19",
+      "occurrence_dates": [
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-19"
+      ]
+    },
+    {
+      "title": "Fall Classic Pickleball Tournament @ Southfield Park",
+      "date": "2026-09-18",
+      "description": "Fall Classic Pickleball Tournament @ Southfield Park in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/fall-classic-pickleball-tournament",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Sports"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.506933",
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189011.jpg?decache=02-05-34",
+      "date_label": "Sep 18 - 19",
+      "end_date": "2026-09-19",
+      "recurrence_text": "Sep 18 - 19",
+      "occurrence_dates": [
+        "2026-09-18",
+        "2026-09-19"
+      ]
+    },
+    {
+      "title": "Mountain Bike World Series @ Soldier Hollow",
+      "date": "2026-09-19",
+      "description": "Mountain Bike World Series @ Soldier Hollow in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/soho-whoop-uci-world-series",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.47890702211636,
+      "lng": -111.49782914918214,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.507553",
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2728258.jpg?decache=02-05-34",
+      "date_label": "Sep 19 - 20",
+      "end_date": "2026-09-20",
+      "recurrence_text": "Sep 19 - 20",
+      "occurrence_dates": [
+        "2026-09-19",
+        "2026-09-20"
+      ]
+    },
+    {
+      "title": "Wasatch EuroFest Car Show",
+      "date": "2026-09-24",
+      "description": "Wasatch EuroFest Car Show in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/wasatch-eurofest",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.509207",
+      "start_time": "12:00 PM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3187859.jpg?decache=02-05-34",
+      "date_label": "Sep 24 - 26",
+      "end_date": "2026-09-26",
+      "recurrence_text": "Sep 24 - 26",
+      "occurrence_dates": [
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26"
+      ]
+    },
+    {
+      "title": "Wasatch Half Marathon & 10K",
+      "date": "2026-09-26",
+      "description": "Wasatch Half Marathon & 10K in Heber Valley.",
+      "location": "Soldier Hollow, 2002 Soldier Hollow Lane, Midway, UT",
+      "link": "https://www.gohebervalley.com/wasatch-half-marathon",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.48045159999999,
+      "lng": -111.4953585,
+      "categories": [
+        "Sports"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.510116",
+      "start_time": "8:00 AM",
+      "end_time": "12:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=300,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3180475.jpg?decache=02-05-34",
+      "date_label": "Race starts at 8:00 AM",
+      "venue_name": "Soldier Hollow",
+      "address": "2002 Soldier Hollow Lane, Midway, UT, 84049"
+    },
+    {
+      "title": "Disc Golf Tournament @ Wasatch Wunder Course",
+      "date": "2026-09-26",
+      "description": "Disc Golf Tournament @ Wasatch Wunder Course in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/disc-golf-tournament",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5365217,
+      "lng": -111.4878499,
+      "categories": [
+        "Sports",
+        "Education"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.510226",
+      "start_time": "9:00 AM",
+      "end_time": "4:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2755717.jpg?decache=02-05-34",
+      "date_label": "May 30 - 31, Sep 26 - 27",
+      "recurrence_text": "May 30 - 31, Sep 26 - 27",
+      "occurrence_dates": [
+        "2026-09-26",
+        "2026-09-27"
+      ]
+    },
+    {
+      "title": "Spirit Connection with Jo\u2019Anne Smith",
+      "date": "2026-09-30",
+      "description": "Spirit Connection with Jo\u2019Anne Smith in Heber Valley.",
+      "location": "Best Western Plus, 1227 South US Highway 40, Heber City, UT",
+      "link": "https://www.gohebervalley.com/salt-lake-medium-spirit-connection",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.563946,
+      "lng": -111.428668,
+      "categories": [
+        "Food & Drink"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.511725",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189012.jpg?decache=02-05-34",
+      "date_label": "7:00 - 8:30 PM",
+      "venue_name": "Best Western Plus",
+      "address": "1227 South US Highway 40, Heber City, UT, 84032"
+    },
+    {
+      "title": "Halloween Train @ Heber Valley Railroad",
+      "date": "2026-10-01",
+      "description": "Halloween Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/halloween-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022132,
+      "lng": -111.4244969,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.512044",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727620.jp?w=4424&h=2172&tick=1692742635129",
+      "date_label": "Mon, Thu & Fri Nights in Oct",
+      "recurrence_text": "Mon, Thu & Fri Nights in Oct",
+      "occurrence_dates": [
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-26",
+        "2026-10-29",
+        "2026-10-30"
+      ]
+    },
+    {
+      "title": "Witches Night Out Train @ Heber Valley Railroad",
+      "date": "2026-10-01",
+      "description": "Witches Night Out Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/witches-night-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.512135",
+      "start_time": "7:00 PM",
+      "end_time": "8:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3189986.jpg?decache=02-05-34",
+      "date_label": "Select dates in Oct, 7:00 - 8:30 PM",
+      "recurrence_text": "Select dates in Oct, 7:00 - 8:30 PM",
+      "occurrence_dates": [
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-26",
+        "2026-10-29",
+        "2026-10-30"
+      ]
+    },
+    {
+      "title": "Pumpkin Train @ Heber Valley Railroad",
+      "date": "2026-10-03",
+      "description": "Pumpkin Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/pumpkin-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5022132,
+      "lng": -111.4244969,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.512767",
+      "start_time": "10:00 AM",
+      "end_time": "10:40 AM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3133234.jpg?decache=02-05-34",
+      "date_label": "Sat, Oct 3, 10, 17, 24",
+      "recurrence_text": "Sat, Oct 3, 10, 17, 24",
+      "occurrence_dates": [
+        "2026-10-03",
+        "2026-10-10",
+        "2026-10-17",
+        "2026-10-24"
+      ]
+    },
+    {
+      "title": "Wasatch Back Business University - Say Something Worth Reading: Content Creation & Marketing That Actually Drives Business",
+      "date": "2026-10-07",
+      "description": "Wasatch Back Business University - Say Something Worth Reading: Content Creation & Marketing That Actually Drives Business in Heber Valley.",
+      "location": "Blair Education Center at Intermountain Park City Hospital, 900 Round Valley Drive, Park City, UT",
+      "link": "https://www.gohebervalley.com/october-business-university",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.6880445,
+      "lng": -111.4692093,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.514404",
+      "start_time": "11:30 PM",
+      "end_time": "1:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=02-05-34",
+      "date_label": "Blair Education Center, 11:30 AM - 1:00 PM",
+      "venue_name": "Blair Education Center at Intermountain Park City Hospital",
+      "address": "900 Round Valley Drive, Park City, UT, 84060"
+    },
+    {
+      "title": "Utah Tourism Conference in Heber Valley",
+      "date": "2026-10-13",
+      "description": "Utah Tourism Conference in Heber Valley in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/utah-tourism-conference",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Education"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.516445",
+      "start_time": "8:00 AM",
+      "end_time": "5:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3152124.jpg?decache=02-05-34",
+      "date_label": "Oct 13 - 16",
+      "end_date": "2026-10-16",
+      "recurrence_text": "Oct 13 - 16",
+      "occurrence_dates": [
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16"
+      ]
+    },
+    {
+      "title": "Wasatch Back Business University - Beyond the Basics: Specific AI Tools That Are Actually Moving the Needle for Business",
+      "date": "2026-11-04",
+      "description": "Wasatch Back Business University - Beyond the Basics: Specific AI Tools That Are Actually Moving the Needle for Business in Heber Valley.",
+      "location": "UVU Wasatch Campus, 3111 College Way, Heber City, UT",
+      "link": "https://www.gohebervalley.com/november-business-university",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.545359,
+      "lng": -111.413593,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.523392",
+      "start_time": "11:30 AM",
+      "end_time": "1:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=02-05-34",
+      "date_label": "UVU Wasatch Campus, 11:30 AM - 1:00 PM",
+      "venue_name": "UVU Wasatch Campus",
+      "address": "3111 College Way, Heber City, UT, 84032"
+    },
+    {
+      "title": "North Pole Express Christmas Train @ Heber Valley Railroad",
+      "date": "2026-11-19",
+      "description": "North Pole Express Christmas Train @ Heber Valley Railroad in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/north-pole-express-christmas-train",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5023494,
+      "lng": -111.425492,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.526489",
+      "start_time": "5:00 PM",
+      "end_time": "6:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-2749654.jpg?decache=02-05-34",
+      "date_label": "Nov 19 - Dec 30",
+      "end_date": "2026-12-30",
+      "recurrence_text": "Nov 19 - Dec 30",
+      "occurrence_dates": [
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-30",
+        "2026-12-01",
+        "2026-12-02",
+        "2026-12-03",
+        "2026-12-04",
+        "2026-12-05",
+        "2026-12-07",
+        "2026-12-08",
+        "2026-12-09",
+        "2026-12-10",
+        "2026-12-11",
+        "2026-12-12",
+        "2026-12-14",
+        "2026-12-15",
+        "2026-12-16",
+        "2026-12-17",
+        "2026-12-18",
+        "2026-12-19",
+        "2026-12-21",
+        "2026-12-22",
+        "2026-12-23",
+        "2026-12-26",
+        "2026-12-28",
+        "2026-12-29",
+        "2026-12-30"
+      ]
+    },
+    {
+      "title": "Holiday Chamber Gala",
+      "date": "2026-11-20",
+      "description": "Holiday Chamber Gala in Heber Valley.",
+      "location": "Black Rock Mountain Resort",
+      "link": "https://www.gohebervalley.com/chamber-gala",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.6759923,
+      "lng": -111.4287765,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.527046",
+      "start_time": "5:30 PM",
+      "end_time": "9:30 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3132170.jpg?decache=02-05-34",
+      "date_label": "Black Rock Mountain Resort 5:30 - 9:30 PM",
+      "venue_name": "Black Rock Mountain Resort"
+    },
+    {
+      "title": "Simple Treasures Boutique @ Wasatch County Events Center",
+      "date": "2026-12-02",
+      "description": "Simple Treasures Boutique @ Wasatch County Events Center in Heber Valley.",
+      "location": "Heber Valley, UT",
+      "link": "https://www.gohebervalley.com/simple-treasures-boutique-market",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.5069,
+      "lng": -111.4133,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.531121",
+      "start_time": "10:00 AM",
+      "end_time": "8:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3186580.jpg?decache=02-05-34",
+      "date_label": "Dec 2 - 5, times vary",
+      "recurrence_text": "Dec 2 - 5, times vary",
+      "occurrence_dates": [
+        "2026-12-02",
+        "2026-12-03",
+        "2026-12-04",
+        "2026-12-05"
+      ]
+    },
+    {
+      "title": "Wasatch Back Business University: Business Finance",
+      "date": "2026-12-03",
+      "description": "Wasatch Back Business University: Business Finance in Heber Valley.",
+      "location": "Blair Education Center at Intermountain Park City Hospital, 900 Round Valley Drive, Park City, UT",
+      "link": "https://www.gohebervalley.com/december-business-university",
+      "source": "Heber Valley Tourism",
+      "source_url": "https://www.gohebervalley.com/events/",
+      "lat": 40.6880445,
+      "lng": -111.4692093,
+      "categories": [
+        "Community"
+      ],
+      "scraped_at": "2026-08-02T11:19:35.532158",
+      "start_time": "11:30 PM",
+      "end_time": "1:00 PM",
+      "image_url": "https://www.earthdiver.com/cdn-cgi/image/width=500,quality=75,format=auto/https://assets.earthdiver.com/media/media-image-3157168.jpg?decache=02-05-34",
+      "date_label": "Blair Education Center, 11:30 AM - 1:00 PM",
+      "venue_name": "Blair Education Center at Intermountain Park City Hospital",
+      "address": "900 Round Valley Drive, Park City, UT, 84060"
     },
     {
       "title": "MAMELE MOUNTAINS",
@@ -286,70 +1542,6 @@
       "city": "Heber City, UT",
       "categories": [
         "Running & Races"
-      ]
-    },
-    {
-      "title": "Fair Days Parade",
-      "date": "2026-08-01",
-      "end_date": "2026-08-01",
-      "start_time": "4:00 PM",
-      "location": "Heber City, UT",
-      "venue_name": "Wasatch County Event Complex",
-      "description": "",
-      "link": "https://www.wasatchparksandrec.com/events/2026/wasatch-county-fair-days-parade22",
-      "source": "Wasatch County Parks & Rec",
-      "source_url": "https://www.wasatchparksandrec.com/events",
-      "image_url": "https://cdn.saffire.com/images.ashx?t=ig&rid=WasatchCountyEventsCenter&i=parade_route(1).jpg&cb=B183A32B",
-      "lat": 40.4897,
-      "lng": -111.4133,
-      "city": "Heber City, UT",
-      "categories": [
-        "Community",
-        "Family"
-      ]
-    },
-    {
-      "title": "Mountain Valley Stampede Rodeo",
-      "date": "2026-08-01",
-      "end_date": "2026-08-01",
-      "start_time": "7:30 PM",
-      "location": "Heber City, UT",
-      "venue_name": "Wasatch County Event Complex",
-      "description": "",
-      "link": "https://www.wasatchparksandrec.com/events/2026/mountain-valley-stampede-rodeo22",
-      "source": "Wasatch County Parks & Rec",
-      "source_url": "https://www.wasatchparksandrec.com/events",
-      "image_url": "https://cdn.saffire.com/images.ashx?t=ig&rid=WasatchCountyEventsCenter&i=MVS_Rodeo_2026.jpg&cb=26f26af6",
-      "lat": 40.4897,
-      "lng": -111.4133,
-      "city": "Heber City, UT",
-      "categories": [
-        "Community",
-        "Food & Drink",
-        "Sports",
-        "Kids",
-        "Family",
-        "Festival"
-      ],
-      "end_time": "9:30 PM"
-    },
-    {
-      "title": "Light Up the Sky Balloon Launch",
-      "date": "2026-08-01",
-      "end_date": "2026-08-01",
-      "start_time": "10:00 PM",
-      "location": "Heber City, UT",
-      "venue_name": "Wasatch County Event Complex",
-      "description": "",
-      "link": "https://www.wasatchparksandrec.com/events/2026/light-up-the-sky-balloon-launch22",
-      "source": "Wasatch County Parks & Rec",
-      "source_url": "https://www.wasatchparksandrec.com/events",
-      "image_url": "https://cdn.saffire.com/images.ashx?t=ig&rid=WasatchCountyEventsCenter&i=HOMC_2022_Light_up_the_sky.jpg&cb=641AC48C",
-      "lat": 40.4897,
-      "lng": -111.4133,
-      "city": "Heber City, UT",
-      "categories": [
-        "Community"
       ]
     },
     {
@@ -631,28 +1823,9 @@
       "categories": [
         "Community"
       ],
-      "scraped_at": "2026-08-01T11:14:55.360346",
+      "scraped_at": "2026-08-02T11:21:25.935029",
       "start_time": "6:30 PM",
       "price": "$130.00"
-    },
-    {
-      "title": "Improv Comedy with the Belvederes",
-      "date": "2026-08-08",
-      "description": "Family-friendly improv comedy is guaranteed to have you laughing out loud. Come enjoy the hilarious performance by the talented comedic performers. Perfect for a date night, friend's night out, or bring your family.",
-      "location": "Timpanogos Valley Theatre, 90 West 100 North, Heber City",
-      "link": "https://hebervalleylife.com/events/improv-comedy-the-belvederes/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/improv-comedy-the-belvederes/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Family"
-      ],
-      "start_time": "7:00 PM",
-      "end_time": "8:30 PM",
-      "address": "90 West 100 North, Heber City",
-      "venue_name": "Timpanogos Valley Theatre"
     },
     {
       "title": "Heber Market on Main",
@@ -707,7 +1880,7 @@
     },
     {
       "title": "Midway Farmers Market",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "description": "The market is held every Saturday from 10:00 am to 1:00 pm at the Midway Town Square from June through October. Fresh local produce and local artisans are onsite selling goods at the farmer's market in Midway. See you there!",
       "location": "Midway Town Square, 200 W Main Street Midway, Utah 84049",
       "link": "https://hebervalleylife.com/events/midway-farmers-market-2025/",
@@ -727,6 +1900,34 @@
       "recurrence": "weekly",
       "recurrence_days": "Saturday",
       "end_date": "2026-10-31"
+    },
+    {
+      "title": "Midway Swiss Days",
+      "date": "2026-09-04",
+      "description": "The annual Swiss Days Festival takes place in Midway, Utah, the Friday and Saturday before Labor Day each year and draws a huge crowd both days. Swiss Days includes a 10K race, parade, live entertainment, and so much more. DATES: Friday, September 4 & Saturday, September 5, 2026 SCHEDULE: Friday, Sep 4th: Market 8:00 am - 8:00 pm Saturday, Sep 5th: Market 8:00 am - 8:00 pm Breakfast & 10K Run start at 7:00 am, Parade at 10:00 am PARKING: Two public parking locations offer a free shuttle bus to and from the event location. Parking is $10 and the shuttle runs approximately every 15 minutes. There is limited street parking and private pay parking lots surrounding the square.\u200d Complimentary bike parking is available at Centennial Park. PETS: Pets are NOT allowed at the venue.\u200d",
+      "location": "Midway Town Square, 200 W Main Street Midway, Utah 84049",
+      "link": "https://hebervalleylife.com/events/midway-swiss-days/",
+      "source": "Heber Valley Life",
+      "source_url": "https://hebervalleylife.com/events/midway-swiss-days/",
+      "lat": 40.5066,
+      "lng": -111.4133,
+      "categories": [
+        "Community",
+        "Sports",
+        "Family",
+        "Festival"
+      ],
+      "start_time": "8:00 AM",
+      "end_time": "8:00 PM",
+      "address": "200 W Main Street Midway, Utah 84049",
+      "venue_name": "Midway Town Square",
+      "recurrence": "weekly",
+      "recurrence_days": "Friday,Saturday",
+      "end_date": "2027-01-29",
+      "facets": [
+        "Free",
+        "Paid"
+      ]
     },
     {
       "title": "Princess and Pirate Train",
@@ -749,26 +1950,8 @@
       "venue_name": "Heber Valley Railroad"
     },
     {
-      "title": "Intermountain Mustang and All Ford Stampede",
-      "date": "2026-08-14",
-      "description": "Come check out this fantastic collection of sports cars. IMAFS (Intermountain Mustang and All Ford Stampede) is the Northern Utah Mustang Owner's Association's (NUMOA) premier car show. Socializing and picnic on Friday. Car Show and display on Saturday. Both days at Heber City Main Street Park. Updates on the Facebook page.",
-      "location": "Heber City Main Street, Heber City, UT 84032",
-      "link": "https://hebervalleylife.com/events/intermountain-mustang-and-all-ford-stampede/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/intermountain-mustang-and-all-ford-stampede/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "start_time": "8:00 AM",
-      "end_time": "4:00 PM",
-      "address": "Heber City, UT 84032",
-      "venue_name": "Heber City Main Street"
-    },
-    {
       "title": "TedFest Music Festival",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "description": "TedFest, the festival formerly known as Wasatch Mountain Music Festival, is held each summer in the stunning Wallsburg, Utah location. The family-friendly music festival offers a fun mix of contemporary and traditional roots-based music bringing together the best of bluegrass, Celtic, folk, singer-songwriter, and roots rock music. There will be food vendors, onsite camping, and amazing musical artists featured at the festival main stage. There will also be an instrument competition, singer-songwriter competition, and a workshop stage. Additionally, tours are available for a small entrance fee to the Richard W. Erickson Antique Power Museum on Saturday during the music festival. And don't miss Sandy's Morning Gospel Jam and the pancake breakfast on Sunday. All festival ticket purchases include Sunday access.",
       "location": "Richard W Erickson Foundation Antique Power Museum, R. W. Erickson Foundation 00-0010-2991, Wallsburg, UT",
       "link": "https://hebervalleylife.com/events/tedfest/",
@@ -793,7 +1976,7 @@
       "venue_name": "Richard W Erickson Foundation Antique Power Museum",
       "recurrence": "weekly",
       "recurrence_days": "Saturday,Sunday",
-      "end_date": "2027-01-28",
+      "end_date": "2027-01-29",
       "facets": [
         "Paid"
       ]
@@ -820,33 +2003,9 @@
       "venue_name": "Midway Town Square",
       "recurrence": "weekly",
       "recurrence_days": "Tuesday",
-      "end_date": "2027-01-28",
+      "end_date": "2027-01-29",
       "facets": [
         "Free"
-      ]
-    },
-    {
-      "title": "St. Lawrence Annual Fall Festival",
-      "date": "2026-09-12",
-      "description": "All are welcome for St Lawrence Catholic Church's 20th annual Fall Festival. Food, beer, wine, entertainment, silent auction, bake sale, 50/50 raffle and more. All proceeds go to new church building fund. Festivities include: Kid's games & crafts Live music Food vendors Beer garden 50/50 raffle Silent auction Craft sale",
-      "location": "St. Lawrence Catholic Church, 90 North 100 West Heber City, Utah 84032",
-      "link": "https://hebervalleylife.com/events/st-lawrence-annual-fall-festival/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/st-lawrence-annual-fall-festival/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Music",
-        "Food & Drink",
-        "Festival"
-      ],
-      "start_time": "11:00 AM",
-      "end_time": "5:00 PM",
-      "address": "90 North 100 West Heber City, Utah 84032",
-      "venue_name": "St. Lawrence Catholic Church",
-      "facets": [
-        "21+"
       ]
     },
     {
@@ -931,7 +2090,7 @@
       "venue_name": "Main Street Park Heber City",
       "recurrence": "weekly",
       "recurrence_days": "Sunday",
-      "end_date": "2027-01-28",
+      "end_date": "2027-01-29",
       "facets": [
         "Paid"
       ]
@@ -954,43 +2113,6 @@
       "end_time": "4:00 PM",
       "address": "2365 Airport Road Heber City, Utah 84032",
       "venue_name": "Commemorative Air Force UT Wing WWII Aviation Museum"
-    },
-    {
-      "title": "Wasatch EuroFest Car Show",
-      "date": "2026-09-24",
-      "description": "The Wasatch EuroFest car show is back \u2014 September 24-26, 2026! Show off your ride, connect with enthusiasts, and win big. Don\u2019t miss Utah\u2019s premier Euro car experience. Spots are limited \u2014 register now and be part of something special.",
-      "location": "Midway Town Square, 200 W Main Street Midway, Utah 84049",
-      "link": "https://hebervalleylife.com/events/wasatch-eurofest-car-show/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/wasatch-eurofest-car-show/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community"
-      ],
-      "start_time": "12:00 PM",
-      "end_time": "5:00 PM",
-      "address": "200 W Main Street Midway, Utah 84049",
-      "venue_name": "Midway Town Square"
-    },
-    {
-      "title": "Commemorative Air Force Museum Tours",
-      "date": "2026-08-01",
-      "description": "The CAF-Utah Wing represents living history and is unique among aviation museums. The Utah Wing houses a significant collection of aircraft, authentic World War II artifacts, and women in aviation memorabilia. Items on display in our museum include Allied country uniforms, as well as armament, photographs, weapons, and equipment from both Allied and Axis countries. The Utah Wing of the CAF is a self-supporting, all-volunteer, non-profit, tax-exempt organization registered in Utah. Funds to acquire, restore, maintain and operate aircraft are derived from members' dues, contributions, aircraft sponsors, and fundraising events. All donations, including dues and aircraft sponsorships, are used to support the Wing's museum and to restore, operate, and maintain our Ghost Squadron.",
-      "location": "Heber City Airport, 2265 Airport Road Heber City, UT 84032",
-      "link": "https://hebervalleylife.com/events/commemorative-air-force-museum-tours/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/commemorative-air-force-museum-tours/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Arts"
-      ],
-      "start_time": "11:00 AM",
-      "end_time": "4:00 PM",
-      "address": "2265 Airport Road Heber City, UT 84032",
-      "venue_name": "Heber City Airport"
     },
     {
       "title": "Wasatch County Library Community Concert Series",
@@ -1018,7 +2140,7 @@
     },
     {
       "title": "Movie Night @ Rock Cliff Nature Center",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "description": "Join us every Thursday in January to watch some of the best nature documentaries to come out of Sundance! All movies start at 6:30 pm. Jan 8: dirt!: The Movie Jan 15: March of the Penguins Jan 22: Fire of Love Jan 29: Earth Days",
       "location": "Rock Cliff Nature Center, 2500 State Route 32 Kamas, Utah 84032",
       "link": "https://hebervalleylife.com/events/movie-night-rock-cliff-nature-center/",
@@ -1037,31 +2159,7 @@
       "venue_name": "Rock Cliff Nature Center",
       "recurrence": "weekly",
       "recurrence_days": "Thursday",
-      "end_date": "2027-01-28"
-    },
-    {
-      "title": "Utah Barrel Race",
-      "date": "2026-09-11",
-      "description": "Don't miss the competitive Barrel Racing Championships in Heber Valley, where top riders and horses compete in thrilling barrel racing action. This exciting event showcases incredible horsemanship, speed, and skill, making it a must-see for rodeo and equestrian fans. Competitions happen in April and September.",
-      "location": "Wasatch County Events Complex, 415 Southfield Road Heber City, Utah 84032",
-      "link": "https://hebervalleylife.com/events/utah-barrel-race/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/utah-barrel-race/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Food & Drink",
-        "Sports",
-        "Kids",
-        "Family",
-        "Festival"
-      ],
-      "start_time": "10:00 AM",
-      "end_time": "5:00 PM",
-      "image_url": "https://i0.wp.com/hebervalleylife.com/wp-content/uploads/2026/01/UtahBarrelRace.jpg?fit=400%2C267&#038;ssl=1",
-      "address": "415 Southfield Road Heber City, Utah 84032",
-      "venue_name": "Wasatch County Events Complex"
+      "end_date": "2027-01-29"
     },
     {
       "title": "Dominick Antonelli @ Cafe Galleria",
@@ -1088,7 +2186,7 @@
     },
     {
       "title": "Saturday Sunset Music Series",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "description": "There\u2019s no better way to spend a summer evening in Heber City than at the Saturday Sunset Music Series. Every Saturday from 7:00\u20138:30 PM, Main Street Park comes alive with live music, good food, and a relaxed, family-friendly atmosphere as the sun sets over downtown. Saturday programming is part of the broader Music on Main season. The series features a diverse lineup of local musicians, highlighting the depth of talent in the Heber Valley.",
       "location": "Heber City Main Street, Heber City, UT 84032",
       "link": "https://hebervalleylife.com/events/saturday-sunset-music-series/",
@@ -1128,25 +2226,6 @@
       ],
       "start_time": "8:30 PM",
       "end_time": "10:30 PM",
-      "address": "1702 Glencoe Mountain Wy, Park City, UT 84060",
-      "venue_name": "Grand Hyatt Deer Valley"
-    },
-    {
-      "title": "Guided Hike + Forest Bathing",
-      "date": "2026-08-01",
-      "description": "Your guide will lead you through gentle movement and intentional pauses that highlight the sights, sounds, and sensations of the forest. It\u2019s a refreshing, grounding way to start the day\u2014leaving you feeling clear, restored, and reconnected with yourself.",
-      "location": "Grand Hyatt Deer Valley, 1702 Glencoe Mountain Wy, Park City, UT 84060",
-      "link": "https://hebervalleylife.com/events/guided-hike-forest-bathing/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/guided-hike-forest-bathing/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Outdoor"
-      ],
-      "start_time": "9:00 AM",
-      "end_time": "10:00 AM",
       "address": "1702 Glencoe Mountain Wy, Park City, UT 84060",
       "venue_name": "Grand Hyatt Deer Valley"
     },
@@ -1211,26 +2290,6 @@
       "facets": [
         "Free"
       ]
-    },
-    {
-      "title": "Heber Half Marathon Run For Autism",
-      "date": "2026-08-08",
-      "description": "Runtastic Events brings you the Runtastic Heber Run for its seventh year \u201crunning!\u201d Come enjoy an all-downhill course in scenic Heber Valley. With a Half Marathon, 5K, and a Kid\u2019s Race, there\u2019s a race for everyone in the family. Don\u2019t miss this fun-filled running event in one of Utah\u2019s most scenic locations!",
-      "location": "Old Mill Elementary School, 1600 E 980th S, Heber City, UT 84032",
-      "link": "https://hebervalleylife.com/events/heber-half-marathon-run-for-autism/",
-      "source": "Heber Valley Life",
-      "source_url": "https://hebervalleylife.com/events/heber-half-marathon-run-for-autism/",
-      "lat": 40.5066,
-      "lng": -111.4133,
-      "categories": [
-        "Community",
-        "Sports",
-        "Education"
-      ],
-      "start_time": "6:00 AM",
-      "end_time": "11:00 AM",
-      "address": "1600 E 980th S, Heber City, UT 84032",
-      "venue_name": "Old Mill Elementary School"
     },
     {
       "title": "Labor Day BBQ",
