@@ -1,37 +1,20 @@
 {
-  "generated_at": "2026-08-02T11:31:30.200691",
-  "attempted": 6,
+  "generated_at": "2026-08-03T13:11:16.873061",
+  "attempted": 1,
   "applied": 0,
   "log": [
     {
-      "city": "heber",
-      "type": "title_truncated",
-      "skipped": "no event_index"
-    },
-    {
-      "city": "heber",
-      "type": "title_truncated",
-      "skipped": "no event_index"
-    },
-    {
-      "city": "heber",
-      "type": "title_truncated",
-      "skipped": "no event_index"
-    },
-    {
-      "city": "heber",
-      "type": "title_truncated",
-      "skipped": "no event_index"
-    },
-    {
-      "city": "heber",
-      "type": "title_truncated",
-      "skipped": "no event_index"
-    },
-    {
       "city": "jackson",
+      "title": "Walker Williams",
       "type": "title_truncated",
-      "skipped": "no event_index"
+      "link": "https://www.milliondollarcowboybar.com/events/walker-williams-0-0-0-1",
+      "resolution": {
+        "confidence": "low",
+        "new_title": "",
+        "reasoning": "The source page text only mentions a May 28, 2025 event date at Million Dollar Cowboy Bar, not the August 10, 2026 date in question, and contains no additional title information beyond 'Walker Williams'."
+      },
+      "applied": false,
+      "note": "confidence=low, not applying"
     }
   ]
 }
