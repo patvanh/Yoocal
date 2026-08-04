@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-03T13:11:13.032354",
-  "audit_date": "2026-08-03",
+  "generated_at": "2026-08-04T12:08:53.254381",
+  "audit_date": "2026-08-04",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1302,
+      "before_count": 1301,
       "passes": {
         "past_dates": {
           "fixed": 5,
@@ -32,19 +32,11 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 5,
+          "fixed": 4,
           "examples": [
             {
-              "title": "Park City Opera: 'Opera Around the World' Series",
-              "had_span": 22
-            },
-            {
-              "title": "(Re)sounding: Art Exhibition",
-              "had_span": 42
-            },
-            {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 24
+              "had_span": 23
             },
             {
               "title": "Fascia Rolling Class",
@@ -53,6 +45,10 @@
             {
               "title": "Group Fitness Classes",
               "had_span": 181
+            },
+            {
+              "title": "Park City Opera: 'Opera Around the World' Series",
+              "had_span": 21
             }
           ]
         },
@@ -122,23 +118,13 @@
           ]
         },
         "classification": {
-          "fixed": 282,
+          "fixed": 294,
           "examples": [
             {
               "title": "Summer Garden Camps",
               "before": [],
               "after": [
                 "Community"
-              ]
-            },
-            {
-              "title": "(Re)sounding: Art Exhibition",
-              "before": [
-                "Community"
-              ],
-              "after": [
-                "Community",
-                "Arts"
               ]
             },
             {
@@ -171,16 +157,26 @@
                 "Community",
                 "Education"
               ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
             }
           ]
         }
       },
-      "after_count": 1301,
-      "total_fixes": 301
+      "after_count": 1300,
+      "total_fixes": 312
     },
     {
       "city": "elkhart-lake",
-      "before_count": 157,
+      "before_count": 156,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -213,12 +209,12 @@
           "examples": []
         }
       },
-      "after_count": 159,
+      "after_count": 158,
       "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 168,
+      "before_count": 166,
       "passes": {
         "past_dates": {
           "fixed": 54,
@@ -232,16 +228,16 @@
               "date": "2026-06-15"
             },
             {
-              "title": "Monday Night Train @ Heber Valley Railroad",
-              "date": "2026-06-15"
-            },
-            {
               "title": "Heber City Council Monthly Meetings",
               "date": "2026-06-16"
             },
             {
               "title": "In Stitches Gathering @ Wasatch County Library",
               "date": "2026-07-07"
+            },
+            {
+              "title": "Midway City Council Monthly Meetings",
+              "date": "2026-06-16"
             }
           ]
         },
@@ -300,12 +296,12 @@
           "examples": []
         }
       },
-      "after_count": 116,
+      "after_count": 114,
       "total_fixes": 60
     },
     {
       "city": "jackson",
-      "before_count": 425,
+      "before_count": 418,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -316,11 +312,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 61
+              "had_span": 60
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 48
+              "had_span": 47
             }
           ]
         },
@@ -418,7 +414,7 @@
           "examples": []
         }
       },
-      "after_count": 446,
+      "after_count": 439,
       "total_fixes": 12
     }
   ]
