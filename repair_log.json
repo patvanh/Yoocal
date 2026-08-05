@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-04T12:08:53.254381",
-  "audit_date": "2026-08-04",
+  "generated_at": "2026-08-05T11:59:43.704841",
+  "audit_date": "2026-08-05",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1301,
+      "before_count": 1297,
       "passes": {
         "past_dates": {
           "fixed": 5,
@@ -32,12 +32,8 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 4,
+          "fixed": 3,
           "examples": [
-            {
-              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 23
-            },
             {
               "title": "Fascia Rolling Class",
               "had_span": 181
@@ -48,12 +44,12 @@
             },
             {
               "title": "Park City Opera: 'Opera Around the World' Series",
-              "had_span": 21
+              "had_span": 20
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 3,
+          "fixed": 4,
           "examples": [
             {
               "title": "Fox US Open of Mountain Biking",
@@ -70,6 +66,14 @@
               "split_into": [
                 "2026-08-08",
                 "2026-08-09"
+              ]
+            },
+            {
+              "title": "Chef Ryan Arensdorf Weekend",
+              "original_span": "2026-08-15 to 2026-08-16",
+              "split_into": [
+                "2026-08-15",
+                "2026-08-16"
               ]
             },
             {
@@ -121,7 +125,7 @@
           "fixed": 294,
           "examples": [
             {
-              "title": "Summer Garden Camps",
+              "title": "Old Town walking tour",
               "before": [],
               "after": [
                 "Community"
@@ -171,7 +175,7 @@
           ]
         }
       },
-      "after_count": 1300,
+      "after_count": 1297,
       "total_fixes": 312
     },
     {
@@ -217,27 +221,27 @@
       "before_count": 166,
       "passes": {
         "past_dates": {
-          "fixed": 54,
+          "fixed": 55,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
+              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
+              "date": "2026-06-17"
+            },
+            {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Heber City Council Monthly Meetings",
-              "date": "2026-06-16"
+              "title": "Heber Midday Wednesday Ride @ Southfield Park",
+              "date": "2026-06-17"
             },
             {
-              "title": "In Stitches Gathering @ Wasatch County Library",
-              "date": "2026-07-07"
-            },
-            {
-              "title": "Midway City Council Monthly Meetings",
-              "date": "2026-06-16"
+              "title": "Wasatch County Council Monthly Meetings",
+              "date": "2026-06-17"
             }
           ]
         },
@@ -296,8 +300,8 @@
           "examples": []
         }
       },
-      "after_count": 114,
-      "total_fixes": 60
+      "after_count": 113,
+      "total_fixes": 61
     },
     {
       "city": "jackson",
@@ -312,11 +316,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 60
+              "had_span": 59
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 47
+              "had_span": 46
             }
           ]
         },

@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-08-04",
+  "generated_at": "2026-08-05",
   "cities": {
     "all": {
-      "events": 3445,
+      "events": 3406,
       "findings": [
-        {
-          "code": "C1",
-          "name": "RECURRING-DROPPED",
-          "severity": "HIGH",
-          "count": 1,
-          "examples": [
-            {
-              "title": "Hops on the Hill",
-              "venue": "glitretind restaurant at stein eriksen lodge",
-              "only_date": "2026-08-11",
-              "why": "recurrence-field",
-              "source": "Visit Park City"
-            }
-          ]
-        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -42,23 +27,23 @@
               "sim": 0.85
             },
             {
+              "date": "2026-08-09",
+              "title_a": "Stein's Famous Sunday Brunch",
+              "src_a": "Visit Park City (sitemap)",
+              "title_b": "Sunday Brunch",
+              "src_b": "Jackson Hole Chamber of Commerce",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-09",
+              "title_a": "Sunday Funday",
+              "src_a": "Jackson Hole Mountain Resort",
+              "title_b": "Sunday Fundays, Concert on the Commons Series",
+              "src_b": "Dishing Jackson Hole",
+              "sim": 0.85
+            },
+            {
               "date": "2026-08-15",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-22",
-              "title_a": "Heber's Saturday Sunset Music Series",
-              "src_a": "The Park Record",
-              "title_b": "Saturday Sunset Music Series",
-              "src_b": "Heber Valley Tourism",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-29",
               "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
               "title_b": "Saturday Sunset Music Series",
@@ -76,8 +61,8 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 172,
-              "lost": 868
+              "now": 162,
+              "lost": 878
             },
             {
               "source": "Siebkens Resort",
@@ -94,21 +79,21 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 27,
-              "lost": 89
+              "now": 26,
+              "lost": 90
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 20,
-              "lost": 57
+              "now": 19,
+              "lost": 58
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 155,
+      "events": 154,
       "findings": [
         {
           "code": "C5",
@@ -141,15 +126,15 @@
             {
               "source": "Road America",
               "was": 64,
-              "now": 31,
-              "lost": 33
+              "now": 30,
+              "lost": 34
             }
           ]
         }
       ]
     },
     "greenlake": {
-      "events": 127,
+      "events": 126,
       "findings": [
         {
           "code": "C5",
@@ -170,7 +155,7 @@
       ]
     },
     "heber": {
-      "events": 562,
+      "events": 551,
       "findings": [
         {
           "code": "C5",
@@ -229,21 +214,21 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 168,
-              "lost": 865
+              "now": 158,
+              "lost": 875
             },
             {
               "source": "TownLift",
               "was": 39,
-              "now": 14,
-              "lost": 25
+              "now": 13,
+              "lost": 26
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1079,
+      "events": 1069,
       "findings": [
         {
           "code": "C5",
@@ -278,19 +263,19 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 27,
-              "lost": 89
+              "now": 26,
+              "lost": 90
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 20,
-              "lost": 57
+              "now": 19,
+              "lost": 58
             }
           ]
         }
       ]
     }
   },
-  "high_total": 17
+  "high_total": 16
 }
