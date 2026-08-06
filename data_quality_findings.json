@@ -1,9 +1,52 @@
 {
-  "generated_at": "2026-08-05",
+  "generated_at": "2026-08-06",
   "cities": {
     "all": {
-      "events": 3406,
+      "events": 3431,
       "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 5,
+          "examples": [
+            {
+              "title": "Concerts in the Park | 5pm to Nowhere",
+              "venue": "deacon mills park",
+              "only_date": "2026-08-12",
+              "why": "recurrence-field",
+              "source": "chamber.visitgreenlake.com"
+            },
+            {
+              "title": "Concerts in the Park | Copper Box",
+              "venue": "deacon mills park",
+              "only_date": "2026-08-12",
+              "why": "recurrence-field",
+              "source": "chamber.visitgreenlake.com"
+            },
+            {
+              "title": "Embodying the New Human\u2014Three Cosmic Caf\u00e9 Evenings with Carol Mann",
+              "venue": "home yoga studio",
+              "only_date": "2026-08-12",
+              "why": "recurrence-field",
+              "source": "Jackson Hole Chamber of Commerce"
+            },
+            {
+              "title": "Jackson Hole Farmers Market",
+              "venue": "town square",
+              "only_date": "2026-09-19",
+              "why": "strong-title",
+              "source": "Jackson Hole Chamber of Commerce"
+            },
+            {
+              "title": "Story Time at the Park",
+              "venue": "matt knoop park",
+              "only_date": "2026-08-12",
+              "why": "strong-title",
+              "source": "The Park Record"
+            }
+          ]
+        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -61,14 +104,14 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 162,
-              "lost": 878
+              "now": 166,
+              "lost": 874
             },
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 10,
-              "lost": 266
+              "now": 9,
+              "lost": 267
             },
             {
               "source": "Mountain Town Music",
@@ -79,21 +122,21 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 26,
-              "lost": 90
+              "now": 27,
+              "lost": 89
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 19,
-              "lost": 58
+              "now": 17,
+              "lost": 60
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 154,
+      "events": 152,
       "findings": [
         {
           "code": "C5",
@@ -120,8 +163,8 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 10,
-              "lost": 266
+              "now": 9,
+              "lost": 267
             },
             {
               "source": "Road America",
@@ -134,8 +177,30 @@
       ]
     },
     "greenlake": {
-      "events": 126,
+      "events": 120,
       "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 2,
+          "examples": [
+            {
+              "title": "Concerts in the Park | 5pm to Nowhere",
+              "venue": "deacon mills park",
+              "only_date": "2026-08-12",
+              "why": "recurrence-field",
+              "source": "chamber.visitgreenlake.com"
+            },
+            {
+              "title": "Concerts in the Park | Copper Box",
+              "venue": "deacon mills park",
+              "only_date": "2026-08-12",
+              "why": "recurrence-field",
+              "source": "chamber.visitgreenlake.com"
+            }
+          ]
+        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -155,7 +220,7 @@
       ]
     },
     "heber": {
-      "events": 551,
+      "events": 554,
       "findings": [
         {
           "code": "C5",
@@ -214,22 +279,44 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 158,
-              "lost": 875
+              "now": 162,
+              "lost": 871
             },
             {
               "source": "TownLift",
               "was": 39,
-              "now": 13,
-              "lost": 26
+              "now": 12,
+              "lost": 27
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1069,
+      "events": 1083,
       "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 2,
+          "examples": [
+            {
+              "title": "Embodying the New Human\u2014Three Cosmic Caf\u00e9 Evenings with Carol Mann",
+              "venue": "home yoga studio",
+              "only_date": "2026-08-12",
+              "why": "recurrence-field",
+              "source": "Jackson Hole Chamber of Commerce"
+            },
+            {
+              "title": "Jackson Hole Farmers Market",
+              "venue": "town square",
+              "only_date": "2026-09-19",
+              "why": "strong-title",
+              "source": "Jackson Hole Chamber of Commerce"
+            }
+          ]
+        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -263,19 +350,19 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 26,
-              "lost": 90
+              "now": 27,
+              "lost": 89
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 19,
-              "lost": 58
+              "now": 17,
+              "lost": 60
             }
           ]
         }
       ]
     }
   },
-  "high_total": 16
+  "high_total": 25
 }

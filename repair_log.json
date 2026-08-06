@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-05T11:59:43.704841",
-  "audit_date": "2026-08-05",
+  "generated_at": "2026-08-06T12:17:42.007475",
+  "audit_date": "2026-08-06",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1297,
+      "before_count": 1280,
       "passes": {
         "past_dates": {
           "fixed": 5,
@@ -32,8 +32,12 @@
           ]
         },
         "absurd_spans": {
-          "fixed": 3,
+          "fixed": 4,
           "examples": [
+            {
+              "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
+              "had_span": 21
+            },
             {
               "title": "Fascia Rolling Class",
               "had_span": 181
@@ -44,7 +48,7 @@
             },
             {
               "title": "Park City Opera: 'Opera Around the World' Series",
-              "had_span": 20
+              "had_span": 19
             }
           ]
         },
@@ -87,19 +91,13 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 5,
           "examples": [
             {
               "title": "Beer Yoga and $2 Tacos",
               "start_time": "5:30 PM",
               "new_end_time": "6:30 PM",
               "duration_hours": 1
-            },
-            {
-              "title": "Haydn, Mendelssohn, & A Viola Concerto",
-              "start_time": "8:00 PM",
-              "new_end_time": "11:00 PM",
-              "duration_hours": 3
             },
             {
               "title": "Concerts on the Slopes",
@@ -118,11 +116,17 @@
               "start_time": "6:00 PM",
               "new_end_time": "9:00 PM",
               "duration_hours": 3
+            },
+            {
+              "title": "Concerts on the Slopes",
+              "start_time": "5:30 PM",
+              "new_end_time": "8:30 PM",
+              "duration_hours": 3
             }
           ]
         },
         "classification": {
-          "fixed": 294,
+          "fixed": 298,
           "examples": [
             {
               "title": "Old Town walking tour",
@@ -132,13 +136,10 @@
               ]
             },
             {
-              "title": "A Spirited Paint Party with Artist Briar West",
-              "before": [
-                "Community"
-              ],
+              "title": "Summer Garden Camps",
+              "before": [],
               "after": [
-                "Community",
-                "Food & Drink"
+                "Community"
               ]
             },
             {
@@ -175,12 +176,12 @@
           ]
         }
       },
-      "after_count": 1297,
-      "total_fixes": 312
+      "after_count": 1280,
+      "total_fixes": 316
     },
     {
       "city": "elkhart-lake",
-      "before_count": 156,
+      "before_count": 154,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -213,35 +214,35 @@
           "examples": []
         }
       },
-      "after_count": 158,
+      "after_count": 156,
       "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 166,
+      "before_count": 172,
       "passes": {
         "past_dates": {
-          "fixed": 55,
+          "fixed": 57,
           "examples": [
             {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Wednesday Morning Storytime @ Folklore Bookshop",
-              "date": "2026-06-17"
+              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
+              "date": "2026-06-18"
             },
             {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Heber Midday Wednesday Ride @ Southfield Park",
-              "date": "2026-06-17"
+              "title": "Midway Art Gallery Open House",
+              "date": "2026-06-19"
             },
             {
-              "title": "Wasatch County Council Monthly Meetings",
-              "date": "2026-06-17"
+              "title": "Ritual Chocolate Public Tour and Mini Tasting",
+              "date": "2026-06-19"
             }
           ]
         },
@@ -300,12 +301,12 @@
           "examples": []
         }
       },
-      "after_count": 113,
-      "total_fixes": 61
+      "after_count": 117,
+      "total_fixes": 63
     },
     {
       "city": "jackson",
-      "before_count": 418,
+      "before_count": 441,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -316,11 +317,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 59
+              "had_span": 58
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 46
+              "had_span": 45
             }
           ]
         },
@@ -418,7 +419,7 @@
           "examples": []
         }
       },
-      "after_count": 439,
+      "after_count": 462,
       "total_fixes": 12
     }
   ]
