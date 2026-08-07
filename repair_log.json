@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-06T12:17:42.007475",
-  "audit_date": "2026-08-06",
+  "generated_at": "2026-08-07T10:57:08.520422",
+  "audit_date": "2026-08-07",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1280,
+      "before_count": 1254,
       "passes": {
         "past_dates": {
           "fixed": 5,
@@ -36,7 +36,7 @@
           "examples": [
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 21
+              "had_span": 20
             },
             {
               "title": "Fascia Rolling Class",
@@ -48,7 +48,7 @@
             },
             {
               "title": "Park City Opera: 'Opera Around the World' Series",
-              "had_span": 19
+              "had_span": 18
             }
           ]
         },
@@ -126,22 +126,8 @@
           ]
         },
         "classification": {
-          "fixed": 298,
+          "fixed": 295,
           "examples": [
-            {
-              "title": "Old Town walking tour",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
-            {
-              "title": "Summer Garden Camps",
-              "before": [],
-              "after": [
-                "Community"
-              ]
-            },
             {
               "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
               "before": [
@@ -172,16 +158,36 @@
                 "Community",
                 "Education"
               ]
+            },
+            {
+              "title": "Coffee Chat with the CEO",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Education"
+              ]
+            },
+            {
+              "title": "Cruisin' + Burgers",
+              "before": [
+                "Community"
+              ],
+              "after": [
+                "Community",
+                "Family"
+              ]
             }
           ]
         }
       },
-      "after_count": 1280,
-      "total_fixes": 316
+      "after_count": 1254,
+      "total_fixes": 313
     },
     {
       "city": "elkhart-lake",
-      "before_count": 154,
+      "before_count": 150,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -214,35 +220,35 @@
           "examples": []
         }
       },
-      "after_count": 156,
+      "after_count": 152,
       "total_fixes": 1
     },
     {
       "city": "heber",
-      "before_count": 172,
+      "before_count": 175,
       "passes": {
         "past_dates": {
           "fixed": 57,
           "examples": [
             {
+              "title": "Midway Art Gallery Open House",
+              "date": "2026-06-19"
+            },
+            {
               "title": "Sunrise Yoga Flow @ Grand Hyatt Deer Valley",
               "date": "2026-06-15"
             },
             {
-              "title": "Free Yoga for Ages 55+ @ Wasatch County Library",
-              "date": "2026-06-18"
+              "title": "Ritual Chocolate Public Tour and Mini Tasting",
+              "date": "2026-06-19"
             },
             {
               "title": "Meet the Cows - Dairy Farm Tour",
               "date": "2026-06-15"
             },
             {
-              "title": "Midway Art Gallery Open House",
-              "date": "2026-06-19"
-            },
-            {
-              "title": "Ritual Chocolate Public Tour and Mini Tasting",
-              "date": "2026-06-19"
+              "title": "Summer First Fridays @ Grand Hyatt Deer Valley",
+              "date": "2026-07-03"
             }
           ]
         },
@@ -255,7 +261,7 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 181
+              "had_span": 180
             }
           ]
         },
@@ -301,12 +307,12 @@
           "examples": []
         }
       },
-      "after_count": 117,
+      "after_count": 120,
       "total_fixes": 63
     },
     {
       "city": "jackson",
-      "before_count": 441,
+      "before_count": 423,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -317,11 +323,11 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 58
+              "had_span": 57
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 45
+              "had_span": 44
             }
           ]
         },
@@ -383,6 +389,12 @@
           "fixed": 6,
           "examples": [
             {
+              "title": "JH Elks Charity Classic Golf Tournament",
+              "start_time": "5:00 PM",
+              "new_end_time": "6:00 PM",
+              "duration_hours": 1
+            },
+            {
               "title": "Karaoke at The Virginian Saloon",
               "start_time": "8:00 PM",
               "new_end_time": "11:00 PM",
@@ -393,12 +405,6 @@
               "start_time": "11:00 AM",
               "new_end_time": "11:30 AM",
               "duration_hours": 0.5
-            },
-            {
-              "title": "JH Elks Charity Classic Golf Tournament",
-              "start_time": "5:00 PM",
-              "new_end_time": "6:00 PM",
-              "duration_hours": 1
             },
             {
               "title": "Boot Juice | Concerts on the Commons",
@@ -419,7 +425,7 @@
           "examples": []
         }
       },
-      "after_count": 462,
+      "after_count": 444,
       "total_fixes": 12
     }
   ]

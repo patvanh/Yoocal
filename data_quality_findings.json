@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-06",
+  "generated_at": "2026-08-07",
   "cities": {
     "all": {
-      "events": 3431,
+      "events": 3386,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 5,
+          "count": 6,
           "examples": [
             {
               "title": "Concerts in the Park | 5pm to Nowhere",
@@ -32,18 +32,18 @@
               "source": "Jackson Hole Chamber of Commerce"
             },
             {
-              "title": "Jackson Hole Farmers Market",
-              "venue": "town square",
-              "only_date": "2026-09-19",
-              "why": "strong-title",
-              "source": "Jackson Hole Chamber of Commerce"
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-08-08",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
             },
             {
-              "title": "Story Time at the Park",
-              "venue": "matt knoop park",
-              "only_date": "2026-08-12",
-              "why": "strong-title",
-              "source": "The Park Record"
+              "title": "Heber Market on Main",
+              "venue": "heber city main street",
+              "only_date": "2026-08-13",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
             }
           ]
         },
@@ -55,10 +55,10 @@
           "examples": [
             {
               "date": "2026-08-07",
-              "title_a": "57th Kimball Arts Festival - August 7-9, 2026",
-              "src_a": "KPCW Community Calendar",
-              "title_b": "Kimball Arts Festival",
-              "src_b": "Visit Park City",
+              "title_a": "Kimball Arts Festival",
+              "src_a": "Visit Park City",
+              "title_b": "57th Kimball Arts Festival - August 7-9, 2026",
+              "src_b": "KPCW Community Calendar",
               "sim": 0.85
             },
             {
@@ -70,23 +70,23 @@
               "sim": 0.85
             },
             {
-              "date": "2026-08-09",
-              "title_a": "Stein's Famous Sunday Brunch",
-              "src_a": "Visit Park City (sitemap)",
-              "title_b": "Sunday Brunch",
-              "src_b": "Jackson Hole Chamber of Commerce",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-09",
-              "title_a": "Sunday Funday",
-              "src_a": "Jackson Hole Mountain Resort",
-              "title_b": "Sunday Fundays, Concert on the Commons Series",
-              "src_b": "Dishing Jackson Hole",
-              "sim": 0.85
-            },
-            {
               "date": "2026-08-15",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-22",
+              "title_a": "Heber's Saturday Sunset Music Series",
+              "src_a": "The Park Record",
+              "title_b": "Saturday Sunset Music Series",
+              "src_b": "Heber Valley Tourism",
+              "sim": 0.85
+            },
+            {
+              "date": "2026-08-29",
               "title_a": "Heber's Saturday Sunset Music Series",
               "src_a": "The Park Record",
               "title_b": "Saturday Sunset Music Series",
@@ -99,13 +99,13 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 10,
+          "count": 11,
           "examples": [
             {
               "source": "Heber Valley Tourism",
               "was": 1040,
-              "now": 166,
-              "lost": 874
+              "now": 165,
+              "lost": 875
             },
             {
               "source": "Siebkens Resort",
@@ -122,21 +122,21 @@
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 27,
-              "lost": 89
+              "now": 25,
+              "lost": 91
             },
             {
-              "source": "Grand Teton Music Festival",
-              "was": 77,
-              "now": 17,
-              "lost": 60
+              "source": "The Cloudveil",
+              "was": 160,
+              "now": 77,
+              "lost": 83
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 152,
+      "events": 150,
       "findings": [
         {
           "code": "C5",
@@ -220,8 +220,30 @@
       ]
     },
     "heber": {
-      "events": 554,
+      "events": 550,
       "findings": [
+        {
+          "code": "C1",
+          "name": "RECURRING-DROPPED",
+          "severity": "HIGH",
+          "count": 2,
+          "examples": [
+            {
+              "title": "Guided Hike + Forest Bathing",
+              "venue": "grand hyatt deer valley",
+              "only_date": "2026-08-08",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            },
+            {
+              "title": "Heber Market on Main",
+              "venue": "heber city main street",
+              "only_date": "2026-08-13",
+              "why": "recurrence-field",
+              "source": "Heber Valley Tourism"
+            }
+          ]
+        },
         {
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
@@ -279,40 +301,33 @@
             {
               "source": "Heber Valley Tourism",
               "was": 1033,
-              "now": 162,
-              "lost": 871
+              "now": 161,
+              "lost": 872
             },
             {
               "source": "TownLift",
               "was": 39,
-              "now": 12,
-              "lost": 27
+              "now": 11,
+              "lost": 28
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1083,
+      "events": 1061,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 2,
+          "count": 1,
           "examples": [
             {
               "title": "Embodying the New Human\u2014Three Cosmic Caf\u00e9 Evenings with Carol Mann",
               "venue": "home yoga studio",
               "only_date": "2026-08-12",
               "why": "recurrence-field",
-              "source": "Jackson Hole Chamber of Commerce"
-            },
-            {
-              "title": "Jackson Hole Farmers Market",
-              "venue": "town square",
-              "only_date": "2026-09-19",
-              "why": "strong-title",
               "source": "Jackson Hole Chamber of Commerce"
             }
           ]
@@ -345,24 +360,30 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 2,
+          "count": 3,
           "examples": [
             {
               "source": "Dishing Jackson Hole",
               "was": 116,
-              "now": 27,
-              "lost": 89
+              "now": 25,
+              "lost": 91
+            },
+            {
+              "source": "The Cloudveil",
+              "was": 160,
+              "now": 77,
+              "lost": 83
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 17,
-              "lost": 60
+              "now": 15,
+              "lost": 62
             }
           ]
         }
       ]
     }
   },
-  "high_total": 25
+  "high_total": 29
 }
