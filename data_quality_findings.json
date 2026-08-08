@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-08-07",
+  "generated_at": "2026-08-08",
   "cities": {
     "all": {
-      "events": 3386,
+      "events": 3352,
       "findings": [
         {
           "code": "C1",
           "name": "RECURRING-DROPPED",
           "severity": "HIGH",
-          "count": 6,
+          "count": 7,
           "examples": [
             {
               "title": "Concerts in the Park | 5pm to Nowhere",
@@ -51,22 +51,14 @@
           "code": "C5",
           "name": "CROSS-SOURCE-DUP",
           "severity": "MED",
-          "count": 16,
+          "count": 14,
           "examples": [
             {
-              "date": "2026-08-07",
+              "date": "2026-08-08",
               "title_a": "Kimball Arts Festival",
-              "src_a": "Visit Park City",
+              "src_a": "The Park Record",
               "title_b": "57th Kimball Arts Festival - August 7-9, 2026",
               "src_b": "KPCW Community Calendar",
-              "sim": 0.85
-            },
-            {
-              "date": "2026-08-07",
-              "title_a": "Lonestar",
-              "src_a": "Visit Park City",
-              "title_b": "Country Weekend - Lonestar",
-              "src_b": "Park City Institute",
               "sim": 0.85
             },
             {
@@ -92,6 +84,14 @@
               "title_b": "Saturday Sunset Music Series",
               "src_b": "Heber Valley Tourism",
               "sim": 0.85
+            },
+            {
+              "date": "2026-09-05",
+              "title_a": "Ultramarathon Green Lake Area 13dot1 Races - 2026",
+              "src_a": "fleetfeet.com",
+              "title_b": "13dot1",
+              "src_b": "visitgreenlake.com",
+              "sim": 0.85
             }
           ]
         },
@@ -99,7 +99,7 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 11,
+          "count": 12,
           "examples": [
             {
               "source": "Heber Valley Tourism",
@@ -110,14 +110,14 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 9,
-              "lost": 267
+              "now": 10,
+              "lost": 266
             },
             {
               "source": "Mountain Town Music",
               "was": 200,
-              "now": 45,
-              "lost": 155
+              "now": 38,
+              "lost": 162
             },
             {
               "source": "Dishing Jackson Hole",
@@ -128,32 +128,16 @@
             {
               "source": "The Cloudveil",
               "was": 160,
-              "now": 77,
-              "lost": 83
+              "now": 75,
+              "lost": 85
             }
           ]
         }
       ]
     },
     "elkhartlake": {
-      "events": 150,
+      "events": 148,
       "findings": [
-        {
-          "code": "C5",
-          "name": "CROSS-SOURCE-DUP",
-          "severity": "MED",
-          "count": 1,
-          "examples": [
-            {
-              "date": "2026-09-19",
-              "title_a": "Siebkens Live Music: Boo! The Band (Elktoberfest)",
-              "src_a": "Siebkens Resort",
-              "title_b": "Elktoberfest",
-              "src_b": "Elkhart Lake Tourism",
-              "sim": 0.85
-            }
-          ]
-        },
         {
           "code": "C6",
           "name": "COVERAGE-CLIFF",
@@ -163,8 +147,8 @@
             {
               "source": "Siebkens Resort",
               "was": 276,
-              "now": 9,
-              "lost": 267
+              "now": 10,
+              "lost": 266
             },
             {
               "source": "Road America",
@@ -177,7 +161,7 @@
       ]
     },
     "greenlake": {
-      "events": 120,
+      "events": 114,
       "findings": [
         {
           "code": "C1",
@@ -220,7 +204,7 @@
       ]
     },
     "heber": {
-      "events": 550,
+      "events": 549,
       "findings": [
         {
           "code": "C1",
@@ -307,15 +291,15 @@
             {
               "source": "TownLift",
               "was": 39,
-              "now": 11,
-              "lost": 28
+              "now": 10,
+              "lost": 29
             }
           ]
         }
       ]
     },
     "jackson": {
-      "events": 1061,
+      "events": 1046,
       "findings": [
         {
           "code": "C1",
@@ -360,7 +344,7 @@
           "code": "C6",
           "name": "COVERAGE-CLIFF",
           "severity": "HIGH",
-          "count": 3,
+          "count": 4,
           "examples": [
             {
               "source": "Dishing Jackson Hole",
@@ -371,19 +355,25 @@
             {
               "source": "The Cloudveil",
               "was": 160,
-              "now": 77,
-              "lost": 83
+              "now": 75,
+              "lost": 85
             },
             {
               "source": "Grand Teton Music Festival",
               "was": 77,
-              "now": 15,
-              "lost": 62
+              "now": 13,
+              "lost": 64
+            },
+            {
+              "source": "Grand Targhee Resort",
+              "was": 23,
+              "now": 10,
+              "lost": 13
             }
           ]
         }
       ]
     }
   },
-  "high_total": 29
+  "high_total": 32
 }

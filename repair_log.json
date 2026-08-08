@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-07T10:57:08.520422",
-  "audit_date": "2026-08-07",
+  "generated_at": "2026-08-08T10:30:10.401069",
+  "audit_date": "2026-08-08",
   "reports": [
     {
       "city": "park-city",
-      "before_count": 1254,
+      "before_count": 1242,
       "passes": {
         "past_dates": {
           "fixed": 5,
@@ -36,7 +36,7 @@
           "examples": [
             {
               "title": "Clases de Ingl\u00e9s para Adultos / English Classes for Adults (ESL)",
-              "had_span": 20
+              "had_span": 19
             },
             {
               "title": "Fascia Rolling Class",
@@ -48,7 +48,7 @@
             },
             {
               "title": "Park City Opera: 'Opera Around the World' Series",
-              "had_span": 18
+              "had_span": 17
             }
           ]
         },
@@ -91,19 +91,13 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 5,
+          "fixed": 4,
           "examples": [
             {
               "title": "Beer Yoga and $2 Tacos",
               "start_time": "5:30 PM",
               "new_end_time": "6:30 PM",
               "duration_hours": 1
-            },
-            {
-              "title": "Concerts on the Slopes",
-              "start_time": "7:00 PM",
-              "new_end_time": "10:00 PM",
-              "duration_hours": 3
             },
             {
               "title": "Concerts on the Slopes",
@@ -126,17 +120,16 @@
           ]
         },
         "classification": {
-          "fixed": 295,
+          "fixed": 300,
           "examples": [
             {
-              "title": "Bilingual Family Storytime | Hora de Cuentos Biling\u00fces en Familia",
+              "title": "A Spirited Paint Party with Artist Briar West",
               "before": [
                 "Community"
               ],
               "after": [
                 "Community",
-                "Kids",
-                "Education"
+                "Food & Drink"
               ]
             },
             {
@@ -182,8 +175,8 @@
           ]
         }
       },
-      "after_count": 1254,
-      "total_fixes": 313
+      "after_count": 1242,
+      "total_fixes": 317
     },
     {
       "city": "elkhart-lake",
@@ -225,10 +218,10 @@
     },
     {
       "city": "heber",
-      "before_count": 175,
+      "before_count": 168,
       "passes": {
         "past_dates": {
-          "fixed": 57,
+          "fixed": 55,
           "examples": [
             {
               "title": "Midway Art Gallery Open House",
@@ -239,16 +232,16 @@
               "date": "2026-06-15"
             },
             {
-              "title": "Ritual Chocolate Public Tour and Mini Tasting",
-              "date": "2026-06-19"
+              "title": "Free Yoga @ Midway Town Square",
+              "date": "2026-06-27"
             },
             {
-              "title": "Meet the Cows - Dairy Farm Tour",
-              "date": "2026-06-15"
+              "title": "Plein Air Workshop @ Grand Hyatt Deer Valley",
+              "date": "2026-06-27"
             },
             {
-              "title": "Summer First Fridays @ Grand Hyatt Deer Valley",
-              "date": "2026-07-03"
+              "title": "Commemorative Air Force Museum Tours",
+              "date": "2026-06-20"
             }
           ]
         },
@@ -261,23 +254,13 @@
             },
             {
               "title": "Saturday Sunset Music Series",
-              "had_span": 180
+              "had_span": 181
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 1,
-          "examples": [
-            {
-              "title": "Kimball Arts Festival",
-              "original_span": "2026-08-07 to 2026-08-09",
-              "split_into": [
-                "2026-08-07",
-                "2026-08-08",
-                "2026-08-09"
-              ]
-            }
-          ]
+          "fixed": 0,
+          "examples": []
         },
         "missing_end_times": {
           "fixed": 3,
@@ -307,12 +290,12 @@
           "examples": []
         }
       },
-      "after_count": 120,
-      "total_fixes": 63
+      "after_count": 113,
+      "total_fixes": 60
     },
     {
       "city": "jackson",
-      "before_count": 423,
+      "before_count": 416,
       "passes": {
         "past_dates": {
           "fixed": 0,
@@ -323,24 +306,17 @@
           "examples": [
             {
               "title": "Historic Downtown Walking Tour",
-              "had_span": 57
+              "had_span": 56
             },
             {
               "title": "Indigenous Arts and Cultural Demonstration Program Speaker Series",
-              "had_span": 44
+              "had_span": 43
             }
           ]
         },
         "multi_day_splits": {
-          "fixed": 4,
+          "fixed": 3,
           "examples": [
-            {
-              "title": "PCJH Community Rummage Sale",
-              "original_span": "2026-08-07 to 2026-08-08",
-              "split_into": [
-                "2026-08-07"
-              ]
-            },
             {
               "title": "Kids Yoga & Mindfulness Summer Camp",
               "original_span": "2026-08-10 to 2026-08-14",
@@ -386,14 +362,8 @@
           ]
         },
         "missing_end_times": {
-          "fixed": 6,
+          "fixed": 5,
           "examples": [
-            {
-              "title": "JH Elks Charity Classic Golf Tournament",
-              "start_time": "5:00 PM",
-              "new_end_time": "6:00 PM",
-              "duration_hours": 1
-            },
             {
               "title": "Karaoke at The Virginian Saloon",
               "start_time": "8:00 PM",
@@ -417,6 +387,12 @@
               "start_time": "5:00 PM",
               "new_end_time": "8:00 PM",
               "duration_hours": 3
+            },
+            {
+              "title": "with choreography by Contemporary Dance Wyoming at Dancers' Workshop",
+              "start_time": "6:00 PM",
+              "new_end_time": "8:00 PM",
+              "duration_hours": 2
             }
           ]
         },
@@ -425,8 +401,8 @@
           "examples": []
         }
       },
-      "after_count": 444,
-      "total_fixes": 12
+      "after_count": 437,
+      "total_fixes": 10
     }
   ]
 }
